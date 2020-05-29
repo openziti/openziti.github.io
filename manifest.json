@@ -1,0 +1,1711 @@
+{
+  "homepages": [],
+  "source_base_path": "c:/git/github/openziti/ziti-doc/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/clang.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/clang.html",
+          "hash": "HLsWcqnkKsnEY/wp6YCP/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/clang/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/clang/index.html",
+          "hash": "+2ww5+aIZvEIB5WohGmK+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/csharp.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp.html",
+          "hash": "TCDDdYV/IPpPplGacKaetw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.Ziti.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.Ziti.html",
+          "hash": "Gc4QeG1EPf3AqF70RbG+1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiConnection.OnConnected.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnConnected.html",
+          "hash": "NlEwCk2krz2Lhgbh57u93A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataReceived.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataReceived.html",
+          "hash": "TtNUv8EBRntOwXH8Zk2VkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataWritten.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataWritten.html",
+          "hash": "q0vdSh83bsblYfWLkIZAtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiConnection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiConnection.html",
+          "hash": "AZbAiQUbSoY78dfaljPINw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiException.html",
+          "hash": "quMY/6ivjwTwklFAxWMeTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiIdentity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiIdentity.html",
+          "hash": "IH1ZcWyRvr4MJBPLZwnwpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiStatus.html",
+          "hash": "uSSNsMSzXxqpubgZ0B+74A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.ZitiStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.ZitiStream.html",
+          "hash": "v6VbT9f41PDCZDMzHMu+cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/csharp/NetFoundry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/csharp/NetFoundry.html",
+          "hash": "/+egMsRYkzFFsPPlipipeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "0BUGDkr1r4Ditt0xe97kCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/rest/create-ca-json.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/rest/create-ca-json.html",
+          "hash": "kWqlOTgBfSijuCmqVHrN1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/rest/create-service-rest.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/rest/create-service-rest.html",
+          "hash": "UFTan1NURJKTArk2fMdMFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/rest/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/rest/index.html",
+          "hash": "FJi414FXAu9x5YvcVbVlYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "aTQTHfw1ZP4kNsbLwHtRZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/c-sdk-on-beaglebone.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/c-sdk-on-beaglebone.html",
+          "hash": "zwKEa6cEQlIrATDcphQ5CA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/index.html",
+          "hash": "z1LnAduJyFyvU6zSAW2H1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "kOe+fywOf2ziyi8aSxVYKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "glossary/glossary.md",
+      "output": {
+        ".html": {
+          "relative_path": "glossary/glossary.html",
+          "hash": "sf2yX3fD/siZfz1YkXwfqw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "glossary/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "glossary/toc.html",
+          "hash": "0kof85+5/DYKX4sjz4VLeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/Square.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/Square.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azure-add-role-to-vm.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/azure-add-role-to-vm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/azure-add-role.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/azure-add-role.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/changepwd_manageprofile.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/changepwd_manageprofile.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/changepwd_ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/changepwd_ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/cloudformation01.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/cloudformation01.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/create-appwan.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/create-appwan.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/create_service_ui.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/create_service_ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/csharp/add_local_nuget_repo.PNG",
+      "output": {
+        "resource": {
+          "relative_path": "images/csharp/add_local_nuget_repo.PNG"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/discourse_icon.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/discourse_icon.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/discourse_icon_halo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/discourse_icon_halo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/edge-router-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/edge-router-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/github-white.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/github-white.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/github.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/github.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nflightbglogo.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nflightbglogo.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nflightbglogo_40.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nflightbglogo_40.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nflightbglogo_50.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/nflightbglogo_50.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/policy-entities.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/policy-entities.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/service-edge-router-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/service-edge-router-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/service-policies.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/service-policies.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/square100.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/square100.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/square50.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/square50.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/ziti-overview.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/ziti-overview.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "index.html",
+      "output": {
+        "resource": {
+          "relative_path": "index.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/clang.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/clang.html",
+          "hash": "DnU08xGDJJ5yK2KWMfVU9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/csharp.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/csharp.html",
+          "hash": "zNkNSmzrfpzY2Q/ta5cKdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "samples/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "samples/index.html",
+          "hash": "rSIuAMN7FQxTUGry+pMM6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "samples/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "samples/toc.html",
+          "hash": "VDxgJ9UPnoZW1RYcx8BGow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "test.md",
+      "output": {
+        ".html": {
+          "relative_path": "test.html",
+          "hash": "g4wZHx0VX+pyQRATo/LoYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "JSRIWqfeDuUNJusBetGDRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-android-app/CODE_OF_CONDUCT.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-android-app/CODE_OF_CONDUCT.html",
+          "hash": "9QQsUV1b9q+PHVei2cgwyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-android-app/CONTRIBUTING.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-android-app/CONTRIBUTING.html",
+          "hash": "67cYSJkd9+No3rxV2y8p/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-android-app/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-android-app/README.html",
+          "hash": "wAZIxE55HeFXrxHshy7zEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-hdpi/ic_launcher_round.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-mdpi/ic_launcher.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-mdpi/ic_launcher_round.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xhdpi/ic_launcher.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/doc/enrollment-success.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/doc/enrollment-success.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/doc/no-enrollment.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/doc/no-enrollment.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-android-app/doc/pick-jwt.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-android-app/doc/pick-jwt.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-cmd/quickstart/docker/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-cmd/quickstart/docker/README.html",
+          "hash": "vzw4+A6OZqZFd0ZSocb7VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/kubernetes-sidecar-tunnel-quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/kubernetes-sidecar-tunnel-quickstart.html",
+          "hash": "gzHh1b1VdCxjjNWdK+o2qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/sidecar-diagram.svg",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/sidecar-diagram.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/cli-snippets/login.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/cli-snippets/login.html",
+          "hash": "3OK5Yh4arkDAI1FbSrYntA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/android.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/android.html",
+          "hash": "UqLBv5EQ0gL3QYw11nMn0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/how-to-choose.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/how-to-choose.html",
+          "hash": "CHUS5Jak89qwygYFqKg9Cg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/iOS.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/iOS.html",
+          "hash": "Bp7yLORJ6M+9QJ8VE150NA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/linux.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/linux.html",
+          "hash": "XmQabFIbX4tFZkEXbYch5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/macos.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/macos.html",
+          "hash": "+ZP+GKnoC77HslJoYzGMaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/overview.html",
+          "hash": "/bO6t0RLJJg8TUMg3OQSFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/proxy-example.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/proxy-example.html",
+          "hash": "YKuONHu3D3rcl/IfzekTaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/sdk-quickinfo.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/sdk-quickinfo.html",
+          "hash": "xXXRE5ihp+Wk8qOebPIpTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/sdks.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/sdks.html",
+          "hash": "uHY+WocUhshupVxRRmYPtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/tunneler-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/tunneler-overview.html",
+          "hash": "8hJCZeDRD74lJivhQPxrHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/tunneler.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/tunneler.html",
+          "hash": "AqfEZpsXPj/Zxl1JFN4HYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/which-client.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/which-client.html",
+          "hash": "eTbbQNiLN4642YBFvko3DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/clients/windows.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/clients/windows.html",
+          "hash": "ZMYA/JPxxZRZW8a0OgtvbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/docker-quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/docker-quickstart.html",
+          "hash": "/DJrv0Vw1eBRwV4LuwSnfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/enroller-lts.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/enroller-lts.html",
+          "hash": "fRO5RTLWYs2n+TzmKtnacg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/enroller.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/enroller.html",
+          "hash": "rC9pJHZbPCjYbMNd75FgDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/overview.html",
+          "hash": "zUh2K4mjUAtEqT2It4Udzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/tunneler-lts.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/tunneler-lts.html",
+          "hash": "BxV87iJSPNbGlzI7pXr2MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/tunneler.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/tunneler.html",
+          "hash": "kw2HusoOEkw3Pn45S8PZ4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/hello-ziti.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/hello-ziti.html",
+          "hash": "r0kWZbT50eBfQDOSiqVtyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/identities/create-identity-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/identities/create-identity-cli.html",
+          "hash": "U+vdYkwIrjlnEzYN0ELHsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/identities/creating.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/identities/creating.html",
+          "hash": "8caD71C+wPTJrTOVVtWt2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/identities/enrolling.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/identities/enrolling.html",
+          "hash": "5xmN0UiUukFUyfikF10qiA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/identities/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/identities/overview.html",
+          "hash": "IskB2rLi95Fupf7NV6Fjwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/install/controller.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/install/controller.html",
+          "hash": "dtWU59tna8jUJ5zvyUTDTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/install/edge-router.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/install/edge-router.html",
+          "hash": "5rZvURc7vppZ5cRz7qKAbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/install/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/install/overview.html",
+          "hash": "BOBgXmtSStV+ntHm9TMOhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/install/pki.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/install/pki.html",
+          "hash": "MNsh63YOlOhvlBPbqh2FqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "ziti/install/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/install/toc.html",
+          "hash": "4N2I/+pJjd6pOzsGalN1Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/controller.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/controller.html",
+          "hash": "mhU6q5aEPANj7O9bTt6FHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/edge-router.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/edge-router.html",
+          "hash": "iPBafc1XwmoK6Mi95dJiXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/fabric-router.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/fabric-router.html",
+          "hash": "z7k88QkrWR8n8oQls4o9jQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/logging-snippet.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/logging-snippet.html",
+          "hash": "8wGO27KyNJXMdPM+qSpVpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/manage.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/manage.html",
+          "hash": "fsrWM3rRV9D9j7MMelm3ZQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/pki-troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/pki-troubleshooting.html",
+          "hash": "Jgy/tp173gNRioInZAHWIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/pki.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/pki.html",
+          "hash": "KYFHPdYOuewewlCdaphe4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/router-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/router-overview.html",
+          "hash": "/joaC4JIdN6kFPF2NH4DaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/manage/sample-controller-config.yaml",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/manage/sample-controller-config.yaml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/manage/sample-edge-router-config.yaml",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/manage/sample-edge-router-config.yaml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/manage/sample-fabric-router-config.yaml",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/manage/sample-fabric-router-config.yaml"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/troubleshooting.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/troubleshooting.html",
+          "hash": "BkTD4ckA5Rf2YKY1ugG2+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/manage/tunneler.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/manage/tunneler.html",
+          "hash": "uBhwrR2sg+u38/ho540Wpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/overview.html",
+          "hash": "sUxTb7PughXUzRTOLBTuXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-edge-router-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-edge-router-policy-cli.html",
+          "hash": "hys+hGQOPJCyWoRP4kWNbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-edge-router-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-edge-router-policy-ui.html",
+          "hash": "QRZSJKs9SLMtALFxAJcQJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-service-edge-router-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-service-edge-router-policy-cli.html",
+          "hash": "8vVBhMYC8lK+4/xnyfPV6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-service-edge-router-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-service-edge-router-policy-ui.html",
+          "hash": "/Qod12B00UdjC+CY5G8JIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-service-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-service-policy-cli.html",
+          "hash": "fjWMdsvJ3a5TjAL3Nd4Flg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/create-service-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/create-service-policy-ui.html",
+          "hash": "E27ZNptnhTdcTAXLS6RsTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/creating-edge-router-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/creating-edge-router-policies.html",
+          "hash": "RShDs1BMOC5kOGAu5TV1SA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/creating-service-edge-router-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/creating-service-edge-router-policies.html",
+          "hash": "jW4FV+ThTvEAOSGzX2WXdA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/creating-service-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/creating-service-policies.html",
+          "hash": "PI6XATV29fELN6BLFJAjbA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/policies/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/policies/overview.html",
+          "hash": "nkZJFnInkZzbgqde2DSONA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstart.html",
+          "hash": "XS0gcIwu+TUel0qhEzyc4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/hsm-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/hsm-overview.html",
+          "hash": "MZf9QF1ocReyPCQhXF5cww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/hsm/softhsm.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/hsm/softhsm.html",
+          "hash": "M/4kNvV+MVe3nw4ly7J5Mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/hsm/yubikey.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/hsm/yubikey.html",
+          "hash": "VRoibFC51SIQbWQmwgYqTg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/kubernetes/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/kubernetes/README.html",
+          "hash": "JKBYYFeT5t8+7uGWn4bBqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/aws-quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/aws-quickstart.html",
+          "hash": "B72VhdJEXYnnGoPCy5BliQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/azure-quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/azure-quickstart.html",
+          "hash": "4V8D5tbjv8LGd3APjmFGUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/common-quickstart.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/common-quickstart.html",
+          "hash": "qL3CrvhJzQDEwdirtJfN0g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/networks-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/networks-overview.html",
+          "hash": "Bpg8ZRiG2wIO9wreWCkaaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/quickstart-overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/quickstart-overview.html",
+          "hash": "cXf1vJ6AbS/HQ9J5fv1hKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/services/create-service-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/services/create-service-cli.html",
+          "hash": "ZvO1RWaLv0vdh+5dleNdsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/services/creating.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/services/creating.html",
+          "hash": "1Ik+rLHrW+8NvB1Pct8UBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/services/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/services/overview.html",
+          "hash": "iX/AkCJ517JYuIg9PPBUkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "ziti/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/toc.html",
+          "hash": "qwHFaMnWHF0j0n5MME5jxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 82,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 10,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

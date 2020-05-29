@@ -1,0 +1,28 @@
+var errors_8h =
+[
+    [ "ERR_ID", "errors_8h.html#a947429505002f0c889a011a663ea5a72", null ],
+    [ "ZITI_ERRORS", "errors_8h.html#ac40dbb62a3442640d8ea56b9169ac092", null ],
+    [ "ziti_errorstr", "errors_8h.html#a2182f9078122799ec98a7c1f17094191", null ],
+    [ "ZITI_CONFIG_NOT_FOUND", "errors_8h.html#a7d5c26ad2a244c86376ffb2b355fd995", null ],
+    [ "ZITI_CONNABORT", "errors_8h.html#a9266ec444d030017f72510eff2257e7b", null ],
+    [ "ZITI_CONTROLLER_UNAVAILABLE", "errors_8h.html#a5d3e1e459b62eee03f6c81fe17a61b48", null ],
+    [ "ZITI_CRYPTO_FAIL", "errors_8h.html#a4e460a6691edb5e7dd5f15e4dd8a6c23", null ],
+    [ "ZITI_CSR_GENERATION_FAILED", "errors_8h.html#a22d0e126145eed354b12f8b09e55b461", null ],
+    [ "ZITI_ENROLLMENT_METHOD_UNSUPPORTED", "errors_8h.html#acfd4d99bb7d52d7cb1a2ab364d0e05f0", null ],
+    [ "ZITI_EOF", "errors_8h.html#a577dcc677a447fbfe6bab5edd9ac8452", null ],
+    [ "ZITI_GATEWAY_UNAVAILABLE", "errors_8h.html#aa7edea3da013a7337218fdbbc0cf1dca", null ],
+    [ "ZITI_INVALID_CONFIG", "errors_8h.html#ad6f0c06f8f195db7fdc4eb0f0c2b00c9", null ],
+    [ "ZITI_INVALID_STATE", "errors_8h.html#a208bfcf89206e036a5684d929a26b7fc", null ],
+    [ "ZITI_JWT_INVALID", "errors_8h.html#a90b96d7e41b747c616662d4cb8f4a6be", null ],
+    [ "ZITI_JWT_INVALID_FORMAT", "errors_8h.html#a7733ff0801519144d387591afadec444", null ],
+    [ "ZITI_JWT_NOT_FOUND", "errors_8h.html#a2234bbb22ee8fa52f53b83a378c74f82", null ],
+    [ "ZITI_JWT_SIGNING_ALG_UNSUPPORTED", "errors_8h.html#a9b790941f5f5f751341b3f2f49653c34", null ],
+    [ "ZITI_JWT_VERIFICATION_FAILED", "errors_8h.html#a64bca2ce5bd1402abba9d94f55a93250", null ],
+    [ "ZITI_KEY_GENERATION_FAILED", "errors_8h.html#ac4cbe2a3b44fb381ba42bdb5169243d2", null ],
+    [ "ZITI_NOT_AUTHORIZED", "errors_8h.html#a6e7fbd3aeef7d84f38d12624e8ea39ce", null ],
+    [ "ZITI_OK", "errors_8h.html#a58cd556eb411c881903d30ae272984f4", null ],
+    [ "ZITI_PKCS7_ASN1_PARSING_FAILED", "errors_8h.html#a14db7c865bddc93e022f3c4610144983", null ],
+    [ "ZITI_SERVICE_UNAVAILABLE", "errors_8h.html#ab0d324214cb968c0dae7af2a46ffb040", null ],
+    [ "ZITI_TIMEOUT", "errors_8h.html#a33eef9528613b7e7f5ea8f2ec3e4587d", null ],
+    [ "ZITI_WTF", "errors_8h.html#aefc65b041bf792358694d53bbc468c81", null ]
+];
