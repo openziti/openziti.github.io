@@ -621,6 +621,72 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "policies/CODE_OF_CONDUCT.html",
+      "output": {
+        "resource": {
+          "relative_path": "policies/CODE_OF_CONDUCT.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "policies/CONTRIBUTING.html",
+      "output": {
+        "resource": {
+          "relative_path": "policies/CONTRIBUTING.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "policies/NetFoundry-CCLA.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "policies/NetFoundry-CCLA.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "policies/NetFoundry-ICLA.pdf",
+      "output": {
+        "resource": {
+          "relative_path": "policies/NetFoundry-ICLA.pdf"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "policies/index.html",
+      "output": {
+        "resource": {
+          "relative_path": "policies/index.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "policies/toc.html",
+      "output": {
+        "resource": {
+          "relative_path": "policies/toc.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "samples/clang.md",
       "output": {
