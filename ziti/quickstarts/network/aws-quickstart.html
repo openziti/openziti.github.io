@@ -356,10 +356,10 @@ ziti edge controller create service ethzero-cli &quot;ethzero.ziti.cli&quot; &qu
 ziti edge controller create service-policy dial-all Dial --service-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
 
 # Create an edge router policy which allows all identities to use all edge routers 
-ziti edge controller create edge-router-policy all --edge-router-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
+ziti edge controller create edge-router-policy allEdgeRouters --edge-router-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
 
 # Create a service edge router policy which allows all services to use all edge routers
-ziti edge controller create service-edge-router-policy --edge-router-roles &#39;#all&#39; --service-roles &#39;#all&#39; 
+ziti edge controller create service-edge-router-policy allSvcRouter --edge-router-roles &#39;#all&#39; --service-roles &#39;#all&#39;
 </code></pre></section>
 </div>
 <h2 id="test-it">Test It</h2>

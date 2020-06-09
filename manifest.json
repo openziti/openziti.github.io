@@ -788,7 +788,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-android-app/README.html",
-          "hash": "5VIsoNaQiOhIizHFNv/BJQ=="
+          "hash": "jhaek5jwA1mUTM6Jiz2SEQ=="
         }
       },
       "is_incremental": false,
@@ -955,7 +955,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/kubernetes-sidecar-tunnel-quickstart.html",
-          "hash": "APx8foTGmFPtWGN3iNOuIg=="
+          "hash": "pRCjjyTY7uaFWXIEtEAjFg=="
         }
       },
       "is_incremental": false,
@@ -1522,15 +1522,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "ziti/overview.md",
       "output": {
         ".html": {
           "relative_path": "ziti/overview.html",
-          "hash": "+86L9jM+cAHnX6FHl6uwZw=="
+          "hash": "ttXlf9SvYATEOSdJXxFcKA=="
         }
       },
       "is_incremental": false,
@@ -1662,7 +1659,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstart.html",
-          "hash": "kPFqQ8yMEzRf/4uwJ+YOaQ=="
+          "hash": "5ZW2cHYfDhn3iE2z81ky8Q=="
         }
       },
       "is_incremental": false,
@@ -1686,7 +1683,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/hsm/softhsm.html",
-          "hash": "MuJYsScW94mHGFYbd+D+fA=="
+          "hash": "0Z3edj/sHaLCM7Ys9Whvuw=="
         }
       },
       "is_incremental": false,
@@ -1698,7 +1695,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/hsm/yubikey.html",
-          "hash": "XKOAAxu6ejB76rOHR2QZzw=="
+          "hash": "LRFrMscczp6H+fU8/kNz/A=="
         }
       },
       "is_incremental": false,
@@ -1722,7 +1719,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/aws-quickstart.html",
-          "hash": "HWjNBhUwTGC430rMjjRAbg=="
+          "hash": "FsidNt2X5L/PXrTS9uu+EQ=="
         }
       },
       "is_incremental": false,
@@ -1734,7 +1731,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/azure-quickstart.html",
-          "hash": "TJ4B2BeydPOh0pjJYFV2KQ=="
+          "hash": "lh6b9OB2PDRXtCcIZqZXKg=="
         }
       },
       "is_incremental": false,
@@ -1746,7 +1743,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/common-quickstart.html",
-          "hash": "xJmdpK57r7V1oLGE0IMLow=="
+          "hash": "hyhjo83NYGOPP092aAT28w=="
         }
       },
       "is_incremental": false,
