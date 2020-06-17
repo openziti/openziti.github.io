@@ -34,6 +34,9 @@
                 <a href="../Classes/Ziti.html">Ziti</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ZitiClaims.html">ZitiClaims</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZitiConnection.html">ZitiConnection</a>
               </li>
               <li class="nav-group-task">
@@ -151,14 +154,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Type used for closure called when changes to services are detected or a call to <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC16serviceAvailableyySS_ySpySo05ziti_C2_sVGSg_s5Int32VtctF">serviceAvailable(_:_:)</a></code> is made</p>
+                        <p>Type used for closure called when changes to services are detected or a call to <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF">serviceAvailable(_:_:)</a></code> is made</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ServiceCallback</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">svc</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">ziti_service</span><span class="o">&gt;</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ServiceCallback</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">ztx</span><span class="p">:</span> <span class="n">ziti_context</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">svc</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">ziti_service</span><span class="o">&gt;</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -166,6 +169,18 @@
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ztx</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Ziti context</p>
+                                </div>
+                              </td>
+                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -426,6 +441,67 @@ to access the Keychain for stored identity information (keys and identity certif
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5CZiti4ZitiC3zid4loopAcA0B8IdentityC_SpySo03uv_D2_sVGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(zid:loop:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC3zid4loopAcA0B8IdentityC_SpySo03uv_D2_sVGtcfc">init(zid:<wbr>loop:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initilize <code>Ziti</code> with an externally supplied <code>uv_loop</code>.</p>
+
+<p>This can be useful when an application needs to manage multiple <code><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></code>s and share a single <code>uv_loop</code>
+In this scenario, the loop is expected to execute outside of the <code>run(:_)</code> method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">zid</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></span><span class="p">,</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zid</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the <code><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></code> containing the information needed to access the Keychain for stored identity information (keys and identity certificates).</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loop</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the externanally supplied <code>uv_loop</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@CZiti@objc(cs)Ziti(im)forget"></a>
                     <a name="//apple_ref/swift/Method/forget()" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)forget">forget()</a>
@@ -617,7 +693,10 @@ certificate.  This certificate is stored in the Keychain and required for future
                         <p>Execute a permanant loop processing data from all attached sources (including Ziti)</p>
 
 <p>Start <code>Ziti</code> processing via this method.  All Ziti processing occurs in the same thread as this call and all callbacks run on this thread.
- Use the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> to schedule work to be run on this thread.   <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> can be called safely from other threads.</p>
+Use the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> to schedule work to be run on this thread.   <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> can be called safely from other threads.</p>
+
+<p>Note that if a <code>uv_loop</code> is specified during <code>Ziti</code> initialization, running the loop is expected to occur outside of this call.  In this scenario,
+this method initializes Ziti for connections using the configured <code><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></code></p>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>See also:</p>
@@ -673,7 +752,10 @@ certificate.  This certificate is stored in the Keychain and required for future
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create a new thread for <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> and return</p>
+                        <p><code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> and return, creating a new thread for execution if needed</p>
+
+<p>If <code>Ziti</code> is initialied with an external <code>uv_loop</code>, the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> method is non-blocking.  If <code>Ziti</code> creates and manages its own loop
+the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> method blocks, and this method will create and start a new thread for execution</p>
 
                       </div>
                       <div class="declaration">
@@ -863,9 +945,9 @@ certificate.  This certificate is stored in the Keychain and required for future
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti4ZitiC16serviceAvailableyySS_ySpySo05ziti_C2_sVGSg_s5Int32VtctF"></a>
+                    <a name="/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF"></a>
                     <a name="//apple_ref/swift/Method/serviceAvailable(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti4ZitiC16serviceAvailableyySS_ySpySo05ziti_C2_sVGSg_s5Int32VtctF">serviceAvailable(_:<wbr>_:<wbr>)</a>
+                    <a class="token" href="#/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF">serviceAvailable(_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -973,9 +1055,9 @@ the operation on the Ziti thread</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti4ZitiC23registerServiceCallbackyyySpySo14ziti_service_sVGSg_s5Int32VtcF"></a>
+                    <a name="/s:5CZiti4ZitiC23registerServiceCallbackyyys13OpaquePointerVSg_SpySo14ziti_service_sVGSgs5Int32VtcF"></a>
                     <a name="//apple_ref/swift/Method/registerServiceCallback(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti4ZitiC23registerServiceCallbackyyySpySo14ziti_service_sVGSg_s5Int32VtcF">registerServiceCallback(_:<wbr>)</a>
+                    <a class="token" href="#/s:5CZiti4ZitiC23registerServiceCallbackyyys13OpaquePointerVSg_SpySo14ziti_service_sVGSgs5Int32VtcF">registerServiceCallback(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1023,7 +1105,7 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-06-02)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-06-17)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
