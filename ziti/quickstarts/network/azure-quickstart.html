@@ -456,11 +456,27 @@ network and configuration are all working properly:</p>
 <p>Open a command prompt</p>
 <ul>
 <li>Ensure ziti-tunnel and NewUser.json are in the same directory and cd to this directory</li>
-<li>Run the ziti-tunnel in proxy mode <ul>
-<li><code>ziti-tunnel proxy -i NewUser.json ethzero-ui:1111  (use if you created service via UI)</code> </li>
-<li><code>ziti-tunnel proxy -i NewUser.json ethzero-cli:1111 (use if created service via CLI)</code></li>
-</ul>
+<li><p>Run the ziti-tunnel in proxy mode. Choose the command based on how you created the service.</p>
+<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-6">
+<ul role="tablist">
+<li role="presentation">
+<a href="#tabpanel_Jgj2pEEE-E-6_Test-UI" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-6_Test-UI" data-tab="Test-UI" tabindex="0" aria-selected="true">Created Service via UI</a>
 </li>
+<li role="presentation">
+<a href="#tabpanel_Jgj2pEEE-E-6_Test-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-6_Test-cli" data-tab="Test-cli" tabindex="-1">Created Service via CLi</a>
+</li>
+</ul>
+<section id="tabpanel_Jgj2pEEE-E-6_Test-UI" role="tabpanel" data-tab="Test-UI">
+<p>  <code>ziti-tunnel proxy -i NewUser.json ethzero-ui:1111</code> </p>
+</section>
+<section id="tabpanel_Jgj2pEEE-E-6_Test-cli" role="tabpanel" data-tab="Test-cli" aria-hidden="true" hidden="hidden">
+<p>  <code>ziti-tunnel proxy -i NewUser.json ethzero-cli:1111</code></p>
+</section>
+</div>
+</li>
+</ul>
+<hr>
+<ul>
 <li>Navigate your web browser to (or use curl) to obtain your IP address by going to <a href="http://localhost:1111/">http://localhost:1111/</a></li>
 </ul>
 <p>At this point you should see the external IP address of your instance. Delivered to your machine safely and
