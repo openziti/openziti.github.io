@@ -5,6 +5,7 @@ var structziti__options =
     [ "controller", "structziti__options.html#a337ceb539db3ee60c64ae5e3918fba69", null ],
     [ "ctx", "structziti__options.html#a1bee515444c3de92952865a896f6b307", null ],
     [ "init_cb", "structziti__options.html#a66ceb865aea7cc65e93421f48846e9e2", null ],
+    [ "metrics_type", "structziti__options.html#aa6d3d16078d8a3f1ebbe7bcf745c4bf2", null ],
     [ "refresh_interval", "structziti__options.html#a19c21cc791a4b65d83bd66e9dc842679", null ],
     [ "router_keepalive", "structziti__options.html#a2758927e14f5dcb22826f4fa6217fe2f", null ],
     [ "service_cb", "structziti__options.html#a776f4ff7d5792fd1cff9273f741d1a3f", null ],

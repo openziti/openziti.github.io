@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['verbose_383',['VERBOSE',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601',1,'ziti_log.h']]]
+  ['ptr_5fmod_401',['ptr_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa8bbbe230f88eca0f864aa639d50f2400',1,'model_support.h']]]
 ];
