@@ -8,6 +8,9 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/Ziti" class="dashAnchor"></a>
@@ -15,6 +18,11 @@
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -67,6 +75,7 @@
             <h1>Ziti</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
 <span class="kd">public</span> <span class="kd">class</span> <span class="kt">Ziti</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ZitiUnretained</span></code></pre>
 
@@ -696,7 +705,7 @@ certificate.  This certificate is stored in the Keychain and required for future
 Use the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> to schedule work to be run on this thread.   <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> can be called safely from other threads.</p>
 
 <p>Note that if a <code>uv_loop</code> is specified during <code>Ziti</code> initialization, running the loop is expected to occur outside of this call.  In this scenario,
-this method initializes Ziti for connections using the configured <code><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></code></p>
+this method initializes Ziti for connections using the configured <code><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></code> and blocks until the calling thread is cancelled.</p>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>See also:</p>
@@ -752,10 +761,7 @@ this method initializes Ziti for connections using the configured <code><a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> and return, creating a new thread for execution if needed</p>
-
-<p>If <code>Ziti</code> is initialied with an external <code>uv_loop</code>, the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> method is non-blocking.  If <code>Ziti</code> creates and manages its own loop
-the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code> method blocks, and this method will create and start a new thread for execution</p>
+                        <p><code>Create a new thread for</code>run(_:)` and return</p>
 
                       </div>
                       <div class="declaration">
@@ -945,6 +951,36 @@ the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@CZiti@objc(cs)Ziti(im)dump"></a>
+                    <a name="//apple_ref/swift/Method/dump()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)dump">dump()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Output debugging information to standard out</p>
+
+<p>This method must be called in an interation of the loop</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">dump</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF"></a>
                     <a name="//apple_ref/swift/Method/serviceAvailable(_:_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF">serviceAvailable(_:<wbr>_:<wbr>)</a>
@@ -1015,7 +1051,7 @@ the <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Perform an operation in the context of the Ziti run loop, potentially not until the next iteration of the loop</p>
+                        <p>Perform an operation in an upcoming iteration of the loop</p>
 
 <p>Ziti is not threadsafe.  All operations must run on the same thread as <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run:">run(_:)</a></code>.  Use the <code>perform(_:)</code> method to execute
 the operation on the Ziti thread</p>
@@ -1105,8 +1141,8 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-06-17)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-14)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

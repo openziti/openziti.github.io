@@ -2,7 +2,7 @@
   "warnings": [
     {
       "file": "/Users/travis/build/openziti/ziti-sdk-swift/lib/ZitiEnroller.swift",
-      "line": 148,
+      "line": 141,
       "symbol": "ZitiEnroller.getClaims()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
