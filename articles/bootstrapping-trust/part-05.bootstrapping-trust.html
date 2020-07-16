@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Part 5 Bootstrapping Trust | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Part 5 Bootstrapping Trust | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+
+<p>Bootstrapping Trust</p>
+<h2 id="part-5-bootstrapping-trust">Part 5 Bootstrapping Trust</h2>
+<p>If you have read through the entire series up to here, welcome! If you
+have not, please consider reading the whole series:</p>
+<ul>
+<li><a href="part-01.encryption-everywhere.html">Part 1: Encryption Everywhere</a></li>
+<li><a href="part-02.a-primer-on-public-key-cryptography.html">Part 2: A Primer On Public-Key Cryptography</a></li>
+<li><a href="part-03.certificates.html">Part 3: Certificates</a></li>
+<li><a href="part-04.certificate-authorities-and-chains-of-trust.html">Part 4: Certificate Authorities &amp; Chains Of Trust</a></li>
+<li><a href="part-05.bootstrapping-trust.html">Part 5: Bootstrapping Trust</a></li>
+</ul>
+<h3 id="ziti">Ziti</h3>
+<p>In this series of articles we are exploring bootstrapping trust and what
+that means and how it enables Zero Trust security methodologies. Ziti
+provides a method to bootstrap trust via its enrollment process. For
+Ziti the enrollment process is bootstrapping trust. All identities in
+Ziti have a key pair that identifies that individual. The enrollment
+process abstracts away the process of setting up keys, certificates,
+CSRs, CAs, and having each software component of Ziti trust the
+necessary certificates. The Ziti SDK can be embedded within any
+application and enroll with a Ziti network - instantly granting it
+secure, encrypted, and trusted connections that provide part of Ziti&#39;s
+Zero Trust model.</p>
+<p>Ziti has the concept of the Edge, which sits on top of the Fabric. The
+Fabric provides long haul mesh routing while the Edge focuses on
+enrolling Ziti components, managing access via policies, and maintaining
+the trust necessary to provide the foundation of a Zero Trust network
+without the hassle of setting it up yourself. Together they are a
+powerful combo of optimized long halt routing and access and trust
+management.</p>
+<p><img src="images/fabric-edge.png" style="width: 50%; margin: 0 auto; display: block;"></p>
+<p>A small scale example Ziti system appears as follows:</p>
+<p><img src="images/ziti-system.png" style="width: 80%; margin: 0 auto; display: block;"></p>
+<p>Ziti Edge has the concepts of identities for endpoint SDKs and routers.
+Both require certificates signed by a trusted CA, and Ziti can generate
+the PKIs for you. This PKI and its CAs will form the backbone of the
+trust system that Ziti will deploy for you. In the system diagram above,
+the Ziti Controller will manage an intermediate CA and a secure
+enrollment process that will bootstrap trust for each router and SDK.
+After bootstrapping trust, the controller will maintain data to manage
+the entire life cycle of the certificates it generates. This life cycle
+encompasses all the concerns from part one of this series, including
+bootstrapping, revoking, renewing, and rotating keys.</p>
+<p>So let us review the components a Ziti Controller must have to function:</p>
+<ol>
+<li>A CA (intermediate or root)</li>
+<li>A server certificate generated for the Controller&#39;s IP/hostname/etc.
+Signed by the CA or a public CA</li>
+<li>A Ziti Controller configured and ready to run</li>
+</ol>
+<p>This article series has touched on items one and two, but not three. For
+information on how to configure a Ziti Controller refer to the
+documentation on Github. You will also find details on how to use the
+Ziti CLI to generate items one and two there. However, here is a simple
+command that will help get the controller started.</p>
+<pre><code> ziti pki create ca test1
+ ziti pki create server --dns myserver.com
+</code></pre><h2 id="enrollment">Enrollment</h2>
+<p>Once a Ziti controller is up and running, it is possible to create a new
+identity and enroll it. Behind the scenes, many things happen, but for
+now, let us focus on what an administrator would have to perform.</p>
+<p>Authenticate via the Ziti CLI, Ziti Admin Console (ZAC), or Edge REST
+API Issue a request to create a new identity for an SDK or router
+Receive an enrollment JWT Use the JWT on the enrolling device/server to
+enroll</p>
+<p>In those four steps, we have performed many complex interactions.</p>
+<ul>
+<li>The enrolling identity:<ul>
+<li>validated the enrollment JWT cryptographically</li>
+<li>validated the Ziti Controller as a suitable trust anchor
+cryptographically</li>
+<li>bootstrapped its trust pool of CAs as additional trust anchors over
+a secure connection</li>
+<li>generated a key pair</li>
+<li>generated a CSR</li>
+</ul>
+</li>
+<li>The controller has:<ul>
+<li>asserted its identity cryptographically</li>
+<li>asserted the validity of the enrolling identity</li>
+<li>provided a CA store of trust anchors</li>
+<li>fulfilled the CSR request for the identity</li>
+</ul>
+</li>
+</ul>
+<p>All of these items performed, making no assumptions and securely
+verifying along each step. This process cannot suffer from
+man-in-the-middle attacks. It is also possible for the controller and
+enrolling identity to check each other for compatibility. It provides
+many benefits! Below is a detailed image of each step of the enrollment
+process.</p>
+<p><img src="images/enrollment-full.png" style="width: 50%; margin: 0 auto; display: block;"></p>
+<p>Let&#39;s break those steps down:</p>
+<ol>
+<li>Via the Ziti CLI, ZAC, or Edge REST API the admin authenticates and
+requests to create an identity</li>
+<li>The admin receives a JWT that is signed by the controller and is
+cryptographically verifiable. The JWT contains all the information
+for the enrolling device/server to contact the controller and verify
+its identity. It also includes a secret enrollment token.</li>
+<li>The JWT is email/transmitted/etc. to the enrolling device</li>
+<li>The device parses the JWT, verifies all the information is present to
+enroll</li>
+<li>Retrieves the public certificate from the controller at the address
+specified in the JWT</li>
+<li>confirms that server is, in fact, the owner of the private key for
+that certificate</li>
+<li>Uses the retrieved certificate to verify the signature on the JWT</li>
+<li>Verifies content has not changed</li>
+<li>Verifies the issuing server is the server we are communicating with</li>
+<li>Make a secure connection to the server and request the CAs to trust
+by trusting only the controller&#39;s certificate.</li>
+<li>The enrolling identity generates key pair if necessary, and a CSR.
+The CSR is submitted in a request with the JWT&#39;s enrollment token.</li>
+<li>The controller verifies the CSR, verifies the enrollment token,
+verifies the client connection, and then returns the necessary
+signed certificates.</li>
+</ol>
+<p>At the end of the process, which took four simple human steps, but
+numerous cryptographically secure software steps. The controller now has
+a record of the certificates issued to a specific identity. That
+identity now has certificates that can be used to make connections to
+other enrolled Ziti components. All components in the system can verify
+the identity of any other Ziti component. At every step, every link is
+validated as trusted. No individual piece of software trusts any other
+for inbound or outbound connections. Trust has been successfully
+bootstrapped! Now we enter a maintenance window where trust has to be
+verified continuously and maintained.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>Thank you for reading this far! If you completed the entire series, I hope
+it has been helpful. Zero Trust is a complicated topic and it requires a
+serious foundation in bootstrapping trust to get right. Hopefully this series
+starts you on your way. If you have time, please checkout (Ziti)[https://github.com/openziti]! It is the
+Zero Trust network overlay solution that I have personally worked on
+and was the inspiration for this series!</p>
+<hr>
+<p>Written By: Andrew Martinez<br>June 2020</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/bootstrapping-trust/part-05.bootstrapping-trust.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145802.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145812.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145807.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/174/174883.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

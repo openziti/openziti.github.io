@@ -1,0 +1,304 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bootstrapping Trust | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bootstrapping Trust | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bootstrapping-trust">Bootstrapping Trust</h1>
+
+<h2 id="part-4-certificate-authorities--chains-of-trust">Part 4: Certificate Authorities &amp; Chains of Trust</h2>
+<p>If you have read through the entire series up to here, welcome! If you
+have not, please consider reading the whole series:</p>
+<ul>
+<li><a href="part-01.encryption-everywhere.html">Part 1: Encryption Everywhere</a></li>
+<li><a href="part-02.a-primer-on-public-key-cryptography.html">Part 2: A Primer On Public-Key Cryptography</a></li>
+<li><a href="part-03.certificates.html">Part 3: Certificates</a></li>
+<li><a href="part-04.certificate-authorities-and-chains-of-trust.html">Part 4: Certificate Authorities &amp; Chains Of Trust</a></li>
+<li><a href="part-05.bootstrapping-trust.html">Part 5: Bootstrapping Trust</a></li>
+</ul>
+<h3 id="root--intermediate-certificate-authorities-cas">Root &amp; Intermediate Certificate Authorities (CAs)</h3>
+<p>Not all certificates are the same! Certificates have different
+capabilities depending on their usage attributes and extensions. The
+previous article in this series mentioned a few of those attributes and
+extensions. Two of those were <code>clientAuth</code>, for client certificates, and
+<code>serverAuth</code>, for server certificates, which play an essential role in
+how a certificate is used during network authentication negotiations.
+These roles are crucial, as they are a contract for what attributes and
+extensions should be included in the certificate to make it useful. For
+example, a server certificate usually finds it useful to include Subject
+Alternate Names (SANs). One usage of this is to tie a certificate to a
+specific domain name (like ziti.dev). However, a client certificate will
+not have use for those same fields.</p>
+<p>The roles of certificates and the attributes/extensions they have are
+not always strictly followed. Some systems, such as some web browsers,
+require SANs on a server certificate (at the time of writing in 2020).
+That wasn&#39;t always the case. Before that, the Common Name fields in the
+subject information contained the domain name. Some systems still rely
+on that convention.</p>
+<p>Another type of certificate is a Certificate Authority&#39;s certificate. A
+CA is a key pair with a certificate that has a unique purpose: to sign
+other certificates. They have a special CA flag set to &quot;true.&quot; This flag
+alone does not grant the CA certificate any power, but if a system
+trusts that CA, it then allows that system to trust any certificate that
+CA has signed. As mentioned in previous parts of this series, trusting a
+CA is a software or operating system configuration process. This process
+can be done in multiple ways depending on the system: adding it to a
+store, a specific folder, or adding lines to a configuration file.</p>
+<p>Your operating system, right now, has its own set of trusted CAs. Most
+operating systems come with a default list installed and maintained by
+your OS developer. Over time this list is added to and removed from as
+trust is granted or withdrawn. Some pieces of software come with a list
+of CAs that are used instead of or in addition to the OS&#39;s CAs. The
+power of a CA comes not by its creation but by it being trusted.</p>
+<p>CAs come in two flavors: Root CAs and Intermediate CAs. Root CAs are the
+egg or the chicken (depending on your viewpoint) of the CA trust
+chicken-and-egg problem. Trust for CAs has to start somewhere. With CAs
+it is the Root CA. A Root CA can sign certificates that are themselves
+CAs as well. Those certificates represent Intermediate CAs. Layers of
+CAs starting with a root and adding intermediates along the way allows
+the private key for the Root CA&#39;s private key can be kept in a highly
+secure environment, which is not convenient to use for signing. This
+security means that the Root CA has a far less likely chance of having
+its private key compromised. Intermediate CAs are put into less secure
+environments and, if compromised, can be revoked. Trust is usually put
+into the Root CA, and since it was not compromised can remain trusted.
+The compromised intermediate can be. Since compromised intermediates
+should be rare, there is less information to distribute about who not to
+trust rather than who to trust from a particular Root CA.</p>
+<p>Running a public CA is serious business if you wish to be publicly
+trusted. The organization has to have strict protocols that verify the
+security and safe handling of the CAs private keys. If the private key
+is compromised, it can be used to sign other certificates for malicious
+intents. Any system that trusted the CA will now trust any of the
+maliciously signed certificates. This can, and most likely will,
+compromise all encryption on all connections that trusted the CA.</p>
+<p>Public CAs are maintained by organizations such as DigiCert, Let&#39;s
+Encrypt, and others. Anyone can also create private CAs. The only
+difference is that the number of systems that trust a private CA is much
+smaller than that of a public one. CAs are a cornerstone of
+bootstrapping trust in a software system public or private.</p>
+<h3 id="chains-of-trust--pkis">Chains of Trust &amp; PKIs</h3>
+<p>Part three of this series introduced that certificates could be signed
+by itself or another certificate. Certificates are usually signed via
+Certificate Signing Requests (CSRs). A certificate signing itself is
+called a &quot;self-signed certificate&quot; and is an indicator of it being a
+root CA if the CA flag is also set to true. A root CA can sign other
+certificates with the CA flag set to true, and those become intermediate
+CAs. Any CA, root or intermediate, that fulfills a CSR and signs the
+enclosed certificate will generate a non-CA certificate as long as the
+CA flag is false. These certificates are leaf certificates.</p>
+<p>Public Key Infrastructure (PKI) is used to describe the output of
+configuring and generating all of the CAs and processes needed to
+create, manage, and verify trust for leaf certificates.</p>
+<p>Consider the following PKI setup:</p>
+<ul>
+<li>Two root CAs:<ul>
+<li>Root A</li>
+<li>Root B</li>
+</ul>
+</li>
+<li>The root CAs each sign an intermediate CA via CSR:<ul>
+<li>Intermediate A</li>
+<li>Intermediate B</li>
+</ul>
+</li>
+<li>A server wishes to have a certificate to have Root A&#39;s trust extended
+to it.<ul>
+<li>A key pair is generated</li>
+</ul>
+</li>
+<li>A CSR is created and submitted to Intermediate A to sign</li>
+<li>The CSR is fulfilled.<ul>
+<li>Server Cert A is created and signed by Intermediate A which is in
+turn signed by Root A</li>
+</ul>
+</li>
+</ul>
+<p>Visually this would appear as follows:</p>
+<p><img src="images/chains.png" style="width: 50%; margin: 0 auto; display: block;"></p>
+<p>This PKI has two chains of trust: Chain A and Chain B. They are called
+chains because the signatures link the certificates together. Root A has
+signed Intermediate A&#39;s certificate and Intermediate A has signed Server
+A certificate. Programmatically we can traverse these signatures and
+verify them using the public certificates of each signatory. Trusting
+Root A will trust Server A. Trusting Intermediate A will also trust
+Server A.</p>
+<p>The second chain, Chain B, does not sign any of the certificates on
+Chain A. As expected, Trusting either of the CAs from Chain B does not
+grant andy trust to the certificates on Chain A. Chain B highlights the
+fact that the world, a PKI, and any system may have multiple chains of
+trust that do not interact in any fashion.</p>
+<p>Returning to Chain A, trusting Intermediate A designates it as a &quot;trust
+anchor.&quot; Any certificate can be a trust anchor. The certificate used as
+a trust anchor determines which certificates will additionally be
+trusted. A leaf certificate as a trust anchor only trusts that one
+certificate. Trusting a CA trusts all certificates that it has signed
+itself or any of its intermediates.</p>
+<ul>
+<li>Trusting Server Cert A will only trust that one server certificate.</li>
+<li>Trusting Intermediate A will trust Server Cert A and any other
+certificate it signs</li>
+<li>Trust Root A will trust Intermediate A and Server Cert A and any other
+certificate Root A signs (intermediate CA or not) and in turn, any of
+the certificates they sign</li>
+</ul>
+<p>Trusting a CA that has signed many certificates allows public
+certificate trust to scale. This is how trust scales for web traffic.
+Companies like DigiCert, IdenTrust, GoDaddy, etc. have their root CA or
+one of their large intermediate CAs trusted. Those CAs sign certificates
+for websites. All of our devices trust those website certificates
+because the CA has signed them.</p>
+<h3 id="distributed-systems--cas">Distributed Systems &amp; CAs</h3>
+<p>The goal for any distributed system should be to have certificates
+verified on both sides: clients verify servers and vice versa.
+Verification is done on every connection before any data exchange. Over
+TLS, which secures HTTPS, this would be &quot;mutual TLS&quot; or &quot;mTLS.&quot; Most
+public websites do not require mTLS. Instead, they use TLS with the
+client validating the server. For public web traffic, the server wishes
+to be trusted widely. The reverse is not necessary. If it is, websites
+use an additional form of authentications, like usernames and passwords,
+to verify the client&#39;s identity. Public key cryptography is a stronger
+authentication mechanism, but it is also difficult for the general
+public to set up, manage, and maintain.</p>
+<p>The same is true for distributed systems. Most don&#39;t secure anything at
+all or only verify servers. It is inherently secure and can cause issues
+depending on the setup of the system. Ziti is a distributed system that
+abstracts away this security setup for both its internal routers and
+client-owned endpoints/SDKs. This setup allows application-specific
+networking with strong identity verification, powerful policy
+management, flexible mesh routing, and more. The goal of this article is
+to focus on bootstrapping trust. So in the
+<a href="part-05.bootstrapping-trust.html">last article</a>, let us see how all of
+this comes together.</p>
+<hr>
+<p>Written By: Andrew Martinez<br>June 2020</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/bootstrapping-trust/part-04.certificate-authorities-and-chains-of-trust.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145802.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145812.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145807.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/174/174883.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
