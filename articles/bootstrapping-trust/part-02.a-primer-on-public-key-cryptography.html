@@ -117,24 +117,37 @@ yourself, but I promise, no math here. When necessary, I will wave my
 hands at it, point into the distance, and let the reader journey out.</p>
 <h3 id="keys">Keys</h3>
 <p>Keys are blobs of data containing rather large numbers. They can be
-stored anywhere data can be stored, but are commonly stored in files.
-Some secure environments store them in Hardware Security Modules (HSM).
-One example of that is mobile devices. A set of public and private keys
-is referred to as a &quot;key set&quot; or &quot;key pair.&quot;</p>
-<p>With public-key cryptography, there is at least one private key
-(sometimes called a secret key). There may be more, and each private key
-can have a specific purpose. However, there must be at least one. Paired
-with that private key is a public key. The two keys are mathematically
-entangled, given a particular function and its parameters. Today, those
-functions and parameters are generally elliptical curves and are the
-basis of a &quot;trapdoor function.&quot; Trapdoor functions are attractive to the
-cryptographically inclined as they make it easy to encrypt with one key
-of a key pair and decrypt with the other.</p>
-<p>These two keys have some impressive capabilities. Firstly, it is not
-possible to derive one from the other. This allows the public key to be
-handed out freely without compromising the private key. Also, both keys
-can generate encrypted data that the other key can decrypt. More
-clearly:</p>
+stored anywhere data can be stored, but are commonly stored as files. A
+set of public and private keys is referred to as a &quot;key set&quot; or &quot;key
+pair.&quot;</p>
+<p>Within a key pair there is only one private key and one public key. The
+two keys are mathematically entangled, given a particular function and
+its parameters. Today, those functions and parameters are generally
+elliptical curves and are the basis of a &quot;trapdoor function.&quot; Trapdoor
+functions are attractive to the cryptographically inclined for two main
+reasons:</p>
+<ol>
+<li>they make it easy to encrypt with one key of a key pair and decrypt
+with the other.</li>
+<li>one key cannot be derived from the other</li>
+</ol>
+<p>Of the two keys the private key is the most important. It must be kept
+tucked away from prying eyes and attackers. Some secure environments
+store the private key in hardware such as
+<a href="https://en.wikipedia.org/wiki/Hardware_security_module">Hardware Security Modules (HSMs)</a>
+or
+<a href="https://en.wikipedia.org/wiki/Trusted_Platform_Module">Trusted Platform Modules (TPMs)</a>.
+Mobile devices, such as laptops and smartphones, use hardware technology
+similar to TPMs. Apple has its Secure Enclave and Android has its
+Keymaster Hardware Abstraction Layer. The goal of all of these pieces of
+hardware is to keep sensitive secrets (e.g. private keys) safe. The fact
+that an entire industry of embedded hardware has been developed to keep
+private keys safe should tip the reader off to how important they are.</p>
+<p>As stated above these two keys have some impressive capabilities. It is
+not possible to derive one from the other. This allows the public key to
+be handed out freely without compromising the private key. Also, both
+keys can generate encrypted data that only the other key can decrypt.
+More clearly:</p>
 <ol>
 <li>Anyone with the public key can encrypt data only the private key
 holder can decrypt</li>
@@ -148,8 +161,8 @@ two &quot;Private Key Encryption.&quot; This article explores the merits of both
 &quot;encryption.&quot; It is &quot;secure&quot; as it allows anyone with the widely
 available public key to send messages only the private key holder can
 read. This property ensures that communication from the public key
-holder to the private key holder is being handled exclusively by the
-intended target, the private key holder.</p>
+holder to the private key holder is being read exclusively by the
+intended target.</p>
 <p>There is quite a bit of pressure to keep the private key extremely safe.
 Whoever holds the private key, has a guaranteed identity that is tied to
 and verifiable by the public key. It is verifiable because if one can
@@ -160,9 +173,10 @@ can decrypt the data to see this second level secret, future
 communication can use the new secret to encrypted and verify traffic in
 both directions. This additional exchange is roughly how part of the TLS
 negotiation works for HTTPs. TLS, and by proxy HTTPS, use other
-technologies and strategies to be an incredible security proposition.</p>
+technologies and strategies to provide an incredible security
+proposition.</p>
 <h4 id="private-key-encryption">Private Key Encryption</h4>
-<p>For private key encryption, the same principles as with public key
+<p>For private key encryption, the same principles apply as with public key
 encryption with the roles reversed. The private key encrypts data only
 the public key can decrypt. On the surface, this seems absurd. When the
 server encrypts data with its private key, the public key can decrypt
@@ -178,18 +192,20 @@ signature&quot; or &quot;signature&quot; for short.</p>
 <h3 id="digital-signatures">Digital Signatures</h3>
 <p>Digital signatures are similar to handwritten ones used to sign legal
 documents and checkbooks, but with a significant advantage. They
-validate a document has not been altered since it was signed. With
+validate that a document has not been altered since it was signed. With
 today&#39;s computer&#39;s graphical abilities, the nefarious can forge images
 and handwritten signatures. That puts handwritten signatures at a
 significant disadvantage. So how does this work?</p>
 <p>The data that will be signed can be anything. What it represents is not
 important. It can be text, JSON, an image, a PDF, or anything at all!
-That data processed by a one-way hashing algorithm, such as SHA-256.
-This process is idempotent, meaning running it repeatedly on the same
-data results and results in the same output. The output of this process
-is a hash, a string of characters that uniquely identifies the input
-data. With sufficiently large input data, the hash is much shorter than
-the input data as the hash size is usually fixed length.</p>
+That data is processed by a one-way
+<a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">cryptographic hashing algorithm</a>,
+such as SHA-256. This process is idempotent, meaning running it
+repeatedly on the same data, parameters, and hashing algorithm gives the
+same result. The output of this process is a hash, a string of
+characters that uniquely identifies the input data. With sufficiently
+large input data, the hash is much shorter than the input data as the
+hash size is usually fixed length.</p>
 <p>For example, here is the Ziti logo:</p>
 <p><img src="images/ziti.png" style="display: block; width: 25%; margin: 0px auto;"></p>
 <p>This logo&#39;s file can be hashed using SHA-256 via the <code>sha256sum</code> command
@@ -197,27 +213,30 @@ commonly found on Linux.</p>
 <pre><code>$&gt; sha256sum ziti.png
 c3a6681cc81f9c0fa44b3e2921495882c55f0a86c54cd60ee0fdc7d200ad26db  ziti.png
 </code></pre><p>That long string &quot;c3a....6db&quot; is the hash of that file! The string is 64
-characters long because it is a hex representation of the signature. The
-signature only needs 4 bits per character, so the result is: 64 x 4 =
-256, which is where SHA-256 gets its name.</p>
+characters long and is comprised of hex characters (a base 16 numbering
+system of 0-9 and a-f). Each character takes four bits to represent (4^2
+= 16). Since there are 64 characters at 4 bits each we have: 64 x 4 =
+256. This is where SHA-256 gets its name. SHA-256 is a fixed length
+cryptographic hashing algorithm who&#39;s output is 256 bits in length.</p>
 <p>The hash itself is not encryption. It is &quot;hashing.&quot; Hashing of this
-nature is not reversible, and it is impracticable to have two similar
-sets of data that have the same function that produces the same hash. In
-essence, the hash uniquely represents the data: all of it! Changing even
-a single character would generate a different hash.</p>
-<p>Next, the private key holder encrypts the hash with the private key to
-generate the signature. This process provides the following truths when
-working with the signature:</p>
+nature is not reversible while encryption is. For cryptographic hashing,
+it is impracticable to have two similar sets of data that have the same
+function that produces the same hash. In essence, the hash uniquely
+represents the data: all of it! Changing even a single character would
+generate a different hash.</p>
+<p>After hashing a data or document, the private key holder can encrypt the
+hash to generate a signature. This process provides the following truths
+when working with the signature:</p>
 <ul>
 <li>the private key is the only key capable of producing its signature of
-the data</li>
+the data&#39;s hash</li>
 <li>the public key can validate the signature given the data and hashing
 algorithm used</li>
 </ul>
 <p>Verifying a signature a straightforward process:</p>
 <ul>
-<li>Use the public key to decrypt the signature of the data to reveal the
-original hash</li>
+<li>Use the public key to decrypt the signature to reveal the original
+hash</li>
 <li>Use the hashing algorithm that was used initially on the data,
 recreate the hash independently</li>
 <li>Compare the two hashes, and if they are the same the signature is
@@ -225,26 +244,28 @@ valid</li>
 </ul>
 <p>Signing data is incredibly powerful. It allows a private key holder to
 state that data was approved by them and not altered. It is also
-publicly verifiable. This allows many decentralized approaches to
-sharing data that can have its source and content verified.</p>
+publicly verifiable to anyone with the document, signature, and public
+key. This allows many decentralized approaches to sharing data that can
+have its source and content verified.</p>
 <p>Bearer tokens are and example of the power of signatures. Bearer tokens
 are a document that is signed by a trusted authentication system and
 contain data that provides information about the client presenting the
 token. Signing the token ensures that the content of the token has not
-been changed and has been endorsed by a trusted identity. An example of
-a bearer token is a
+been changed and has been endorsed by a trusted system. An example of a
+bearer token is a
 <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JSON Web Token (JWT)</a></p>
 <p>A JWT specifies the format of the bearer token as a header, payload, and
 signature using JSON. A client can then present a JWT to any system
 which can then verify that the contents are valid and from a trusted
 identity. As long as the signature is valid, the JWT can grant access to
-the client presenting it!</p>
+the client presenting it based on whatever information is inside the
+JWT.</p>
 <h1 id="closing">Closing</h1>
 <p>This article should have shed light on on public-key cryptography by
 explaining the roles of the public and private keys. It should have also
 provided a glimpse at the power of encryption and digital signatures. In
-the <a href="part-03.certificates.html">part three</a> we will see both take a
-dominate role in bootstrapping trust.</p>
+<a href="part-03.certificates.html">part three</a> we will see how key pairs can
+be combined with certificates!</p>
 <hr>
 <p>Written By: Andrew Martinez<br>June 2020</p>
 </article>
