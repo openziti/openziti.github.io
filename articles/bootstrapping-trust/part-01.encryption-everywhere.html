@@ -164,7 +164,7 @@ can force all connections through the following process.</p>
 </ol>
 <p>This process is not the typical connection order on a network. Most
 connections on a network are done in the reverse order. At first, this
-may seem counter intuitive. To help make Zero Trust and bootstrapping
+may seem counter-intuitive. To help make Zero Trust and bootstrapping
 trust a bit clearer, it helps to have a concrete system to use an
 example. It just so happens that the Ziti software system makes a great
 example!</p>
@@ -176,10 +176,10 @@ enrollments, policies, and much more! All of these pieces working
 together to create a Ziti Network. A Ziti Network is an overlay network
 - meaning it creates a virtual network on top of a concrete network.
 The concrete network may be the internet, a university network, or your
-own home network. Whatever it is, it is referred ot as the underlay
+own home network. Whatever it is, it is referred to as the underlay
 network.</p>
 <p>In the Ziti Network, all network resources are modeled as services in
-the Ziti Controller. All services on a Ziti Network should only
+the Ziti Controller. All services on a Ziti Network should only be
 accessible via the Ziti Network for maximum effect. Network services can
 be made available via a Ziti Network in a variety of manners. The
 preferred method is embedding the Ziti SDK inside of applications and
@@ -220,13 +220,13 @@ a recursive problem. To terminate the recursion, we have to start our
 system with a well-defined and carefully controlled seed of trust.</p>
 <h1 id="trust">Trust</h1>
 <p>In software systems that require network connectivity, there are at
-least two parties in the system. Generally, there are more and in the
+least two parties in the system. Generally, there are more, and in the
 case of a Ziti network, there could be thousands. Between two parties,
 each time a connection is made, a trust decision is made. Should this
 connection be allowed? Mechanisms must be put into place to verify the
 identity of the connecting party if that question is to be answered.</p>
 <p>One mechanism that might jump out at the reader is a password or secret.
-In Ziti it would be possible to configure the Controller, Routers, and
+In Ziti, it would be possible to configure the Controller, Routers, and
 SDK Clients with a secret. Software is easy to deploy with a secret.
 Throw it into a configuration file, point the software at, and off you
 go!</p>
@@ -256,7 +256,7 @@ mathematically tied to a public key. The public key can be used to
 encrypt messages that only the private key holder can decrypt. Also, the
 public key cannot be used to derive the original private key. This
 functionality fits perfectly with what our distributed system needs!
-Alas, public-key cryptography introduces complex behaviors, setup , and
+Alas, public-key cryptography introduces complex behaviors, setup, and
 management. In the next article, we will dive a little deeper into this
 topic. For now, let us take it on faith that it will serve our needs
 well.</p>
@@ -284,8 +284,8 @@ each machine. Do that by using these commands:</p>
 <pre><code>openssl ecparam -name secp256k1-genkey -param_enc explicit -out private-key.pem
 </code></pre><pre><code>openssl req -new -x509 -key private-key.pem -out server.pem -days 360
 </code></pre><p>Voila - you now have a self-signed certificate! What is a self-signed
-certificate? For now let us understand it means that no other system has
-expressed trust in your public certificate. In
+certificate? For now, let us understand it means that no other system
+has expressed trust in your public certificate. In
 <a href="part-04.certificate-authorities-and-chains-of-trust.html">Part 4: Certificate Authorities &amp; Chains Of Trust</a>
 we will cover them in more detail.</p>
 <p>You can repeat the above process for every piece of software in your
@@ -303,24 +303,24 @@ The system will need to repeat this process any time the system adds a
 piece of software. If a machine is compromised, the analogous public
 certificate will need to be untrusted on every node in the mesh. Adding
 or removing trust in a public certificate involves configuring software
-or operating systems. There are many ways it can be implemented
-including: configuration files, files stored in specific directories,
-and even via configuration tools such as Windows Certificate Manager
+or operating systems. There are many ways it can be implemented,
+including configuration files, files stored in specific directories, and
+even via configuration tools such as Windows Certificate Manager
 snap-in.</p>
 <p>This is a log of careful work to get a simple system running. Consider
 what this means when adding or removing many nodes? Visiting each
 machine and reconfiguring them each time is quite a bit of overhead.
-There is a solution for these woes. While it is elegant on its own, it
+There is a solution to these woes. While it is elegant on its own, it
 does add complexity. Let us see how Certificate Authorities (CAs) can
-help! In the next section we will hit the highlights of CAs. For more
-detail look forward to
+help! In the next section, we will hit the highlights of CAs. For more
+detail, look forward to
 <a href="part-04.certificate-authorities-and-chains-of-trust.html">Part 4: Certificate Authorities &amp; Chains Of Trust</a>.</p>
 <h4 id="cas--adding-complexity">CAs &amp; Adding Complexity</h4>
 <p>A CA enables trust deferral from multiple individual certificates to a
-single certificate. Meaning that instead of trusting each certificate,
-each piece of software will trust the CA. The CA will be used to sign
-every public certificate our software pieces need to use. How does
-&quot;signing&quot; work? We will cover that in
+single certificate which means that instead of trusting each
+certificate, each piece of software will trust the CA. The CA will be
+used to sign every public certificate our software pieces need to use.
+How does &quot;signing&quot; work? We will cover that in
 <a href="part-03.certificates.html">part three</a> and why it matters part in
 <a href="part-04.certificate-authorities-and-chains-of-trust.html">four</a>. For
 now, the basics will be provided.</p>
@@ -332,7 +332,7 @@ now, the basics will be provided.</p>
 <li>distribute the CA&#39;s certificate to every machine</li>
 <li>configure the machines certificate store or configure the software</li>
 </ol>
-<p>For items one and two, the process can be a bit mystical. There are a
+<p>For items one and two, the process can be a bit mystical. There is a
 multitude of options involved in managing a CA. To perform number three,
 you will need to go through the processing of creating certificate
 signing requests (CSRs, see <a href="part-03.certificates.html">parts three</a> for
@@ -350,12 +350,12 @@ as not to reveal too much information to attackers.</p>
 <p>The payoff for using CAs is having the ability to create chains of
 trust. Chains of trust allow distributed systems to scale without having
 to reconfigure each node every time the system grows or shrinks. With a
-little more upfront cost and bookkeeping to run a CA the system will
+little more upfront cost and bookkeeping to run a CA, the system will
 greatly decrease the amount of configuration required on each device.</p>
 <h4 id="further-concerns">Further Concerns</h4>
-<p>Once configured, there are still other concerns need to be taken into
-account. Consider the following list of events that may happen to a CA
-and it&#39;s certificates:</p>
+<p>Once configured, there are still other concerns that need to be taken
+into account. Consider the following list of events that may happen to a
+CA, and it&#39;s certificates:</p>
 <ul>
 <li>What happens when a certificate expires?</li>
 <li>How does a system know not to trust a certificate anymore?</li>
@@ -387,7 +387,7 @@ cryptography in place to automate public-key cryptography.</p>
 system where pieces of software can come and go at the whim of network
 operators, the issues become a mountain of concerns. Thankfully in Ziti,
 a mechanism is provided that abstracts all of these issues. To
-understand how Ziti accomplishes this we have a few more topics to
+understand how Ziti accomplishes this, we have a few more topics to
 discuss. In
 <a href="part-02.a-primer-on-public-key-cryptography.html">part two</a>, we will
 chip away at those topics by covering public-key cryptography in more

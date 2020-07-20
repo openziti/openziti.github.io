@@ -97,7 +97,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="bootstrapping-trust">Bootstrapping Trust</h1>
 
-<h2 id="part-3-certificate">Part 3: Certificate</h2>
+<h2 id="part-3-certificates">Part 3: Certificates</h2>
 <p>If you have read through the entire series up to here, welcome! If you
 have not, please consider reading the whole series:</p>
 <ul>
@@ -132,9 +132,9 @@ using OpenSSL and its configuration files, it can be a cumbersome
 experience to wade through. There are many great articles and tutorials
 available to get you started.</p>
 <p>For this article, the word &quot;certificate&quot; will mean an &quot;x509
-Certificate&quot;. x509 is a public standard and is the de facto standard for
+Certificate&quot;. x509 is a public standard and is the de-facto standard for
 software systems dealing with public-key cryptography. There are other
-formats but they are usually environment-specific, such as Card
+formats, but they are usually environment-specific, such as Card
 Verifiable Certificates. x509 good enough for general purpose use on
 most systems.</p>
 <p>So, what is a certificate? It is yet another blob of data that is
@@ -159,8 +159,8 @@ this series covered keys, both public and private, but did not mention
 certificates. It is common to hear &quot;certificate&quot; used interchangeably
 with &quot;public key&quot; and, sometimes, &quot;private key.&quot; A certificate must have
 at least one key inside of it. Since certificates contain keys, they
-have the same capabilities as the keys they contains. Sometimes the
-words &quot;public certificate&quot; (containing only the public key) and &quot;private
+have the same capabilities as the keys they contain. Sometimes the words
+&quot;public certificate&quot; (containing only the public key) and &quot;private
 certificate&quot; (containing both public and private keys) are used for
 clarity.</p>
 <p>To some, &quot;certificate&quot; is synonymous with &quot;public certificate.&quot; Placing

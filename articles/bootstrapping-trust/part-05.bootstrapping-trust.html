@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Part 5 Bootstrapping Trust | Ziti </title>
+    <title>Bootstrapping Trust | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Part 5 Bootstrapping Trust | Ziti ">
+    <meta name="title" content="Bootstrapping Trust | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -95,8 +95,8 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="bootstrapping-trust">Bootstrapping Trust</h1>
 
-<p>Bootstrapping Trust</p>
 <h2 id="part-5-bootstrapping-trust">Part 5 Bootstrapping Trust</h2>
 <p>If you have read through the entire series up to here, welcome! If you
 have not, please consider reading the whole series:</p>
@@ -108,10 +108,10 @@ have not, please consider reading the whole series:</p>
 <li><a href="part-05.bootstrapping-trust.html">Part 5: Bootstrapping Trust</a></li>
 </ul>
 <h3 id="ziti">Ziti</h3>
-<p>In this series of articles we are exploring bootstrapping trust, what
+<p>In this series of articles, we are exploring bootstrapping trust, what
 that means, and how it enables Zero Trust security methodologies. Ziti
 provides a method to bootstrap trust via its enrollment process. For
-Ziti the enrollment process is bootstrapping trust. This trust must be
+Ziti, the enrollment process is bootstrapping trust. This trust must be
 in place as all connections in Ziti require verification. All identities
 in Ziti have a key pair that identifies that individual. The enrollment
 process abstracts the steps of setting up keys, certificates, CSRs, CAs,
@@ -121,7 +121,7 @@ the exact same fashion to bootstrap trust as part of Ziti&#39;s Zero Trust
 model.</p>
 <p>Ziti has a concept called the &quot;Edge.&quot; The Edge is a set of software
 features that sit on top of the &quot;Fabric.&quot; The Fabric is the core of each
-Ziti component and it provides long haul mesh routing while the Edge
+Ziti component, and it provides long haul mesh routing while the Edge
 focuses on enrolling Ziti components, managing access via policies, and
 maintaining the trust necessary to provide the foundation of a Zero
 Trust network without the hassle of setting it up yourself. Together
@@ -202,16 +202,19 @@ its identity. It also includes a secret enrollment token.</li>
 <li>The JWT is given to the enrolling device</li>
 <li>The device parses the JWT, verifies all the information is present to
 enroll</li>
-<li>The device retrieves the public certificate from the controller at the address
-specified in the JWT</li>
-<li>The device confirms that server is, in fact, the owner of the private key for
-that certificate</li>
-<li>The device uses the retrieved certificate to verify the signature on the JWT</li>
+<li>The device retrieves the public certificate from the controller at
+the address specified in the JWT</li>
+<li>The device confirms that the server is, in fact, the owner of the
+private key for that certificate</li>
+<li>The device uses the retrieved certificate to verify the signature on
+the JWT</li>
 <li>Verifies content has not changed</li>
 <li>Verifies the issuing server is the server it is communicating with</li>
-<li>Makes a secure connection to the server and requests the CAs to trust</li>
-<li>The enrolling identity generates key pair, if necessary, and a CSR.
-The CSR is submitted in a request with the JWT&#39;s enrollment token.</li>
+<li>Makes a secure connection to the server and requests the CAs to
+trust</li>
+<li>The enrolling identity generates a key pair, if necessary, and a
+CSR. The CSR is submitted in a request with the JWT&#39;s enrollment
+token.</li>
 <li>The controller verifies the CSR, verifies the enrollment token,
 verifies the client connection, and then returns the necessary
 signed certificates.</li>
@@ -222,17 +225,17 @@ a record of the certificates issued to a specific identity. That
 identity now has certificates that can be used to make connections to
 other enrolled Ziti components. All components in the system can verify
 the identity of any other Ziti component. At every step, every link is
-verified. No individual piece of software blindly trusts any other
-for inbound or outbound connections. Trust has been successfully
+verified. No individual piece of software blindly trusts any other for
+inbound or outbound connections. Trust has been successfully
 bootstrapped! Now we enter a maintenance window where trust has to be
 verified continuously and maintained. The enrolled identity can now
-interact with the Ziti Controller to either function as a Ziti Router
-or as Zero Trust network client.</p>
+interact with the Ziti Controller to either function as a Ziti Router or
+as Zero Trust network client.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>Thank you for reading this far! If you completed the entire series, I
-hope it has been helpful. Zero Trust is a complicated topic and it
+hope it has been helpful. Zero Trust is a complicated topic, and it
 requires a serious foundation in bootstrapping trust to get right.
-Hopefully this series starts you on your way. If you have time, please
+Hopefully, this series starts you on your way. If you have time, please
 checkout (Ziti)[https://github.com/openziti]! It is the Zero Trust
 network overlay solution that I have personally worked on and was the
 inspiration for this series.</p>
