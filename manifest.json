@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "/ziti-doc/docfx_project",
+  "source_base_path": "/__w/ziti-doc/ziti-doc/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "test.html",
-          "hash": "hPxybO1+sTcw3yQEjL7fnw=="
+          "hash": "/HLlkBfYB+QMeocbgEzcmg=="
         }
       },
       "is_incremental": false,
