@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['init_5fcb_321',['init_cb',['../structziti__options.html#a66ceb865aea7cc65e93421f48846e9e2',1,'ziti_options']]]
+  ['field_5fcount_492',['field_count',['../structtype__meta.html#a3e9e939c2f8e10b95e03f83148f463fd',1,'type_meta']]],
+  ['fields_493',['fields',['../structtype__meta.html#a4ea8190a08e1774b9e0b8cdb6662fde2',1,'type_meta']]]
 ];

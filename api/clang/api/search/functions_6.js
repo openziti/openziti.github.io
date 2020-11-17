@@ -1,18 +1,10 @@
 var searchData=
 [
-  ['model_5fcmp_261',['model_cmp',['../model__support_8h.html#a55a456d4e5ec4970e05427538fe6adaf',1,'model_support.h']]],
-  ['model_5fdump_262',['model_dump',['../model__support_8h.html#af193275359ee7ea784d8f6d6ad963717',1,'model_support.h']]],
-  ['model_5ffree_263',['model_free',['../model__support_8h.html#af7918171aa89926391431009dad9afea',1,'model_support.h']]],
-  ['model_5ffree_5farray_264',['model_free_array',['../model__support_8h.html#ace334e8bcf3f713857529c5c61a2faaa',1,'model_support.h']]],
-  ['model_5fmap_5fclear_265',['model_map_clear',['../model__support_8h.html#a66c67a6a958772e0308df41808e71aaa',1,'model_support.h']]],
-  ['model_5fmap_5fget_266',['model_map_get',['../model__support_8h.html#afa3d82459e2e10ee7c8bc79da822b72d',1,'model_support.h']]],
-  ['model_5fmap_5fit_5fkey_267',['model_map_it_key',['../model__support_8h.html#a2ed24c267b7bfe10b93db1ac306af78f',1,'model_support.h']]],
-  ['model_5fmap_5fit_5fnext_268',['model_map_it_next',['../model__support_8h.html#a4481a344f7888c81e79297dc3cca3713',1,'model_support.h']]],
-  ['model_5fmap_5fit_5fremove_269',['model_map_it_remove',['../model__support_8h.html#a0efd9594246788348beeb6d3cd5e8a2e',1,'model_support.h']]],
-  ['model_5fmap_5fit_5fvalue_270',['model_map_it_value',['../model__support_8h.html#a0a845f813a5015d19de89e5b2b14678e',1,'model_support.h']]],
-  ['model_5fmap_5fiterator_271',['model_map_iterator',['../model__support_8h.html#a94a6f026c81a8be1e14a1b355c254cb6',1,'model_support.h']]],
-  ['model_5fmap_5fremove_272',['model_map_remove',['../model__support_8h.html#ac25e8d75453a92279cd57e42be958d82',1,'model_support.h']]],
-  ['model_5fmap_5fset_273',['model_map_set',['../model__support_8h.html#a77dc1d386f629b4faba94e36d4dc1b5d',1,'model_support.h']]],
-  ['model_5fparse_274',['model_parse',['../model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9',1,'model_support.h']]],
-  ['model_5fparse_5farray_275',['model_parse_array',['../model__support_8h.html#ac5e80917106862cdea7729c18e125c27',1,'model_support.h']]]
+  ['json_5ffrom_5fziti_5fclient_5fcfg_5fv1_405',['json_from_ziti_client_cfg_v1',['../ziti__model_8h.html#a5e16b75594e69bf7ead03ed1c96f07b8',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fconfig_406',['json_from_ziti_config',['../ziti__model_8h.html#a9d2b2ac36e13a11f00eb944f3d01625b',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fhost_5fcfg_5fv1_407',['json_from_ziti_host_cfg_v1',['../ziti__model_8h.html#aa996c261791eb39944e478a3e6a134a8',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fintercept_5fcfg_5fv1_408',['json_from_ziti_intercept_cfg_v1',['../ziti__model_8h.html#aa889500a9d5473ba4e59699121d488cd',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fposture_5fquery_5fset_409',['json_from_ziti_posture_query_set',['../ziti__model_8h.html#a33f1ee5d58db1ff7a5110bdaee31b25f',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fprocess_410',['json_from_ziti_process',['../ziti__model_8h.html#a2551c54d3909c0c225e8d8614fadc062',1,'ziti_model.h']]],
+  ['json_5ffrom_5fziti_5fversion_411',['json_from_ziti_version',['../ziti__model_8h.html#a0fbd6c25ab540a0b86f154b690c3c321',1,'ziti_model.h']]]
 ];

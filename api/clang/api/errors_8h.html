@@ -93,14 +93,12 @@ $(document).ready(function(){initNavTree('errors_8h.html',''); initResizable(); 
 <p>Defines the macros, functions, typedefs and constants pertaining to errors observed when using a Ziti Network.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="externs_8h_source.html">externs.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="error__defs_8h_source.html">error_defs.h</a>&quot;</code><br />
 </div>
 <p><a href="errors_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ac40dbb62a3442640d8ea56b9169ac092"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a>(XX)</td></tr>
-<tr class="memdesc:ac40dbb62a3442640d8ea56b9169ac092"><td class="mdescLeft">&#160;</td><td class="mdescRight">A macro defining the various errors conditions expected to be seen when using the C SDK.  <a href="errors_8h.html#ac40dbb62a3442640d8ea56b9169ac092">More...</a><br /></td></tr>
-<tr class="separator:ac40dbb62a3442640d8ea56b9169ac092"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947429505002f0c889a011a663ea5a72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a947429505002f0c889a011a663ea5a72">ERR_ID</a>(e,  _)&#160;&#160;&#160;<a class="el" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> extern const int ZITI_##e;</td></tr>
 <tr class="memdesc:a947429505002f0c889a011a663ea5a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper macro to make declaring expected error conditions easier which is undef'ed immidately.  <a href="errors_8h.html#a947429505002f0c889a011a663ea5a72">More...</a><br /></td></tr>
 <tr class="separator:a947429505002f0c889a011a663ea5a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -140,9 +138,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a48a04e96e1f581d717471aa368fd6f4d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a48a04e96e1f581d717471aa368fd6f4d">ZITI_ENROLLMENT_METHOD_UNSUPPORTED</a></td></tr>
 <tr class="memdesc:a48a04e96e1f581d717471aa368fd6f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported enrollment method  <a href="errors_8h.html#a48a04e96e1f581d717471aa368fd6f4d">More...</a><br /></td></tr>
 <tr class="separator:a48a04e96e1f581d717471aa368fd6f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa26ed11c0881b53d1a11520b3844cca8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aa26ed11c0881b53d1a11520b3844cca8">ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</a></td></tr>
+<tr class="memdesc:aa26ed11c0881b53d1a11520b3844cca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">enrollment method requires client certificate  <a href="errors_8h.html#aa26ed11c0881b53d1a11520b3844cca8">More...</a><br /></td></tr>
+<tr class="separator:aa26ed11c0881b53d1a11520b3844cca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a719e4fe83ef2a6068d117824a975ce38"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a719e4fe83ef2a6068d117824a975ce38">ZITI_KEY_GENERATION_FAILED</a></td></tr>
-<tr class="memdesc:a719e4fe83ef2a6068d117824a975ce38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate an ECC key failed.  <a href="errors_8h.html#a719e4fe83ef2a6068d117824a975ce38">More...</a><br /></td></tr>
+<tr class="memdesc:a719e4fe83ef2a6068d117824a975ce38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate an private key failed.  <a href="errors_8h.html#a719e4fe83ef2a6068d117824a975ce38">More...</a><br /></td></tr>
 <tr class="separator:a719e4fe83ef2a6068d117824a975ce38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f62177837cd9e9d0d67d5084bff729a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a0f62177837cd9e9d0d67d5084bff729a">ZITI_KEY_LOAD_FAILED</a></td></tr>
+<tr class="memdesc:a0f62177837cd9e9d0d67d5084bff729a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to load TLS key failed.  <a href="errors_8h.html#a0f62177837cd9e9d0d67d5084bff729a">More...</a><br /></td></tr>
+<tr class="separator:a0f62177837cd9e9d0d67d5084bff729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb3f0cf3ea267dedbac950b9f25c1276"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adb3f0cf3ea267dedbac950b9f25c1276">ZITI_CSR_GENERATION_FAILED</a></td></tr>
 <tr class="memdesc:adb3f0cf3ea267dedbac950b9f25c1276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate a CSR failed.  <a href="errors_8h.html#adb3f0cf3ea267dedbac950b9f25c1276">More...</a><br /></td></tr>
 <tr class="separator:adb3f0cf3ea267dedbac950b9f25c1276"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -176,6 +180,9 @@ Variables</h2></td></tr>
 <tr class="memitem:af0ab53762cc235f23228927eab1fe4f0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#af0ab53762cc235f23228927eab1fe4f0">ZITI_CRYPTO_FAIL</a></td></tr>
 <tr class="memdesc:af0ab53762cc235f23228927eab1fe4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK detected invalid cryptographic state of Ziti connection.  <a href="errors_8h.html#af0ab53762cc235f23228927eab1fe4f0">More...</a><br /></td></tr>
 <tr class="separator:af0ab53762cc235f23228927eab1fe4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7">ZITI_CONN_CLOSED</a></td></tr>
+<tr class="memdesc:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">connection was closed  <a href="errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7">More...</a><br /></td></tr>
+<tr class="separator:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">ZITI_WTF</a></td></tr>
 <tr class="memdesc:a6cb98ad4d5a5243239c51c92a761fd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspired by the Android SDK: What a Terrible Failure.  <a href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">More...</a><br /></td></tr>
 <tr class="separator:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -210,26 +217,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>A helper macro to make declaring expected error conditions easier which is undef'ed immidately. </p>
-
-</div>
-</div>
-<a id="ac40dbb62a3442640d8ea56b9169ac092"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac40dbb62a3442640d8ea56b9169ac092">&#9670;&nbsp;</a></span>ZITI_ERRORS</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define ZITI_ERRORS</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">XX</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>A macro defining the various errors conditions expected to be seen when using the C SDK. </p>
 
 </div>
 </div>
@@ -268,6 +255,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>The provided configuration was not found. </p>
+
+</div>
+</div>
+<a id="ab8c891426cbf4f224c252fc9a16c7fb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8c891426cbf4f224c252fc9a16c7fb7">&#9670;&nbsp;</a></span>ZITI_CONN_CLOSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_CONN_CLOSED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>connection was closed </p>
 
 </div>
 </div>
@@ -332,6 +335,22 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attempt to generate a CSR failed. </p>
+
+</div>
+</div>
+<a id="aa26ed11c0881b53d1a11520b3844cca8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa26ed11c0881b53d1a11520b3844cca8">&#9670;&nbsp;</a></span>ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enrollment method requires client certificate </p>
 
 </div>
 </div>
@@ -508,7 +527,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Attempt to generate an ECC key failed. </p>
+<p>Attempt to generate an private key failed. </p>
+
+</div>
+</div>
+<a id="a0f62177837cd9e9d0d67d5084bff729a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f62177837cd9e9d0d67d5084bff729a">&#9670;&nbsp;</a></span>ZITI_KEY_LOAD_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_KEY_LOAD_FAILED</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to load TLS key failed. </p>
 
 </div>
 </div>

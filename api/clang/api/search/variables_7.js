@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_325',['name',['../structfield__meta.html#af909ae94ef3d3d3ad498ae8570318b5e',1,'field_meta::name()'],['../structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b',1,'type_meta::name()']]]
+  ['jsonifier_496',['jsonifier',['../structtype__meta.html#a58d4424fcd97516d944b17f6fe31f996',1,'type_meta']]],
+  ['jwt_497',['jwt',['../structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a',1,'ziti_enroll_opts']]]
 ];

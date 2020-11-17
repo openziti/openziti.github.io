@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['field_5fcount_319',['field_count',['../structtype__meta.html#a3e9e939c2f8e10b95e03f83148f463fd',1,'type_meta']]],
-  ['fields_320',['fields',['../structtype__meta.html#a4ea8190a08e1774b9e0b8cdb6662fde2',1,'type_meta']]]
+  ['enroll_5fcert_489',['enroll_cert',['../structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687',1,'ziti_enroll_opts']]],
+  ['enroll_5fkey_490',['enroll_key',['../structziti__enroll__opts.html#a0bebd29f92e7c3d1b4e0f85ca596bab3',1,'ziti_enroll_opts']]],
+  ['entries_491',['entries',['../structmodel__map.html#a6332599d4bbf778ebb78247084691995',1,'model_map']]]
 ];

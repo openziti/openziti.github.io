@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['comparer_312',['comparer',['../structtype__meta.html#af0b9dfb76d33d68346c6ebe4c49c7ea5',1,'type_meta']]],
-  ['config_313',['config',['../structziti__options.html#ae1caa81b77887af51189c6edadbfefab',1,'ziti_options']]],
-  ['config_5ftypes_314',['config_types',['../structziti__options.html#a66a00043c7c2fcdda4a2b430bf5d8205',1,'ziti_options']]],
-  ['controller_315',['controller',['../structziti__options.html#a337ceb539db3ee60c64ae5e3918fba69',1,'ziti_options']]],
-  ['ctx_316',['ctx',['../structziti__options.html#a1bee515444c3de92952865a896f6b307',1,'ziti_options']]]
+  ['bind_5fusing_5fedge_5fidentity_479',['bind_using_edge_identity',['../structziti__listen__opts.html#a0d3346558e0f480d0eeaa844d2cee18c',1,'ziti_listen_opts']]],
+  ['bool_5fvalue_480',['bool_value',['../structtag.html#a31edaff25adbdc2b8aba9919e77a8f54',1,'tag']]],
+  ['build_5fdate_481',['build_date',['../structziti__version.html#a34266cbbec98b28d41a216586261b155',1,'ziti_version']]]
 ];

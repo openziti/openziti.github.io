@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['build_5fdate_311',['build_date',['../structziti__version.html#a34266cbbec98b28d41a216586261b155',1,'ziti_version']]]
+  ['app_5fdata_477',['app_data',['../structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0',1,'ziti_dial_opts']]],
+  ['app_5fdata_5fsz_478',['app_data_sz',['../structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6',1,'ziti_dial_opts']]]
 ];
