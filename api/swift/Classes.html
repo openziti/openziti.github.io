@@ -63,6 +63,12 @@
                 <a href="Classes/ZitiKeychain.html">ZitiKeychain</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/ZitiPostureChecks.html">ZitiPostureChecks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:@M@CZiti@objc(cs)ZitiPostureContext">ZitiPostureContext</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/ZitiUrlProtocol.html">ZitiUrlProtocol</a>
               </li>
             </ul>
@@ -325,6 +331,63 @@ to configure the keychain to allow the application access to the keys and certif
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/c:@M@CZiti@objc(cs)ZitiPostureContext"></a>
+                    <a name="//apple_ref/swift/Class/ZitiPostureContext" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiPostureContext">ZitiPostureContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Used for passing context among callbacks and mapping to <code><a href="Classes/Ziti.html">Ziti</a></code> C SDK function</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiPostureContext</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CZiti@objc(cs)ZitiPostureChecks"></a>
+                    <a name="//apple_ref/swift/Class/ZitiPostureChecks" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiPostureChecks">ZitiPostureChecks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code><a href="Classes/Ziti.html">Ziti</a></code> can be initialized with an instance of this class that implements various posture checks, used to determine if a <code><a href="Classes/Ziti.html">Ziti</a></code> identity is allowed access to specific services</p>
+
+                        <a href="Classes/ZitiPostureChecks.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">open</span> <span class="kd">class</span> <span class="kt">ZitiPostureChecks</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@CZiti@objc(cs)ZitiUrlProtocol"></a>
                     <a name="//apple_ref/swift/Class/ZitiUrlProtocol" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiUrlProtocol">ZitiUrlProtocol</a>
@@ -337,7 +400,7 @@ to configure the keychain to allow the application access to the keys and certif
                       <div class="abstract">
                         <p><code>URLProtocol</code> that intercepts <code>HTTP</code> and <code>HTTPS</code> URL requests and routes them over the Ziti overlay as configured in your Ziti controller.</p>
 
-<p><code>ZitiUrlProtocol</code> should be instantiated as part of the <code>InitCallback</code> of <code>Ziti.run(_:_:)</code> to ensure Ziti is initialized before starting to intercept services.</p>
+<p><code>ZitiUrlProtocol</code> should be instantiated as part of the <code>InitCallback</code> of <code><a href="Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)run::">Ziti.run(_:_:)</a></code> to ensure Ziti is initialized before starting to intercept services.</p>
 
                         <a href="Classes/ZitiUrlProtocol.html" class="slightly-smaller">See more</a>
                       </div>
@@ -358,8 +421,8 @@ to configure the keychain to allow the application access to the keys and certif
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

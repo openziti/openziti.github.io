@@ -63,6 +63,12 @@
                 <a href="../Classes/ZitiKeychain.html">ZitiKeychain</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ZitiPostureChecks.html">ZitiPostureChecks</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@CZiti@objc(cs)ZitiPostureContext">ZitiPostureContext</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZitiUrlProtocol.html">ZitiUrlProtocol</a>
               </li>
             </ul>
@@ -699,6 +705,63 @@ certificate.  This certificate is stored in the Keychain and required for future
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
+                        <p>Convienience method for calling <code>run(_:_)</code> with <code>nil</code> posture check support</p>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p>See also:</p>
+
+<ul>
+<li><code>run(_:_)</code></li>
+<li><code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)runAsync:">runAsync(_:)</a></code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">initCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initCallback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>called when intialization with the Ziti controller is complete</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CZiti@objc(cs)Ziti(im)run::"></a>
+                    <a name="//apple_ref/swift/Method/run(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)run::">run(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
                         <p>Execute a permanant loop processing data from all attached sources (including Ziti)</p>
 
 <p>Start <code>Ziti</code> processing via this method.  All Ziti processing occurs in the same thread as this call and all callbacks run on this thread.
@@ -722,7 +785,7 @@ this method initializes Ziti for connections using the configured <code><a href=
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">initCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></span><span class="p">)</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">run</span><span class="p">(</span><span class="n">_</span> <span class="nv">postureChecks</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiPostureChecks.html">ZitiPostureChecks</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">initCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -730,6 +793,18 @@ this method initializes Ziti for connections using the configured <code><a href=
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postureChecks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>provide (optional) support for posture checks</p>
+                                </div>
+                              </td>
+                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -777,6 +852,65 @@ this method initializes Ziti for connections using the configured <code><a href=
                         <h4>Parameters</h4>
                         <table class="graybox">
                           <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>initCallback</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>called when intialization with the Ziti controller is complete</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@CZiti@objc(cs)Ziti(im)runAsync::"></a>
+                    <a name="//apple_ref/swift/Method/runAsync(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)runAsync::">runAsync(_:<wbr>_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p><code>Create a new thread for</code>run(_:)` and return</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">runAsync</span><span class="p">(</span><span class="n">_</span> <span class="nv">postureChecks</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiPostureChecks.html">ZitiPostureChecks</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">initCallback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postureChecks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>provide (optional) support for posture checking</p>
+                                </div>
+                              </td>
+                            </tr>
                             <tr>
                               <td>
                                 <code>
@@ -1141,8 +1275,8 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-07-14)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.5</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-11-16)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
