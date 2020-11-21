@@ -237,6 +237,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a62ca5b4f622786fe0fd6f867544e6bef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef">ziti_conn_set_data</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, void *data)</td></tr>
 <tr class="memdesc:a62ca5b4f622786fe0fd6f867544e6bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or clear custom data associated with the given <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a>.  <a href="ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef">More...</a><br /></td></tr>
 <tr class="separator:a62ca5b4f622786fe0fd6f867544e6bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac622ac86432d4431976aee7a2d606add"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ac622ac86432d4431976aee7a2d606add">ziti_conn_source_identity</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
+<tr class="memdesc:ac622ac86432d4431976aee7a2d606add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identity of the client that initiated the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a>.  <a href="ziti_8h.html#ac622ac86432d4431976aee7a2d606add">More...</a><br /></td></tr>
+<tr class="separator:ac622ac86432d4431976aee7a2d606add"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27995327ecff2a0f4b99ade7416b038f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f">ziti_service_available</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service, <a class="el" href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">ziti_service_cb</a> cb, void *ctx)</td></tr>
 <tr class="memdesc:a27995327ecff2a0f4b99ade7416b038f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks availability of the service for the given edge context.  <a href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f">More...</a><br /></td></tr>
 <tr class="separator:a27995327ecff2a0f4b99ade7416b038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -982,6 +985,27 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a17ec27c78a3dda9097fff4c374c1b29f" title="Retrieves any custom data associated with the given ziti_connection.">ziti_conn_data()</a>, <a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5" title="Initializes a connection.">ziti_conn_init()</a> </dd></dl>
+
+</div>
+</div>
+<a id="ac622ac86432d4431976aee7a2d606add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac622ac86432d4431976aee7a2d606add">&#9670;&nbsp;</a></span>ziti_conn_source_identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ziti_conn_source_identity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a>&#160;</td>
+          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the identity of the client that initiated the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a>. </p>
+<dl class="section return"><dt>Returns</dt><dd>identity of the client that requested the connection. </dd></dl>
 
 </div>
 </div>

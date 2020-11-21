@@ -36,6 +36,7 @@ var ziti_8h =
     [ "ziti_conn_data", "ziti_8h.html#a17ec27c78a3dda9097fff4c374c1b29f", null ],
     [ "ziti_conn_init", "ziti_8h.html#ace1cf18567f46611faa449553041e6d5", null ],
     [ "ziti_conn_set_data", "ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef", null ],
+    [ "ziti_conn_source_identity", "ziti_8h.html#ac622ac86432d4431976aee7a2d606add", null ],
     [ "ziti_dial", "ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b", null ],
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
     [ "ziti_dump", "ziti_8h.html#a222884f72e634b2faa936b3ec05e7867", null ],
