@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['enroll_5fcert_491',['enroll_cert',['../structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687',1,'ziti_enroll_opts']]],
-  ['enroll_5fkey_492',['enroll_key',['../structziti__enroll__opts.html#a0bebd29f92e7c3d1b4e0f85ca596bab3',1,'ziti_enroll_opts']]],
-  ['entries_493',['entries',['../structmodel__map.html#a6332599d4bbf778ebb78247084691995',1,'model_map']]]
+  ['enroll_5fcert_490',['enroll_cert',['../structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687',1,'ziti_enroll_opts']]],
+  ['enroll_5fkey_491',['enroll_key',['../structziti__enroll__opts.html#a0bebd29f92e7c3d1b4e0f85ca596bab3',1,'ziti_enroll_opts']]]
 ];

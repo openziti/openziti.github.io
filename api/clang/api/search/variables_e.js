@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['terminator_5fcost_518',['terminator_cost',['../structziti__listen__opts.html#a3b447cb2c2832f0e691cb7054bef4d7f',1,'ziti_listen_opts']]],
-  ['terminator_5fprecedence_519',['terminator_precedence',['../structziti__listen__opts.html#aacae40e85c508aaa47df26fe7b1597a8',1,'ziti_listen_opts']]],
-  ['tls_520',['tls',['../structziti__options.html#a16be179f0bf8a6eed7ba1627f87f5c5b',1,'ziti_options']]],
-  ['type_521',['type',['../structtag.html#a7241bd60cffd644fefa293780169f6fd',1,'tag']]]
+  ['service_5fcb_515',['service_cb',['../structziti__options.html#a776f4ff7d5792fd1cff9273f741d1a3f',1,'ziti_options']]],
+  ['size_516',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
+  ['string_5fvalue_517',['string_value',['../structtag.html#adef7e61b00736d811f5662f9ef8fcc11',1,'tag']]]
 ];

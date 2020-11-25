@@ -98,6 +98,7 @@ var menudata={children:[
 {text:"p",url:"globals_func.html#index_p"},
 {text:"z",url:"globals_func.html#index_z"}]},
 {text:"Variables",url:"globals_vars.html",children:[
+{text:"g",url:"globals_vars.html#index_g"},
 {text:"z",url:"globals_vars.html#index_z"}]},
 {text:"Typedefs",url:"globals_type.html",children:[
 {text:"_",url:"globals_type.html#index__5F"},

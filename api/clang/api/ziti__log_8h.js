@@ -16,9 +16,9 @@ var ziti__log_8h =
       [ "VERBOSE", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601", null ],
       [ "TRACE", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e", null ]
     ] ],
-    [ "get_elapsed", "ziti__log_8h.html#a4aacc0864abc360558c8bef11c9deae6", null ],
-    [ "init_debug", "ziti__log_8h.html#a568e49ee3a2e0adab55fa38535e40835", null ],
-    [ "ziti_set_log", "ziti__log_8h.html#ad763067dcbbc02f4cc0a89a1f248db48", null ],
+    [ "init_debug", "ziti__log_8h.html#a844b4bae928555e1c180dfd588eeba65", null ],
+    [ "ziti_set_log", "ziti__log_8h.html#afdb85986ca643bfce0ebcaffa1740141", null ],
+    [ "get_elapsed", "ziti__log_8h.html#a6ae71b0b1b2edd7eb52fed9a632a6cb1", null ],
     [ "ziti_debug_level", "ziti__log_8h.html#a8d7ac7efbe052e78d1945cd796c34b44", null ],
     [ "ziti_debug_out", "ziti__log_8h.html#a05387c129583baeaf12bcb8f17d7490d", null ]
 ];

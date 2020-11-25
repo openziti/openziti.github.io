@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['name_503',['name',['../structfield__meta.html#af909ae94ef3d3d3ad498ae8570318b5e',1,'field_meta::name()'],['../structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b',1,'type_meta::name()']]],
-  ['num_5fvalue_504',['num_value',['../structtag.html#ad4eb6ac94c243654651229c948d2961e',1,'tag']]]
+  ['meta_500',['meta',['../structfield__meta.html#ac37353a244fadd30aadcc215edbf5aae',1,'field_meta']]],
+  ['metrics_5ftype_501',['metrics_type',['../structziti__options.html#aa6d3d16078d8a3f1ebbe7bcf745c4bf2',1,'ziti_options']]],
+  ['mod_502',['mod',['../structfield__meta.html#a2b334ab4377c6e826c0c0359d68a9291',1,'field_meta']]]
 ];
