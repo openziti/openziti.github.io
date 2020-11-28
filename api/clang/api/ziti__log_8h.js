@@ -7,6 +7,7 @@ var ziti__log_8h =
     [ "to_str", "ziti__log_8h.html#ab71162cca740c9e11c2da1ee6b3db5d5", null ],
     [ "ZITI_LOG", "ziti__log_8h.html#ad238add2fd417b5fa99e3e26ca2e3368", null ],
     [ "ZITI_LOG_PREFIX", "ziti__log_8h.html#a0047c6f07fdeea2d9a0fd8d33c845cd9", null ],
+    [ "log_writer", "ziti__log_8h.html#abb8eb89b150e6f07672378105cf1324d", null ],
     [ "DebugLevel", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395", [
       [ "NONE", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ac157bdf0b85a40d2619cbc8bc1ae5fe2", null ],
       [ "ERROR", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a2fd6f336d08340583bd620a7f5694c90", null ],
@@ -17,8 +18,7 @@ var ziti__log_8h =
       [ "TRACE", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e", null ]
     ] ],
     [ "init_debug", "ziti__log_8h.html#a844b4bae928555e1c180dfd588eeba65", null ],
-    [ "ziti_set_log", "ziti__log_8h.html#afdb85986ca643bfce0ebcaffa1740141", null ],
-    [ "get_elapsed", "ziti__log_8h.html#a6ae71b0b1b2edd7eb52fed9a632a6cb1", null ],
-    [ "ziti_debug_level", "ziti__log_8h.html#a8d7ac7efbe052e78d1945cd796c34b44", null ],
-    [ "ziti_debug_out", "ziti__log_8h.html#a05387c129583baeaf12bcb8f17d7490d", null ]
+    [ "ziti_logger", "ziti__log_8h.html#ae108866cf2663d84d5d9ad14a1510ca5", null ],
+    [ "ziti_set_log", "ziti__log_8h.html#ab2df768c3968511e722dededc98f0f4b", null ],
+    [ "ziti_debug_level", "ziti__log_8h.html#a8d7ac7efbe052e78d1945cd796c34b44", null ]
 ];

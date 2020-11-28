@@ -1,17 +1,8 @@
 var searchData=
 [
-  ['tag_195',['tag',['../structtag.html',1,'']]],
-  ['tag_5fbool_196',['tag_bool',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba4c9655803f1e1b7abd706b089f55de33',1,'model_support.h']]],
-  ['tag_5fnull_197',['tag_null',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba82216cafef31978dcf1cf5f75740a732',1,'model_support.h']]],
-  ['tag_5fnumber_198',['tag_number',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32bae5b80aa9c6fa2de13f57b5b3a9ebe65f',1,'model_support.h']]],
-  ['tag_5fstring_199',['tag_string',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba9c763104828a6943f006ba5d5400e13e',1,'model_support.h']]],
-  ['tag_5ftype_200',['tag_type',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32b',1,'model_support.h']]],
-  ['terminator_5fcost_201',['terminator_cost',['../structziti__listen__opts.html#a3b447cb2c2832f0e691cb7054bef4d7f',1,'ziti_listen_opts']]],
-  ['terminator_5fprecedence_202',['terminator_precedence',['../structziti__listen__opts.html#aacae40e85c508aaa47df26fe7b1597a8',1,'ziti_listen_opts']]],
-  ['timestamp_203',['timestamp',['../model__support_8h.html#ab2a65074a62982920edadbc6f5e01433',1,'model_support.h']]],
-  ['tls_204',['tls',['../structziti__options.html#a16be179f0bf8a6eed7ba1627f87f5c5b',1,'ziti_options']]],
-  ['to_5fstr_205',['to_str',['../ziti__log_8h.html#ab71162cca740c9e11c2da1ee6b3db5d5',1,'ziti_log.h']]],
-  ['trace_206',['TRACE',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e',1,'ziti_log.h']]],
-  ['type_207',['type',['../structtag.html#a7241bd60cffd644fefa293780169f6fd',1,'tag']]],
-  ['type_5fmeta_208',['type_meta',['../structtype__meta.html',1,'']]]
+  ['service_5fcb_190',['service_cb',['../structziti__options.html#a776f4ff7d5792fd1cff9273f741d1a3f',1,'ziti_options']]],
+  ['size_191',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
+  ['string_192',['string',['../model__support_8h.html#a4505c08c065b48840a30eedd9845cce2',1,'model_support.h']]],
+  ['string_5farray_193',['string_array',['../model__support_8h.html#af3741b4b338febbb5badb45e710c600a',1,'model_support.h']]],
+  ['string_5fvalue_194',['string_value',['../structtag.html#adef7e61b00736d811f5662f9ef8fcc11',1,'tag']]]
 ];

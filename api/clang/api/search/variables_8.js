@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['jsonifier_498',['jsonifier',['../structtype__meta.html#a58d4424fcd97516d944b17f6fe31f996',1,'type_meta']]],
-  ['jwt_499',['jwt',['../structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a',1,'ziti_enroll_opts']]]
+  ['meta_500',['meta',['../structfield__meta.html#ac37353a244fadd30aadcc215edbf5aae',1,'field_meta']]],
+  ['metrics_5ftype_501',['metrics_type',['../structziti__options.html#aa6d3d16078d8a3f1ebbe7bcf745c4bf2',1,'ziti_options']]],
+  ['mod_502',['mod',['../structfield__meta.html#a2b334ab4377c6e826c0c0359d68a9291',1,'field_meta']]]
 ];

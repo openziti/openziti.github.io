@@ -118,10 +118,10 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a01d00c5d71bfb04e1ded0c3f182f5cc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3">ZITI_CAN_DIAL</a>&#160;&#160;&#160;1</td></tr>
+<tr class="memitem:a01d00c5d71bfb04e1ded0c3f182f5cc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3">ZITI_CAN_DIAL</a>&#160;&#160;&#160;1U</td></tr>
 <tr class="memdesc:a01d00c5d71bfb04e1ded0c3f182f5cc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating service <code>Dial</code> permission.  <a href="ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3">More...</a><br /></td></tr>
 <tr class="separator:a01d00c5d71bfb04e1ded0c3f182f5cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ad10991d93ba9fbdd3724a7eb64fb76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76">ZITI_CAN_BIND</a>&#160;&#160;&#160;2</td></tr>
+<tr class="memitem:a7ad10991d93ba9fbdd3724a7eb64fb76"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76">ZITI_CAN_BIND</a>&#160;&#160;&#160;2U</td></tr>
 <tr class="memdesc:a7ad10991d93ba9fbdd3724a7eb64fb76"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating service <code>Bind</code> permission.  <a href="ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76">More...</a><br /></td></tr>
 <tr class="separator:a7ad10991d93ba9fbdd3724a7eb64fb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b75586a74376352a25de37b835a74d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a09b75586a74376352a25de37b835a74d">ZITI_DEFAULT_TIMEOUT</a>&#160;&#160;&#160;10000</td></tr>
@@ -163,9 +163,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a838ecc5338907bebedf7f242fac5856a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *path, bool is_running, char *sha_512_hash, char **signers, int num_signers)</td></tr>
 <tr class="memdesc:a838ecc5338907bebedf7f242fac5856a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response process callback.  <a href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">More...</a><br /></td></tr>
 <tr class="separator:a838ecc5338907bebedf7f242fac5856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af49017138bd48b2fa0cf53c3b684c37d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af49017138bd48b2fa0cf53c3b684c37d">ziti_pq_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td></tr>
-<tr class="memdesc:af49017138bd48b2fa0cf53c3b684c37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for process callback.  <a href="ziti_8h.html#af49017138bd48b2fa0cf53c3b684c37d">More...</a><br /></td></tr>
-<tr class="separator:af49017138bd48b2fa0cf53c3b684c37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecab88391d31690f11138994d7a096ad"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">ziti_pq_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td></tr>
+<tr class="memdesc:aecab88391d31690f11138994d7a096ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for process callback.  <a href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">More...</a><br /></td></tr>
+<tr class="separator:aecab88391d31690f11138994d7a096ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2f014f7ebb06d81827b13c0c181a9b3"><td class="memItemLeft" align="right" valign="top">typedef ssize_t(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aa2f014f7ebb06d81827b13c0c181a9b3">ziti_data_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uint8_t *data, ssize_t length)</td></tr>
 <tr class="memdesc:aa2f014f7ebb06d81827b13c0c181a9b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Data callback.  <a href="ziti_8h.html#aa2f014f7ebb06d81827b13c0c181a9b3">More...</a><br /></td></tr>
 <tr class="separator:aa2f014f7ebb06d81827b13c0c181a9b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,7 +276,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ZITI_CAN_BIND&#160;&#160;&#160;2</td>
+          <td class="memname">#define ZITI_CAN_BIND&#160;&#160;&#160;2U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -292,7 +292,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ZITI_CAN_DIAL&#160;&#160;&#160;1</td>
+          <td class="memname">#define ZITI_CAN_DIAL&#160;&#160;&#160;1U</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -575,14 +575,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="af49017138bd48b2fa0cf53c3b684c37d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af49017138bd48b2fa0cf53c3b684c37d">&#9670;&nbsp;</a></span>ziti_pq_process_cb</h2>
+<a id="aecab88391d31690f11138994d7a096ad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecab88391d31690f11138994d7a096ad">&#9670;&nbsp;</a></span>ziti_pq_process_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pq_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td>
+          <td class="memname">typedef void(* ziti_pq_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -692,7 +692,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Posture response process callback. </p>
-<p>This callback should be invoked after gathering the relevant process information from the host during a <a class="el" href="ziti_8h.html#af49017138bd48b2fa0cf53c3b684c37d" title="Posture Query for process callback.">ziti_pq_process_cb()</a></p>
+<p>This callback should be invoked after gathering the relevant process information from the host during a <a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad" title="Posture Query for process callback.">ziti_pq_process_cb()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -704,7 +704,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#af49017138bd48b2fa0cf53c3b684c37d" title="Posture Query for process callback.">ziti_pq_process_cb()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad" title="Posture Query for process callback.">ziti_pq_process_cb()</a> </dd></dl>
 
 </div>
 </div>

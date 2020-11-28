@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['refresh_5finterval_512',['refresh_interval',['../structziti__options.html#a19c21cc791a4b65d83bd66e9dc842679',1,'ziti_options']]],
-  ['revision_513',['revision',['../structziti__version.html#a4439f7a7f951c5bccf616fbe97b81f9f',1,'ziti_version']]],
-  ['router_5fkeepalive_514',['router_keepalive',['../structziti__options.html#a2758927e14f5dcb22826f4fa6217fe2f',1,'ziti_options']]]
+  ['service_5fcb_515',['service_cb',['../structziti__options.html#a776f4ff7d5792fd1cff9273f741d1a3f',1,'ziti_options']]],
+  ['size_516',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
+  ['string_5fvalue_517',['string_value',['../structtag.html#adef7e61b00736d811f5662f9ef8fcc11',1,'tag']]]
 ];
