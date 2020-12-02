@@ -6,6 +6,55 @@
       "symbol": "ZitiEnroller.getClaims()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.DEBUG",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.ERROR",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.INFO",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.NONE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.TRACE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.VERBOSE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.DebugLevel.WARN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
     }
   ],
   "source_directory": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift"
