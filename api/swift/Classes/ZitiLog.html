@@ -66,7 +66,7 @@
                 <a href="../Classes/ZitiLog.html">ZitiLog</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ZitiLog/DebugLevel.html">– DebugLevel</a>
+                <a href="../Classes/ZitiLog/LogLevel.html">– LogLevel</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZitiPostureChecks.html">ZitiPostureChecks</a>
@@ -92,7 +92,7 @@
 
                 </div>
               </div>
-            <p>Logger class the uses Ziti C SDK&rsquo;s logging feature</p>
+            <p>Logger class that mirrors the Ziti C SDK&rsquo;s logging feature</p>
 
           </section>
           <section class="section task-group-section">
@@ -101,9 +101,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti7ZitiLogC10DebugLevelO"></a>
-                    <a name="//apple_ref/swift/Enum/DebugLevel" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti7ZitiLogC10DebugLevelO">DebugLevel</a>
+                    <a name="/s:5CZiti7ZitiLogC0C5LevelO"></a>
+                    <a name="//apple_ref/swift/Enum/LogLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti7ZitiLogC0C5LevelO">LogLevel</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -113,13 +113,13 @@
                       <div class="abstract">
                         <p>Maps to Ziti CSDK log levels, which cannot be imported directly</p>
 
-                        <a href="../Classes/ZitiLog/DebugLevel.html" class="slightly-smaller">See more</a>
+                        <a href="../Classes/ZitiLog/LogLevel.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">DebugLevel</span> <span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogLevel</span> <span class="p">:</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -129,9 +129,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti7ZitiLogCyACSS_SpySo9uv_loop_sVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti7ZitiLogCyACSS_SpySo9uv_loop_sVGSgtcfc">init(_:<wbr>_:<wbr>)</a>
+                    <a name="/s:5CZiti7ZitiLogCyACSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti7ZitiLogCyACSScfc">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -139,14 +139,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initial logger</p>
+                        <p>Initialize logger</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"CZiti"</span><span class="p">,</span> <span class="n">_</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;!</span> <span class="o">=</span> <span class="nf">uv_default_loop</span><span class="p">())</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">category</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">"CZiti"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -166,18 +166,6 @@
                                 </div>
                               </td>
                             </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>loop</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>uv_loop for logger</p>
-                                </div>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -187,9 +175,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti7ZitiLogCyACyXlXp_SpySo9uv_loop_sVGSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti7ZitiLogCyACyXlXp_SpySo9uv_loop_sVGSgtcfc">init(_:<wbr>_:<wbr>)</a>
+                    <a name="/s:5CZiti7ZitiLogCyACyXlXpcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti7ZitiLogCyACyXlXpcfc">init(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -197,14 +185,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initial logger</p>
+                        <p>Initialize logger</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">aClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="n">_</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;!</span> <span class="o">=</span> <span class="nf">uv_default_loop</span><span class="p">())</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">aClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -221,122 +209,6 @@
                               <td>
                                 <div>
                                   <p>use name of this class as the loggng categy</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>loop</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>uv_loop for logger</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti7ZitiLogC03setC5LevelyyAC05DebugE0OFZ"></a>
-                    <a name="//apple_ref/swift/Method/setLogLevel(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti7ZitiLogC03setC5LevelyyAC05DebugE0OFZ">setLogLevel(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set the system-wide log level</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setLogLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">level</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiLog/DebugLevel.html">DebugLevel</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>level</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>only log messages at this level or higher (more severe)</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti7ZitiLogC17setCustomerLoggeryyys5Int32V_SPys4Int8VGSgAJSitXC_SpySo9uv_loop_sVGSgtFZ"></a>
-                    <a name="//apple_ref/swift/Method/setCustomerLogger(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti7ZitiLogC17setCustomerLoggeryyys5Int32V_SPys4Int8VGSgAJSitXC_SpySo9uv_loop_sVGSgtFZ">setCustomerLogger(_:<wbr>_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Set a custom logger</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setCustomerLogger</span><span class="p">(</span><span class="n">_</span> <span class="nv">logger</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="n">log_writer</span><span class="p">,</span> <span class="n">_</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;!</span> <span class="o">=</span> <span class="nf">uv_default_loop</span><span class="p">())</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>logger</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>customer logging function</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>loop</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>uv_loop for logger</p>
                                 </div>
                               </td>
                             </tr>
@@ -422,6 +294,52 @@
                               <td>
                                 <div>
                                   <p>line number where this message was logged</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti7ZitiLogC03setC5LevelyyAC0cE0OFZ"></a>
+                    <a name="//apple_ref/swift/Method/setLogLevel(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti7ZitiLogC03setC5LevelyyAC0cE0OFZ">setLogLevel(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Set the system-wide log level</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">setLogLevel</span><span class="p">(</span><span class="n">_</span> <span class="nv">level</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiLog/LogLevel.html">LogLevel</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>level</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>only log messages at this level or higher severity</p>
                                 </div>
                               </td>
                             </tr>
@@ -869,7 +787,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Log a message at <code>.ERROR</code> level with &ldquo;what a terrible failure&rdquo; designation</p>
+                        <p>Log a message at <code>.WTF</code> level (&ldquo;what a terrible failure&rdquo;)</p>
 
                       </div>
                       <div class="declaration">
@@ -946,7 +864,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-02)</p>
+          <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

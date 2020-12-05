@@ -10,49 +10,63 @@
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.DEBUG",
+      "symbol": "ZitiLog.LogLevel.DEBUG",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.ERROR",
+      "symbol": "ZitiLog.LogLevel.DEFAULT",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.INFO",
+      "symbol": "ZitiLog.LogLevel.ERROR",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.NONE",
+      "symbol": "ZitiLog.LogLevel.INFO",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.TRACE",
+      "symbol": "ZitiLog.LogLevel.NONE",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.VERBOSE",
+      "symbol": "ZitiLog.LogLevel.TRACE",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
       "line": 25,
-      "symbol": "ZitiLog.DebugLevel.WARN",
+      "symbol": "ZitiLog.LogLevel.VERBOSE",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.LogLevel.WARN",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiLog.swift",
+      "line": 25,
+      "symbol": "ZitiLog.LogLevel.WTF",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     }
