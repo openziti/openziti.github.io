@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ZitiClaims Class Reference</title>
+    <title>ZitiTunnel Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/ZitiClaims" class="dashAnchor"></a>
-    <a title="ZitiClaims Class Reference"></a>
+    <a name="//apple_ref/swift/Class/ZitiTunnel" class="dashAnchor"></a>
+    <a title="ZitiTunnel Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a></p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ZitiClaims Class Reference
+        ZitiTunnel Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -95,26 +95,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ZitiClaims</h1>
+            <h1>ZitiTunnel</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiClaims</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiTunnel</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ZitiUnretained</span></code></pre>
 
                 </div>
               </div>
-            <p>Class that encapsulate the claims of a Ziti one-time JWT file.</p>
-
-<p>Claims are verified as part of the enrollment process.</p>
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    See also:
-
-<ul>
-<li><code>Ziti.enroll(_:,_:)</code></li>
-</ul>
-
-</div>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
@@ -123,9 +112,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiClaimsC3subSSvp"></a>
-                    <a name="//apple_ref/swift/Property/sub" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiClaimsC3subSSvp">sub</a>
+                    <a name="/s:5CZiti10ZitiTunnelCyAcA0bC12PacketWriter_p_SpySo9uv_loop_sVGtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelCyAcA0bC12PacketWriter_p_SpySo9uv_loop_sVGtcfc">init(_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,14 +122,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Subject Clain (Required)</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">sub</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">packetWriter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ZitiTunnelPacketWriter.html">ZitiTunnelPacketWriter</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -150,9 +139,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiClaimsC3issSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/iss" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiClaimsC3issSSSgvp">iss</a>
+                    <a name="/s:5CZiti10ZitiTunnelC11queuePacketyy10Foundation4DataVF"></a>
+                    <a name="//apple_ref/swift/Method/queuePacket(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelC11queuePacketyy10Foundation4DataVF">queuePacket(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,14 +149,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Issuer Clain</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">iss</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">queuePacket</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -177,9 +166,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiClaimsC2emSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/em" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiClaimsC2emSSSgvp">em</a>
+                    <a name="/s:5CZiti10ZitiTunnelC6v1Hostys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgA2mFtF"></a>
+                    <a name="//apple_ref/swift/Method/v1Host(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelC6v1Hostys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgA2mFtF">v1Host(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,14 +176,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enrollment Method Clain</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">em</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">v1Host</span><span class="p">(</span><span class="n">_</span> <span class="nv">ziti_ctx</span><span class="p">:</span> <span class="n">ziti_context</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">service_name</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">proto</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">hostname</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -204,9 +193,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiClaimsC3expSiSgvp"></a>
-                    <a name="//apple_ref/swift/Property/exp" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiClaimsC3expSiSgvp">exp</a>
+                    <a name="/s:5CZiti10ZitiTunnelC11v1Interceptys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgA2mFtF"></a>
+                    <a name="//apple_ref/swift/Method/v1Intercept(_:_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelC11v1Interceptys5Int32Vs13OpaquePointerVSg_SPys4Int8VGSgA2mFtF">v1Intercept(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -214,14 +203,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Expiration Time Claim</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">exp</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">v1Intercept</span><span class="p">(</span><span class="n">_</span> <span class="nv">ziti_ctx</span><span class="p">:</span> <span class="n">ziti_context</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">service_id</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">service_name</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">hostname</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">,</span> <span class="n">_</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -231,9 +220,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@CZiti@objc(cs)ZitiClaims(py)jti"></a>
-                    <a name="//apple_ref/swift/Property/jti" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiClaims(py)jti">jti</a>
+                    <a name="/s:5CZiti10ZitiTunnelC18v1StopInterceptingyySPys4Int8VGSgF"></a>
+                    <a name="//apple_ref/swift/Method/v1StopIntercepting(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelC18v1StopInterceptingyySPys4Int8VGSgF">v1StopIntercepting(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -241,15 +230,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>JWT ID Claim</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">jti</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">v1StopIntercepting</span><span class="p">(</span><span class="n">_</span> <span class="nv">service_id</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">Int8</span><span class="o">&gt;!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
