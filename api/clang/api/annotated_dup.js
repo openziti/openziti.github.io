@@ -4,9 +4,13 @@ var annotated_dup =
     [ "model_map", "structmodel__map.html", "structmodel__map" ],
     [ "tag", "structtag.html", "structtag" ],
     [ "type_meta", "structtype__meta.html", "structtype__meta" ],
+    [ "ziti_context_event", "structziti__context__event.html", "structziti__context__event" ],
     [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],
     [ "ziti_enroll_opts", "structziti__enroll__opts.html", "structziti__enroll__opts" ],
+    [ "ziti_event_t", "structziti__event__t.html", "structziti__event__t" ],
     [ "ziti_listen_opts", "structziti__listen__opts.html", "structziti__listen__opts" ],
     [ "ziti_options", "structziti__options.html", "structziti__options" ],
+    [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
+    [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
     [ "ziti_version", "structziti__version.html", "structziti__version" ]
 ];

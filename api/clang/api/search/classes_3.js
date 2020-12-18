@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['ziti_5fdial_5fopts_337',['ziti_dial_opts',['../structziti__dial__opts.html',1,'']]],
-  ['ziti_5fenroll_5fopts_338',['ziti_enroll_opts',['../structziti__enroll__opts.html',1,'']]],
-  ['ziti_5flisten_5fopts_339',['ziti_listen_opts',['../structziti__listen__opts.html',1,'']]],
-  ['ziti_5foptions_340',['ziti_options',['../structziti__options.html',1,'']]],
-  ['ziti_5fversion_341',['ziti_version',['../structziti__version.html',1,'']]]
+  ['ziti_5fcontext_5fevent_364',['ziti_context_event',['../structziti__context__event.html',1,'']]],
+  ['ziti_5fdial_5fopts_365',['ziti_dial_opts',['../structziti__dial__opts.html',1,'']]],
+  ['ziti_5fenroll_5fopts_366',['ziti_enroll_opts',['../structziti__enroll__opts.html',1,'']]],
+  ['ziti_5fevent_5ft_367',['ziti_event_t',['../structziti__event__t.html',1,'']]],
+  ['ziti_5flisten_5fopts_368',['ziti_listen_opts',['../structziti__listen__opts.html',1,'']]],
+  ['ziti_5foptions_369',['ziti_options',['../structziti__options.html',1,'']]],
+  ['ziti_5frouter_5fevent_370',['ziti_router_event',['../structziti__router__event.html',1,'']]],
+  ['ziti_5fservice_5fevent_371',['ziti_service_event',['../structziti__service__event.html',1,'']]],
+  ['ziti_5fversion_372',['ziti_version',['../structziti__version.html',1,'']]]
 ];

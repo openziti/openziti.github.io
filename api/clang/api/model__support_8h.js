@@ -59,6 +59,7 @@ var model__support_8h =
     [ "model_map_iterator", "model__support_8h.html#a94a6f026c81a8be1e14a1b355c254cb6", null ],
     [ "model_map_remove", "model__support_8h.html#ac25e8d75453a92279cd57e42be958d82", null ],
     [ "model_map_set", "model__support_8h.html#a77dc1d386f629b4faba94e36d4dc1b5d", null ],
+    [ "model_map_size", "model__support_8h.html#a752bc4de3be7e5472f2b72f0c8d8ef38", null ],
     [ "model_parse", "model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9", null ],
     [ "model_parse_array", "model__support_8h.html#ac5e80917106862cdea7729c18e125c27", null ],
     [ "model_to_json", "model__support_8h.html#a25119b9fb44a75adc87111a2fb963de5", null ]

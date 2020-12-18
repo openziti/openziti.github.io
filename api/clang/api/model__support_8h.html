@@ -205,6 +205,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa93a7751c8ca3183d7deb8a16ca377c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f67d6a9a85a57d95585ee772538a971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a2f67d6a9a85a57d95585ee772538a971">get_model_map_meta</a> ()</td></tr>
 <tr class="separator:a2f67d6a9a85a57d95585ee772538a971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a752bc4de3be7e5472f2b72f0c8d8ef38"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a752bc4de3be7e5472f2b72f0c8d8ef38">model_map_size</a> (<a class="el" href="structmodel__map.html">model_map</a> *<a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>)</td></tr>
+<tr class="separator:a752bc4de3be7e5472f2b72f0c8d8ef38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77dc1d386f629b4faba94e36d4dc1b5d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a77dc1d386f629b4faba94e36d4dc1b5d">model_map_set</a> (<a class="el" href="structmodel__map.html">model_map</a> *<a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, const char *key, void *val)</td></tr>
 <tr class="separator:a77dc1d386f629b4faba94e36d4dc1b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa3d82459e2e10ee7c8bc79da822b72d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#afa3d82459e2e10ee7c8bc79da822b72d">model_map_get</a> (<a class="el" href="structmodel__map.html">model_map</a> *<a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, const char *key)</td></tr>
@@ -1274,6 +1276,24 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a752bc4de3be7e5472f2b72f0c8d8ef38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a752bc4de3be7e5472f2b72f0c8d8ef38">&#9670;&nbsp;</a></span>model_map_size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t model_map_size </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmodel__map.html">model_map</a> *&#160;</td>
+          <td class="paramname"><em>map</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abc01cd9e53791bfe2c1f23f52d875af9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc01cd9e53791bfe2c1f23f52d875af9">&#9670;&nbsp;</a></span>model_parse()</h2>
 
@@ -1415,7 +1435,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="amodel__support_8h_html_aee4a9b5ebdf3b4b9dc76a46d0b44c69e"><div class="ttname"><a href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a></div><div class="ttdeci">#define gen_field_meta(n, memtype, modifier, p, partype)</div><div class="ttdef"><b>Definition:</b> model_support.h:78</div></div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:57</div></div>
 <div class="ttc" id="astructfield__meta_html"><div class="ttname"><a href="structfield__meta.html">field_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:130</div></div>
-<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:210</div></div>
+<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:212</div></div>
 <div class="ttc" id="amodel__support_8h_html_af193275359ee7ea784d8f6d6ad963717"><div class="ttname"><a href="model__support_8h.html#af193275359ee7ea784d8f6d6ad963717">model_dump</a></div><div class="ttdeci">void model_dump(void *obj, int off, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_ac5e80917106862cdea7729c18e125c27"><div class="ttname"><a href="model__support_8h.html#ac5e80917106862cdea7729c18e125c27">model_parse_array</a></div><div class="ttdeci">int model_parse_array(void ***arp, const char *json, size_t len, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:58</div></div>
