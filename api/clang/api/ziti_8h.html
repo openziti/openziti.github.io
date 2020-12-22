@@ -185,6 +185,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d">ziti_enroll_cb</a>) (<a class="el" href="ziti__model_8h.html#abc08ed263c9db88f673a85eccf9bd535">ziti_config</a> *cfg, int status, char *err_message, void *enroll_ctx)</td></tr>
 <tr class="memdesc:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#a86a73cb294bab0c38a0b00497f547845" title="Performs a Ziti enrollment.">ziti_enroll()</a> is complete.  <a href="ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d">More...</a><br /></td></tr>
 <tr class="separator:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
+<tr class="memdesc:a0ededa980f2de9e4b58378e88fcd49a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after connection was closed.  <a href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">More...</a><br /></td></tr>
+<tr class="separator:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -263,9 +266,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ad73c2173f91183a3f0f0491720b7c27b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b">ziti_accept</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> clt, <a class="el" href="ziti_8h.html#a62bed54a2d7cf0c17958468ac98b57a4">ziti_conn_cb</a> cb, <a class="el" href="ziti_8h.html#aa2f014f7ebb06d81827b13c0c181a9b3">ziti_data_cb</a> data_cb)</td></tr>
 <tr class="memdesc:ad73c2173f91183a3f0f0491720b7c27b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Completes client connection.  <a href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b">More...</a><br /></td></tr>
 <tr class="separator:ad73c2173f91183a3f0f0491720b7c27b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9af6ba8dc7406631fcd109281183f7ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a9af6ba8dc7406631fcd109281183f7ae">ziti_close</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> *conn)</td></tr>
-<tr class="memdesc:a9af6ba8dc7406631fcd109281183f7ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given connection.  <a href="ziti_8h.html#a9af6ba8dc7406631fcd109281183f7ae">More...</a><br /></td></tr>
-<tr class="separator:a9af6ba8dc7406631fcd109281183f7ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a643dd465f795ca234dbe4d22bb915277"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277">ziti_close</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, <a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a> close_cb)</td></tr>
+<tr class="memdesc:a643dd465f795ca234dbe4d22bb915277"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the given connection.  <a href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277">More...</a><br /></td></tr>
+<tr class="separator:a643dd465f795ca234dbe4d22bb915277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae65595ba921191330a1920927734ab6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aae65595ba921191330a1920927734ab6">ziti_close_write</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:aae65595ba921191330a1920927734ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the outgoing (write) side of the given ziti connection.  <a href="ziti_8h.html#aae65595ba921191330a1920927734ab6">More...</a><br /></td></tr>
 <tr class="separator:aae65595ba921191330a1920927734ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -352,6 +355,29 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0ededa980f2de9e4b58378e88fcd49a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ededa980f2de9e4b58378e88fcd49a8">&#9670;&nbsp;</a></span>ziti_close_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* ziti_close_cb) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback called after connection was closed. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>connection that was closed</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277" title="Closes the given connection.">ziti_close()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a62bed54a2d7cf0c17958468ac98b57a4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a62bed54a2d7cf0c17958468ac98b57a4">&#9670;&nbsp;</a></span>ziti_conn_cb</h2>
 
@@ -392,7 +418,7 @@ Functions</h2></td></tr>
 <p>Represents a Ziti connection. </p>
 <p>The heart of Ziti is around reading and writing data securely and efficiently. In order to do that a connection is required which will allow a developer to do so. This pointer is passed to numerous Ziti C SDK functions and is returned in many callbacks. This structure is an opaque handle to the state necessary for the Ziti C SDK to function properly.</p>
 <p>A connection is initialized by passing a pointer to <a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5" title="Initializes a connection.">ziti_conn_init()</a>. The connection will need to be freed when no longer needed.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5" title="Initializes a connection.">ziti_conn_init()</a>, <a class="el" href="ziti_8h.html#a9af6ba8dc7406631fcd109281183f7ae" title="Closes the given connection.">ziti_close()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5" title="Initializes a connection.">ziti_conn_init()</a>, <a class="el" href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277" title="Closes the given connection.">ziti_close()</a> </dd></dl>
 
 </div>
 </div>
@@ -846,8 +872,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9af6ba8dc7406631fcd109281183f7ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9af6ba8dc7406631fcd109281183f7ae">&#9670;&nbsp;</a></span>ziti_close()</h2>
+<a id="a643dd465f795ca234dbe4d22bb915277"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a643dd465f795ca234dbe4d22bb915277">&#9670;&nbsp;</a></span>ziti_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -855,18 +881,30 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int ziti_close </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> *&#160;</td>
-          <td class="paramname"><em>conn</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a>&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a>&#160;</td>
+          <td class="paramname"><em>close_cb</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Closes the given connection. </p>
 <p>When no longer needed a <a href="#ziti_connection">connection</a> should be closed to gracefully disconnect. This function should be invoked after any status is returned which indicates an error situation.</p>
+<p>This method initiates the disconnect(if needed) and the release all associated resources. After close_cb() is called, the ziti_connection handle is no longer valid.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">conn</td><td>the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a> to be closed</td></tr>
+    <tr><td class="paramname">conn</td><td>the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a> to be closed </td></tr>
+    <tr><td class="paramname">close_cb</td><td>callback called after connection is closed</td></tr>
   </table>
   </dd>
 </dl>

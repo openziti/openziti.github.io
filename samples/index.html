@@ -147,13 +147,13 @@ ssize_t on_data(ziti_connection c, uint8_t *buf, ssize_t len) {
     if (len == ZITI_EOF) {
 
         printf(&quot;request completed: %s\n&quot;, ziti_errorstr(len));
-        ziti_close(&amp;c);
+        ziti_close(c, NULL);
         ziti_shutdown(ziti);
 
     }
     else if (len &lt; 0) {
         fprintf(stderr, &quot;unexpected error: %s\n&quot;, ziti_errorstr(len));
-        ziti_close(&amp;c);
+        ziti_close(c, NULL);
         ziti_shutdown(ziti);
     }
     else {

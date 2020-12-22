@@ -127,7 +127,7 @@ $(document).ready(function(){initNavTree('ziti__log_8h_source.html',''); initRes
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
 <div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="ziti__log_8h.html#ad238add2fd417b5fa99e3e26ca2e3368">   41</a></span>&#160; </div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#define ZITI_LOG(level, fmt, ...) do { \</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">if (level &lt;= ziti_log_level) { ziti_logger(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__); }\</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">if (level &lt;= ziti_log_level()) { ziti_logger(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__); }\</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">} while(0)</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
@@ -151,8 +151,8 @@ $(document).ready(function(){initNavTree('ziti__log_8h_source.html',''); initRes
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="ziti__log_8h.html#a214bd78d665a5a8e3c32fe1f881fceb6">   64</a></span>&#160;<span class="comment">// use ZITI_LOG_DEFAULT_LEVEL to reset to default(INFO) or ZITI_LOG env var</span></div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keyword">extern</span> <span class="keywordtype">void</span> <a class="code" href="ziti__log_8h.html#a214bd78d665a5a8e3c32fe1f881fceb6">ziti_log_set_level</a>(<span class="keywordtype">int</span> level);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="comment">// don&#39;t use directly</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="ziti__log_8h.html#a4e8fa907da9377e37f896dd9bddc37f3">ziti_log_level</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">   67</a></span>&#160;<span class="comment">// don&#39;t use directly</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a>();</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
@@ -164,12 +164,12 @@ $(document).ready(function(){initNavTree('ziti__log_8h_source.html',''); initRes
 <div class="ttc" id="aziti__log_8h_html_a214bd78d665a5a8e3c32fe1f881fceb6"><div class="ttname"><a href="ziti__log_8h.html#a214bd78d665a5a8e3c32fe1f881fceb6">ziti_log_set_level</a></div><div class="ttdeci">void ziti_log_set_level(int level)</div></div>
 <div class="ttc" id="aziti__log_8h_html_ae108866cf2663d84d5d9ad14a1510ca5"><div class="ttname"><a href="ziti__log_8h.html#ae108866cf2663d84d5d9ad14a1510ca5">ziti_logger</a></div><div class="ttdeci">void ziti_logger(int level, const char *file, unsigned int line, const char *func, const char *fmt,...)</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395">DebugLevel</a></div><div class="ttdeci">DebugLevel</div><div class="ttdef"><b>Definition:</b> ziti_log.h:36</div></div>
-<div class="ttc" id="aziti__log_8h_html_a4e8fa907da9377e37f896dd9bddc37f3"><div class="ttname"><a href="ziti__log_8h.html#a4e8fa907da9377e37f896dd9bddc37f3">ziti_log_level</a></div><div class="ttdeci">int ziti_log_level</div></div>
 <div class="ttc" id="aziti__log_8h_html_a11ef648935bad537eef0624eae1a461f"><div class="ttname"><a href="ziti__log_8h.html#a11ef648935bad537eef0624eae1a461f">_level</a></div><div class="ttdeci">#define _level(n)</div><div class="ttdef"><b>Definition:</b> ziti_log.h:37</div></div>
 <div class="ttc" id="aziti__log_8h_html_a5211ed97a920e8e9142e552149a4f621"><div class="ttname"><a href="ziti__log_8h.html#a5211ed97a920e8e9142e552149a4f621">DEBUG_LEVELS</a></div><div class="ttdeci">#define DEBUG_LEVELS(XX)</div><div class="ttdef"><b>Definition:</b> ziti_log.h:27</div></div>
 <div class="ttc" id="aziti__log_8h_html_abb8eb89b150e6f07672378105cf1324d"><div class="ttname"><a href="ziti__log_8h.html#abb8eb89b150e6f07672378105cf1324d">log_writer</a></div><div class="ttdeci">void(* log_writer)(int level, const char *loc, const char *msg, size_t msglen)</div><div class="ttdef"><b>Definition:</b> ziti_log.h:51</div></div>
 <div class="ttc" id="aziti__log_8h_html_a3906c482dbdcf2d632e7c9db5c731f75"><div class="ttname"><a href="ziti__log_8h.html#a3906c482dbdcf2d632e7c9db5c731f75">ziti_log_init</a></div><div class="ttdeci">void ziti_log_init(uv_loop_t *loop, int level, log_writer logger)</div></div>
 <div class="ttc" id="aexterns_8h_html_a71e7a08e9b0fa6e62cba0738fd1d46d3"><div class="ttname"><a href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div><div class="ttdeci">#define ZITI_FUNC</div><div class="ttdef"><b>Definition:</b> externs.h:38</div></div>
+<div class="ttc" id="aziti__log_8h_html_acae349985349ceec5651bd864bf7f81e"><div class="ttname"><a href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a></div><div class="ttdeci">int ziti_log_level()</div></div>
 <div class="ttc" id="aziti__log_8h_html_a8530c2526b442921973e8c0bed2adc65"><div class="ttname"><a href="ziti__log_8h.html#a8530c2526b442921973e8c0bed2adc65">ziti_log_set_logger</a></div><div class="ttdeci">void ziti_log_set_logger(log_writer logger)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

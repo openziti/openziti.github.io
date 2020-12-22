@@ -85,8 +85,7 @@ $(document).ready(function(){initNavTree('ziti__log_8h.html',''); initResizable(
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">ziti_log.h File Reference</div>  </div>
 </div><!--header-->
@@ -145,11 +144,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8530c2526b442921973e8c0bed2adc65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a214bd78d665a5a8e3c32fe1f881fceb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#a214bd78d665a5a8e3c32fe1f881fceb6">ziti_log_set_level</a> (int level)</td></tr>
 <tr class="separator:a214bd78d665a5a8e3c32fe1f881fceb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a4e8fa907da9377e37f896dd9bddc37f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#a4e8fa907da9377e37f896dd9bddc37f3">ziti_log_level</a></td></tr>
-<tr class="separator:a4e8fa907da9377e37f896dd9bddc37f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acae349985349ceec5651bd864bf7f81e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a> ()</td></tr>
+<tr class="separator:acae349985349ceec5651bd864bf7f81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a5fccb4fc71e44089a1b1a77fc76c0b68"></a>
@@ -277,7 +273,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">do</span> { \</div>
-<div class="line">if (level &lt;= <a class="code" href="ziti__log_8h.html#a4e8fa907da9377e37f896dd9bddc37f3">ziti_log_level</a>) { <a class="code" href="ziti__log_8h.html#ae108866cf2663d84d5d9ad14a1510ca5">ziti_logger</a>(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__); }\</div>
+<div class="line">if (level &lt;= <a class="code" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a>()) { <a class="code" href="ziti__log_8h.html#ae108866cf2663d84d5d9ad14a1510ca5">ziti_logger</a>(level, __FILE__, __LINE__, __func__, fmt, ##__VA_ARGS__); }\</div>
 <div class="line">} <span class="keywordflow">while</span>(0)</div>
 </div><!-- fragment -->
 </div>
@@ -384,6 +380,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acae349985349ceec5651bd864bf7f81e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acae349985349ceec5651bd864bf7f81e">&#9670;&nbsp;</a></span>ziti_log_level()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_log_level </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a214bd78d665a5a8e3c32fe1f881fceb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a214bd78d665a5a8e3c32fe1f881fceb6">&#9670;&nbsp;</a></span>ziti_log_set_level()</h2>
 
@@ -472,38 +485,15 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="a4e8fa907da9377e37f896dd9bddc37f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8fa907da9377e37f896dd9bddc37f3">&#9670;&nbsp;</a></span>ziti_log_level</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ziti_log_level</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aziti__log_8h_html_ae108866cf2663d84d5d9ad14a1510ca5"><div class="ttname"><a href="ziti__log_8h.html#ae108866cf2663d84d5d9ad14a1510ca5">ziti_logger</a></div><div class="ttdeci">void ziti_logger(int level, const char *file, unsigned int line, const char *func, const char *fmt,...)</div></div>
-<div class="ttc" id="aziti__log_8h_html_a4e8fa907da9377e37f896dd9bddc37f3"><div class="ttname"><a href="ziti__log_8h.html#a4e8fa907da9377e37f896dd9bddc37f3">ziti_log_level</a></div><div class="ttdeci">int ziti_log_level</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601">VERBOSE</a></div><div class="ttdeci">@ VERBOSE</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395a0593585da9181e972974c1274d8f2b4f"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a0593585da9181e972974c1274d8f2b4f">DEBUG</a></div><div class="ttdeci">@ DEBUG</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395a74dac7ac23d5b810db6d4067f14e8676"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a74dac7ac23d5b810db6d4067f14e8676">WARN</a></div><div class="ttdeci">@ WARN</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395a2fd6f336d08340583bd620a7f5694c90"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a2fd6f336d08340583bd620a7f5694c90">ERROR</a></div><div class="ttdeci">@ ERROR</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e">TRACE</a></div><div class="ttdeci">@ TRACE</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
+<div class="ttc" id="aziti__log_8h_html_acae349985349ceec5651bd864bf7f81e"><div class="ttname"><a href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a></div><div class="ttdeci">int ziti_log_level()</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395ac157bdf0b85a40d2619cbc8bc1ae5fe2"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ac157bdf0b85a40d2619cbc8bc1ae5fe2">NONE</a></div><div class="ttdeci">@ NONE</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_ab658e6d84759440dbf3c890446075395a748005382152808a72b1a9177d9dc806"><div class="ttname"><a href="ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a748005382152808a72b1a9177d9dc806">INFO</a></div><div class="ttdeci">@ INFO</div><div class="ttdef"><b>Definition:</b> ziti_log.h:38</div></div>
 <!-- start footer part -->
