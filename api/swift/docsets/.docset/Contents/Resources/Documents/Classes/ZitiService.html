@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ZitiEnroller Class Reference</title>
+    <title>ZitiService Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/ZitiEnroller" class="dashAnchor"></a>
-    <a title="ZitiEnroller Class Reference"></a>
+    <a name="//apple_ref/swift/Class/ZitiService" class="dashAnchor"></a>
+    <a title="ZitiService Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html"> Docs</a></p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        ZitiEnroller Class Reference
+        ZitiService Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -125,16 +125,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>ZitiEnroller</h1>
+            <h1>ZitiService</h1>
               <div class="declaration">
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiEnroller</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">ZitiUnretained</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiService</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
 
                 </div>
               </div>
-            <p>Class that enroll an identity with Ziti controller using a one-time JWT file</p>
+            <p>Undocumented</p>
 
           </section>
           <section class="section task-group-section">
@@ -143,270 +143,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti12ZitiEnrollerC18EnrollmentResponseC"></a>
-                    <a name="//apple_ref/swift/Class/EnrollmentResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti12ZitiEnrollerC18EnrollmentResponseC">EnrollmentResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Class representing response to successful enrollment attempt</p>
-
-                        <a href="../Classes/ZitiEnroller/EnrollmentResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">EnrollmentResponse</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">Codable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@CZiti@objc(cs)ZitiEnroller(py)jwtFile"></a>
-                    <a name="//apple_ref/swift/Property/jwtFile" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiEnroller(py)jwtFile">jwtFile</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Name of file containing one-time JWT</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">jwtFile</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@CZiti@objc(cs)ZitiEnroller(im)init:"></a>
-                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiEnroller(im)init:">init(_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Initiaizel with a JWT file</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">jwtFile</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>jwtFile</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>file containing one-time JWT</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti12ZitiEnrollerC18EnrollmentCallbacka"></a>
-                    <a name="//apple_ref/swift/Alias/EnrollmentCallback" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti12ZitiEnrollerC18EnrollmentCallbacka">EnrollmentCallback</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Type used for escaping callback closure called following an enrollment attempt</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EnrollmentCallback</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">resp</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiEnroller/EnrollmentResponse.html">EnrollmentResponse</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">subj</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/c:@M@CZiti@objc(cs)ZitiError">ZitiError</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>resp</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>EnrollmentResponse returned on successful enrollment.  <code>nil</code> on failed attempt</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>subj</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code>sub</code> field indicated in JWT, representing unique id for this Ziti identity. <code>nil</code> on failed attempt</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>error</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code><a href="../Classes.html#/c:@M@CZiti@objc(cs)ZitiError">ZitiError</a></code> containing error information on failed enrollment attempt</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@CZiti@objc(cs)ZitiEnroller(im)enrollWithPrivatePem:cb:"></a>
-                    <a name="//apple_ref/swift/Method/enroll(privatePem:cb:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiEnroller(im)enrollWithPrivatePem:cb:">enroll(privatePem:<wbr>cb:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Enroll a Ziti identity using a JWT file</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">enroll</span><span class="p">(</span><span class="nv">privatePem</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/ZitiEnroller.html#/s:5CZiti12ZitiEnrollerC18EnrollmentCallbacka">EnrollmentCallback</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>privatePem</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>private key in PEM format</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>cb</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>callback called indicating status of enrollment attempt</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@CZiti@objc(cs)ZitiEnroller(im)getSubj"></a>
-                    <a name="//apple_ref/swift/Method/getSubj()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)ZitiEnroller(im)getSubj">getSubj()</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Extract the sub (id) field from HWT file</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSubj</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti12ZitiEnrollerC9getClaimsAA0bE0CSgyF"></a>
-                    <a name="//apple_ref/swift/Method/getClaims()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti12ZitiEnrollerC9getClaimsAA0bE0CSgyF">getClaims()</a>
+                    <a name="/s:5CZiti11ZitiServiceC01cC0SpySo14ziti_service_sVGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/cService" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC01cC0SpySo14ziti_service_sVGSgvp">cService</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -421,7 +160,196 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClaims</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/ZitiClaims.html">ZitiClaims</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">cService</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">ziti_service</span><span class="o">&gt;</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC2idSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC2idSSSgvp">id</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC9encryptedSbSgvp"></a>
+                    <a name="//apple_ref/swift/Property/encrypted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC9encryptedSbSgvp">encrypted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">encrypted</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC9permFlagss5Int32VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/permFlags" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC9permFlagss5Int32VSgvp">permFlags</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">permFlags</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC20tunnelClientConfigV1AA0b6TunnelefG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tunnelClientConfigV1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC20tunnelClientConfigV1AA0b6TunnelefG0CSgvp">tunnelClientConfigV1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tunnelClientConfigV1</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiTunnelClientConfigV1.html">ZitiTunnelClientConfigV1</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC20tunnelServerConfigV1AA0b6TunnelefG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/tunnelServerConfigV1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC20tunnelServerConfigV1AA0b6TunnelefG0CSgvp">tunnelServerConfigV1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">tunnelServerConfigV1</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiTunnelServerConfigV1.html">ZitiTunnelServerConfigV1</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti11ZitiServiceC17urlClientConfigV1AA0b3UrlefG0CSgvp"></a>
+                    <a name="//apple_ref/swift/Property/urlClientConfigV1" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti11ZitiServiceC17urlClientConfigV1AA0b3UrlefG0CSgvp">urlClientConfigV1</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">urlClientConfigV1</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiUrlClientConfigV1.html">ZitiUrlClientConfigV1</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
