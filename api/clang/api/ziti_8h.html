@@ -205,9 +205,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac18dd13453ce6c1884ba662de479b6c8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ac18dd13453ce6c1884ba662de479b6c8">ziti_init</a> (const char *config, uv_loop_t *loop, <a class="el" href="ziti_8h.html#af10680297946038b65fe9af5057edc13">ziti_event_cb</a> evnt_cb, int events, void *app_ctx)</td></tr>
 <tr class="memdesc:ac18dd13453ce6c1884ba662de479b6c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a Ziti Edge identity.  <a href="ziti_8h.html#ac18dd13453ce6c1884ba662de479b6c8">More...</a><br /></td></tr>
 <tr class="separator:ac18dd13453ce6c1884ba662de479b6c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abae4a52f4b0b70c30b82a511f0a4e793"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#abae4a52f4b0b70c30b82a511f0a4e793">ziti_init_opts</a> (<a class="el" href="structziti__options.html">ziti_options</a> *options, uv_loop_t *loop, void *init_ctx)</td></tr>
-<tr class="memdesc:abae4a52f4b0b70c30b82a511f0a4e793"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Ziti Edge identity context with the provided options.  <a href="ziti_8h.html#abae4a52f4b0b70c30b82a511f0a4e793">More...</a><br /></td></tr>
-<tr class="separator:abae4a52f4b0b70c30b82a511f0a4e793"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5f48d22d870627c09e10068eeb6d5f7"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7">ziti_init_opts</a> (<a class="el" href="structziti__options.html">ziti_options</a> *options, uv_loop_t *loop)</td></tr>
+<tr class="memdesc:af5f48d22d870627c09e10068eeb6d5f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Ziti Edge identity context with the provided options.  <a href="ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7">More...</a><br /></td></tr>
+<tr class="separator:af5f48d22d870627c09e10068eeb6d5f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50">ziti_app_ctx</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns <a class="el" href="structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c">ziti_options.app_ctx</a> for the given Ziti context.  <a href="ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50">More...</a><br /></td></tr>
 <tr class="separator:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1478,7 +1478,7 @@ Functions</h2></td></tr>
 
 <p>Initializes a Ziti Edge identity. </p>
 <p>This function is used to initialize a Ziti Edge identity. The Ziti C SDK is based around the <a href="http://libuv.org/">libuv</a> library and maintains similar semantics. This function is used to setup the chain of callbacks needed once the loop begins to execute.</p>
-<p>This function will initialize the Ziti C SDK using the default TLS engine <a href="https://tls.mbed.org/">mbed</a>. If a different TLS engine is desired use <a class="el" href="ziti_8h.html#abae4a52f4b0b70c30b82a511f0a4e793" title="Initialize Ziti Edge identity context with the provided options.">ziti_init_opts()</a>.</p>
+<p>This function will initialize the Ziti C SDK using the default TLS engine <a href="https://tls.mbed.org/">mbed</a>. If a different TLS engine is desired use <a class="el" href="ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7" title="Initialize Ziti Edge identity context with the provided options.">ziti_init_opts()</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">config</td><td>location of identity configuration </td></tr>
@@ -1490,13 +1490,13 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#abae4a52f4b0b70c30b82a511f0a4e793" title="Initialize Ziti Edge identity context with the provided options.">ziti_init_opts()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7" title="Initialize Ziti Edge identity context with the provided options.">ziti_init_opts()</a> </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
 
 </div>
 </div>
-<a id="abae4a52f4b0b70c30b82a511f0a4e793"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abae4a52f4b0b70c30b82a511f0a4e793">&#9670;&nbsp;</a></span>ziti_init_opts()</h2>
+<a id="af5f48d22d870627c09e10068eeb6d5f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5f48d22d870627c09e10068eeb6d5f7">&#9670;&nbsp;</a></span>ziti_init_opts()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1511,13 +1511,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uv_loop_t *&#160;</td>
-          <td class="paramname"><em>loop</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>init_ctx</em>&#160;</td>
+          <td class="paramname"><em>loop</em>&#160;</td>
         </tr>
         <tr>
           <td></td>

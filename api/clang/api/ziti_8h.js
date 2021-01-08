@@ -50,7 +50,7 @@ var ziti_8h =
     [ "ziti_get_transfer_rates", "ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f", null ],
     [ "ziti_get_version", "ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b", null ],
     [ "ziti_init", "ziti_8h.html#ac18dd13453ce6c1884ba662de479b6c8", null ],
-    [ "ziti_init_opts", "ziti_8h.html#abae4a52f4b0b70c30b82a511f0a4e793", null ],
+    [ "ziti_init_opts", "ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7", null ],
     [ "ziti_listen", "ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c", null ],
     [ "ziti_listen_with_options", "ziti_8h.html#a8c447db49310357727e92d635d6efd4e", null ],
     [ "ziti_service_available", "ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f", null ],
