@@ -353,14 +353,14 @@
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
       "line": 18,
-      "symbol": "ZitiTunnelPacketWriter",
+      "symbol": "ZitiTunnelProvider",
       "symbol_kind": "source.lang.swift.decl.protocol",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
       "line": 19,
-      "symbol": "ZitiTunnelPacketWriter.writePacket(_:)",
+      "symbol": "ZitiTunnelProvider.writePacket(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -380,28 +380,28 @@
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 47,
+      "line": 49,
       "symbol": "ZitiTunnel.queuePacket(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 51,
+      "line": 53,
       "symbol": "ZitiTunnel.v1Host(_:_:_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 55,
+      "line": 57,
       "symbol": "ZitiTunnel.v1Intercept(_:_:_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 59,
+      "line": 61,
       "symbol": "ZitiTunnel.v1StopIntercepting(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
