@@ -41,6 +41,7 @@ var ziti_8h =
     [ "ziti_conn_init", "ziti_8h.html#ace1cf18567f46611faa449553041e6d5", null ],
     [ "ziti_conn_set_data", "ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef", null ],
     [ "ziti_conn_source_identity", "ziti_8h.html#ac622ac86432d4431976aee7a2d606add", null ],
+    [ "ziti_ctx_free", "ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c", null ],
     [ "ziti_dial", "ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b", null ],
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
     [ "ziti_dump", "ziti_8h.html#a222884f72e634b2faa936b3ec05e7867", null ],
@@ -55,6 +56,7 @@ var ziti_8h =
     [ "ziti_listen", "ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c", null ],
     [ "ziti_listen_with_options", "ziti_8h.html#a8c447db49310357727e92d635d6efd4e", null ],
     [ "ziti_service_available", "ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f", null ],
+    [ "ziti_set_app_info", "ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a", null ],
     [ "ziti_set_timeout", "ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80", null ],
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
     [ "ziti_write", "ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69", null ]
