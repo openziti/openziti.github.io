@@ -38,7 +38,7 @@ var searchData=
   ['ziti_5fdial_263',['ziti_dial',['../ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b',1,'ziti.h']]],
   ['ziti_5fdial_5fopts_264',['ziti_dial_opts',['../structziti__dial__opts.html',1,'']]],
   ['ziti_5fdial_5fwith_5foptions_265',['ziti_dial_with_options',['../ziti_8h.html#a58feeb934eed99516161d9a61261defa',1,'ziti.h']]],
-  ['ziti_5fdump_266',['ziti_dump',['../ziti_8h.html#a222884f72e634b2faa936b3ec05e7867',1,'ziti.h']]],
+  ['ziti_5fdump_266',['ziti_dump',['../ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49',1,'ziti.h']]],
   ['ziti_5fenroll_267',['ziti_enroll',['../ziti_8h.html#a86a73cb294bab0c38a0b00497f547845',1,'ziti.h']]],
   ['ziti_5fenroll_5fcb_268',['ziti_enroll_cb',['../ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d',1,'ziti.h']]],
   ['ziti_5fenroll_5fopts_269',['ziti_enroll_opts',['../structziti__enroll__opts.html',1,'']]],

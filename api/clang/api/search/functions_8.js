@@ -12,7 +12,7 @@ var searchData=
   ['ziti_5fctx_5ffree_498',['ziti_ctx_free',['../ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c',1,'ziti.h']]],
   ['ziti_5fdial_499',['ziti_dial',['../ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b',1,'ziti.h']]],
   ['ziti_5fdial_5fwith_5foptions_500',['ziti_dial_with_options',['../ziti_8h.html#a58feeb934eed99516161d9a61261defa',1,'ziti.h']]],
-  ['ziti_5fdump_501',['ziti_dump',['../ziti_8h.html#a222884f72e634b2faa936b3ec05e7867',1,'ziti.h']]],
+  ['ziti_5fdump_501',['ziti_dump',['../ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49',1,'ziti.h']]],
   ['ziti_5fenroll_502',['ziti_enroll',['../ziti_8h.html#a86a73cb294bab0c38a0b00497f547845',1,'ziti.h']]],
   ['ziti_5ferrorstr_503',['ziti_errorstr',['../errors_8h.html#a2182f9078122799ec98a7c1f17094191',1,'errors.h']]],
   ['ziti_5fget_5fcontroller_504',['ziti_get_controller',['../ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52',1,'ziti.h']]],

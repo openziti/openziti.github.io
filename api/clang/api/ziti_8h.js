@@ -44,7 +44,7 @@ var ziti_8h =
     [ "ziti_ctx_free", "ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c", null ],
     [ "ziti_dial", "ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b", null ],
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
-    [ "ziti_dump", "ziti_8h.html#a222884f72e634b2faa936b3ec05e7867", null ],
+    [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
     [ "ziti_enroll", "ziti_8h.html#a86a73cb294bab0c38a0b00497f547845", null ],
     [ "ziti_get_controller", "ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52", null ],
     [ "ziti_get_controller_version", "ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042", null ],

@@ -233,7 +233,6 @@ var NAVTREEINDEX0 =
 "ziti_8h.html#a1498d23338d4c758b45f46c3f1672a48":[3,0,0,5,32],
 "ziti_8h.html#a17ec27c78a3dda9097fff4c374c1b29f":[3,0,0,5,33],
 "ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef":[3,0,0,5,11],
-"ziti_8h.html#a222884f72e634b2faa936b3ec05e7867":[3,0,0,5,40],
 "ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f":[3,0,0,5,51],
 "ziti_8h.html#a35245ab4953e815155542e5b46f5bdff":[3,0,0,5,25],
 "ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50":[3,0,0,5,29],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "ziti_8h.html#a65a3568f4153563f9418626a59adefdb":[3,0,0,5,8],
 "ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b":[3,0,0,5,46],
 "ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042":[3,0,0,5,43],
-"ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078":[3,0,0,5,44]
+"ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078":[3,0,0,5,44],
+"ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76":[3,0,0,5,5]
 };

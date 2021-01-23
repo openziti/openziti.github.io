@@ -240,9 +240,9 @@ Functions</h2></td></tr>
 <tr class="memitem:acdc6c74c2a1f9dbfefb1d815e301741c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c">ziti_ctx_free</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> *ctxp)</td></tr>
 <tr class="memdesc:acdc6c74c2a1f9dbfefb1d815e301741c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Frees memory allocated for the given context and nulls out the handle.  <a href="ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c">More...</a><br /></td></tr>
 <tr class="separator:acdc6c74c2a1f9dbfefb1d815e301741c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a222884f72e634b2faa936b3ec05e7867"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a222884f72e634b2faa936b3ec05e7867">ziti_dump</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
-<tr class="memdesc:a222884f72e634b2faa936b3ec05e7867"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>.  <a href="ziti_8h.html#a222884f72e634b2faa936b3ec05e7867">More...</a><br /></td></tr>
-<tr class="separator:a222884f72e634b2faa936b3ec05e7867"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae75440f99f9c0a7439ebf5fa18729b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">ziti_dump</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int(*printer)(void *ctx, const char *fmt,...), void *ctx)</td></tr>
+<tr class="memdesc:ae75440f99f9c0a7439ebf5fa18729b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>.  <a href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">More...</a><br /></td></tr>
+<tr class="separator:ae75440f99f9c0a7439ebf5fa18729b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace1cf18567f46611faa449553041e6d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5">ziti_conn_init</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> *conn, void *data)</td></tr>
 <tr class="memdesc:ace1cf18567f46611faa449553041e6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a connection.  <a href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5">More...</a><br /></td></tr>
 <tr class="separator:ace1cf18567f46611faa449553041e6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1244,8 +1244,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a222884f72e634b2faa936b3ec05e7867"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a222884f72e634b2faa936b3ec05e7867">&#9670;&nbsp;</a></span>ziti_dump()</h2>
+<a id="ae75440f99f9c0a7439ebf5fa18729b49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae75440f99f9c0a7439ebf5fa18729b49">&#9670;&nbsp;</a></span>ziti_dump()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1254,17 +1254,36 @@ Functions</h2></td></tr>
           <td class="memname">void ziti_dump </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
-          <td class="paramname"><em>ztx</em></td><td>)</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int(*)(void *ctx, const char *fmt,...)&#160;</td>
+          <td class="paramname"><em>printer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>. </p>
 <p>This function will output debugging information to standard out. The output from this command may be useful when submitting issues.</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>this method is designed to be suitable to use with <code>fprintf()</code> like this: </p><div class="fragment"><div class="line"><a class="code" href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">ziti_dump</a>(ztx, fprintf, stderr);</div>
+</div><!-- fragment --><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the Ziti Edge identity context to print debug information for </td></tr>
+    <tr><td class="paramname">printer</td><td>function to be called for output </td></tr>
+    <tr><td class="paramname">ctx</td><td>first argument passed into <code>printer</code> function </td></tr>
   </table>
   </dd>
 </dl>
@@ -1889,6 +1908,7 @@ Functions</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aziti_8h_html_ae75440f99f9c0a7439ebf5fa18729b49"><div class="ttname"><a href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">ziti_dump</a></div><div class="ttdeci">void ziti_dump(ziti_context ztx, int(*printer)(void *ctx, const char *fmt,...), void *ctx)</div><div class="ttdoc">Shutdown Ziti Edge identity context and reclaim the memory from the provided ziti_context.</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
