@@ -13,6 +13,7 @@ var errors_8h =
     [ "ZITI_EOF", "errors_8h.html#adf68027c57495898fd8bf51ed0bad701", null ],
     [ "ZITI_GATEWAY_UNAVAILABLE", "errors_8h.html#ae7c15b1bb4736d407e8bee75007eb5c0", null ],
     [ "ZITI_INVALID_CONFIG", "errors_8h.html#a8918390961a4837766c0abbd5751c717", null ],
+    [ "ZITI_INVALID_POSTURE", "errors_8h.html#ac4b8b9772401bd1307d859f68bc676ca", null ],
     [ "ZITI_INVALID_STATE", "errors_8h.html#a1d1729b79d5abcb9fbf24b01363e5826", null ],
     [ "ZITI_JWT_INVALID", "errors_8h.html#ad878e26816d3dea330ffbed7d990b4d9", null ],
     [ "ZITI_JWT_INVALID_FORMAT", "errors_8h.html#ac588041d13d6e8a0f0b9c33637c30223", null ],
