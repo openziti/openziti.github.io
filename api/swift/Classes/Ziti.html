@@ -75,7 +75,22 @@
                 <a href="../Classes/ZitiEvent/ServiceEvent.html">– ServiceEvent</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/ZitiHostConfigV1.html">ZitiHostConfigV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZitiHostConfigV1/ListenOptions.html">– ListenOptions</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZitiIdentity.html">ZitiIdentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZitiInterceptConfigV1.html">ZitiInterceptConfigV1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZitiInterceptConfigV1/PortRange.html">– PortRange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ZitiInterceptConfigV1/DialOptions.html">– DialOptions</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/ZitiKeychain.html">ZitiKeychain</a>
@@ -369,6 +384,56 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">PerformCallback</span> <span class="o">=</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC0B11DumpPrintera"></a>
+                    <a name="//apple_ref/swift/Alias/ZitiDumpPrinter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC0B11DumpPrintera">ZitiDumpPrinter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Type used for debug dump</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ZitiDumpPrinter</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">msg</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>msg</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>debug string</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>number of characters printed</p>
                       </div>
                     </section>
                   </div>
@@ -1264,9 +1329,9 @@ this method initializes Ziti for connections using the configured <code><a href=
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@CZiti@objc(cs)Ziti(im)dump"></a>
-                    <a name="//apple_ref/swift/Method/dump()" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)dump">dump()</a>
+                    <a name="/c:@M@CZiti@objc(cs)Ziti(im)dump:"></a>
+                    <a name="//apple_ref/swift/Method/dump(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)dump:">dump(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1274,7 +1339,7 @@ this method initializes Ziti for connections using the configured <code><a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Output debugging information to standard out</p>
+                        <p>Output debugging information to supplied callback. The output from this command may be useful when submitting issues.</p>
 
 <p>This method must be called in an interation of the loop</p>
 
@@ -1284,7 +1349,7 @@ this method initializes Ziti for connections using the configured <code><a href=
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">func</span> <span class="nf">dump</span><span class="p">()</span></code></pre>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">dump</span><span class="p">(</span><span class="n">_</span> <span class="nv">printer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC0B11DumpPrintera">ZitiDumpPrinter</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1454,7 +1519,7 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-06)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-02-24)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
