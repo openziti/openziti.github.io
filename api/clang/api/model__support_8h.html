@@ -96,6 +96,7 @@ $(document).ready(function(){initNavTree('model__support_8h.html',''); initResiz
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="externs_8h_source.html">externs.h</a>&quot;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
 </div>
 <p><a href="model__support_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -115,6 +116,8 @@ Macros</h2></td></tr>
 <tr class="memitem:a07cd6f8790a80a835dd53aac54dd3fe4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a></td></tr>
 <tr class="memdesc:a07cd6f8790a80a835dd53aac54dd3fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set of macros to help generate struct and function for our model;  <a href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">More...</a><br /></td></tr>
 <tr class="separator:a07cd6f8790a80a835dd53aac54dd3fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08d252be7ebc7de5de1b8652ea647993"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a08d252be7ebc7de5de1b8652ea647993">MODEL_JSON_COMPACT</a>&#160;&#160;&#160;0x1</td></tr>
+<tr class="separator:a08d252be7ebc7de5de1b8652ea647993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a3518c9c928b1194dfa6123a0a80586"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>(t)&#160;&#160;&#160;t</td></tr>
 <tr class="separator:a6a3518c9c928b1194dfa6123a0a80586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71854bec883f6da99f2f20ae3516d540"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(t)&#160;&#160;&#160;t*</td></tr>
@@ -143,10 +146,6 @@ Macros</h2></td></tr>
 <tr class="separator:a1f9ba7620075401467ab25c975fa0b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b261383be230e50154c3da584f245a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ac2b261383be230e50154c3da584f245a">DECLARE_ENUM</a>(Enum,  Values)</td></tr>
 <tr class="separator:ac2b261383be230e50154c3da584f245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa0f8200acd4827bc9d2df09270b66c38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(...)&#160;&#160;&#160;__VA_ARGS__</td></tr>
-<tr class="separator:aa0f8200acd4827bc9d2df09270b66c38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad4f105758560e2d030fb28e39acea6f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#aad4f105758560e2d030fb28e39acea6f">EVAL1</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(__VA_ARGS__)))</td></tr>
-<tr class="separator:aad4f105758560e2d030fb28e39acea6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef5deaefe03bb2af691efa1b508dab1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a8ef5deaefe03bb2af691efa1b508dab1">call_f</a>(f,  args)&#160;&#160;&#160;f args</td></tr>
 <tr class="separator:a8ef5deaefe03bb2af691efa1b508dab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a07d9021e3299d9716fc560307e1b094b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a07d9021e3299d9716fc560307e1b094b">enum_value_of1</a>(v,  t,  s,  n)&#160;&#160;&#160;if(strncmp(s,#v,n) == 0){return (t)t##s.v;}</td></tr>
@@ -174,8 +173,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:ae5a8ce0b412602b5f07fe3220ea6f77d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20444634a5b3afc659d24d3b6edd6600"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a20444634a5b3afc659d24d3b6edd6600">_parse_f</a>) (void *obj, const char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, void *tok)</td></tr>
 <tr class="separator:a20444634a5b3afc659d24d3b6edd6600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317ee0728781d84ab77978501f38489d"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a317ee0728781d84ab77978501f38489d">_to_json_f</a>) (const void *obj, int indent, char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, size_t max, size_t *len)</td></tr>
-<tr class="separator:a317ee0728781d84ab77978501f38489d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a474b9117363f95fbd307c9e7b0cad058"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a474b9117363f95fbd307c9e7b0cad058">_to_json_f</a>) (const void *obj, void *buf, int indent, int flags)</td></tr>
+<tr class="separator:a474b9117363f95fbd307c9e7b0cad058"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd4891b59dd77a4b4b2502f3ae545630"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#abd4891b59dd77a4b4b2502f3ae545630">_free_f</a>) (void *obj)</td></tr>
 <tr class="separator:abd4891b59dd77a4b4b2502f3ae545630"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a883917c4e0949c51ccdd017e75e01aad"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a883917c4e0949c51ccdd017e75e01aad">_cmp_f</a>) (const void *lh, const void *rh)</td></tr>
@@ -212,8 +211,10 @@ Functions</h2></td></tr>
 <tr class="separator:abc01cd9e53791bfe2c1f23f52d875af9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5e80917106862cdea7729c18e125c27"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ac5e80917106862cdea7729c18e125c27">model_parse_array</a> (void ***arp, const char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, size_t len, <a class="el" href="structtype__meta.html">type_meta</a> *meta)</td></tr>
 <tr class="separator:ac5e80917106862cdea7729c18e125c27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6dd22e2cbd935cca344dc99f7d6a2eb9"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a6dd22e2cbd935cca344dc99f7d6a2eb9">model_to_json</a> (const void *obj, <a class="el" href="structtype__meta.html">type_meta</a> *meta, int indent, char *buf, size_t maxlen, size_t *len)</td></tr>
-<tr class="separator:a6dd22e2cbd935cca344dc99f7d6a2eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563f68506b4a08c1141562fd16a72f1d"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d">model_to_json</a> (const void *obj, const <a class="el" href="structtype__meta.html">type_meta</a> *meta, int flags, size_t *len)</td></tr>
+<tr class="separator:a563f68506b4a08c1141562fd16a72f1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f948302f8786212d7f6cf14a5267d8d"><td class="memItemLeft" align="right" valign="top">ssize_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d">model_to_json_r</a> (const void *obj, const <a class="el" href="structtype__meta.html">type_meta</a> *meta, int flags, char *outbuf, size_t max)</td></tr>
+<tr class="separator:a1f948302f8786212d7f6cf14a5267d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a952ac32907adf1466fd3f94788862bd8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a952ac32907adf1466fd3f94788862bd8">get_bool_meta</a> ()</td></tr>
 <tr class="separator:a952ac32907adf1466fd3f94788862bd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae71c2e0f1e27df5d4b4010861c59363b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ae71c2e0f1e27df5d4b4010861c59363b">get_int_meta</a> ()</td></tr>
@@ -250,8 +251,8 @@ Functions</h2></td></tr>
 <tr class="separator:ae954165a568762d346aae3c1601ed5e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f248dc988e3f8ef0e5c1b47c083439e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a7f248dc988e3f8ef0e5c1b47c083439e">parse_enum</a> (void *<a class="el" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, const char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, void *tok, const void *enum_type)</td></tr>
 <tr class="separator:a7f248dc988e3f8ef0e5c1b47c083439e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d4b46ffbb1326c59d5ec8991cefd95e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a8d4b46ffbb1326c59d5ec8991cefd95e">json_enum</a> (const void *<a class="el" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, size_t max, size_t *len, const void *enum_type)</td></tr>
-<tr class="separator:a8d4b46ffbb1326c59d5ec8991cefd95e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb8565158be3b48abece0f8ee6f7319b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b">json_enum</a> (const void *<a class="el" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, void *buf, int indent, int flags, const void *enum_type)</td></tr>
+<tr class="separator:afb8565158be3b48abece0f8ee6f7319b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Macro Definition Documentation</h2>
 <a id="a65480cf9f0f8078bda7e8cb31b379a1c"></a>
@@ -377,8 +378,9 @@ Functions</h2></td></tr>
 <div class="line">MODEL_API <span class="keywordtype">void</span> free_##type##_array(<a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(type) *ap);\</div>
 <div class="line">MODEL_API <span class="keywordtype">int</span> parse_##type(<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
 <div class="line">MODEL_API <span class="keywordtype">int</span> parse_##type##_ptr(<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) *p, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
-<div class="line">MODEL_API <span class="keywordtype">int</span> parse_##type##_array(<a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(type) *a, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
-<div class="line">MODEL_API <span class="keywordtype">int</span> json_from_##type(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">char</span> *buf, <span class="keywordtype">size_t</span> maxlen, <span class="keywordtype">size_t</span> *len);</div>
+<div class="line">MODEL_API <span class="keywordtype">int</span> parse_##type##_array(<a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(type) *a, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len); \                                 \</div>
+<div class="line">MODEL_API ssize_t type##_to_json_r(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">char</span> *outbuf, <span class="keywordtype">size_t</span> max); \</div>
+<div class="line">MODEL_API <span class="keywordtype">char</span>* type##_to_json(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">size_t</span> *len);</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -528,42 +530,6 @@ Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td>&#160;&#160;&#160;if(strncmp(s,#v,n) == 0){return (t)t##s.v;}</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa0f8200acd4827bc9d2df09270b66c38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa0f8200acd4827bc9d2df09270b66c38">&#9670;&nbsp;</a></span>EVAL</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define EVAL</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;__VA_ARGS__</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aad4f105758560e2d030fb28e39acea6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad4f105758560e2d030fb28e39acea6f">&#9670;&nbsp;</a></span>EVAL1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define EVAL1</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em></td><td>)</td>
-          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(<a class="el" href="model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38">EVAL</a>(__VA_ARGS__)))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -743,9 +709,10 @@ Functions</h2></td></tr>
 <div class="line">ptr(type) alloc_##type() { <span class="keywordflow">return</span> (<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type))calloc(1, <span class="keyword">sizeof</span>(type)); } \</div>
 <div class="line">int cmp_##type(<span class="keyword">const</span> type *lh, <span class="keyword">const</span> type *rh) { <span class="keywordflow">return</span> <a class="code" href="model__support_8h.html#a7be38cee7524b13a1bf43f00d145c533">model_cmp</a>(lh, rh, &amp;type##_META); }\</div>
 <div class="line">void free_##type(type *v) { <a class="code" href="model__support_8h.html#af7918171aa89926391431009dad9afea">model_free</a>(v, &amp;type##_META); } \</div>
-<div class="line">void free_##type##_array(<a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(type) *ap) { <a class="code" href="model__support_8h.html#ace334e8bcf3f713857529c5c61a2faaa">model_free_array</a>((<span class="keywordtype">void</span>***)ap, &amp;type##_META); }\</div>
-<div class="line">MODEL_API <span class="keywordtype">int</span> json_from_##type(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">char</span> *<a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> maxlen, <span class="keywordtype">size_t</span> *len)\</div>
-<div class="line">{ <span class="keywordflow">return</span> <a class="code" href="model__support_8h.html#a6dd22e2cbd935cca344dc99f7d6a2eb9">model_to_json</a>(v, &amp;type##_META, 0, <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, maxlen, len); }</div>
+<div class="line">void free_##type##_array(<a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(type) *ap) { <a class="code" href="model__support_8h.html#ace334e8bcf3f713857529c5c61a2faaa">model_free_array</a>((<span class="keywordtype">void</span>***)ap, &amp;type##_META); }                      \</div>
+<div class="line">MODEL_API ssize_t type##_to_json_r(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">char</span> *outbuf, <span class="keywordtype">size_t</span> max) {                    \</div>
+<div class="line">return <a class="code" href="model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d">model_to_json_r</a>(v, &amp;type##_META, flags, outbuf, max); } \</div>
+<div class="line">char* type##_to_json(<span class="keyword">const</span> <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">size_t</span> *len) { <span class="keywordflow">return</span> <a class="code" href="model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d">model_to_json</a>(v, &amp;type##_META, flags, len); }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -819,6 +786,20 @@ Functions</h2></td></tr>
 <li>void free_TYPE(TYPE *obj) &ndash; frees struct</li>
 <li>int dump_TYPE(TYPE *obj, int indent) &ndash; prints the struct to <code>stdout</code>, <code>indent</code> is used for printing nested model objects </li>
 </ul>
+
+</div>
+</div>
+<a id="a08d252be7ebc7de5de1b8652ea647993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08d252be7ebc7de5de1b8652ea647993">&#9670;&nbsp;</a></span>MODEL_JSON_COMPACT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODEL_JSON_COMPACT&#160;&#160;&#160;0x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1007,14 +988,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a317ee0728781d84ab77978501f38489d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a317ee0728781d84ab77978501f38489d">&#9670;&nbsp;</a></span>_to_json_f</h2>
+<a id="a474b9117363f95fbd307c9e7b0cad058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a474b9117363f95fbd307c9e7b0cad058">&#9670;&nbsp;</a></span>_to_json_f</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int(* _to_json_f) (const void *obj, int indent, char *<a class="el" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, size_t max, size_t *len)</td>
+          <td class="memname">typedef int(* _to_json_f) (const void *obj, void *buf, int indent, int flags)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1280,8 +1261,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d4b46ffbb1326c59d5ec8991cefd95e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d4b46ffbb1326c59d5ec8991cefd95e">&#9670;&nbsp;</a></span>json_enum()</h2>
+<a id="afb8565158be3b48abece0f8ee6f7319b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb8565158be3b48abece0f8ee6f7319b">&#9670;&nbsp;</a></span>json_enum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1295,20 +1276,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>json</em>, </td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>buf</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>max</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>indent</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">size_t *&#160;</td>
-          <td class="paramname"><em>len</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1722,14 +1703,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a6dd22e2cbd935cca344dc99f7d6a2eb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6dd22e2cbd935cca344dc99f7d6a2eb9">&#9670;&nbsp;</a></span>model_to_json()</h2>
+<a id="a563f68506b4a08c1141562fd16a72f1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563f68506b4a08c1141562fd16a72f1d">&#9670;&nbsp;</a></span>model_to_json()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int model_to_json </td>
+          <td class="memname">char* model_to_json </td>
           <td>(</td>
           <td class="paramtype">const void *&#160;</td>
           <td class="paramname"><em>obj</em>, </td>
@@ -1737,32 +1718,66 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td>
           <td class="paramname"><em>meta</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>indent</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>buf</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">size_t&#160;</td>
-          <td class="paramname"><em>maxlen</em>, </td>
+          <td class="paramname"><em>flags</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">size_t *&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1f948302f8786212d7f6cf14a5267d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f948302f8786212d7f6cf14a5267d8d">&#9670;&nbsp;</a></span>model_to_json_r()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ssize_t model_to_json_r </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>obj</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td>
+          <td class="paramname"><em>meta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>outbuf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1816,29 +1831,30 @@ Functions</h2></td></tr>
 </div>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="amodel__support_8h_html_a1f948302f8786212d7f6cf14a5267d8d"><div class="ttname"><a href="model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d">model_to_json_r</a></div><div class="ttdeci">ssize_t model_to_json_r(const void *obj, const type_meta *meta, int flags, char *outbuf, size_t max)</div></div>
 <div class="ttc" id="amodel__support_8h_html_af7918171aa89926391431009dad9afea"><div class="ttname"><a href="model__support_8h.html#af7918171aa89926391431009dad9afea">model_free</a></div><div class="ttdeci">void model_free(void *obj, type_meta *meta)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:56</div></div>
+<div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a0a845f813a5015d19de89e5b2b14678e"><div class="ttname"><a href="model__support_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a></div><div class="ttdeci">void * model_map_it_value(model_map_iter it)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:241</div></div>
-<div class="ttc" id="amodel__support_8h_html_aee4a9b5ebdf3b4b9dc76a46d0b44c69e"><div class="ttname"><a href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a></div><div class="ttdeci">#define gen_field_meta(n, memtype, modifier, p, partype)</div><div class="ttdef"><b>Definition:</b> model_support.h:77</div></div>
-<div class="ttc" id="amodel__support_8h_html_a6dd22e2cbd935cca344dc99f7d6a2eb9"><div class="ttname"><a href="model__support_8h.html#a6dd22e2cbd935cca344dc99f7d6a2eb9">model_to_json</a></div><div class="ttdeci">int model_to_json(const void *obj, type_meta *meta, int indent, char *buf, size_t maxlen, size_t *len)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:57</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:240</div></div>
-<div class="ttc" id="astructfield__meta_html"><div class="ttname"><a href="structfield__meta.html">field_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:128</div></div>
-<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:208</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:258</div></div>
+<div class="ttc" id="amodel__support_8h_html_aee4a9b5ebdf3b4b9dc76a46d0b44c69e"><div class="ttname"><a href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a></div><div class="ttdeci">#define gen_field_meta(n, memtype, modifier, p, partype)</div><div class="ttdef"><b>Definition:</b> model_support.h:91</div></div>
+<div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:257</div></div>
+<div class="ttc" id="astructfield__meta_html"><div class="ttname"><a href="structfield__meta.html">field_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:143</div></div>
+<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:225</div></div>
 <div class="ttc" id="amodel__support_8h_html_ac5e80917106862cdea7729c18e125c27"><div class="ttname"><a href="model__support_8h.html#ac5e80917106862cdea7729c18e125c27">model_parse_array</a></div><div class="ttdeci">int model_parse_array(void ***arp, const char *json, size_t len, type_meta *meta)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:58</div></div>
+<div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:70</div></div>
 <div class="ttc" id="amodel__support_8h_html_a94a6f026c81a8be1e14a1b355c254cb6"><div class="ttname"><a href="model__support_8h.html#a94a6f026c81a8be1e14a1b355c254cb6">model_map_iterator</a></div><div class="ttdeci">model_map_iter model_map_iterator(model_map *map)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a7037b87ab62417854014f25eeb714086"><div class="ttname"><a href="model__support_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a></div><div class="ttdeci">void * model_map_iter</div><div class="ttdef"><b>Definition:</b> model_support.h:182</div></div>
-<div class="ttc" id="amodel__support_8h_html_a8dc1515fc7557d815731b62f047704dc"><div class="ttname"><a href="model__support_8h.html#a8dc1515fc7557d815731b62f047704dc">FIELD_DECL</a></div><div class="ttdeci">#define FIELD_DECL(name, type, mod, path, _)</div><div class="ttdef"><b>Definition:</b> model_support.h:60</div></div>
+<div class="ttc" id="amodel__support_8h_html_a7037b87ab62417854014f25eeb714086"><div class="ttname"><a href="model__support_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a></div><div class="ttdeci">void * model_map_iter</div><div class="ttdef"><b>Definition:</b> model_support.h:199</div></div>
+<div class="ttc" id="amodel__support_8h_html_a8dc1515fc7557d815731b62f047704dc"><div class="ttname"><a href="model__support_8h.html#a8dc1515fc7557d815731b62f047704dc">FIELD_DECL</a></div><div class="ttdeci">#define FIELD_DECL(name, type, mod, path, _)</div><div class="ttdef"><b>Definition:</b> model_support.h:72</div></div>
 <div class="ttc" id="amodel__support_8h_html_ace334e8bcf3f713857529c5c61a2faaa"><div class="ttname"><a href="model__support_8h.html#ace334e8bcf3f713857529c5c61a2faaa">model_free_array</a></div><div class="ttdeci">void model_free_array(void ***ap, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a4481a344f7888c81e79297dc3cca3713"><div class="ttname"><a href="model__support_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a></div><div class="ttdeci">model_map_iter model_map_it_next(model_map_iter it)</div></div>
 <div class="ttc" id="amodel__support_8h_html_abc01cd9e53791bfe2c1f23f52d875af9"><div class="ttname"><a href="model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9">model_parse</a></div><div class="ttdeci">int model_parse(void *obj, const char *json, size_t len, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a2ed24c267b7bfe10b93db1ac306af78f"><div class="ttname"><a href="model__support_8h.html#a2ed24c267b7bfe10b93db1ac306af78f">model_map_it_key</a></div><div class="ttdeci">const char * model_map_it_key(model_map_iter *it)</div></div>
-<div class="ttc" id="amodel__support_8h_html_ae5a8ce0b412602b5f07fe3220ea6f77d"><div class="ttname"><a href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a></div><div class="ttdeci">char * json</div><div class="ttdef"><b>Definition:</b> model_support.h:119</div></div>
+<div class="ttc" id="amodel__support_8h_html_ae5a8ce0b412602b5f07fe3220ea6f77d"><div class="ttname"><a href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a></div><div class="ttdeci">char * json</div><div class="ttdef"><b>Definition:</b> model_support.h:134</div></div>
 <div class="ttc" id="amodel__support_8h_html_a7be38cee7524b13a1bf43f00d145c533"><div class="ttname"><a href="model__support_8h.html#a7be38cee7524b13a1bf43f00d145c533">model_cmp</a></div><div class="ttdeci">int model_cmp(const void *lh, const void *rh, type_meta *meta)</div></div>
-<div class="ttc" id="astructtype__meta_html"><div class="ttname"><a href="structtype__meta.html">type_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:144</div></div>
-<div class="ttc" id="astructtype__meta_html_ac9c7cd2ca7597d9c1bce2c110a930f8b"><div class="ttname"><a href="structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b">type_meta::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> model_support.h:145</div></div>
+<div class="ttc" id="astructtype__meta_html"><div class="ttname"><a href="structtype__meta.html">type_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:159</div></div>
+<div class="ttc" id="astructtype__meta_html_ac9c7cd2ca7597d9c1bce2c110a930f8b"><div class="ttname"><a href="structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b">type_meta::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> model_support.h:160</div></div>
+<div class="ttc" id="amodel__support_8h_html_a563f68506b4a08c1141562fd16a72f1d"><div class="ttname"><a href="model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d">model_to_json</a></div><div class="ttdeci">char * model_to_json(const void *obj, const type_meta *meta, int flags, size_t *len)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

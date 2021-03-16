@@ -15,5 +15,6 @@ var searchData=
   ['model_5fmap_5fsize_463',['model_map_size',['../model__support_8h.html#a752bc4de3be7e5472f2b72f0c8d8ef38',1,'model_support.h']]],
   ['model_5fparse_464',['model_parse',['../model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9',1,'model_support.h']]],
   ['model_5fparse_5farray_465',['model_parse_array',['../model__support_8h.html#ac5e80917106862cdea7729c18e125c27',1,'model_support.h']]],
-  ['model_5fto_5fjson_466',['model_to_json',['../model__support_8h.html#a6dd22e2cbd935cca344dc99f7d6a2eb9',1,'model_support.h']]]
+  ['model_5fto_5fjson_466',['model_to_json',['../model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d',1,'model_support.h']]],
+  ['model_5fto_5fjson_5fr_467',['model_to_json_r',['../model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d',1,'model_support.h']]]
 ];

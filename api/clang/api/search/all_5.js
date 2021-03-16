@@ -17,14 +17,12 @@ var searchData=
   ['error_70',['ERROR',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a2fd6f336d08340583bd620a7f5694c90',1,'ziti_log.h']]],
   ['error_5fdefs_2eh_71',['error_defs.h',['../error__defs_8h.html',1,'']]],
   ['errors_2eh_72',['errors.h',['../errors_8h.html',1,'']]],
-  ['eval_73',['EVAL',['../model__support_8h.html#aa0f8200acd4827bc9d2df09270b66c38',1,'model_support.h']]],
-  ['eval1_74',['EVAL1',['../model__support_8h.html#aad4f105758560e2d030fb28e39acea6f',1,'model_support.h']]],
-  ['event_75',['event',['../structziti__event__t.html#a2ebf1a939a1433d7f53ba0a65837ca32',1,'ziti_event_t']]],
-  ['event_5fcb_76',['event_cb',['../structziti__options.html#a894d032cee845c5caf83fcb263e8d84f',1,'ziti_options']]],
-  ['events_77',['events',['../structziti__options.html#a635fef44dd0fca1e9b86ff0173254832',1,'ziti_options']]],
-  ['ewma_5f15m_78',['EWMA_15m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a77d624d87fb51c90c9c8c52f4d1b57ad',1,'enums.h']]],
-  ['ewma_5f1m_79',['EWMA_1m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a47bb886d2fd7bd3e5bfede440f943679',1,'enums.h']]],
-  ['ewma_5f5m_80',['EWMA_5m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a1b2f6ecbe561f84f3fa5fdff2c4577c4',1,'enums.h']]],
-  ['ewma_5f5s_81',['EWMA_5s',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a1447763a027bc0d3e6aa01c6055e735d',1,'enums.h']]],
-  ['externs_2eh_82',['externs.h',['../externs_8h.html',1,'']]]
+  ['event_73',['event',['../structziti__event__t.html#a2ebf1a939a1433d7f53ba0a65837ca32',1,'ziti_event_t']]],
+  ['event_5fcb_74',['event_cb',['../structziti__options.html#a894d032cee845c5caf83fcb263e8d84f',1,'ziti_options']]],
+  ['events_75',['events',['../structziti__options.html#a635fef44dd0fca1e9b86ff0173254832',1,'ziti_options']]],
+  ['ewma_5f15m_76',['EWMA_15m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a77d624d87fb51c90c9c8c52f4d1b57ad',1,'enums.h']]],
+  ['ewma_5f1m_77',['EWMA_1m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a47bb886d2fd7bd3e5bfede440f943679',1,'enums.h']]],
+  ['ewma_5f5m_78',['EWMA_5m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a1b2f6ecbe561f84f3fa5fdff2c4577c4',1,'enums.h']]],
+  ['ewma_5f5s_79',['EWMA_5s',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32a1447763a027bc0d3e6aa01c6055e735d',1,'enums.h']]],
+  ['externs_2eh_80',['externs.h',['../externs_8h.html',1,'']]]
 ];
