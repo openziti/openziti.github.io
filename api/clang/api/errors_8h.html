@@ -186,6 +186,15 @@ Variables</h2></td></tr>
 <tr class="memitem:ac4b8b9772401bd1307d859f68bc676ca"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ac4b8b9772401bd1307d859f68bc676ca">ZITI_INVALID_POSTURE</a></td></tr>
 <tr class="memdesc:ac4b8b9772401bd1307d859f68bc676ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">failed posture check  <a href="errors_8h.html#ac4b8b9772401bd1307d859f68bc676ca">More...</a><br /></td></tr>
 <tr class="separator:ac4b8b9772401bd1307d859f68bc676ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ae78fa19505f7d3462c82d374a3ed1b0d">ZITI_MFA_EXISTS</a></td></tr>
+<tr class="memdesc:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to start MFA enrollment when it already has been started or completed  <a href="errors_8h.html#ae78fa19505f7d3462c82d374a3ed1b0d">More...</a><br /></td></tr>
+<tr class="separator:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa1c211c8ab4d77948927d7acd95120d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aaa1c211c8ab4d77948927d7acd95120d">ZITI_MFA_INVALID_TOKEN</a></td></tr>
+<tr class="memdesc:aaa1c211c8ab4d77948927d7acd95120d"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to use an MFA token that is invalid  <a href="errors_8h.html#aaa1c211c8ab4d77948927d7acd95120d">More...</a><br /></td></tr>
+<tr class="separator:aaa1c211c8ab4d77948927d7acd95120d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a99328ac1faf0bcd788c13d3bb14bb0a9">ZITI_MFA_NOT_ENROLLED</a></td></tr>
+<tr class="memdesc:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to verify or retrieve details of an MFA enrollment that has not been completed  <a href="errors_8h.html#a99328ac1faf0bcd788c13d3bb14bb0a9">More...</a><br /></td></tr>
+<tr class="separator:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">ZITI_WTF</a></td></tr>
 <tr class="memdesc:a6cb98ad4d5a5243239c51c92a761fd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspired by the Android SDK: What a Terrible Failure.  <a href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">More...</a><br /></td></tr>
 <tr class="separator:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -723,6 +732,78 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Attempt to load TLS key failed. </p>
+
+</div>
+</div>
+<a id="ae78fa19505f7d3462c82d374a3ed1b0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae78fa19505f7d3462c82d374a3ed1b0d">&#9670;&nbsp;</a></span>ZITI_MFA_EXISTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_MFA_EXISTS</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>attempted to start MFA enrollment when it already has been started or completed </p>
+
+</div>
+</div>
+<a id="aaa1c211c8ab4d77948927d7acd95120d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa1c211c8ab4d77948927d7acd95120d">&#9670;&nbsp;</a></span>ZITI_MFA_INVALID_TOKEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_MFA_INVALID_TOKEN</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>attempted to use an MFA token that is invalid </p>
+
+</div>
+</div>
+<a id="a99328ac1faf0bcd788c13d3bb14bb0a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99328ac1faf0bcd788c13d3bb14bb0a9">&#9670;&nbsp;</a></span>ZITI_MFA_NOT_ENROLLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_MFA_NOT_ENROLLED</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>attempted to verify or retrieve details of an MFA enrollment that has not been completed </p>
 
 </div>
 </div>

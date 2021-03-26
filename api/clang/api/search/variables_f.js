@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['version_595',['version',['../structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f',1,'ziti_router_event::version()'],['../structziti__version.html#a47e71c62fca5a3f66804c5f055e081a8',1,'ziti_version::version()']]]
+  ['terminator_5fcost_645',['terminator_cost',['../structziti__listen__opts.html#a3b447cb2c2832f0e691cb7054bef4d7f',1,'ziti_listen_opts']]],
+  ['terminator_5fprecedence_646',['terminator_precedence',['../structziti__listen__opts.html#aacae40e85c508aaa47df26fe7b1597a8',1,'ziti_listen_opts']]],
+  ['tls_647',['tls',['../structziti__options.html#a16be179f0bf8a6eed7ba1627f87f5c5b',1,'ziti_options']]],
+  ['type_648',['type',['../structtag.html#a7241bd60cffd644fefa293780169f6fd',1,'tag::type()'],['../structziti__event__t.html#a142aff254b19096ad684974574ad9d2f',1,'ziti_event_t::type()']]]
 ];

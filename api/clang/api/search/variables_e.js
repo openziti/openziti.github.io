@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['terminator_5fcost_591',['terminator_cost',['../structziti__listen__opts.html#a3b447cb2c2832f0e691cb7054bef4d7f',1,'ziti_listen_opts']]],
-  ['terminator_5fprecedence_592',['terminator_precedence',['../structziti__listen__opts.html#aacae40e85c508aaa47df26fe7b1597a8',1,'ziti_listen_opts']]],
-  ['tls_593',['tls',['../structziti__options.html#a16be179f0bf8a6eed7ba1627f87f5c5b',1,'ziti_options']]],
-  ['type_594',['type',['../structtag.html#a7241bd60cffd644fefa293780169f6fd',1,'tag::type()'],['../structziti__event__t.html#a142aff254b19096ad684974574ad9d2f',1,'ziti_event_t::type()']]]
+  ['service_641',['service',['../structziti__event__t.html#aa1276c75cb82a8f50030f3a93005bc39',1,'ziti_event_t']]],
+  ['size_642',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
+  ['status_643',['status',['../structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738',1,'ziti_router_event']]],
+  ['string_5fvalue_644',['string_value',['../structtag.html#adef7e61b00736d811f5662f9ef8fcc11',1,'tag']]]
 ];
