@@ -241,23 +241,26 @@ ziti edge controller create identity user &quot;NewUser&quot; -o NewUser.jwt
 </code></pre></section>
 </div>
 <h3 id="enroll-the-new-identity">Enroll the New Identity</h3>
-<p>Identities are not truly enabled until they are enrolled. Enrollment is a complex process. NetFoundy has created a tool
-specifically for this task to ensure safe and secure enrollment of identities.</p>
+<p>Identities are not truly enabled until they are enrolled. Enrollment is a complex process. The easiest way to
+enroll an identity is to use either the Ziti Desktop Edge/Ziti Mobile Edge for your operating system. Alternatively
+the ziti-tunneler for your operating system can be downloaded and used to enroll the identity.</p>
 <ol>
-<li>Download the ziti-enroller for your operating system.</li>
+<li>Download the ziti-tunneler for your operating system.</li>
 </ol>
 <ul>
-<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-enroller/amd64/windows/0.15.0/ziti-enroller.tar.gz">Windows</a></li>
-<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-enroller/amd64/darwin/0.15.0/ziti-enroller.tar.gz">MacOS</a></li>
-<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-enroller/amd64/linux/0.15.0/ziti-enroller.tar.gz">Linux</a></li>
-<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-enroller/arm/linux/0.15.0/ziti-enroller.tar.gz">Linux/ARM</a></li>
+<li><a href="https://github.com/openziti/desktop-edge-win/releases/latest">Windows</a></li>
+<li><a href="https://apps.apple.com/app/id1460484572">MacOS</a></li>
+<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-tunnel/amd64/linux/0.17.4//ziti-tunnel.tar.gz">Linux</a></li>
+<li><a href="https://netfoundry.jfrog.io/netfoundry/ziti-release/ziti-tunnel/arm/linux/0.17.4//ziti-tunnel.tar.gz">Linux/ARM</a></li>
+<li><a href="https://apps.apple.com/app/id1460484353">iOS</a></li>
+<li><a href="https://play.google.com/store/apps/details?id=org.openziti.mobile">Android</a></li>
 </ul>
 <ol>
 <li>Download the <a href="https://jwt.io/introduction/">jwt</a> from the UI by clicking the icon that looks like a certificate (save
 the file as NewUser.jwt) or if you used the CLI from the output location specified when creating the user.</li>
-<li>In a command line editor, change to the folder containing the jwt. Enroll the identity by running <code>ziti-enroller --jwt NewUser.jwt</code></li>
+<li>In a command line editor, change to the folder containing the jwt. Enroll the identity by running <code>ziti-tunneler enroll --jwt NewUser.jwt</code></li>
 </ol>
-<p>The ziti-enroller will output a new json file named <code>NewUser.json</code>. This file is precious and must be protected as it
+<p>The enrollment process will output a new json file named <code>NewUser.json</code>. This file is precious and must be protected as it
 contains the identity of the given user.</p>
 <h2 id="create-a-service">Create a Service</h2>
 <p>With an identity created it&#39;s now time to create a service. Read more about Services <a href="../../services/overview.html">here</a>.  For this
