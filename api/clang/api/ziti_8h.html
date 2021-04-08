@@ -318,6 +318,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af5964f15cd479345e9732c8a9adf1a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">ziti_mfa_new_recovery_codes</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a> new_cb, void *ctx)</td></tr>
 <tr class="memdesc:af5964f15cd479345e9732c8a9adf1a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.  <a href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">More...</a><br /></td></tr>
 <tr class="separator:af5964f15cd479345e9732c8a9adf1a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519727321f824c6e6e60efc82a9eff49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49">ziti_mfa_abort</a> (void *mfa_ctx)</td></tr>
+<tr class="memdesc:a519727321f824c6e6e60efc82a9eff49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts an MFA authentication and frees the associated resources.  <a href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49">More...</a><br /></td></tr>
+<tr class="separator:a519727321f824c6e6e60efc82a9eff49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the macros, functions, typedefs and constants required to interface with a Ziti Network. </p>
@@ -1855,6 +1858,35 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a519727321f824c6e6e60efc82a9eff49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519727321f824c6e6e60efc82a9eff49">&#9670;&nbsp;</a></span>ziti_mfa_abort()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ziti_mfa_abort </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>mfa_ctx</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aborts an MFA authentication and frees the associated resources. </p>
+<p>When an MFA authentication query is being processed it will have an <code>mfa_ctx</code> associated with it. The <code>mfa_ctx</code> will remain allocated till it provides a valid authentication response (i.e. the status callback receives no error) or <code><a class="el" href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49" title="Aborts an MFA authentication and frees the associated resources.">ziti_mfa_abort()</a></code> is called.</p>
+<p>If no status callback is defined for MFA processing, the MFA resources will be automatically freed on error.</p>
+<p>On successful MFA authentication response, the MFA resources will be automatically freed and calling this function should not occur.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mfa_ctx</td><td>the mfa_ctx provided during MFA authentication query processing </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

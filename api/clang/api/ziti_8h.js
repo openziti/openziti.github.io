@@ -62,6 +62,7 @@ var ziti_8h =
     [ "ziti_init_opts", "ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7", null ],
     [ "ziti_listen", "ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c", null ],
     [ "ziti_listen_with_options", "ziti_8h.html#a8c447db49310357727e92d635d6efd4e", null ],
+    [ "ziti_mfa_abort", "ziti_8h.html#a519727321f824c6e6e60efc82a9eff49", null ],
     [ "ziti_mfa_enroll", "ziti_8h.html#a25c187cbb0d3aaf9ae6e9df50c55ef3c", null ],
     [ "ziti_mfa_get_recovery_codes", "ziti_8h.html#a75117b939336a685888972f30b7fac0e", null ],
     [ "ziti_mfa_new_recovery_codes", "ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19", null ],
