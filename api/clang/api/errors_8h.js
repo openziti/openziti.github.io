@@ -26,6 +26,7 @@ var errors_8h =
     [ "ZITI_MFA_INVALID_TOKEN", "errors_8h.html#aaa1c211c8ab4d77948927d7acd95120d", null ],
     [ "ZITI_MFA_NOT_ENROLLED", "errors_8h.html#a99328ac1faf0bcd788c13d3bb14bb0a9", null ],
     [ "ZITI_NOT_AUTHORIZED", "errors_8h.html#a7a21163f06d22691e28273c92621547e", null ],
+    [ "ZITI_NOT_FOUND", "errors_8h.html#a767a716e543289719a9864e276e067b9", null ],
     [ "ZITI_OK", "errors_8h.html#a58cd556eb411c881903d30ae272984f4", null ],
     [ "ZITI_PKCS7_ASN1_PARSING_FAILED", "errors_8h.html#afc940e564c9768cd6a7464b0ee4ab8f6", null ],
     [ "ZITI_SERVICE_UNAVAILABLE", "errors_8h.html#adce4a78f4190299277ad587530ca5036", null ],
