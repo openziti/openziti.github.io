@@ -892,12 +892,15 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidCodeSnippet"
+      ],
       "type": "Conceptual",
       "source_relative_path": "samples/index.md",
       "output": {
         ".html": {
           "relative_path": "samples/index.html",
-          "hash": "py0mfVJBtUPWZUtfIdQa+g=="
+          "hash": "XNTP64Bceni4nfpO+FiF5A=="
         }
       },
       "is_incremental": false,
