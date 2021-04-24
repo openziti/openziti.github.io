@@ -41,7 +41,7 @@ var ziti__model_8h =
     [ "cmp_ziti_posture_query_set", "ziti__model_8h.html#a8553e2781f5a2d3f0c5403e5e194a68e", null ],
     [ "cmp_ziti_process", "ziti__model_8h.html#aa9ee2a66019fa7b7a9a41e56d02b6dff", null ],
     [ "cmp_ziti_version", "ziti__model_8h.html#ad253ed19cef9462131fb62e4fd70b162", null ],
-    [ "DDDDDDDDDDDDDDDDECLARE_MODEL", "ziti__model_8h.html#af7922eb235d5f2c09e37c4cedc2fe8a2", null ],
+    [ "DDDDDDDDDDDDDDDDDDDDDDDDECLARE_MODEL", "ziti__model_8h.html#adc55504798a772a55f86f25ee9c1900a", null ],
     [ "DDDDDDDDDDDDECLARE_MODEL", "ziti__model_8h.html#ae0c2b225f9fe06e40baba67e448d9810", null ],
     [ "DDDDDDDDDDECLARE_MODEL", "ziti__model_8h.html#acbe0ede459c7b821f7238c4aa20ea01a", null ],
     [ "DDDDDDDDECLARE_MODEL", "ziti__model_8h.html#a886a4db86cafba4bc6c71fa955312b5f", null ],

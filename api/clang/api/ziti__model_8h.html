@@ -315,8 +315,8 @@ Functions</h2></td></tr>
 <tr class="separator:a0ca871c0aba44d7ddfc13e971fe1b68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeaaee77f808584b7c7e9a1cf4a52d0e1"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aeaaee77f808584b7c7e9a1cf4a52d0e1">ziti_host_cfg_v1_to_json</a> (const <a class="el" href="ziti__model_8h.html#af248f29a583324f79351a1e077298891">ziti_host_cfg_v1</a> *v, int flags, size_t *len)</td></tr>
 <tr class="separator:aeaaee77f808584b7c7e9a1cf4a52d0e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7922eb235d5f2c09e37c4cedc2fe8a2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#af7922eb235d5f2c09e37c4cedc2fe8a2">DDDDDDDDDDDDDDDDECLARE_MODEL</a> (ziti_auth_query_mfa, <a class="el" href="ziti__model_8h.html#a74e498d53b1613d8762f2eb95365bc45">ZITI_AUTH_QUERY_MFA_MODEL</a>) typedef struct ziti_mfa_enrollment_s</td></tr>
-<tr class="separator:af7922eb235d5f2c09e37c4cedc2fe8a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc55504798a772a55f86f25ee9c1900a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#adc55504798a772a55f86f25ee9c1900a">DDDDDDDDDDDDDDDDDDDDDDDDECLARE_MODEL</a> (ziti_auth_query_mfa, <a class="el" href="ziti__model_8h.html#a74e498d53b1613d8762f2eb95365bc45">ZITI_AUTH_QUERY_MFA_MODEL</a>) typedef struct ziti_mfa_enrollment_s</td></tr>
+<tr class="separator:adc55504798a772a55f86f25ee9c1900a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6d48af6dc3b315bde6b2254fdf93c4f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab6d48af6dc3b315bde6b2254fdf93c4f">get_ziti_mfa_enrollment_meta</a> ()</td></tr>
 <tr class="separator:ab6d48af6dc3b315bde6b2254fdf93c4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae6fde74b49f49ea4ffb514f8485dc7a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ziti__model_8h.html#a40b72f028dfcf7d23b8c9efb7141925d">ziti_mfa_enrollment</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aae6fde74b49f49ea4ffb514f8485dc7a">alloc_ziti_mfa_enrollment</a> ()</td></tr>
@@ -496,11 +496,15 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">XX(protocol, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, protocol, __VA_ARGS__) \</div>
-<div class="line">XX(dial_intercepted_protocol, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, dialInterceptedProtocol, __VA_ARGS__) \</div>
+<div class="line">XX(forward_protocol, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, forwardProtocol, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_protocols, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedProtocols, __VA_ARGS__) \</div>
 <div class="line">XX(address, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, address, __VA_ARGS__) \</div>
-<div class="line">XX(dial_intercepted_address, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, dialInterceptedAddress, __VA_ARGS__) \</div>
+<div class="line">XX(forward_address, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, forwardAddress, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_addresses, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedAddresses, __VA_ARGS__) \</div>
 <div class="line">XX(port, <span class="keywordtype">int</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, port, __VA_ARGS__) \</div>
-<div class="line">XX(dial_intercepted_port, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, dialInterceptedPort, __VA_ARGS__) \</div>
+<div class="line">XX(forward_port, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, forwardPort, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_port_ranges, ziti_port_range, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedPortRanges, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_source_addresses, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedSourceAddresses, __VA_ARGS__) \</div>
 <div class="line">XX(listen_options, <a class="code" href="structtag.html">tag</a>, <a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, listenOptions, __VA_ARGS__)</div>
 </div><!-- fragment -->
 </div>
@@ -1325,14 +1329,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af7922eb235d5f2c09e37c4cedc2fe8a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af7922eb235d5f2c09e37c4cedc2fe8a2">&#9670;&nbsp;</a></span>DDDDDDDDDDDDDDDDECLARE_MODEL()</h2>
+<a id="adc55504798a772a55f86f25ee9c1900a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc55504798a772a55f86f25ee9c1900a">&#9670;&nbsp;</a></span>DDDDDDDDDDDDDDDDDDDDDDDDECLARE_MODEL()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">DDDDDDDDDDDDDDDDECLARE_MODEL </td>
+          <td class="memname">DDDDDDDDDDDDDDDDDDDDDDDDECLARE_MODEL </td>
           <td>(</td>
           <td class="paramtype">ziti_auth_query_mfa&#160;</td>
           <td class="paramname">, </td>
@@ -3541,9 +3545,9 @@ Variables</h2></td></tr>
 <div class="ttc" id="amodel__support_8h_html_a6a3518c9c928b1194dfa6123a0a80586"><div class="ttname"><a href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a></div><div class="ttdeci">#define none(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:67</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
-<div class="ttc" id="aziti__model_8h_html_a001b68cb90ef452bbcd51854edfd4904"><div class="ttname"><a href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a></div><div class="ttdeci">ziti_posture_query_set</div><div class="ttdef"><b>Definition:</b> ziti_model.h:126</div></div>
+<div class="ttc" id="aziti__model_8h_html_a001b68cb90ef452bbcd51854edfd4904"><div class="ttname"><a href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a></div><div class="ttdeci">ziti_posture_query_set</div><div class="ttdef"><b>Definition:</b> ziti_model.h:130</div></div>
 <div class="ttc" id="astructtag_html"><div class="ttname"><a href="structtag.html">tag</a></div><div class="ttdef"><b>Definition:</b> model_support.h:243</div></div>
-<div class="ttc" id="aziti__model_8h_html_a4d81312725b34719ecde06f1f83a3ab2"><div class="ttname"><a href="ziti__model_8h.html#a4d81312725b34719ecde06f1f83a3ab2">ziti_process</a></div><div class="ttdeci">ziti_process</div><div class="ttdef"><b>Definition:</b> ziti_model.h:124</div></div>
+<div class="ttc" id="aziti__model_8h_html_a4d81312725b34719ecde06f1f83a3ab2"><div class="ttname"><a href="ziti__model_8h.html#a4d81312725b34719ecde06f1f83a3ab2">ziti_process</a></div><div class="ttdeci">ziti_process</div><div class="ttdef"><b>Definition:</b> ziti_model.h:128</div></div>
 <div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:70</div></div>
 <div class="ttc" id="amodel__support_8h_html_ae5a8ce0b412602b5f07fe3220ea6f77d"><div class="ttname"><a href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a></div><div class="ttdeci">char * json</div><div class="ttdef"><b>Definition:</b> model_support.h:134</div></div>
 <!-- start footer part -->
