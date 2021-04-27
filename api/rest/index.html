@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Ziti </title>
+    <title>Ziti controlller REST API | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Ziti ">
+    <meta name="title" content="Ziti controlller REST API | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -95,8 +95,32 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="ziti-controlller-rest-api">Ziti controlller REST API</h1>
 
-<p>this is the landing page for rest</p>
+<p>The API version and Swagger definition for a particular controller may be fetched.</p>
+<h2 id="examples">Examples</h2>
+<h3 id="find-the-controller-version">Find the controller version</h3>
+<p><code>GET /</code></p>
+<pre><code class="lang-json">{
+    &quot;data&quot;: {
+        &quot;apiVersions&quot;: {
+            &quot;edge&quot;: {
+                &quot;v1&quot;: {
+                    &quot;path&quot;: &quot;/edge/v1&quot;
+                }
+            }
+        },
+        &quot;buildDate&quot;: &quot;2021-04-23 18:09:47&quot;,
+        &quot;revision&quot;: &quot;fe826ed2ec0c&quot;,
+        &quot;runtimeVersion&quot;: &quot;go1.16.3&quot;,
+        &quot;version&quot;: &quot;v0.19.12&quot;
+    },
+    &quot;meta&quot;: {}
+}
+</code></pre><h3 id="download-the-swagger-definition">Download the Swagger definition</h3>
+<p>You may wish to import the definition in Postman to create a collection of requests or generate boilerplate client code for your preferred programming language.</p>
+<p><code>GET /edge/v1/specs/swagger/spec</code></p>
+<!-- TODO: there might be a way to transclude the current definition of pasting a stale version in-line -->
 </article>
           </div>
           
