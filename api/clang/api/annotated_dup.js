@@ -1,5 +1,6 @@
 var annotated_dup =
 [
+    [ "api_path", "structapi__path.html", "structapi__path" ],
     [ "field_meta", "structfield__meta.html", "structfield__meta" ],
     [ "model_map", "structmodel__map.html", "structmodel__map" ],
     [ "tag", "structtag.html", "structtag" ],
@@ -13,6 +14,5 @@ var annotated_dup =
     [ "ziti_listen_opts", "structziti__listen__opts.html", "structziti__listen__opts" ],
     [ "ziti_options", "structziti__options.html", "structziti__options" ],
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
-    [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
-    [ "ziti_version", "structziti__version.html", "structziti__version" ]
+    [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ]
 ];
