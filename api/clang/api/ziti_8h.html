@@ -144,28 +144,28 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a35245ab4953e815155542e5b46f5bdff"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">ziti_service_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, ziti_service *, int status, void *data)</td></tr>
 <tr class="memdesc:a35245ab4953e815155542e5b46f5bdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service status callback.  <a href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">More...</a><br /></td></tr>
 <tr class="separator:a35245ab4953e815155542e5b46f5bdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc59bbee9fbc6c61ec6e6be7a93b399"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a8cc59bbee9fbc6c61ec6e6be7a93b399">ziti_pr_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char **mac_addresses, int num_mac)</td></tr>
-<tr class="memdesc:a8cc59bbee9fbc6c61ec6e6be7a93b399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response MAC address callback.  <a href="ziti_8h.html#a8cc59bbee9fbc6c61ec6e6be7a93b399">More...</a><br /></td></tr>
-<tr class="separator:a8cc59bbee9fbc6c61ec6e6be7a93b399"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed34c2463c46ac4c6fb258d3bcd5883e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aed34c2463c46ac4c6fb258d3bcd5883e">ziti_pq_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a8cc59bbee9fbc6c61ec6e6be7a93b399">ziti_pr_mac_cb</a> response_cb)</td></tr>
-<tr class="memdesc:aed34c2463c46ac4c6fb258d3bcd5883e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for MAC addresses callback.  <a href="ziti_8h.html#aed34c2463c46ac4c6fb258d3bcd5883e">More...</a><br /></td></tr>
-<tr class="separator:aed34c2463c46ac4c6fb258d3bcd5883e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99de53e8921b513203e130e66a15e8e2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a99de53e8921b513203e130e66a15e8e2">ziti_pr_domain_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *domain)</td></tr>
-<tr class="memdesc:a99de53e8921b513203e130e66a15e8e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response Domain callback.  <a href="ziti_8h.html#a99de53e8921b513203e130e66a15e8e2">More...</a><br /></td></tr>
-<tr class="separator:a99de53e8921b513203e130e66a15e8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4ed0fff73bc7c9a2540c641fd6a19b62"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a4ed0fff73bc7c9a2540c641fd6a19b62">ziti_pq_domain_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a99de53e8921b513203e130e66a15e8e2">ziti_pr_domain_cb</a> response_cb)</td></tr>
-<tr class="memdesc:a4ed0fff73bc7c9a2540c641fd6a19b62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for Domain callback.  <a href="ziti_8h.html#a4ed0fff73bc7c9a2540c641fd6a19b62">More...</a><br /></td></tr>
-<tr class="separator:a4ed0fff73bc7c9a2540c641fd6a19b62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49ae2eb7611f4cd068aded865b7a6b9d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a49ae2eb7611f4cd068aded865b7a6b9d">ziti_pr_os_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *os_type, char *os_version, char *os_build)</td></tr>
-<tr class="memdesc:a49ae2eb7611f4cd068aded865b7a6b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response OS callback.  <a href="ziti_8h.html#a49ae2eb7611f4cd068aded865b7a6b9d">More...</a><br /></td></tr>
-<tr class="separator:a49ae2eb7611f4cd068aded865b7a6b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42d33ec29a4e34e45e0730453a8e6b7e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a42d33ec29a4e34e45e0730453a8e6b7e">ziti_pq_os_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a49ae2eb7611f4cd068aded865b7a6b9d">ziti_pr_os_cb</a> response_cb)</td></tr>
-<tr class="memdesc:a42d33ec29a4e34e45e0730453a8e6b7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for OS callback.  <a href="ziti_8h.html#a42d33ec29a4e34e45e0730453a8e6b7e">More...</a><br /></td></tr>
-<tr class="separator:a42d33ec29a4e34e45e0730453a8e6b7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a838ecc5338907bebedf7f242fac5856a"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *path, bool is_running, char *sha_512_hash, char **signers, int num_signers)</td></tr>
-<tr class="memdesc:a838ecc5338907bebedf7f242fac5856a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response process callback.  <a href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">More...</a><br /></td></tr>
-<tr class="separator:a838ecc5338907bebedf7f242fac5856a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aecab88391d31690f11138994d7a096ad"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">ziti_pq_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td></tr>
+<tr class="memitem:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">ziti_pr_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, char **mac_addresses, int num_mac)</td></tr>
+<tr class="memdesc:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response MAC address callback.  <a href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">More...</a><br /></td></tr>
+<tr class="separator:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add925fb123b0f1d0b5089a9d1a50de7c"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#add925fb123b0f1d0b5089a9d1a50de7c">ziti_pq_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">ziti_pr_mac_cb</a> response_cb)</td></tr>
+<tr class="memdesc:add925fb123b0f1d0b5089a9d1a50de7c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for MAC addresses callback.  <a href="ziti_8h.html#add925fb123b0f1d0b5089a9d1a50de7c">More...</a><br /></td></tr>
+<tr class="separator:add925fb123b0f1d0b5089a9d1a50de7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3baef2e72d4dca951b5ddbc04ea36761"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a3baef2e72d4dca951b5ddbc04ea36761">ziti_pr_domain_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *domain)</td></tr>
+<tr class="memdesc:a3baef2e72d4dca951b5ddbc04ea36761"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response Domain callback.  <a href="ziti_8h.html#a3baef2e72d4dca951b5ddbc04ea36761">More...</a><br /></td></tr>
+<tr class="separator:a3baef2e72d4dca951b5ddbc04ea36761"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a677ff3bfa0447656fa6703e1c4a1e3a2"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a677ff3bfa0447656fa6703e1c4a1e3a2">ziti_pq_domain_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#a3baef2e72d4dca951b5ddbc04ea36761">ziti_pr_domain_cb</a> response_cb)</td></tr>
+<tr class="memdesc:a677ff3bfa0447656fa6703e1c4a1e3a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for Domain callback.  <a href="ziti_8h.html#a677ff3bfa0447656fa6703e1c4a1e3a2">More...</a><br /></td></tr>
+<tr class="separator:a677ff3bfa0447656fa6703e1c4a1e3a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d7d83d2a87cf345783b3048408fffb1"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1">ziti_pr_os_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *os_type, const char *os_version, const char *os_build)</td></tr>
+<tr class="memdesc:a6d7d83d2a87cf345783b3048408fffb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response OS callback.  <a href="ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1">More...</a><br /></td></tr>
+<tr class="separator:a6d7d83d2a87cf345783b3048408fffb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7ca2d541ff133975948d7cb7cea240b"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ae7ca2d541ff133975948d7cb7cea240b">ziti_pq_os_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1">ziti_pr_os_cb</a> response_cb)</td></tr>
+<tr class="memdesc:ae7ca2d541ff133975948d7cb7cea240b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for OS callback.  <a href="ziti_8h.html#ae7ca2d541ff133975948d7cb7cea240b">More...</a><br /></td></tr>
+<tr class="separator:ae7ca2d541ff133975948d7cb7cea240b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1744758409bf52d54e3fff89d5409583"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583">ziti_pr_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, bool is_running, const char *sha_512_hash, char **signers, int num_signers)</td></tr>
+<tr class="memdesc:a1744758409bf52d54e3fff89d5409583"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response process callback.  <a href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583">More...</a><br /></td></tr>
+<tr class="separator:a1744758409bf52d54e3fff89d5409583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecab88391d31690f11138994d7a096ad"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">ziti_pq_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583">ziti_pr_process_cb</a> response_cb)</td></tr>
 <tr class="memdesc:aecab88391d31690f11138994d7a096ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for process callback.  <a href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">More...</a><br /></td></tr>
 <tr class="separator:aecab88391d31690f11138994d7a096ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ec65e40a667770277c5c176d68d0cae"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae">ziti_ar_mfa_status_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, int status, void *ctx)</td></tr>
@@ -714,14 +714,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4ed0fff73bc7c9a2540c641fd6a19b62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4ed0fff73bc7c9a2540c641fd6a19b62">&#9670;&nbsp;</a></span>ziti_pq_domain_cb</h2>
+<a id="a677ff3bfa0447656fa6703e1c4a1e3a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a677ff3bfa0447656fa6703e1c4a1e3a2">&#9670;&nbsp;</a></span>ziti_pq_domain_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pq_domain_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a99de53e8921b513203e130e66a15e8e2">ziti_pr_domain_cb</a> response_cb)</td>
+          <td class="memname">typedef void(* ziti_pq_domain_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#a3baef2e72d4dca951b5ddbc04ea36761">ziti_pr_domain_cb</a> response_cb)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -735,36 +735,36 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a99de53e8921b513203e130e66a15e8e2" title="Posture response Domain callback.">ziti_pr_domain_cb</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a3baef2e72d4dca951b5ddbc04ea36761" title="Posture response Domain callback.">ziti_pr_domain_cb</a> </dd></dl>
 
 </div>
 </div>
-<a id="aed34c2463c46ac4c6fb258d3bcd5883e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed34c2463c46ac4c6fb258d3bcd5883e">&#9670;&nbsp;</a></span>ziti_pq_mac_cb</h2>
+<a id="add925fb123b0f1d0b5089a9d1a50de7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add925fb123b0f1d0b5089a9d1a50de7c">&#9670;&nbsp;</a></span>ziti_pq_mac_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pq_mac_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a8cc59bbee9fbc6c61ec6e6be7a93b399">ziti_pr_mac_cb</a> response_cb)</td>
+          <td class="memname">typedef void(* ziti_pq_mac_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">ziti_pr_mac_cb</a> response_cb)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Posture Query for MAC addresses callback. </p>
 <p>This callback is invoked when the MAC addresses of the current host are needed. The callback will be supplied a followup callback to supply an array of MAC Addresses.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a8cc59bbee9fbc6c61ec6e6be7a93b399" title="Posture response MAC address callback.">ziti_pr_mac_cb</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5" title="Posture response MAC address callback.">ziti_pr_mac_cb</a> </dd></dl>
 
 </div>
 </div>
-<a id="a42d33ec29a4e34e45e0730453a8e6b7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42d33ec29a4e34e45e0730453a8e6b7e">&#9670;&nbsp;</a></span>ziti_pq_os_cb</h2>
+<a id="ae7ca2d541ff133975948d7cb7cea240b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7ca2d541ff133975948d7cb7cea240b">&#9670;&nbsp;</a></span>ziti_pq_os_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pq_os_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, <a class="el" href="ziti_8h.html#a49ae2eb7611f4cd068aded865b7a6b9d">ziti_pr_os_cb</a> response_cb)</td>
+          <td class="memname">typedef void(* ziti_pq_os_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, <a class="el" href="ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1">ziti_pr_os_cb</a> response_cb)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -778,7 +778,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a49ae2eb7611f4cd068aded865b7a6b9d" title="Posture response OS callback.">ziti_pr_os_cb</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1" title="Posture response OS callback.">ziti_pr_os_cb</a> </dd></dl>
 
 </div>
 </div>
@@ -789,7 +789,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pq_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a">ziti_pr_process_cb</a> response_cb)</td>
+          <td class="memname">typedef void(* ziti_pq_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583">ziti_pr_process_cb</a> response_cb)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -804,24 +804,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a838ecc5338907bebedf7f242fac5856a" title="Posture response process callback.">ziti_pr_process_cb</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583" title="Posture response process callback.">ziti_pr_process_cb</a> </dd></dl>
 
 </div>
 </div>
-<a id="a99de53e8921b513203e130e66a15e8e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99de53e8921b513203e130e66a15e8e2">&#9670;&nbsp;</a></span>ziti_pr_domain_cb</h2>
+<a id="a3baef2e72d4dca951b5ddbc04ea36761"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3baef2e72d4dca951b5ddbc04ea36761">&#9670;&nbsp;</a></span>ziti_pr_domain_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pr_domain_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *domain)</td>
+          <td class="memname">typedef void(* ziti_pr_domain_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *domain)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Posture response Domain callback. </p>
-<p>This callback should be invoked after gathering the relevant Domain of the host during a <a class="el" href="ziti_8h.html#a4ed0fff73bc7c9a2540c641fd6a19b62" title="Posture Query for Domain callback.">ziti_pq_domain_cb()</a></p>
+<p>This callback should be invoked after gathering the relevant Domain of the host during a <a class="el" href="ziti_8h.html#a677ff3bfa0447656fa6703e1c4a1e3a2" title="Posture Query for Domain callback.">ziti_pq_domain_cb()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -829,24 +829,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a4ed0fff73bc7c9a2540c641fd6a19b62" title="Posture Query for Domain callback.">ziti_pq_domain_cb()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a677ff3bfa0447656fa6703e1c4a1e3a2" title="Posture Query for Domain callback.">ziti_pq_domain_cb()</a> </dd></dl>
 
 </div>
 </div>
-<a id="a8cc59bbee9fbc6c61ec6e6be7a93b399"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8cc59bbee9fbc6c61ec6e6be7a93b399">&#9670;&nbsp;</a></span>ziti_pr_mac_cb</h2>
+<a id="acbd5091529705082ce4e8ab3cfb2ddb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd5091529705082ce4e8ab3cfb2ddb5">&#9670;&nbsp;</a></span>ziti_pr_mac_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pr_mac_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char **mac_addresses, int num_mac)</td>
+          <td class="memname">typedef void(* ziti_pr_mac_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, char **mac_addresses, int num_mac)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Posture response MAC address callback. </p>
-<p>This callback should be invoked after gathering the relevant MAC Addresses available during a <a class="el" href="ziti_8h.html#aed34c2463c46ac4c6fb258d3bcd5883e" title="Posture Query for MAC addresses callback.">ziti_pq_mac_cb()</a></p>
+<p>This callback should be invoked after gathering the relevant MAC Addresses available during a <a class="el" href="ziti_8h.html#add925fb123b0f1d0b5089a9d1a50de7c" title="Posture Query for MAC addresses callback.">ziti_pq_mac_cb()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -855,24 +855,24 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#aed34c2463c46ac4c6fb258d3bcd5883e" title="Posture Query for MAC addresses callback.">ziti_pq_mac_cb()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#add925fb123b0f1d0b5089a9d1a50de7c" title="Posture Query for MAC addresses callback.">ziti_pq_mac_cb()</a> </dd></dl>
 
 </div>
 </div>
-<a id="a49ae2eb7611f4cd068aded865b7a6b9d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ae2eb7611f4cd068aded865b7a6b9d">&#9670;&nbsp;</a></span>ziti_pr_os_cb</h2>
+<a id="a6d7d83d2a87cf345783b3048408fffb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d7d83d2a87cf345783b3048408fffb1">&#9670;&nbsp;</a></span>ziti_pr_os_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pr_os_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *os_type, char *os_version, char *os_build)</td>
+          <td class="memname">typedef void(* ziti_pr_os_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *os_type, const char *os_version, const char *os_build)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Posture response OS callback. </p>
-<p>This callback should be invoked after gathering the relevant OS versions of the host during a <a class="el" href="ziti_8h.html#a42d33ec29a4e34e45e0730453a8e6b7e" title="Posture Query for OS callback.">ziti_pq_os_cb()</a></p>
+<p>This callback should be invoked after gathering the relevant OS versions of the host during a <a class="el" href="ziti_8h.html#ae7ca2d541ff133975948d7cb7cea240b" title="Posture Query for OS callback.">ziti_pq_os_cb()</a></p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -882,18 +882,18 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a42d33ec29a4e34e45e0730453a8e6b7e" title="Posture Query for OS callback.">ziti_pq_os_cb()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ae7ca2d541ff133975948d7cb7cea240b" title="Posture Query for OS callback.">ziti_pq_os_cb()</a> </dd></dl>
 
 </div>
 </div>
-<a id="a838ecc5338907bebedf7f242fac5856a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a838ecc5338907bebedf7f242fac5856a">&#9670;&nbsp;</a></span>ziti_pr_process_cb</h2>
+<a id="a1744758409bf52d54e3fff89d5409583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1744758409bf52d54e3fff89d5409583">&#9670;&nbsp;</a></span>ziti_pr_process_cb</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_pr_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *id, char *path, bool is_running, char *sha_512_hash, char **signers, int num_signers)</td>
+          <td class="memname">typedef void(* ziti_pr_process_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, bool is_running, const char *sha_512_hash, char **signers, int num_signers)</td>
         </tr>
       </table>
 </div><div class="memdoc">
