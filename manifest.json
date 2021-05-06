@@ -1123,6 +1123,29 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti-cmd/quickstart/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-cmd/quickstart/README.html",
+          "hash": "B+MEWlN8+Sj4T4XXiZi0Zw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-cmd/quickstart/docker-compose-nw.svg",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-cmd/quickstart/docker-compose-nw.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti-cmd/quickstart/docker/README.md",
       "output": {
         ".html": {
@@ -1151,6 +1174,18 @@
       "output": {
         "resource": {
           "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/sidecar-diagram.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti-cmd/quickstart/local/express/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti-cmd/quickstart/local/express/README.html",
+          "hash": "YIj8a3BTuVSpC8ELgXS8SQ=="
         }
       },
       "is_incremental": false,
@@ -2020,7 +2055,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 91,
+          "total_file_count": 93,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
