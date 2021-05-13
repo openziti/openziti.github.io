@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Quick Start Up and Running | Ziti </title>
+    <title>Building and Deploying the Latest Quickstart Docker Image | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Quick Start Up and Running | Ziti ">
+    <meta name="title" content="Building and Deploying the Latest Quickstart Docker Image | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -88,22 +88,26 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="quick-start-up-and-running">Quick Start Up and Running</h1>
+<h1 id="building-and-deploying-the-latest-quickstart-docker-image">Building and Deploying the Latest Quickstart Docker Image</h1>
 
 <h2 id="build-docker-image">Build Docker Image</h2>
 <ol>
-<li><p>Copy Ziti binaries into ziti/quickstart/docker/image/ziti.ignore/</p>
-</li>
-<li><p>Build image:</p>
-<p> $ cd ziti/quickstart/docker
- $ docker-compose build</p>
-</li>
-<li><p>Start Ziti Environment</p>
-<p> $ docker-compose up -d</p>
-</li>
-<li><p>Clean Up</p>
-<p> $ docker-compose down; docker volume prune /y; docker volume rm docker_ziti-fs</p>
-</li>
+<li>change to this directory: <code>cd quickstart/docker</code></li>
+<li>set an environment variable: <code>export ZITI_HOME=$(pwd)</code></li>
+<li>source the helper script: <code>source ../ziti-cli-functions.sh</code></li>
+<li>cleanup the binary directory if it exists: <code>rm -rf ./image/ziti.ignore</code></li>
+<li>issue this function to pull the latest ziti binaries: <code>getLatestZiti</code></li>
+<li>move the ziti binaries: <code>mv ziti-bin/ziti image/ziti.ignore/</code></li>
+<li>build the docker image: <code>docker build image -t openziti/quickstart</code></li>
+<li>exec into a container and make sure it&#39;s the version you expect: <code>docker run --rm -it openziti/quickstart ziti version</code></li>
+<li>cleanup: <code>rm ziti-*tar.gz; rm -rf ziti-bin</code></li>
+<li></li>
+</ol>
+<h2 id="push-docker-image-to-dockerhub">Push Docker Image to dockerhub</h2>
+<ol>
+<li>retag the image locally to match the expected version: <code>docker push openziti/quickstart:0.19.3</code></li>
+<li>push the latest: <code>docker push openziti/quickstart</code></li>
+<li>push the versioned tag: <code>docker push openziti/quickstart:0.19.3</code></li>
 </ol>
 </article>
           </div>

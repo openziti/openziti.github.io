@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Quickstart - AWS | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Quickstart - AWS | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="quickstart---aws">Quickstart - AWS</h1>
+
+<p>This quickstart is a barebones guide to running a full developer environment in AWS. It is not fault-tolerant. If you require fault tolerance this guide is not for you. This guide also assumes you&#39;re at least familiar with AWS&#39;s console and cloud development. Feel free to replace any steps along the way you desire but these steps were tested at least a few times and hopefully whenever you&#39;re reading this, the steps are still valid. If not file an issue or shoot over to <a href="https://openziti.discourse.group/">Discourse</a> and start a discussion.</p>
+<h2 id="setup-a-server">Setup a Server</h2>
+<ol>
+<li>After logging into AWS, navigate to the EC2 Dashboard</li>
+<li>From the EC2 Dashboard, click &quot;Launch Instance&quot;</li>
+<li>Find &quot;Ubuntu Server 20.04 LTS (HVM), SSD Volume Type&quot; and click &#39;select&#39;</li>
+<li>At the bottom of the screen - click the &quot;Review and Launch&quot; button</li>
+<li>In AWS &quot;Step 7. Review Instance Launch&quot;, find the &quot;Security Groups&quot; row and expand it if necessary</li>
+<li>Click &quot;Edit security groups&quot;</li>
+<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8441&quot; Source: &quot;0.0.0.0/0&quot;</li>
+<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8442&quot; Source: &quot;0.0.0.0/0&quot;</li>
+<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8443&quot; Source: &quot;0.0.0.0/0&quot;</li>
+<li><p>Your console should look like this:
+<img src="img.png" alt="img.png"></p>
+</li>
+<li><p>click &quot;Review and Launch&quot; and then &quot;Launch&quot;</p>
+</li>
+<li>Select your keypair and choose &quot;Launch Instances&quot;</li>
+</ol>
+<h2 id="ssh-to-the-server">SSH to the Server</h2>
+<ol>
+<li>After ssh&#39;ing to the new ubuntu machine - run: sudo apt update &amp;&amp; sudo apt install jq -y</li>
+<li>Clone the public github repos: git clone <a href="https://github.com/openziti/ziti.git">https://github.com/openziti/ziti.git</a></li>
+<li><p>Set a whole bunch of environment variables. You will need to know the public ip address as well as public dns name. Replace &quot;<strong><strong>EXTERNAL___IP</strong></strong>&quot; and &quot;<strong><strong>EXTERNAL___DNS</strong></strong>&quot; with the proper values:</p>
+<pre><code>export EXTERNAL_IP=&quot;____EXTERNAL___IP____&quot;export EXTERNAL_DNS=&quot;____EXTERNAL___DNS____&quot;
+export ZITI_EDGE_CONTROLLER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
+export ZITI_EDGE_ROUTER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
+export ZITI_EDGE_CONTROLLER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
+export ZITI_EDGE_ROUTER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
+export ZITI_EDGE_CONTROLLER_PORT=8441
+export ZITI_EDGE_ROUTER_PORT=8442
+</code></pre></li>
+<li><p>Start the Ziti Controller and Ziti Edge Router by using the &quot;express&quot; script:</p>
+<pre><code>~/ziti/quickstart/local/express/express-dev-env.sh
+</code></pre></li>
+<li><p>Test the script worked properly by using a curl statement:</p>
+<pre><code>curl -k &quot;https://${EXTERNAL_DNS}:${ZITI_EDGE_CONTROLLER_PORT}/version&quot;
+{&quot;data&quot;:{&quot;apiVersions&quot;:{&quot;edge&quot;:{&quot;v1&quot;:{&quot;path&quot;:&quot;/edge/v1&quot;}}},&quot;buildDate&quot;:&quot;2021-05-05 20:59:40&quot;,&quot;revision&quot;:&quot;73dd1db42bf4&quot;,&quot;runtimeVersion&quot;:&quot;go1.16.3&quot;,&quot;version&quot;:&quot;v0.19.13&quot;},&quot;meta&quot;:{}}
+</code></pre></li>
+</ol>
+<h2 id="setting-up-the-ziti-admin-console">Setting up the Ziti Admin Console</h2>
+<ol>
+<li><p>Install docker on the machine. I followed these instructions <a href="https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/">https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/</a> but we&#39;ll condense them here for you to copy/paste:</p>
+<pre><code>sudo apt update
+sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
+sudo apt install docker-ce docker-ce-cli containerd.io -y
+sudo usermod -aG docker $USER
+</code></pre></li>
+<li>Log out of the server, and log back in to activate docker for your user</li>
+<li><p>Copy/paste this command to start the Ziti Admin Console in TLS mode:</p>
+<pre><code>docker run -d \
+--name zac \
+-p 8443:8443 \
+-v &quot;/home/ubuntu/.ziti/quickstart/$(hostname)/pki/$(hostname)-intermediate/keys/$(hostname)-server.key&quot;:/usr/src/app/server.key \
+-v &quot;/home/ubuntu/.ziti/quickstart/$(hostname)/pki/$(hostname)-intermediate/certs/$(hostname)-server.chain.pem&quot;:/usr/src/app/server.chain.pem \
+openziti/zac
+</code></pre></li>
+<li>At this point you should be able to navigate to both: <a href="https://external-dns-name:8443">https://external-dns-name:8443</a> as well as <a href="https://external-ip:8443">https://external-ip:8443</a> and see the ZAC login screen. (The TLS warnings your browser will show you are normal - it&#39;s because these steps use a self-signed certificate generated in the install process)</li>
+<li><p>Set the controller as shown:</p>
+<p><img src="img_1.png" alt="img_1.png"></p>
+</li>
+<li><p>Login with admin/admin</p>
+<p><img src="img_2.png" alt="img_2.png"></p>
+</li>
+<li><p><strong>IMPORTANT!!!</strong> Edit your profile and change the password</p>
+<p><img src="img_3.png" alt="img_3.png"></p>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/quickstart/aws.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145802.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145812.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145807.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/174/174883.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
