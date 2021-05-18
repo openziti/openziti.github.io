@@ -165,9 +165,9 @@ on that docker network.</p>
 once you&#39;re ready to do so). Take special note of the initial variables used in these commands. The ${zitinw} variable
 is expected to be set. See the Prerequisite section above:</p>
 <p>Ziti Controller:</p>
-<pre><code>docker run --name &quot;${zitinw}-controller&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --network-alias=ziti-controller --network-alias=ziti-edge-controller --rm openziti/quickstart /openziti/scripts/run-controller.sh
+<pre><code>docker run -d --name &quot;${zitinw}-controller&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --network-alias=ziti-controller --network-alias=ziti-edge-controller --rm openziti/quickstart /openziti/scripts/run-controller.sh
 </code></pre><p>Ziti Edge Router:</p>
-<pre><code>routerName=ziti-edge; docker run --name &quot;${zitinw}-${routerName}&quot; --rm -e ZITI_EDGE_ROUTER_RAWNAME=&quot;${routerName}&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --hostname &quot;${routerName}&quot; --network-alias=&quot;${routerName}&quot; --rm openziti/quickstart /openziti/scripts/run-edge-router.sh edge
+<pre><code>routerName=edge-router; docker run -d --name &quot;${zitinw}-${routerName}&quot; --rm -e ZITI_EDGE_ROUTER_RAWNAME=&quot;${routerName}&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --hostname &quot;${routerName}&quot; --network-alias=&quot;${routerName}&quot; --rm openziti/quickstart /openziti/scripts/run-edge-router.sh edge
 </code></pre></article>
           </div>
           
