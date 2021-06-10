@@ -263,6 +263,10 @@ Functions</h2></td></tr>
 <tr class="memitem:ae75440f99f9c0a7439ebf5fa18729b49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">ziti_dump</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int(*printer)(void *ctx, const char *fmt,...), void *ctx)</td></tr>
 <tr class="memdesc:ae75440f99f9c0a7439ebf5fa18729b49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>.  <a href="ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49">More...</a><br /></td></tr>
 <tr class="separator:ae75440f99f9c0a7439ebf5fa18729b49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c7985fefa0641d1597645f2aefeae60"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7c7985fefa0641d1597645f2aefeae60">ziti_get_appdata_raw</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *key)</td></tr>
+<tr class="separator:a7c7985fefa0641d1597645f2aefeae60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd895b2375239f5418cdd08b58e1d329"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#abd895b2375239f5418cdd08b58e1d329">ziti_get_appdata</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *key, void *data, int(*parse_func)(void *, const char *, size_t))</td></tr>
+<tr class="separator:abd895b2375239f5418cdd08b58e1d329"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace1cf18567f46611faa449553041e6d5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5">ziti_conn_init</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> *conn, void *data)</td></tr>
 <tr class="memdesc:ace1cf18567f46611faa449553041e6d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a connection.  <a href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5">More...</a><br /></td></tr>
 <tr class="separator:ace1cf18567f46611faa449553041e6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1506,6 +1510,74 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+
+</div>
+</div>
+<a id="abd895b2375239f5418cdd08b58e1d329"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd895b2375239f5418cdd08b58e1d329">&#9670;&nbsp;</a></span>ziti_get_appdata()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_get_appdata </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int(*)(void *, const char *, size_t)&#160;</td>
+          <td class="paramname"><em>parse_func</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7c7985fefa0641d1597645f2aefeae60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c7985fefa0641d1597645f2aefeae60">&#9670;&nbsp;</a></span>ziti_get_appdata_raw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ziti_get_appdata_raw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

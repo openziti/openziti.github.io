@@ -53,6 +53,8 @@ var ziti_8h =
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
     [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
     [ "ziti_enroll", "ziti_8h.html#a86a73cb294bab0c38a0b00497f547845", null ],
+    [ "ziti_get_appdata", "ziti_8h.html#abd895b2375239f5418cdd08b58e1d329", null ],
+    [ "ziti_get_appdata_raw", "ziti_8h.html#a7c7985fefa0641d1597645f2aefeae60", null ],
     [ "ziti_get_controller", "ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52", null ],
     [ "ziti_get_controller_version", "ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042", null ],
     [ "ziti_get_identity", "ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078", null ],
