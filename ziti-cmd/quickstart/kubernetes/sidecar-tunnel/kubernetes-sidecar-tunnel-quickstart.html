@@ -121,7 +121,9 @@ uses the Ziti Controller and Ziti Edge Router that are created in the Ziti Quick
 <p>We will create a new identity for our client, with a new AppWAN that uses the eth0.ziti.cli service.</p>
 <p>Create the Identity:</p>
 <pre><code>$ ziti edge controller create identity device tunnel-sidecar -o tunnel-sidecar.jwt
-</code></pre><p>Create the AppWAN:</p>
+</code></pre><p>Create the AppWAN and reference the service created in the Ziti Network Quickstart. We&#39;ll be using <code>eth0.ziti.cli</code>
+here but if you created <code>eth0.ziti.ui</code> in the quickstart - use that instead. Also note that in the
+tunnel-sidecar-demo.yaml:</p>
 <pre><code>$ ziti edge controller create app-wan ziti-tunnel-appwan -i tunnel-sidecar -s eth0.ziti.cli
 </code></pre><h2 id="create-a-kubernetes-secret">Create a Kubernetes Secret</h2>
 <p>The <code>ziti-tunnel</code> sidecar will access its identity by mounting a Kubernetes secret in the container.
@@ -129,7 +131,7 @@ We can mount the JWT as a secret like this:</p>
 <pre><code>$ kubectl create secret generic tunnel-sidecar.jwt --from-file=tunnel-sidecar.jwt
 </code></pre><h2 id="deploy-the-pod">Deploy the Pod</h2>
 <p>Deploy a Pod that runs a client application and <code>ziti-tunnel</code> as a sidecar container. For this
-demonstration, the client application is <code>wget</code>. Our Pod runs <code>wget</code> in a loop so we can see content
+demonstration, the client application is <code>curl</code>. Our Pod runs <code>curl</code> in a loop so we can see content
 from our Ziti service in the Pod&#39;s logs.</p>
 <p>Save the following yaml to a file named tunnel-sidecar-demo.yaml</p>
 <pre><code>apiVersion: v1
@@ -162,7 +164,7 @@ spec:
       containers:
       - image: centos
         name: testclient
-        command: [&quot;sh&quot;,&quot;-c&quot;,&quot;while true; set -x; do curl -sSLf ethzero.ziti.ui 2&gt;&amp;1; set +x; sleep 5; done&quot;]
+        command: [&quot;sh&quot;,&quot;-c&quot;,&quot;while true; set -x; do curl -sSLf eth0.ziti.cli 2&gt;&amp;1; set +x; sleep 5; done&quot;]
       - image: netfoundry/ziti-tunnel:0.5.8-2554
         name: ziti-tunnel
         env:
@@ -176,8 +178,8 @@ spec:
           mountPath: /netfoundry
         securityContext:
           capabilities:
-            add:
-              - NET_ADMIN
+          add:
+            - NET_ADMIN
       dnsPolicy: &quot;None&quot;
       dnsConfig:
         nameservers:
@@ -212,7 +214,7 @@ ziti-tunnel-sidecar-demo-749c476989-6wpfn   1/1     Running   0          42s
 54.67.121.213
 54.67.121.213
 54.67.121.213
-</code></pre><p>Notice that the <code>wget</code> client is using the DNS name that we provided in the Ziti service definition to make the
+</code></pre><p>Notice that the <code>curl</code> client is using the DNS name that we provided in the Ziti service definition to make the
 request.</p>
 </article>
           </div>
