@@ -143,7 +143,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 100Mi
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -178,7 +178,7 @@ spec:
           mountPath: /netfoundry
         securityContext:
           capabilities:
-          add:
+            add:
             - NET_ADMIN
       dnsPolicy: &quot;None&quot;
       dnsConfig:
