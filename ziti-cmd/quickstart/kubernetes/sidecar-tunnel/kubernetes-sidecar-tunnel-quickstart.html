@@ -120,15 +120,16 @@ uses the Ziti Controller and Ziti Edge Router that are created in the Ziti Quick
 <p>This guide will re-use the &quot;eth0.ziti.cli&quot; service that was created in the Ziti Network Quickstart.</p>
 <p>We will create a new identity for our client, with a new AppWAN that uses the eth0.ziti.cli service.</p>
 <p>Create the Identity:</p>
-<pre><code>$ ziti edge controller create identity device tunnel-sidecar -o tunnel-sidecar.jwt
+<pre><code>ziti edge controller create identity device tunnel-sidecar -o tunnel-sidecar.jwt
 </code></pre><p>Create the AppWAN and reference the service created in the Ziti Network Quickstart. We&#39;ll be using <code>eth0.ziti.cli</code>
 here but if you created <code>eth0.ziti.ui</code> in the quickstart - use that instead. Also note that in the
 tunnel-sidecar-demo.yaml:</p>
-<pre><code>$ ziti edge controller create app-wan ziti-tunnel-appwan -i tunnel-sidecar -s eth0.ziti.cli
+<pre><code>ziti edge controller create app-wan ziti-tunnel-appwan -i tunnel-sidecar -s eth0.ziti.cli
 </code></pre><h2 id="create-a-kubernetes-secret">Create a Kubernetes Secret</h2>
 <p>The <code>ziti-tunnel</code> sidecar will access its identity by mounting a Kubernetes secret in the container.
 We can mount the JWT as a secret like this:</p>
 <pre><code>$ kubectl create secret generic tunnel-sidecar.jwt --from-file=tunnel-sidecar.jwt
+secret/tunnel-sidecar.jwt created
 </code></pre><h2 id="deploy-the-pod">Deploy the Pod</h2>
 <p>Deploy a Pod that runs a client application and <code>ziti-tunnel</code> as a sidecar container. For this
 demonstration, the client application is <code>curl</code>. Our Pod runs <code>curl</code> in a loop so we can see content
@@ -172,7 +173,7 @@ spec:
           value: tunnel-sidecar
         volumeMounts:
         - name: tunnel-sidecar-jwt
-          mountPath: &quot;/var/run/secrets/netfoundry.io/enrollment-token&quot;
+          mountPath: &quot;/var/run/secrets/kubernetes.io/enrollment-token&quot;
           readOnly: true
         - name: ziti-tunnel-persistent-storage
           mountPath: /netfoundry
@@ -205,6 +206,8 @@ enrollment token each time the Pod is restarted!</li>
 </ol>
 <p>Once the yaml is saved, we can deploy the Pod with <code>kubectl</code></p>
 <pre><code>$ kubectl apply -f ./tunnel-sidecar-demo.yaml
+persistentvolumeclaim/tunnel-sidecar-pv-claim created
+deployment.apps/ziti-tunnel-sidecar-demo created
 </code></pre><h2 id="test-the-service">Test the Service</h2>
 <p>First we need to get the name of the Pod that Kubernetes deployed for us:</p>
 <pre><code>$ kubectl get pods
