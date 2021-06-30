@@ -123,8 +123,16 @@ operating system configuration process. This configuration tells the
 system that the specified certificates are trustworthy in the eyes of
 the operator.</p>
 <h3 id="certificates">Certificates</h3>
-<p>To get us off the ground, we need to understand what a certificate is.
-Certificates are a simple concept, but years of expansions and
+<p>Part two of this series covered keys, both public and private, but did 
+not mention certificates. It is common to hear &quot;certificate&quot; used 
+interchangeably with &quot;public key&quot; and, sometimes, &quot;private key.&quot; A 
+certificate must have the public key inside of it. Some storage formats
+allow certificates to be stored along with the matching private key. 
+One example of this is PFX files. PFX files, which are PKCS#12 archives,
+are also sometimes generically referred to as a &quot;certificates&quot;. In this 
+article &quot;certificate&quot; will always mean an x509 certificate that contains
+only the public key.</p>
+<p>Certificates are a simple concept, but years of expansions and
 extensions have added to them and can be daunting uninitiated when you
 get into the nitty-gritty details. This article will strive to sit above
 that detail. If you venture into the realm of generating certificates,
@@ -144,7 +152,6 @@ subset of information that a certificate contains:</p>
 <ul>
 <li>Subject information<ul>
 <li>A public key</li>
-<li>A private key (optionally)</li>
 <li>Distinguished Name</li>
 </ul>
 </li>
@@ -154,22 +161,6 @@ subset of information that a certificate contains:</p>
 <li>Signatures</li>
 </ul>
 <h4 id="subject-information">Subject Information</h4>
-<p>Certificates are the vehicle for all keys in some systems. Part two of
-this series covered keys, both public and private, but did not mention
-certificates. It is common to hear &quot;certificate&quot; used interchangeably
-with &quot;public key&quot; and, sometimes, &quot;private key.&quot; A certificate must have
-at least one key inside of it. Since certificates contain keys, they
-have the same capabilities as the keys they contain. Sometimes the words
-&quot;public certificate&quot; (containing only the public key) and &quot;private
-certificate&quot; (containing both public and private keys) are used for
-clarity.</p>
-<p>To some, &quot;certificate&quot; is synonymous with &quot;public certificate.&quot; Placing
-private keys inside of certificates is possible, but some may never have
-encountered or needed that capability. It is possible to have a private
-key and a public certificate as two separate files with the same effect.
-Public certificates are generated, signed, and distributed widely.
-Handling private certificates/keys is a sensitive matter - keep them
-safe!</p>
 <p>Certificates contain more than keys. The Distinguished Name (DN) are
 text fields. They are useful mainly to humans to know what/who owns a
 certificate. It is sometimes used by software as display information or
