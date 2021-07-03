@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae":[3,0,0,5,11],
 "ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8":[3,0,0,5,13],
 "ziti_8h.html#a1498d23338d4c758b45f46c3f1672a48":[3,0,0,5,39],
 "ziti_8h.html#a1744758409bf52d54e3fff89d5409583":[3,0,0,5,31],
@@ -66,10 +67,11 @@ var NAVTREEINDEX1 =
 "ziti_8h_source.html":[3,0,0,5],
 "ziti__events_8h.html":[3,0,0,6],
 "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02":[3,0,0,6,5],
-"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a16adc09a31d6f720595fb0b74a5c7c53":[3,0,0,6,5,3],
-"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a2da24187341498111ecab3925eee1c6b":[3,0,0,6,5,0],
-"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a583a27c159fe93d7a07dce85e7ddbd7f":[3,0,0,6,5,1],
-"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a614cb695e7f6f9b713ab5f10d9a60272":[3,0,0,6,5,2],
+"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a16adc09a31d6f720595fb0b74a5c7c53":[3,0,0,6,5,4],
+"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a2da24187341498111ecab3925eee1c6b":[3,0,0,6,5,1],
+"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a583a27c159fe93d7a07dce85e7ddbd7f":[3,0,0,6,5,2],
+"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a5d5d6523bfa9d78d1f9491de7424fc53":[3,0,0,6,5,0],
+"ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a614cb695e7f6f9b713ab5f10d9a60272":[3,0,0,6,5,3],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93":[3,0,0,6,4],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab":[3,0,0,6,4,1],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4":[3,0,0,6,4,0],

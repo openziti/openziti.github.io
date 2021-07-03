@@ -10,6 +10,7 @@ var ziti__events_8h =
       [ "ZitiServiceEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0", null ]
     ] ],
     [ "ziti_router_status", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02", [
+      [ "EdgeRouterAdded", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a5d5d6523bfa9d78d1f9491de7424fc53", null ],
       [ "EdgeRouterConnected", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a2da24187341498111ecab3925eee1c6b", null ],
       [ "EdgeRouterDisconnected", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a583a27c159fe93d7a07dce85e7ddbd7f", null ],
       [ "EdgeRouterRemoved", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a614cb695e7f6f9b713ab5f10d9a60272", null ],

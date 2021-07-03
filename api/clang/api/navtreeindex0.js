@@ -237,9 +237,10 @@ var NAVTREEINDEX0 =
 "structziti__options.html#ae1caa81b77887af51189c6edadbfefab":[2,0,12,2],
 "structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c":[2,0,12,0],
 "structziti__router__event.html":[2,0,13],
-"structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[2,0,13,2],
-"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[2,0,13,0],
-"structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738":[2,0,13,1],
+"structziti__router__event.html#a307653022b243b7f96a81b5694466cee":[2,0,13,0],
+"structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[2,0,13,3],
+"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[2,0,13,1],
+"structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738":[2,0,13,2],
 "structziti__service__event.html":[2,0,14],
 "structziti__service__event.html#a3492a9c69ddf8bf08ee83224cd46bb62":[2,0,14,0],
 "structziti__service__event.html#a7bc968da316653eae833971b3b38bced":[2,0,14,2],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3":[3,0,0,5,7],
 "ziti_8h.html#a06b4d01871a739519c265629cd90aa4c":[3,0,0,5,20],
 "ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b":[3,0,0,5,45],
-"ziti_8h.html#a09b75586a74376352a25de37b835a74d":[3,0,0,5,8],
-"ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae":[3,0,0,5,11]
+"ziti_8h.html#a09b75586a74376352a25de37b835a74d":[3,0,0,5,8]
 };
