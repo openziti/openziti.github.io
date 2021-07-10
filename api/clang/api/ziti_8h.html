@@ -168,15 +168,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aecab88391d31690f11138994d7a096ad"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">ziti_pq_process_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, const char *path, <a class="el" href="ziti_8h.html#a1744758409bf52d54e3fff89d5409583">ziti_pr_process_cb</a> response_cb)</td></tr>
 <tr class="memdesc:aecab88391d31690f11138994d7a096ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture Query for process callback.  <a href="ziti_8h.html#aecab88391d31690f11138994d7a096ad">More...</a><br /></td></tr>
 <tr class="separator:aecab88391d31690f11138994d7a096ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ec65e40a667770277c5c176d68d0cae"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae">ziti_ar_mfa_status_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, int status, void *ctx)</td></tr>
-<tr class="memdesc:a0ec65e40a667770277c5c176d68d0cae"><td class="mdescLeft">&#160;</td><td class="mdescRight">MFA authentication status callback.  <a href="ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae">More...</a><br /></td></tr>
-<tr class="separator:a0ec65e40a667770277c5c176d68d0cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26d6b225cb057e193daaea9853504549"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a26d6b225cb057e193daaea9853504549">ziti_ar_mfa_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, char *code, <a class="el" href="ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae">ziti_ar_mfa_status_cb</a> ar_mfa_status_cb, void *ctx)</td></tr>
-<tr class="memdesc:a26d6b225cb057e193daaea9853504549"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback to supply the Ziti SDK with an MFA TOTP/recovery token for authentication.  <a href="ziti_8h.html#a26d6b225cb057e193daaea9853504549">More...</a><br /></td></tr>
-<tr class="separator:a26d6b225cb057e193daaea9853504549"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab08e0acfb628788b427c67e631d0dcba"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab08e0acfb628788b427c67e631d0dcba">ziti_aq_mfa_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, ziti_auth_query_mfa *aq_mfa, <a class="el" href="ziti_8h.html#a26d6b225cb057e193daaea9853504549">ziti_ar_mfa_cb</a> response_cb)</td></tr>
-<tr class="memdesc:ab08e0acfb628788b427c67e631d0dcba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auth Query for MFA authentication.  <a href="ziti_8h.html#ab08e0acfb628788b427c67e631d0dcba">More...</a><br /></td></tr>
-<tr class="separator:ab08e0acfb628788b427c67e631d0dcba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af10680297946038b65fe9af5057edc13"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af10680297946038b65fe9af5057edc13">ziti_event_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const <a class="el" href="structziti__event__t.html">ziti_event_t</a> *event)</td></tr>
 <tr class="memdesc:af10680297946038b65fe9af5057edc13"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ziti Event callback.  <a href="ziti_8h.html#af10680297946038b65fe9af5057edc13">More...</a><br /></td></tr>
 <tr class="separator:af10680297946038b65fe9af5057edc13"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -322,9 +313,12 @@ Functions</h2></td></tr>
 <tr class="memitem:af5964f15cd479345e9732c8a9adf1a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">ziti_mfa_new_recovery_codes</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a> new_cb, void *ctx)</td></tr>
 <tr class="memdesc:af5964f15cd479345e9732c8a9adf1a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.  <a href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">More...</a><br /></td></tr>
 <tr class="separator:af5964f15cd479345e9732c8a9adf1a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a519727321f824c6e6e60efc82a9eff49"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49">ziti_mfa_abort</a> (void *mfa_ctx)</td></tr>
-<tr class="memdesc:a519727321f824c6e6e60efc82a9eff49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aborts an MFA authentication and frees the associated resources.  <a href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49">More...</a><br /></td></tr>
-<tr class="separator:a519727321f824c6e6e60efc82a9eff49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c39888a1c8d89abbc3e253c1df14972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a8c39888a1c8d89abbc3e253c1df14972">ziti_mfa_auth</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *code, <a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a> auth_cb, void *ctx)</td></tr>
+<tr class="memdesc:a8c39888a1c8d89abbc3e253c1df14972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to submit an MFA code for evaluation.  <a href="ziti_8h.html#a8c39888a1c8d89abbc3e253c1df14972">More...</a><br /></td></tr>
+<tr class="separator:a8c39888a1c8d89abbc3e253c1df14972"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9966132725e19a2a6feb67e36a3edc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84">ziti_endpoint_state_change</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, bool woken, bool unlocked)</td></tr>
+<tr class="memdesc:a9966132725e19a2a6feb67e36a3edc84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alerts that the host running the <code>ziti_context</code> has undergone a state change.  <a href="ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84">More...</a><br /></td></tr>
+<tr class="separator:a9966132725e19a2a6feb67e36a3edc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the macros, functions, typedefs and constants required to interface with a Ziti Network. </p>
@@ -378,58 +372,6 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Typedef Documentation</h2>
-<a id="ab08e0acfb628788b427c67e631d0dcba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab08e0acfb628788b427c67e631d0dcba">&#9670;&nbsp;</a></span>ziti_aq_mfa_cb</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* ziti_aq_mfa_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, ziti_auth_query_mfa *aq_mfa, <a class="el" href="ziti_8h.html#a26d6b225cb057e193daaea9853504549">ziti_ar_mfa_cb</a> response_cb)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Auth Query for MFA authentication. </p>
-<p>This callback is invoked by the Ziti SDK when an authenticating identity requires MFA. The callback is responsible for inspecting the authentication query, interacting with the MFA service, user, and invoking the provided done callback. </p>
-
-</div>
-</div>
-<a id="a26d6b225cb057e193daaea9853504549"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26d6b225cb057e193daaea9853504549">&#9670;&nbsp;</a></span>ziti_ar_mfa_cb</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* ziti_ar_mfa_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, char *code, <a class="el" href="ziti_8h.html#a0ec65e40a667770277c5c176d68d0cae">ziti_ar_mfa_status_cb</a> ar_mfa_status_cb, void *ctx)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback to supply the Ziti SDK with an MFA TOTP/recovery token for authentication. </p>
-<p>The Ziti SDK caller should receive this call back when MFA authentication is required. The ziti_aq_mfa_cb that is registered via <code><a class="el" href="structziti__options.html#a5375fcffbae1a3b2b99b8aaceb3378e3">ziti_options.aq_mfa_cb</a></code> will be invoked and receive this <code>ziti_ar_mfa_cb</code> as a callback to supply the user entered token. Additionally, when <code>ziti_ar_mfa_cb</code> is invoked a <code>ziti_ar_mfa_status_cb</code> may be invoked to receive the result of the code submission. </p>
-
-</div>
-</div>
-<a id="a0ec65e40a667770277c5c176d68d0cae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0ec65e40a667770277c5c176d68d0cae">&#9670;&nbsp;</a></span>ziti_ar_mfa_status_cb</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* ziti_ar_mfa_status_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void *mfa_ctx, int status, void *ctx)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>MFA authentication status callback. </p>
-<p>This callback is invoked after the ziti_ar_mfa_cb is invoked during MFA authentication. It should be used to observe the result of the MFA submission and to prompt the user to try again or give up.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f" title="Checks availability of the service for the given edge context.">ziti_service_available()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
-
-</div>
-</div>
 <a id="a65a3568f4153563f9418626a59adefdb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65a3568f4153563f9418626a59adefdb">&#9670;&nbsp;</a></span>ziti_client_cb</h2>
 
@@ -1460,6 +1402,52 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9966132725e19a2a6feb67e36a3edc84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9966132725e19a2a6feb67e36a3edc84">&#9670;&nbsp;</a></span>ziti_endpoint_state_change()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ziti_endpoint_state_change </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>woken</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>unlocked</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Alerts that the host running the <code>ziti_context</code> has undergone a state change. </p>
+<p>Notifies that the host has undergone a state change: either woke or unlocked. Being "woke" is defined as the screen dimming/shutting off Being "unlocked" is defined as having the device unlocked via a security mechanism.</p>
+<p>At one time, a device may be "woken" and "unlocked".</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
+    <tr><td class="paramname">woken</td><td>whether the host device has been woke from sleep/hibernation </td></tr>
+    <tr><td class="paramname">unlocked</td><td>whether the host device has been unlocked </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a86a73cb294bab0c38a0b00497f547845"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86a73cb294bab0c38a0b00497f547845">&#9670;&nbsp;</a></span>ziti_enroll()</h2>
 
@@ -1933,29 +1921,53 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a519727321f824c6e6e60efc82a9eff49"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a519727321f824c6e6e60efc82a9eff49">&#9670;&nbsp;</a></span>ziti_mfa_abort()</h2>
+<a id="a8c39888a1c8d89abbc3e253c1df14972"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c39888a1c8d89abbc3e253c1df14972">&#9670;&nbsp;</a></span>ziti_mfa_auth()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ziti_mfa_abort </td>
+          <td class="memname">void ziti_mfa_auth </td>
           <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>mfa_ctx</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>code</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a>&#160;</td>
+          <td class="paramname"><em>auth_cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Aborts an MFA authentication and frees the associated resources. </p>
-<p>When an MFA authentication query is being processed it will have an <code>mfa_ctx</code> associated with it. The <code>mfa_ctx</code> will remain allocated till it provides a valid authentication response (i.e. the status callback receives no error) or <code><a class="el" href="ziti_8h.html#a519727321f824c6e6e60efc82a9eff49" title="Aborts an MFA authentication and frees the associated resources.">ziti_mfa_abort()</a></code> is called.</p>
-<p>If no status callback is defined for MFA processing, the MFA resources will be automatically freed on error.</p>
-<p>On successful MFA authentication response, the MFA resources will be automatically freed and calling this function should not occur.</p>
+<p>Attempt to submit an MFA code for evaluation. </p>
+<p>Attempts submit an MFA code for evaluation. This should be done in response to the <code>ZitiMfaAuthEvent</code> event or when posture check timeouts would occur for a service.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success via the <code>ziti_mfa_cb</code> provided.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mfa_ctx</td><td>the mfa_ctx provided during MFA authentication query processing </td></tr>
+    <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
+    <tr><td class="paramname">code</td><td>a TOTP code </td></tr>
+    <tr><td class="paramname">auth_cb</td><td>callback to receive the result status </td></tr>
+    <tr><td class="paramname">ctx</td><td>additional context to be passed into the callback </td></tr>
   </table>
   </dd>
 </dl>

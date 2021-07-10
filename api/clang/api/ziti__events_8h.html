@@ -102,6 +102,9 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__service__event.html">ziti_service_event</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ziti Service Status event.  <a href="structziti__service__event.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__mfa__auth__event.html">ziti_mfa_auth_event</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ziti Authentication Query MFA Event.  <a href="structziti__mfa__auth__event.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__event__t.html">ziti_event_t</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Object passed to <code><a class="el" href="structziti__options.html#a894d032cee845c5caf83fcb263e8d84f" title="callback invoked is response to subscribed events.">ziti_options.event_cb</a></code>.  <a href="structziti__event__t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,7 +113,8 @@ Data Structures</h2></td></tr>
 Enumerations</h2></td></tr>
 <tr class="memitem:adf8a71a9a6f774618d0079c74778fd93"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93">ziti_event_type</a> { <a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4">ZitiContextEvent</a> = 1, 
 <a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab">ZitiRouterEvent</a> = 1 &lt;&lt; 1, 
-<a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0">ZitiServiceEvent</a> = 1 &lt;&lt; 2
+<a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0">ZitiServiceEvent</a> = 1 &lt;&lt; 2, 
+<a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a6419d2ac859a3d2f156a6db12c1c4a52">ZitiMfaAuthEvent</a> = 1 &lt;&lt; 3
  }</td></tr>
 <tr class="memdesc:adf8a71a9a6f774618d0079c74778fd93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ziti Event Types.  <a href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93">More...</a><br /></td></tr>
 <tr class="separator:adf8a71a9a6f774618d0079c74778fd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -147,6 +151,7 @@ Enumerations</h2></td></tr>
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4"></a>ZitiContextEvent&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab"></a>ZitiRouterEvent&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0"></a>ZitiServiceEvent&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adf8a71a9a6f774618d0079c74778fd93a6419d2ac859a3d2f156a6db12c1c4a52"></a>ZitiMfaAuthEvent&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>

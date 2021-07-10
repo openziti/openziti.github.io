@@ -1,7 +1,6 @@
 var structziti__options =
 [
     [ "app_ctx", "structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c", null ],
-    [ "aq_mfa_cb", "structziti__options.html#a5375fcffbae1a3b2b99b8aaceb3378e3", null ],
     [ "config", "structziti__options.html#ae1caa81b77887af51189c6edadbfefab", null ],
     [ "config_types", "structziti__options.html#a66a00043c7c2fcdda4a2b430bf5d8205", null ],
     [ "controller", "structziti__options.html#a337ceb539db3ee60c64ae5e3918fba69", null ],
