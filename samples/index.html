@@ -110,112 +110,11 @@
 </ul>
 <section id="tabpanel_prvbZ2DWOr_clang" role="tabpanel" data-tab="clang">
 <p>C example is available here: <a href="https://github.com/nf-dev/ziti-sdk-c/tree/master/programs/sample_wttr/">https://github.com/nf-dev/ziti-sdk-c/tree/master/programs/sample_wttr/</a></p>
-<pre><code class="lang-csharp" name="wttr.in">/*
-Copyright 2019-2020 NetFoundry, Inc.
-
-Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-*/
-
-#include &lt;ziti/ziti.h&gt;
-
-#include &lt;string.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;stdio.h&gt;
-#include &lt;uv.h&gt;
-
-#define DIE(v) do { \
-int code = (v);\
-if (code != ZITI_OK) {\
-fprintf(stderr, &quot;ERROR: &quot; #v &quot; =&gt; %s\n&quot;, ziti_errorstr(code));\
-exit(code);\
-}} while(0)
-
-static size_t total;
-static ziti_context ziti;
-
-ssize_t on_data(ziti_connection c, uint8_t *buf, ssize_t len) {
-    if (len == ZITI_EOF) {
-
-        printf(&quot;request completed: %s\n&quot;, ziti_errorstr(len));
-        ziti_close(c, NULL);
-        ziti_shutdown(ziti);
-
-    }
-    else if (len &lt; 0) {
-        fprintf(stderr, &quot;unexpected error: %s\n&quot;, ziti_errorstr(len));
-        ziti_close(c, NULL);
-        ziti_shutdown(ziti);
-    }
-    else {
-        total += len;
-        printf(&quot;%.*s&quot;,  (int)len, buf);
-    }
-    return len;
-}
-
-static void on_write(ziti_connection conn, ssize_t status, void *ctx) {
-    if (status &lt; 0) {
-        fprintf(stderr, &quot;request failed to submit status[%zd]: %s\n&quot;, status, ziti_errorstr((int) status));
-    }
-    else {
-        printf(&quot;request success: %zd bytes sent\n&quot;, status);
-    }
-}
-
-void on_connect(ziti_connection conn, int status) {
-    DIE(status);
-
-    printf(&quot;sending HTTP request\n&quot;);
-
-    uint8_t *req = &quot;GET /Rochester HTTP/1.0\r\n&quot;
-                   &quot;Accept: */*\r\n&quot;
-                   &quot;Connection: close\r\n&quot;
-                   &quot;Host: wttr.in\r\n&quot;
-                   &quot;User-Agent: curl/7.59.0\r\n&quot;
-                   &quot;\r\n&quot;;
-
-    DIE(ziti_write(conn, req, strlen(req), on_write, NULL));
-}
-
-void on_ziti_init(ziti_context ztx, const ziti_event_t *ev) {
-    DIE(ev-&gt;event.ctx.ctrl_status);
-    ziti = ztx;
-
-    ziti_connection conn;
-    DIE(ziti_conn_init(ziti, &amp;conn, NULL));
-    DIE(ziti_dial(conn, &quot;demo-weather&quot;, on_connect, on_data));
-}
-
-int main(int argc, char** argv) {
-#if _WIN32
-    //changes the output to UTF-8 so that the windows output looks correct and not all jumbly
-    SetConsoleOutputCP(65001);
-#endif
-    uv_loop_t *loop = uv_default_loop();
-
-    DIE(ziti_init(argv[1], loop, on_ziti_init, ZitiContextEvent, NULL));
-
-    // loop will finish after the request is complete and ziti_shutdown is called
-    uv_run(loop, UV_RUN_DEFAULT);
-
-    printf(&quot;========================\n&quot;);
-
-    ziti_shutdown(ziti);
-}
-</code></pre></section>
+<!-- Can not find reference ../ziti-sdk-c/programs/sample_wttr/sample_wttr.c -->
+</section>
 <section id="tabpanel_prvbZ2DWOr_csharp" role="tabpanel" data-tab="csharp" aria-hidden="true" hidden="hidden">
 <p>C# Example is available here: <a href="https://github.com/nf-dev/ziti-sdk-csharp/tree/initial_commit/Ziti.Core.Console">https://github.com/nf-dev/ziti-sdk-csharp/tree/initial_commit/Ziti.Core.Console</a></p>
-<!-- Can not find reference ../ziti-sdk-csharp/Ziti.Core.Console/Program.cs -->
+<!-- Can not find reference ../ziti-sdk-csharp/Samples/WeatherStream.cs -->
 </section>
 </div>
 </article>
