@@ -427,6 +427,17 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/ssh/ssh-overview.svg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/ssh/ssh-overview.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "articles/zitification/ssh/ssh-prereqs.md",
       "output": {
@@ -444,7 +455,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/ssh/zitifying-ssh.html",
-          "hash": "vBhaE5mNkev4mzBiiBD3qA=="
+          "hash": "6H/msmvXqUJd6u2vKG2f/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/ssh/zssh-overview.svg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/ssh/zssh-overview.svg"
         }
       },
       "is_incremental": false,

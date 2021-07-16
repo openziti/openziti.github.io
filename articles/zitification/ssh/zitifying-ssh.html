@@ -125,6 +125,8 @@ dark&quot;. The only way to
 that <a href="https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>. Cool right? Let&#39;s see how
 we did it and how you can do the same thing using
 a <a href="https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>.</p>
+<p>Overview of SSH - notice how port 22 is open to inbound connections:</p>
+<p><img src="ssh-overview.svg" alt="ssh-overview.svg"></p>
 <hr>
 
 <h2 id="how-its-done">How It&#39;s Done</h2>
@@ -144,6 +146,8 @@ endpoints to use this service</li>
 <li>Harden <code>sshd</code> further by removing port 22 from any internet-based firewall configuration (for example, from within the
 security-groups wizard in AWS) or by forcing <code>sshd</code> to only listen on <code>localhost/127.0.0.1</code></li>
 </ul>
+<p>Overview of ZSSH - notice port 22 is no longer open to inbound connections:</p>
+<p><img src="zssh-overview.svg" alt="zssh-overview.svg"></p>
 <p>After performing these steps you&#39;ll have an <code>sshd</code> server that is dark to the internet. Accessing the server via <code>ssh</code>
 must now occur using the Ziti Network. Since the service is no longer accessible directly through a network, it is no
 longer susceptible to the types of attacks mentioned previously!</p>
