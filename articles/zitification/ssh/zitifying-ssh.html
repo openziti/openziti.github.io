@@ -200,7 +200,7 @@ without any parameters. The <code>-i/--SshKeyPath</code> flag is congruent to th
 your key to the <code>ssh</code> client. Under the hood of <code>zssh</code> is a full-fledged <code>ssh</code> client that works similarly to how
 <code>ssh</code> does. If your <code>~/.ssh/id_rsa</code> file is in the <code>authorized_keys</code> of the remote machine, then you won&#39;t need to
 specify the <code>-i/</code> flag (as I didn&#39;t in my example). Using <code>zssh</code> requires the use of a public/private key in order for
-the <code>zssh</code> client to connect to the remote machine. At this</p>
+the <code>zssh</code> client to connect to the remote machine.</p>
 <p>The <code>-c/--ZConfig</code> flag controls access to the network. A configuration file must be supplied to use
 <code>zssh</code> but does not need to be supplied as part of the command. By default, <code>zssh</code> will look at your home directory in a
 folder named <code>.ziti</code> for a file named <code>zssh.json</code>. In bash this is would be the equivalent of <code>$HOME</code>. In Windows this
