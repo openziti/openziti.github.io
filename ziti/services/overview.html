@@ -132,7 +132,7 @@ resource that could be accessed by a client on a traditional network. </p>
 <li>Similarly, traffic can be encrypted between the client and the proxy, but traffic between the proxy and the application will not be covered under the Ziti end-to-end encryption. It may still be encrypted, if the client and server establish their own encryption at the discretion of the client and server implementors. </li>
 <li>Via the proxy, the application is still represented by an identity and thus participates in policies.</li>
 </ol>
-<p>Services which uses proxes for server side termination may require extra configuration, so that the proxing application knows how to connect to the server application. Service configurations are discussed more below.</p>
+<p>Services which use proxies for server side termination may require extra configuration, so that the proxing application knows how to connect to the server application. Service configurations are discussed more below.</p>
 <h3 id="ziti-router-terminated-services">Ziti Router Terminated Services</h3>
 <p>Routers also have the ability to connect to applications providing services. This approach has its own advantages and disadvantages.</p>
 <ol>
@@ -212,7 +212,7 @@ resource that could be accessed by a client on a traditional network. </p>
 <li>The strategy returns the terminator that should be used</li>
 <li>A new session is created using that path. </li>
 </ol>
-<p>Strategies will often work by adjusting terminator costs. The selection algorithm the simply returns the lowest cost option presented by smart routing. </p>
+<p>Strategies will often work by adjusting terminator costs. The selection algorithm then simply returns the lowest cost option presented by smart routing. </p>
 <h4 id="costs">Costs</h4>
 <p>There are a number of elements which feed the smart routing cost algorithm.</p>
 <h5 id="route-cost">Route Cost</h5>
@@ -225,7 +225,7 @@ resource that could be accessed by a client on a traditional network. </p>
 <h5 id="dynamic-cost">Dynamic Cost</h5>
 <p>Each terminator also has a dynamic cost that will move a terminator up and down relative to its precedence. This cost can be driven by stratagies or by external components. A strategy might use number of active of open sessions or dial successes and failures to drive the dynamic cost. </p>
 <h5 id="effective-cost">Effective Cost</h5>
-<p>Each terminator has an associated precedence and dynamic cost. This can be reduced to a single cost. The cost algorithm ensures terminators at difference precedence levels do not overlap. So a terminator which is marked failed, with dynamic cost 0, will always have a higher calculated cost than a terminator with default precedence and maximum value for dynamic cost. </p>
+<p>Each terminator has an associated precedence and dynamic cost. This can be reduced to a single cost. The cost algorithm ensures terminators at different precedence levels do not overlap. So a terminator which is marked failed, with dynamic cost 0, will always have a higher calculated cost than a terminator with default precedence and maximum value for dynamic cost. </p>
 <h4 id="strategies">Strategies</h4>
 <p>The fabric currently provides four strategy implementions.</p>
 <h5 id="smartrouting"><code>smartrouting</code></h5>
