@@ -152,7 +152,7 @@ this example)</li>
 <li>Create and enroll two Ziti Endpoints (one for our <code>ssh</code> server, one for the client)<ul>
 <li>the <code>sshd</code> server will run <code>ziti-tunnel</code> for this demonstration. Conveniently it will run on the same machine I
 used to setup the <a href="https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>.</li>
-<li>the client in this case will run <code>zssh</code> from my local machine and I&#39;ll <code>zssh</code> to the other endpoint</li>
+<li>the client will run <code>zssh</code> from my local machine, and I&#39;ll <code>zssh</code> to the other endpoint</li>
 </ul>
 </li>
 <li>Create the <a href="https://openziti.github.io/ziti/services/overview.html">Ziti Service</a> we&#39;ll use and authorize the two
@@ -171,13 +171,13 @@ longer susceptible to the types of attacks mentioned previously!</p>
 <h2 id="zssh-in-action">Zssh in Action</h2>
 <p>Once the prerequisites are satisfied, we can see <code>zssh</code> in action. Simply download the binary for your platform:</p>
 <ul>
-<li><a href="https://github.com/openziti-incubator/zssh/releases/download/latest-tag/zssh-linux-amd64">linux</a></li>
-<li><a href="https://github.com/openziti-incubator/zssh/releases/download/latest-tag/zssh-windows-amd64.exe">windows</a></li>
-<li><a href="https://github.com/openziti-incubator/zssh/releases/download/latest-tag/zssh-macos-amd64">MacOs</a></li>
+<li><a href="https://github.com/openziti-incubator/zssh/releases/latest/download/zssh-linux-amd64">linux</a></li>
+<li><a href="https://github.com/openziti-incubator/zssh/releases/latest/download/zssh-windows-amd64.exe">windows</a></li>
+<li><a href="https://github.com/openziti-incubator/zssh/releases/latest/download/zssh-macos-amd64">MacOs</a></li>
 </ul>
 <p>Once you have the executable download, make sure it is named <code>zssh</code> and for simplicity&#39;s sake we&#39;ll assume it&#39;s on the
 path. A goal for <code>zssh</code> is to make the usage of the command very similar to the usage of <code>ssh</code>. Anyone familiar
-with <code>ssh</code> should be able to pick up <code>zssh</code> easily. As with most tooling executing the binary with no arguments will
+with <code>ssh</code> should be able to pick up <code>zssh</code> easily. As with most tooling, executing the binary with no arguments will
 display the expected usage. The general format when using <code>zssh</code> will be similar to that
 of <code>ssh</code>: <code>zssh &lt;remoteUsername&gt;@&lt;targetIdentity&gt;</code></p>
 <p>Below you can see me <code>zssh</code> from my local machine to the AWS machine secured by <code>ziti-tunnel</code>:</p>
@@ -192,10 +192,12 @@ ubuntu@ip-172-31-27-154:~$
 <p>We know that <code>zssh</code> requires access to
 a <a href="https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a> but it is not clear from the
 example above is where <code>zzsh</code> found the credentials required to access the network. <code>zssh</code> supports three basic flags:</p>
-<pre><code>-i, --SshKeyPath string   Path to ssh key. default: $HOME/.ssh/id_rsa
--c, --ZConfig string      Path to ziti config file. default: $HOME/.ziti/zssh.json
--d, --debug               pass to enable additional debug information
-</code></pre><p>What you see above is exactly the output <code>zssh</code> provides should you pass the <code>-h/--help</code> flag or execute <code>zssh</code>
+<p>  -i, --SshKeyPath string   Path to ssh key. default: $HOME/.ssh/id_rsa
+  -c, --ZConfig string      Path to ziti config file. default: $HOME/.ziti/zssh.json
+  -d, --debug               pass to enable additional debug information
+  -h, --help                help for this command
+  -s, --service string      service name. default: zssh (default &quot;zssh&quot;)</p>
+<p>What you see above is exactly the output <code>zssh</code> provides should you pass the <code>-h/--help</code> flag or execute <code>zssh</code>
 without any parameters. The <code>-i/--SshKeyPath</code> flag is congruent to the <code>-i</code> flag for <code>ssh</code>. You would use it to supply
 your key to the <code>ssh</code> client. Under the hood of <code>zssh</code> is a full-fledged <code>ssh</code> client that works similarly to how
 <code>ssh</code> does. If your <code>~/.ssh/id_rsa</code> file is in the <code>authorized_keys</code> of the remote machine, then you won&#39;t need to
@@ -206,6 +208,7 @@ the <code>zssh</code> client to connect to the remote machine.</p>
 folder named <code>.ziti</code> for a file named <code>zssh.json</code>. In bash this is would be the equivalent of <code>$HOME</code>. In Windows this
 is the equivalent the environment variable named <code>USERPROFILE</code>. You do not need to supply this flag if a file exists at
 the default location. You can specify this flag to use <code>zssh</code> with other networks.</p>
+<p>The <code>-s/--service</code> flag is for passing in a different service name other than &quot;zssh&quot;. By defualt, the service name will be &quot;zssh&quot;, but if you would like to access a different service use the <code>-s</code> flag followed by the service name.</p>
 <p>The <code>-d/--debug</code> flag outputs additional information to assist you with debugging. For example:</p>
 <pre><code>$ ./zssh ubuntu@ziti-tunnel-aws -d
 INFO[0000]     sshKeyPath set to: /home/myUser/.ssh/id_rsa
@@ -226,6 +229,9 @@ INFO[0000] connection to edge router using token 909dfb4f-fa83-4f73-af8e-ed251bc
 connected.
 cd@clint-linux-vm ~
 </code></pre><p>Hopefully this post has been helpful and insightful. Zitifying an application is <em>POWERFUL</em>!!!!</p>
+<p>The next post in this series will cover how we extended the same code we used for <code>zssh</code> and 
+<a href="zitifying-scp.html">zitified scp</a>.</p>
+<p>Have a look at the code over at github: <a href="https://github.com/openziti-incubator/zssh/tree/main/zssh/zssh">https://github.com/openziti-incubator/zssh/tree/main/zssh/zssh</a></p>
 </article>
           </div>
           

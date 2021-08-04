@@ -408,7 +408,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "KS0JlrzzcjCDNfIsBXAQlg=="
+          "hash": "VaHrDZj5yuCKzgcQNODzkQ=="
         }
       },
       "is_incremental": false,
@@ -420,7 +420,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.html",
-          "hash": "/Du0X619SUtqCeoAnyjzHg=="
+          "hash": "QvolYiZ1vFcrL9wz0RPWRg=="
         }
       },
       "is_incremental": false,
@@ -451,11 +451,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/zitification/ssh/zitifying-scp.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/ssh/zitifying-scp.html",
+          "hash": "/BgRju8yPlhZIluywx0DFw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/zitification/ssh/zitifying-ssh.md",
       "output": {
         ".html": {
           "relative_path": "articles/zitification/ssh/zitifying-ssh.html",
-          "hash": "ZtmoO3tTKwifOUNeVwfJ7g=="
+          "hash": "yM84rgusQ+LtkATcgaPvKQ=="
         }
       },
       "is_incremental": false,
@@ -1864,7 +1876,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 89,
+          "total_file_count": 90,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
