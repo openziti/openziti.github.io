@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>EventType Enumeration Reference</title>
+    <title>ZitiRunloop Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/EventType" class="dashAnchor"></a>
-    <a title="EventType Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/ZitiRunloop" class="dashAnchor"></a>
+    <a title="ZitiRunloop Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html"> Docs</a></p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../../index.html"> Reference</a>
         <img id="carat" src="../../img/carat.png" />
-        EventType Enumeration Reference
+        ZitiRunloop Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -152,16 +152,17 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>EventType</h1>
+            <h1>ZitiRunloop</h1>
               <div class="declaration">
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">enum</span> <span class="kt">EventType</span> <span class="p">:</span> <span class="kt">UInt32</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiRunloop</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Helper class to manage private loop constructs. An object of this class can be used when holding a shared instane of the loop to be used among
+multiple identities</p>
 
           </section>
           <section class="section task-group-section">
@@ -170,9 +171,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti9ZitiEventC0C4TypeO7InvalidyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/Invalid" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC0C4TypeO7InvalidyA2EmF">Invalid</a>
+                    <a name="/s:5CZiti4ZitiC0B7RunloopCAEycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC0B7RunloopCAEycfc">init()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -187,115 +188,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Invalid</span> <span class="o">=</span> <span class="mh">0x0</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti9ZitiEventC0C4TypeO7ContextyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/Context" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC0C4TypeO7ContextyA2EmF">Context</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Context</span> <span class="o">=</span> <span class="mh">0x01</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti9ZitiEventC0C4TypeO6RouteryA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/Router" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC0C4TypeO6RouteryA2EmF">Router</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Router</span> <span class="o">=</span> <span class="mh">0x02</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti9ZitiEventC0C4TypeO7ServiceyA2EmF"></a>
-                    <a name="//apple_ref/swift/Element/Service" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC0C4TypeO7ServiceyA2EmF">Service</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Service</span> <span class="o">=</span> <span class="mh">0x04</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:5CZiti9ZitiEventC0C4TypeO5debugSSvp"></a>
-                    <a name="//apple_ref/swift/Property/debug" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC0C4TypeO5debugSSvp">debug</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debug</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

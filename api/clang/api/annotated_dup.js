@@ -10,7 +10,6 @@ var annotated_dup =
     [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],
     [ "ziti_enroll_opts", "structziti__enroll__opts.html", "structziti__enroll__opts" ],
     [ "ziti_event_t", "structziti__event__t.html", "structziti__event__t" ],
-    [ "ziti_init_req", "structziti__init__req.html", "structziti__init__req" ],
     [ "ziti_listen_opts", "structziti__listen__opts.html", "structziti__listen__opts" ],
     [ "ziti_mfa_auth_event", "structziti__mfa__auth__event.html", "structziti__mfa__auth__event" ],
     [ "ziti_options", "structziti__options.html", "structziti__options" ],

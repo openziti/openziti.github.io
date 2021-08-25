@@ -42,6 +42,9 @@
                 <a href="../Classes/Ziti.html">Ziti</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/Ziti/ZitiRunloop.html">– ZitiRunloop</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/ZitiClaims.html">ZitiClaims</a>
               </li>
               <li class="nav-group-task">
@@ -201,7 +204,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ztx</span><span class="p">:</span> <span class="n">ziti_context</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">ztx</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -303,76 +306,6 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti4ZitiC15ServiceCallbacka"></a>
-                    <a name="//apple_ref/swift/Alias/ServiceCallback" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti4ZitiC15ServiceCallbacka">ServiceCallback</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Type used for closure called when a call to <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF">serviceAvailable(_:_:)</a></code> is made</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ServiceCallback</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">ztx</span><span class="p">:</span> <span class="n">ziti_context</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">svc</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">ziti_service</span><span class="o">&gt;</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>ztx</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Ziti context</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>svc</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the <code>ziti-sdk-c</code>&lsquo;s <code>ziti_service</code> that has changed, or nil on error condition</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>status</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>ZITI_OK, ZITI_SERVICE_UNAVAILABLE, or errorCode on nil <code>ziti_service</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:5CZiti4ZitiC15PerformCallbacka"></a>
                     <a name="//apple_ref/swift/Alias/PerformCallback" class="dashAnchor"></a>
                     <a class="token" href="#/s:5CZiti4ZitiC15PerformCallbacka">PerformCallback</a>
@@ -443,6 +376,141 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>number of characters printed</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC7ZITI_OKSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/ZITI_OK" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC7ZITI_OKSivpZ">ZITI_OK</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ziti constant indicating OK status from Ziti C SDK call</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ZITI_OK</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC24ZITI_SERVICE_UNAVAILABLESivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/ZITI_SERVICE_UNAVAILABLE" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC24ZITI_SERVICE_UNAVAILABLESivpZ">ZITI_SERVICE_UNAVAILABLE</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ziti constant indication service is unavailable from Ziti C SDK call</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ZITI_SERVICE_UNAVAILABLE</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC13ZITI_CAN_DIALSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/ZITI_CAN_DIAL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC13ZITI_CAN_DIALSivpZ">ZITI_CAN_DIAL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ziti constant indicating an indentity is allowed to dial a particular service</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ZITI_CAN_DIAL</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC13ZITI_CAN_BINDSivpZ"></a>
+                    <a name="//apple_ref/swift/Variable/ZITI_CAN_BIND" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC13ZITI_CAN_BINDSivpZ">ZITI_CAN_BIND</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ziti constant indicating an indentity is allowed to bind a particular service</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">ZITI_CAN_BIND</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC15zitiErrorString6statusSSs5Int32V_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/zitiErrorString(status:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC15zitiErrorString6statusSSs5Int32V_tFZ">zitiErrorString(status:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience function to convert Ziti error status to String</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">zitiErrorString</span><span class="p">(</span><span class="nv">status</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -650,9 +718,9 @@ to access the Keychain for stored identity information (keys and identity certif
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti4ZitiC3zid4loopAcA0B8IdentityC_SpySo03uv_D2_sVGtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(zid:loop:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti4ZitiC3zid4loopAcA0B8IdentityC_SpySo03uv_D2_sVGtcfc">init(zid:<wbr>loop:<wbr>)</a>
+                    <a name="/s:5CZiti4ZitiC3zid7loopPtrAcA0B8IdentityC_AC0B7RunloopCtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(zid:loopPtr:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC3zid7loopPtrAcA0B8IdentityC_AC0B7RunloopCtcfc">init(zid:<wbr>loopPtr:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -670,7 +738,7 @@ In this scenario, the loop is expected to execute outside of the <code>run(:_)</
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">zid</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></span><span class="p">,</span> <span class="nv">loop</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="n">uv_loop_t</span><span class="o">&gt;</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">zid</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></span><span class="p">,</span> <span class="nv">loopPtr</span><span class="p">:</span> <span class="kt"><a href="../Classes/Ziti/ZitiRunloop.html">ZitiRunloop</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -704,6 +772,63 @@ In this scenario, the loop is expected to execute outside of the <code>run(:_)</
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC0B7RunloopC"></a>
+                    <a name="//apple_ref/swift/Class/ZitiRunloop" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC0B7RunloopC">ZitiRunloop</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Helper class to manage private loop constructs. An object of this class can be used when holding a shared instane of the loop to be used among
+multiple identities</p>
+
+                        <a href="../Classes/Ziti/ZitiRunloop.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">ZitiRunloop</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC14executeRunloop7loopPtryAC0bD0C_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/executeRunloop(loopPtr:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC14executeRunloop7loopPtryAC0bD0C_tFZ">executeRunloop(loopPtr:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>wrapper to execute uv_run (blocking)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">executeRunloop</span><span class="p">(</span><span class="nv">loopPtr</span><span class="p">:</span> <span class="kt"><a href="../Classes/Ziti/ZitiRunloop.html">ZitiRunloop</a></span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                     </section>
                   </div>
@@ -1368,66 +1493,6 @@ this method initializes Ziti for connections using the configured <code><a href=
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF"></a>
-                    <a name="//apple_ref/swift/Method/serviceAvailable(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti4ZitiC16serviceAvailableyySS_ys13OpaquePointerVSg_SpySo05ziti_C2_sVGSgs5Int32VtctF">serviceAvailable(_:<wbr>_:<wbr>)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Checks availability of service</p>
-
-<p>The supplied name is case sensitive. Note that this function is not synchronous</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">serviceAvailable</span><span class="p">(</span><span class="n">_</span> <span class="nv">service</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">onServiceAvailable</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC15ServiceCallbacka">ServiceCallback</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>service</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>the name of the service to check</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>onServiceAvaialble</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>callback called with status <code>ZITI_OK</code> of <code>ZITI_SERVICE_NOT_AVAILABLE</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/c:@M@CZiti@objc(cs)Ziti(im)perform:"></a>
                     <a name="//apple_ref/swift/Method/perform(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:<wbr>)</a>
@@ -1946,7 +2011,7 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-06-03)</p>
+          <p>&copy; 2021 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2021-08-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

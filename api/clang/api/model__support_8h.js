@@ -61,6 +61,7 @@ var model__support_8h =
     [ "model_free", "model__support_8h.html#af7918171aa89926391431009dad9afea", null ],
     [ "model_free_array", "model__support_8h.html#ace334e8bcf3f713857529c5c61a2faaa", null ],
     [ "model_map_clear", "model__support_8h.html#a66c67a6a958772e0308df41808e71aaa", null ],
+    [ "model_map_compare", "model__support_8h.html#a9aeb7985b66eea70c77882fcaa83248f", null ],
     [ "model_map_get", "model__support_8h.html#a8937ca25e4d5027639ad5efaf6957076", null ],
     [ "model_map_it_key", "model__support_8h.html#ad69279f6dcff844b5ede74fc0ad18157", null ],
     [ "model_map_it_next", "model__support_8h.html#a4481a344f7888c81e79297dc3cca3713", null ],

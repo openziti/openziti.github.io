@@ -4,6 +4,7 @@ var structziti__options =
     [ "config", "structziti__options.html#ae1caa81b77887af51189c6edadbfefab", null ],
     [ "config_types", "structziti__options.html#a66a00043c7c2fcdda4a2b430bf5d8205", null ],
     [ "controller", "structziti__options.html#a337ceb539db3ee60c64ae5e3918fba69", null ],
+    [ "disabled", "structziti__options.html#a5da22b3a1fb640d61217b998c6f14904", null ],
     [ "event_cb", "structziti__options.html#a894d032cee845c5caf83fcb263e8d84f", null ],
     [ "events", "structziti__options.html#a635fef44dd0fca1e9b86ff0173254832", null ],
     [ "metrics_type", "structziti__options.html#aa6d3d16078d8a3f1ebbe7bcf745c4bf2", null ],

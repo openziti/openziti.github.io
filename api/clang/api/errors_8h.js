@@ -8,6 +8,7 @@ var errors_8h =
     [ "ZITI_CONTROLLER_UNAVAILABLE", "errors_8h.html#aa2b6a3568c6a435261e751ea64c31c5b", null ],
     [ "ZITI_CRYPTO_FAIL", "errors_8h.html#af0ab53762cc235f23228927eab1fe4f0", null ],
     [ "ZITI_CSR_GENERATION_FAILED", "errors_8h.html#adb3f0cf3ea267dedbac950b9f25c1276", null ],
+    [ "ZITI_DISABLED", "errors_8h.html#a897e29570d4998a60a84df2ade53b06b", null ],
     [ "ZITI_ENROLLMENT_CERTIFICATE_REQUIRED", "errors_8h.html#aa26ed11c0881b53d1a11520b3844cca8", null ],
     [ "ZITI_ENROLLMENT_METHOD_UNSUPPORTED", "errors_8h.html#a48a04e96e1f581d717471aa368fd6f4d", null ],
     [ "ZITI_EOF", "errors_8h.html#adf68027c57495898fd8bf51ed0bad701", null ],

@@ -227,6 +227,8 @@ Functions</h2></td></tr>
 <tr class="separator:aa93a7751c8ca3183d7deb8a16ca377c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f67d6a9a85a57d95585ee772538a971"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a2f67d6a9a85a57d95585ee772538a971">get_model_map_meta</a> ()</td></tr>
 <tr class="separator:a2f67d6a9a85a57d95585ee772538a971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aeb7985b66eea70c77882fcaa83248f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a9aeb7985b66eea70c77882fcaa83248f">model_map_compare</a> (const <a class="el" href="structmodel__map.html">model_map</a> *lh, const <a class="el" href="structmodel__map.html">model_map</a> *rh, <a class="el" href="structtype__meta.html">type_meta</a> *m)</td></tr>
+<tr class="separator:a9aeb7985b66eea70c77882fcaa83248f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3eeac54916234a260cfddc0aa23804be"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a3eeac54916234a260cfddc0aa23804be">model_map_size</a> (const <a class="el" href="structmodel__map.html">model_map</a> *<a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>)</td></tr>
 <tr class="separator:a3eeac54916234a260cfddc0aa23804be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77dc1d386f629b4faba94e36d4dc1b5d"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a77dc1d386f629b4faba94e36d4dc1b5d">model_map_set</a> (<a class="el" href="structmodel__map.html">model_map</a> *<a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, const char *key, void *val)</td></tr>
@@ -1425,6 +1427,40 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a9aeb7985b66eea70c77882fcaa83248f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aeb7985b66eea70c77882fcaa83248f">&#9670;&nbsp;</a></span>model_map_compare()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int model_map_compare </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structmodel__map.html">model_map</a> *&#160;</td>
+          <td class="paramname"><em>lh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmodel__map.html">model_map</a> *&#160;</td>
+          <td class="paramname"><em>rh</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td>
+          <td class="paramname"><em>m</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8937ca25e4d5027639ad5efaf6957076"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8937ca25e4d5027639ad5efaf6957076">&#9670;&nbsp;</a></span>model_map_get()</h2>
 
@@ -1835,13 +1871,13 @@ Functions</h2></td></tr>
 <div class="ttc" id="amodel__support_8h_html_af7918171aa89926391431009dad9afea"><div class="ttname"><a href="model__support_8h.html#af7918171aa89926391431009dad9afea">model_free</a></div><div class="ttdeci">void model_free(void *obj, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a0a845f813a5015d19de89e5b2b14678e"><div class="ttname"><a href="model__support_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a></div><div class="ttdeci">void * model_map_it_value(model_map_iter it)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:258</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:260</div></div>
 <div class="ttc" id="amodel__support_8h_html_aee4a9b5ebdf3b4b9dc76a46d0b44c69e"><div class="ttname"><a href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a></div><div class="ttdeci">#define gen_field_meta(n, memtype, modifier, p, partype)</div><div class="ttdef"><b>Definition:</b> model_support.h:91</div></div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:257</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:259</div></div>
 <div class="ttc" id="astructfield__meta_html"><div class="ttname"><a href="structfield__meta.html">field_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:143</div></div>
 <div class="ttc" id="amodel__support_8h_html_a7344bf17347338e1ae192fc34597203e"><div class="ttname"><a href="model__support_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a></div><div class="ttdeci">model_map_iter model_map_iterator(const model_map *map)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:225</div></div>
+<div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:227</div></div>
 <div class="ttc" id="amodel__support_8h_html_ac5e80917106862cdea7729c18e125c27"><div class="ttname"><a href="model__support_8h.html#ac5e80917106862cdea7729c18e125c27">model_parse_array</a></div><div class="ttdeci">int model_parse_array(void ***arp, const char *json, size_t len, type_meta *meta)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:70</div></div>
 <div class="ttc" id="amodel__support_8h_html_a7037b87ab62417854014f25eeb714086"><div class="ttname"><a href="model__support_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a></div><div class="ttdeci">void * model_map_iter</div><div class="ttdef"><b>Definition:</b> model_support.h:199</div></div>

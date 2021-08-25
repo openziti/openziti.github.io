@@ -1,7 +1,6 @@
 var ziti_8h =
 [
     [ "ziti_options", "structziti__options.html", "structziti__options" ],
-    [ "ziti_init_req", "structziti__init__req.html", "structziti__init__req" ],
     [ "ziti_enroll_opts", "structziti__enroll__opts.html", "structziti__enroll__opts" ],
     [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],
     [ "ziti_client_ctx", "structziti__client__ctx.html", "structziti__client__ctx" ],
@@ -45,7 +44,6 @@ var ziti_8h =
     [ "ziti_conn_init", "ziti_8h.html#ace1cf18567f46611faa449553041e6d5", null ],
     [ "ziti_conn_set_data", "ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef", null ],
     [ "ziti_conn_source_identity", "ziti_8h.html#ac622ac86432d4431976aee7a2d606add", null ],
-    [ "ziti_ctx_free", "ziti_8h.html#acdc6c74c2a1f9dbfefb1d815e301741c", null ],
     [ "ziti_dial", "ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b", null ],
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
     [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
@@ -60,6 +58,7 @@ var ziti_8h =
     [ "ziti_get_version", "ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b", null ],
     [ "ziti_init", "ziti_8h.html#ac18dd13453ce6c1884ba662de479b6c8", null ],
     [ "ziti_init_opts", "ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7", null ],
+    [ "ziti_is_enabled", "ziti_8h.html#acd29da8b84e90db5dce26f163e459deb", null ],
     [ "ziti_listen", "ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c", null ],
     [ "ziti_listen_with_options", "ziti_8h.html#a8c447db49310357727e92d635d6efd4e", null ],
     [ "ziti_mfa_auth", "ziti_8h.html#a8c39888a1c8d89abbc3e253c1df14972", null ],
@@ -70,6 +69,7 @@ var ziti_8h =
     [ "ziti_mfa_verify", "ziti_8h.html#ac25ffa02e49130a18a669099f3403395", null ],
     [ "ziti_service_available", "ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f", null ],
     [ "ziti_set_app_info", "ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a", null ],
+    [ "ziti_set_enabled", "ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b", null ],
     [ "ziti_set_timeout", "ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80", null ],
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
     [ "ziti_write", "ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69", null ]

@@ -653,7 +653,8 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">XX(<span class="keywordtype">id</span>, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, <span class="keywordtype">id</span>, __VA_ARGS__) \</div>
-<div class="line">XX(name, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, name, __VA_ARGS__)</div>
+<div class="line">XX(name, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, name, __VA_ARGS__) \</div>
+<div class="line">XX(app_data, <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, appData, __VA_ARGS__)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -908,7 +909,9 @@ Variables</h2></td></tr>
 <div class="line">XX(encryption, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, encryptionRequired, __VA_ARGS__) \</div>
 <div class="line">XX(perm_flags, <span class="keywordtype">int</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, NULL, __VA_ARGS__) \</div>
 <div class="line">XX(config, <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, config, __VA_ARGS__) \</div>
-<div class="line">XX(posture_query_set, <a class="code" href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__)</div>
+<div class="line">XX(posture_query_set, <a class="code" href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__) \</div>
+<div class="line">XX(posture_query_map, <a class="code" href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a>, <a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, posturePolicies, __VA_ARGS__) \</div>
+<div class="line">XX(updated_at,<span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, updatedAt, __VA_ARGS__)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -3966,9 +3969,9 @@ Variables</h2></td></tr>
 <div class="ttc" id="amodel__support_8h_html_a6a3518c9c928b1194dfa6123a0a80586"><div class="ttname"><a href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a></div><div class="ttdeci">#define none(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:67</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
-<div class="ttc" id="aziti__model_8h_html_a001b68cb90ef452bbcd51854edfd4904"><div class="ttname"><a href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a></div><div class="ttdeci">ziti_posture_query_set</div><div class="ttdef"><b>Definition:</b> ziti_model.h:140</div></div>
-<div class="ttc" id="astructtag_html"><div class="ttname"><a href="structtag.html">tag</a></div><div class="ttdef"><b>Definition:</b> model_support.h:243</div></div>
-<div class="ttc" id="aziti__model_8h_html_a4d81312725b34719ecde06f1f83a3ab2"><div class="ttname"><a href="ziti__model_8h.html#a4d81312725b34719ecde06f1f83a3ab2">ziti_process</a></div><div class="ttdeci">ziti_process</div><div class="ttdef"><b>Definition:</b> ziti_model.h:138</div></div>
+<div class="ttc" id="aziti__model_8h_html_a001b68cb90ef452bbcd51854edfd4904"><div class="ttname"><a href="ziti__model_8h.html#a001b68cb90ef452bbcd51854edfd4904">ziti_posture_query_set</a></div><div class="ttdeci">ziti_posture_query_set</div><div class="ttdef"><b>Definition:</b> ziti_model.h:143</div></div>
+<div class="ttc" id="astructtag_html"><div class="ttname"><a href="structtag.html">tag</a></div><div class="ttdef"><b>Definition:</b> model_support.h:245</div></div>
+<div class="ttc" id="aziti__model_8h_html_a4d81312725b34719ecde06f1f83a3ab2"><div class="ttname"><a href="ziti__model_8h.html#a4d81312725b34719ecde06f1f83a3ab2">ziti_process</a></div><div class="ttdeci">ziti_process</div><div class="ttdef"><b>Definition:</b> ziti_model.h:141</div></div>
 <div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:70</div></div>
 <div class="ttc" id="amodel__support_8h_html_ae5a8ce0b412602b5f07fe3220ea6f77d"><div class="ttname"><a href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a></div><div class="ttdeci">char * json</div><div class="ttdef"><b>Definition:</b> model_support.h:134</div></div>
 <!-- start footer part -->
