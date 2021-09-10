@@ -205,7 +205,8 @@ var NAVTREEINDEX0 =
 "structziti__enroll__opts.html":[2,0,8],
 "structziti__enroll__opts.html#a0bebd29f92e7c3d1b4e0f85ca596bab3":[2,0,8,1],
 "structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687":[2,0,8,0],
-"structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a":[2,0,8,2],
+"structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a":[2,0,8,3],
+"structziti__enroll__opts.html#ad830d3e79cb9c9062ec45ff496b70af3":[2,0,8,2],
 "structziti__event__t.html":[2,0,9],
 "structziti__event__t.html#a142aff254b19096ad684974574ad9d2f":[2,0,9,5],
 "structziti__event__t.html#a2ebf1a939a1433d7f53ba0a65837ca32":[2,0,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structziti__service__event.html#ac6ff41e42d3715a0d5f003a5b13fd505":[2,0,14,1],
 "ziti_8h.html":[3,0,0,5],
 "ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3":[3,0,0,5,6],
-"ziti_8h.html#a06b4d01871a739519c265629cd90aa4c":[3,0,0,5,16],
-"ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b":[3,0,0,5,40]
+"ziti_8h.html#a06b4d01871a739519c265629cd90aa4c":[3,0,0,5,16]
 };

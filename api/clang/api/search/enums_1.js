@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debuglevel_767',['DebugLevel',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395',1,'ziti_log.h']]]
+  ['debuglevel_769',['DebugLevel',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395',1,'ziti_log.h']]]
 ];
