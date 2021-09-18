@@ -29,6 +29,7 @@ var errors_8h =
     [ "ZITI_NOT_AUTHORIZED", "errors_8h.html#a7a21163f06d22691e28273c92621547e", null ],
     [ "ZITI_NOT_FOUND", "errors_8h.html#a767a716e543289719a9864e276e067b9", null ],
     [ "ZITI_OK", "errors_8h.html#a58cd556eb411c881903d30ae272984f4", null ],
+    [ "ZITI_PARTIALLY_AUTHENTICATED", "errors_8h.html#adfbe1fea9a00f5dd90c0e42221248fcb", null ],
     [ "ZITI_PKCS7_ASN1_PARSING_FAILED", "errors_8h.html#afc940e564c9768cd6a7464b0ee4ab8f6", null ],
     [ "ZITI_SERVICE_UNAVAILABLE", "errors_8h.html#adce4a78f4190299277ad587530ca5036", null ],
     [ "ZITI_TIMEOUT", "errors_8h.html#a3b6e0c786cfe90c05611a9ec5d2b1d2b", null ],
