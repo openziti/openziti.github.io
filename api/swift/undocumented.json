@@ -9,6 +9,13 @@
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
+      "line": 103,
+      "symbol": "Ziti.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
       "line": 209,
       "symbol": "Ziti.ZitiRunloop.init()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
@@ -31,91 +38,49 @@
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
       "line": 602,
-      "symbol": "Ziti.MfaCallbacck",
+      "symbol": "Ziti.MfaCallback",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 603,
-      "symbol": "Ziti.MfaRemoveCallback",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 604,
-      "symbol": "Ziti.MfaVerifyCallback",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 608,
+      "line": 606,
       "symbol": "Ziti.mfaRemove(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 616,
+      "line": 614,
       "symbol": "Ziti.mfaVerify(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 624,
+      "line": 622,
       "symbol": "Ziti.MfaRecoveryCodesCallback",
       "symbol_kind": "source.lang.swift.decl.typealias",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 627,
+      "line": 625,
       "symbol": "Ziti.mfaGetRecoveryCodes(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 635,
+      "line": 633,
       "symbol": "Ziti.mfaNewRecoveryCodes(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 643,
-      "symbol": "Ziti.mfaAbort(_:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 647,
-      "symbol": "Ziti.MfaAuthQueryCallback",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 648,
-      "symbol": "Ziti.mfaAuthQueryCallback",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 652,
-      "symbol": "Ziti.MfaAuthResponseStatusCallback",
-      "symbol_kind": "source.lang.swift.decl.typealias",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/Ziti.swift",
-      "line": 653,
-      "symbol": "Ziti.mfaAuthResponse(_:_:_:)",
+      "line": 642,
+      "symbol": "Ziti.mfaAuth(_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
@@ -177,161 +142,196 @@
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 29,
+      "line": 28,
+      "symbol": "ZitiEvent.EventType.MfaAuth",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
+      "line": 30,
       "symbol": "ZitiEvent.EventType.debug",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 40,
+      "line": 42,
       "symbol": "ZitiEvent.ContextEvent",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 41,
+      "line": 43,
       "symbol": "ZitiEvent.ContextEvent.status",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 42,
+      "line": 44,
       "symbol": "ZitiEvent.ContextEvent.err",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 53,
+      "line": 55,
       "symbol": "ZitiEvent.RouterStatus",
       "symbol_kind": "source.lang.swift.decl.enum",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 54,
+      "line": 56,
+      "symbol": "ZitiEvent.RouterStatus.Added",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
+      "line": 56,
       "symbol": "ZitiEvent.RouterStatus.Connected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 54,
+      "line": 56,
       "symbol": "ZitiEvent.RouterStatus.Disconnected",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 54,
+      "line": 56,
       "symbol": "ZitiEvent.RouterStatus.Removed",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 54,
+      "line": 56,
       "symbol": "ZitiEvent.RouterStatus.Unavailable",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 55,
+      "line": 57,
       "symbol": "ZitiEvent.RouterStatus.debug",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 65,
+      "line": 68,
       "symbol": "ZitiEvent.RouterEvent",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 66,
+      "line": 69,
       "symbol": "ZitiEvent.RouterEvent.status",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 67,
+      "line": 70,
       "symbol": "ZitiEvent.RouterEvent.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 68,
+      "line": 71,
       "symbol": "ZitiEvent.RouterEvent.version",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 76,
+      "line": 79,
       "symbol": "ZitiEvent.ServiceEvent",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 77,
+      "line": 80,
       "symbol": "ZitiEvent.ServiceEvent.removed",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 78,
+      "line": 81,
       "symbol": "ZitiEvent.ServiceEvent.changed",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 79,
+      "line": 82,
       "symbol": "ZitiEvent.ServiceEvent.added",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 98,
+      "line": 101,
+      "symbol": "ZitiEvent.MfaAuthEvent",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
+      "line": 102,
+      "symbol": "ZitiEvent.MfaAuthEvent.mfaAuthQuery",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
+      "line": 108,
       "symbol": "ZitiEvent.type",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 99,
+      "line": 109,
       "symbol": "ZitiEvent.contextEvent",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 100,
+      "line": 110,
       "symbol": "ZitiEvent.routerEvent",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 101,
+      "line": 111,
       "symbol": "ZitiEvent.serviceEvent",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
-      "line": 117,
+      "line": 112,
+      "symbol": "ZitiEvent.mfaAuthEvent",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiEvent.swift",
+      "line": 130,
       "symbol": "ZitiEvent.debugDescription",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
@@ -708,6 +708,83 @@
       "warning": "undocumented"
     },
     {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 19,
+      "symbol": "ZitiPostureQuery",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 22,
+      "symbol": "ZitiPostureQuery.isPassing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 23,
+      "symbol": "ZitiPostureQuery.queryType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 24,
+      "symbol": "ZitiPostureQuery.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 25,
+      "symbol": "ZitiPostureQuery.timeout",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuery.swift",
+      "line": 26,
+      "symbol": "ZitiPostureQuery.timeoutRemaining",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuerySet.swift",
+      "line": 19,
+      "symbol": "ZitiPostureQuerySet",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuerySet.swift",
+      "line": 22,
+      "symbol": "ZitiPostureQuerySet.isPassing",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuerySet.swift",
+      "line": 23,
+      "symbol": "ZitiPostureQuerySet.policyId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuerySet.swift",
+      "line": 24,
+      "symbol": "ZitiPostureQuerySet.policyType",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiPostureQuerySet.swift",
+      "line": 25,
+      "symbol": "ZitiPostureQuerySet.postureQueries",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 19,
       "symbol": "ZitiService",
@@ -752,34 +829,41 @@
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 37,
-      "symbol": "ZitiService.tunnelClientConfigV1",
+      "symbol": "ZitiService.postureQuerySets",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 38,
-      "symbol": "ZitiService.tunnelServerConfigV1",
+      "symbol": "ZitiService.tunnelClientConfigV1",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 39,
-      "symbol": "ZitiService.urlClientConfigV1",
+      "symbol": "ZitiService.tunnelServerConfigV1",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 40,
-      "symbol": "ZitiService.interceptConfigV1",
+      "symbol": "ZitiService.urlClientConfigV1",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
       "line": 41,
+      "symbol": "ZitiService.interceptConfigV1",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiService.swift",
+      "line": 42,
       "symbol": "ZitiService.hostConfigV1",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
