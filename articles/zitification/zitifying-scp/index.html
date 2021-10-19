@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Zitifying Scp | Ziti </title>
+    <title>Zitifying SCP | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Zitifying Scp | Ziti ">
+    <meta name="title" content="Zitifying SCP | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -95,38 +95,34 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="zitifying-scp">Zitifying Scp</h1>
+<h1 id="zitifying-scp">Zitifying SCP</h1>
 
-<p>In the <a href="zitifying-ssh.html">previous post</a> we talked about how we could take a well-known application and improve its
-security by zitifying it, producing <code>zssh</code>. The logical next step after zitifying <code>ssh</code> would be to extend the 
-functionality of <code>zssh</code> to cover moving files securely as well, enter <code>zscp</code>. A zitified <code>scp</code> effectively creates a
-more secure command line tool for sending and receiving files between ziti-empowered devices. Once zitified, we can 
-use <code>zscp</code> using ziti identity names just like we did in <a href="zitifying-ssh.html">zitifying ssh</a>. I recommend reading the 
-<a href="zitifying-ssh.html">previous article</a>) if you haven&#39;t to learn more about the benefits of zitifying tools like <code>ssh</code> 
-and <code>scp</code>. </p>
+<p>In the <a href="/articles/zitification/zitifying-ssh/index.html">previous post</a> we talked about how we could take a well-known application and improve its security by
+zitifying it, producing <code>zssh</code>. The logical next step after zitifying <code>ssh</code> would be to extend the functionality
+of <code>zssh</code> to cover moving files securely as well, enter <code>zscp</code>. A zitified <code>scp</code> effectively creates a more secure
+command line tool for sending and receiving files between ziti-empowered devices. Once zitified, we can use <code>zscp</code> using
+ziti identity names just like we did in <a href="/articles/zitification/zitifying-ssh/index.html">zitifying ssh</a>. I recommend reading the <a href="/articles/zitification/zitifying-ssh/index.html">previous article</a>) if you
+haven&#39;t to learn more about the benefits of zitifying tools like <code>ssh</code> and <code>scp</code>.</p>
 <hr>
-
 <h2 id="first-things-first">First Things First</h2>
 <p><code>zscp</code> functions with the same prerequisites as <code>zssh</code>:</p>
 <ul>
-<li>Establish a <a href="https://github.com/openziti/ziti/blob/release-next/quickstart/aws.md">Ziti Network in AWS</a> (using AWS in
-this example)</li>
+<li>Establish a <a href="https://github.com/openziti/ziti/blob/release-next/quickstart/aws.md">Ziti Network in AWS</a> (using AWS in this example)</li>
 <li>Create and enroll two Ziti Endpoints (one for our <code>ssh</code> server, one for the client)<ul>
 <li>the <code>sshd</code> server will run <code>ziti-tunnel</code> for this demonstration. Conveniently it will run on the same machine I
-used to setup the <a href="https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>.</li>
+used to setup the <a href="/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>.</li>
 <li>the client, in this case, is my local machine and I&#39;ll <code>zscp</code> files both to and from both the remote machine.</li>
 </ul>
 </li>
-<li>Create the <a href="https://openziti.github.io/ziti/services/overview.html">Ziti Service</a> we&#39;ll use and authorize the two
-endpoints to use this service</li>
+<li>Create the <a href="/ziti/services/overview.html">Ziti Service</a> we&#39;ll use and authorize the two endpoints to use this service</li>
 <li>Use the <code>zscp</code> binary from the client side and the <code>ziti-tunnel</code> binary from the serving side to connect</li>
 <li>Harden <code>sshd</code> further by removing port 22 from any internet-based firewall configuration (for example, from within the
 security-groups wizard in AWS) or by forcing <code>sshd</code> to only listen on <code>localhost/127.0.0.1</code></li>
 </ul>
-<p>After ensuring these steps are complete, you will have the ability to copy files across your Ziti Network. The 
-traffic will be even more secure since now a Ziti Network is required for the connection, requiring that strong 
-identity before even being able to access the <code>sshd</code> server. And of course now <code>sshd</code> is &#39;dark&#39; - it no longer needs 
-the typical port 22 to be exposed to any network.</p>
+<p>After ensuring these steps are complete, you will have the ability to copy files across your Ziti Network. The traffic
+will be even more secure since now a Ziti Network is required for the connection, requiring that strong identity before
+even being able to access the <code>sshd</code> server. And of course now <code>sshd</code> is &#39;dark&#39; - it no longer needs the typical port 22
+to be exposed to any network.</p>
 <p>Given all the prerequisites are satisfied, we can put <code>zscp</code> to use. Simply download the binary for your platform:</p>
 <ul>
 <li><a href="https://github.com/openziti-incubator/zssh/releases/latest/download/zscp-linux-amd64">linux</a></li>
@@ -134,41 +130,40 @@ the typical port 22 to be exposed to any network.</p>
 <li><a href="https://github.com/openziti-incubator/zssh/releases/latest/download/zscp-macos-amd64">MacOs</a></li>
 </ul>
 <hr>
-
 <h2 id="sending-and-receiving-files-with-zscp">Sending and Receiving Files with Zscp</h2>
 <p>Once you have the executable downloaded, make sure it is named <code>zscp</code> and for simplicity&#39;s sake we&#39;ll assume it&#39;s on the
-path. Just like <code>zssh</code> to <code>ssh</code>, <code>zscp</code> provides the same basic functionality as <code>scp</code>. As with most tooling, executing 
+path. Just like <code>zssh</code> to <code>ssh</code>, <code>zscp</code> provides the same basic functionality as <code>scp</code>. As with most tooling, executing
 the binary with no arguments will display the expected usage.</p>
-<p>There are two main functions of <code>zscp</code>. Just like <code>scp</code> you can send and receive from the remote host. </p>
+<p>There are two main functions of <code>zscp</code>. Just like <code>scp</code> you can send and receive from the remote host.</p>
 <p>To send files we use this basic syntax:</p>
 <pre><code>./zscp LOCAL_FILEPATHS... &lt;REMOTE_USERNAME&gt;@TARGET_IDENTITY:REMOTE_FILEPATH
 </code></pre><p>Then, to retrieve remote files we use a similar syntax:</p>
 <pre><code>./zscp &lt;REMOTE_USERNAME&gt;@TARGET_IDENTITY:REMOTE_FILEPATH LOCAL_FILEPATH
-</code></pre><p>Below is a working example of using <code>zscp</code> to send a file to a remote machine. In this case the remote username is 
-not the same as my local username. Just like with <code>scp</code>, I&#39;ll need to supply the username in my command and it will 
-use the same syntax that regular <code>scp</code> uses. Here I am <code>zscp&#39;ing</code> as username <code>ubuntu</code> to the remote computer that 
-is joined to the Ziti Network using the identity named <code>ziti-tunnel-aws</code>.</p>
-<pre><code>./zscp local/1.txt ubuntu@ziti-tunnel-aws:remote 
+</code></pre><p>Below is a working example of using <code>zscp</code> to send a file to a remote machine. In this case the remote username is not
+the same as my local username. Just like with <code>scp</code>, I&#39;ll need to supply the username in my command and it will use the
+same syntax that regular <code>scp</code> uses. Here I am <code>zscp&#39;ing</code> as username <code>ubuntu</code> to the remote computer that is joined to
+the Ziti Network using the identity named <code>ziti-tunnel-aws</code>.</p>
+<pre><code>./zscp local/1.txt ubuntu@ziti-tunnel-aws:remote
 INFO    connection to edge router using token 6c2e8b79-ce8e-483e-a9f8-a930530e706a
 INFO    sent file: /Users/name/local/1.txt ==&gt; /home/ubuntu/remote/1.txt
 </code></pre><p>This is only a basic example on how we can use <code>zscp</code> to send a singular file to a remote computer. In the next section,
 we will go over how to use <code>zscp</code> flags for extended functionality.</p>
 <hr>
-
 <h2 id="zscp-flags">Zscp Flags</h2>
-<p>Just like <code>zssh</code>, <code>zscp</code> has the same flags to pass in: ssh key, ziti configuration file, service name, and one to<br>toggle debug logging. All the defaults are the same as with <code>zssh</code>, thus both <code>zscp</code> and <code>zssh</code> will work without the 
-<code>-i</code> and <code>-c</code> flag providing the files exist at the default locations. Refer to <a href="zitifying-ssh.html">zitifying-ssh</a> 
-for instructions on how to use the flags below. </p>
+<p>Just like <code>zssh</code>, <code>zscp</code> has the same flags to pass in: ssh key, ziti configuration file, service name, and one to
+toggle debug logging. All the defaults are the same as with <code>zssh</code>, thus both <code>zscp</code> and <code>zssh</code> will work without
+the <code>-i</code> and <code>-c</code> flag providing the files exist at the default locations. Refer to [zitifying-ssh][2] for
+instructions on how to use the flags below.</p>
 <pre><code>-i, --SshKeyPath string   Path to ssh key. default: $HOME/.ssh/id_rsa
 -c, --ZConfig string      Path to ziti config file. default: $HOME/.ziti/zssh.json
 -d, --debug               pass to enable additional debug information
 -s, --service string      service name. (default &quot;zssh&quot;)
 </code></pre><p>In addition to the flags above, <code>zscp</code> has a flag to enable recursive copying:</p>
 <pre><code>-r, --recursive           pass to enable recursive file transfer
-</code></pre><p>To use the recursive flag, you must input a directory into the <code>LOCAL_FILEPATH</code> argument. Just like <code>scp</code>, <code>zscp</code> will 
-copy all file contents under the provided directory. You can see below how we can use the <code>-r</code> flag to send all contents 
-of <code>big_directory</code>. </p>
-<p>Contents of <code>big_directory</code> on local computer:  </p>
+</code></pre><p>To use the recursive flag, you must input a directory into the <code>LOCAL_FILEPATH</code> argument. Just like <code>scp</code>, <code>zscp</code> will
+copy all file contents under the provided directory. You can see below how we can use the <code>-r</code> flag to send all contents
+of <code>big_directory</code>.</p>
+<p>Contents of <code>big_directory</code> on local computer:</p>
 <pre><code>tree local
 local
 └── big_directory
@@ -205,11 +200,10 @@ remote/
         └── 6.txt
 </code></pre><p>Recursive copying also works to retrieve all contents of a directory on the remote machine.</p>
 <hr>
-
-<p>I hope this post has helped you get familiar with another ziti-empowered developer&#39;s tool and hopefully it&#39;s 
-becoming more clear why zitifying your application will make it more resilient to attack and make the act of 
-connecting to remote services trivial. </p>
-<p>Have a look at the code over at github: <a href="https://github.com/openziti-incubator/zssh/tree/main/zssh/zscp">https://github.com/openziti-incubator/zssh/tree/main/zssh/zscp</a></p>
+<p>I hope this post has helped you get familiar with another ziti-empowered developer&#39;s tool and hopefully it&#39;s becoming
+more clear why zitifying your application will make it more resilient to attack and make the act of connecting to remote
+services trivial.</p>
+<p>Have a look at the code over at <a href="https://github.com/openziti-incubator/zssh/tree/main/zssh/zscp">github</a></p>
 </article>
           </div>
           
@@ -218,7 +212,7 @@ connecting to remote services trivial. </p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/ssh/zitifying-scp.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/zitifying-scp/index.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Kubernetes Cheatsheet | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Kubernetes Cheatsheet | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h2 id="kubernetes-cheatsheet">Kubernetes Cheatsheet</h2>
+
+<p>This page exists as the set of commands which were used in the video <a href="https://youtu.be/CRoansolpR0">Secure Kubernetes Cluster using Ziti</a></p>
+<h3 id="establish-some-variables-just-to-make-commands-easier">establish some variables just to make commands easier:</h3>
+<pre><code class="lang-bash">service_name=k8s.oci
+the_user_identity=&quot;${service_name}&quot;.client
+the_kubernetes_identity=&quot;${service_name}&quot;.private
+oci_cluster_id=&quot;put-your-cluster-id-here&quot;
+</code></pre><h3 id="clean-up-commands---if-needed">clean up commands - if needed:</h3>
+<pre><code class="lang-bash">rm /tmp/oci/config.oci.public
+rm /tmp/oci/config.oci.private
+ziti edge delete identity &quot;${the_kubernetes_identity}&quot;
+ziti edge delete identity &quot;${the_user_identity}&quot;
+</code></pre><p>work done ahead of time - takes time to establish a cluster:</p>
+<ul>
+<li>previously setup kubernetes in OKE<ul>
+<li>simple cluster</li>
+<li>standard quick create cluster</li>
+<li>public endpoint</li>
+<li>Shape: VM.Standard2.2</li>
+<li>1 node</li>
+<li>pasted my public key for access</li>
+<li>exposed the cluster with public ip</li>
+</ul>
+</li>
+<li>already installed oci as well as helm</li>
+<li>already deployed a ziti environment using <a href="https://github.com/openziti/ziti/blob/release-next/quickstart/aws.md">https://github.com/openziti/ziti/blob/release-next/quickstart/aws.md</a></li>
+</ul>
+<h3 id="create-kubernetes-config-files---public-and-private">create kubernetes config files - public and private:</h3>
+<pre><code class="lang-bash">oci ce cluster create-kubeconfig \
+    --cluster-id ${oci_cluster_id} \
+    --file /tmp/oci/config.oci.public \
+    --region us-ashburn-1 \
+    --token-version 2.0.0 \
+    --kube-endpoint PUBLIC_ENDPOINT
+chmod 600 /tmp/oci/config.oci.public
+
+oci ce cluster create-kubeconfig \
+    --cluster-id ${oci_cluster_id} \
+    --file /tmp/oci/config.oci.private \
+    --region us-ashburn-1 \
+    --token-version 2.0.0 \
+    --kube-endpoint PRIVATE_ENDPOINT
+chmod 600 /tmp/oci/config.oci.private
+</code></pre><h3 id="delete-any-resources-if-needed">delete any resources if needed:</h3>
+<pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.public
+helm uninstall ziti-host
+kubectl delete persistentvolume ziti-host-pv
+</code></pre><h3 id="show-it-working-via-public-ip-from-wsl">show it working via public ip from wsl:</h3>
+<h4 id="wsl">wsl:</h4>
+<pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.public
+kubectl get pods -v7 --request-timeout=&#39;5s&#39;
+</code></pre><h4 id="show-it-failing-via-private-ip-from-wsl">show it failing via private ip from wsl:</h4>
+<pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.private
+kubectl get pods -v7 --request-timeout=&#39;2s&#39;
+</code></pre><h3 id="lets-install-ziti-in-the-cluster">let&#39;s install ziti in the cluster:</h3>
+<h4 id="make-a-new-identity">make a new identity:</h4>
+<pre><code class="lang-bash">ziti edge create identity device &quot;${the_kubernetes_identity}&quot; -a &quot;${service_name}&quot;ServerEndpoints -o &quot;${the_kubernetes_identity}&quot;.jwt
+ziti edge create identity device &quot;${the_user_identity}&quot; -a &quot;${service_name}&quot;ClientEndpoints -o &quot;${the_user_identity}&quot;.jwt
+</code></pre><h4 id="add-the-identity-to-the-cluster-using-the-public-ip">add the identity to the cluster (using the public ip):</h4>
+<pre><code class="lang-bash">helm repo add netfoundry https://netfoundry.github.io/charts/
+</code></pre><h3 id="create-the-config-file-to-apply">create the config file to apply</h3>
+<pre><code class="lang-yaml">apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: ziti-host-pv
+  labels:
+    type: local
+spec:
+  storageClassName: oci
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteMany
+  hostPath:
+    path: &quot;/netfoundry&quot;
+</code></pre><h3 id="kubectl-apply-the-config">kubectl apply the config:</h3>
+<pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.public
+kubectl apply -f add-persistent-claims.yaml 
+helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=k8s.private.jwt
+</code></pre><h3 id="verify-the-ziti-identity-was-bootstrapped-by-using-kubectl-logs">verify the ziti identity was bootstrapped by using kubectl logs</h3>
+<pre><code class="lang-bash">kubectl logs ziti-host&lt;tab&gt;&lt;enter&gt;
+</code></pre><hr>
+<p>now go disable the public ip so private access ONLY works... this takes &quot;a minute or two or three&quot;...</p>
+<hr>
+<h3 id="lets-setup-the-ziti-bits-we-need">let&#39;s setup the ziti bits we need</h3>
+<p>setup ziti to access the private server address... 
+set environment variables to make it easier to reference:</p>
+<pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.private
+k8s_private_host_and_port=$(kubectl config view | grep server | cut -d &quot;/&quot; -f3)
+k8s_private_host=$(echo ${k8s_private_host_and_port} | cut -d &quot;:&quot; -f1)
+k8s_private_port=$(echo ${k8s_private_host_and_port} | cut -d &quot;:&quot; -f2)
+echo &quot;Private URL: ${k8s_private_host_and_port}, Host: ${k8s_private_host}, Port: ${k8s_private_port}&quot;
+</code></pre><h4 id="ziti-setup">ziti setup:</h4>
+<pre><code class="lang-bash">k8s_private_dns=kubernetes
+
+ziti edge delete config &quot;${service_name}&quot;-host.v1
+ziti edge delete config &quot;${service_name}&quot;-client-config
+ziti edge delete service &quot;${service_name}&quot;
+ziti edge delete service-policy &quot;${service_name}&quot;-binding
+ziti edge delete service-policy &quot;${service_name}&quot;-dialing
+
+ziti edge create config &quot;${service_name}&quot;-host.v1 host.v1 &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;&#39;${k8s_private_host}&#39;&quot;,&quot;port&quot;:&#39;${k8s_private_port}&#39; }&#39;
+ziti edge create config &quot;${service_name}&quot;-client-config intercept.v1 &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;&#39;${k8s_private_host}&#39;&quot;,&quot;&#39;${k8s_private_dns}&#39;&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:443, &quot;high&quot;:443}]}&#39;
+ziti edge create service &quot;${service_name}&quot; --configs &quot;${service_name}&quot;-client-config,&quot;${service_name}&quot;-host.v1
+ziti edge create service-policy &quot;${service_name}&quot;-binding Bind --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ServerEndpoints&#39;
+ziti edge create service-policy &quot;${service_name}&quot;-dialing Dial --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ClientEndpoints&#39;
+</code></pre><h4 id="verify-windows-can-access-the-kubernetes-api-using-cmdexe-from-wsl">verify windows can access the kubernetes api (using cmd.exe from wsl):</h4>
+<pre><code class="lang-bash">cmd.exe /c curl -k &quot;https://${k8s_private_dns}&quot;
+cmd.exe /c curl -k &quot;https://${k8s_private_host}&quot;    
+</code></pre><h4 id="at-this-point-from-wsl-kubectl-will-work-using-the-ip-address---but-not-dns">at this point from wsl kubectl will work using the ip address - but not dns</h4>
+<pre><code class="lang-bash">zConfig: /mnt/v/temp/oci/oci.json
+service: k8s.oci
+</code></pre><h4 id="use-kubeztl">use &quot;kubeztl&quot;:</h4>
+<h4 id="download-from-github">download from github:</h4>
+<pre><code class="lang-bash">curl -L -o kubeztl https://github.com/openziti-incubator/kubectl/releases/download/v0.0.4/kubectl-linux-amd64 ./kubeztl get pods -c ./id.json -S &quot;${service_name}&quot;
+</code></pre><h4 id="modify-config-if-you-want">modify config if you want...</h4>
+<p>find your context, add two lines:</p>
+<pre><code class="lang-bash">zConfig: /mnt/v/temp/oci/oci.json
+service: k8s.oci
+</code></pre><h3 id="useful-if-you-need-to-update-either-of-the-identities">useful if you need to update either of the identities...</h3>
+<pre><code class="lang-bash">ziti edge update identity &quot;${the_user_identity}&quot; -a &quot;${service_name}&quot;ClientEndpoints
+ziti edge update identity &quot;${the_kubernetes_identity}&quot; -a &quot;${service_name}&quot;ServerEndpoints
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/kubernetes/kubernetes-oci.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145802.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145812.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/145/145807.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='https://image.flaticon.com/icons/svg/174/174883.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

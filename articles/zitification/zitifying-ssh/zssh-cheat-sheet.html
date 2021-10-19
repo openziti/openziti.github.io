@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Prerequisites | Ziti </title>
+    <title>establish some variables which are used below | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Prerequisites | Ziti ">
+    <meta name="title" content="establish some variables which are used below | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -95,9 +95,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="prerequisites">Prerequisites</h1>
+<h1 id="establish-some-variables-which-are-used-below">establish some variables which are used below</h1>
 
-<p>There are a few different </p>
+<p>service_name=zsshSvc
+client_identity=&quot;${service_name}&quot;Client
+server_identity=&quot;${service_name}&quot;Server
+the_port=22</p>
+<h1 id="create-two-identities-one-host---one-client-only-necessary-if-you-wantneed-them-skippable-if-you">create two identities. one host - one client. Only necessary if you want/need them. Skippable if you</h1>
+<h1 id="already-have-an-identity-provided-here-to-just-make-it-easy-to-testtry">already have an identity. provided here to just &#39;make it easy&#39; to test/try</h1>
+<p>ziti edge create identity device &quot;${server_identity}&quot; -a &quot;${service_name}&quot;ServerEndpoints -o &quot;${server_identity}&quot;.jwt
+ziti edge create identity device &quot;${client_identity}&quot; -a &quot;${service_name}&quot;ClientEndpoints -o &quot;${client_identity}&quot;.jwt</p>
+<h1 id="if-you-want-to-modify-anything-often-deleting-the-configsservices-is-easier-than-updating-them">if you want to modify anything, often deleting the configs/services is easier than updating them</h1>
+<h1 id="its-easier-to-delete-all-the-items-too---so-until-you-understand-exactly-how-ziti-works">it&#39;s easier to delete all the items too - so until you understand exactly how ziti works,</h1>
+<h1 id="make-sure-you-clean-them-all-up-before-making-a-change">make sure you clean them all up before making a change</h1>
+<p>ziti edge delete config &quot;${service_name}&quot;-host.v1
+ziti edge delete config &quot;${service_name}&quot;-client-config
+ziti edge delete service &quot;${service_name}&quot;
+ziti edge delete service-policy &quot;${service_name}&quot;-binding
+ziti edge delete service-policy &quot;${service_name}&quot;-dialing</p>
+<p>ziti edge create config &quot;${service_name}&quot;-host.v1 host.v1 &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;localhost&quot;,&quot;port&quot;:${the_port}, &quot;listenOptions&quot;: {&quot;bindUsingEdgeIdentity&quot;:true}}&#39;</p>
+<h1 id="intercept-is-not-needed-for-zscpzssh-but-make-it-for-testing-if-you-like">intercept is not needed for zscp/zssh but make it for testing if you like</h1>
+<p>ziti edge create config &quot;${service_name}&quot;-client-config intercept.v1 &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;&#39;&quot;${service_name}.ziti&quot;&#39;&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:&#39;&quot;${the_port}&quot;&#39;, &quot;high&quot;:&quot;&#39;${the_port}&quot;&#39;}]}&#39;
+ziti edge create service &quot;${service_name}&quot; --configs &quot;${service_name}&quot;-client-config,&quot;${service_name}&quot;-host.v1
+ziti edge create service-policy &quot;${service_name}&quot;-binding Bind --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ServerEndpoints&#39;
+ziti edge create service-policy &quot;${service_name}&quot;-dialing Dial --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ClientEndpoints&#39;</p>
 </article>
           </div>
           
@@ -106,7 +127,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/ssh/ssh-prereqs.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/zitifying-ssh/zssh-cheat-sheet.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

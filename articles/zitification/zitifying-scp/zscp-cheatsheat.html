@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Zitification | Ziti </title>
+    <title>establish some variables which are used below | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Zitification | Ziti ">
+    <meta name="title" content="establish some variables which are used below | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     
     <!--span>this is text</span-->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
@@ -37,8 +37,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -52,12 +52,12 @@
                     </div>
                     <div style="position: relative">
                         <a href="https://github.com/openziti">
-                            <img src="../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                            <img src="../../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://openziti.discourse.group">
-                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
                         </a>
                     </div>
                 </div>
@@ -95,27 +95,30 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="zitification">Zitification</h1>
+<h1 id="establish-some-variables-which-are-used-below">establish some variables which are used below</h1>
 
-<p>&quot;Zitification&quot; or &quot;zitifying&quot; is the act of taking an application and incorporating a Ziti SDK into that application.
-Once an application has a Ziti SDK incorporated into it, that application can now access network resources securely
-from anywhere in the world provided that the computer has internet access: NO VPN NEEDED, NO ADDITIONAL SOFTWARE NEEDED.</p>
-<p>Integrating a Ziti SDK into your application and enrolling the application itself into a Ziti Network provides you
-with <em>tremendous</em> additional security. By using the Ziti SDK to access remote resources, your application will
-become <em>IMMUNE</em> to classic <a href="https://netfoundry.io/ztna-ransomware/">ransomware attacks</a> of land, expand/multiply, destroy. An application using a <a href="/ziti/overview.html#overview-of-a-ziti-network">Ziti
-Network</a> configured with a truly zero-trust mindset will be impervious to the &quot;expand/multiply&quot; phases of classic
-<a href="https://netfoundry.io/ztna-ransomware/">ransomware attacks</a>. As recent events have shown, it&#39;s probably not a case of if your application will be
-attacked, but when.</p>
-<p>In these posts we&#39;re going to explore how common applications can be &quot;zitified&quot;. The first application we are going
-to focus on will be <code>ssh</code> and it&#39;s corollary <code>scp</code>. At first, you might think, &quot;why even bother&quot; zitifying (of all
-things) <code>ssh</code> and <code>scp</code>? These applications are vital to system administration, and we have been using <code>ssh</code> and
-<code>scp</code> &quot;safely&quot; on the internet for years. Hopefully you&#39;re now interested enough to find out in the first post:
-<a href="/articles/zitification/zitifying-ssh/index.html">zitifying ssh</a></p>
-<p>If you&#39;d prefer to read about other zitifications, a running list of zitified apps will be updated below:</p>
-<ul>
-<li><a href="/articles/zitification/zitifying-ssh/index.html">ssh-&gt;zssh</a></li>
-<li><a href="/articles/zitification/zitifying-scp/index.html">scp-&gt;zscp</a></li>
-</ul>
+<p>service_name=zscpSvc
+client_identity=&quot;${service_name}&quot;Client
+server_identity=&quot;${service_name}&quot;Server
+the_port=22</p>
+<h1 id="create-two-identities-one-host---one-client-only-necessary-if-you-wantneed-them-skippable-if-you">create two identities. one host - one client. Only necessary if you want/need them. Skippable if you</h1>
+<h1 id="already-have-an-identity-provided-here-to-just-make-it-easy-to-testtry">already have an identity. provided here to just &#39;make it easy&#39; to test/try</h1>
+<p>ziti edge create identity device &quot;${server_identity}&quot; -a &quot;${service_name}&quot;ServerEndpoints -o &quot;${server_identity}&quot;.jwt
+ziti edge create identity device &quot;${client_identity}&quot; -a &quot;${service_name}&quot;ClientEndpoints -o &quot;${client_identity}&quot;.jwt</p>
+<h1 id="if-you-want-to-modify-anything-often-deleting-the-configsservices-is-easier-than-updating-them">if you want to modify anything, often deleting the configs/services is easier than updating them</h1>
+<h1 id="its-easier-to-delete-all-the-items-too---so-until-you-understand-exactly-how-ziti-works">it&#39;s easier to delete all the items too - so until you understand exactly how ziti works,</h1>
+<h1 id="make-sure-you-clean-them-all-up-before-making-a-change">make sure you clean them all up before making a change</h1>
+<p>ziti edge delete config &quot;${service_name}&quot;-host.v1
+ziti edge delete config &quot;${service_name}&quot;-client-config
+ziti edge delete service &quot;${service_name}&quot;
+ziti edge delete service-policy &quot;${service_name}&quot;-binding
+ziti edge delete service-policy &quot;${service_name}&quot;-dialing</p>
+<p>ziti edge create config &quot;${service_name}&quot;-host.v1 host.v1 &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;localhost&quot;,&quot;port&quot;:${the_port}, &quot;listenOptions&quot;: {&quot;bindUsingEdgeIdentity&quot;:true}}&#39;</p>
+<h1 id="intercept-is-not-needed-for-zscpzssh-but-make-it-for-testing-if-you-like">intercept is not needed for zscp/zssh but make it for testing if you like</h1>
+<p>ziti edge create config &quot;${service_name}&quot;-client-config intercept.v1 &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;&#39;&quot;${service_name}.ziti&quot;&#39;&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:&#39;&quot;${the_port}&quot;&#39;, &quot;high&quot;:&quot;&#39;${the_port}&quot;&#39;}]}&#39;
+ziti edge create service &quot;${service_name}&quot; --configs &quot;${service_name}&quot;-client-config,&quot;${service_name}&quot;-host.v1
+ziti edge create service-policy &quot;${service_name}&quot;-binding Bind --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ServerEndpoints&#39;
+ziti edge create service-policy &quot;${service_name}&quot;-dialing Dial --service-roles &#39;@&#39;&quot;${service_name}&quot; --identity-roles &#39;#&#39;&quot;${service_name}&quot;&#39;ClientEndpoints&#39;</p>
 </article>
           </div>
           
@@ -124,7 +127,7 @@ things) <code>ssh</code> and <code>scp</code>? These applications are vital to s
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/index.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/zitifying-scp/zscp-cheatsheat.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -150,8 +153,8 @@ things) <code>ssh</code> and <code>scp</code>? These applications are vital to s
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

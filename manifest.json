@@ -408,7 +408,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "VaHrDZj5yuCKzgcQNODzkQ=="
+          "hash": "7O/VKjw/ROxHEo8IBwKaCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/index.contents.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/index.contents.html",
+          "hash": "1I+0t3bhXIxwsWfHbhTfLA=="
         }
       },
       "is_incremental": false,
@@ -420,7 +432,34 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.html",
-          "hash": "QvolYiZ1vFcrL9wz0RPWRg=="
+          "hash": "Mv7napZqDAA+qUakbKIlaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/kubernetes/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/kubernetes/index.html",
+          "hash": "FZhFVg8C9roq+yggMmLMzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/kubernetes/kubernetes-oci.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/kubernetes/kubernetes-oci.html",
+          "hash": "7UtGzYwa/BHXWz3ixC9dbQ=="
         }
       },
       "is_incremental": false,
@@ -428,10 +467,10 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/zitification/ssh/ssh-overview.svg",
+      "source_relative_path": "articles/zitification/kubernetes/private-kubernetes.svg",
       "output": {
         "resource": {
-          "relative_path": "articles/zitification/ssh/ssh-overview.svg"
+          "relative_path": "articles/zitification/kubernetes/private-kubernetes.svg"
         }
       },
       "is_incremental": false,
@@ -439,11 +478,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/zitification/ssh/ssh-prereqs.md",
+      "source_relative_path": "articles/zitification/kubernetes/zitifying-kubectl.contents.md",
       "output": {
         ".html": {
-          "relative_path": "articles/zitification/ssh/ssh-prereqs.html",
-          "hash": "xk2sP1gL0Ki6Siq16J27lA=="
+          "relative_path": "articles/zitification/kubernetes/zitifying-kubectl.contents.html",
+          "hash": "CYnNYz+VBjYg4+z2bftbMw=="
         }
       },
       "is_incremental": false,
@@ -451,11 +490,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/zitification/ssh/zitifying-scp.md",
+      "source_relative_path": "articles/zitification/zitifying-scp/index.md",
       "output": {
         ".html": {
-          "relative_path": "articles/zitification/ssh/zitifying-scp.html",
-          "hash": "/BgRju8yPlhZIluywx0DFw=="
+          "relative_path": "articles/zitification/zitifying-scp/index.html",
+          "hash": "2mF3dSVdKsMmDkJ6f/Sk8g=="
         }
       },
       "is_incremental": false,
@@ -463,11 +502,35 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/zitification/ssh/zitifying-ssh.md",
+      "source_relative_path": "articles/zitification/zitifying-scp/zitifying-scp.contents.md",
       "output": {
         ".html": {
-          "relative_path": "articles/zitification/ssh/zitifying-ssh.html",
-          "hash": "yM84rgusQ+LtkATcgaPvKQ=="
+          "relative_path": "articles/zitification/zitifying-scp/zitifying-scp.contents.html",
+          "hash": "MvqnwheuCdWrhbbRn7HuVg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/zitifying-scp/zscp-cheatsheat.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/zitifying-scp/zscp-cheatsheat.html",
+          "hash": "msXwiDhFbGOJyZhC4kXwig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/zitifying-ssh/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/zitifying-ssh/index.html",
+          "hash": "YFIUZsSRWh+pgfvTIB7R4g=="
         }
       },
       "is_incremental": false,
@@ -475,10 +538,45 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "articles/zitification/ssh/zssh-overview.svg",
+      "source_relative_path": "articles/zitification/zitifying-ssh/ssh-overview.svg",
       "output": {
         "resource": {
-          "relative_path": "articles/zitification/ssh/zssh-overview.svg"
+          "relative_path": "articles/zitification/zitifying-ssh/ssh-overview.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/zitifying-ssh/zitifying-ssh.contents.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/zitifying-ssh/zitifying-ssh.contents.html",
+          "hash": "yTrHsOR74btVQ5qMDCPkdQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/zitifying-ssh/zssh-cheat-sheet.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/zitifying-ssh/zssh-cheat-sheet.html",
+          "hash": "iYOdRRLPvsjykvcnMXMNcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/zitifying-ssh/zssh-overview.svg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/zitifying-ssh/zssh-overview.svg"
         }
       },
       "is_incremental": false,
@@ -690,6 +788,17 @@
       "output": {
         "resource": {
           "relative_path": "images/eth0.ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
         }
       },
       "is_incremental": false,
@@ -2254,7 +2363,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 97,
+          "total_file_count": 104,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
