@@ -444,7 +444,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/index.html",
-          "hash": "FZhFVg8C9roq+yggMmLMzw=="
+          "hash": "M8SN7ANyIstPtG2s/t1/Zw=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/zitifying-kubectl.contents.html",
-          "hash": "CYnNYz+VBjYg4+z2bftbMw=="
+          "hash": "GiGAfdxGDWR7K+ReC82VJA=="
         }
       },
       "is_incremental": false,
