@@ -420,7 +420,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.contents.html",
-          "hash": "1I+0t3bhXIxwsWfHbhTfLA=="
+          "hash": "njReFro8LeWO3GWlWJF7LA=="
         }
       },
       "is_incremental": false,
@@ -432,7 +432,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.html",
-          "hash": "Mv7napZqDAA+qUakbKIlaQ=="
+          "hash": "3LKNq+sAzWRORBWtXPQNZw=="
         }
       },
       "is_incremental": false,
@@ -444,7 +444,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/index.html",
-          "hash": "M8SN7ANyIstPtG2s/t1/Zw=="
+          "hash": "vwSPVpE+FjTfkRh2a1nTKw=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/zitifying-kubectl.contents.html",
-          "hash": "GiGAfdxGDWR7K+ReC82VJA=="
+          "hash": "4KKixlqLhkO6Ux1YNTJRnw=="
         }
       },
       "is_incremental": false,
