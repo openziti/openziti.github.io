@@ -113,7 +113,7 @@ ziti edge delete config &quot;${service_name}&quot;-client-config
 ziti edge delete service &quot;${service_name}&quot;
 ziti edge delete service-policy &quot;${service_name}&quot;-binding
 ziti edge delete service-policy &quot;${service_name}&quot;-dialing</p>
-<p>ziti edge create config &quot;${service_name}&quot;-host.v1 host.v1 &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;localhost&quot;,&quot;port&quot;:${the_port}, &quot;listenOptions&quot;: {&quot;bindUsingEdgeIdentity&quot;:true}}&#39;</p>
+<p>ziti edge create config &quot;${service_name}&quot;-host.v1 host.v1 &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;localhost&quot;,&quot;port&quot;:&#39;&quot;${the_port}&quot;&#39;, &quot;listenOptions&quot;: {&quot;bindUsingEdgeIdentity&quot;:true}}&#39;</p>
 <h1 id="intercept-is-not-needed-for-zscpzssh-but-make-it-for-testing-if-you-like">intercept is not needed for zscp/zssh but make it for testing if you like</h1>
 <p>ziti edge create config &quot;${service_name}&quot;-client-config intercept.v1 &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;&#39;&quot;${service_name}.ziti&quot;&#39;&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:&#39;&quot;${the_port}&quot;&#39;, &quot;high&quot;:&quot;&#39;${the_port}&quot;&#39;}]}&#39;
 ziti edge create service &quot;${service_name}&quot; --configs &quot;${service_name}&quot;-client-config,&quot;${service_name}&quot;-host.v1
