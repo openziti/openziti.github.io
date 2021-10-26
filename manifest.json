@@ -18,7 +18,7 @@
       "output": {
         ".html": {
           "relative_path": "api/clang.html",
-          "hash": "jKVd5NehqmDG2frfcpPCOA=="
+          "hash": "XtysxN8XkdcG0kdYmw87sw=="
         }
       },
       "is_incremental": false,
@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/clang/index.html",
-          "hash": "uTV1XOSulaIa7GgCQm2aEA=="
+          "hash": "7k0HWKYR7Pe8QaTXuqjMtg=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp.html",
-          "hash": "aLZoPiMI88/On5DmHOJOsA=="
+          "hash": "8p9cVRNjYgeU3wERcNfrCg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.Ziti.html",
-          "hash": "AY7g5DjORe8nST7FHXSqBA=="
+          "hash": "sbRdm1pYx4shS3kRS4EnvQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnConnected.html",
-          "hash": "l9HWr+TJ80WXvTuoZRlGmg=="
+          "hash": "COM6XCgRvsAmX5sYqm0TwQ=="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataReceived.html",
-          "hash": "4jLDrEU1XbAyMBGp/8so/A=="
+          "hash": "HtsBsew+MHq2/l7trGGmpg=="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiConnection.OnDataWritten.html",
-          "hash": "EUrGUcS0rzzrowA9N16lIw=="
+          "hash": "/A1HMRPlu5apccEwNm/V0A=="
         }
       },
       "is_incremental": false,
@@ -102,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiConnection.html",
-          "hash": "iJW96mqp37u1c/TKygyTFQ=="
+          "hash": "mjiJ4SARM2bi+mjLOb3fSA=="
         }
       },
       "is_incremental": false,
@@ -114,7 +114,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiException.html",
-          "hash": "j67Z9XEJlJoLZ5wIZK81HA=="
+          "hash": "/pzmW2O3JoOOAIja0NruOQ=="
         }
       },
       "is_incremental": false,
@@ -126,7 +126,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiIdentity.html",
-          "hash": "CPMd4dMjxeTNbR5l6Vj6+w=="
+          "hash": "qbuKJA5gtCPhLzmrZ1k2qw=="
         }
       },
       "is_incremental": false,
@@ -138,7 +138,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiStatus.html",
-          "hash": "2Wr52Ssb4Mt+bEyQQdUUHQ=="
+          "hash": "BBLycmFirdiE/FdAZ2PeWw=="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.ZitiStream.html",
-          "hash": "qN90dwH9RNF32oemFiYIgA=="
+          "hash": "nhaxkl18aD5NtMuAlXFHHg=="
         }
       },
       "is_incremental": false,
@@ -162,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "api/csharp/NetFoundry.html",
-          "hash": "cnc5KCNYyi4Yat+zMFMHvg=="
+          "hash": "0cW0DKWsp2OJatkj1FfKKw=="
         }
       },
       "is_incremental": false,
@@ -174,7 +174,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "R7zZN67rXRJPxeGgg1JTnA=="
+          "hash": "tLiGCd8Ka/bsk9FEkSSFOQ=="
         }
       },
       "is_incremental": false,
@@ -186,7 +186,7 @@
       "output": {
         ".html": {
           "relative_path": "api/rest/create-ca-json.html",
-          "hash": "LnHgKjc8h/gVbOfCxNax6Q=="
+          "hash": "rZRSlb4Zb4YO7ggO0HmM4A=="
         }
       },
       "is_incremental": false,
@@ -198,7 +198,7 @@
       "output": {
         ".html": {
           "relative_path": "api/rest/create-service-rest.html",
-          "hash": "eCV1EqrLcH677T9NgoZnsA=="
+          "hash": "mtlH940ipR3LPqP92AZT9Q=="
         }
       },
       "is_incremental": false,
@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/rest/index.html",
-          "hash": "PkLe8wkOffAzECgj5R/AZA=="
+          "hash": "d7qMrNAMG4FjA1fg7fd+Kg=="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "api/swift/index.html",
-          "hash": "v58pbRLth/p/Xti8hWeGaQ=="
+          "hash": "Ra3HkdY7OAUjc2cewGIi6A=="
         }
       },
       "is_incremental": false,
@@ -324,7 +324,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/bootstrapping-trust/part-01.encryption-everywhere.html",
-          "hash": "JmhbA7IpHDfzGFBvwUq0Kg=="
+          "hash": "/wB5eiR9atwJjx/OPKkZQQ=="
         }
       },
       "is_incremental": false,
@@ -336,7 +336,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/bootstrapping-trust/part-02.a-primer-on-public-key-cryptography.html",
-          "hash": "dk74zjxxAptCPDysGo+y8g=="
+          "hash": "NuRERAPmOxlhmhufBKqwDQ=="
         }
       },
       "is_incremental": false,
@@ -348,7 +348,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/bootstrapping-trust/part-03.certificates.html",
-          "hash": "D/m/oea8xNNyfsnBUgKFDg=="
+          "hash": "4DZl4bR8eJ04MeFEgCnF6Q=="
         }
       },
       "is_incremental": false,
@@ -360,7 +360,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/bootstrapping-trust/part-04.certificate-authorities-and-chains-of-trust.html",
-          "hash": "XxccaPBlfxzTtWOYm5vrAg=="
+          "hash": "83axMWsIzXatdwE561HLnA=="
         }
       },
       "is_incremental": false,
@@ -372,7 +372,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/bootstrapping-trust/part-05.bootstrapping-trust.html",
-          "hash": "AU4RLh0jz15mKY/owEF5bw=="
+          "hash": "/SL4uzMWyp/HjHAZLVlbDw=="
         }
       },
       "is_incremental": false,
@@ -384,7 +384,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/c-sdk-on-beaglebone.html",
-          "hash": "u7ZMSDjP4DrauLdQwvAPtQ=="
+          "hash": "SzGw6S8TpvS+GcsOZJMEQA=="
         }
       },
       "is_incremental": false,
@@ -396,7 +396,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/index.html",
-          "hash": "1GoMwcXCpAvo2X8h4iIfbw=="
+          "hash": "NT/i/jyhoAEBHa9p509gQA=="
         }
       },
       "is_incremental": false,
@@ -420,7 +420,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.contents.html",
-          "hash": "J1CdGDi3xQKziKXVQfreLg=="
+          "hash": "gcdK1S5vrvZnMfNjzgG3vQ=="
         }
       },
       "is_incremental": false,
@@ -432,7 +432,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/index.html",
-          "hash": "rT7A/EvpoCzVsOZIzixegg=="
+          "hash": "BaO5voIwqkRjFvkAahKhaA=="
         }
       },
       "is_incremental": false,
@@ -444,7 +444,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/index.html",
-          "hash": "A2nUZL2yBaQXdmH7x+d8uw=="
+          "hash": "4/4Anc6KZeGvURUkjc6Dhw=="
         }
       },
       "is_incremental": false,
@@ -459,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/kubernetes-oci.html",
-          "hash": "7UtGzYwa/BHXWz3ixC9dbQ=="
+          "hash": "UP4i/JdqcIQOaqbEjFeP9w=="
         }
       },
       "is_incremental": false,
@@ -482,7 +482,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/zitifying-kubectl.contents.html",
-          "hash": "R2s/bwIQ+LJRxWtUbaDdeQ=="
+          "hash": "cpEMqf+u55hMtPZ9BsNzGg=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-scp/index.html",
-          "hash": "IYb8pSA3qFXiFrzcpTSxJQ=="
+          "hash": "RRFoU5NVwHsDsELPosLSJA=="
         }
       },
       "is_incremental": false,
@@ -506,7 +506,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-scp/zitifying-scp.contents.html",
-          "hash": "aEvVTDIFN3viTrAPFaKcxg=="
+          "hash": "YUW/VTBykjDJhIP/PjTe7g=="
         }
       },
       "is_incremental": false,
@@ -518,7 +518,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-scp/zscp-cheatsheat.html",
-          "hash": "3N5h6CSoshBWM9W0NZp82A=="
+          "hash": "1y8WrHdllEkHsgJs/ObKqw=="
         }
       },
       "is_incremental": false,
@@ -530,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-ssh/index.html",
-          "hash": "s9BngU5fblDsOkI5t8iU5Q=="
+          "hash": "G3KbHmhCfnaFjaNHAVBKBA=="
         }
       },
       "is_incremental": false,
@@ -553,7 +553,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-ssh/zitifying-ssh.contents.html",
-          "hash": "ilR7OKy757plmIFAPI9tCw=="
+          "hash": "z1RACn9URVbSZ/FmjM1X1w=="
         }
       },
       "is_incremental": false,
@@ -565,7 +565,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-ssh/zssh-cheat-sheet.html",
-          "hash": "XskwzsUHVoBuVCMYueICXg=="
+          "hash": "LvbNPHUHBDmDTYCCp6Uf2g=="
         }
       },
       "is_incremental": false,
@@ -588,7 +588,7 @@
       "output": {
         ".html": {
           "relative_path": "glossary/glossary.html",
-          "hash": "1KsY63ChN4xfkNEc2CeQWg=="
+          "hash": "/TaFQ9kKTKhja3NPQmMisA=="
         }
       },
       "is_incremental": false,
@@ -806,6 +806,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/fb.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/fb.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/github-white.svg",
       "output": {
         "resource": {
@@ -832,6 +843,17 @@
       "output": {
         "resource": {
           "relative_path": "images/horizontal-scale.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/li.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/li.svg"
         }
       },
       "is_incremental": false,
@@ -938,10 +960,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/twit.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/twit.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/ui-terminator-bug.png",
       "output": {
         "resource": {
           "relative_path": "images/ui-terminator-bug.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/yt.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/yt.svg"
         }
       },
       "is_incremental": false,
@@ -1052,7 +1096,7 @@
       "output": {
         ".html": {
           "relative_path": "samples/clang.html",
-          "hash": "jYvK5sCX1erJyQKcZHIwmA=="
+          "hash": "gn5ypIn3v4WRU+lUypHX2g=="
         }
       },
       "is_incremental": false,
@@ -1064,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "samples/csharp.html",
-          "hash": "UQvVNFh/RilvoSHyJEUiJw=="
+          "hash": "LUPuhr+1rxa2848tB7PJeA=="
         }
       },
       "is_incremental": false,
@@ -1076,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "samples/index.html",
-          "hash": "gff3q6p6xhNmizCdvv505A=="
+          "hash": "iF6svBEzT9ohKdpjAMpQsg=="
         }
       },
       "is_incremental": false,
@@ -1100,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "test.html",
-          "hash": "riIUrtzkzZj/Tnr+xglXjg=="
+          "hash": "WyVmwZuzstdMBM5y+JJDAA=="
         }
       },
       "is_incremental": false,
@@ -1124,7 +1168,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-android-app/CODE_OF_CONDUCT.html",
-          "hash": "z3xIlrRcZ+krukIY3zqX1g=="
+          "hash": "Q/GPeQ0cmnJHI6340If60g=="
         }
       },
       "is_incremental": false,
@@ -1136,7 +1180,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-android-app/CONTRIBUTING.html",
-          "hash": "kuZ3O53siDEs3HES/JJJYw=="
+          "hash": "OCTnCWkbaGQvPrE1UMaZgw=="
         }
       },
       "is_incremental": false,
@@ -1148,7 +1192,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-android-app/README.html",
-          "hash": "8R2pXl1lYZ8uzkmrMOkrRQ=="
+          "hash": "kvYOiUAW9bLIDlOAdeDTtQ=="
         }
       },
       "is_incremental": false,
@@ -1391,7 +1435,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/README.html",
-          "hash": "JCzUFazL65FOQutGtQnAfw=="
+          "hash": "fau2dbsyCwsd5/bBhm6f9w=="
         }
       },
       "is_incremental": false,
@@ -1403,7 +1447,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/aws.html",
-          "hash": "FfY8jMUsVRrAwrm6kwekJw=="
+          "hash": "4xocSkLw2En/zaX1FzEVhA=="
         }
       },
       "is_incremental": false,
@@ -1426,7 +1470,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/docker/README.html",
-          "hash": "In/FZBdvcLbQz/oG49Eyew=="
+          "hash": "c5Ie4gPLZoDlAZIt3eopIw=="
         }
       },
       "is_incremental": false,
@@ -1471,7 +1515,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/kubernetes-sidecar-tunnel-quickstart.html",
-          "hash": "5GgRt63RgG1xm0mFWmFutw=="
+          "hash": "yDXrGvLGs8WmlS2d/XpeBg=="
         }
       },
       "is_incremental": false,
@@ -1505,7 +1549,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/cli-snippets/login.html",
-          "hash": "u+Ue0ORoiCLfJAtC7QCF6g=="
+          "hash": "+SdVxXjlico6Ft2Pt1QxFA=="
         }
       },
       "is_incremental": false,
@@ -1517,7 +1561,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/android.html",
-          "hash": "+pDaDoPIKkdjAPl50CCOZQ=="
+          "hash": "3QSvKpLj3K0KbuNdxCuJxw=="
         }
       },
       "is_incremental": false,
@@ -1529,7 +1573,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/how-to-choose.html",
-          "hash": "cq/04qTGxogyjWzU2dlFGQ=="
+          "hash": "03CQG8g/BYfwaPWWx/FyaA=="
         }
       },
       "is_incremental": false,
@@ -1541,7 +1585,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/iOS.html",
-          "hash": "d+w6qEHzmAcaIkcokxzr7w=="
+          "hash": "X6Zt8sXPFv4zzmsWD40LFg=="
         }
       },
       "is_incremental": false,
@@ -1553,7 +1597,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/linux.html",
-          "hash": "1bhEIvFJviW/4nVoibeKQA=="
+          "hash": "q1wbeUM1MXfg6tvSKHLWHA=="
         }
       },
       "is_incremental": false,
@@ -1565,7 +1609,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/macos.html",
-          "hash": "2i4cgmIdnPF3bFetLljYvA=="
+          "hash": "wwP1aRkZ5YR72azrfIITiw=="
         }
       },
       "is_incremental": false,
@@ -1577,7 +1621,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/overview.html",
-          "hash": "EULPq/QIDzesLHWpD0QhSw=="
+          "hash": "kpiEAhZvKvQ/wYEZDhNk4g=="
         }
       },
       "is_incremental": false,
@@ -1589,7 +1633,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/proxy-example.html",
-          "hash": "m+xsK517Rll1fzKadxmZlg=="
+          "hash": "gcFdEv/2SBu/YD8G1I9+xQ=="
         }
       },
       "is_incremental": false,
@@ -1601,7 +1645,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/sdk-quickinfo.html",
-          "hash": "lXUpG4AyOFYL8AZCBhUaQQ=="
+          "hash": "650oZc+DYRkpLYy68gMvEA=="
         }
       },
       "is_incremental": false,
@@ -1613,7 +1657,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/sdks.html",
-          "hash": "9qjZmAa7VFHnwY5r4pnHrw=="
+          "hash": "MZnXk64rrOpYBLxJtvLd1A=="
         }
       },
       "is_incremental": false,
@@ -1625,7 +1669,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/tunneler-overview.html",
-          "hash": "C5zXMFMwuJ3Uv6amdMgiiQ=="
+          "hash": "EOKucbD+QQmhUnd7eTzAOw=="
         }
       },
       "is_incremental": false,
@@ -1637,7 +1681,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/tunneler.html",
-          "hash": "K4FXHBC7f3r6PYLhI5Q/bA=="
+          "hash": "24Y+eV4kpAn/2j/2kwciig=="
         }
       },
       "is_incremental": false,
@@ -1649,7 +1693,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/which-client.html",
-          "hash": "ICJlQ+PyWkFQ6wkb/fxcOw=="
+          "hash": "CRWI9v31rHvDgP2ylkzRhg=="
         }
       },
       "is_incremental": false,
@@ -1661,7 +1705,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/clients/windows.html",
-          "hash": "+e/EYv/3T8m3bOa0Lzd6vQ=="
+          "hash": "FkyvtkX4wqUC/FgIilzfug=="
         }
       },
       "is_incremental": false,
@@ -1673,7 +1717,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/config-store/consuming.html",
-          "hash": "tpp7XZOA/To3/sAjXty+FQ=="
+          "hash": "IyXx2b+QMh7Y3o5gSUaBXQ=="
         }
       },
       "is_incremental": false,
@@ -1685,7 +1729,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/config-store/managing.html",
-          "hash": "WSNE0slQdaJBw9pXaQmS9A=="
+          "hash": "TlbqhDmrQJjIIj8DaVw+UQ=="
         }
       },
       "is_incremental": false,
@@ -1697,7 +1741,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/config-store/overview.html",
-          "hash": "1Jh08f/9vFrwTPSWpKTkAg=="
+          "hash": "d8bHV0uV4bqKYzuTl+X7TQ=="
         }
       },
       "is_incremental": false,
@@ -1709,7 +1753,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/docker-quickstart.html",
-          "hash": "c5BRYe/wvrN1hZK1IG/OdQ=="
+          "hash": "dRacAc9RvPg9EZJBHQoqaA=="
         }
       },
       "is_incremental": false,
@@ -1721,7 +1765,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/enroller-lts.html",
-          "hash": "GOLGomilI1kToZxSGxHhng=="
+          "hash": "GNrquNgyaP43CYQXPHLiWA=="
         }
       },
       "is_incremental": false,
@@ -1733,7 +1777,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/enroller.html",
-          "hash": "zE713r2dS7LB96gOYZTV0A=="
+          "hash": "p214i+PNVy4DncoNhFqwBg=="
         }
       },
       "is_incremental": false,
@@ -1745,7 +1789,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/overview.html",
-          "hash": "JdwKfs/UQXvxgzKqAG+vFg=="
+          "hash": "bJzjTi3uklJeMN4+F/y6bA=="
         }
       },
       "is_incremental": false,
@@ -1757,7 +1801,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/tunneler-lts.html",
-          "hash": "0n0s9+J/Auemhd5YfLycUA=="
+          "hash": "z+YFMB/GpmUX7obum4BXSA=="
         }
       },
       "is_incremental": false,
@@ -1769,7 +1813,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/tunneler.html",
-          "hash": "0J0QEH+em1OdwXb/L+5Mvg=="
+          "hash": "1MyTqeJCRt2W8UHwtDpEJw=="
         }
       },
       "is_incremental": false,
@@ -1781,7 +1825,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/ziti-cli.html",
-          "hash": "vFMrF3sB6fxMtR44U1n8hw=="
+          "hash": "6xGCp91FUq+iGr6rQ8YpDw=="
         }
       },
       "is_incremental": false,
@@ -1793,7 +1837,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/hello-ziti.html",
-          "hash": "Iucqvn8gmcZ+oVX63J8P2g=="
+          "hash": "Qn0QzGdrIhn7TiP0OxGWwQ=="
         }
       },
       "is_incremental": false,
@@ -1805,7 +1849,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/create-identity-cli.html",
-          "hash": "TkMVm58prW2jdJQivulzBg=="
+          "hash": "XBUEbx0sU01edqybZbIfvA=="
         }
       },
       "is_incremental": false,
@@ -1817,7 +1861,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/creating.html",
-          "hash": "0eUgjl+lcbZ0SYp9tRtGpA=="
+          "hash": "VceeZVLGSD48NzOs2eNJgg=="
         }
       },
       "is_incremental": false,
@@ -1829,7 +1873,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/enrolling.html",
-          "hash": "Fd+V4RTvJecEBKcvLtVcEA=="
+          "hash": "dib0az/axe9BZC6hJNJWYQ=="
         }
       },
       "is_incremental": false,
@@ -1841,7 +1885,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/overview.html",
-          "hash": "AWsltuy/Ch+AHDLlXm+Bog=="
+          "hash": "bHQcAvhZ5i0WDkhYhJ22pQ=="
         }
       },
       "is_incremental": false,
@@ -1853,7 +1897,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/install/controller.html",
-          "hash": "0Kcl47TTrwsGj+h7Rwta+w=="
+          "hash": "9oxOLn33WgHVF+39rk0uDA=="
         }
       },
       "is_incremental": false,
@@ -1865,7 +1909,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/install/edge-router.html",
-          "hash": "ghcJmfdqn5NlZevVOMB21Q=="
+          "hash": "M7I8b8x0LXY4pwQgyv5tJQ=="
         }
       },
       "is_incremental": false,
@@ -1877,7 +1921,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/install/overview.html",
-          "hash": "hrjYm6DSFn0CHoAZQKKoZw=="
+          "hash": "/7AkOi8kUOn9IwclaY2z7w=="
         }
       },
       "is_incremental": false,
@@ -1889,7 +1933,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/install/pki.html",
-          "hash": "XMlxLrz2qHh8QZfOU6sFtg=="
+          "hash": "6Le3kv0RcLxGUIw//KFTLw=="
         }
       },
       "is_incremental": false,
@@ -1913,7 +1957,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/controller.html",
-          "hash": "5Dq3JIlik/adXDwVNNSUGg=="
+          "hash": "loT14WCWUVsF77A1sWfa3Q=="
         }
       },
       "is_incremental": false,
@@ -1925,7 +1969,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/edge-router.html",
-          "hash": "uNQRdlP9auNgKEd8gWx+1w=="
+          "hash": "uT8ZnVSVbWltEB2mbjCjPQ=="
         }
       },
       "is_incremental": false,
@@ -1937,7 +1981,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/fabric-router.html",
-          "hash": "Hasp+I027GLiS4Dn0sDdHA=="
+          "hash": "nyMOlix6MGdSRJegwX4LMQ=="
         }
       },
       "is_incremental": false,
@@ -1949,7 +1993,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/logging-snippet.html",
-          "hash": "oyHc9UQwagxm4ibXroIQoQ=="
+          "hash": "k5AL+q7/6actLi282NLtOQ=="
         }
       },
       "is_incremental": false,
@@ -1961,7 +2005,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/manage.html",
-          "hash": "K80jw6fTa0llCYHIDX+8EQ=="
+          "hash": "GBkKHvEX7clmpemxCwiytA=="
         }
       },
       "is_incremental": false,
@@ -1973,7 +2017,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/pki-troubleshooting.html",
-          "hash": "O+IeUXJrLFKq/keO1qmEDA=="
+          "hash": "L+8bMbyE7pE7Dcz2Xh8jUQ=="
         }
       },
       "is_incremental": false,
@@ -1985,7 +2029,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/pki.html",
-          "hash": "Ggrj1H+48uAWGV+AyYQnjg=="
+          "hash": "5g4cre3Pf13td+REcxnoig=="
         }
       },
       "is_incremental": false,
@@ -1997,7 +2041,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/router-overview.html",
-          "hash": "Re3/+v7f4isnJbnvmsWaiw=="
+          "hash": "wrbai3VRNSXjyb3ntNWMsA=="
         }
       },
       "is_incremental": false,
@@ -2042,7 +2086,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/troubleshooting.html",
-          "hash": "VjOLbBRUW9ocXAIYm39TKw=="
+          "hash": "bZsEbJY8TCmLpYrn05tAZQ=="
         }
       },
       "is_incremental": false,
@@ -2054,7 +2098,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/tunneler.html",
-          "hash": "84WIeHPhDPuGVKz3BCY9ng=="
+          "hash": "Q1OzMBu+vxUYlflq4jwbhQ=="
         }
       },
       "is_incremental": false,
@@ -2066,7 +2110,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/overview.html",
-          "hash": "KDAVexDSKEWeaEbQekFviA=="
+          "hash": "9MtOCTvM5N4hFEvZKV9Asw=="
         }
       },
       "is_incremental": false,
@@ -2078,7 +2122,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-edge-router-policy-cli.html",
-          "hash": "90eLhUsY5jcckDQoU+VdCQ=="
+          "hash": "FClbLfGFT0SCsiaOLBdWEQ=="
         }
       },
       "is_incremental": false,
@@ -2090,7 +2134,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-edge-router-policy-ui.html",
-          "hash": "wc9hmmF5Zd/IwnfRFtNqlA=="
+          "hash": "u61ekXdfecaxXJrkLPkCPg=="
         }
       },
       "is_incremental": false,
@@ -2102,7 +2146,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-service-edge-router-policy-cli.html",
-          "hash": "+DbZrJ/z/dmwu0dTV478jg=="
+          "hash": "HSzzNK1EuPqLamf9Y3wAJw=="
         }
       },
       "is_incremental": false,
@@ -2114,7 +2158,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-service-edge-router-policy-ui.html",
-          "hash": "UMd8zvIWPvmatCW/PcWXsg=="
+          "hash": "HLPLhlgQzjmAfH+WmwhVXg=="
         }
       },
       "is_incremental": false,
@@ -2126,7 +2170,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-service-policy-cli.html",
-          "hash": "VbpkjAbc3F8i5kn/5A9fpw=="
+          "hash": "XlIboWRC2IsKXkrjc5lz+A=="
         }
       },
       "is_incremental": false,
@@ -2138,7 +2182,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/create-service-policy-ui.html",
-          "hash": "p3pmID/Is1WI7uIARolx6A=="
+          "hash": "D6SdDcLPkxQnwDSE3+OTPA=="
         }
       },
       "is_incremental": false,
@@ -2150,7 +2194,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/creating-edge-router-policies.html",
-          "hash": "bigkaQsWVjhcX/rM5Dqlfg=="
+          "hash": "vaUwXpwjd0fKxyvMitywlQ=="
         }
       },
       "is_incremental": false,
@@ -2162,7 +2206,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/creating-service-edge-router-policies.html",
-          "hash": "+C9YoH37FIV+Q/VN9pcCSw=="
+          "hash": "T0M9vxoFNbcRzfOMXWOAYQ=="
         }
       },
       "is_incremental": false,
@@ -2174,7 +2218,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/creating-service-policies.html",
-          "hash": "MHrH2kCk8wYpffFY0TXEIA=="
+          "hash": "vdn5HIkvv6zvuR+FGAVDAw=="
         }
       },
       "is_incremental": false,
@@ -2186,7 +2230,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/policies/overview.html",
-          "hash": "KVs+a5OY6T9gC5QhGBtWYw=="
+          "hash": "rr2fPRO+Pfc2JdAPJpJYxw=="
         }
       },
       "is_incremental": false,
@@ -2198,7 +2242,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstart.html",
-          "hash": "TRmJchKk4qW9C1/2DsuRIg=="
+          "hash": "dPXJqpfg1LDvvLjmlKk/YQ=="
         }
       },
       "is_incremental": false,
@@ -2210,7 +2254,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/hsm-overview.html",
-          "hash": "VxmsjFEf5r/n3sZra5NV8g=="
+          "hash": "/+Y8HXhlvNOnJ7Zb1vrjvw=="
         }
       },
       "is_incremental": false,
@@ -2222,7 +2266,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/hsm/softhsm.html",
-          "hash": "62fnnNYydqsZ5IB71UJp8A=="
+          "hash": "QUQuhkPhDVPqYcRNQW5O4A=="
         }
       },
       "is_incremental": false,
@@ -2234,7 +2278,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/hsm/yubikey.html",
-          "hash": "mkOErz/xwEeG3HLt010T2Q=="
+          "hash": "ED9XCtfrtBptlIfQiSiJBg=="
         }
       },
       "is_incremental": false,
@@ -2246,7 +2290,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/kubernetes/README.html",
-          "hash": "DImYBkz0fK9Awy/i73/JOQ=="
+          "hash": "u7JMPgHQ9bh3mxU9vIfuVA=="
         }
       },
       "is_incremental": false,
@@ -2258,7 +2302,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/aws-quickstart.html",
-          "hash": "SlftjAGPUDu3bUXjc2lvQw=="
+          "hash": "1vdLEB6JGaEHVsmIZZIAJw=="
         }
       },
       "is_incremental": false,
@@ -2270,7 +2314,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/azure-quickstart.html",
-          "hash": "52es3rt0GiUSNGgZGOdaiQ=="
+          "hash": "Au7sgv5d92KxVkQfYR1k6w=="
         }
       },
       "is_incremental": false,
@@ -2282,7 +2326,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/common-quickstart.html",
-          "hash": "jjbSkh7CawuiD83xAHSOqg=="
+          "hash": "dkdDDg5NXV01u0NBoZJGZA=="
         }
       },
       "is_incremental": false,
@@ -2294,7 +2338,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/networks-overview.html",
-          "hash": "9tPK6quhpMfwjLwcpBbHqw=="
+          "hash": "edBuODOGwgf95q50IO403A=="
         }
       },
       "is_incremental": false,
@@ -2306,7 +2350,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/quickstart-overview.html",
-          "hash": "+vQI/Bijzjp1yB08Sm1oqg=="
+          "hash": "lvOqbHmlbd1SyLCDWrg+EQ=="
         }
       },
       "is_incremental": false,
@@ -2318,7 +2362,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/services/create-service-cli.html",
-          "hash": "4VvKYfjvpH6vAiN3W5Pa4A=="
+          "hash": "qpF08YvHNaeGCinGt3cIvg=="
         }
       },
       "is_incremental": false,
@@ -2330,7 +2374,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/services/creating.html",
-          "hash": "1tfu08lzu6a0Ia99QxsusQ=="
+          "hash": "rg+M5Na6BD/0HyDPBRckVA=="
         }
       },
       "is_incremental": false,
@@ -2342,7 +2386,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/services/overview.html",
-          "hash": "VItt9zxoVKeERiLJQ/D5yQ=="
+          "hash": "L6hMN1HBwdIFYFCcd4nCmQ=="
         }
       },
       "is_incremental": false,
