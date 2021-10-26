@@ -1745,7 +1745,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/downloads/overview.html",
-          "hash": "A2PzRU1NCA3pKaf9qYneTg=="
+          "hash": "JdwKfs/UQXvxgzKqAG+vFg=="
         }
       },
       "is_incremental": false,
@@ -1770,6 +1770,18 @@
         ".html": {
           "relative_path": "ziti/downloads/tunneler.html",
           "hash": "0J0QEH+em1OdwXb/L+5Mvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/downloads/ziti-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/downloads/ziti-cli.html",
+          "hash": "vFMrF3sB6fxMtR44U1n8hw=="
         }
       },
       "is_incremental": false,
@@ -1817,7 +1829,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/enrolling.html",
-          "hash": "9g0Cs8jbk0cpYLcAyIGSWg=="
+          "hash": "Fd+V4RTvJecEBKcvLtVcEA=="
         }
       },
       "is_incremental": false,
@@ -1829,7 +1841,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/overview.html",
-          "hash": "DOa4ns484+DT4bGvk19oSw=="
+          "hash": "AWsltuy/Ch+AHDLlXm+Bog=="
         }
       },
       "is_incremental": false,
@@ -2363,7 +2375,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 104,
+          "total_file_count": 105,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
