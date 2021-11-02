@@ -707,6 +707,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/clang-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/clang-logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/cloudformation01.png",
       "output": {
         "resource": {
@@ -733,6 +744,17 @@
       "output": {
         "resource": {
           "relative_path": "images/create_service_ui.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/csharp-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/csharp-logo.svg"
         }
       },
       "is_incremental": false,
@@ -839,10 +861,43 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/golang-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/golang-logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/horizontal-scale.png",
       "output": {
         "resource": {
           "relative_path": "images/horizontal-scale.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/java-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/java-logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/kotlin-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/kotlin-logo.svg"
         }
       },
       "is_incremental": false,
@@ -887,6 +942,17 @@
       "output": {
         "resource": {
           "relative_path": "images/nflightbglogo_50.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/nodejs.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/nodejs.svg"
         }
       },
       "is_incremental": false,
@@ -960,6 +1026,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/swift-logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/swift-logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/twit.svg",
       "output": {
         "resource": {
@@ -1015,10 +1092,22 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "index.html",
+      "source_relative_path": "index.css",
       "output": {
         "resource": {
-          "relative_path": "index.html"
+          "relative_path": "index.css"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "vDkM7i4TZSo/w/QtLTcwZA=="
         }
       },
       "is_incremental": false,
@@ -1156,7 +1245,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "JSRIWqfeDuUNJusBetGDRQ=="
+          "hash": "n7rKTA2smeiJnN115OdckQ=="
         }
       },
       "is_incremental": false,
@@ -1833,6 +1922,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/getting-started.html",
+          "hash": "i6+2pp2mM4Xhsgfd/S+pIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/hello-ziti.md",
       "output": {
         ".html": {
@@ -2419,7 +2520,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 105,
+          "total_file_count": 107,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
