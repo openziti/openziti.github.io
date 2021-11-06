@@ -210,7 +210,7 @@
       "output": {
         ".html": {
           "relative_path": "api/rest/index.html",
-          "hash": "d7qMrNAMG4FjA1fg7fd+Kg=="
+          "hash": "iNZl70voR9ke+xmNTIUs0g=="
         }
       },
       "is_incremental": false,
@@ -459,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/kubernetes-oci.html",
-          "hash": "UP4i/JdqcIQOaqbEjFeP9w=="
+          "hash": "J26llEAaC4SKAT05jbrpuQ=="
         }
       },
       "is_incremental": false,
@@ -1107,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "LnD7AdLWLzgmkEz0safQ9Q=="
+          "hash": "ZSP2tS0r/XJYNOni2rd+OA=="
         }
       },
       "is_incremental": false,
@@ -2435,6 +2435,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/hosted.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/hosted.html",
+          "hash": "HTn1fIWdWQtCYISY6OXFnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/local-no-docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/local-no-docker.html",
+          "hash": "X13ne+TmzHJ/+P0tnHAvyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/local-with-docker.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/local-with-docker.html",
+          "hash": "e2/GGrq2cs/xYj7ZIsaEMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/quickstarts/networks-overview.md",
       "output": {
         ".html": {
@@ -2451,7 +2487,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/quickstart-overview.html",
-          "hash": "lvOqbHmlbd1SyLCDWrg+EQ=="
+          "hash": "veb/s0cymBbB7HH2Me/VTA=="
         }
       },
       "is_incremental": false,
@@ -2520,7 +2556,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 107,
+          "total_file_count": 110,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

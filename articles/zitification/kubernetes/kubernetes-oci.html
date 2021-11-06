@@ -160,7 +160,7 @@ ziti edge create identity device &quot;${the_user_identity}&quot; -a &quot;${ser
 <pre><code class="lang-yaml">apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: ziti-host-pv
+  name: ziti-host
   labels:
     type: local
 spec:
@@ -168,7 +168,7 @@ spec:
   capacity:
     storage: 100Mi
   accessModes:
-    - ReadWriteMany
+    - ReadWriteOnce
   hostPath:
     path: &quot;/netfoundry&quot;
 </code></pre><h3 id="kubectl-apply-the-config">kubectl apply the config:</h3>
