@@ -125,7 +125,7 @@ edge router. </p>
 <p>Start your controller by running <code>startZitiController</code>. The location of the log file will be output for you to look
 at, tail etc. Notice that this log is written to the given location. There is no log rotation. Once run you will see
 output that looks like the following:</p>
-<pre><code class="lang-bash">ziti-controller started as process id: 7282. log located at: /Users/clint/.ziti/quickstart/My-Mac-mini.local.domain/ziti-edge-controller.log
+<pre><code class="lang-bash">ziti-controller started as process id: 7282. log located at: ${HOME}/.ziti/quickstart/My-Mac-mini.local.domain/ziti-edge-controller.log
 </code></pre><h3 id="verify-the-controller-is-running">Verify the Controller is Running</h3>
 <p>Assuming you have sourced the script you will have an environment variable set named <code>$ZITI_EDGE_CONTROLLER_API</code>. After
 the controller has started, your controller should be listening at that hostname:port combination. You can see what your
@@ -138,7 +138,7 @@ My-Mac-mini.local.domain:1280
 <p>Now that the controller is ready you can start the edge router created with the &#39;express&#39; process. You can start this 
 router locally by running <code>startExpressEdgeRouter</code>.</p>
 <p>You should see output that looks like this:</p>
-<pre><code class="lang-bash">Express Edge Router started as process id: 7555. log located at: /Users/clint/.ziti/quickstart/My-Mac-mini.local.domain/My-Mac-mini.local.domain-edge-router.log
+<pre><code class="lang-bash">Express Edge Router started as process id: 7555. log located at: ${HOME}/.ziti/quickstart/My-Mac-mini.local.domain/My-Mac-mini.local.domain-edge-router.log
 </code></pre><p>You can verify the edge router is listening by finding the value of <code>$ZITI_EDGE_ROUTER_HOSTNAME:$ZITI_EDGE_ROUTER_PORT</code>.
 Again this will default to using <code>$(hostname)</code> as the host name and port 3022. Make sure port 3022 is available before 
 trying to start the edge router.</p>
@@ -148,7 +148,7 @@ you sourced provides another function to login to your network. Try this now by 
 something similar to this:</p>
 <pre><code class="lang-bash">~ % zitiLogin
 Token: 40d2d280-a633-46c9-8499-ab2e005dd222
-Saving identity &#39;default&#39; to /Users/clint/.ziti/quickstart/My-Mac-mini.local.domain/ziti-cli.json
+Saving identity &#39;default&#39; to ${HOME}/.ziti/quickstart/My-Mac-mini.local.domain/ziti-cli.json
 </code></pre><p>Congratulations! You can now use the <code>ziti</code> CLI to interact with Ziti! (<a href="../../cli/cli.html">Ziti CLI Help Here</a>) The 
 <code>ziti</code> binary is not added to your path by default but will be available at <code>&quot;${ZITI_BIN_DIR-}/ziti&quot;</code>. Add that folder
 to your path, alias <code>ziti</code> if you like. Let&#39;s try to use this command to see if the edge router is online by running:
@@ -190,11 +190,11 @@ run the command. It will look like this:</p>
 source the &quot;env&quot; file that is placed into the location you specify. For example, if you ran the example above where the
 deployed files went to <code>${HOME}/.ziti/quickstart/newfolder</code> you would find an &quot;env&quot; file at 
 <code>${HOME}/.ziti/quickstart/newfolder/newfolder.env</code> and source it:</p>
-<pre><code class="lang-bash">source /Users/clint/.ziti/quickstart/newfolder/newfolder.env
+<pre><code class="lang-bash">source ${HOME}/.ziti/quickstart/newfolder/newfolder.env
 
 ~ % zitiLogin
 Token: aa1c7fb0-85d9-4a79-86b2-5df450c5b4de
-Saving identity &#39;default&#39; to /Users/clint/.ziti/quickstart/newfolder/ziti-cli.json
+Saving identity &#39;default&#39; to ${HOME}/.ziti/quickstart/newfolder/ziti-cli.json
 </code></pre></article>
           </div>
           

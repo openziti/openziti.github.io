@@ -1107,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ZSP2tS0r/XJYNOni2rd+OA=="
+          "hash": "N6EbA2ZM3hbup92uH/ZSjQ=="
         }
       },
       "is_incremental": false,
@@ -2006,71 +2006,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "ziti/install/controller.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/install/controller.html",
-          "hash": "9oxOLn33WgHVF+39rk0uDA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/install/edge-router.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/install/edge-router.html",
-          "hash": "M7I8b8x0LXY4pwQgyv5tJQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/install/overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/install/overview.html",
-          "hash": "/7AkOi8kUOn9IwclaY2z7w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/install/pki.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/install/pki.html",
-          "hash": "6Le3kv0RcLxGUIw//KFTLw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "ziti/install/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/install/toc.html",
-          "hash": "4N2I/+pJjd6pOzsGalN1Zw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "ziti/manage/controller.md",
       "output": {
         ".html": {
           "relative_path": "ziti/manage/controller.html",
-          "hash": "loT14WCWUVsF77A1sWfa3Q=="
+          "hash": "Kb84D3mNQfLUBzWvbD2S6A=="
         }
       },
       "is_incremental": false,
@@ -2463,7 +2403,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-no-docker.html",
-          "hash": "xpje8RY6MOZp6iQwjiP8LQ=="
+          "hash": "e6E4hmt9JBI04rkhgleNjg=="
         }
       },
       "is_incremental": false,
@@ -2475,7 +2415,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-with-docker.html",
-          "hash": "e2/GGrq2cs/xYj7ZIsaEMA=="
+          "hash": "+MvBDr6IqAh9yGQKiS0C0g=="
         }
       },
       "is_incremental": false,
@@ -2556,7 +2496,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 110,
+          "total_file_count": 106,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
