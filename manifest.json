@@ -384,7 +384,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/c-sdk-on-beaglebone.html",
-          "hash": "SzGw6S8TpvS+GcsOZJMEQA=="
+          "hash": "SqKhXH93qy4W0iHiTQTAIg=="
         }
       },
       "is_incremental": false,
@@ -1646,6 +1646,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/cli/cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/cli/cli.html",
+          "hash": "Qu/y15uN8GTUAR6WOkFRgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/clients/android.md",
       "output": {
         ".html": {
@@ -2070,7 +2082,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/edge-router.html",
-          "hash": "uT8ZnVSVbWltEB2mbjCjPQ=="
+          "hash": "Fl0/eqYJ0f3f/VwRPzt+Cg=="
         }
       },
       "is_incremental": false,
@@ -2106,7 +2118,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/manage.html",
-          "hash": "GBkKHvEX7clmpemxCwiytA=="
+          "hash": "EcJnkGXz6iOAMzaJEeUvxQ=="
         }
       },
       "is_incremental": false,
@@ -2142,7 +2154,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/manage/router-overview.html",
-          "hash": "wrbai3VRNSXjyb3ntNWMsA=="
+          "hash": "ChBvf4RKmCPHQtdGAmVPPA=="
         }
       },
       "is_incremental": false,
@@ -2403,7 +2415,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/aws-quickstart.html",
-          "hash": "1vdLEB6JGaEHVsmIZZIAJw=="
+          "hash": "3SgFhL8lJIObEpGYYayZNA=="
         }
       },
       "is_incremental": false,
@@ -2415,7 +2427,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/azure-quickstart.html",
-          "hash": "Au7sgv5d92KxVkQfYR1k6w=="
+          "hash": "gEwBHuvKHA/swkPXU0vJBw=="
         }
       },
       "is_incremental": false,
@@ -2451,7 +2463,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-no-docker.html",
-          "hash": "X13ne+TmzHJ/+P0tnHAvyQ=="
+          "hash": "xpje8RY6MOZp6iQwjiP8LQ=="
         }
       },
       "is_incremental": false,
@@ -2471,23 +2483,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "ziti/quickstarts/networks-overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/quickstarts/networks-overview.html",
-          "hash": "edBuODOGwgf95q50IO403A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "ziti/quickstarts/quickstart-overview.md",
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/quickstart-overview.html",
-          "hash": "veb/s0cymBbB7HH2Me/VTA=="
+          "hash": "krLlvv3lwx0Civ9fz2fS4g=="
         }
       },
       "is_incremental": false,
@@ -2535,7 +2535,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "FkPriGeKoTmlY8yWGk6HNQ=="
+          "hash": "cUgrjwwsSQXH4nLoPJNhkA=="
         }
       },
       "is_incremental": false,
