@@ -98,9 +98,9 @@
 <h1 id="local---with-docker">Local - With Docker</h1>
 
 <p><a href="https://www.docker.com">Docker</a> is a popular container engine and many developers enjoy using solutions delivered via
-docker. Ziti provides a single docker container which contains the entire stack of Ziti components. This is not the most
+Docker. Ziti provides a single Docker container which contains the entire stack of Ziti components. This is not the most
 common mechanism for deploying containers, we recognize that. However, we think that this makes it a bit easier for
-people to get started with deploying Ziti components using docker. We will certainly look to create individual
+people to get started with deploying Ziti components using Docker. We will certainly look to create individual
 containers for each component in the future but for now it&#39;s a single container. You can get this container by issuing
 <code>docker pull openziti/quickstart:latest</code>.</p>
 <h2 id="starting-the-controller">Starting the Controller</h2>
@@ -108,32 +108,32 @@ containers for each component in the future but for now it&#39;s a single contai
 a <a href="../../manage/controller.html">Ziti Controller</a>. Without a controller, edge routers won&#39;t be able to authorize new
 connections rendering a new network useless. You must have a controller running.</p>
 <h3 id="required---volume-mount">Required - Volume Mount</h3>
-<p>Running Ziti locally via docker will require you to mount a common folder which will be used to store the PKI of your
+<p>Running Ziti locally via Docker will require you to mount a common folder which will be used to store the PKI of your
 network. Without a volume mount, you&#39;ll be forced to &#39;figure out&#39; how to get the PKI in place correctly. While this is a
 straightforward process once you know how to do it, when you&#39;re getting started this is undoubtedly complicated. We
 recommend that if you&#39;re starting out (or if you just don&#39;t want to be bothered with these details) you should just
 create a folder and volume mount that folder. It&#39;s expected that this volume mount map to <code>/openziti/pki</code> inside the
 container.</p>
 <h3 id="required---known-name">Required - Known Name</h3>
-<p>Other containers on the docker network will <strong>need</strong> to address the controller. To do this, we will give this container
+<p>Other containers on the Docker network will <strong>need</strong> to address the controller. To do this, we will give this container
 a network alias. At this time it would appear that this also forces you to add the container to a network which is not
 the default network. This is a very useful feature which allows your containers to be isolated from one another and also
-will allow you to have multiple networks running locally if you desire. To create a docker network issue:
-<code>docker network create myFirstZitiNetwork</code>. </p>
-<p>Later, when starting the controller, we&#39;ll supply this network as a parameter to the docker command as well as name the
+will allow you to have multiple networks running locally if you desire. To create a Docker network issue:
+<code>docker network create myFirstZitiNetwork</code>.</p>
+<p>Later, when starting the controller, we&#39;ll supply this network as a parameter to the <code>docker</code> command as well as name the
 network. That&#39;s done with these two options: <code>--network myFirstZitiNetwork --network-alias ziti-controller</code></p>
 <h3 id="optional---expose-controller-port">Optional - Expose Controller Port</h3>
 <p>Docker containers by default won&#39;t expose any ports that you could use from your local machine. If you want to be able
-to use this controller from outside of docker you&#39;ll need to export the controller&#39;s API port. That&#39;s easy to do, simply
-pass one more parameter to the docker command: <code>-p ${externalPort}:${internalPort}</code></p>
+to use this controller from outside of Docker you&#39;ll need to export the controller&#39;s API port. That&#39;s easy to do, simply
+pass one more parameter to the <code>docker</code> command: <code>-p ${externalPort}:${internalPort}</code></p>
 <h3 id="running-the-controller">Running the Controller</h3>
 <p>Here&#39;s an example of how to make a folder for &quot;myFirstZitiNetwork&quot; in your home folder, and then launch a controller
 using that folder. Do note that this command passes a couple extra flags you&#39;ll see used on this page. Notably
-the <code>--rm</code> flag and the <code>-it</code> flag. The <code>--rm</code> flag instructs docker to delete the container when the container exits.
+the <code>--rm</code> flag and the <code>-it</code> flag. The <code>--rm</code> flag instructs Docker to delete the container when the container exits.
 The <code>-it</code> flag will run the container interactively. Running interactively like this makes it easier to see the logs
 produced, but you will need a terminal for each process you want to run. The choice is yours but in these examples we&#39;ll
 use <code>-it</code> to make seeing the output from the logs easier.</p>
-<p>Here&#39;s an example which will use the docker network named &quot;myFirstZitiNetwork&quot; and expose the controller to your local
+<p>Here&#39;s an example which will use the Docker network named &quot;myFirstZitiNetwork&quot; and expose the controller to your local
 computer on port 1280 (the default port).</p>
 <pre><code class="lang-bash">mkdir -p ~/docker-volume/myFirstZitiNetwork
 docker run \
@@ -148,7 +148,7 @@ docker run \
   /openziti/scripts/run-controller.sh
 </code></pre><h2 id="edge-router">Edge Router</h2>
 <p>At this point you should have a <a href="../../manage/controller.html">Ziti Controller</a> running. You should have created your
-docker network as well as creating the volume mount. Now it&#39;s time to connect your first edge router. The same docker
+Docker network as well as creating the volume mount. Now it&#39;s time to connect your first edge router. The same Docker
 image that runs the controller can run an edge router. To start an edge router you will run a very similar command as
 the one to start the controller with a couple of key differences.</p>
 <pre><code class="lang-bash">docker run \
@@ -162,9 +162,9 @@ the one to start the controller with a couple of key differences.</p>
   openziti/quickstart \
   /openziti/scripts/run-edge-router.sh edge
 </code></pre><h2 id="testing-the-network">Testing the Network</h2>
-<p>With the controller and router running, you can now attach to the docker host running the Ziti controller and test that
-the router did indeed come online and is running as you expect.  To do this we&#39;ll use another feature of the docker
-command and <code>exec</code> into the machine. First you&#39;ll need to know your docker container name which you can figure out by
+<p>With the controller and router running, you can now attach to the Docker host running the Ziti controller and test that
+the router did indeed come online and is running as you expect. To do this we&#39;ll use another feature of the <code>docker</code>
+command and <code>exec</code> into the machine. First you&#39;ll need to know your Docker container name which you can figure out by
 running <code>docker ps</code>.</p>
 <pre><code class="lang-bash">$ docker ps
 
@@ -172,10 +172,9 @@ CONTAINER ID   IMAGE                 COMMAND                  CREATED          S
                    NAMES
 1b86c4b461e7   openziti/quickstart   &quot;/openziti/scripts/r…&quot;   10 minutes ago   Up 10 minutes   0.0.0.0:3022-&gt;3022/tcp, :::3022-&gt;3022/tcp   musing_engelbart
 a33d58248d6e   openziti/quickstart   &quot;/openziti/scripts/r…&quot;   46 minutes ago   Up 46 minutes   0.0.0.0:1280-&gt;1280/tcp, :::1280-&gt;1280/tcp   xenodochial_cori
-</code></pre><p>Above you&#39;ll see my controller is running in a container named &quot;xenodochial_cori&quot;. I can tell because it&#39;s using port</p>
-<ol>
-<li>Now I can <code>exec</code> into this container: <code>docker exec -it xenodochial_cori /bin/bash</code></li>
-</ol>
+</code></pre><p>Above you&#39;ll see my controller is running in a container named &quot;xenodochial_cori&quot;. I can tell because it&#39;s using the
+default port of 1280, the default port for the controller. Now I can <code>exec</code> into this
+container: <code>docker exec -it xenodochial_cori /bin/bash</code></p>
 <p>Once in the container, I can now issue <code>zitiLogin</code> to authenticate the <code>ziti</code> CLI.</p>
 <pre><code class="lang-bash">zitiLogin
 Token: b16f182f-88b3-4fcc-9bfc-1e32319ca486

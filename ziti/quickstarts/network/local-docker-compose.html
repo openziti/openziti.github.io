@@ -1,0 +1,288 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Local - Docker Compose | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Local - Docker Compose | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="local---docker-compose">Local - Docker Compose</h1>
+
+<p>If you are not familiar with it, <a href="https://docs.docker.com/compose/">Docker Compose</a> is a tool for defining and running
+multi-container Docker applications. It makes deploying multiple containers easy by using a declarative format defined
+via yaml.</p>
+<p>Ziti provides a Docker compose file that will get you up and running very quickly assuming you have both <code>docker</code>
+and <code>docker-compose</code> already installed in your system.</p>
+<h2 id="preparation---required-files">Preparation - Required Files</h2>
+<p>First, grab the compose file from the
+<a href="https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/docker-compose.yml">ziti repository</a>.</p>
+<p>Using curl that would look like this:</p>
+<pre><code class="lang-bash">curl -o docker-compose.yaml https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/docker-compose.yml
+</code></pre><p>Next, grab the
+default <a href="https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/default.env">environment file</a>
+or just make a file in this folder that looks like this:</p>
+<pre><code class="lang-bash">curl -o default.env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/default.env
+</code></pre><p>or</p>
+<pre><code class="lang-bash">cat &gt; default.env &lt;&lt;DEFAULT_ENV_FILE
+ZITI_CONTROLLER_RAWNAME=ziti-controller
+ZITI_EDGE_CONTROLLER_RAWNAME=ziti-edge-controller
+ZITI_ZAC_RAWNAME=ziti-zac
+DEFAULT_ENV_FILE
+</code></pre><h2 id="running-via-docker-compose">Running via Docker Compose</h2>
+<p>Once the compose file is downloaded and the default.env file exists you&#39;ll be able to start this network using
+docker-compose just like you can with any other compose file: <code>docker-compose up</code></p>
+<h3 id="stopping-the-network">Stopping the Network</h3>
+<p>This docker-compose file will generate a volume mount as well as a <strong>three</strong> docker networks. When you issue 
+<code>docker-compose down</code> the volume mapping will not be removed. If you wish to remove the volume you&#39;ll need to specify
+the <code>-v</code> flag to the <code>docker-compose</code> command.</p>
+<h2 id="deployment-diagram">Deployment Diagram</h2>
+<p>This <code>docker-compose</code> file will create quite a few containers on your behalf. Here is an overview of the network that
+will get created:</p>
+<p><img src="docker-compose-overview.svg" alt="docker-compose-overview.svg"></p>
+<p>As you can see there&#39;s a fair bit going on in there, let&#39;s break it down. The first thing to notice is that the entire
+image is within the scope of a Docker network. You&#39;ll see with this compose file there are three pieces of the overlay
+which span the Docker network: the controller, an edge router, and a websocket-based edge router.  </p>
+<h3 id="networks">Networks</h3>
+<p>Inside the Docker network you&#39;ll see there are three networks:</p>
+<ul>
+<li>the blue docker network</li>
+<li>the red docker network</li>
+<li>the purple &quot;logical&quot; network</li>
+</ul>
+<p>Docker will ensure only the pieces within a given network, can only communicate within that network. This network
+topology is designed to approximate, very loosely, what it would be like to have a publicly deployed network. The purple
+network would approximate the internet itself, the blue network would represent a cloud provider&#39;s private network 
+(such as AWS) and the red network could represent another cloud provider network (like Azure). Those details are not 
+important, the important part is that the networks are totally private to one another. See more on this topic below in 
+the &quot;Testing&quot; section.</p>
+<h4 id="purple-network">Purple Network</h4>
+<p>There is no Docker network named &quot;purple&quot; in the compose file, it&#39;s entirely a logical construct. It is shown only for
+clarity. All the assets in the purple network are in both the blue and red docker networks (which is why it&#39;s
+referred to as purple). The assets in the purple network need to be in both the red and blue networks because the 
+assets located in the blue and red networks need to communicate to the public edge routers and also need to communicate 
+to the controller. If that&#39;s confusing, see the &quot;Testing&quot; section below which will hopefully make this more clear.</p>
+<h4 id="red-network">Red Network</h4>
+<p>The red network exists for demonstration only at this time. As you can see there are no assets inside the red network
+other than the private, <code>ziti-private-red</code> router <strong>and</strong> the <code>ziti-fabric-router-br</code>. This means there&#39;s nothing in the
+red network for Ziti to access. It would serve as a great place for you to put your own assets and explore using Ziti!</p>
+<h4 id="blue-network">Blue Network</h4>
+<p>The blue network contains two important assets, the <code>ziti-private-blue</code> router and the <code>web-test-blue</code> server. Along
+with those assets, the network also contains the <code>ziti-fabric-router-br</code>. Although the <code>web-test-blue</code> server does 
+export a port by default (port 80 on your localhost, will translate to port 8000 on the <code>web-test-blue</code> server), you 
+can use Ziti to access this servrer without the exported port.</p>
+<h4 id="the-fabric-router">The &quot;Fabric&quot; Router</h4>
+<p>The <code>ziti-fabric-router-br</code> exists to illustrate that you can create edge routers that are not necessarily fully public.
+This is the only router which can communicate to <strong>all</strong> the other routers. The Ziti mesh may choose to use this router
+if the algorithm indicates it&#39;s the fastest path. Perhaps we&#39;ll see more about this in future docs.</p>
+<h2 id="testing-the-network">Testing the Network</h2>
+<p>Now that we have used <code>docker-compose</code> to deploy a relatively complicated network we can start testing it out to make
+sure everything is in place and looks correct. Let&#39;s try it out.</p>
+<p>To test, we will use <code>docker</code> and exec into the running controller. Since we&#39;ve used <code>docker-compose</code> we know the name
+that will be created (you could use <code>docker ps</code> to find it if you need). Let&#39;s exec into the controller with:</p>
+<pre><code class="lang-bash">docker exec -it docker_ziti-controller_1 /bin/bash
+</code></pre><p>Once exec&#39;ed into the controller, the <code>ziti</code> CLI will be added to your PATH for you. There is also the <code>zitiLogin</code>
+alias to make it easy for you to authenticate to the Ziti controller. Run <code>zitiLogin</code> now and ensure you&#39;re 
+authenticated.</p>
+<pre><code class="lang-bash">ziti@724087d30014:/openziti$ zitiLogin
+Token: 55ec6721-f33b-4101-970a-412331bd7578
+Saving identity &#39;default&#39; to /openziti/ziti-cli.json
+</code></pre><h3 id="test---edge-routers-online">Test - Edge Routers Online</h3>
+<p>Once authenticated, let&#39;s see if all our routers are online by running <code>ziti edge list edge-routers</code>:</p>
+<pre><code class="lang-bash">ziti@724087d30014:/openziti$ ziti edge list edge-routers
+id: BZ.Y7vMdAI    name: ziti-edge-router    isOnline: true    role attributes: {}
+id: NELWwjMd8    name: ziti-private-blue    isOnline: true    role attributes: {}
+id: l9-W7jMf8    name: ziti-fabric-router-br    isOnline: true    role attributes: {}
+id: rqZW7vMdA    name: ziti-edge-router-wss    isOnline: true    role attributes: {}
+id: xmiYwvMf8    name: ziti-private-red    isOnline: true    role attributes: {}
+</code></pre><p>We can see all the routers are online - excellent.</p>
+<h3 id="test---edge-router-identites">Test - Edge Router Identites</h3>
+<p>In this compose file, we have used a script that adds an identity for each of our edge routers as well. We can see those
+by running <code>ziti@724087d30014:/openziti$ ziti edge list identities</code>:</p>
+<pre><code class="lang-bash">ziti@724087d30014:/openziti$ ziti edge list identities
+id: BZ.Y7vMdAI    name: ziti-edge-router    type: Router    role attributes: {}
+id: NELWwjMd8    name: ziti-private-blue    type: Router    role attributes: {}
+id: Q4Y-OTcwo    name: Default Admin    type: User    role attributes: {}
+id: l9-W7jMf8    name: ziti-fabric-router-br    type: Router    role attributes: {}
+id: rqZW7vMdA    name: ziti-edge-router-wss    type: Router    role attributes: {}
+id: xmiYwvMf8    name: ziti-private-red    type: Router    role attributes: {}
+</code></pre><p>Notice there is an identity for every router.</p>
+<h3 id="test---network-connectivity-success">Test - Network Connectivity Success</h3>
+<p>Recall that the controller should be able to contact both the red and blue edge routers. Let&#39;s use ping and verify:</p>
+<pre><code class="lang-bash">ziti@724087d30014:/openziti$ ping ziti-private-red -c 1
+PING ziti-private-red (172.29.0.2): 56 data bytes
+64 bytes from 172.29.0.2: icmp_seq=0 ttl=64 time=0.387 ms
+--- ziti-private-red ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.387/0.387/0.387/0.000 ms
+</code></pre><pre><code class="lang-bash">ziti@724087d30014:/openziti$ ping ziti-private-blue -c 1
+PING ziti-private-blue (172.28.0.6): 56 data bytes
+64 bytes from 172.28.0.6: icmp_seq=0 ttl=64 time=0.633 ms
+--- ziti-private-blue ping statistics ---
+1 packets transmitted, 1 packets received, 0% packet loss
+round-trip min/avg/max/stddev = 0.633/0.633/0.633/0.000 ms
+</code></pre><h3 id="test---network-connectivity-failure">Test - Network Connectivity Failure</h3>
+<p>Now let&#39;s exit the Ziti controller and instead attach to the private blue router by running this command:
+<code>docker exec -it docker_ziti-private-blue_1 /bin/bash</code>.  Once attached to the blue router we&#39;ll verify that we cannot
+connect to the private red router:</p>
+<pre><code class="lang-bash">ziti@e610d6b44166:/openziti$ ping ziti-private-red -c 1
+ping: unknown host
+</code></pre><p>Unknown host - the private blue router cannot connect to the red router.</p>
+<h3 id="test---web-test-blue">Test - Web Test Blue</h3>
+<p>While we&#39;re attached to the blue router - let&#39;s make sure we can connect to that <code>web-test-blue</code> server.  </p>
+<pre><code class="lang-bash">ziti@e610d6b44166:/openziti$ curl http://web-test-blue:8000
+&lt;pre&gt;
+Hello World
+
+
+                                       ##         .
+                                 ## ## ##        ==
+                              ## ## ## ## ##    ===
+                           /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;\___/ ===
+                      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+                           \______ o          _,/
+                            \      \       _,&#39;
+                             `&#39;--.._\..--&#39;&#39;
+&lt;/pre&gt;
+</code></pre><p>Don&#39;t forget - you can also access this from the exported port 80 on your local machine too!</p>
+<pre><code class="lang-bash">curl http://localhost:80
+&lt;pre&gt;
+Hello World
+
+
+                                       ##         .
+                                 ## ## ##        ==
+                              ## ## ## ## ##    ===
+                           /&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;\___/ ===
+                      ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
+                           \______ o          _,/
+                            \      \       _,&#39;
+                             `&#39;--.._\..--&#39;&#39;
+&lt;/pre&gt;
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/quickstarts/network/local-docker-compose.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

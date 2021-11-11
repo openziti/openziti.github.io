@@ -1107,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "N6EbA2ZM3hbup92uH/ZSjQ=="
+          "hash": "OOpRRqIPGvjMEM+wDjFOFQ=="
         }
       },
       "is_incremental": false,
@@ -1222,6 +1222,28 @@
         ".html": {
           "relative_path": "samples/toc.html",
           "hash": "VDxgJ9UPnoZW1RYcx8BGow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "templates/nf/fonts/glyphicons-halflings-regular.svg",
+      "output": {
+        "resource": {
+          "relative_path": "templates/nf/fonts/glyphicons-halflings-regular.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "templates/nf/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "templates/nf/logo.svg"
         }
       },
       "is_incremental": false,
@@ -1633,6 +1655,39 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "ziti-sdk-csharp/Ziti.NET.Standard/ziti.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-sdk-csharp/Ziti.NET.Standard/ziti.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-sdk-swift/cziti.sample-ios/doc/httpbin.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-sdk-swift/cziti.sample-ios/doc/httpbin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-sdk-swift/sample-ios-objc/doc/httpbin.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-sdk-swift/sample-ios-objc/doc/httpbin.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "ziti/cli-snippets/login.md",
       "output": {
@@ -1854,7 +1909,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/docker-quickstart.html",
-          "hash": "dRacAc9RvPg9EZJBHQoqaA=="
+          "hash": "xUi01vOwXLw9dVZHnALmMQ=="
         }
       },
       "is_incremental": false,
@@ -2386,12 +2441,35 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/network/docker-compose-overview.svg",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/network/docker-compose-overview.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "ziti/quickstarts/network/hosted.md",
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/hosted.html",
           "hash": "HTn1fIWdWQtCYISY6OXFnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/network/local-docker-compose.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/network/local-docker-compose.html",
+          "hash": "uoras3BM1AMka5gQdUMEoA=="
         }
       },
       "is_incremental": false,
@@ -2415,7 +2493,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-with-docker.html",
-          "hash": "+MvBDr6IqAh9yGQKiS0C0g=="
+          "hash": "RZ9FFcsmDxyUrxXMtX2IMQ=="
         }
       },
       "is_incremental": false,
@@ -2427,7 +2505,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/quickstart-overview.html",
-          "hash": "krLlvv3lwx0Civ9fz2fS4g=="
+          "hash": "9wnF26pFwt/7dwP+9jy14g=="
         }
       },
       "is_incremental": false,
@@ -2475,7 +2553,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "cUgrjwwsSQXH4nLoPJNhkA=="
+          "hash": "kzYDJCXf3i6I+qkSxftcLA=="
         }
       },
       "is_incremental": false,
@@ -2496,7 +2574,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 106,
+          "total_file_count": 107,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
