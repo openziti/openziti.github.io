@@ -141,7 +141,7 @@ of your instance. You possibly  want to override the IP address to use as well, 
 IP addresses in case your IP changes.</p>
 <p>The quickest and easiest thing to do, is simply find your external DNS name and set it into the EXTERNAL_DNS environment 
 variable. For example:</p>
-<pre><code class="lang-bash">export EXTERNAL_DNS=&quot;ec2-18-221-178-218.us-east-2.compute.amazonaws.com&quot;
+<pre><code class="lang-bash">export EXTERNAL_DNS=&quot;ec2-18-100-100-100.us-east-2.compute.amazonaws.com&quot;
 </code></pre><p>Once you do that, you&#39;ll be able to execute these commands just as shown to have your controller and first edge router 
 configured and ready to turn on:</p>
 <pre><code class="lang-bash">export EXTERNAL_IP=&quot;$(curl -s eth0.me)&quot;       
