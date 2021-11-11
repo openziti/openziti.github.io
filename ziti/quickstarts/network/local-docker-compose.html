@@ -118,11 +118,11 @@ ZITI_EDGE_CONTROLLER_RAWNAME=ziti-edge-controller
 ZITI_ZAC_RAWNAME=ziti-zac
 DEFAULT_ENV_FILE
 </code></pre><h2 id="running-via-docker-compose">Running via Docker Compose</h2>
-<p>Once the compose file is downloaded and the default.env file exists you&#39;ll be able to start this network using
+<p>Once the compose file is downloaded and the <code>default.env</code> file exists, you&#39;ll be able to start this network using
 docker-compose just like you can with any other compose file: <code>docker-compose up</code></p>
 <h3 id="stopping-the-network">Stopping the Network</h3>
 <p>This docker-compose file will generate a volume mount as well as a <strong>two</strong> docker networks. When you issue 
-<code>docker-compose down</code> the volume mapping will not be removed. If you wish to remove the volume you&#39;ll need to specify
+<code>docker-compose down</code> the volume mapping will not be removed. If you wish to remove the volume, you&#39;ll need to specify
 the <code>-v</code> flag to the <code>docker-compose</code> command.</p>
 <h2 id="deployment-diagram">Deployment Diagram</h2>
 <p>This <code>docker-compose</code> file will create quite a few containers on your behalf. Here is an overview of the network that
@@ -158,15 +158,15 @@ red network for Ziti to access. It would serve as a great place for you to put y
 <p>The blue network contains two important assets, the <code>ziti-private-blue</code> router and the <code>web-test-blue</code> server. Along
 with those assets, the network also contains the <code>ziti-fabric-router-br</code>. Although the <code>web-test-blue</code> server does 
 export a port by default (port 80 on your localhost, will translate to port 8000 on the <code>web-test-blue</code> server), you 
-can use Ziti to access this servrer without the exported port.</p>
+can use Ziti to access this server without the exported port.</p>
 <h4 id="the-fabric-router">The &quot;Fabric&quot; Router</h4>
 <p>The <code>ziti-fabric-router-br</code> exists to illustrate that you can create edge routers that are not necessarily fully public.
 This is the only router which can communicate to <strong>all</strong> the other routers. The Ziti mesh may choose to use this router
 if the algorithm indicates it&#39;s the fastest path. Perhaps we&#39;ll see more about this in future docs.</p>
 <h2 id="testing-the-network">Testing the Network</h2>
-<p>Now that we have used <code>docker-compose</code> to deploy a relatively complicated network we can start testing it out to make
+<p>Now that we have used <code>docker-compose</code> to deploy a relatively complicated network, we can start testing it out to make
 sure everything is in place and looks correct. Let&#39;s try it out.</p>
-<p>To test, we will use <code>docker</code> and exec into the running controller. Since we&#39;ve used <code>docker-compose</code> we know the name
+<p>To test, we will use <code>docker</code> and exec into the running controller. Since we&#39;ve used <code>docker-compose</code>, we know the name
 that will be created (you could use <code>docker ps</code> to find it if you need). Let&#39;s exec into the controller with:</p>
 <pre><code class="lang-bash">docker exec -it docker_ziti-controller_1 /bin/bash
 </code></pre><p>Once exec&#39;ed into the controller, the <code>ziti</code> CLI will be added to your PATH for you. There is also the <code>zitiLogin</code>
