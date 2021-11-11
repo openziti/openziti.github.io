@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Ziti </title>
+    <title>Host Ziti Anywhere | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Ziti ">
+    <meta name="title" content="Host Ziti Anywhere | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -95,9 +95,119 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="host-ziti-anywhere">Host Ziti Anywhere</h1>
 
-<p>Content coming soon... Click any link in the title or sidebar for the other content.</p>
-</article>
+<p>You can absolutely choose to host your <a class="xref" href="../../overview.html#overview-of-a-ziti-network">Ziti Network</a> anywhere you like.
+It is not necessary for the server to be on the open internet. If it works better for you to deploy Ziti on your 
+own network, great, do that.  The only requirement to be aware of is that every piece of the a network will need to 
+be able to communicate to the controller at least one edge router. If these components are all on your local network,
+that&#39;s perfectly fine. Just remember, the only components able to participate on this network will need to be able to
+contact the controller and at least one edge router.</p>
+<p>With all that said, if you have a server on the open internet, or you are going to provision one to stand up Ziti that&#39;s
+ideal. With a Zero Trust overlay network provided by Ziti, you can rest assured that your traffic is safe even when 
+using commodity internet. You also do not need to worry about being on a network you trust as all networks are 
+considered untrustworthy, even your work/home network!</p>
+<h2 id="installation">Installation</h2>
+<p>When starting out deploying a <a class="xref" href="../../overview.html#overview-of-a-ziti-network">Ziti Network</a>, we recommend you follow
+and use the <code>expressInstall</code> function provided by the OpenZiti project. Once you&#39;re familiar with the network and 
+the configuration options available you&#39;ll be better equipped to make changes. </p>
+<h3 id="firewall">Firewall</h3>
+<p>The first issue you will need to deal with is opening some ports. A network will consist of at least one controller and 
+at least one edge router. Both of these components will require ports to be open. For the controller you will need to 
+open two ports through your firewall, one port for the REST API, and one the control plane. Edge routers will also 
+require two ports open. One for the links created between routers to form the mesh network, and one port for incoming 
+client connections.</p>
+<p>The ports you choose are not important but unless you change them these ports will default to the following:</p>
+<p>Controller</p>
+<ul>
+<li>REST API: 1280</li>
+<li>Control plane: 6262</li>
+</ul>
+<p>Edge Router</p>
+<ul>
+<li>Edge connections: 3022</li>
+<li>Fabric links: 10080</li>
+</ul>
+<p>It would be reasonable to change all these ports to use ports 443 and 80 since those ports are almost <strong>always</strong> open 
+outbound from all but the most strict networks. If you&#39;re going to be making connections from one of those networks, also 
+verify that outbound access to these ports is available.</p>
+<h2 id="express-install">Express Install</h2>
+<p>With the firewall ports open you will now be able to source the script which provides the expressInstall function and 
+execute it. You probably should consider DNS names before actually running the script. By default, the script will use 
+the bash <code>hostname</code> function to determine a reasonable default for the PKI that will be generated as well as the 
+configuration files that are output.  The script allows you to configure these values and if you are deploying to a cloud 
+provider (AWS, Azure, OCI, IBM, Digital Ocean, GCP, etc.) you will almost certainly want to use the <strong>public</strong> DNS name 
+of your instance. You possibly  want to override the IP address to use as well, but using DNS names is superior to using 
+IP addresses in case your IP changes.</p>
+<p>The quickest and easiest thing to do, is simply find your external DNS name and set it into the EXTERNAL_DNS environment 
+variable. For example:</p>
+<pre><code class="lang-bash">export EXTERNAL_DNS=&quot;ec2-18-221-178-218.us-east-2.compute.amazonaws.com&quot;
+</code></pre><p>Once you do that, you&#39;ll be able to execute these commands just as shown to have your controller and first edge router 
+configured and ready to turn on:</p>
+<pre><code class="lang-bash">export EXTERNAL_IP=&quot;$(curl -s eth0.me)&quot;       
+export ZITI_EDGE_CONTROLLER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
+export ZITI_EDGE_ROUTER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
+export ZITI_EDGE_CONTROLLER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
+export ZITI_EDGE_ROUTER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
+export ZITI_EDGE_CONTROLLER_PORT=8441
+export ZITI_EDGE_ROUTER_PORT=8442
+
+# now download, source, and execute the expressInstall function
+source &lt;(wget -qO- https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/image/ziti-cli-functions.sh); expressInstall
+</code></pre><h3 id="systemd">Systemd</h3>
+<p>If the operating system you are deploying on supports it, after the commands above are run there will two other useful
+functions defined in your shell which will allow you to generate a systemd file for the controller and the edge router. This
+is useful to make sure the controller can restart automatically should you shutdown/restart the server. To generate these 
+files run:</p>
+<pre><code class="lang-bash">createControllerSystemdFile
+createRouterSystemdFile
+
+# example:
+ubuntu@ip-172-31-36-141:~$ createControllerSystemdFile
+Controller systemd file written to: /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ziti-controller.service
+ubuntu@ip-172-31-36-141:~$ createRouterSystemdFile &quot;${ZITI_EDGE_ROUTER_RAWNAME}&quot;
+Router systemd file written to: /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ziti-router-ip-10-0-0-1-edge-router.service
+</code></pre><p>After the files are generated, you can then install them for use by systemd by running:</p>
+<pre><code class="lang-bash">sudo cp &quot;${ZITI_HOME}/ziti-controller.service&quot; /etc/systemd/system
+sudo cp &quot;${ZITI_HOME}/ziti-router-${ZITI_EDGE_ROUTER_RAWNAME}.service&quot; /etc/systemd/system/ziti-router.service
+sudo systemctl daemon-reload
+sudo systemctl start ziti-controller
+sudo systemctl start ziti-router
+</code></pre><p>Now, both the controller and the edge router will restart automatically!  After a few seconds you can then run these 
+commands and verify systemd has started the processes and see the status:</p>
+<pre><code class="lang-bash">sudo systemctl -q status ziti-controller --lines=0 --no-pager
+sudo systemctl -q status ziti-router --lines=0 --no-pager
+
+● ziti-controller.service - Ziti-Controller
+     Loaded: loaded (/etc/systemd/system/ziti-controller.service; disabled; vendor preset: enabled)
+     Active: active (running) since Thu 2021-11-11 19:05:46 UTC; 8s ago
+   Main PID: 2375 (ziti-controller)
+      Tasks: 7 (limit: 1154)
+     Memory: 43.7M
+     CGroup: /system.slice/ziti-controller.service
+             └─2375 /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ziti-bin/ziti-v0.22.11/ziti-controller run /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/co…
+ubuntu@ip-10-0-0-1:~$ sudo systemctl -q status ziti-router --lines=0 --no-pager
+● ziti-router.service - Ziti-Router for ip-10-0-0-1-edge-router
+     Loaded: loaded (/etc/systemd/system/ziti-router.service; disabled; vendor preset: enabled)
+     Active: active (running) since Thu 2021-11-11 19:05:47 UTC; 8s ago
+   Main PID: 2385 (ziti-router)
+      Tasks: 6 (limit: 1154)
+     Memory: 231.4M
+     CGroup: /system.slice/ziti-router.service
+             └─2385 /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ziti-bin/ziti-v0.22.11/ziti-router run /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ip-10…
+</code></pre><h2 id="adding-environment-variables-back-to-the-shell">Adding Environment Variables Back to the Shell</h2>
+<p>If you log out and log back in again you can source the &#39;.env&#39; file located at: 
+<code>. ~/.ziti/quickstart/$(hostname)/$(hostname).env</code>. Below is an example of logging in, not having ZITI_HOME set, sourcing the
+.env file and then showing ZITI_HOME set:</p>
+<pre><code class="lang-bash">Last login: Thu May 20 11:36:25 2021 from 67.246.244.61
+ubuntu@ip-10-0-0-1:~$ echo $ZITI_HOME
+
+ubuntu@ip-10-0-0-1:~$ . ~/.ziti/quickstart/$(hostname)/$(hostname).env
+
+adding /home/ubuntu/.ziti/quickstart/ip-10-0-0-1/ziti-bin/ziti-v0.20.2 to the path
+ubuntu@ip-10-0-0-1:~$ echo $ZITI_HOME
+/home/ubuntu/.ziti/quickstart/ip-10-0-0-1
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

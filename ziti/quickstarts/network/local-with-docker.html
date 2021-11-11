@@ -118,9 +118,9 @@ container.</p>
 <p>Other containers on the Docker network will <strong>need</strong> to address the controller. To do this, we will give this container
 a network alias. At this time it would appear that this also forces you to add the container to a network which is not
 the default network. This is a very useful feature which allows your containers to be isolated from one another and also
-will allow you to have multiple networks running locally if you desire. To create a Docker network issue:
-<code>docker network create myFirstZitiNetwork</code>.</p>
-<p>Later, when starting the controller, we&#39;ll supply this network as a parameter to the <code>docker</code> command as well as name the
+will allow you to have multiple networks running locally if you desire. To create a Docker network issue:</p>
+<pre><code class="lang-bash">docker network create myFirstZitiNetwork
+</code></pre><p>Later, when starting the controller, we&#39;ll supply this network as a parameter to the <code>docker</code> command as well as name the
 network. That&#39;s done with these two options: <code>--network myFirstZitiNetwork --network-alias ziti-controller</code></p>
 <h3 id="optional---expose-controller-port">Optional - Expose Controller Port</h3>
 <p>Docker containers by default won&#39;t expose any ports that you could use from your local machine. If you want to be able

@@ -105,9 +105,12 @@ when you want to turn the overlay network on or off.</p>
 <p>There is not much preparation necessary to getting up-and-running locally. At this time, this guide expects that
 you&#39;ll be running commands within a <code>bash</code> shell. If you&#39;re running Windows, you will need to make sure you have 
 Windows Subsystem for Linux installed for now. We plan to provide a Powershell script in the future, but for now the
-script requires you to be able to use <code>bash</code>.</p>
+script requires you to be able to use <code>bash</code>. Make sure your local ports 1280, 6262, 10000 are free before running the 
+controller. These ports are the default ports used by the controller. Also ensure ports 10080 and 3022 are open as these 
+are the default ports the edge router will use.</p>
 <h2 id="one-liner-setup">One-liner Setup</h2>
-<p>Running the latest version of Ziti locally is as simple as running this one command:</p>
+<p>Running the latest version of Ziti locally is as simple as running this one command (the command will require the <code>jq</code> 
+utility be installed):</p>
 <pre><code>source &lt;(wget -qO- https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/image/ziti-cli-functions.sh); expressInstall
 </code></pre><p>This script will perform an &#39;express&#39; install of Ziti which does the following:</p>
 <ul>
@@ -130,8 +133,7 @@ output that looks like the following:</p>
 <p>Assuming you have sourced the script, you will have an environment variable set named <code>$ZITI_EDGE_CONTROLLER_API</code>. After
 the controller has started, your controller should be listening at that hostname:port combination. You can see what your
 value is set to by running <code>echo $ZITI_EDGE_CONTROLLER_API</code>. This variable defaults to: <code>$(hostname):1280</code>. Make sure the
-controller is on and listening and then start the edge router. It&#39;s best to make sure port 1280 is free before running
-the controller.</p>
+controller is on and listening and then start the edge router. </p>
 <pre><code class="lang-bash">~ % echo $ZITI_EDGE_CONTROLLER_API
 My-Mac-mini.local.domain:1280
 </code></pre><h3 id="start-your-edge-router">Start Your Edge Router</h3>
@@ -140,8 +142,7 @@ router locally by running <code>startExpressEdgeRouter</code>.</p>
 <p>You should see output that looks like this:</p>
 <pre><code class="lang-bash">Express Edge Router started as process id: 7555. log located at: ${HOME}/.ziti/quickstart/My-Mac-mini.local.domain/My-Mac-mini.local.domain-edge-router.log
 </code></pre><p>You can verify the edge router is listening by finding the value of <code>$ZITI_EDGE_ROUTER_HOSTNAME:$ZITI_EDGE_ROUTER_PORT</code>.
-Again, this will default to using <code>$(hostname)</code> as the host name and port 3022. Make sure port 3022 is available before 
-trying to start the edge router.</p>
+Again, this will default to using <code>$(hostname)</code> as the host name and port 3022. </p>
 <h2 id="testing-your-overlay">Testing Your Overlay</h2>
 <p>At this point you should have a functioning <a href="../../overview.html#overview-of-a-ziti-network">Ziti Network</a>. The script 
 you sourced provides another function to login to your network. Try this now by running <code>zitiLogin</code>. You should see 

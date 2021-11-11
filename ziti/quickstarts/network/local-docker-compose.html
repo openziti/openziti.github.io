@@ -120,10 +120,16 @@ DEFAULT_ENV_FILE
 </code></pre><h2 id="running-via-docker-compose">Running via Docker Compose</h2>
 <p>Once the compose file is downloaded and the <code>default.env</code> file exists, you&#39;ll be able to start this network using
 docker-compose just like you can with any other compose file: <code>docker-compose up</code></p>
-<h3 id="stopping-the-network">Stopping the Network</h3>
+<div class="NOTE"><h5>Note</h5><p>Docker compose will name your containers based on the folder you were in when you started them. For me, I&#39;ve made a folder
+named <code>docker</code> so all my containers start with <code>docker_</code>. You can influence how this works by adding
+<code>--project-name docker</code> (or whatever name you like) to your docker-compose up/down commands</p>
+<pre><code class="lang-bash">docker-compose --project-name docker up 
+</code></pre><h3 id="stopping-the-network">Stopping the Network</h3>
+</div>
 <p>This docker-compose file will generate a volume mount as well as a <strong>two</strong> docker networks. When you issue 
-<code>docker-compose down</code> the volume mapping will not be removed. If you wish to remove the volume, you&#39;ll need to specify
-the <code>-v</code> flag to the <code>docker-compose</code> command.</p>
+<code>docker-compose --project-name docker down</code> the volume mapping will not be removed. If you wish to remove the volume, 
+you&#39;ll need to specify the <code>-v</code> flag to the <code>docker-compose</code> command. Leave the <code>-v</code> off your command if you want to just 
+stop the containers without losing the controller database and PKI.</p>
 <h2 id="deployment-diagram">Deployment Diagram</h2>
 <p>This <code>docker-compose</code> file will create quite a few containers on your behalf. Here is an overview of the network that
 will get created:</p>
@@ -131,6 +137,10 @@ will get created:</p>
 <p>As you can see there&#39;s a fair bit going on in there, let&#39;s break it down. The first thing to notice is that the entire
 image is within the scope of a Docker network. You&#39;ll see with this compose file there are three pieces of the overlay
 which span the Docker network: the controller, an edge router, and a websocket-based edge router.  </p>
+<h3 id="deployment-simplified">Deployment Simplified</h3>
+<p>The stock docker-compose.yml deploys many components and is somewhat complex. If you prefer a simplified deployment via 
+Docker compose, one which only includes the basic controller and edge router combination you can instead download the 
+<a href="https://git.io/JXQSt">simplified-docker-compose.yml</a></p>
 <h3 id="networks">Networks</h3>
 <p>Inside the Docker network you&#39;ll see there are three networks:</p>
 <ul>
