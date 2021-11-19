@@ -2457,7 +2457,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/hosted.html",
-          "hash": "RcC4dBNlqbFX+zSlSiqnaQ=="
+          "hash": "CeaV7+cZvFMQhHtzzgYHoQ=="
         }
       },
       "is_incremental": false,
@@ -2469,7 +2469,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-docker-compose.html",
-          "hash": "o97fh/IyvwPIGCIiL4nDvg=="
+          "hash": "RMxGWDZUAFTUgs9ozUZrJQ=="
         }
       },
       "is_incremental": false,
@@ -2481,7 +2481,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-no-docker.html",
-          "hash": "uoF7ngGI8CzM0n5YNWwdkQ=="
+          "hash": "deoA+D4GjrjRTvVwaiMxvw=="
         }
       },
       "is_incremental": false,
@@ -2493,7 +2493,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-with-docker.html",
-          "hash": "Va0wNp3o0x6iuLf1dLk+0w=="
+          "hash": "8ev8RlgLb8dM3QCI2iJ6ag=="
         }
       },
       "is_incremental": false,
