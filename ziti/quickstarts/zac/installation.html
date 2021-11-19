@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Installing Ziti Administration Console | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Installing Ziti Administration Console | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../../images/github-white.svg" alt="view us on github" title="view us on github" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="installing-ziti-administration-console">Installing Ziti Administration Console</h1>
+
+<p>The Ziti Administration Console (ZAC) is a UI provided by the OpenZiti project which will allow you to configure and 
+explore a <a class="xref" href="../../overview.html#overview-of-a-ziti-network">Ziti Network</a>. Installing the ZAC is relatively straightforward 
+and can be accomplished in two basic ways shown below.</p>
+<h2 id="setting-up-the-ziti-admin-console">Setting up the Ziti Admin Console</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<p>It&#39;s expected that you&#39;re using <code>bash</code> for these commands. If you&#39;re using Windows we strongly recommend that you install 
+and use Windows Subsystem for Linux (WSL). Other operating systems it&#39;s recommended you use <code>bash</code> unless you are able to 
+translate to your shell accordingly. </p>
+<div class="NOTE"><h5>Note</h5><p>When running Ziti Administration Console, you should also prefer using https over http. In order to do this you will need
+to either create, or copy the certificates needed. Each section below tries to show you how to accomplish this on your own.</p>
+</div>
+<h3 id="cloning-from-github">Cloning From GitHub</h3>
+<p>These steps are applicable to both the <a href="../network/local-no-docker.html">local, no docker</a> as well as the 
+<a href="../network/hosted.html">hosted yourself</a> deployments. Do note, these steps expect you have the necessary 
+environment variables established in your shell. If you used the default parameters, you can establish these variables 
+using the file at <code>${HOME}/.ziti/quickstart/$(hostname)/$(hostname).env</code>. To deploy ZAC after following one of those guides,
+you can perform the following steps.</p>
+<ol>
+<li><p>Clone the ziti-console repo from github:</p>
+<pre><code class="lang-bash">git clone https://github.com/openziti/ziti-console.git &quot;${ZITI_HOME}/ziti-console&quot;
+</code></pre></li>
+<li><p>Install node and npm and get the server ready:</p>
+<pre><code class="lang-bash">cd &quot;${ZITI_HOME}/ziti-console&quot;
+sudo apt install npm nodejs -y
+npm install
+</code></pre></li>
+<li><p>Use the ziti-controller certificates for the Ziti Console:</p>
+<pre><code class="lang-bash">ln -s &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/certs/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.chain.pem&quot; &quot;${ZITI_HOME}/ziti-console/server.chain.pem&quot;
+ln -s &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/keys/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.key&quot; &quot;${ZITI_HOME}/ziti-console/server.key&quot;
+</code></pre></li>
+<li><p>[Optional] Emit the Ziti Console systemd file and update systemd to start the Ziti Console. If you have not sourced the 
+Ziti helper script, you need to in order to get the necessary function.</p>
+<pre><code class="lang-bash">createZacSystemdFile
+sudo cp &quot;${ZITI_HOME}/ziti-console.service&quot; /etc/systemd/system
+sudo systemctl daemon-reload
+sudo systemctl start ziti-console
+</code></pre><p>If you do not have systemd installed or if you just wish to start ZAC you can simply issue:</p>
+<pre><code class="lang-bash">node &quot;${ZITI_HOME}/ziti-console/server.js&quot;
+Initializing TLS
+TLS initialized on port: 8443
+Ziti Server running on port 1408
+</code></pre></li>
+<li><p>[Optional] If using systemd - verify the Ziti Console is running by running the systemctl command 
+<code>sudo systemctl status ziti-console --lines=0 --no-pager</code></p>
+<pre><code class="lang-bash">#sample output of the command:
+ubuntu@ip-172-31-22-212:~$ sudo systemctl status ziti-console --lines=0 --no-pager
+● ziti-console.service - Ziti-Console
+Loaded: loaded (/etc/systemd/system/ziti-console.service; disabled; vendor preset: enabled)
+Active: active (running) since Wed 2021-05-19 22:04:44 UTC; 13h ago
+Main PID: 13458 (node)
+Tasks: 11 (limit: 1160)
+Memory: 33.4M
+CGroup: /system.slice/ziti-console.service
+└─13458 /usr/bin/node /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-console/server.js
+</code></pre><h3 id="using-docker">Using Docker</h3>
+</li>
+</ol>
+<p>Getting ZAC setup if you have followed the <a href="../network/local-with-docker.html">docker network quickstart</a> 
+should be straightforward. If you have used the default values from this quickstart you can issue the following command. 
+Notice that this command uses the default path: <code>${HOME}/docker-volume/myFirstZitiNetwork</code>. If you customized the path, 
+replace the paths specified in the volume mount sections below accordingly (the &#39;-v&#39; lines). Also note this command will 
+expose the http and https ports to your local computer. This is optional, read more about using docker for more details 
+if necessary.</p>
+<pre><code class="lang-bash">docker run \
+       --name zac \
+       -p 1408:1408 \
+       -p 8443:8443 \
+       -v &quot;${HOME}/docker-volume/myFirstZitiNetwork/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.key&quot;:/usr/src/app/server.key \
+       -v &quot;${HOME}/docker-volume/myFirstZitiNetwork/ziti-edge-controller-intermediate/certs/ziti-edge-controller-server.chain.pem&quot;:/usr/src/app/server.chain.pem \
+       openziti/zac
+</code></pre><div class="NOTE"><h5>Note</h5><p>Do note that if you are exposing ports as shown above, you will need to ensure that <code>ziti-edge-controller</code> is 
+addressable by your machine in order to use docker in this way. This guide does not go into how to do this in depth. 
+One easy, and common mechanism to do this would be to edit the &#39;hosts&#39; file of your operating system. A quick 
+internet search should show you how to accomplish this.</p>
+</div>
+<h3 id="using-docker-compose">Using Docker Compose</h3>
+<p>If you have followed the <a href="../network/local-docker-compose.html">docker compose quickstart</a> getting the ZAC 
+running within the compose file is a bit cumbersome because the docker-compose file will generate a full PKI on your 
+behalf. While this makes it very easy to get a basic network setup, it makes reusing that PKI in the ZAC difficult at 
+this time.  It&#39;s not difficult to reuse the PKI but you&#39;ll need to do the following:</p>
+<ol>
+<li>Start the network using <code>docker-compose</code> as normal.</li>
+<li>After running, copy the <code>ziti-edge-controller</code> server certificate chain and key from the controller using these commands:
+<code>bash
+docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.key .
+docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.chain.pem .</code></li>
+<li>Once these files are copied out, shut down the running docker-compose <code>docker-compose down</code>. Do NOT remove the volume 
+with <code>-v</code>.</li>
+<li><p>Now add the ZAC configuration lines to the compose file of your choice:</p>
+<pre><code class="lang-bash">  ziti-console:
+ image: openziti/zac
+ ports:
+   - &quot;1408:1408&quot;
+   - &quot;8443:8443&quot;
+ environment:
+   - ZITI_EDGE_CONTROLLER_HOSTNAME=ziti-edge-router
+ volumes:
+   - ziti-fs:/openziti
+   - type: bind
+     source: ./ziti-edge-controller-server.key
+     target: /usr/src/app/server.key
+   - type: bind
+     source: ./ziti-edge-controller-server.chain.pem
+     target: /usr/src/app/server.chain.pem
+
+ networks:
+   - zitiblue
+   - zitired
+</code></pre></li>
+<li>After adding the ZAC configuration as shown, <code>docker-compose</code> will now start and expose the ZAC ports on 1408/8443.
+&gt; [!Note]
+&gt; Do note that if you are exposing ports as shown above, you will need to ensure that <code>ziti-edge-controller</code> is
+&gt; addressable by your machine in order to use docker in this way. This guide does not go into how to do this in depth.
+&gt; One easy, and common mechanism to do this would be to edit the &#39;hosts&#39; file of your operating system. A quick
+&gt; internet search should show you how to accomplish this.
+&gt; </li>
+</ol>
+<h2 id="login-and-use-the-ziti-console">Login and use the Ziti Console</h2>
+<ol>
+<li><p>At this point you should be able to navigate to both: <code>https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:8443</code>and see the ZAC login
+screen. (The TLS warnings your browser will show you are normal - it&#39;s because these steps use a self-signed certificate
+generated in the install process)</p>
+</li>
+<li><p>Set the controller as shown:</p>
+<p><img src="zac_configure.png" alt="img_1.png"></p>
+</li>
+<li><p>Login with admin/admin</p>
+<p><img src="zac_login.png" alt="img_2.png"></p>
+</li>
+<li><p><strong>IMPORTANT!!!</strong> Edit your profile and change the password</p>
+<p><img src="zac_change_pwd.png" alt="img_3.png"></p>
+</li>
+</ol>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/quickstarts/zac/installation.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/netfoundry' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCGN6PFj1rZu50yme9YsICmg' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

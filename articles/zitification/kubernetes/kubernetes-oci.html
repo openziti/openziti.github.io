@@ -174,7 +174,7 @@ spec:
 </code></pre><h3 id="kubectl-apply-the-config">kubectl apply the config:</h3>
 <pre><code class="lang-bash">export KUBECONFIG=/tmp/oci/config.oci.public
 kubectl apply -f add-persistent-claims.yaml 
-helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=k8s.private.jwt
+helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=&quot;${the_kubernetes_identity}&quot;.jwt
 </code></pre><h3 id="verify-the-ziti-identity-was-bootstrapped-by-using-kubectl-logs">verify the ziti identity was bootstrapped by using kubectl logs</h3>
 <pre><code class="lang-bash">kubectl logs ziti-host&lt;tab&gt;&lt;enter&gt;
 </code></pre><hr>
@@ -206,7 +206,15 @@ ziti edge create service-policy &quot;${service_name}&quot;-dialing Dial --servi
 <pre><code class="lang-bash">cmd.exe /c curl -k &quot;https://${k8s_private_dns}&quot;
 cmd.exe /c curl -k &quot;https://${k8s_private_host}&quot;    
 </code></pre><h4 id="at-this-point-from-wsl-kubectl-will-work-using-the-ip-address---but-not-dns">at this point from wsl kubectl will work using the ip address - but not dns</h4>
-<pre><code class="lang-bash">zConfig: /mnt/v/temp/oci/oci.json
+<pre><code class="lang-bash">#enroll the identity
+ziti edge enroll &quot;${the_user_identity}&quot;.jwt
+
+# use the identity to get pods:
+./kubeztl --zConfig &quot;${the_user_identity}&quot;.json --service k8s.oci get pods
+
+# update your config to make it so you don&#39;t need to supply --zConfig or --service
+# replace &quot;${the_user_identity}&quot; accordingly:
+zConfig: /mnt/v/temp/oci/&quot;${the_user_identity}&quot;.json
 service: k8s.oci
 </code></pre><h4 id="use-kubeztl">use &quot;kubeztl&quot;:</h4>
 <h4 id="download-from-github">download from github:</h4>

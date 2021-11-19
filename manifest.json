@@ -459,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/kubernetes-oci.html",
-          "hash": "J26llEAaC4SKAT05jbrpuQ=="
+          "hash": "JoKwGpBk1pP0qRNs/ejhJw=="
         }
       },
       "is_incremental": false,
@@ -2457,7 +2457,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/hosted.html",
-          "hash": "h6Vjp6i6NRQOO6dJq0T3Pg=="
+          "hash": "RcC4dBNlqbFX+zSlSiqnaQ=="
         }
       },
       "is_incremental": false,
@@ -2513,6 +2513,51 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/zac/installation.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/zac/installation.html",
+          "hash": "/+vJFh2ZUVuhLjoSCgpkgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/zac/zac_change_pwd.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/zac/zac_change_pwd.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/zac/zac_configure.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/zac/zac_configure.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/zac/zac_login.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/zac/zac_login.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/services/create-service-cli.md",
       "output": {
         ".html": {
@@ -2553,7 +2598,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "kzYDJCXf3i6I+qkSxftcLA=="
+          "hash": "t71E8p+WlFCCAgdxFv8bYA=="
         }
       },
       "is_incremental": false,
@@ -2574,7 +2619,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 107,
+          "total_file_count": 108,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
