@@ -21,6 +21,7 @@ var model__support_8h =
     [ "mk_enum", "model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2", null ],
     [ "MODEL_API", "model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4", null ],
     [ "MODEL_JSON_COMPACT", "model__support_8h.html#a08d252be7ebc7de5de1b8652ea647993", null ],
+    [ "MODEL_MAP_FOR", "model__support_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c", null ],
     [ "MODEL_MAP_FOREACH", "model__support_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0", null ],
     [ "MODEL_MAP_FOREACH_l", "model__support_8h.html#a16964b64c051836f7e2c3fbb8583fecd", null ],
     [ "none", "model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586", null ],

@@ -140,6 +140,8 @@ Macros</h2></td></tr>
 <tr class="separator:a16964b64c051836f7e2c3fbb8583fecd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc514b62f35aeb5f3b6ed873e19b3b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0">MODEL_MAP_FOREACH</a>(k,  v,  <a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#a16964b64c051836f7e2c3fbb8583fecd">MODEL_MAP_FOREACH_l</a>(k, v, <a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, __LINE__)</td></tr>
 <tr class="separator:a7dc514b62f35aeb5f3b6ed873e19b3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae23e6cf285fb0aeb866dcc4d6b22443c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c">MODEL_MAP_FOR</a>(it,  m)&#160;&#160;&#160;for(<a class="el" href="model__support_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it = <a class="el" href="model__support_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__support_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(it))</td></tr>
+<tr class="separator:ae23e6cf285fb0aeb866dcc4d6b22443c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c31d6cc86a12ba4b0b7d99cba13e4b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a>(v,  t)&#160;&#160;&#160;t##_##v,</td></tr>
 <tr class="separator:a1c31d6cc86a12ba4b0b7d99cba13e4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f9ba7620075401467ab25c975fa0b27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a>(v,  t)&#160;&#160;&#160;const t v;</td></tr>
@@ -815,6 +817,34 @@ Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">#define MODEL_JSON_COMPACT&#160;&#160;&#160;0x1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae23e6cf285fb0aeb866dcc4d6b22443c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae23e6cf285fb0aeb866dcc4d6b22443c">&#9670;&nbsp;</a></span>MODEL_MAP_FOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODEL_MAP_FOR</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">it, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">m&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;for(<a class="el" href="model__support_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it = <a class="el" href="model__support_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__support_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(it))</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -2132,10 +2162,10 @@ Functions</h2></td></tr>
 <div class="ttc" id="amodel__support_8h_html_a1219563bd05538ba38b8c1dafb9e1d06"><div class="ttname"><a href="model__support_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a></div><div class="ttdeci">const char * model_map_it_key(model_map_iter it)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a0a845f813a5015d19de89e5b2b14678e"><div class="ttname"><a href="model__support_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a></div><div class="ttdeci">void * model_map_it_value(model_map_iter it)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:268</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:269</div></div>
 <div class="ttc" id="amodel__support_8h_html_aee4a9b5ebdf3b4b9dc76a46d0b44c69e"><div class="ttname"><a href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a></div><div class="ttdeci">#define gen_field_meta(n, memtype, modifier, p, partype)</div><div class="ttdef"><b>Definition:</b> model_support.h:91</div></div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:267</div></div>
+<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:268</div></div>
 <div class="ttc" id="astructfield__meta_html"><div class="ttname"><a href="structfield__meta.html">field_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:143</div></div>
 <div class="ttc" id="amodel__support_8h_html_a7344bf17347338e1ae192fc34597203e"><div class="ttname"><a href="model__support_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a></div><div class="ttdeci">model_map_iter model_map_iterator(const model_map *map)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a9152d0581d1360bfac0757eebb444f7c"><div class="ttname"><a href="model__support_8h.html#a9152d0581d1360bfac0757eebb444f7c">var</a></div><div class="ttdeci">#define var(x, y)</div><div class="ttdef"><b>Definition:</b> model_support.h:235</div></div>
