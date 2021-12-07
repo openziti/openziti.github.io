@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['bool_5farray_751',['bool_array',['../model__support_8h.html#a9fa142eb501376d27c45f46d58866a84',1,'model_support.h']]]
+  ['int_5farray_750',['int_array',['../model__support_8h.html#a0031190b6b6a06574a2654a2842e954d',1,'model_support.h']]]
 ];

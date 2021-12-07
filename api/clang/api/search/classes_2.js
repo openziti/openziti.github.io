@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['model_5fmap_446',['model_map',['../structmodel__map.html',1,'']]]
+  ['tag_448',['tag',['../structtag.html',1,'']]],
+  ['type_5fmeta_449',['type_meta',['../structtype__meta.html',1,'']]]
 ];

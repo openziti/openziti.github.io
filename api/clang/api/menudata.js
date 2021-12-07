@@ -98,10 +98,10 @@ var menudata={children:[
 {text:"p",url:"globals_func.html#index_p"},
 {text:"z",url:"globals_func.html#index_z"}]},
 {text:"Variables",url:"globals_vars.html",children:[
+{text:"c",url:"globals_vars.html#index_c"},
 {text:"z",url:"globals_vars.html#index_z"}]},
 {text:"Typedefs",url:"globals_type.html",children:[
 {text:"_",url:"globals_type.html#index__5F"},
-{text:"a",url:"globals_type.html#index_a"},
 {text:"b",url:"globals_type.html#index_b"},
 {text:"i",url:"globals_type.html#index_i"},
 {text:"j",url:"globals_type.html#index_j"},

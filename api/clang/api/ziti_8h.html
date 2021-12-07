@@ -139,7 +139,7 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a1fe921652d1f302f11ad29f836cf9eef"><td class="memItemLeft" align="right" valign="top">typedef struct ziti_conn *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a></td></tr>
 <tr class="memdesc:a1fe921652d1f302f11ad29f836cf9eef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a Ziti connection.  <a href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">More...</a><br /></td></tr>
 <tr class="separator:a1fe921652d1f302f11ad29f836cf9eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35245ab4953e815155542e5b46f5bdff"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">ziti_service_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, ziti_service *, int status, void *data)</td></tr>
+<tr class="memitem:a35245ab4953e815155542e5b46f5bdff"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">ziti_service_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a> *, int status, void *data)</td></tr>
 <tr class="memdesc:a35245ab4953e815155542e5b46f5bdff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service status callback.  <a href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff">More...</a><br /></td></tr>
 <tr class="separator:a35245ab4953e815155542e5b46f5bdff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">ziti_pr_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, char **mac_addresses, int num_mac)</td></tr>
@@ -184,13 +184,13 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aea8ec31c759892288c0ad89ac17a161d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, ssize_t status, void *write_ctx)</td></tr>
 <tr class="memdesc:aea8ec31c759892288c0ad89ac17a161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> is complete.  <a href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">More...</a><br /></td></tr>
 <tr class="separator:aea8ec31c759892288c0ad89ac17a161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d">ziti_enroll_cb</a>) (<a class="el" href="ziti__model_8h.html#abc08ed263c9db88f673a85eccf9bd535">ziti_config</a> *cfg, int status, char *err_message, void *enroll_ctx)</td></tr>
+<tr class="memitem:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d">ziti_enroll_cb</a>) (ziti_config *cfg, int status, char *err_message, void *enroll_ctx)</td></tr>
 <tr class="memdesc:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#a86a73cb294bab0c38a0b00497f547845" title="Performs a Ziti enrollment.">ziti_enroll()</a> is complete.  <a href="ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d">More...</a><br /></td></tr>
 <tr class="separator:ab6cdcc63aaf1dc483afb46ec14cb468d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:a0ededa980f2de9e4b58378e88fcd49a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after connection was closed.  <a href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">More...</a><br /></td></tr>
 <tr class="separator:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d61fdf16e3be123a6939c274b3780f7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7">ziti_mfa_enroll_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, <a class="el" href="ziti__model_8h.html#a40b72f028dfcf7d23b8c9efb7141925d">ziti_mfa_enrollment</a> *mfa_enrollment, void *ctx)</td></tr>
+<tr class="memitem:a7d61fdf16e3be123a6939c274b3780f7"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7">ziti_mfa_enroll_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, ziti_mfa_enrollment *mfa_enrollment, void *ctx)</td></tr>
 <tr class="memdesc:a7d61fdf16e3be123a6939c274b3780f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#a25c187cbb0d3aaf9ae6e9df50c55ef3c" title="Attempts to initialize MFA enrollment.">ziti_mfa_enroll()</a>  <a href="ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7">More...</a><br /></td></tr>
 <tr class="separator:a7d61fdf16e3be123a6939c274b3780f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7fba467dc1ea3a240881d0cf68d808b4"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, void *ctx)</td></tr>
@@ -231,16 +231,16 @@ Functions</h2></td></tr>
 <tr class="memitem:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50">ziti_app_ctx</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns <a class="el" href="structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c">ziti_options.app_ctx</a> for the given Ziti context.  <a href="ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50">More...</a><br /></td></tr>
 <tr class="separator:a35fa2d859ebc0167ec27aa8e50e0fa50"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d8319b0b9d61e0d2ef90085802a851b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="ziti__model_8h.html#abd9d7c30ca771a2b23359eab74442c85">ziti_version</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b">ziti_get_version</a> ()</td></tr>
+<tr class="memitem:a6d8319b0b9d61e0d2ef90085802a851b"><td class="memItemLeft" align="right" valign="top">const ziti_version *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b">ziti_get_version</a> ()</td></tr>
 <tr class="memdesc:a6d8319b0b9d61e0d2ef90085802a851b"><td class="mdescLeft">&#160;</td><td class="mdescRight">return SDK version  <a href="ziti_8h.html#a6d8319b0b9d61e0d2ef90085802a851b">More...</a><br /></td></tr>
 <tr class="separator:a6d8319b0b9d61e0d2ef90085802a851b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76054bc6482366b3dbc77dd54f45a042"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="ziti__model_8h.html#abd9d7c30ca771a2b23359eab74442c85">ziti_version</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042">ziti_get_controller_version</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
+<tr class="memitem:a76054bc6482366b3dbc77dd54f45a042"><td class="memItemLeft" align="right" valign="top">const ziti_version *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042">ziti_get_controller_version</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:a76054bc6482366b3dbc77dd54f45a042"><td class="mdescLeft">&#160;</td><td class="mdescRight">return Ziti controller version for given context  <a href="ziti_8h.html#a76054bc6482366b3dbc77dd54f45a042">More...</a><br /></td></tr>
 <tr class="separator:a76054bc6482366b3dbc77dd54f45a042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeddb4d7dd7d0909084566f8bb947dd52"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52">ziti_get_controller</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:aeddb4d7dd7d0909084566f8bb947dd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">controller URL of the given context  <a href="ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52">More...</a><br /></td></tr>
 <tr class="separator:aeddb4d7dd7d0909084566f8bb947dd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a79f8efe665cd3ad0ec403af03e331078"><td class="memItemLeft" align="right" valign="top">const ziti_identity *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078">ziti_get_identity</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
+<tr class="memitem:a79f8efe665cd3ad0ec403af03e331078"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="ziti__model_8h.html#a8728ad543b86277473c14abccf239e59">ziti_identity</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078">ziti_get_identity</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:a79f8efe665cd3ad0ec403af03e331078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ziti identity of the given context.  <a href="ziti_8h.html#a79f8efe665cd3ad0ec403af03e331078">More...</a><br /></td></tr>
 <tr class="separator:a79f8efe665cd3ad0ec403af03e331078"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f">ziti_get_transfer_rates</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, double *up, double *down)</td></tr>
@@ -522,7 +522,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_enroll_cb) (<a class="el" href="ziti__model_8h.html#abc08ed263c9db88f673a85eccf9bd535">ziti_config</a> *cfg, int status, char *err_message, void *enroll_ctx)</td>
+          <td class="memname">typedef void(* ziti_enroll_cb) (ziti_config *cfg, int status, char *err_message, void *enroll_ctx)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -616,7 +616,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_mfa_enroll_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, <a class="el" href="ziti__model_8h.html#a40b72f028dfcf7d23b8c9efb7141925d">ziti_mfa_enrollment</a> *mfa_enrollment, void *ctx)</td>
+          <td class="memname">typedef void(* ziti_mfa_enroll_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, ziti_mfa_enrollment *mfa_enrollment, void *ctx)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -869,7 +869,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef void(* ziti_service_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, ziti_service *, int status, void *data)</td>
+          <td class="memname">typedef void(* ziti_service_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a> *, int status, void *data)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1577,7 +1577,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="ziti__model_8h.html#abd9d7c30ca771a2b23359eab74442c85">ziti_version</a>* ziti_get_controller_version </td>
+          <td class="memname">const ziti_version* ziti_get_controller_version </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
           <td class="paramname"><em>ztx</em></td><td>)</td>
@@ -1604,7 +1604,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const ziti_identity* ziti_get_identity </td>
+          <td class="memname">const <a class="el" href="ziti__model_8h.html#a8728ad543b86277473c14abccf239e59">ziti_identity</a>* ziti_get_identity </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
           <td class="paramname"><em>ztx</em></td><td>)</td>
@@ -1676,7 +1676,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const <a class="el" href="ziti__model_8h.html#abd9d7c30ca771a2b23359eab74442c85">ziti_version</a>* ziti_get_version </td>
+          <td class="memname">const ziti_version* ziti_get_version </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>

@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['alloc_5fapi_5fpath_471',['alloc_api_path',['../ziti__model_8h.html#a53bf7bf99f98e5b497b37a2380c33ac0',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fclient_5fcfg_5fv1_472',['alloc_ziti_client_cfg_v1',['../ziti__model_8h.html#ae85face3e2bdfde6eb7512aa753445f8',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fconfig_473',['alloc_ziti_config',['../ziti__model_8h.html#a3cb87a813f72ed8a1023e38609e71a55',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fhost_5fcfg_5fv1_474',['alloc_ziti_host_cfg_v1',['../ziti__model_8h.html#ac08ef8bcddad392c89d5cb7c95d9b845',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fintercept_5fcfg_5fv1_475',['alloc_ziti_intercept_cfg_v1',['../ziti__model_8h.html#a6ef8fd71db035120c5f1c5b35626491e',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fmfa_5fenrollment_476',['alloc_ziti_mfa_enrollment',['../ziti__model_8h.html#aae6fde74b49f49ea4ffb514f8485dc7a',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fposture_5fquery_5fset_477',['alloc_ziti_posture_query_set',['../ziti__model_8h.html#aaf8f254cc5efca5b6d5c208c31157323',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fprocess_478',['alloc_ziti_process',['../ziti__model_8h.html#ad886cb120e45296d78f88569c23794f8',1,'ziti_model.h']]],
-  ['alloc_5fziti_5fversion_479',['alloc_ziti_version',['../ziti__model_8h.html#a40ecb9424d080d59f499a141288e990d',1,'ziti_model.h']]],
-  ['api_5fpath_5fto_5fjson_480',['api_path_to_json',['../ziti__model_8h.html#aad30b1dea771f9c40713906a9087122e',1,'ziti_model.h']]],
-  ['api_5fpath_5fto_5fjson_5fr_481',['api_path_to_json_r',['../ziti__model_8h.html#af77647408f0eeb73f51420eb6cb8b76f',1,'ziti_model.h']]]
+  ['alloc_5fziti_5fapi_5fversions_473',['alloc_ziti_api_versions',['../ziti__model_8h.html#ab36fada46f45a7af075e748f76a9e4d0',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fauth_5fquery_5fmfa_474',['alloc_ziti_auth_query_mfa',['../ziti__model_8h.html#aa2b3c4ebfd6488875a7fdf8053d6433b',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fid_5fcfg_475',['alloc_ziti_id_cfg',['../ziti__model_8h.html#a5619e4ab2bf66843784a61a74c361556',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fidentity_476',['alloc_ziti_identity',['../ziti__model_8h.html#a3215f3e18b6f4df6ad3b9d3fe3d99e4f',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fport_5frange_477',['alloc_ziti_port_range',['../ziti__model_8h.html#a3db689fa4874ff293afb1ec363e010ba',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fposture_5fquery_478',['alloc_ziti_posture_query',['../ziti__model_8h.html#a290b3a79fe5a1f511571c77f7ecff3c3',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fserver_5fcfg_5fv1_479',['alloc_ziti_server_cfg_v1',['../ziti__model_8h.html#a8ef0ef416077772bb5ab6e2e85a14a66',1,'ziti_model.h']]],
+  ['alloc_5fziti_5fservice_480',['alloc_ziti_service',['../ziti__model_8h.html#a78408550721cbd84cc98f88bfabbaa34',1,'ziti_model.h']]]
 ];
