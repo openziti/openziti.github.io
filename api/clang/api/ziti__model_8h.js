@@ -31,9 +31,9 @@ var ziti__model_8h =
     [ "ziti_session_type", "ziti__model_8h.html#a09b1b887e9d3b6aa50fad74572606d9b", null ],
     [ "ziti_session_type_array", "ziti__model_8h.html#a112c47c1ec3e7484933cbd3d39608ff3", null ],
     [ "ziti_session_type", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532", [
+      [ "ziti_session_type_Unknown", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ac9ade772985cd1522b713d047a00819a", null ],
       [ "ziti_session_type_Bind", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad8ac3e8bf27d417d8d76148c2567488d", null ],
-      [ "ziti_session_type_Dial", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad1a180cee3d3c0f987830792f48bf9df", null ],
-      [ "ziti_session_type_Unknown", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ac9ade772985cd1522b713d047a00819a", null ]
+      [ "ziti_session_type_Dial", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad1a180cee3d3c0f987830792f48bf9df", null ]
     ] ],
     [ "alloc_ziti_api_versions", "ziti__model_8h.html#ab36fada46f45a7af075e748f76a9e4d0", null ],
     [ "alloc_ziti_auth_query_mfa", "ziti__model_8h.html#aa2b3c4ebfd6488875a7fdf8053d6433b", null ],

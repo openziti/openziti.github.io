@@ -11,8 +11,9 @@ var searchData=
   ['debuglevel_58',['DebugLevel',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395',1,'ziti_log.h']]],
   ['declare_5fenum_59',['DECLARE_ENUM',['../model__support_8h.html#ac2b261383be230e50154c3da584f245a',1,'model_support.h']]],
   ['declare_5fmodel_60',['DECLARE_MODEL',['../model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f',1,'model_support.h']]],
-  ['deprecated_20list_61',['Deprecated List',['../deprecated.html',1,'']]],
-  ['destroyer_62',['destroyer',['../structtype__meta.html#a2d403aba10f11e5b49258bd8bf5b3481',1,'type_meta']]],
-  ['dial_63',['Dial',['../structziti__session__type__s.html#ad11700ea4014e7beee1de8df5c8cc7e8',1,'ziti_session_type_s']]],
-  ['disabled_64',['disabled',['../structziti__options.html#a5da22b3a1fb640d61217b998c6f14904',1,'ziti_options']]]
+  ['delete_5fstring_5fbuf_61',['delete_string_buf',['../ziti__buffer_8h.html#a7ab0eaad1513ee61d37f4f736919a6af',1,'ziti_buffer.h']]],
+  ['deprecated_20list_62',['Deprecated List',['../deprecated.html',1,'']]],
+  ['destroyer_63',['destroyer',['../structtype__meta.html#a2d403aba10f11e5b49258bd8bf5b3481',1,'type_meta']]],
+  ['dial_64',['Dial',['../structziti__session__type__s.html#ad11700ea4014e7beee1de8df5c8cc7e8',1,'ziti_session_type_s']]],
+  ['disabled_65',['disabled',['../structziti__options.html#a5da22b3a1fb640d61217b998c6f14904',1,'ziti_options']]]
 ];

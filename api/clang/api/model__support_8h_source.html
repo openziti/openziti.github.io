@@ -334,13 +334,13 @@ $(document).ready(function(){initNavTree('model__support_8h_source.html',''); in
 <div class="line"><a name="l00269"></a><span class="lineno"><a class="line" href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">  269</a></span>&#160;<span class="preprocessor">#define enum_field(v,t) const t v;</span></div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
 <div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="model__support_8h.html#ac2b261383be230e50154c3da584f245a">  271</a></span>&#160;<span class="preprocessor">#define DECLARE_ENUM(Enum, Values) \</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">enum Enum {                             \</span></div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">Values(mk_enum, Enum)                   \</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">Enum##_Unknown = -1,                    \</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">enum Enum {                        \</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">Enum##_Unknown = 0,                \</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">Values(mk_enum, Enum)              \</span></div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">};                                 \</span></div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">typedef enum Enum Enum;            \</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">typedef Enum **Enum##_array;         \</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">struct Enum##_s { \</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">typedef Enum **Enum##_array;       \</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">struct Enum##_s {                  \</span></div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">const char* (*name)(int v);                       \</span></div>
 <div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">Enum (*value_of)(const char* n);                  \</span></div>
 <div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">Enum (*value_ofn)(const char* s, size_t n);       \</span></div>

@@ -346,13 +346,13 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">enum</span> Enum {                             \</div>
-<div class="line">Values(<a class="code" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a>, Enum)                   \</div>
-<div class="line">Enum##_Unknown = -1,                    \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">enum</span> Enum {                        \</div>
+<div class="line">Enum##_Unknown = 0,                \</div>
+<div class="line">Values(<a class="code" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a>, Enum)              \</div>
 <div class="line">};                                 \</div>
 <div class="line">typedef <span class="keyword">enum</span> Enum Enum;            \</div>
-<div class="line">typedef Enum **Enum##_array;         \</div>
-<div class="line">struct Enum##_s { \</div>
+<div class="line">typedef Enum **Enum##_array;       \</div>
+<div class="line">struct Enum##_s {                  \</div>
 <div class="line">const <span class="keywordtype">char</span>* (*name)(<span class="keywordtype">int</span> v);                       \</div>
 <div class="line">Enum (*value_of)(<span class="keyword">const</span> <span class="keywordtype">char</span>* n);                  \</div>
 <div class="line">Enum (*value_ofn)(<span class="keyword">const</span> <span class="keywordtype">char</span>* s, <span class="keywordtype">size_t</span> n);       \</div>
