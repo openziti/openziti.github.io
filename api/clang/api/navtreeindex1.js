@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[2,0,12,1],
 "structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738":[2,0,12,2],
 "structziti__service__event.html":[2,0,13],
 "structziti__service__event.html#a3492a9c69ddf8bf08ee83224cd46bb62":[2,0,13,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "ziti__model_8h.html#ad1f4953a24e3990c071588761448eca5":[3,0,0,9,82],
 "ziti__model_8h.html#ad2478efc664e93c0ae05596eb67edad0":[3,0,0,9,109],
 "ziti__model_8h.html#ad3fd6206211282e6cd88d143787d70c4":[3,0,0,9,129],
-"ziti__model_8h.html#ad55a53365ade3bee6349d34bcbaa0cc9":[3,0,0,9,74],
-"ziti__model_8h.html#ad61fde48fd0be891c7364d5af9febc93":[3,0,0,9,122]
+"ziti__model_8h.html#ad55a53365ade3bee6349d34bcbaa0cc9":[3,0,0,9,74]
 };

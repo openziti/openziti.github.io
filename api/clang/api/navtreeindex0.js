@@ -59,8 +59,8 @@ var NAVTREEINDEX0 =
 "files.html":[3,0],
 "functions.html":[2,2,0],
 "functions_vars.html":[2,2,1],
-"globals.html":[3,1,0,0],
 "globals.html":[3,1,0],
+"globals.html":[3,1,0,0],
 "globals_a.html":[3,1,0,1],
 "globals_b.html":[3,1,0,2],
 "globals_c.html":[3,1,0,3],
@@ -215,6 +215,7 @@ var NAVTREEINDEX0 =
 "structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687":[2,0,7,0],
 "structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a":[2,0,7,3],
 "structziti__enroll__opts.html#ad830d3e79cb9c9062ec45ff496b70af3":[2,0,7,2],
+"structziti__enroll__opts.html#ad955a4c626beee62768cbc8cb06a587a":[2,0,7,4],
 "structziti__event__t.html":[2,0,8],
 "structziti__event__t.html#a142aff254b19096ad684974574ad9d2f":[2,0,8,5],
 "structziti__event__t.html#a2ebf1a939a1433d7f53ba0a65837ca32":[2,0,8,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c":[2,0,11,0],
 "structziti__router__event.html":[2,0,12],
 "structziti__router__event.html#a307653022b243b7f96a81b5694466cee":[2,0,12,0],
-"structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[2,0,12,3],
-"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[2,0,12,1]
+"structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[2,0,12,3]
 };
