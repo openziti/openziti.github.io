@@ -298,7 +298,14 @@ internal DNS server:</p>
 the route for the service:</p>
 <pre><code>[0012]  INFO adding bogushost.net -&gt; 169.254.1.4 to resolver
 [0012]  INFO ziti/tunnel/protocols/tcp.Listen: Accepting on 169.254.1.4:25 service=telnet
-</code></pre></article>
+</code></pre><h3 id="troubleshooting">Troubleshooting</h3>
+<p>The simplest step you can take toward a diagnosis is to reduce the minimum message log level by adding <code>--verbose</code> to your command. This usually means lower-level DEBUG messages and above are emitted in addition to the default level of INFO level and above e.g. WARN, ERROR, etc...</p>
+<p>If the tunneler is crashing then it may be crucial to collect and analyze the core dump file. You may need to enable saving core dumps depending upon your OS configuration. </p>
+<p>You can see how dump files are handled by inspecting this file, which is from Ubuntu 20.10.</p>
+<pre><code class="lang-bash">❯ cat /proc/sys/kernel/core_pattern
+|/usr/share/apport/apport %p %s %c %d %P %E
+</code></pre><p>In this case the dump is handled by <code>apport</code> which saves the file in <code>/var/crash</code>. I&#39;ll need to follow the <code>apport</code> documentation to learn how to unpack and parse the dump file.</p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
