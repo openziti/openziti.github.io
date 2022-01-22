@@ -82,10 +82,11 @@ var NAVTREEINDEX0 =
 "globals_s.html":[3,1,0,15],
 "globals_t.html":[3,1,0,16],
 "globals_type.html":[3,1,3],
-"globals_v.html":[3,1,0,17],
+"globals_u.html":[3,1,0,17],
+"globals_v.html":[3,1,0,18],
 "globals_vars.html":[3,1,2],
-"globals_w.html":[3,1,0,18],
-"globals_z.html":[3,1,0,19],
+"globals_w.html":[3,1,0,19],
+"globals_z.html":[3,1,0,20],
 "index.html":[],
 "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html":[0],
 "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md3":[0,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structziti__options.html#ac5bdd9a653ef37aa21da2e592fbd1d48":[2,0,11,12],
 "structziti__options.html#ae1caa81b77887af51189c6edadbfefab":[2,0,11,2],
 "structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c":[2,0,11,1],
-"structziti__router__event.html":[2,0,12],
-"structziti__router__event.html#a307653022b243b7f96a81b5694466cee":[2,0,12,0]
+"structziti__router__event.html":[2,0,12]
 };
