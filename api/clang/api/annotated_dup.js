@@ -4,6 +4,7 @@ var annotated_dup =
     [ "model_map", "structmodel__map.html", "structmodel__map" ],
     [ "tag", "structtag.html", "structtag" ],
     [ "type_meta", "structtype__meta.html", "structtype__meta" ],
+    [ "ziti_api_event", "structziti__api__event.html", "structziti__api__event" ],
     [ "ziti_client_ctx", "structziti__client__ctx.html", "structziti__client__ctx" ],
     [ "ziti_context_event", "structziti__context__event.html", "structziti__context__event" ],
     [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],

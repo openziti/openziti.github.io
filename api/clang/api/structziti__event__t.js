@@ -1,5 +1,6 @@
 var structziti__event__t =
 [
+    [ "api", "structziti__event__t.html#a0c9890fd942635af2d2491766960f028", null ],
     [ "ctx", "structziti__event__t.html#ace35c9d343f56c4200c448a9ba748df6", null ],
     [ "event", "structziti__event__t.html#a2ebf1a939a1433d7f53ba0a65837ca32", null ],
     [ "mfa_auth_event", "structziti__event__t.html#a939f57a7719a24f49ea9d0d18bd77df4", null ],

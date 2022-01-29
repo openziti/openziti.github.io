@@ -1,6 +1,7 @@
 var ziti__events_8h =
 [
     [ "ziti_context_event", "structziti__context__event.html", "structziti__context__event" ],
+    [ "ziti_api_event", "structziti__api__event.html", "structziti__api__event" ],
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
     [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
     [ "ziti_mfa_auth_event", "structziti__mfa__auth__event.html", "structziti__mfa__auth__event" ],
@@ -9,7 +10,8 @@ var ziti__events_8h =
       [ "ZitiContextEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4", null ],
       [ "ZitiRouterEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab", null ],
       [ "ZitiServiceEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0", null ],
-      [ "ZitiMfaAuthEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a6419d2ac859a3d2f156a6db12c1c4a52", null ]
+      [ "ZitiMfaAuthEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a6419d2ac859a3d2f156a6db12c1c4a52", null ],
+      [ "ZitiAPIEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a86fcb5b7eb6921e8526bfe2001e2c659", null ]
     ] ],
     [ "ziti_router_status", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02", [
       [ "EdgeRouterAdded", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a5d5d6523bfa9d78d1f9491de7424fc53", null ],
