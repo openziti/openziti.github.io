@@ -178,13 +178,17 @@ $(document).ready(function(){initNavTree('ziti__log_8h_source.html',''); initRes
 <div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">   91</a></span>&#160;<span class="comment">// don&#39;t use directly</span></div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> extern <span class="keywordtype">int</span> <a class="code" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a>();</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keywordtype">void</span> <a class="code" href="ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5">uv_mbed_logger</a>(<span class="keywordtype">int</span> level, const <span class="keywordtype">char</span> *file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line, const <span class="keywordtype">char</span> *msg);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keywordtype">void</span> <a class="code" href="ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5">uv_mbed_logger</a>(<span class="keywordtype">int</span> level, const <span class="keywordtype">char</span> *file, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> line, const <span class="keywordtype">char</span> *msg);</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;}</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif //ZITI_SDK_ZITI_LOG_H</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="comment">// don&#39;t use this function. it&#39;s a temporary function to support logging on windows.it will be</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="ziti__log_8h.html#aa966ce7005c6db6ba9819906cc918f87">  101</a></span>&#160;<span class="comment">// removed in a future release</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keywordtype">void</span> <a class="code" href="ziti__log_8h.html#aa966ce7005c6db6ba9819906cc918f87">ziti_enable_uv_mbed_logger</a>(<span class="keywordtype">int</span> enabled);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif //ZITI_SDK_ZITI_LOG_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aexterns_8h_html"><div class="ttname"><a href="externs_8h.html">externs.h</a></div></div>
@@ -201,6 +205,7 @@ $(document).ready(function(){initNavTree('ziti__log_8h_source.html',''); initRes
 <div class="ttc" id="aexterns_8h_html_a71e7a08e9b0fa6e62cba0738fd1d46d3"><div class="ttname"><a href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div><div class="ttdeci">#define ZITI_FUNC</div><div class="ttdef"><b>Definition:</b> externs.h:38</div></div>
 <div class="ttc" id="aziti__log_8h_html_acae349985349ceec5651bd864bf7f81e"><div class="ttname"><a href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a></div><div class="ttdeci">int ziti_log_level()</div></div>
 <div class="ttc" id="aziti__log_8h_html_a8530c2526b442921973e8c0bed2adc65"><div class="ttname"><a href="ziti__log_8h.html#a8530c2526b442921973e8c0bed2adc65">ziti_log_set_logger</a></div><div class="ttdeci">void ziti_log_set_logger(log_writer logger)</div></div>
+<div class="ttc" id="aziti__log_8h_html_aa966ce7005c6db6ba9819906cc918f87"><div class="ttname"><a href="ziti__log_8h.html#aa966ce7005c6db6ba9819906cc918f87">ziti_enable_uv_mbed_logger</a></div><div class="ttdeci">void ziti_enable_uv_mbed_logger(int enabled)</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
