@@ -152,6 +152,10 @@ Functions</h2></td></tr>
 <tr class="separator:a214bd78d665a5a8e3c32fe1f881fceb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acae349985349ceec5651bd864bf7f81e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e">ziti_log_level</a> ()</td></tr>
 <tr class="separator:acae349985349ceec5651bd864bf7f81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab4235eba452aa02c647c9e103fd5d5ea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#ab4235eba452aa02c647c9e103fd5d5ea">ziti_log_set_level_by_label</a> (const char *log_level)</td></tr>
+<tr class="separator:ab4235eba452aa02c647c9e103fd5d5ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adfde3c513e072755ca4c0993f16adeee"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#adfde3c513e072755ca4c0993f16adeee">ziti_log_level_label</a> ()</td></tr>
+<tr class="separator:adfde3c513e072755ca4c0993f16adeee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a675a950687ff596ea58f544a94122dc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5">uv_mbed_logger</a> (int level, const char *file, unsigned int line, const char *msg)</td></tr>
 <tr class="memdesc:a675a950687ff596ea58f544a94122dc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">can be used to turn on logging of uv-mbed library and send log messages into the ziti_log Usage: <code>uv_mbed_set_debug(level, uv_mbed_logger);</code>  <a href="ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5">More...</a><br /></td></tr>
 <tr class="separator:a675a950687ff596ea58f544a94122dc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -528,6 +532,23 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="adfde3c513e072755ca4c0993f16adeee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adfde3c513e072755ca4c0993f16adeee">&#9670;&nbsp;</a></span>ziti_log_level_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* ziti_log_level_label </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a214bd78d665a5a8e3c32fe1f881fceb6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a214bd78d665a5a8e3c32fe1f881fceb6">&#9670;&nbsp;</a></span>ziti_log_set_level()</h2>
 
@@ -539,6 +560,24 @@ Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab4235eba452aa02c647c9e103fd5d5ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab4235eba452aa02c647c9e103fd5d5ea">&#9670;&nbsp;</a></span>ziti_log_set_level_by_label()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ziti_log_set_level_by_label </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>log_level</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
