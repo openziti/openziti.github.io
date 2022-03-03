@@ -1107,7 +1107,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "NVuZxa5PtGGH6t7Pp8Wu6w=="
+          "hash": "dZYYwcTPflv5odf0V1xzgg=="
         }
       },
       "is_incremental": false,
@@ -2037,18 +2037,6 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "ziti/manage/fabric-router.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/manage/fabric-router.html",
-          "hash": "KXXDiY7FY01e8UFvOcRxkw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "ziti/manage/logging-snippet.md",
       "output": {
         ".html": {
@@ -2571,7 +2559,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 105,
+          "total_file_count": 104,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
