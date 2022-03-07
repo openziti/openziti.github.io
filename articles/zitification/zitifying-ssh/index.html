@@ -126,7 +126,7 @@ dark&quot;. The only way to <code>ssh</code> to a machine configured in this way
 <h2 id="how-its-done">How It&#39;s Done</h2>
 <p>There are a few steps necessary before being able to use <code>zssh</code>:</p>
 <ul>
-<li>Establish a <a href="https://github.com/openziti/ziti/blob/release-next/quickstart/aws.md">Ziti Network in AWS</a> (using AWS in this example)</li>
+<li>Establish a <a href="/ziti/quickstarts/network/hosted.html">Ziti Network</a></li>
 <li>Create and enroll two Ziti Endpoints (one for our <code>ssh</code> server, one for the client)<ul>
 <li>the <code>sshd</code> server will run <code>ziti-tunnel</code> for this demonstration. Conveniently it will run on the same machine I used to setup the <a href="/ziti/overview.html#overview-of-a-ziti-network">Ziti Network</a>.</li>
 <li>the client will run <code>zssh</code> from my local machine, and I&#39;ll <code>zssh</code> to the other endpoint</li>

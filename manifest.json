@@ -459,7 +459,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/kubernetes/kubernetes-oci.html",
-          "hash": "PzAhLRlxK5AB3y6N7VwCMQ=="
+          "hash": "4LC8ZSTXChNvghw+uXAFUg=="
         }
       },
       "is_incremental": false,
@@ -494,7 +494,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-scp/index.html",
-          "hash": "GgndWP31CXmiArZohgbdjw=="
+          "hash": "8soIrsd8kF+1/ZS3vsOsnA=="
         }
       },
       "is_incremental": false,
@@ -506,7 +506,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-scp/zitifying-scp.contents.html",
-          "hash": "+0zM7OoeAfX1tyqDW2BnHA=="
+          "hash": "7N81WK4L5jd+MnbCrohI4w=="
         }
       },
       "is_incremental": false,
@@ -530,7 +530,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-ssh/index.html",
-          "hash": "V4dfFIoCuH2gZvCf2dUD7Q=="
+          "hash": "lno653Wggf28yUWiBYqKzw=="
         }
       },
       "is_incremental": false,
@@ -553,7 +553,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/zitifying-ssh/zitifying-ssh.contents.html",
-          "hash": "L+kHNl2mb66J04ElHCBscg=="
+          "hash": "xB08vtHDoqXEZKtJTrIN3w=="
         }
       },
       "is_incremental": false,
