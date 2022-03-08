@@ -1081,17 +1081,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/ziti-overview.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/ziti-overview.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/ziti-overview.svg",
       "output": {
         "resource": {
