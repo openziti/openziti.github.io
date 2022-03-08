@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Quickstart - AWS | Ziti </title>
+    <title>Content moved | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Quickstart - AWS | Ziti ">
+    <meta name="title" content="Content moved | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -98,172 +98,14 @@
         <div class="article row grid">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="quickstart---aws">Quickstart - AWS</h1>
 
-<p>This quickstart is a barebones guide to running a full developer environment in AWS. It is not fault-tolerant. If you require fault tolerance this guide is not for you. This guide also assumes you&#39;re at least familiar with AWS&#39;s console and cloud development. Feel free to replace any steps along the way you desire but these steps were tested at least a few times and hopefully whenever you&#39;re reading this, the steps are still valid. If not file an issue or shoot over to <a href="https://openziti.discourse.group/">Discourse</a> and start a discussion.</p>
-<h2 id="setup-a-server">Setup a Server</h2>
-<ol>
-<li>After logging into AWS, navigate to the EC2 Dashboard</li>
-<li>From the EC2 Dashboard, click &quot;Launch Instance&quot;</li>
-<li>Find &quot;Ubuntu Server 20.04 LTS (HVM), SSD Volume Type&quot; and click &#39;select&#39;</li>
-<li>At the bottom of the screen - click the &quot;Review and Launch&quot; button</li>
-<li>In AWS &quot;Step 7. Review Instance Launch&quot;, find the &quot;Security Groups&quot; row and expand it if necessary</li>
-<li>Click &quot;Edit security groups&quot;</li>
-<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8441&quot; Source: &quot;0.0.0.0/0&quot;, Description: &quot;Ziti Controller Port&quot;</li>
-<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8442&quot; Source: &quot;0.0.0.0/0&quot;, Description: &quot;Ziti Edge Router Port&quot;</li>
-<li>Click &quot;Add Rule&quot; and select &quot;Custom TCP Rule&quot; and enter Port Range:&quot;8443&quot; Source: &quot;0.0.0.0/0&quot;, Description: &quot;Ziti Console TLS Port&quot;</li>
-<li><p>Your console should look like this:
-<img src="security-groups.png" alt="security-groups.png"></p>
-</li>
-<li><p>click &quot;Review and Launch&quot; and then &quot;Launch&quot;</p>
-</li>
-<li>Select your keypair and choose &quot;Launch Instances&quot;</li>
-</ol>
-<h2 id="ssh-to-the-server">SSH to the Server</h2>
-<ol>
-<li>After ssh&#39;ing to the new ubuntu machine - run: <code>sudo apt update &amp;&amp; sudo apt install jq -y</code></li>
-<li><p>Set some environment variables which are used to establish a PKI as well as the necessary configuration files. You will need to know the public IPv4 DNS name assigned to this machine. Replace &quot;<strong><strong>EXTERNAL___DNS</strong></strong>&quot; with the proper values. (<strong>IMPORTANT</strong> make sure the name is correct):</p>
-<pre><code>export EXTERNAL_DNS=&quot;____EXTERNAL___DNS______FILLIN example: ec2-3-129-206-186.us-east-2.compute.amazonaws.com&quot;
+<head> 
+    <meta http-equiv="refresh" content="0; URL=https://openziti.github.io/ziti/quickstarts/quickstart-overview.html">
+</head>
 
-export EXTERNAL_IP=&quot;$(curl -s eth0.me)&quot;       
-export ZITI_EDGE_CONTROLLER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
-export ZITI_EDGE_ROUTER_IP_OVERRIDE=&quot;${EXTERNAL_IP}&quot;
-export ZITI_EDGE_CONTROLLER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
-export ZITI_EDGE_ROUTER_HOSTNAME=&quot;${EXTERNAL_DNS}&quot;
-export ZITI_EDGE_CONTROLLER_PORT=8441
-export ZITI_EDGE_ROUTER_PORT=8442
-</code></pre></li>
-<li><p>Run this single command to download and bootstrap the ziti-controller and ziti-router (feel free to read the bash script before running if you like):</p>
-<pre><code>source &lt;(wget -qO- https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/image/ziti-cli-functions.sh); expressInstall
-</code></pre></li>
-<li><p>At this point the controller and router are running and can be accessed from anywhere. Confirm both are running by running:</p>
-<pre><code>ps -ef | grep ziti
-root        2520       1  0 May19 ?        00:00:15 /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-bin/ziti-v0.20.2/ziti-controller run /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/controller.yaml
-root        2547       1  0 May19 ?        00:00:10 /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-bin/ziti-v0.20.2/ziti-router run /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ip-172-31-22-212-edge-router.yaml
-</code></pre></li>
-<li><p>You can also issue this statement from the server and you will see a similar response to this:</p>
-<pre><code>curl -sk &quot;https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:${ZITI_EDGE_CONTROLLER_PORT}/version&quot;
-{&quot;data&quot;:{&quot;apiVersions&quot;:{&quot;edge&quot;:{&quot;v1&quot;:{&quot;path&quot;:&quot;/edge/v1&quot;}}},&quot;buildDate&quot;:&quot;2021-05-05 20:59:40&quot;,&quot;revision&quot;:&quot;73dd1db42bf4&quot;,&quot;runtimeVersion&quot;:&quot;go1.16.3&quot;,&quot;version&quot;:&quot;v0.19.13&quot;},&quot;meta&quot;:{}}
-</code></pre></li>
-</ol>
-<h2 id="setting-up-ziti-controller-and-router-as-a-service">Setting up Ziti Controller and Router as a service</h2>
-<ol>
-<li><p>Stop ziti-controller and ziti-router if they are running:</p>
-<pre><code>killall ziti-controller ziti-router
-</code></pre></li>
-<li><p>copy the two systemd files and refresh systemd</p>
-<pre><code>sudo cp &quot;${ZITI_HOME}/ziti-controller.service&quot; /etc/systemd/system
-sudo cp &quot;${ZITI_HOME}/ziti-router-${ZITI_EDGE_ROUTER_RAWNAME}.service&quot; /etc/systemd/system/ziti-router.service
-sudo systemctl daemon-reload
-sudo systemctl start ziti-controller
-sudo systemctl start ziti-router
-</code></pre></li>
-<li><p>Allow 5 to 10 seconds for the ziti-controller and router to start completely. Run these two commands to verify ziti-controller and ziti-router are running:</p>
-<pre><code>sudo systemctl -q status ziti-controller --lines=0 --no-pager
-sudo systemctl -q status ziti-router --lines=0 --no-pager
-
-#sample output:
-ubuntu@ip-172-31-22-212:~$ sudo systemctl -q status ziti-controller --lines=0 --no-pager
-● ziti-controller.service - Ziti-Controller
-Loaded: loaded (/etc/systemd/system/ziti-controller.service; disabled; vendor preset: enabled)
-Active: active (running) since Thu 2021-05-20 11:24:40 UTC; 5min ago
-Main PID: 26848 (ziti-controller)
-Tasks: 7 (limit: 1160)
-Memory: 50.5M
-CGroup: /system.slice/ziti-controller.service
-└─26848 /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-bin/ziti-v0.20.2/ziti-controller run /home/ubu…
-
-ubuntu@ip-172-31-22-212:~$ sudo systemctl -q status ziti-router --lines=0 --no-pager
-● ziti-router.service - Ziti-Router for ip-172-31-22-212-edge-router
-Loaded: loaded (/etc/systemd/system/ziti-router.service; disabled; vendor preset: enabled)
-Active: active (running) since Thu 2021-05-20 11:24:42 UTC; 5min ago
-Main PID: 26864 (ziti-router)
-Tasks: 7 (limit: 1160)
-Memory: 28.4M
-CGroup: /system.slice/ziti-router.service
-└─26864 /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-bin/ziti-v0.20.2/ziti-router run /home/ubuntu/…
-ubuntu@ip-172-31-22-212:~$
-</code></pre></li>
-</ol>
-<h2 id="setting-up-the-ziti-admin-console">Setting up the Ziti Admin Console</h2>
-<h3 id="by-cloning-from-github">By Cloning from Github</h3>
-<ol>
-<li><p>clone the ziti-console repo from github:</p>
-<pre><code>git clone https://github.com/openziti/ziti-console.git &quot;${ZITI_HOME}/ziti-console&quot;
-</code></pre></li>
-<li><p>Install node and npm and get the server ready</p>
-<pre><code>cd &quot;${ZITI_HOME}/ziti-console&quot;
-sudo apt install npm nodejs -y
-npm install
-</code></pre></li>
-<li><p>Use the ziti-controller certificates for the Ziti Console:</p>
-<pre><code>ln -s &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/certs/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.chain.pem&quot; &quot;${ZITI_HOME}/ziti-console/server.chain.pem&quot;
-ln -s &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/keys/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.key&quot; &quot;${ZITI_HOME}/ziti-console/server.key&quot;
-</code></pre></li>
-<li><p>Emit the Ziti Console systemd file and update systemd to start the Ziti Console</p>
-<pre><code>createZacSystemdFile
-sudo cp &quot;${ZITI_HOME}/ziti-console.service&quot; /etc/systemd/system
-sudo systemctl daemon-reload
-sudo systemctl start ziti-console
-</code></pre></li>
-<li><p>Verify the Ziti Console is running
-    sudo systemctl status ziti-console --lines=0 --no-pager</p>
-<pre><code>#sample output of the command:
-ubuntu@ip-172-31-22-212:~$ sudo systemctl status ziti-console --lines=0 --no-pager
-● ziti-console.service - Ziti-Console
-Loaded: loaded (/etc/systemd/system/ziti-console.service; disabled; vendor preset: enabled)
-Active: active (running) since Wed 2021-05-19 22:04:44 UTC; 13h ago
-Main PID: 13458 (node)
-Tasks: 11 (limit: 1160)
-Memory: 33.4M
-CGroup: /system.slice/ziti-console.service
-└─13458 /usr/bin/node /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-console/server.js
-</code></pre></li>
-</ol>
-<h3 id="by-using-docker">By Using Docker</h3>
-<ol>
-<li><p>If needed, install docker on the machine. I followed these instructions <a href="https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/">https://linuxize.com/post/how-to-install-and-use-docker-on-ubuntu-20-04/</a> but we&#39;ll condense them here for you to copy/paste:</p>
-<pre><code>sudo apt update
-sudo apt install apt-transport-https ca-certificates curl gnupg-agent software-properties-common -y
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
-sudo add-apt-repository &quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable&quot;
-sudo apt install docker-ce docker-ce-cli containerd.io -y
-sudo usermod -aG docker $USER
-</code></pre></li>
-<li>Log out of the server, and log back in to activate docker for your user</li>
-<li><p>Copy/paste this command to start the Ziti Admin Console in TLS mode:</p>
-<pre><code>docker run -d \
-       --name zac \
-       -p 8443:8443 \
-       -v &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/keys/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.key&quot;:/usr/src/app/server.key \
-       -v &quot;${ZITI_PKI}/${ZITI_EDGE_CONTROLLER_HOSTNAME}-intermediate/certs/${ZITI_EDGE_CONTROLLER_HOSTNAME}-server.chain.pem&quot;:/usr/src/app/server.chain.pem \
-       openziti/zac
-</code></pre></li>
-</ol>
-<h2 id="login-and-use-the-ziti-console">Login and use the Ziti Console</h2>
-<ol>
-<li>At this point you should be able to navigate to both: https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:8443 as well as https://$(curl -s eth0.me):8443 and see the ZAC login screen. (The TLS warnings your browser will show you are normal - it&#39;s because these steps use a self-signed certificate generated in the install process)</li>
-<li><p>Set the controller as shown:</p>
-<p><img src="img_1.png" alt="img_1.png"></p>
-</li>
-<li><p>Login with admin/admin</p>
-<p><img src="img_2.png" alt="img_2.png"></p>
-</li>
-<li><p><strong>IMPORTANT!!!</strong> Edit your profile and change the password</p>
-<p><img src="img_3.png" alt="img_3.png"></p>
-</li>
-</ol>
-<h2 id="adding-environment-variables-back-to-the-shell">Adding Environment Variables Back to the Shell</h2>
-<p>If you log out and log back in again you can source the &#39;.env&#39; file located at: <code>. ~/.ziti/quickstart/$(hostname)/$(hostname).env</code>. Below is an example of logging in, not having ZITI_HOME set, sourcing the .env file and then showing ZITI_HOME set:</p>
-<pre><code>Last login: Thu May 20 11:36:25 2021 from 67.246.244.61
-ubuntu@ip-172-31-22-212:~$ echo $ZITI_HOME
-
-ubuntu@ip-172-31-22-212:~$ . ~/.ziti/quickstart/$(hostname)/$(hostname).env
-
-adding /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-bin/ziti-v0.20.2 to the path
-ubuntu@ip-172-31-22-212:~$ echo $ZITI_HOME
-/home/ubuntu/.ziti/quickstart/ip-172-31-22-212
-</code></pre></article>
+<h1 id="content-moved">Content moved</h1>
+<p>This content has been moved to the official doc repository. Find it at <a href="https://openziti.github.io/ziti/quickstarts/quickstart-overview.html">https://openziti.github.io/ziti/quickstarts/quickstart-overview.html</a></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

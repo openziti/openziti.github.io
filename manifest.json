@@ -1092,6 +1092,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/ziti-overview.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/ziti-overview.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "index.css",
       "output": {
         "resource": {
@@ -1510,7 +1521,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/aws.html",
-          "hash": "CIhxFRqiTETg/fMczuR7IA=="
+          "hash": "MIpAZFcyQwH/1fh4it4nLw=="
         }
       },
       "is_incremental": false,
@@ -1540,39 +1551,6 @@
       "version": ""
     },
     {
-      "type": "Resource",
-      "source_relative_path": "ziti-cmd/quickstart/img_1.png",
-      "output": {
-        "resource": {
-          "relative_path": "ziti-cmd/quickstart/img_1.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti-cmd/quickstart/img_2.png",
-      "output": {
-        "resource": {
-          "relative_path": "ziti-cmd/quickstart/img_2.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti-cmd/quickstart/img_3.png",
-      "output": {
-        "resource": {
-          "relative_path": "ziti-cmd/quickstart/img_3.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Conceptual",
       "source_relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/kubernetes-sidecar-tunnel-quickstart.md",
       "output": {
@@ -1590,17 +1568,6 @@
       "output": {
         "resource": {
           "relative_path": "ziti-cmd/quickstart/kubernetes/sidecar-tunnel/sidecar-diagram.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti-cmd/quickstart/security-groups.png",
-      "output": {
-        "resource": {
-          "relative_path": "ziti-cmd/quickstart/security-groups.png"
         }
       },
       "is_incremental": false,
@@ -2158,7 +2125,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/overview.html",
-          "hash": "tu7/kMM0LTWz/uD9AXW+UQ=="
+          "hash": "ZjdCrlqiAUNcaK7vbgGMFg=="
         }
       },
       "is_incremental": false,
