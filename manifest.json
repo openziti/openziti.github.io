@@ -1498,7 +1498,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/README.html",
-          "hash": "RGEP57NB6AnFd/fX2HjA0g=="
+          "hash": "u20NJ+3icoCqxWPwt7lljw=="
         }
       },
       "is_incremental": false,
@@ -1533,7 +1533,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti-cmd/quickstart/docker/README.html",
-          "hash": "OoIjITjhQGL6CJ6RgZWjnA=="
+          "hash": "saRH2xfvs2jCe3RPC7n01w=="
         }
       },
       "is_incremental": false,

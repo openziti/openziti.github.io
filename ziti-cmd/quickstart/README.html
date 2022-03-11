@@ -115,7 +115,7 @@ template to build your own compose file from.</p>
 <p>Lastly, you can choose to run <a href="https://docs.docker.com/get-started/">docker</a> directly. This mode is necessarily
 more verbose but should you prefer to not use docker-compose it can also illustrate how to establish
 a Ziti Network piece by piece.</p>
-<h2 id="prerequisties">Prerequisties</h2>
+<h2 id="prerequisites">Prerequisites</h2>
 <h3 id="bash">Bash</h3>
 <p>All of these quickstarts will use bash. On MacOS/linux this will be natural however on Windows you&#39;ll want
 to ensure you have a suitable shell. There are numerous shells available but perhaps the simplest will be
@@ -170,14 +170,14 @@ on that docker network.</p>
 
   #make a docker network for isolation while allowing the parts to be able to interact
   docker network create &quot;$zitinw&quot;
-</code></pre><h3 id="staring-the-containers">Staring the Containers</h3>
+</code></pre><h3 id="starting-the-containers">Starting the Containers</h3>
 <p>To start the containers you can simply run these two commands in two different shells. (or choose to daemonize them
 once you&#39;re ready to do so). Take special note of the initial variables used in these commands. The ${zitinw} variable
 is expected to be set. See the Prerequisite section above:</p>
 <p>Ziti Controller:</p>
 <pre><code>docker run -d --name &quot;${zitinw}-controller&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --network-alias=ziti-controller --network-alias=ziti-edge-controller --rm openziti/quickstart /openziti/scripts/run-controller.sh
 </code></pre><p>Ziti Edge Router:</p>
-<pre><code>routerName=edge-router; docker run -d --name &quot;${zitinw}-${routerName}&quot; --rm -e ZITI_EDGE_ROUTER_RAWNAME=&quot;${routerName}&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --hostname &quot;${routerName}&quot; --network-alias=&quot;${routerName}&quot; --rm openziti/quickstart /openziti/scripts/run-edge-router.sh edge
+<pre><code>routerName=edge-router; docker run -d --name &quot;${zitinw}-${routerName}&quot; --rm -e ZITI_EDGE_ROUTER_RAWNAME=&quot;${routerName}&quot; --volume &quot;${zitinw_shared}&quot;:/openziti/shared -it --network=&quot;${zitinw}&quot; --hostname &quot;${routerName}&quot; --network-alias=&quot;${routerName}&quot; --rm openziti/quickstart /openziti/scripts/run-router.sh edge
 </code></pre></article>
           </div>
           

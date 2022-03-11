@@ -100,7 +100,14 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="building-and-deploying-the-latest-quickstart-docker-image">Building and Deploying the Latest Quickstart Docker Image</h1>
 
-<h2 id="build-docker-image">Build Docker Image</h2>
+<h2 id="build-docker-image-for-local-dev-probably-for-docker-compose-testing">Build Docker Image for Local Dev (probably for docker-compose testing)</h2>
+<ol>
+<li>change to this directory: <code>cd quickstart/docker</code></li>
+<li>run the questionably named <code>./pushDevBuild.sh</code> which will create a <code>openziti/quickstart:dev</code> tag</li>
+<li>update <code>docker-compose.yml</code> and replace <code>:latest</code> with <code>:dev</code></li>
+<li>run <code>docker-compose</code> as normal</li>
+</ol>
+<h2 id="build-docker-image-for-publication">Build Docker Image For Publication</h2>
 <ol>
 <li>change to this directory: <code>cd quickstart/docker</code></li>
 <li>set an environment variable: <code>export ZITI_HOME=$(pwd)</code></li>
