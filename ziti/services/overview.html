@@ -107,7 +107,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="ziti-services">Ziti Services</h1>
 
-<p>The primary function of Ziti is providing access to &quot;services&quot;. A service encapsulates the definition of any
+<p>The primaryategy assumes that one ter function of Ziti is providing access to &quot;services&quot;. A service encapsulates the definition of any
 resource that could be accessed by a client on a traditional network. </p>
 <p>A service is defined by the following components:</p>
 <ul>
@@ -249,8 +249,6 @@ resource that could be accessed by a client on a traditional network. </p>
 <p>This strategy drives costs in the same way as the <code>smartrouting</code> strategy. However instead of always picking the lowest cost terminator it does a weighted random selection across all terminators of the highest precedence. If a terminator has double the cost of another terminator it should get picked approximately half as often. </p>
 <h5 id="random"><code>random</code></h5>
 <p>This strategy does not change terminator weights. It does simple random selection across all terminators of the highest precedence. </p>
-<h5 id="ha"><code>ha</code></h5>
-<p>This strategy assumes that one terminator will have <code>required</code> precedence and there will be a secondary terminator with <code>default</code> precedence. If three consecutive dials to the highest ranked terminator fail in a row it will be marked as failed. This will allow the secondary to take over. If the primary recovers it can be marked as required again via the APIs. </p>
 <h2 id="creating-a-service">Creating a Service</h2>
 <p>Here&#39;s how you can create a service.</p>
 <div class="tabGroup" id="tabgroup_6M2JU3mIHL">
