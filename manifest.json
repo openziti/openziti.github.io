@@ -1781,7 +1781,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/comparisons/overview.html",
-          "hash": "Lvii++6GM9G2/Klm8AyZ9Q=="
+          "hash": "6AXNwk6n5P/zt1ZPUz3UAg=="
         }
       },
       "is_incremental": false,
@@ -1793,7 +1793,19 @@
       "output": {
         ".html": {
           "relative_path": "ziti/comparisons/service-mesh.html",
-          "hash": "o8b8BjTTAawXLmEEEOr3Aw=="
+          "hash": "lAreXIiiwzMLuWeijgEbnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "ziti/comparisons/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/comparisons/toc.html",
+          "hash": "ITSWTzYcmL9BeODowceoWA=="
         }
       },
       "is_incremental": false,
@@ -2518,7 +2530,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "1vE+OMrz379b9z84BG57oQ=="
+          "hash": "t71E8p+WlFCCAgdxFv8bYA=="
         }
       },
       "is_incremental": false,
