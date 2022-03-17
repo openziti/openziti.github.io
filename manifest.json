@@ -2389,7 +2389,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/hosted.html",
-          "hash": "8WX5odxzWKfi5bvqVWE9Jw=="
+          "hash": "4HUYk1dI3u//cTrDekOETw=="
         }
       },
       "is_incremental": false,
@@ -2413,7 +2413,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-no-docker.html",
-          "hash": "t0rc/YxAj9QzBKq0bc3s/Q=="
+          "hash": "M3ck3zHJxqG+Z8nWY2U0LQ=="
         }
       },
       "is_incremental": false,

@@ -170,7 +170,7 @@ export ZITI_EDGE_CONTROLLER_PORT=8441
 export ZITI_EDGE_ROUTER_PORT=8442
 
 # now download, source, and execute the expressInstall function
-source &lt;(wget -qO- https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/image/ziti-cli-functions.sh); expressInstall
+source /dev/stdin &lt;&lt;&lt; &quot;$(wget -qO- https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/image/ziti-cli-functions.sh)&quot;; expressInstall
 </code></pre><h3 id="systemd">Systemd</h3>
 <p>If the operating system you are deploying on supports it, after the commands above are run there will two other useful
 functions defined in your shell which will allow you to generate a systemd file for the controller and the edge router. This
