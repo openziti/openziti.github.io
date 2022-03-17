@@ -1777,6 +1777,30 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/comparisons/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/comparisons/overview.html",
+          "hash": "Lvii++6GM9G2/Klm8AyZ9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/comparisons/service-mesh.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/comparisons/service-mesh.html",
+          "hash": "o8b8BjTTAawXLmEEEOr3Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/config-store/consuming.md",
       "output": {
         ".html": {
@@ -2494,7 +2518,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "t71E8p+WlFCCAgdxFv8bYA=="
+          "hash": "1vE+OMrz379b9z84BG57oQ=="
         }
       },
       "is_incremental": false,
@@ -2515,7 +2539,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 104,
+          "total_file_count": 106,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
