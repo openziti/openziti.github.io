@@ -173,7 +173,7 @@ default port used by edge routers. </p>
   --rm \
   -v ~/docker-volume/myFirstZitiNetwork:/openziti/pki \
   openziti/quickstart \
-  /openziti/scripts/run-edge-router.sh edge
+  /openziti/scripts/run-router.sh edge
 </code></pre><p>If you want to create a second edge router, you&#39;ll need to override the router port, don&#39;t forget to export that port too</p>
 <pre><code class="lang-bash">docker run \
   -e ZITI_EDGE_ROUTER_RAWNAME=ziti-edge-router-2 \
@@ -185,7 +185,7 @@ default port used by edge routers. </p>
   --rm \
   -v ~/docker-volume/myFirstZitiNetwork:/openziti/pki \
   openziti/quickstart \
-  /openziti/scripts/run-edge-router.sh edge
+  /openziti/scripts/run-router.sh edge
 </code></pre><h2 id="testing-the-network">Testing the Network</h2>
 <p>With the controller and router running, you can now attach to the Docker host running the Ziti controller and test that
 the router did indeed come online and is running as you expect. To do this, we&#39;ll use another feature of the <code>docker</code>

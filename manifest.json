@@ -2005,6 +2005,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/index.html",
+          "hash": "7/X3UDUxVEQJrvtnxyTXNw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/manage/controller.md",
       "output": {
         ".html": {
@@ -2425,7 +2437,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-with-docker.html",
-          "hash": "BnZb1nleERuYIj1PaKjtBg=="
+          "hash": "GvtYecplMp/MY4I36FDEvA=="
         }
       },
       "is_incremental": false,
@@ -2551,7 +2563,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 106,
+          "total_file_count": 107,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
