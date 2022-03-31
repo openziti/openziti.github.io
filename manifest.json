@@ -392,6 +392,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/golang-aha/article.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/golang-aha/article.html",
+          "hash": "g5E0BJlDbJ9cKU6vkBGfKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/index.md",
       "output": {
         ".html": {
@@ -408,7 +420,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "7O/VKjw/ROxHEo8IBwKaCQ=="
+          "hash": "byc9wceq5gjh+sje8kcW5g=="
         }
       },
       "is_incremental": false,
@@ -2563,7 +2575,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 107,
+          "total_file_count": 108,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
