@@ -5,6 +5,7 @@ var dir_dadf69ede447b14e22bacdb33be945b5 =
     [ "errors.h", "errors_8h.html", "errors_8h" ],
     [ "externs.h", "externs_8h.html", "externs_8h" ],
     [ "model_support.h", "model__support_8h.html", "model__support_8h" ],
+    [ "socket.h", "socket_8h.html", "socket_8h" ],
     [ "ziti.h", "ziti_8h.html", "ziti_8h" ],
     [ "ziti_buffer.h", "ziti__buffer_8h.html", "ziti__buffer_8h" ],
     [ "ziti_events.h", "ziti__events_8h.html", "ziti__events_8h" ],
