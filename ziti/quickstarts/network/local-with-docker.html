@@ -130,8 +130,14 @@ a network alias. At this time it would appear that this also forces you to add t
 the default network. This is a very useful feature which allows your containers to be isolated from one another and also
 will allow you to have multiple networks running locally if you desire. To create a Docker network issue:</p>
 <pre><code class="lang-bash">docker network create myFirstZitiNetwork
+</code></pre><p>Next - we need to make a folder to share our PKI as well as our environment file the controller emits. We&#39;ll just 
+put it into your home directory. Move it wherever you like. </p>
+<pre><code class="lang-bash">mkdir -p ~/docker-volume/myFirstZitiNetwork
+</code></pre><p>Finally, we need to make an empty file where we expect the controller to put the env file. Let&#39;s do that now too.</p>
+<pre><code class="lang-bash">echo &quot;#ziti.env file&quot; &gt; ~/docker-volume/myFirstZitiNetwork/ziti.env
 </code></pre><p>Later, when starting the controller, we&#39;ll supply this network as a parameter to the <code>docker</code> command as well as name the
-network. That&#39;s done with these two options: <code>--network myFirstZitiNetwork --network-alias ziti-controller</code></p>
+network. That&#39;s done with these two options: <code>--network myFirstZitiNetwork --network-alias ziti-controller</code> and 
+we&#39;ll also supply the env file as the location for the controller to use to write into.</p>
 <h3 id="optional---expose-controller-port">Optional - Expose Controller Port</h3>
 <p>Docker containers by default won&#39;t expose any ports that you could use from your local machine. If you want to be able
 to use this controller from outside of Docker, you&#39;ll need to export the controller&#39;s API port. That&#39;s easy to do, 
@@ -145,8 +151,7 @@ produced, but you will need a terminal for each process you want to run. The cho
 we&#39;ll use <code>-it</code> to make seeing the output from the logs easier.</p>
 <p>Here&#39;s an example which will use the Docker network named &quot;myFirstZitiNetwork&quot; and expose the controller to your local
 computer on port 1280 (the default port).</p>
-<pre><code class="lang-bash">mkdir -p ~/docker-volume/myFirstZitiNetwork
-docker run \
+<pre><code class="lang-bash">docker run \
   --network myFirstZitiNetwork \
   --network-alias ziti-controller \
   --network-alias ziti-edge-controller \
@@ -154,6 +159,7 @@ docker run \
   -it \
   --rm \
   -v ~/docker-volume/myFirstZitiNetwork:/openziti/pki \
+  -v ~/docker-volume/myFirstZitiNetwork/ziti.env:/openziti/ziti.env \
   openziti/quickstart \
   /openziti/scripts/run-controller.sh
 </code></pre><h2 id="edge-router">Edge Router</h2>
@@ -172,6 +178,7 @@ default port used by edge routers. </p>
   -it \
   --rm \
   -v ~/docker-volume/myFirstZitiNetwork:/openziti/pki \
+  -v ~/docker-volume/myFirstZitiNetwork/ziti.env:/openziti/ziti.env \
   openziti/quickstart \
   /openziti/scripts/run-router.sh edge
 </code></pre><p>If you want to create a second edge router, you&#39;ll need to override the router port, don&#39;t forget to export that port too</p>
@@ -184,9 +191,17 @@ default port used by edge routers. </p>
   -it \
   --rm \
   -v ~/docker-volume/myFirstZitiNetwork:/openziti/pki \
+  -v ~/docker-volume/myFirstZitiNetwork/ziti.env:/openziti/ziti.env \
   openziti/quickstart \
   /openziti/scripts/run-router.sh edge
 </code></pre><h2 id="testing-the-network">Testing the Network</h2>
+<h3 id="using-docker-locally">Using Docker Locally</h3>
+<p>A quick note. If you are not well-versed with Docker you might forget that exposing ports in Docker is one thing, 
+but you&#39;ll also need to have a hosts entry for the containers you want to access from outside of of the Docker 
+network. This quickstart will expect that you understand this and for every router you add you will want to make 
+sure you add a host entry. In the examples above we are adding three entities: <code>ziti-edge-controller</code>, 
+<code>ziti-edge-router</code> and <code>ziti-edge-rotuer2</code>.</p>
+<h3 id="testing">Testing</h3>
 <p>With the controller and router running, you can now attach to the Docker host running the Ziti controller and test that
 the router did indeed come online and is running as you expect. To do this, we&#39;ll use another feature of the <code>docker</code>
 command and <code>exec</code> into the machine. First, you&#39;ll need to know your Docker container name which you can figure out by

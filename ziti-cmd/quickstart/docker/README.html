@@ -103,8 +103,8 @@
 <h2 id="build-docker-image-for-local-dev-probably-for-docker-compose-testing">Build Docker Image for Local Dev (probably for docker-compose testing)</h2>
 <ol>
 <li>change to this directory: <code>cd quickstart/docker</code></li>
-<li>run the questionably named <code>./pushDevBuild.sh</code> which will create a <code>openziti/quickstart:dev</code> tag</li>
-<li>update <code>docker-compose.yml</code> and replace <code>:latest</code> with <code>:dev</code></li>
+<li>run the script <code>./buildLocalDev.sh</code> which will create a <code>openziti/quickstart:dev</code> tag</li>
+<li>update <code>.env</code> and change the value for <code>ZITI_VERSION</code> to <code>dev</code></li>
 <li>run <code>docker-compose</code> as normal</li>
 </ol>
 <h2 id="build-docker-image-for-publication">Build Docker Image For Publication</h2>
@@ -122,9 +122,8 @@
 </ol>
 <h2 id="push-docker-image-to-dockerhub">Push Docker Image to dockerhub</h2>
 <ol>
-<li>retag the image locally to match the expected version: <code>docker push openziti/quickstart:0.19.3</code></li>
-<li>push the latest: <code>docker push openziti/quickstart</code></li>
-<li>push the versioned tag: <code>docker push openziti/quickstart:0.19.3</code></li>
+<li>source <code>./image/ziti-cli-functions.sh</code></li>
+<li>just run <code>./pushLatestDocker.sh</code></li>
 </ol>
 </article>
           </div>
