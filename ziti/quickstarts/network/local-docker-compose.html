@@ -118,17 +118,18 @@ and <code>docker-compose</code> already installed in your system.</p>
 <p>Using curl that would look like this:</p>
 <pre><code class="lang-bash">curl -o docker-compose.yaml https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/docker-compose.yml
 </code></pre><p>Next, grab the
-default <a href="https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/default.env">environment file</a>
+default <a href="https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env">environment file</a>
 or just make a file in this folder that looks like this:</p>
-<pre><code class="lang-bash">curl -o default.env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/default.env
+<pre><code class="lang-bash">curl -o .env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env
 </code></pre><p>or</p>
-<pre><code class="lang-bash">cat &gt; default.env &lt;&lt;DEFAULT_ENV_FILE
+<pre><code class="lang-bash">cat &gt; .env &lt;&lt;DEFAULT_ENV_FILE
+ZITI_IMAGE=openziti/quickstart
+ZITI_VERSION=latest
 ZITI_CONTROLLER_RAWNAME=ziti-controller
 ZITI_EDGE_CONTROLLER_RAWNAME=ziti-edge-controller
-ZITI_ZAC_RAWNAME=ziti-zac
 DEFAULT_ENV_FILE
 </code></pre><h2 id="running-via-docker-compose">Running via Docker Compose</h2>
-<p>Once the compose file is downloaded and the <code>default.env</code> file exists, you&#39;ll be able to start this network using
+<p>Once the compose file is downloaded and the <code>.env</code> file exists, you&#39;ll be able to start this network using
 docker-compose just like you can with any other compose file: <code>docker-compose up</code></p>
 <div class="NOTE"><h5>Note</h5><p>Docker compose will name your containers based on the folder you were in when you started them. For me, I&#39;ve made a folder
 named <code>docker</code> so all my containers start with <code>docker_</code>. You can influence how this works by adding
