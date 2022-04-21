@@ -1,0 +1,297 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Enable Prometheus to Scrape Anything from Anywhere | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Enable Prometheus to Scrape Anything from Anywhere | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://twitter.com/openziti">
+                            <img src="../../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
+                            <img src="../../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="enable-prometheus-to-scrape-anything-from-anywhere">Enable Prometheus to Scrape Anything from Anywhere</h1>
+
+<p><em>This is part one of a two-part article. This article provides background and rationale of the project.
+<a href="part2.html">The next article</a> will be a detailed explanation of the actual steps necessary to implement the solution.</em></p>
+<h2 id="prometheus">Prometheus</h2>
+<p><a href="https://prometheus.io/">Prometheus</a> is an incredibly popular <a href="https://www.cncf.io/projects/prometheus/">CNCF</a>
+project which has graduated the gauntlet of progressions to emerge as a &quot;graduated&quot; CNCF project. If you&#39;re familiar
+with Prometheus, there are probably a couple of reasons people mainly choose to deploy it:
+metrics collection and visualization and alerting.</p>
+<p>Prometheus is also tremendously flexible. It has numerous available plugins and supports integrating with a wide number
+of systems. According
+to <a href="https://www.cncf.io/blog/2022/03/08/cloud-native-observability-microsurvey-prometheus-leads-the-way-but-hurdles-remain-to-understanding-the-health-of-systems/">this CNCF survey</a>
+, Prometheus leads the pack when it comes to the project people go to for observability. That is probably because
+Prometheus is a CNCF project and is often considered the &quot;default&quot; solution to deploy on another wildly popular CNCF
+project called <a href="https://kubernetes.io">Kubernetes</a>. One interesting aspect of Prometheus is that it generally favors a
+poll-based approach to metrics collection as opposed to a push-based model.</p>
+<h3 id="poll-based">Poll-based?</h3>
+<p>I don&#39;t know about you, but historically when I&#39;ve thought about a metrics collection agent I tend to think of an agent
+that reads a log file or some kind of library that pushes rows into a giant data lake in the cloud. I don&#39;t generally
+think about a solution that implements poll-based metrics. Often, this is because the target of a poll-based collecting
+agent will probably be behind a firewall.</p>
+<p><img src="fw.png" style="display: block;margin-left: auto;margin-right: auto;"></p>
+<p>As you would expect, firewalls make it exceptionally difficult to implement a poll-based solution as firewalls have been
+known to make a habit of preventing external actors from accessing a random http servers behind it! That is their
+primary function after all!</p>
+<p>The Prometheus project makes some <a href="https://prometheus.io/docs/practices/pushing/">strong arguments</a> explaining the
+benefits of a poll-based solution. They also realize that firewalls are important in creating a safe network and
+understand the challenges firewalls create for such a solution. To deal with these situations the project also provides
+a <a href="https://prometheus.io/docs/instrumenting/pushing/">PushGateway</a>. This allows solutions to push their data to a
+location outbound of the firewall. Pushing data out of the firewall allows for metrics and alerting to function without
+the worry (and maintenance heartache) of an open, inbound firewall hole.</p>
+<h3 id="acceptable-risk">Acceptable Risk</h3>
+<p>Prometheus is often deployed into Kubernetes clusters but Prometheus can be deployed anywhere. Taking the operational
+differences out of the equation, there is little difference between deploying Prometheus in a Kubernetes cluster and
+deploying it in one&#39;s data center. Once deployed the needs will be the same. Prometheus will need to be authorized to
+reach out and scrape the targets it needs to scrape. All too often this is done with relatively open network
+permissions. Even though we all know it&#39;s not the most secure way of authorizing Prometheus, this is often considered &quot;
+safe enough&quot; because we deployed Prometheus into a zone we consider &quot;safe&quot;. Managing firewall rules to all the computers
+Prometheus needs access to is feels like an impossible feat. There are just too many.</p>
+<p>To add to our acceptable risk we will need to be able to access the Prometheus server in some way. We&#39;ll want to get at
+the UI, see the charts and graphs and data it provides and use the server to it&#39;s fullest. For that we&#39;ll <strong>of course</strong>
+need a hole in our firewall or in the case of Kubernetes we will probably deploy some form of<br><a href="https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/">Kubernetes Ingress Controller</a> to provide
+users the ability to access the server.</p>
+<p>What we need are better and richer control over our network. We need a better way of authorizing Prometheus without the
+hassle of maintaining firewall rules on individual machines. We also need a way of doing this across multiple clouds,
+multiple Kubernetes clusters and multiple data centers. If we are going to try to solve this problem. Let&#39;s solve it
+once and for all!</p>
+<h2 id="openziti">OpenZiti</h2>
+<p>The <a href="https://openziti.github.io">OpenZiti</a> project allows us to solve all the problems outlined above. It is a
+fully-featured, zero trust overlay network and allows the application of
+<a href="https://en.wikipedia.org/wiki/Zero_trust_security_model">zero trust networking principles</a> to be applied anywhere. This
+includes bringing those zero trust principles directly into your application itself through one of the many SDKs
+provided by the project. Let&#39;s take a look at an example and see what a setup might look like before and after applying
+OpenZiti.</p>
+<h3 id="overview">Overview</h3>
+<p>Let&#39;s imagine that we have already deployed a solution using two Kubernetes clusters, ClusterA and ClusterB. It really
+doesn&#39;t matter where the clusters are deployed. We are trying to illustrate a real-world situation where we have two
+separate Kubernetes clusters that we want to manage. The clusters could be deployed in the same cloud provider, they
+could be deployed in a private Kubernetes cluster, they could be deployed in different cloud providers. What&#39;s important
+is that these clusters are available over the network. To enable access to the cluster will will then have to deploy
+some form of ingress controller on both clusters. We&#39;ll also image a workload has been deployed on both of these
+clusters as well. Those workloads will also provide a prometheus scrape target which we will then use from a federated
+Prometheus instance.</p>
+<h4 id="figure-1---before-openziti">Figure 1 - Before OpenZiti</h4>
+<p><img src="kubernetes-prometheus-before.svg" alt="Before OpenZiti"></p>
+<h3 id="taking-a-closer-look">Taking a Closer Look</h3>
+<h4 id="listening-ports">Listening Ports</h4>
+<p>Looking at the diagram above with a discerning eye towards security, there are some immediate observations which we can
+make. One observation we already accepted from the overview is that these clusters must be exposed via the internet. At
+first that doesn&#39;t seem like a big deal. We expose things on the internet all the time. This is a perfectly normal
+action, one which is likely done every day somewhere in the world. It&#39;s so common we almost don&#39;t even think about it
+until the time comes where we <strong>need</strong> to think about it. This ends up in an exposed port, listening somewhere in the
+world. There might be a firewall with complex rules in place protecting this port, but it&#39;s just as likely that this
+isn&#39;t the case. People might need to access the resources inside these clusters from anywhere.</p>
+<h4 id="kubernetes-api-exposed">Kubernetes API Exposed</h4>
+<p>The other observation we can make is that the Kubernetes API is fully exposed to the internet. This API is a very
+high-value target and should be secured as strongly as possible. That probably means yet another complex firewall rule
+to maintain.</p>
+<h4 id="trusted-intra-cluster-traffic">&quot;Trusted&quot; Intra-cluster Traffic</h4>
+<p>The final point to note is that the traffic within the cluster is considered safe. As mentioned above, the Prometheus
+server needs to be able to scrape the target workloads. That traffic is necessary to be considered safe. Also notice
+that the pod for Prometheus contains a container named &quot;configmap-reload&quot; which is used to trigger a webhook on the
+Prometheus server when the
+<a href="https://kubernetes.io/docs/concepts/configuration/configmap/">Kubernetes config map</a> changes. This is necessary when
+changing the Prometheus config, adding new scrape configs etc.</p>
+<hr>
+<h3 id="applying-zero-trust-networking-principles-using-openziti">Applying Zero Trust Networking Principles Using OpenZiti</h3>
+<p>Now that we understand the basic setup and understand some possible problems, let&#39;s see if OpenZiti can help address one
+or more of these issues. When applying OpenZiti the goal will be to strengthen our security posture for each of the
+above items.</p>
+<h4 id="figure-2---after-openziti">Figure 2 - After OpenZiti</h4>
+<p><img src="kubernetes-prometheus-after.svg" style="display: block;margin-left: auto;margin-right: auto;"></p>
+<h3 id="taking-a-closer-look-after-openziti">Taking a Closer Look After OpenZiti</h3>
+<h4 id="no-external-listening-ports">No External Listening Ports</h4>
+<p>With a classic deployment as shown in the initial design, we saw that there will be ports exposed to the open internet.
+In an ideal scenario there would be absolutely no ports exposed on the open internet <strong>nor</strong> in the &quot;trusted networking
+zone&quot;. It&#39;s immediately obvious after applying a solution using OpenZiti that those listening ports exposed by the
+Kubernetes ingress controller are no longer deployed and thus are not longer exposed to the internet. That&#39;s one attack
+vector eliminated. OpenZiti will initiate outbound mTLS connections among all the constituent pieces of the overlay
+network. This means connections will being inside the trusted network zone and dial outbound links. Once established,
+those connections are able to be used to safely transfer data between any participating edge node.</p>
+<p>This capability really can&#39;t be emphasized enough. With OpenZiti and with applications which use an OpenZiti SDK such as
+the ones shown there are no open ports to attack. This network is nearly impervious to the classical &quot;land and expand&quot;
+technique so many bad actors look to exploit.</p>
+<h4 id="kubernetes-api-no-longer-exposed">Kubernetes API no Longer Exposed</h4>
+<p>Another big benefit provided by OpenZiti is starting to come into focus as well. By having access into our clusters
+provided through OpenZiti, we now are able to take the Kubernetes APIs for both clusters <strong>entirely</strong> off the open
+internet. We will now allow Prometheus to monitor each Kubernetes cluster using the built-in capability Prometheus
+already contains to federate information to a centralized, <a href="../index.html">zitified</a> Prometheus
+server.</p>
+<p>To maintain our Kubernetes cluster we can now turn to <a href="../index.html">zitified</a> tools such as the
+ones provided by the OpenZiti project: <a href="https://github.com/openziti-incubator/kubectl">kubeztl</a> and
+<a href="https://github.com/openziti-incubator/helm">helmz</a>. Each of these tools have had an OpenZiti SDK embedded inside them
+allowing you to still run the <code>kubectl</code> or <code>helm</code> commands you&#39;re used to only now you will need a strong, OpenZiti
+identity in order to access the service. We&#39;re also not replacing the existing security constraints that the Kubernetes
+ecosystem already provides. You can (and should) still secure your Kubernetes clusters using namespaces, roles, etc.</p>
+<h4 id="trusted-intra-cluster-traffic-1">&quot;Trusted&quot; Intra-cluster Traffic</h4>
+<p>Lastly, let&#39;s turn our eyes toward the traffic running inside the Kubernetes cluster. Pay attention to the lines in
+orange and the lines in dark blue. Orange lines represent &quot;private&quot; traffic; traffic that needs to traverse the private
+network space.</p>
+<p>Currently, we&#39;ll never be able to send traffic to the Kubernetes API via the overlay network. It doesn&#39;t have an
+OpenZiti SDK embedded within it. That means both ClusterA and ClusterB will be forced to access the service via a port
+that is exposed to the cluster network. Still, we have greatly improved the overall security posture of the cluster.
+We&#39;re no longer able to access the Kubernetes API without first gaining access to the zero trust, overlay network and
+being properly authorized to access the Kubernetes API.</p>
+<p>Let&#39;s now focus on ClusterA. It contains a Prometheus server which decided against listening only on the OpenZiti
+overlay. That means it will need to expose ports to the Kubernetes cluster as well. The container inside the Prometheus
+pod will watch for configmap changes and will be forced to send unauthenticated webhook traffic to the Prometheus server
+in order to trigger the config to reload. Still, accessing this cluster and the listening Prometheus server still
+requires to be on the OpenZiti overlay. Also this Prometheus server does have an OpenZiti SDK built into it. We also
+deployed the &quot;reflectz&quot; workload with an OpenZiti SDK built into it as well. That means the Prometheus server is now
+able to scrape the &quot;reflectz&quot; workload exclusively over the OpenZiti overlay. <strong>Only</strong> authorized identities can access
+that scrape data.</p>
+<p>Contrast ClusterA with ClusterB. ClusterB deployed a Prometheus server with an embedded OpenZiti SDK and also chose to
+provide its services exclusively by &#39;listening&#39; on the OpenZiti overlay. We&#39;ve also deployed the zitified
+&quot;reflectz&quot; workload here as well. Notice how little traffic traverses the Kubernetes cluster. The only traffic which
+needs to traverse the private networking space in ClusterB is to scrape the Kubernetes API. All other traffic is secured
+by the OpenZiti overlay network. You will need a strong identity and you will need to be authorized on the overlay
+before even being allowed to connect to the target service.</p>
+<h2 id="openziti-enabled-prometheus">OpenZiti-Enabled Prometheus</h2>
+<p>We are now coming to the final piece of the puzzle. We have protected both of our clusters using OpenZiti. Now we want
+to bring all this data back to a centralized Prometheus server to make it easier on our user base. To do this we&#39;ll
+again deploy an OpenZiti-enabled Prometheus server. This time we don&#39;t care where it is deployed except that we know we
+are not deploying it into either of the Kubernetes clusters we are already using. Since the Prometheus servers are all
+now accessible via the overlay network. We can literally deploy our server anywhere. It could be a developer server, it
+could be deployed in some other cloud, it could be deployed in our private data center. Because it&#39;s part of the overlay
+network it literally won&#39;t matter. It will just need outbound internet access, a strong identity and the access and
+authorization to services and the OpenZiti overlay network will take care of the rest.</p>
+<p>If you have made it this far you&#39;re might want to try all this for yourself. The <a href="part2.html">next article</a> will go 
+into the details necessary to implement this solution. When complete you&#39;ll be able to deploy a zitified verison of 
+Prometheus and give Prometheus the power to scrape anything from anywhere using OpenZiti.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/articles/zitification/prometheus/part1.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©2020 NetFoundry,Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>
