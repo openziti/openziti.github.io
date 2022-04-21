@@ -226,19 +226,27 @@ with <code>-v</code>.</li>
 </ol>
 <h2 id="login-and-use-the-ziti-console">Login and use the Ziti Console</h2>
 <ol>
-<li><p>At this point you should be able to navigate to both: <code>https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:8443</code>and see the ZAC login
+<li>At this point you should be able to navigate to both: <code>https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:8443</code>and see the ZAC login
 screen. (The TLS warnings your browser will show you are normal - it&#39;s because these steps use a self-signed certificate
-generated in the install process)</p>
+generated in the install process)
+&gt; [!NOTE]
+&gt; If you are using docker-compose to start your network, when you access ZAC for the first time you will need to 
+&gt; specify the url of the controller. Since everything is running <strong>in</strong> docker compose this url is relative to the 
+&gt; internal docker compose network that is declared in the compose file. You would enter 
+&gt; <code>https://ziti-edge-controller:1280</code> as the controller&#39;s URL</li>
+<li>Set the controller as shown (use the correct URL):<ol>
+<li>Example using the &quot;everything local&quot; quickstart:
+<img src="zac_configure_local.png" alt="img_1.png"></li>
+<li>Example using the &quot;docker-compose&quot; quickstart:
+<img src="zac_configure_dc.png" alt="img_1.png">   </li>
+<li>Example using AWS &quot;host it anywhere&quot;:
+<img src="zac_configure_hia.png" alt="img_1.png"></li>
+</ol>
 </li>
-<li><p>Set the controller as shown:</p>
-<p><img src="zac_configure.png" alt="img_1.png"></p>
-</li>
-<li><p>Login with admin/admin</p>
-<p><img src="zac_login.png" alt="img_2.png"></p>
-</li>
-<li><p><strong>IMPORTANT!!!</strong> Edit your profile and change the password</p>
-<p><img src="zac_change_pwd.png" alt="img_3.png"></p>
-</li>
+<li>Login with admin/admin
+<img src="zac_login.png" alt="img_2.png"></li>
+<li><strong>IMPORTANT!!!</strong> Edit your profile and change the password
+<img src="zac_change_pwd.png" alt="img_3.png"></li>
 </ol>
 </article>
           </div>

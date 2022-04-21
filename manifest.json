@@ -2542,7 +2542,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/zac/installation.html",
-          "hash": "Cb8SRH9pFI0G9bG2o7xL0A=="
+          "hash": "scy6e0JHhP/73x0JwmL5tA=="
         }
       },
       "is_incremental": false,
@@ -2561,10 +2561,32 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "ziti/quickstarts/zac/zac_configure.png",
+      "source_relative_path": "ziti/quickstarts/zac/zac_configure_dc.png",
       "output": {
         "resource": {
-          "relative_path": "ziti/quickstarts/zac/zac_configure.png"
+          "relative_path": "ziti/quickstarts/zac/zac_configure_dc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/zac/zac_configure_hia.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/zac/zac_configure_hia.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/zac/zac_configure_local.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/zac/zac_configure_local.png"
         }
       },
       "is_incremental": false,
