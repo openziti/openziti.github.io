@@ -547,6 +547,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubeA-and-kubeB.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubeA-and-kubeB.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubeB-from-kubeA.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubeB-from-kubeA.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubea.graph.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubea.graph.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubea.more.total.conn.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubea.more.total.conn.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubea.prom.init.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubea.prom.init.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/kubea.target1.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/kubea.target1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/zitification/prometheus/kubernetes-prometheus-after.svg",
       "output": {
         "resource": {
@@ -562,6 +628,39 @@
       "output": {
         "resource": {
           "relative_path": "articles/zitification/prometheus/kubernetes-prometheus-before.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/local-docker-graph-no-listener.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/local-docker-graph-no-listener.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/local-docker-targets-no-listener.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/local-docker-targets-no-listener.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/local-docker-targets.png",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/local-docker-targets.png"
         }
       },
       "is_incremental": false,
@@ -591,7 +690,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/prometheus/part2.html",
-          "hash": "gItbDdPFXMg+LupfA32wvg=="
+          "hash": "m3rPB9ydZVyiHxmvfuSeBw=="
         }
       },
       "is_incremental": false,
@@ -603,7 +702,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/zitification/prometheus/part3.html",
-          "hash": "BEsKCh8KPIx/GFW6W/1Z8Q=="
+          "hash": "g1khHOURwg17XhY4brc1gw=="
         }
       },
       "is_incremental": false,
