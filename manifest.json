@@ -514,6 +514,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/clusterA.svg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/clusterA.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "articles/zitification/prometheus/clusterB.svg",
+      "output": {
+        "resource": {
+          "relative_path": "articles/zitification/prometheus/clusterB.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "articles/zitification/prometheus/fw.png",
       "output": {
         "resource": {
@@ -546,12 +568,30 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
       "type": "Conceptual",
       "source_relative_path": "articles/zitification/prometheus/part1.md",
       "output": {
         ".html": {
           "relative_path": "articles/zitification/prometheus/part1.html",
-          "hash": "vh537QODpr1O2Jbku912og=="
+          "hash": "5mpn4a6Zzt4LC7h/cFwD6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "articles/zitification/prometheus/part2.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/zitification/prometheus/part2.html",
+          "hash": "iFwaqo1mGVwb2yaS0RQ1Jw=="
         }
       },
       "is_incremental": false,
@@ -559,11 +599,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/zitification/prometheus/part2.md",
+      "source_relative_path": "articles/zitification/prometheus/part3.md",
       "output": {
         ".html": {
-          "relative_path": "articles/zitification/prometheus/part2.html",
-          "hash": "yBubnZMzRHOUNws6UVARCA=="
+          "relative_path": "articles/zitification/prometheus/part3.html",
+          "hash": "BEsKCh8KPIx/GFW6W/1Z8Q=="
         }
       },
       "is_incremental": false,
@@ -2243,7 +2283,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/overview.html",
-          "hash": "ZjdCrlqiAUNcaK7vbgGMFg=="
+          "hash": "HykbwmuJL4u7dOHM+IQRTw=="
         }
       },
       "is_incremental": false,
@@ -2506,7 +2546,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-no-docker.html",
-          "hash": "M3ck3zHJxqG+Z8nWY2U0LQ=="
+          "hash": "6H5tgpxeSWtUJQBIy4gZ2Q=="
         }
       },
       "is_incremental": false,
@@ -2666,7 +2706,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 111,
+          "total_file_count": 112,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

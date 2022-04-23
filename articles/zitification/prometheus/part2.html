@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enable Prometheus to Scrape Anything from Anywhere - Part 2 | Ziti </title>
+    <title>Configuring OpenZiti to Enable Prometheus | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enable Prometheus to Scrape Anything from Anywhere - Part 2 | Ziti ">
+    <meta name="title" content="Configuring OpenZiti to Enable Prometheus | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../../images/favicon.ico">
@@ -105,11 +105,372 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="enable-prometheus-to-scrape-anything-from-anywhere---part-2">Enable Prometheus to Scrape Anything from Anywhere - Part 2</h1>
+<h1 id="configuring-openziti-to-enable-prometheus">Configuring OpenZiti to Enable Prometheus</h1>
 
-<p><em>This is part two of a two-part article. This article provides the technical deep dive into implementing the 
-vision outlined in <a href="part1.html">part one</a>. This article will be heavy on OpenZiti CLI commands</em></p>
-<h2 id="coming-soon">Coming soon</h2>
+<style>
+.leftdiv {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: left;
+}
+.leftdiv img {
+    height: 220px;
+    width: 210px;
+    margin-top: -35px;
+}
+.rightdiv {
+    width: 110px;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: right;
+}
+.rightdiv img {
+    height: 220px;
+    width: 210px;
+    margin-top: -35px;
+}
+.flr {
+  float: right;
+}
+</style>
+
+<p><em>This is part two of a three-part article. This article provides the technical deep dive into the steps necessary to implement the vision
+outlined in <a href="part1.html">part one</a>. This article will be heavy on OpenZiti CLI commands, explaining what we are doing to configure the 
+overlay network, and why. In <a href="part3.html">the final article</a>, we will explore what we have just created and understand what was just 
+created</em></p>
+<hr>
+<h2 id="goals">Goals</h2>
+<ul>
+<li>Incredibly easy to deploy Prometheus servers</li>
+<li>No ports exposed to the internet</li>
+<li>Prometheus servers can be deployed listening on the overlay, not on the underlay</li>
+<li>Private Kubernetes API</li>
+</ul>
+<h2 id="zitified-prometheus">Zitified Prometheus</h2>
+<p>As described in <a href="part1.html">the previous article</a>, Prometheus really prefers to be able to gather metrics from the targets it is
+monitoring. When the target is behind a firewall, you will be left with two choices.
+<img src="https://github.com/openziti/branding/raw/main/images/ziggy/svg/Ziggy%20The%20Superhero.svg" style="display: block;margin-left: auto;margin-right: auto; height:150px;float:right">
+You can choose to open a hole in the firewall granting access (a generally bad idea), or you can use a PushGateway. Even if you choose to
+use the PushGateway, Prometheus will still need to be able to access and pull from the PushGateway so you&#39;ll still need some port open and
+listening for Prometheus to collect data.</p>
+<p>What we really want is to enable Prometheus to scrape data from targets without needing to expose any ports to the internet. It would be **
+even better** if we didn&#39;t have to expose any ports at all, even to the local &quot;trusted&quot; network. This capability is something that is 
+unique to an OpenZiti-enabled application. You can take an OpenZiti SDK and embed it into your application, and give your app zero trust 
+superpowers! If we take an OpenZiti SDK and embed it into Prometheus, we can give Prometheus the superpower of invisibility and 
+addressability. Embedding an OpenZiti SDK produces a <a href="../index.html">zitified</a> version of Prometheus. With an 
+OpenZiti-powered Prometheus, no ports need to be open.</p>
+<p>The OpenZiti project has done the work to produce an OpenZiti-enabled version of Prometheus. It&#39;s also entirely open source. Check it out
+from the OpenZiti Test Kitchen hosted on GitHub <a href="https://github.com/openziti-test-kitchen/prometheus">https://github.com/openziti-test-kitchen/prometheus</a>.</p>
+<h2 id="solution-overview">Solution Overview</h2>
+<p>As you&#39;ll recall from <a href="part1.html">part1</a>, we are trying to use Prometheus to monitor workloads in two different 
+Kubernetes clusters. We are going to deploy one cluster which will represent a first step of an OpenZiti solution. 
+It will use a Prometheus sever which is OpenZiti-enabled, but it will still listen on the underlay network and be 
+available to local devices on an ip:port. This Prometheus server will use OpenZiti to scrape targets which 
+are available anywhere on the OpenZiti overlay network and we&#39;ll refer to this as &quot;ClusterA&quot;.</p>
+<p>We&#39;ll also deploy a second OpenZiti-enabled Prometheus server, in a totally separate Kubernetes cluster. This 
+Prometheus server will <strong>not</strong> listen on an ip:port. Instead, it will listen exclusively on the OpenZiti overlay. 
+This Prometheus server will have no ports available to attack and will only be accessible via a properly authorized 
+and authenticated OpenZiti client. This will be our &quot;ClusterB&quot;</p>
+<p>Finally, we&#39;ll stand up a third Prometheus server and use it to federate metrics back to a &quot;central&quot; Prometheus 
+server. This emulates what one might do to provide a central location for humans to go to in order to visualize data 
+or use the Prometheus server. We won&#39;t care where this is deployed, we&#39;ll actually deploy it in locally and then 
+move it to a private server in AWS just to show how easy it that is. </p>
+<p>This is what the solution we&#39;ll build looks like:
+<img src="kubernetes-prometheus-after.svg" style="display: block;margin-left: auto;margin-right: auto;"></p>
+<hr>
+<h2 id="digging-in">Digging In</h2>
+<p>Let&#39;s get to work and build this solution. We&#39;ll need some legwork done first. </p>
+<div class="NOTE"><h5>Note</h5><p>It&#39;s going to get deep in this article with CLI commands. You&#39;ll see what the OpenZiti objects are that get created and learn why. 
+You might not want to replicate the solution on your own and instead are looking for &quot;the big reveal&quot;. If that describes you, just 
+skim this article lightly and get on to <a href="part3.html">part3</a>. In part 3 we&#39;ll explore the deployed solution and see what makes it so 
+interesting and cool.</p>
+</div>
+<h3 id="prerequisites">Prerequisites</h3>
+<div class="leftdiv">
+    <img src="https://github.com/openziti/branding/raw/main/images/ziggy/svg/Ziggy%20The%20Construction%20Worker.svg" class="leftdiv">
+</div>
+<div style="overflow: auto;">
+<ul>
+<li> You have an OpenZiti overlay network available. If not, for this scenario you will want to use 
+<a href="../../../ziti/quickstarts/network/hosted.html">&quot;host your own&quot;</a>. You&#39;ll also want to have the ziti cli tool on your path</li>
+<li> Two Kubernetes clusters provisioned</li>
+<li> Necessary tooling installed and available on the path</li>
+  <ul><li>kubectl</li>
+  <li>helm</li></ul>
+<li> bash/zsh shell - tested in bash and some commands will use variables. If you use another shell, change accordingly</li>
+<li> a machine with <a href="https://docs.docker.com/get-docker/">docker installed</a> to run the final Prometheus sever on (your local machine is fine)</li>
+<li> Ziti Desktop Edge installed on the development machine. I use 
+<a href="https://github.com/openziti/desktop-edge-win/releases/latest/">Ziti Desktop Edge for Windows</a>.</li>
+<li>A temporary folder exists to house files as we need them: /tmp/prometheus</li>
+</ul>
+</div>
+
+<hr>
+<h2 id="clustera---using-ziti-host">ClusterA - Using <code>ziti-host</code></h2>
+<p><img src="clusterA.svg" class="flr"></p>
+<p>We start with an empty OpenZiti network, and two empty Kubernetes clusters. Let&#39;s start by populating ClusterA. We will deploy three 
+pods into this Kubernetes cluster. When done, the Kubernetes cluster will look similar to the image to the right.</p>
+<ul>
+<li>Pod 1. <strong>ziti-host</strong>. This pod will provide what is effectively the equivalent of a Kubernetes ingress controller. We&#39;ll install this 
+using helm from a NetFoundry provided chart</li>
+<li>Pod 2. <strong>prometheuz</strong>. This pod will be our Prometheus server with OpenZiti embedded in it. We won&#39;t use OpenZiti to listen on the 
+overlay network. Instead, we will follow a more traditional model of listening on the underlay at a known ip:port combination. We&#39;ll 
+install this pod using a chart from the OpenZiti charts repository.</li>
+<li>Pod 3. <strong>reflectz</strong>. This pod represents the workload which we want to monitor. This is another chart provided by the OpenZiti chart 
+repository and will also be installed with hlem. If you are interested in viewing the source code for this project you can find it on 
+<a href="https://github.com/nf-npieros/sdk-golang/tree/feature/reflect-prometheus">GitHub here</a></li>
+</ul>
+<div class="NOTE"><h5>Note</h5><p>Running the ziti cli commands shown below as shown will expect you to have the ziti binary on your path. Also it is expected that all 
+the comands run will run from the same &quot;development&quot; machine with the expected tools available. Reach out on discourse if you get stuck.</p>
+</div>
+<h3 id="pod-1---ziti-host">Pod 1 - <code>ziti-host</code></h3>
+<p>We will start off deploying Pod 1, ziti-host, to provide access to Kubernetes ClusterA.  The ziti-host pod will require a single 
+identity to be provisioned. We will use a shortened name for the cluster and we&#39;ll embed that name into the identity to make it easier 
+for us to understand what identity we provisioned and why, should we ever need to reference these identities later.  We&#39;ll refer to 
+ClusterA as simply &quot;kubeA&quot;. Let&#39;s make the identity now. Notice we are also passing the &quot;-a&quot; attribute during creation to add a role 
+attribute to the identity of <code>kubeA.services</code>. This will be used later when setting up policies.</p>
+<h4 id="create-the-identity">Create the Identity</h4>
+<pre><code class="lang-text">ziti edge create identity device kubeA.ziti.id -o /tmp/prometheus/kubeA.ziti.id.jwt -a &quot;kubeA.services&quot;
+</code></pre><p>You should see confirmation output such as:</p>
+<pre><code class="lang-text">New identity kubeA.ziti.id created with id: BeyyFUZFDR
+Enrollment expires at 2022-04-22T01:18:53.402Z
+</code></pre><h4 id="deploy-ziti-host-into-clustera">Deploy <code>ziti-host</code> into ClusterA</h4>
+<p>Once created, we can use helm to install the <code>ziti-host</code> pod. The jwt is a one-use token and will be useless after being consumed by 
+<code>ziti-host</code>. As this is probably your first time running this helm chart, you will need to install it. The command is idempotent to 
+running it over and over is of no concern. Run the following:</p>
+<pre><code class="lang-text">helm repo add netfoundry https://netfoundry.github.io/charts/
+helm repo update
+helm install ziti-host netfoundry/ziti-host --set-file enrollmentToken=&quot;/tmp/prometheus/kubeA.ziti.id.jwt&quot;
+</code></pre><p>You will see the confirmation output from helm. Now when you look at your Kubernetes cluster with <code>kubectl</code>, you will see a pod deployed:</p>
+<pre><code class="lang-text">kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+ziti-host-db55b5c4b-rpc7f   1/1     Running   0          2m40s
+</code></pre><p>Awesome, we have our first deployed pod. It&#39;s useless at the moment as we have defined no services, nor authorized any services. Right 
+now there&#39;s nothing to connect to, so we can simply move on and install the next pod, <code>reflectz</code>.</p>
+<h3 id="pod-2---reflectz">Pod 2 - <code>reflectz</code></h3>
+<p>The first pod we want to have access to is the <code>reflectz</code> pod. It is a workload we will deploy that will do two things. First, it will 
+listen on the OpenZiti overlay network for connections. When a connection is made, and when bytes are sent, the workload sill simply 
+return back to the caller whatever was sent to it adding &quot;you sent me: &quot; to the payload. It&#39;s not much, but it&#39;s a demo after all. The 
+second service provided is a scrape target for Prometheus. There is one metric exposed by <code>reflectz</code> we will care about, the total number of connections established to this workload. This pod also needs an identity provisioned, and this time around we will also provision some services. We will also use the <code>ziti</code> cli to enroll this identity. This helm chart wants you to provide an enrolled identity as part of the helm command. Let&#39;s do all this now.</p>
+<h4 id="create-and-enroll-the-identity">Create and Enroll the Identity</h4>
+<pre><code class="lang-text">ziti edge create identity user kubeA.reflect.id -o /tmp/prometheus/kubeA.reflect.id.jwt
+ziti edge enroll /tmp/prometheus/kubeA.reflect.id.jwt -o /tmp/prometheus/kubeA.reflect.id.json
+</code></pre><h4 id="create-configs-and-services-including-tunneling-based-access">Create Configs and Services (including Tunneling-based Access)</h4>
+<p>The <code>reflectz</code> chart also needs two services to be declared and specified at the time of the helm chart installation. We will want to be 
+able to test the service to ensure they work. To enable testing the services, we will create two configs of type <code>intercept.v1</code>. This 
+will allow identities using tunneling apps to be able to access the services, this is how we&#39;ll verify the services work. Make the 
+configs and services now.</p>
+<pre><code class="lang-text"># create intercept configs for the two services
+ziti edge create config kubeA.reflect.svc-intercept.v1 intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeA.reflect.svc.ziti&quot;],&quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}]}&#39;
+ziti edge create config &quot;kubeA.reflect.svc-intercept.v1.scrape&quot; intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeA.reflect.scrape.svc.ziti&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}], &quot;dialOptions&quot;:{&quot;identity&quot;:&quot;kubeA.reflect.id&quot;}}&#39;
+
+# create the two services
+ziti edge create service &quot;kubeA.reflect.svc&quot; --configs &quot;kubeA.reflect.svc-intercept.v1&quot; -a &quot;kubeA.reflect.svc.services&quot;
+ziti edge create service &quot;kubeA.reflect.scrape.svc&quot; --configs &quot;kubeA.reflect.svc-intercept.v1.scrape&quot;
+</code></pre><h4 id="authorize-the-workload-and-clients">Authorize the Workload and Clients</h4>
+<p>Services are not valuable if there are no identities which can use the services. The identity used in the helm installation will also 
+need to be authorized to bind these services. Tunneling apps will need to be authorized to dial these services but also remember 
+Prometheus servers will need to be able to dial these services too. We will now create <code>service-policies</code> to authorize the tunneling 
+clients, Prometheus scrapes, and the <code>reflectz</code> server to bind the service.</p>
+<pre><code class="lang-text"># create the bind service policies and authorize the reflect id to bind these services
+ziti edge create service-policy &quot;kubeA.reflect.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeA.reflect.svc&quot; --identity-roles &quot;@kubeA.reflect.id&quot;
+ziti edge create service-policy &quot;kubeA.reflect.scrape.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeA.reflect.scrape.svc&quot; --identity-roles &quot;@kubeA.reflect.id&quot;
+
+# create the dial service policies and authorize the reflect id to bind these services
+ziti edge create service-policy &quot;kubeA.reflect.svc.dial&quot; Dial \
+  --service-roles &quot;@kubeA.reflect.svc&quot; --identity-roles &quot;#reflectz-clients&quot;
+ziti edge create service-policy &quot;kubeA.reflect.svc.dial.scrape&quot; Dial \
+  --service-roles &quot;@kubeA.reflect.scrape.svc&quot; --identity-roles &quot;#reflectz-clients&quot;
+</code></pre><h4 id="deploy-reflectz">Deploy <code>reflectz</code></h4>
+<p>With the identity enrolled, we can now install the helm chart from openziti, and install our demonstraction workload: <code>reflectz</code>. Notice 
+that to deploy <code>reflectz</code> we need to supply an identity to the workload using <code>--set-file reflectIdentity</code>. This identity will be used 
+to &#39;Bind&#39; the services the workload exposes. We also need to define what the service names are we want to allow that identity to bind. 
+We do this using the <code>--set serviceName</code> and <code>--set prometheusServiceName</code> flags.</p>
+<pre><code class="lang-text">helm repo add openziti-test-kitchen https://openziti-test-kitchen.github.io/helm-charts/
+helm repo update
+helm install reflectz openziti-test-kitchen/reflect \
+  --set-file reflectIdentity=&quot;/tmp/prometheus/kubeA.reflect.id.json&quot; \
+  --set serviceName=&quot;kubeA.reflect.svc&quot; \
+  --set prometheusServiceName=&quot;kubeA.reflect.scrape.svc&quot;
+</code></pre><p>After running helm, pod 2 should be up and running. Let&#39;s take a look using <code>kubectl</code></p>
+<pre><code class="lang-text">kubectl get pods
+NAME                        READY   STATUS    RESTARTS   AGE
+reflectz-775bd45d86-4sjwh   1/1     Running   0          7s
+ziti-host-db55b5c4b-rpc7f   1/1     Running   0          4m
+</code></pre><h3 id="pod-3---prometheuz">Pod 3 - <code>Prometheuz</code></h3>
+<h4 id="overlay-work---setting-up-openziti">Overlay Work - Setting Up OpenZiti</h4>
+<p>Now we have access to the cluster and a workload to monitor. Now we want to deploy Prometheus and monitor this workload. Remember that 
+the workload only exposes a scrape target over the OpenZiti overlay. For Prometheus to be able to scrape the workload, even when 
+resident inside the Kubernetes cluster (!), Prometheus will need to be OpenZiti-enabled. That will require a few things. We&#39;ll need a 
+new identity for Prometheus, we&#39;ll need to authorize Prometheus to access the workload&#39;s target, and we&#39;ll need to configure Prometheus 
+to scrape that workload. When we create this identity we&#39;ll assign two attributes. The <code>reflectz-clients</code> attribute gives this identity 
+the ability to dial the two services defined above. The <code>prometheus-clients</code> attribute is currently unused. We&#39;ll put that to use later, 
+but we can define it now.</p>
+<h4 id="create-and-enroll-the-identity-1">Create and Enroll the Identity</h4>
+<pre><code class="lang-text"># create and enroll the identity.
+ziti edge create identity user kubeA.prometheus.id -o /tmp/prometheus/kubeA.prometheus.id.jwt -a &quot;reflectz-clients&quot;,&quot;prometheus-clients&quot;
+ziti edge enroll /tmp/prometheus/kubeA.prometheus.id.jwt -o /tmp/prometheus/kubeA.prometheus.id.json
+</code></pre><h4 id="create-configs-and-services-including-tunneling-based-access-1">Create Configs and Services (including Tunneling-based Access)</h4>
+<pre><code class="lang-text"># create the config and service for the kubeA prometheus server
+ziti edge create config &quot;kubeA.prometheus.svc-intercept.v1&quot; intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeA.prometheus.svc&quot;],&quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}]}&#39;
+ziti edge create config &quot;kubeA.prometheus.svc-host.v1&quot; host.v1 \
+  &#39;{&quot;protocol&quot;:&quot;tcp&quot;, &quot;address&quot;:&quot;prometheuz-prometheus-server&quot;,&quot;port&quot;:80}&#39;
+ziti edge create service &quot;kubeA.prometheus.svc&quot; \
+  --configs &quot;kubeA.prometheus.svc-intercept.v1&quot;,&quot;kubeA.prometheus.svc-host.v1&quot;
+</code></pre><h4 id="authorize-the-workload-and-clients-1">Authorize the Workload and Clients</h4>
+<pre><code class="lang-text"># grant the prometheus clients the ability to dial the service and the kubeA.prometheus.id the ability to bind
+ziti edge create service-policy &quot;kubeA.prometheus.svc.dial&quot; Dial \
+  --service-roles &quot;@kubeA.prometheus.svc&quot; \
+  --identity-roles &quot;#prometheus-clients&quot;
+ziti edge create service-policy &quot;kubeA.prometheus.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeA.prometheus.svc&quot; \
+  --identity-roles &quot;@kubeA.ziti.id&quot;
+</code></pre><h4 id="deploying-prometheuz">Deploying <code>Prometheuz</code></h4>
+<p>With our services, configs and service-policies in place we are now ready to start our Prometheus server. Remember this server will not 
+listen on a the OpenZiti overlay. It&#39;s going to listen exclusively on the underlay. We are still exploring OpenZiti, and we are not yet
+comfortable deploying our Prometheus server dark. We&#39;ll change this soon, don&#39;t worry. For now, we&#39;ll imagine that we&#39;re still 
+evaluating the tech and chose to deploy it on the underlay, not on the overlay. </p>
+<p>Although Prometheus is listening on the underlay, we <strong>have</strong> deployed our workload listening on the overlay network. It won&#39;t be 
+available on the underlay at all. The workload has <strong>no listening ports</strong>. This means that we&#39;ll still need an OpenZiti-enabled 
+Prometheus to access and scrape that workload. To do this we&#39;ll use helm, and use a chart provided by the OpenZiti charts repo.</p>
+<p>Some interesting things to notice below in the <code>helm install</code> command. Notice that we are passing helm two <code>--set</code> parameters. These 
+parameters are informing the helm chart that the Prometheus server is not &quot;zitified&quot;, meaning it will be accessible via the underlay 
+network. We&#39;re also passing one <code>--set-file</code> parameter to tell Prometheus what identity we want to be stored in the pod (as a secret). 
+This secret will be used when we configure Prometheus to scrape the workload. Go ahead and run this command now and run 
+<code>kubectl get pods</code> until all the containers are running.</p>
+<pre><code class="lang-text">helm repo add openziti-test-kitchen https://openziti-test-kitchen.github.io/helm-charts/
+helm repo update
+helm install prometheuz openziti-test-kitchen/prometheus \
+  --set server.ziti.enabled=&quot;false&quot; \
+  --set-file server.scrape.id.contents=&quot;/tmp/prometheus/kubeA.prometheus.id.json&quot;
+</code></pre><hr>
+<h2 id="clusterb---fully-dark">ClusterB - Fully Dark</h2>
+<p><img src="clusterB.svg" class="flr"></p>
+<p>Now that we have deployed our first Kubernetes cluster, it&#39;s now time to deploy the second Kubernetes cluster. This time, we are going 
+to keep our entire deployment <strong>fully dark</strong>! There will be no listening ports, not even local to the Kubernetes cluster itself. To get 
+any traffic to this Prometheus server, you will need a strong identity and need to be authorized on the OpenZiti overlay. When complete, 
+ClusterB will look like the image to the right.</p>
+<p>This time, &quot;Pod1&quot; will be the <code>reflectz</code> workload. Since this is a <strong>fully dark</strong> deployment, listening entirely on the OpenZiti overlay,
+we won&#39;t need a <code>ziti-host</code> pod. Remember, in ClusterA <code>ziti-host</code> is used to provide internal access to the Kubernetes cluster via the
+OpenZiti overlay. It&#39;s similar in role to an ingress controller, but doesn&#39;t require you to expose your workloads to the internet. While
+that&#39;s pretty good we want to go fully dark this time. We&#39;ll have no <code>ziti-host</code>. We&#39;ll only need to deploy two pods: <code>reflectz</code> and 
+<code>prometheuz</code>.</p>
+<p>The good news is that the same commands you&#39;ve run for ClusterA, will mostly be used for ClusterB. You will want to beware that where 
+you used &quot;kubeA&quot; before, make sure you change those to &quot;kubeB&quot;. There will be small other changes we&#39;ll make along the way too, we&#39;ll see 
+those changes and explain them below. </p>
+<h3 id="pod1---reflectz">Pod1 - <code>reflectz</code></h3>
+<p>The <code>relectz</code> workload we&#39;ll deploy for ClusterB will be nearly identical to the ClusterA workload. We will create a service for 
+the actual &#39;reflect&#39; service. We will make a service for Prometheus to scrape the workload. We&#39;ll also need another identity, so 
+we&#39;ll create that identity, authorize it to bind the services, and authorize clients to access the workload. Since this process is very 
+similar to what we did for ClusterA, there&#39;s not much to explain. Setup ClusterB&#39;s <code>reflectz</code> now.</p>
+<h4 id="create-the-identity-1">Create the Identity</h4>
+<pre><code class="lang-text">ziti edge create identity user kubeB.reflect.id -o /tmp/prometheus/kubeB.reflect.id.jwt
+ziti edge enroll /tmp/prometheus/kubeB.reflect.id.jwt -o /tmp/prometheus/kubeB.reflect.id.json
+</code></pre><h4 id="create-configs-and-services-including-tunneling-based-access-2">Create Configs and Services (including Tunneling-based Access)</h4>
+<pre><code class="lang-text"># create intercept configs for the two services
+ziti edge create config kubeB.reflect.svc-intercept.v1 intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeB.reflect.svc.ziti&quot;],&quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}]}&#39;
+ziti edge create config &quot;kubeB.reflect.svc-intercept.v1.scrape&quot; intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeB.reflect.scrape.svc.ziti&quot;], &quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}], &quot;dialOptions&quot;:{&quot;identity&quot;:&quot;kubeB.reflect.id&quot;}}&#39;
+
+# create the two services
+ziti edge create service &quot;kubeB.reflect.svc&quot; --configs &quot;kubeB.reflect.svc-intercept.v1&quot; -a &quot;kubeB.reflect.svc.services&quot;
+ziti edge create service &quot;kubeB.reflect.scrape.svc&quot; --configs &quot;kubeB.reflect.svc-intercept.v1.scrape&quot;
+</code></pre><h4 id="authorize-the-workload-to-bind-the-services">Authorize the Workload to Bind the Services</h4>
+<pre><code class="lang-text"># create the bind service policies and authorize the reflect id to bind these services
+ziti edge create service-policy &quot;kubeB.reflect.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeB.reflect.svc&quot; --identity-roles &quot;@kubeB.reflect.id&quot;
+ziti edge create service-policy &quot;kubeB.reflect.scrape.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeB.reflect.scrape.svc&quot; --identity-roles &quot;@kubeB.reflect.id&quot;
+</code></pre><h4 id="authorize-clients-to-access-the-services">Authorize Clients to Access the Services</h4>
+<pre><code class="lang-text"># create the dial service policies and authorize the reflect id to bind these services
+ziti edge create service-policy &quot;kubeB.reflect.svc.dial&quot; Dial \
+  --service-roles &quot;@kubeB.reflect.svc&quot; --identity-roles &quot;#reflectz-clients&quot;
+ziti edge create service-policy &quot;kubeB.reflect.svc.dial.scrape&quot; Dial \
+  --service-roles &quot;@kubeB.reflect.scrape.svc&quot; --identity-roles &quot;#reflectz-clients&quot;
+</code></pre><h4 id="deploy-reflectz-1">Deploy <code>reflectz</code></h4>
+<pre><code class="lang-text">helm repo add openziti-test-kitchen https://openziti-test-kitchen.github.io/helm-charts/
+helm repo update
+helm install reflectz openziti-test-kitchen/reflect \
+  --set-file reflectIdentity=&quot;/tmp/prometheus/kubeB.reflect.id.json&quot; \
+  --set serviceName=&quot;kubeB.reflect.svc&quot; \
+  --set prometheusServiceName=&quot;kubeB.reflect.scrape.svc&quot;
+</code></pre><h3 id="pod-2---prometheuz">Pod 2 - <code>Prometheuz</code></h3>
+<p>For ClusterB we want <code>Prometheuz</code> to be <strong>totally dark</strong>. It will exclusively listen on the OpenZiti overlay and there will be no 
+listening ports on the underlay. We will need another identity, of course, and most of the configuration and commands appear the same on 
+the surface with very subtle differences. We&#39;ll explore these differences as we go. In this section we&#39;ll be making an identity, <strong>one 
+config</strong> (a difference from the ClusterA install), a service, and two service-policies. Let&#39;s get to it.</p>
+<h4 id="create-the-identity-2">Create the Identity</h4>
+<pre><code class="lang-text">ziti edge create identity user kubeB.prometheus.id -o /tmp/prometheus/kubeB.prometheus.id.jwt -a &quot;reflectz-clients&quot;,&quot;prometheus-clients&quot;
+ziti edge enroll /tmp/prometheus/kubeB.prometheus.id.jwt -o /tmp/prometheus/kubeB.prometheus.id.json
+</code></pre><h4 id="create-one-config-and-service">Create <strong>One</strong> Config and Service</h4>
+<p>Here&#39;s a difference from ClusterA. Since we are going to listen on the OpenZiti overlay, we are not installing <code>ziti-host</code>. That means 
+we don&#39;t need to create a <code>host.v1</code> config. A <code>host.v1</code> config is necessary for services which have a &#39;Bind&#39; configuration and are being 
+bound by a tunneling application. We&#39;re not doing that, here Prometheus will &#39;Bind&#39; this service, thus we don&#39;t need that <code>host.v1</code> 
+config.</p>
+<pre><code class="lang-text"># create the config and service for the kubeB prometheus server
+ziti edge create config &quot;kubeB.prometheus.svc-intercept.v1&quot; intercept.v1 \
+  &#39;{&quot;protocols&quot;:[&quot;tcp&quot;],&quot;addresses&quot;:[&quot;kubeB.prometheus.svc&quot;],&quot;portRanges&quot;:[{&quot;low&quot;:80, &quot;high&quot;:80}], &quot;dialOptions&quot;: {&quot;identity&quot;:&quot;kubeB.prometheus.id&quot;}}&#39;
+# no need for the host.v1 config
+ziti edge create service &quot;kubeB.prometheus.svc&quot; \
+  --configs &quot;kubeB.prometheus.svc-intercept.v1&quot;
+</code></pre><h4 id="authorize-clients-and-prometheus-to-bind-the-service">Authorize Clients and Prometheus to Bind the Service</h4>
+<p>At first, these commands appear identical. You need to look very closely to notice the difference between these command and the ones we 
+ran for ClusterA, other than the obvious changes from &quot;kubeA&quot; to &quot;kubeB&quot;. Pay close attention to the supplied <code>--identity-roles</code> for the 
+bind policy specified below. With ClusterA, we did not have Prometheus listen on the overlay and we allowed Prometheus to listen on the 
+underlay. That meant we needed to deploy <code>ziti-host</code> into that cluster to provide access to the service, and that means the service had 
+to be bound by the <code>ziti-host</code> identity.</p>
+<p>Here we are flipping that script. We are allowing Prometheus to bind this service! That means we&#39;ll need to authorize the 
+<code>kubeB.prometheus.id</code> to be able to bind the service.</p>
+<pre><code class="lang-text"># grant the prometheus clients the ability to dial the service and the kubeB.prometheus.id the ability to bind
+ziti edge create service-policy &quot;kubeB.prometheus.svc.dial&quot; Dial \
+  --service-roles &quot;@kubeB.prometheus.svc&quot; \
+  --identity-roles &quot;#prometheus-clients&quot;
+ziti edge create service-policy &quot;kubeB.prometheus.svc.bind&quot; Bind \
+  --service-roles &quot;@kubeB.prometheus.svc&quot; \
+  --identity-roles &quot;@kubeB.prometheus.id&quot;
+</code></pre><h4 id="deploying-prometheuz-1">Deploying <code>Prometheuz</code></h4>
+<p>At this point we have the OpenZiti overlay all configured. What&#39;s left, is to deploy Prometheus into ClusterB. This command is substantially
+different from what we ran while deploying Prometheus into ClusterA. You&#39;ll see that we need to supply two other identities for this
+installation. Remember, Prometheus will be entirely dark once deployed into ClusterB, listening only on the OpenZiti overlay. The container
+in the pod which monitors configmap changes won&#39;t be able to trigger a webhook using the underlay! This <code>configmap-reloadz</code> is a second
+&quot;zitification&quot; we didn&#39;t realize we were deploying in ClusterA, because we did not need it. We need it for ClusterB.</p>
+<p>You&#39;ll see for configmapReload we need to supply the identity which the container will use to hit the Prometheus webhook. We do that by 
+passing <code>--set-file configmapReload.ziti.id.contents=&quot;/tmp/prometheus/kubeB.prometheus.id.json&quot;</code>. Then we&#39;ll supply the service which 
+<code>configmap-reloadz</code> will dial, and we&#39;ll also specify what identity we expect to be hosting the service.</p>
+<p>Next you&#39;ll see we need to supply the identity to the Prometheus server we want to allow to listen on the OpenZiti overlay (
+<code>-set-file server.ziti.id.contents</code>). Similar to <code>configmap-reloadz</code> we will also specify the service and identity name to bind.</p>
+<p>Finally, to allow the server to scrape targets we need to supply a final identity which will be used when scraping targets with
+<code>--set-file server.scrape.id.contents</code>.</p>
+<p>You&#39;ll notice for simplicities sake, we are using the same identity for all three needs which is perfectly fine. If you wanted to use a 
+different identity, you could. That choice is up to you. To keep it simple we just authorized this identity for all these purposes.</p>
+<pre><code class="lang-text"># install prometheus
+helm repo add openziti-test-kitchen https://openziti-test-kitchen.github.io/helm-charts/
+helm repo update
+helm install prometheuz openziti-test-kitchen/prometheus \
+  --set-file configmapReload.ziti.id.contents=&quot;/tmp/prometheus/kubeB.prometheus.id.json&quot; \
+       --set configmapReload.ziti.targetService=&quot;kubeB.prometheus.svc&quot; \
+       --set configmapReload.ziti.targetIdentity=&quot;kubeB.prometheus.id&quot; \
+  --set-file server.ziti.id.contents=&quot;/tmp/prometheus/kubeB.prometheus.id.json&quot; \
+       --set server.ziti.service=&quot;kubeB.prometheus.svc&quot; \
+       --set server.ziti.identity=&quot;kubeB.prometheus.id&quot; \
+  --set-file server.scrape.id.contents=&quot;/tmp/prometheus/kubeB.prometheus.id.json&quot;
+</code></pre><h2 id="whats-next">What&#39;s Next</h2>
+<p>In this article we&#39;ve done a lot of OpenZiti CLI work, run some <code>kubectl</code> and <code>helm</code> commands but we still haven&#39;t explored what it is 
+we are building and why it&#39;s so cool. We&#39;ll do that in the <a href="part3.html">last, and final</a> article. Hopefully, the payoff for you will be 
+as rewarding as it was for me while building this article series.</p>
 </article>
           </div>
           
