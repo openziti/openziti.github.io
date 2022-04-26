@@ -996,21 +996,21 @@
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 190,
+      "line": 189,
       "symbol": "ZitiTunnel.startZiti(_:_:_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 195,
+      "line": 194,
       "symbol": "ZitiTunnel.shutdownZiti(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/runner/work/ziti-sdk-swift/ziti-sdk-swift/lib/ZitiTunnel.swift",
-      "line": 334,
+      "line": 333,
       "symbol": "ZitiTunnel.queuePacket(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
