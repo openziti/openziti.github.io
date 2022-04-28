@@ -348,7 +348,6 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>type##_s {\</div>
 <div class="line">model(<a class="code" href="model__support_8h.html#a8dc1515fc7557d815731b62f047704dc">FIELD_DECL</a>, type) \</div>
 <div class="line">} type;\</div>
-<div class="line">typedef type ** type##_array; \</div>
 <div class="line">DECLARE_MODEL_FUNCS(type)</div>
 </div><!-- fragment -->
 </div>
@@ -368,7 +367,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <a class="code" href="structtype__meta.html">type_meta</a>* get_##type##_meta();\</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> type ** type##_array; \</div>
+<div class="line">MODEL_API <a class="code" href="structtype__meta.html">type_meta</a>* get_##type##_meta();\</div>
 <div class="line">MODEL_API <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) alloc_##type();\</div>
 <div class="line">MODEL_API <span class="keywordtype">void</span> free_##type(type *v); \</div>
 <div class="line">MODEL_API <span class="keywordtype">int</span> cmp_##type(<span class="keyword">const</span> type *lh, <span class="keyword">const</span> type *rh); \</div>
@@ -688,6 +688,12 @@ Functions</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code" href="structfield__meta.html">field_meta</a> type##_FIELDS[] =  {\</div>
 <div class="line">    model(<a class="code" href="model__support_8h.html#aee4a9b5ebdf3b4b9dc76a46d0b44c69e">gen_field_meta</a>, type) \</div>
 <div class="line">    };                          \</div>
+<div class="line">static <a class="code" href="structtype__meta.html">type_meta</a> type##_META = { \</div>
+<div class="line">.<a class="code" href="structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b">name</a> = #type, \</div>
+<div class="line">.size = <span class="keyword">sizeof</span>(type),\</div>
+<div class="line">.field_count = <span class="keyword">sizeof</span>(type##_FIELDS) / <span class="keyword">sizeof</span>(<a class="code" href="structfield__meta.html">field_meta</a>),\</div>
+<div class="line">.fields = type##_FIELDS,\</div>
+<div class="line">};                              \</div>
 <div class="line">IMPL_MODEL_FUNCS(type)</div>
 </div><!-- fragment -->
 </div>
@@ -707,13 +713,7 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">static</span> <a class="code" href="structtype__meta.html">type_meta</a> type##_META = { \</div>
-<div class="line">.<a class="code" href="structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b">name</a> = #type, \</div>
-<div class="line">.size = <span class="keyword">sizeof</span>(type),\</div>
-<div class="line">.field_count = <span class="keyword">sizeof</span>(type##_FIELDS) / <span class="keyword">sizeof</span>(<a class="code" href="structfield__meta.html">field_meta</a>),\</div>
-<div class="line">.fields = type##_FIELDS,\</div>
-<div class="line">};\</div>
-<div class="line">type_meta* get_##type##_meta() { <span class="keywordflow">return</span> &amp;type##_META; }\</div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="structtype__meta.html">type_meta</a>* get_##type##_meta() { <span class="keywordflow">return</span> &amp;type##_META; }\</div>
 <div class="line">int parse_##type(<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) v, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len) { <span class="keywordflow">return</span> <a class="code" href="model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9">model_parse</a>(v, <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, len, &amp;type##_META); } \</div>
 <div class="line">int parse_##type##_ptr(<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(type) *p, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len) {\</div>
 <div class="line">*p = (type *)calloc(1, type##_META.size); \</div>
@@ -1552,7 +1552,6 @@ Functions</h2></td></tr>
 <div class="ttc" id="astructtype__meta_html"><div class="ttname"><a href="structtype__meta.html">type_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:166</div></div>
 <div class="ttc" id="astructtype__meta_html_ac9c7cd2ca7597d9c1bce2c110a930f8b"><div class="ttname"><a href="structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b">type_meta::name</a></div><div class="ttdeci">const char * name</div><div class="ttdef"><b>Definition:</b> model_support.h:167</div></div>
 <div class="ttc" id="amodel__support_8h_html_a563f68506b4a08c1141562fd16a72f1d"><div class="ttname"><a href="model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d">model_to_json</a></div><div class="ttdeci">char * model_to_json(const void *obj, const type_meta *meta, int flags, size_t *len)</div></div>
-<div class="ttc" id="amodel__support_8h_html_a07cd6f8790a80a835dd53aac54dd3fe4"><div class="ttname"><a href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a></div><div class="ttdeci">#define MODEL_API</div><div class="ttdoc">set of macros to help generate struct and function for our model;</div><div class="ttdef"><b>Definition:</b> model_support.h:64</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

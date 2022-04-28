@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['json_143',['json',['../model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d',1,'model_support.h']]],
-  ['json_5fenum_144',['json_enum',['../model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b',1,'model_support.h']]],
-  ['jsonifier_145',['jsonifier',['../structtype__meta.html#a58d4424fcd97516d944b17f6fe31f996',1,'type_meta']]],
-  ['jwt_146',['jwt',['../structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a',1,'ziti_enroll_opts']]],
-  ['jwt_5fcontent_147',['jwt_content',['../structziti__enroll__opts.html#ad955a4c626beee62768cbc8cb06a587a',1,'ziti_enroll_opts']]]
+  ['identity_145',['identity',['../structziti__dial__opts.html#abc09fa55de6ed596087e229df94ecdc7',1,'ziti_dial_opts::identity()'],['../structziti__listen__opts.html#a4d1724d1f324c257b2fbcd1cb49769f5',1,'ziti_listen_opts::identity()']]],
+  ['impl_146',['impl',['../structmodel__map.html#a2433ea3b9f641cf419a12b974004aaba',1,'model_map']]],
+  ['impl_5fenum_147',['IMPL_ENUM',['../model__support_8h.html#adbb21f355e3b5c477a44211a0e11bfdf',1,'model_support.h']]],
+  ['impl_5fmodel_148',['IMPL_MODEL',['../model__support_8h.html#a12dbdf00256ac0d2bdaf8d40468cdb55',1,'model_support.h']]],
+  ['impl_5fmodel_5ffuncs_149',['IMPL_MODEL_FUNCS',['../model__support_8h.html#ae75cd390c62ab32405b6e3288f68974a',1,'model_support.h']]],
+  ['info_150',['INFO',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a748005382152808a72b1a9177d9dc806',1,'ziti_log.h']]],
+  ['instant_151',['INSTANT',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32aceab93c18bce42ce4a2de2f8b9082df7',1,'enums.h']]],
+  ['int_5farray_152',['int_array',['../model__support_8h.html#a0031190b6b6a06574a2654a2842e954d',1,'model_support.h']]],
+  ['ip_153',['ip',['../structziti__address.html#ad62174863d0c08909a416752bf06835e',1,'ziti_address']]]
 ];
