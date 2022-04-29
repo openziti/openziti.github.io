@@ -215,12 +215,12 @@ access to a service and access to edge routers, but none of those edge routers
 can be used to access that particular service. </p>
 <h3 id="policy-advisor">Policy Advisor</h3>
 <p>To help diagnose issues there is a policy advisor API which the CLI has a wrapper for.</p>
-<pre><code>$ ziti edge controller policy-advisor services -q
+<pre><code>$ ziti edge policy-advisor services -q
 OKAY : simple-client (1) -&gt; simple (1) Common Routers: (1/1) Dial: Y Bind: N 
 
 OKAY : simple-server (1) -&gt; simple (1) Common Routers: (1/1) Dial: N Bind: Y
 
-$ ziti edge controller policy-advisor services ssh simple-client -q
+$ ziti edge policy-advisor services ssh simple-client -q
 ERROR: simple-client (1) -&gt; ssh (1) Common Routers: (1/1) Dial: N Bind: N 
   - No access to service. Adjust service policies.
 </code></pre><p>The policy advisor can look at all services or identities, or a specific service
@@ -275,7 +275,7 @@ ERROR: simple-client (1) -&gt; ssh (1) Common Routers: (1/1) Dial: N Bind: N
 <section id="tabpanel_SXxbe2tTxO_tabid-new-service-policy-cli" role="tabpanel" data-tab="tabid-new-service-policy-cli" aria-hidden="true" hidden="hidden">
 <p>To create a Service Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
 <pre><code># Create a service policy named &#39;my-policy&#39; which allows all identities to dial/connect to all services 
-ziti edge controller create service-policy my-policy Dial --identity-roles &#39;#all&#39; --service-roles &#39;#all&#39;
+ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; --service-roles &#39;#all&#39;
 </code></pre></section>
 </div>
 <h2 id="edge-router-policies-1">Edge Router Policies</h2>
@@ -316,7 +316,7 @@ ziti edge controller create service-policy my-policy Dial --identity-roles &#39;
 <section id="tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-cli" role="tabpanel" data-tab="tabid-new-edge-router-policy-cli" aria-hidden="true" hidden="hidden">
 <p>To create an Edge Router Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
 <pre><code># Create an edge router policy named &#39;my-policy&#39; which allows all identities to use all edge-routers 
-ziti edge controller create edge-router-policy my-policy --identity-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
+ziti edge create edge-router-policy my-policy --identity-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
 </code></pre></section>
 </div>
 <h2 id="service-edge-router-policies-1">Service Edge Router Policies</h2>
@@ -357,7 +357,7 @@ ziti edge controller create edge-router-policy my-policy --identity-roles &#39;#
 <section id="tabpanel_ROVe-pSECr_tabid-new-service-edge-router-policy-cli" role="tabpanel" data-tab="tabid-new-service-edge-router-policy-cli" aria-hidden="true" hidden="hidden">
 <p>To create a Service Edge Router Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
 <pre><code># Create a service edge router policy which allows all services to use all edge routers 
-ziti edge controller create service-edger-router-policy &#39;my-policy&#39; --service-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
+ziti edge create service-edger-router-policy &#39;my-policy&#39; --service-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
 </code></pre></section>
 </div>
 </article>

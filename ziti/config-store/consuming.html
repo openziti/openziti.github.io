@@ -109,20 +109,20 @@
 
 <p>Configuration data can be retrieved directly, but it will usually be consumed by applications via the SDK. When an SDK authenticates, it will indicate which configuration types it can process. Then, when listing services, the SDK will recieve configuation data in-line. This can be done from the CLI as well.</p>
 <p>If we&#39;ve set up a service <code>ssh</code> as follows:</p>
-<pre><code>$ ziti edge controller create config ssh-client my-app \
+<pre><code>$ ziti edge create config ssh-client my-app \
     &#39;{ 
         &quot;hostname&quot; : &quot;ssh.company.com&quot;, 
         &quot;port&quot; : 22 
      }&#39;
 
-$ ziti edge controller create service ssh --configs ssh
+$ ziti edge create service ssh --configs ssh
 </code></pre><p>The SDKs will present this configuration in language specific ways. You can see the data the SDK are working with from the SDK, by specifying configuration types when listing services. </p>
 <p><strong>NOTES</strong></p>
 <ul>
 <li>You can specify <code>all</code> to see all the configuration data.</li>
 <li>In addition to the <code>config</code> block which has the embedded configuration data there&#39;s also a <code>configs</code> section which lists all the associated configurations by ID. All associated configurations will always be listed here, regardless of which configuration types are requested.</li>
 </ul>
-<pre><code>$ ziti edge controller list services -j --config-types my-app &#39;name=&quot;ssh&quot;&#39;
+<pre><code>$ ziti edge list services -j --config-types my-app &#39;name=&quot;ssh&quot;&#39;
 {
     &quot;meta&quot;: {
         &quot;filterableFields&quot;: [

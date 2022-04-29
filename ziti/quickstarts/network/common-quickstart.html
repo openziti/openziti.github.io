@@ -153,9 +153,9 @@ ctrl_passwd=$(jq -r .password ~/.config/ziti/ziti-controller/credentials.json)
 
 ziticontroller=127.0.0.1
 cert=~/.config/ziti/pki/intermediate/certs/intermediate.cert
-ziti edge controller login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
+ziti edge login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
 </code></pre><pre><code>#update the admin user. This command will prompt you to enter the password
-ziti edge controller update authenticator updb -s
+ziti edge update authenticator updb -s
 </code></pre></section>
 </div>
 <h2 id="create-an-identity">Create an Identity</h2>
@@ -183,7 +183,7 @@ within the Ziti Controller. Read more about Identities <a href="../../identities
 <section id="tabpanel_Jgj2pEEE-E-1_create-identity-cli" role="tabpanel" data-tab="create-identity-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new identity using the CLI simply issue these commands:</p>
 <pre><code>#creates a new user named &quot;NewUser&quot;
-ziti edge controller create identity user &quot;NewUser&quot; -o NewUser.jwt
+ziti edge create identity user &quot;NewUser&quot; -o NewUser.jwt
 </code></pre></section>
 </div>
 <h3 id="enroll-the-new-identity">Enroll the New Identity</h3>
@@ -241,9 +241,9 @@ ctrl_passwd=$(jq -r .password ~/.config/ziti/ziti-controller/credentials.json)
 
 ziticontroller=127.0.0.1
 cert=~/.config/ziti/pki/intermediate/certs/intermediate.cert
-ziti edge controller login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
+ziti edge login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
 </code></pre><pre><code># create the config
-ziti edge controller create config eth0.ziti.config.cli ziti-tunneler-client.v1 &#39;{ &quot;hostname&quot; : &quot;eth0.ziti.cli&quot;, &quot;port&quot; : 80 }&#39;
+ziti edge create config eth0.ziti.config.cli ziti-tunneler-client.v1 &#39;{ &quot;hostname&quot; : &quot;eth0.ziti.cli&quot;, &quot;port&quot; : 80 }&#39;
 </code></pre></section>
 </div>
 <div class="tabGroup" id="tabgroup_Jgj2pEEE-E-3">
@@ -267,7 +267,7 @@ ziti edge controller create config eth0.ziti.config.cli ziti-tunneler-client.v1 
 <section id="tabpanel_Jgj2pEEE-E-3_create-service-cli" role="tabpanel" data-tab="create-service-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new service using the CLI simply issue these two commands:</p>
 <pre><code># create the service and refernce the cli config added earlier
-ziti edge controller create service ziti.eth0.svc.cli --configs ziti.eth0.config.cli
+ziti edge create service ziti.eth0.svc.cli --configs ziti.eth0.config.cli
 </code></pre></section>
 </div>
 <div class="tabGroup" id="tabgroup_Jgj2pEEE-E-4">
@@ -294,7 +294,7 @@ choose it anyway as shown: <br> <img src="../../../images/ui-terminator-bug.png"
 <section id="tabpanel_Jgj2pEEE-E-4_create-terminator-cli" role="tabpanel" data-tab="create-terminator-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new service using the CLI simply issue these two commands:</p>
 <pre><code># create the service and refernce the cli config added earlier
-ziti edge controller create terminator eth0.ziti.svc.cli &quot;ziti-er01&quot; tcp:eth0.me:80
+ziti edge create terminator eth0.ziti.svc.cli &quot;ziti-er01&quot; tcp:eth0.me:80
 </code></pre></section>
 </div>
 <h2 id="create-policies">Create Policies</h2>
@@ -371,15 +371,15 @@ ctrl_passwd=$(jq -r .password ~/.config/ziti/ziti-controller/credentials.json)
 
 ziticontroller=127.0.0.1
 cert=~/.config/ziti/pki/intermediate/certs/intermediate.cert
-ziti edge controller login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
+ziti edge login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c $cert
 </code></pre><pre><code># Create an edge router policy which allows all identities to use all edge routers 
-ziti edge controller create edge-router-policy all-edge-routers-cli --edge-router-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
+ziti edge create edge-router-policy all-edge-routers-cli --edge-router-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
 
 # Create a service policy which allows all identities to use all services 
-ziti edge controller create service-policy all-services-dial-cli Dial --service-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
+ziti edge create service-policy all-services-dial-cli Dial --service-roles &#39;#all&#39; --identity-roles &#39;#all&#39;
 
 # Create a service edge router policy which allows all services to use all edge routers
-ziti edge controller create service-edge-router-policy all-edge-routers-all-services --edge-router-roles &#39;#all&#39; --service-roles &#39;#all&#39;
+ziti edge create service-edge-router-policy all-edge-routers-all-services --edge-router-roles &#39;#all&#39; --service-roles &#39;#all&#39;
 </code></pre></section>
 </div>
 <h2 id="test-it">Test It</h2>

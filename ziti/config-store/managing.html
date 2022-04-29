@@ -128,33 +128,33 @@
   &quot;type&quot;: &quot;object&quot;
 }
 </code></pre><p>Put the schema in a file named <code>example-config-type.json</code>, and you can create a configuration type named my-app with it. </p>
-<pre><code>$ ziti edge controller create config-type my-app --schema-file example-config-type.json 
+<pre><code>$ ziti edge create config-type my-app --schema-file example-config-type.json 
 </code></pre><p>You can now create a configuration of this type</p>
-<pre><code>$ ziti edge controller create config ssh-client my-app \
+<pre><code>$ ziti edge create config ssh-client my-app \
     &#39;{  
        &quot;hostname&quot; : &quot;ssh.company.com&quot;, 
        &quot;port&quot; : 22 
      }&#39;
 </code></pre><p>Finally, you can reference this when creating a service.</p>
-<pre><code>$ ziti edge controller create service ssh --configs ssh
+<pre><code>$ ziti edge create service ssh --configs ssh
 </code></pre><p>If a particular site wanted SSH on a different port, you could create a different configuration</p>
-<pre><code>$ ziti edge controller create config scranton-office-ssh-client my-app \
+<pre><code>$ ziti edge create config scranton-office-ssh-client my-app \
     &#39;{ 
        &quot;hostname&quot; : &quot;ssh.company.com&quot;, 
        &quot;port&quot; : 2222 
      }&#39;
 </code></pre><p>The identity corresponding to a tunneler at that site could then be configured to use that configuration.</p>
-<pre><code>$ ziti edge controller create identity service scranton-office
+<pre><code>$ ziti edge create identity service scranton-office
 
-$ ziti edge controller update identity-configs scranton-office ssh scranton-office-ssh-client
+$ ziti edge update identity-configs scranton-office ssh scranton-office-ssh-client
 
-$ ziti edge controller list identity service-configs scranton-office
+$ ziti edge list identity service-configs scranton-office
 service: ssh    config: scranton-office-ssh-client
 results: 1-1 of 1
 </code></pre><p>Overrides can be removed as well, if they are no longer needed.</p>
-<pre><code>$ ziti edge controller update identity-configs scranton-office ssh scranton-office-ssh-client --remove
+<pre><code>$ ziti edge update identity-configs scranton-office ssh scranton-office-ssh-client --remove
 
-$ ziti edge controller list identity service-configs scranton-office
+$ ziti edge list identity service-configs scranton-office
 results: none
 </code></pre></article>
           </div>

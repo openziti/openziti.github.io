@@ -193,13 +193,7 @@ ZITI_EDGE_CONTROLLER_HOSTNAME=localhost; \
 ZITI_EDGE_CONTROLLER_PORT=8800; \
 ZITI_EDGE_ROUTER_HOSTNAME=localhost;ZITI_EDGE_ROUTER_PORT=9090; \
 source ziti-cli-functions.sh; expressInstall newfolder
-</code></pre><div class="WARNING"><h5>Warning</h5><p>If you run this command twice in the same shell you&#39;ll see a message warning you that you&#39;ve already
-run the command. It will look like this:</p>
-<pre><code class="lang-bash">--- It looks like you&#39;ve run an express install in this shell already. ---
---- Please execute unsetZitiEnv to clear any variables already set.    ---
-</code></pre><p>To clear this warning - as shown simply run <code>unsetZitiEnv</code></p>
-</div>
-<h2 id="sourcing-the-env-file">Sourcing the Env File</h2>
+</code></pre><h2 id="sourcing-the-env-file">Sourcing the Env File</h2>
 <p>In the case you close your shell and you want to get the same environment variables back into your shell, you can just 
 source the &quot;env&quot; file that is placed into the location you specified. For example, if you ran the example above where
 the deployed files went to <code>${HOME}/.ziti/quickstart/newfolder</code> you would find an &quot;env&quot; file at 
