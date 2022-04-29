@@ -11,6 +11,7 @@ var ziti__model_8h =
     [ "ZITI_HOST_CFG_V1_MODEL", "ziti__model_8h.html#aa8f0befd2e3a978af35257c9adebb161", null ],
     [ "ZITI_ID_CFG_MODEL", "ziti__model_8h.html#ac0ab12db245a7998efebb644f28f3fc6", null ],
     [ "ZITI_IDENTITY_MODEL", "ziti__model_8h.html#a13f6ad45904504959ce9364c1ea0ddd0", null ],
+    [ "ZITI_INTERCEPT_CFG_V1", "ziti__model_8h.html#a357df397956af833fb15bd7f52f4215f", null ],
     [ "ZITI_INTERCEPT_CFG_V1_MODEL", "ziti__model_8h.html#a5ea617159071c3578382d60108cf17b5", null ],
     [ "ZITI_MFA_ENROLLMENT_MODEL", "ziti__model_8h.html#ae75b369f3190250fd134f036bb24b88f", null ],
     [ "ZITI_PORT_RANGE_MODEL", "ziti__model_8h.html#a9f5edee1f7be24896775c50e7d57395e", null ],
