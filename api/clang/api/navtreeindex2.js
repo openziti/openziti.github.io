@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"ziti__model_8h.html#a6ba30bde8fde7d520d8defd0f6e167a2":[3,0,0,11,25],
+"ziti__model_8h.html#a6be389335fd33b1c93730327af68a075":[3,0,0,11,112],
 "ziti__model_8h.html#a6cffd67a24a6f40ec8f658e9c9e332a3":[3,0,0,11,106],
 "ziti__model_8h.html#a71872a9b4f1907c4198c2bccfaa0c0e1":[3,0,0,11,65],
 "ziti__model_8h.html#a71b12e8e832c870b9a9a5af0ba8e5f58":[3,0,0,11,105],

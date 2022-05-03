@@ -22,6 +22,8 @@ var model__support_8h =
     [ "mk_enum", "model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2", null ],
     [ "MODEL_API", "model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4", null ],
     [ "MODEL_JSON_COMPACT", "model__support_8h.html#a08d252be7ebc7de5de1b8652ea647993", null ],
+    [ "MODEL_PARSE_INVALID", "model__support_8h.html#abea111fc3de182cce3258add5d15e42a", null ],
+    [ "MODEL_PARSE_PARTIAL", "model__support_8h.html#a947427aff256ed103d6271cda9ad08fe", null ],
     [ "none", "model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586", null ],
     [ "ptr", "model__support_8h.html#a71854bec883f6da99f2f20ae3516d540", null ],
     [ "_cmp_f", "model__support_8h.html#a883917c4e0949c51ccdd017e75e01aad", null ],

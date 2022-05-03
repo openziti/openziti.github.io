@@ -1,5 +1,7 @@
 var NAVTREEINDEX1 =
 {
+"structziti__enroll__opts.html":[2,0,9],
+"structziti__enroll__opts.html#a0bebd29f92e7c3d1b4e0f85ca596bab3":[2,0,9,1],
 "structziti__enroll__opts.html#a6852c9bde18d0055a51136d94bc61687":[2,0,9,0],
 "structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a":[2,0,9,3],
 "structziti__enroll__opts.html#ad830d3e79cb9c9062ec45ff496b70af3":[2,0,9,2],
@@ -247,7 +249,5 @@ var NAVTREEINDEX1 =
 "ziti__model_8h.html#a63411ddd1d3511d770dac9edd85f385d":[3,0,0,11,92],
 "ziti__model_8h.html#a649796f4362d9408503370bccf5ece2e":[3,0,0,11,134],
 "ziti__model_8h.html#a68927c99887b8a73d87a328e79516e5b":[3,0,0,11,111],
-"ziti__model_8h.html#a6a4629b9107a38e2bb3930f7e2c5cd83":[3,0,0,11,129],
-"ziti__model_8h.html#a6ba30bde8fde7d520d8defd0f6e167a2":[3,0,0,11,25],
-"ziti__model_8h.html#a6be389335fd33b1c93730327af68a075":[3,0,0,11,112]
+"ziti__model_8h.html#a6a4629b9107a38e2bb3930f7e2c5cd83":[3,0,0,11,129]
 };
