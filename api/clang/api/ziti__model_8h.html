@@ -405,6 +405,8 @@ Functions</h2></td></tr>
 <tr class="separator:a32b81e464e2802243ef9653d329d5220"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240edbbca23833a89aaad89a51e9d42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a240edbbca23833a89aaad89a51e9d42b">ziti_service_get_config</a> (<a class="el" href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a> *service, const char *<a class="el" href="ziti__model_8h.html#ad61fde48fd0be891c7364d5af9febc93">cfg_type</a>, void *cfg, int(*parse_func)(void *, const char *, size_t))</td></tr>
 <tr class="separator:a240edbbca23833a89aaad89a51e9d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2c31500bcd5639a818600e3e9b36881"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881">ziti_intercept_from_client_cfg</a> (ziti_intercept_cfg_v1 *intercept, const ziti_client_cfg_v1 *client_cfg)</td></tr>
+<tr class="separator:ab2c31500bcd5639a818600e3e9b36881"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -560,7 +562,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">XX(hostname, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, hostname, __VA_ARGS__) \</div>
+<b>Value:</b><div class="fragment"><div class="line">XX(hostname, <a class="code" href="structziti__address.html">ziti_address</a>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, hostname, __VA_ARGS__) \</div>
 <div class="line">XX(port, <span class="keywordtype">int</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, port, __VA_ARGS__)</div>
 </div><!-- fragment -->
 </div>
@@ -625,11 +627,11 @@ Variables</h2></td></tr>
 <div class="line">XX(allowed_protocols, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedProtocols, __VA_ARGS__) \</div>
 <div class="line">XX(address, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, address, __VA_ARGS__) \</div>
 <div class="line">XX(forward_address, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, forwardAddress, __VA_ARGS__) \</div>
-<div class="line">XX(allowed_addresses, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedAddresses, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_addresses, <a class="code" href="structziti__address.html">ziti_address</a>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedAddresses, __VA_ARGS__) \</div>
 <div class="line">XX(port, <span class="keywordtype">int</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, port, __VA_ARGS__) \</div>
 <div class="line">XX(forward_port, <span class="keywordtype">bool</span>, <a class="code" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, forwardPort, __VA_ARGS__) \</div>
 <div class="line">XX(allowed_port_ranges, <a class="code" href="ziti__model_8h.html#a1cdb32d70a0e4ff321f6faaf78108713">ziti_port_range</a>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedPortRanges, __VA_ARGS__) \</div>
-<div class="line">XX(allowed_source_addresses, <span class="keywordtype">string</span>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedSourceAddresses, __VA_ARGS__) \</div>
+<div class="line">XX(allowed_source_addresses, <a class="code" href="structziti__address.html">ziti_address</a>, <a class="code" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, allowedSourceAddresses, __VA_ARGS__) \</div>
 <div class="line">XX(listen_options, <a class="code" href="structtag.html">tag</a>, <a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, listenOptions, __VA_ARGS__)</div>
 </div><!-- fragment -->
 </div>
@@ -3788,6 +3790,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>write to fixed buffer </p>
+
+</div>
+</div>
+<a id="ab2c31500bcd5639a818600e3e9b36881"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2c31500bcd5639a818600e3e9b36881">&#9670;&nbsp;</a></span>ziti_intercept_from_client_cfg()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_intercept_from_client_cfg </td>
+          <td>(</td>
+          <td class="paramtype">ziti_intercept_cfg_v1 *&#160;</td>
+          <td class="paramname"><em>intercept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const ziti_client_cfg_v1 *&#160;</td>
+          <td class="paramname"><em>client_cfg</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

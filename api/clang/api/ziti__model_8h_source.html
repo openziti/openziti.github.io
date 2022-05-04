@@ -183,7 +183,7 @@ $(document).ready(function(){initNavTree('ziti__model_8h_source.html',''); initR
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">XX(updated_at,string, none, updatedAt, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="ziti__model_8h.html#aa4bc7ef0bfc26e1681b5c8dba8559bc3">   98</a></span>&#160;<span class="preprocessor">#define ZITI_CLIENT_CFG_V1_MODEL(XX, ...) \</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">XX(hostname, string, none, hostname, __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">XX(hostname, ziti_address, none, hostname, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">XX(port, int, none, port, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
 <div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="ziti__model_8h.html#a9f5edee1f7be24896775c50e7d57395e">  102</a></span>&#160;<span class="preprocessor">#define ZITI_PORT_RANGE_MODEL(XX, ...) \</span></div>
@@ -210,11 +210,11 @@ $(document).ready(function(){initNavTree('ziti__model_8h_source.html',''); initR
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">XX(allowed_protocols, string, array, allowedProtocols, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">XX(address, string, none, address, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="preprocessor">XX(forward_address, bool, none, forwardAddress, __VA_ARGS__) \</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">XX(allowed_addresses, string, array, allowedAddresses, __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">XX(allowed_addresses, ziti_address, array, allowedAddresses, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="preprocessor">XX(port, int, none, port, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">XX(forward_port, bool, none, forwardPort, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">XX(allowed_port_ranges, ziti_port_range, array, allowedPortRanges, __VA_ARGS__) \</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">XX(allowed_source_addresses, string, array, allowedSourceAddresses, __VA_ARGS__) \</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="preprocessor">XX(allowed_source_addresses, ziti_address, array, allowedSourceAddresses, __VA_ARGS__) \</span></div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">XX(listen_options, tag, map, listenOptions, __VA_ARGS__)</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="ziti__model_8h.html#ae75b369f3190250fd134f036bb24b88f">  133</a></span>&#160;<span class="preprocessor">#define ZITI_MFA_ENROLLMENT_MODEL(XX, ...) \</span></div>
@@ -285,7 +285,7 @@ $(document).ready(function(){initNavTree('ziti__model_8h_source.html',''); initR
 <div class="line"><a name="l00198"></a><span class="lineno"><a class="line" href="ziti__model_8h.html#a240edbbca23833a89aaad89a51e9d42b">  198</a></span>&#160;<a class="code" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL</a>(<a class="code" href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a>, <a class="code" href="ziti__model_8h.html#a78cf441bb373466b3d373580b28df7dc">ZITI_SERVICE_MODEL</a>)</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
 <div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<a class="code" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL</a>(ziti_client_cfg_v1, <a class="code" href="ziti__model_8h.html#aa4bc7ef0bfc26e1681b5c8dba8559bc3">ZITI_CLIENT_CFG_V1_MODEL</a>)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno"><a class="line" href="ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881">  201</a></span>&#160; </div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<a class="code" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL</a>(<a class="code" href="ziti__model_8h.html#a1cdb32d70a0e4ff321f6faaf78108713">ziti_port_range</a>, <a class="code" href="ziti__model_8h.html#a9f5edee1f7be24896775c50e7d57395e">ZITI_PORT_RANGE_MODEL</a>)</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<a class="code" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL</a>(ziti_intercept_cfg_v1, <a class="code" href="ziti__model_8h.html#a5ea617159071c3578382d60108cf17b5">ZITI_INTERCEPT_CFG_V1_MODEL</a>)</div>
@@ -303,11 +303,13 @@ $(document).ready(function(){initNavTree('ziti__model_8h_source.html',''); initR
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keywordtype">int</span> <a class="code" href="ziti__model_8h.html#a240edbbca23833a89aaad89a51e9d42b">ziti_service_get_config</a>(<a class="code" href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a> *service, const <span class="keywordtype">char</span> *<a class="code" href="ziti__model_8h.html#ad61fde48fd0be891c7364d5af9febc93">cfg_type</a>, <span class="keywordtype">void</span> *cfg,</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                                      <span class="keywordtype">int</span> (*parse_func)(<span class="keywordtype">void</span> *, const <span class="keywordtype">char</span> *, <span class="keywordtype">size_t</span>));</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;}</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#endif //ZITI_SDK_ZITI_MODEL_H</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keywordtype">int</span> <a class="code" href="ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881">ziti_intercept_from_client_cfg</a>(ziti_intercept_cfg_v1 *intercept, const ziti_client_cfg_v1 *client_cfg);</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;}</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif //ZITI_SDK_ZITI_MODEL_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aziti__model_8h_html_a73ba3d5ce98c915950f0cc62f79726af"><div class="ttname"><a href="ziti__model_8h.html#a73ba3d5ce98c915950f0cc62f79726af">ziti_address_match_array</a></div><div class="ttdeci">bool ziti_address_match_array(const char *addr, ziti_address **range)</div></div>
@@ -326,6 +328,7 @@ $(document).ready(function(){initNavTree('ziti__model_8h_source.html',''); initR
 <div class="ttc" id="aziti__model_8h_html_afc4459bce792db0d76881d56133ccfc9"><div class="ttname"><a href="ziti__model_8h.html#afc4459bce792db0d76881d56133ccfc9">ziti_service</a></div><div class="ttdeci">ziti_service</div><div class="ttdef"><b>Definition:</b> ziti_model.h:188</div></div>
 <div class="ttc" id="aziti__model_8h_html_a3f2e0f70ff82fffff277269b2f3079f3"><div class="ttname"><a href="ziti__model_8h.html#a3f2e0f70ff82fffff277269b2f3079f3">ziti_address_print</a></div><div class="ttdeci">int ziti_address_print(char *buf, size_t max, const ziti_address *address)</div></div>
 <div class="ttc" id="amodel__support_8h_html_a62df6fb9c1a8501bbb29744ea72bc96f"><div class="ttname"><a href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL</a></div><div class="ttdeci">#define DECLARE_MODEL(type, model)</div><div class="ttdef"><b>Definition:</b> model_support.h:75</div></div>
+<div class="ttc" id="aziti__model_8h_html_ab2c31500bcd5639a818600e3e9b36881"><div class="ttname"><a href="ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881">ziti_intercept_from_client_cfg</a></div><div class="ttdeci">int ziti_intercept_from_client_cfg(ziti_intercept_cfg_v1 *intercept, const ziti_client_cfg_v1 *client_cfg)</div></div>
 <div class="ttc" id="aziti__model_8h_html_aa8f0befd2e3a978af35257c9adebb161"><div class="ttname"><a href="ziti__model_8h.html#aa8f0befd2e3a978af35257c9adebb161">ZITI_HOST_CFG_V1_MODEL</a></div><div class="ttdeci">#define ZITI_HOST_CFG_V1_MODEL(XX,...)</div><div class="ttdef"><b>Definition:</b> ziti_model.h:120</div></div>
 <div class="ttc" id="aziti__model_8h_html_aa4bc7ef0bfc26e1681b5c8dba8559bc3"><div class="ttname"><a href="ziti__model_8h.html#aa4bc7ef0bfc26e1681b5c8dba8559bc3">ZITI_CLIENT_CFG_V1_MODEL</a></div><div class="ttdeci">#define ZITI_CLIENT_CFG_V1_MODEL(XX,...)</div><div class="ttdef"><b>Definition:</b> ziti_model.h:98</div></div>
 <div class="ttc" id="aziti__model_8h_html_a78cf441bb373466b3d373580b28df7dc"><div class="ttname"><a href="ziti__model_8h.html#a78cf441bb373466b3d373580b28df7dc">ZITI_SERVICE_MODEL</a></div><div class="ttdeci">#define ZITI_SERVICE_MODEL(XX,...)</div><div class="ttdef"><b>Definition:</b> ziti_model.h:87</div></div>

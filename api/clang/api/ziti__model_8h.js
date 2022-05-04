@@ -138,6 +138,7 @@ var ziti__model_8h =
     [ "ziti_id_cfg_to_json_r", "ziti__model_8h.html#ac349bcbac2adf0d5fdb1cf9dc0887164", null ],
     [ "ziti_identity_to_json", "ziti__model_8h.html#a6a4629b9107a38e2bb3930f7e2c5cd83", null ],
     [ "ziti_identity_to_json_r", "ziti__model_8h.html#ac587444d236fff8c69e4e670b325c8e9", null ],
+    [ "ziti_intercept_from_client_cfg", "ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881", null ],
     [ "ziti_port_range_to_json", "ziti__model_8h.html#a4480d2ebde2149c668bd0cbf129d107d", null ],
     [ "ziti_port_range_to_json_r", "ziti__model_8h.html#a5ca9ae513ec653a884a578ef663d6d1b", null ],
     [ "ziti_posture_query_to_json", "ziti__model_8h.html#a56816ab9ccc45e2f747fddcf3f0cde94", null ],
