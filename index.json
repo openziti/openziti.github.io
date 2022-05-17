@@ -127,7 +127,7 @@
   "articles/index.html": {
     "href": "articles/index.html",
     "title": "Articles | Ziti",
-    "keywords": "Articles Here you'll find articles that cover various topics related to developing applications with Ziti. Ziti Up and Running on BeagleBone Bootstrapping Trust"
+    "keywords": "Articles Here you'll find articles that cover various topics related to developing applications with Ziti. Topics Ziti Up and Running on BeagleBone Bootstrapping Trust Zitifications A Zitification is any open-source project that has been modified to use the OpenZiti Edge SDK for client or server connectivity, or both. Zitified apps are bound to an identity instead of an address. Prometheus Kubernetes SSH SCP"
   },
   "articles/wildcard-dns/cheatsheet.html": {
     "href": "articles/wildcard-dns/cheatsheet.html",
