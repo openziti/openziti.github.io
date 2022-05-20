@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ziti C SDK: ziti/socket.h File Reference</title>
+<title>Ziti C SDK: ziti/zitilib.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('socket_8h.html',''); initResizable(); });
+$(document).ready(function(){initNavTree('zitilib_8h.html',''); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -85,43 +85,46 @@ $(document).ready(function(){initNavTree('socket_8h.html',''); initResizable(); 
 <a href="#typedef-members">Typedefs</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
-<div class="title">socket.h File Reference</div>  </div>
+<div class="title">zitilib.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="externs_8h_source.html">externs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="errors_8h_source.html">errors.h</a>&quot;</code><br />
 </div>
-<p><a href="socket_8h_source.html">Go to the source code of this file.</a></p>
+<p><a href="zitilib_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a39669b224e62d165a45f8415a342a6b4"><td class="memItemLeft" align="right" valign="top">typedef struct ziti_ctx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></td></tr>
+<tr class="memitem:a39669b224e62d165a45f8415a342a6b4"><td class="memItemLeft" align="right" valign="top">typedef struct ziti_ctx *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></td></tr>
 <tr class="separator:a39669b224e62d165a45f8415a342a6b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86fe0c7b322993be4bb71a8243e975a4"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></td></tr>
+<tr class="memitem:a86fe0c7b322993be4bb71a8243e975a4"><td class="memItemLeft" align="right" valign="top">typedef int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></td></tr>
 <tr class="separator:a86fe0c7b322993be4bb71a8243e975a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a9c50cd895babc6f5f0a8ea14e2df48b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a> (void)</td></tr>
-<tr class="memdesc:a9c50cd895babc6f5f0a8ea14e2df48b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Ziti library.  <a href="socket_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">More...</a><br /></td></tr>
+<tr class="memitem:a9c50cd895babc6f5f0a8ea14e2df48b4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a> (void)</td></tr>
+<tr class="memdesc:a9c50cd895babc6f5f0a8ea14e2df48b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize Ziti library.  <a href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">More...</a><br /></td></tr>
 <tr class="separator:a9c50cd895babc6f5f0a8ea14e2df48b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52be219ac8f75cb0f7b79ec2ec673097"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a52be219ac8f75cb0f7b79ec2ec673097">Ziti_last_error</a> (void)</td></tr>
-<tr class="memdesc:a52be219ac8f75cb0f7b79ec2ec673097"><td class="mdescLeft">&#160;</td><td class="mdescRight">return Ziti error code for last failed operation.  <a href="socket_8h.html#a52be219ac8f75cb0f7b79ec2ec673097">More...</a><br /></td></tr>
+<tr class="memitem:a52be219ac8f75cb0f7b79ec2ec673097"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a52be219ac8f75cb0f7b79ec2ec673097">Ziti_last_error</a> (void)</td></tr>
+<tr class="memdesc:a52be219ac8f75cb0f7b79ec2ec673097"><td class="mdescLeft">&#160;</td><td class="mdescRight">return Ziti error code for last failed operation.  <a href="zitilib_8h.html#a52be219ac8f75cb0f7b79ec2ec673097">More...</a><br /></td></tr>
 <tr class="separator:a52be219ac8f75cb0f7b79ec2ec673097"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd37bf5b0b0a6b7bbb510977b00d33ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a> (const char *identity)</td></tr>
-<tr class="memdesc:afd37bf5b0b0a6b7bbb510977b00d33ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Ziti identity.  <a href="socket_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">More...</a><br /></td></tr>
+<tr class="memitem:aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd">Ziti_enroll_identity</a> (const char *jwt, const char *key, const char *cert, char **id_json, unsigned long *id_json_len)</td></tr>
+<tr class="memdesc:aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">enroll a new Ziti identity  <a href="zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd">More...</a><br /></td></tr>
+<tr class="separator:aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd37bf5b0b0a6b7bbb510977b00d33ed"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a> (const char *identity)</td></tr>
+<tr class="memdesc:afd37bf5b0b0a6b7bbb510977b00d33ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Ziti identity.  <a href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">More...</a><br /></td></tr>
 <tr class="separator:afd37bf5b0b0a6b7bbb510977b00d33ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e0b67b9411bc037acf42affcda78185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a> (int type)</td></tr>
-<tr class="memdesc:a1e0b67b9411bc037acf42affcda78185"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service  <a href="socket_8h.html#a1e0b67b9411bc037acf42affcda78185">More...</a><br /></td></tr>
+<tr class="memitem:a1e0b67b9411bc037acf42affcda78185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a> (int type)</td></tr>
+<tr class="memdesc:a1e0b67b9411bc037acf42affcda78185"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service  <a href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">More...</a><br /></td></tr>
 <tr class="separator:a1e0b67b9411bc037acf42affcda78185"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6f5e93e2ce4a8acb1bfe3def074d4fff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a6f5e93e2ce4a8acb1bfe3def074d4fff">Ziti_connect</a> (<a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, <a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service)</td></tr>
-<tr class="memdesc:a6f5e93e2ce4a8acb1bfe3def074d4fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service.  <a href="socket_8h.html#a6f5e93e2ce4a8acb1bfe3def074d4fff">More...</a><br /></td></tr>
+<tr class="memitem:a6f5e93e2ce4a8acb1bfe3def074d4fff"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a6f5e93e2ce4a8acb1bfe3def074d4fff">Ziti_connect</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service)</td></tr>
+<tr class="memdesc:a6f5e93e2ce4a8acb1bfe3def074d4fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service.  <a href="zitilib_8h.html#a6f5e93e2ce4a8acb1bfe3def074d4fff">More...</a><br /></td></tr>
 <tr class="separator:a6f5e93e2ce4a8acb1bfe3def074d4fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e5b93fbb42fba16461e59849d7370df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#a7e5b93fbb42fba16461e59849d7370df">Ziti_connect_addr</a> (<a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, const char *host, unsigned int port)</td></tr>
-<tr class="memdesc:a7e5b93fbb42fba16461e59849d7370df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service with the given intercept address.  <a href="socket_8h.html#a7e5b93fbb42fba16461e59849d7370df">More...</a><br /></td></tr>
+<tr class="memitem:a7e5b93fbb42fba16461e59849d7370df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a7e5b93fbb42fba16461e59849d7370df">Ziti_connect_addr</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, const char *host, unsigned int port)</td></tr>
+<tr class="memdesc:a7e5b93fbb42fba16461e59849d7370df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service with the given intercept address.  <a href="zitilib_8h.html#a7e5b93fbb42fba16461e59849d7370df">More...</a><br /></td></tr>
 <tr class="separator:a7e5b93fbb42fba16461e59849d7370df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab18537f49af147f645d08d2cc0965572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="socket_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a> (void)</td></tr>
-<tr class="memdesc:ab18537f49af147f645d08d2cc0965572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti library.  <a href="socket_8h.html#ab18537f49af147f645d08d2cc0965572">More...</a><br /></td></tr>
+<tr class="memitem:ab18537f49af147f645d08d2cc0965572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a> (void)</td></tr>
+<tr class="memdesc:ab18537f49af147f645d08d2cc0965572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti library.  <a href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">More...</a><br /></td></tr>
 <tr class="separator:ab18537f49af147f645d08d2cc0965572"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
@@ -132,7 +135,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef struct ziti_ctx* <a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></td>
+          <td class="memname">typedef struct ziti_ctx* <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -146,7 +149,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef int <a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></td>
+          <td class="memname">typedef int <a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -163,13 +166,13 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int Ziti_connect </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
           <td class="paramname"><em>socket</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
           <td class="paramname"><em>ztx</em>, </td>
         </tr>
         <tr>
@@ -189,7 +192,7 @@ Functions</h2></td></tr>
 <p>Connect socket to a Ziti service. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="socket_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
+    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
     <tr><td class="paramname">ztx</td><td>Ziti context </td></tr>
     <tr><td class="paramname">service</td><td>service name provided by [ztx] </td></tr>
   </table>
@@ -208,7 +211,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int Ziti_connect_addr </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
           <td class="paramname"><em>socket</em>, </td>
         </tr>
         <tr>
@@ -234,13 +237,72 @@ Functions</h2></td></tr>
 <p>Connect socket to a Ziti service with the given intercept address. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="socket_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
+    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
     <tr><td class="paramname">host</td><td>target hostname </td></tr>
     <tr><td class="paramname">port</td><td>target port </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd">&#9670;&nbsp;</a></span>Ziti_enroll_identity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_enroll_identity </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>jwt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>cert</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **&#160;</td>
+          <td class="paramname"><em>id_json</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long *&#160;</td>
+          <td class="paramname"><em>id_json_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enroll a new Ziti identity </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">jwt</td><td>enrollment token </td></tr>
+    <tr><td class="paramname">key</td><td>private key (required for third party CA enrollment, otherwise optional) </td></tr>
+    <tr><td class="paramname">cert</td><td>identity x.509 certificate (required for third party CA enrollment, otherwise ignored) </td></tr>
+    <tr><td class="paramname">id_json</td><td>(output) identity in JSON format, caller is responsible for freeing it </td></tr>
+    <tr><td class="paramname">id_json_len</td><td>(output) length of id_json </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ZITI_OK on success, error code on failures </dd></dl>
 
 </div>
 </div>
@@ -314,7 +376,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="socket_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> Ziti_load_context </td>
+          <td class="memname"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> Ziti_load_context </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>identity</em></td><td>)</td>
@@ -341,7 +403,7 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="socket_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> Ziti_socket </td>
+          <td class="memname"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> Ziti_socket </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>type</em></td><td>)</td>
@@ -366,7 +428,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_dadf69ede447b14e22bacdb33be945b5.html">ziti</a></li><li class="navelem"><a class="el" href="socket_8h.html">socket.h</a></li>
+    <li class="navelem"><a class="el" href="dir_dadf69ede447b14e22bacdb33be945b5.html">ziti</a></li><li class="navelem"><a class="el" href="zitilib_8h.html">zitilib.h</a></li>
     <li class="footer">Generated by <a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20 </li>
   </ul>
 </div>

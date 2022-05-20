@@ -204,6 +204,15 @@ Variables</h2></td></tr>
 <tr class="memitem:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adfbe1fea9a00f5dd90c0e42221248fcb">ZITI_PARTIALLY_AUTHENTICATED</a></td></tr>
 <tr class="memdesc:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when authentication is attempted but there is an existing api session waiting for auth queries to pass  <a href="errors_8h.html#adfbe1fea9a00f5dd90c0e42221248fcb">More...</a><br /></td></tr>
 <tr class="separator:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a02c9e37a39d38b36a4b1a908df4ad6dc">ZITI_INVALID_AUTHENTICATOR_TYPE</a></td></tr>
+<tr class="memdesc:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e.  <a href="errors_8h.html#a02c9e37a39d38b36a4b1a908df4ad6dc">More...</a><br /></td></tr>
+<tr class="separator:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f91f69688b91617695310df77d1b8d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a82f91f69688b91617695310df77d1b8d">ZITI_INVALID_AUTHENTICATOR_CERT</a></td></tr>
+<tr class="memdesc:a82f91f69688b91617695310df77d1b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authentication extension when the current client cert does not match the authenticator  <a href="errors_8h.html#a82f91f69688b91617695310df77d1b8d">More...</a><br /></td></tr>
+<tr class="separator:a82f91f69688b91617695310df77d1b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a0e7dd3eb62a02ad740dac6dd832012a3">ZITI_INVALID_CERT_KEY_PAIR</a></td></tr>
+<tr class="memdesc:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied  <a href="errors_8h.html#a0e7dd3eb62a02ad740dac6dd832012a3">More...</a><br /></td></tr>
+<tr class="separator:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">ZITI_WTF</a></td></tr>
 <tr class="memdesc:a6cb98ad4d5a5243239c51c92a761fd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspired by the Android SDK: What a Terrible Failure.  <a href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">More...</a><br /></td></tr>
 <tr class="separator:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -525,6 +534,79 @@ Variables</h2></td></tr>
 
 <p>The SDK cannot send data to the Ziti Network because an Edge Router was not available. </p>
 <p>Common causes are: * the identity connecting is not associated with any Edge Routers * the Edge Router in use is no longer responding </p>
+
+</div>
+</div>
+<a id="a82f91f69688b91617695310df77d1b8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f91f69688b91617695310df77d1b8d">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_CERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_INVALID_AUTHENTICATOR_CERT</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returned during certificate authentication extension when the current client cert does not match the authenticator </p>
+
+</div>
+</div>
+<a id="a02c9e37a39d38b36a4b1a908df4ad6dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02c9e37a39d38b36a4b1a908df4ad6dc">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_INVALID_AUTHENTICATOR_TYPE</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e. </p>
+<p>UPDB or 3rd party) </p>
+
+</div>
+</div>
+<a id="a0e7dd3eb62a02ad740dac6dd832012a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e7dd3eb62a02ad740dac6dd832012a3">&#9670;&nbsp;</a></span>ZITI_INVALID_CERT_KEY_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int ZITI_INVALID_CERT_KEY_PAIR</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied </p>
 
 </div>
 </div>

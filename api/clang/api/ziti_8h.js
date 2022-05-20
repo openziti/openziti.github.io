@@ -14,8 +14,9 @@ var ziti_8h =
     [ "ziti_connection", "ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef", null ],
     [ "ziti_context", "ziti_8h.html#a39669b224e62d165a45f8415a342a6b4", null ],
     [ "ziti_data_cb", "ziti_8h.html#a9aff26bd4513034132acab86448c3e1b", null ],
-    [ "ziti_enroll_cb", "ziti_8h.html#ab6cdcc63aaf1dc483afb46ec14cb468d", null ],
+    [ "ziti_enroll_cb", "ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26", null ],
     [ "ziti_event_cb", "ziti_8h.html#af10680297946038b65fe9af5057edc13", null ],
+    [ "ziti_extend_cert_authenticator_cb", "ziti_8h.html#a13307e5da4fdcfee042871537b0bbf2e", null ],
     [ "ziti_listen_cb", "ziti_8h.html#a06b4d01871a739519c265629cd90aa4c", null ],
     [ "ziti_mfa_cb", "ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4", null ],
     [ "ziti_mfa_enroll_cb", "ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7", null ],
@@ -29,6 +30,7 @@ var ziti_8h =
     [ "ziti_pr_os_cb", "ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1", null ],
     [ "ziti_pr_process_cb", "ziti_8h.html#a1744758409bf52d54e3fff89d5409583", null ],
     [ "ziti_service_cb", "ziti_8h.html#a35245ab4953e815155542e5b46f5bdff", null ],
+    [ "ziti_verify_extend_cert_authenticator_cb", "ziti_8h.html#abc15f1012d9536c9651cd1f511943070", null ],
     [ "ziti_write_cb", "ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d", null ],
     [ "ziti_terminator_precedence", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178", [
       [ "PRECEDENCE_DEFAULT", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e", null ],
@@ -52,6 +54,7 @@ var ziti_8h =
     [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
     [ "ziti_endpoint_state_change", "ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84", null ],
     [ "ziti_enroll", "ziti_8h.html#a86a73cb294bab0c38a0b00497f547845", null ],
+    [ "ziti_extend_cert_authenticator", "ziti_8h.html#a04a25125e41b9717e5148dc8504889e8", null ],
     [ "ziti_get_appdata", "ziti_8h.html#abd895b2375239f5418cdd08b58e1d329", null ],
     [ "ziti_get_appdata_raw", "ziti_8h.html#a7c7985fefa0641d1597645f2aefeae60", null ],
     [ "ziti_get_controller", "ziti_8h.html#aeddb4d7dd7d0909084566f8bb947dd52", null ],
@@ -72,8 +75,10 @@ var ziti_8h =
     [ "ziti_mfa_verify", "ziti_8h.html#ac25ffa02e49130a18a669099f3403395", null ],
     [ "ziti_service_available", "ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f", null ],
     [ "ziti_set_app_info", "ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a", null ],
+    [ "ziti_set_client_cert", "ziti_8h.html#ae8b335fe3de0a1e15e8cb63e7c7f34d9", null ],
     [ "ziti_set_enabled", "ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b", null ],
     [ "ziti_set_timeout", "ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80", null ],
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
+    [ "ziti_verify_extend_cert_authenticator", "ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2", null ],
     [ "ziti_write", "ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69", null ]
 ];
