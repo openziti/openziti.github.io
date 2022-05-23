@@ -113,31 +113,29 @@
 
 <p>The mechanism for creating identities is influenced by how your Ziti network is setup, specifically how the PKI is
 established. Identities are itegrally linked to the PKI configured in a given Ziti network and directly affects how
-identites are created. There are generally three groups of identities which can be created:</p>
+identites are created and enrolled. There are generally three enrollment methods for identities:</p>
 <ul>
 <li>One Time Token (ott) identites using the configured PKI</li>
 <li>One Time Token (ott) identites using a 3rd Party CA</li>
 <li>3rd Party auto-enrolled identities</li>
 </ul>
-<h2 id="choosing-an-identity-type">Choosing an Identity Type</h2>
-<p>Choosing which type of identity you are creating comes down to whether you are using a 3rd Party CA or not. If the
-network does not have a 3rd Party Certificate configured the only option is to use the One Time Token identity.</p>
+<h2 id="choosing-an-enrollment-method">Choosing an Enrollment Method</h2>
+<p>Choosing which type of enrollment your identity will use comes down to whether you are using a 3rd Party CA or not. If the
+network does not have a 3rd Party Certificate configured the only option is to use the One Time Token (OTT) enrollment method.</p>
 <p>If one or more 3rd Party CA is installed you will need to understand the intention of each 3rd Party certificate.</p>
-<p>Each of the types of identities are secure it just depends on your actual network setup as to which type to choose. If
-you don&#39;t know - just use the one time token identity. The identity can always be recreated at a later date and replaced
-if necessary.</p>
+<p>Each of the types of enrollments are secure it just depends on your actual network setup as to which type to choose. If
+you don&#39;t know - just use the One Time Token (OTT) method. The identity can always be recreated at a later date if necessary.</p>
 <h3 id="one-time-token-ott">One Time Token (OTT)</h3>
-<p>One time token identities are the type of identities available to all Ziti networks.  A one time token identity will
+<p>The One Time Token method is available to all Ziti networks.  A one time token enrolled identity will
 have a token generated at the time of the identity&#39;s creation.  This token is then submitted at some point in the future
 as part of the <a href="enrolling.html">enrollment</a> process.  Once an identity is successfully enrolled - the one time token is
 no longer valid and cannot be used to enroll the same identity again.</p>
 <p>One time tokens are delivered from the Ziti Controller as a <a href="https://tools.ietf.org/html/rfc7519">jwt</a> and the token
-expires 24 hours after the identity is created.  The token is downloadable via the basic UI provided in the <a href="https://aws.amazon.com/marketplace/pp/B07YZLKMLV">Ziti Edge -
-Developer Edition</a>. After you create a user you can go to the Identities page and
-click the icon that looks like a certificate to download the .jwt file.</p>
-<p>You can also create a one time token identity using the <code>ziti</code> cli tool available on the path of the <a href="https://aws.amazon.com/marketplace/pp/B07YZLKMLV">Ziti Edge -
-Developer Edition</a>.  This command will create a new identity and output the jwt
-to the selected path. You can then transfer the .jwt file to its intended destination.</p>
+expires 24 hours after the identity is created.  The token is downloadable via the Ziti Admin Console. After you create
+a user you can go to the Identities page and click the icon that looks like a certificate to download the .jwt file.</p>
+<p>You can also create an identity for one time token enrollment using the <code>ziti</code> cli tool.  This command will
+create a new identity and output the jwt to the selected path. You can then transfer the .jwt file to the device where
+the permanent identity JSON file will be installed by running the <code>enroll</code> command.</p>
 <pre><code>#creates a new user named &quot;NewUser&quot;
 ziti edge create identity user &quot;NewUser&quot; -o NewUser.jwt
 </code></pre><h3 id="3rd-party-ca---overview">3rd Party CA - Overview</h3>
@@ -217,10 +215,10 @@ specify the devices display name and internal username. See <a href="enrolling.h
 <div class="tabGroup" id="tabgroup_WKKGAgjyEN-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" data-tab="tabid-new-identity-ui" tabindex="0" aria-selected="true">New Identity via UI</a>
+<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" data-tab="tabid-new-identity-ui" tabindex="0" aria-selected="true">New 3rd Party CA Identity via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" data-tab="tabid-new-identity-cli" tabindex="-1">New Identity via UI</a>
+<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" data-tab="tabid-new-identity-cli" tabindex="-1">New 3rd Party Identity via CLI</a>
 </li>
 </ul>
 <section id="tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" role="tabpanel" data-tab="tabid-new-identity-ui">
@@ -237,6 +235,15 @@ specify the devices display name and internal username. See <a href="enrolling.h
 ziti edge create identity user &quot;NewUser&quot; -o NewUser.jwt
 </code></pre></section>
 </div>
+<h2 id="choosing-an-identity-type">Choosing an Identity Type</h2>
+<p>The three types of identities are:</p>
+<ul>
+<li>User</li>
+<li>Device</li>
+<li>Service</li>
+</ul>
+<p>These are functionally equivalent and have identical properties. You may wish to express the intended purpose of an
+identity by choosing one or another type when the identity is created. The type can not be changed.</p>
 </article>
           </div>
           
