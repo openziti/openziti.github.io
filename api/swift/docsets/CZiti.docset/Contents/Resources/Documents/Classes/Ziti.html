@@ -230,7 +230,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Opaque reference to Ziti SDK C context</p>
 
                       </div>
                       <div class="declaration">
@@ -284,7 +284,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Arbitrary data user can attach to a Ziti instance.  This dictionary is not used internally and is completely under the control of the user.</p>
 
                       </div>
                       <div class="declaration">
@@ -616,7 +616,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Identity associated with this instance of Ziti</p>
 
                       </div>
                       <div class="declaration">
@@ -1755,7 +1755,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>User supplied callback for timer</p>
 
                       </div>
                       <div class="declaration">
@@ -1782,7 +1782,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Schedule a timer</p>
 
                       </div>
                       <div class="declaration">
@@ -1810,7 +1810,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Remove and destroy a timer</p>
 
                       </div>
                       <div class="declaration">
@@ -1821,6 +1821,25 @@ the operation on the Ziti thread</p>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">endTimer</span><span class="p">(</span><span class="n">_</span> <span class="nv">h</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>h</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Opaque pointer to the timer handle available in TimerCallback</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1899,7 +1918,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type definition of MFA enrollment callback</p>
 
                       </div>
                       <div class="declaration">
@@ -1926,7 +1945,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Enroll in MFA</p>
 
                       </div>
                       <div class="declaration">
@@ -1936,6 +1955,25 @@ the operation on the Ziti thread</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mfaEnroll</span><span class="p">(</span><span class="n">_</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC17MfaEnrollCallbacka">MfaEnrollCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of enrollment attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -1953,7 +1991,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type definition of callback method for MFA operations</p>
 
                       </div>
                       <div class="declaration">
@@ -1980,7 +2018,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Remove MFA from this identity</p>
 
                       </div>
                       <div class="declaration">
@@ -1990,6 +2028,37 @@ the operation on the Ziti thread</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mfaRemove</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC11MfaCallbacka">MfaCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TOTP code for MFA</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of the attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2007,7 +2076,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Verify an MFA enrollment attempt</p>
 
                       </div>
                       <div class="declaration">
@@ -2017,6 +2086,37 @@ the operation on the Ziti thread</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mfaVerify</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC11MfaCallbacka">MfaCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TOTP code for MFA</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of the attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2034,7 +2134,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type definition of callback method for attempted retrieval or MFA recovery codes</p>
 
                       </div>
                       <div class="declaration">
@@ -2061,7 +2161,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Retrieve MFA recovery codes</p>
 
                       </div>
                       <div class="declaration">
@@ -2071,6 +2171,37 @@ the operation on the Ziti thread</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mfaGetRecoveryCodes</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC24MfaRecoveryCodesCallbacka">MfaRecoveryCodesCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TOTP code for MFA</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of the attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2088,7 +2219,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Generate new MFA recovery codes</p>
 
                       </div>
                       <div class="declaration">
@@ -2098,6 +2229,37 @@ the operation on the Ziti thread</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mfaNewRecoveryCodes</span><span class="p">(</span><span class="n">_</span> <span class="nv">code</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">cb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC24MfaRecoveryCodesCallbacka">MfaRecoveryCodesCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TOTP code for MFA</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of the attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -2115,7 +2277,7 @@ the operation on the Ziti thread</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Authenticate via MFA</p>
 
                       </div>
                       <div class="declaration">
@@ -2126,6 +2288,37 @@ the operation on the Ziti thread</p>
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>code</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>TOTP code for MFA</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked on completion of the attempt</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -2134,7 +2327,7 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-05-22)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-05-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>

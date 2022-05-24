@@ -193,7 +193,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>Class providing a Swift wrapper for Ziti Tunnel SDK C</p>
 
           </section>
           <section class="section task-group-section">
@@ -212,7 +212,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Starting the tunnel will delay up to <code>SERVICE_WAIT_TIMEOUT</code> seconds waitig for services to be retrieved before calling the <code><a href="../Classes/ZitiTunnel.html#/s:5CZiti10ZitiTunnelC24IdentitiesLoadedCallbacka">IdentitiesLoadedCallback</a></code>
+This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">ZitiTunnelProvider</a></code> to configure any intercepted routes on the interface before it is started (important when extending an
+ <code>NEPacketTunnelProvider</code>)</p>
 
                       </div>
                       <div class="declaration">
@@ -239,7 +241,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Type defintion of callback invoked when all identities have loaded (or timed-out)</p>
 
                       </div>
                       <div class="declaration">
@@ -266,7 +268,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Class encapsulating an IPv4 route</p>
 
                         <a href="../Classes/ZitiTunnel/Route.html" class="slightly-smaller">See more</a>
                       </div>
@@ -294,7 +296,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Initialize a <code>ZitiTunnel</code> instance</p>
 
                       </div>
                       <div class="declaration">
@@ -306,6 +308,73 @@
             <span class="n">_</span> <span class="nv">ipDNS</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">ipUpstreamDNS</span><span class="p">:</span><span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>tunnelProvider</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Delegate for adding/removing routes, writing packets, and handling events</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ipAddress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Address of the tunnel interface</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subnetMask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Mask of the <code>ipAddress</code> for routes to the tunnel interface</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>ipDNS</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Address for DNS queries</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upstreamDNS</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Address for handlig DNS queries that aren&rsquo;t meant to be intercepted.  If <code>nil</code>, such requests are REFUSED</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -323,7 +392,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Connect to Ziti and begin processing for the specified identites</p>
 
                       </div>
                       <div class="declaration">
@@ -333,6 +402,49 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">startZiti</span><span class="p">(</span><span class="n">_</span> <span class="nv">zids</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/ZitiIdentity.html">ZitiIdentity</a></span><span class="p">],</span> <span class="n">_</span> <span class="nv">postureChecks</span><span class="p">:</span> <span class="kt"><a href="../Classes/ZitiPostureChecks.html">ZitiPostureChecks</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">loadedCb</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/ZitiTunnel.html#/s:5CZiti10ZitiTunnelC24IdentitiesLoadedCallbacka">IdentitiesLoadedCallback</a></span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zids</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of Ziti identities</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>postureChecks</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Handler for posture checks</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>loadedCb</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked when identites are loaded (services have been received or timed-out)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -350,7 +462,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Shutdown Ziti</p>
 
                       </div>
                       <div class="declaration">
@@ -360,6 +472,25 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">shutdownZiti</span><span class="p">(</span><span class="n">_</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback invoked when shutodwn compete</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -377,7 +508,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Queue a packet received from the tunnel interface for processing (e.g., for intercepted services or DNS requests)</p>
 
                       </div>
                       <div class="declaration">
@@ -388,6 +519,25 @@
 
                         </div>
                       </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>IP packet received from the tunnel interface</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </section>
                   </div>
                 </li>
@@ -396,7 +546,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-05-22)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-05-23)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
