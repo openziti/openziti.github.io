@@ -123,6 +123,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a7e5b93fbb42fba16461e59849d7370df"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a7e5b93fbb42fba16461e59849d7370df">Ziti_connect_addr</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, const char *host, unsigned int port)</td></tr>
 <tr class="memdesc:a7e5b93fbb42fba16461e59849d7370df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service with the given intercept address.  <a href="zitilib_8h.html#a7e5b93fbb42fba16461e59849d7370df">More...</a><br /></td></tr>
 <tr class="separator:a7e5b93fbb42fba16461e59849d7370df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdee5ee8a1ab9c30660889f2ea8a492d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#abdee5ee8a1ab9c30660889f2ea8a492d">Ziti_bind</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service)</td></tr>
+<tr class="memdesc:abdee5ee8a1ab9c30660889f2ea8a492d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind socket to a Ziti service.  <a href="zitilib_8h.html#abdee5ee8a1ab9c30660889f2ea8a492d">More...</a><br /></td></tr>
+<tr class="separator:abdee5ee8a1ab9c30660889f2ea8a492d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a4307d0e32e7bcdd4f46e3c70cfae59"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a5a4307d0e32e7bcdd4f46e3c70cfae59">Ziti_bind_addr</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, const char *host, unsigned int port)</td></tr>
+<tr class="memdesc:a5a4307d0e32e7bcdd4f46e3c70cfae59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bind socket to a Ziti service with the given intercept address.  <a href="zitilib_8h.html#a5a4307d0e32e7bcdd4f46e3c70cfae59">More...</a><br /></td></tr>
+<tr class="separator:a5a4307d0e32e7bcdd4f46e3c70cfae59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad844181a784a9cc2289f49b8b2461f31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">Ziti_listen</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, int backlog)</td></tr>
+<tr class="memdesc:ad844181a784a9cc2289f49b8b2461f31"><td class="mdescLeft">&#160;</td><td class="mdescRight">marks the [socket] as a socket able to accept incoming connections  <a href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">More...</a><br /></td></tr>
+<tr class="separator:ad844181a784a9cc2289f49b8b2461f31"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a24eff578231bb9d504360f35d1f304f7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a24eff578231bb9d504360f35d1f304f7">Ziti_accept</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket)</td></tr>
+<tr class="memdesc:a24eff578231bb9d504360f35d1f304f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">accept a client Ziti connection as a socket  <a href="zitilib_8h.html#a24eff578231bb9d504360f35d1f304f7">More...</a><br /></td></tr>
+<tr class="separator:a24eff578231bb9d504360f35d1f304f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab18537f49af147f645d08d2cc0965572"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a> (void)</td></tr>
 <tr class="memdesc:ab18537f49af147f645d08d2cc0965572"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti library.  <a href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">More...</a><br /></td></tr>
 <tr class="separator:ab18537f49af147f645d08d2cc0965572"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +169,128 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a24eff578231bb9d504360f35d1f304f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24eff578231bb9d504360f35d1f304f7">&#9670;&nbsp;</a></span>Ziti_accept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> Ziti_accept </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>accept a client Ziti connection as a socket </p>
+<p>Extracts the first [ziti_connection] from pending queue, accepts it, and opens a new socket fd for it.</p>
+<p>If no pending connection requests are present, behavior depends on whether [socket] is marked non-blocking.</p><ul>
+<li>marked as non-blocking: fails with error code EAGAIN or EWOULDBLOCK.</li>
+<li>not marked as non-blocking: blocks until a connection request is present.</li>
+</ul>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>socket created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>], bound to a service with [<a class="el" href="zitilib_8h.html#abdee5ee8a1ab9c30660889f2ea8a492d" title="Bind socket to a Ziti service.">Ziti_bind()</a>] or [<a class="el" href="zitilib_8h.html#a5a4307d0e32e7bcdd4f46e3c70cfae59" title="Bind socket to a Ziti service with the given intercept address.">Ziti_bind_addr()</a>], and is listening after [<a class="el" href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31" title="marks the [socket] as a socket able to accept incoming connections">Ziti_listen()</a>] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>on success returns a file descriptor for the accepted connection. on error -1 is returned, use [<a class="el" href="zitilib_8h.html#a52be219ac8f75cb0f7b79ec2ec673097" title="return Ziti error code for last failed operation.">Ziti_last_error()</a>] to get actual error code. </dd></dl>
+
+</div>
+</div>
+<a id="abdee5ee8a1ab9c30660889f2ea8a492d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdee5ee8a1ab9c30660889f2ea8a492d">&#9670;&nbsp;</a></span>Ziti_bind()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_bind </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>service</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind socket to a Ziti service. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
+    <tr><td class="paramname">ztx</td><td>Ziti context </td></tr>
+    <tr><td class="paramname">service</td><td>service name provided by [ztx] </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, negative error code on failure </dd></dl>
+
+</div>
+</div>
+<a id="a5a4307d0e32e7bcdd4f46e3c70cfae59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a4307d0e32e7bcdd4f46e3c70cfae59">&#9670;&nbsp;</a></span>Ziti_bind_addr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_bind_addr </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>host</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Bind socket to a Ziti service with the given intercept address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>socket handle created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] </td></tr>
+    <tr><td class="paramname">host</td><td>target hostname </td></tr>
+    <tr><td class="paramname">port</td><td>target port </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
 <a id="a6f5e93e2ce4a8acb1bfe3def074d4fff"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6f5e93e2ce4a8acb1bfe3def074d4fff">&#9670;&nbsp;</a></span>Ziti_connect()</h2>
 
@@ -198,7 +332,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>0 on sucess, negative error code on failure </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, negative error code on failure </dd></dl>
 
 </div>
 </div>
@@ -366,6 +500,44 @@ Functions</h2></td></tr>
 
 <p>Shutdown Ziti library. </p>
 <p>All loaded contexts are shutdown and background thread is terminated. </p>
+
+</div>
+</div>
+<a id="ad844181a784a9cc2289f49b8b2461f31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad844181a784a9cc2289f49b8b2461f31">&#9670;&nbsp;</a></span>Ziti_listen()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_listen </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramname"><em>socket</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>backlog</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>marks the [socket] as a socket able to accept incoming connections </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td>a file descriptor created with [<a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185" title="creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service">Ziti_socket()</a>] and bound to a service with [Ziti_bind] or [Ziti_bind_addr] </td></tr>
+    <tr><td class="paramname">backlog</td><td>maximum size of the queue of pending connections. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>On success, 0 is returned. On error -1, is returned and [<a class="el" href="zitilib_8h.html#a52be219ac8f75cb0f7b79ec2ec673097" title="return Ziti error code for last failed operation.">Ziti_last_error()</a>] is set to actual code. </dd></dl>
 
 </div>
 </div>
