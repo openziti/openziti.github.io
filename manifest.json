@@ -2676,6 +2676,65 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/services/after-openziti.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/services/after-openziti.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/services/before-openziti.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/services/before-openziti.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidYamlHeader"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "ziti/quickstarts/services/host-access.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/quickstarts/services/host-access.html",
+          "hash": "/IqleRnydAxWH1/5Utgppg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/services/private-access-aws.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/services/private-access-aws.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti/quickstarts/services/zac-step1.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/quickstarts/services/zac-step1.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "ziti/quickstarts/zac/installation.md",
       "output": {
@@ -2784,7 +2843,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "t71E8p+WlFCCAgdxFv8bYA=="
+          "hash": "JXsM2sswIWRNeIlTei6poQ=="
         }
       },
       "is_incremental": false,
@@ -2805,7 +2864,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 112,
+          "total_file_count": 113,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
