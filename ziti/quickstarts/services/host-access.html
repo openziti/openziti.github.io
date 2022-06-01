@@ -162,7 +162,9 @@ another tunneler nor will you need to create another identity.</p>
 <ol>
 <li>Create an identity for the HTTP client and assign an attribute &quot;http-clients&quot;. We&#39;ll use this attribute when authorizing the clients to
 access the HTTP service</li>
-<li>Create an identity for the HTTP server if you are not using an edge-router with the tunneling option enabled (see below).</li>
+<li>Create an identity for the HTTP server if you are not using an edge-router with the tunneling option enabled (see below). Also note 
+that if you are using the docker-compose quickstart or just plan to use an edge-router with tunneling enabled you can also skip this 
+step.</li>
 <li>Create an <a href="../../config-store/overview.html">intercept.v1 config</a>. This config is used to instruct the client-side tunneler how 
 to correctly intercept the targeted traffic and put it onto the overlay.</li>
 <li>Create a <a href="../../config-store/overview.html">host.v1 config</a>. This config is used instruct the server-side tunneler how to offload the 
