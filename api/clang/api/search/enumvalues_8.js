@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['tag_5fbool_967',['tag_bool',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba4c9655803f1e1b7abd706b089f55de33',1,'model_support.h']]],
-  ['tag_5fnull_968',['tag_null',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba82216cafef31978dcf1cf5f75740a732',1,'model_support.h']]],
-  ['tag_5fnumber_969',['tag_number',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32bae5b80aa9c6fa2de13f57b5b3a9ebe65f',1,'model_support.h']]],
-  ['tag_5fstring_970',['tag_string',['../model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba9c763104828a6943f006ba5d5400e13e',1,'model_support.h']]],
-  ['trace_971',['TRACE',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e',1,'ziti_log.h']]]
+  ['precedence_5fdefault_1028',['PRECEDENCE_DEFAULT',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e',1,'ziti.h']]],
+  ['precedence_5ffailed_1029',['PRECEDENCE_FAILED',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395',1,'ziti.h']]],
+  ['precedence_5frequired_1030',['PRECEDENCE_REQUIRED',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988',1,'ziti.h']]],
+  ['ptr_5fmod_1031',['ptr_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa8bbbe230f88eca0f864aa639d50f2400',1,'model_support.h']]]
 ];

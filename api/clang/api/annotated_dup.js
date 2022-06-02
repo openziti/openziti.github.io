@@ -1,6 +1,7 @@
 var annotated_dup =
 [
     [ "field_meta", "structfield__meta.html", "structfield__meta" ],
+    [ "model_list", "structmodel__list.html", "structmodel__list" ],
     [ "model_map", "structmodel__map.html", "structmodel__map" ],
     [ "tag", "structtag.html", "structtag" ],
     [ "type_meta", "structtype__meta.html", "structtype__meta" ],

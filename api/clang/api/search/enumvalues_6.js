@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['none_961',['NONE',['../ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ac157bdf0b85a40d2619cbc8bc1ae5fe2',1,'ziti_log.h']]],
-  ['none_5fmod_962',['none_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa20e9703a4c7bc3891bde8f453426b7a0',1,'model_support.h']]]
+  ['map_5fmod_1024',['map_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaae0b127fa8f29cceaddb1de5ce95811e3',1,'model_support.h']]],
+  ['mma_5f1m_1025',['MMA_1m',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32ae9ca7ee6a8d824d8271d64faf2a6c39a',1,'enums.h']]]
 ];

@@ -18,6 +18,7 @@ var model__support_8h =
     [ "IMPL_ENUM", "model__support_8h.html#adbb21f355e3b5c477a44211a0e11bfdf", null ],
     [ "IMPL_MODEL", "model__support_8h.html#a12dbdf00256ac0d2bdaf8d40468cdb55", null ],
     [ "IMPL_MODEL_FUNCS", "model__support_8h.html#ae75cd390c62ab32405b6e3288f68974a", null ],
+    [ "list", "model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3", null ],
     [ "map", "model__support_8h.html#a055b31ece53643333de2067163e03e6f", null ],
     [ "mk_enum", "model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2", null ],
     [ "MODEL_API", "model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4", null ],
@@ -40,7 +41,8 @@ var model__support_8h =
       [ "none_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa20e9703a4c7bc3891bde8f453426b7a0", null ],
       [ "ptr_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa8bbbe230f88eca0f864aa639d50f2400", null ],
       [ "array_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa576f2092ed4c0726c3eb8516a3fa3832", null ],
-      [ "map_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaae0b127fa8f29cceaddb1de5ce95811e3", null ]
+      [ "map_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaae0b127fa8f29cceaddb1de5ce95811e3", null ],
+      [ "list_mod", "model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa496b7fd3f601ebb4bdc7a9cc4070b1db", null ]
     ] ],
     [ "tag_type", "model__support_8h.html#ae92759e42a0376cf8369ee6be616a32b", [
       [ "tag_null", "model__support_8h.html#ae92759e42a0376cf8369ee6be616a32ba82216cafef31978dcf1cf5f75740a732", null ],
@@ -62,6 +64,7 @@ var model__support_8h =
     [ "model_map_compare", "model__support_8h.html#a9aeb7985b66eea70c77882fcaa83248f", null ],
     [ "model_parse", "model__support_8h.html#abc01cd9e53791bfe2c1f23f52d875af9", null ],
     [ "model_parse_array", "model__support_8h.html#ac5e80917106862cdea7729c18e125c27", null ],
+    [ "model_parse_list", "model__support_8h.html#ad1b3fa349c1be1e98e46e17f5c0bf30f", null ],
     [ "model_to_json", "model__support_8h.html#a563f68506b4a08c1141562fd16a72f1d", null ],
     [ "model_to_json_r", "model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d", null ],
     [ "parse_enum", "model__support_8h.html#a7f248dc988e3f8ef0e5c1b47c083439e", null ]
