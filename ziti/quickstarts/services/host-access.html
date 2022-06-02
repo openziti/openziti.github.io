@@ -155,7 +155,22 @@ we&#39;ll create an identity for this tunneller and use the identity to access t
 <div class="NOTE"><h5>Note</h5><p>If you used the docker-compose quickstart the &quot;private&quot; edge routers are configured as tunnelers and will not require you to deploy 
 another tunneler nor will you need to create another identity.</p>
 </div>
-<hr>
+<h3 id="prerequisite---cli">Prerequisite - CLI</h3>
+<p>If you plan to use the <code>ziti</code> CLI tool, you will either need to download and get the <code>ziti</code> executable on your path. If you have 
+followed a quickstart, this will have been done for you and the executable will be located in <code>~/.ziti/quickstart/$(hostname)/ziti-bin/</code>.
+Also, the .env file the quickstart emits can be used to put this folder on your path by simply sourcing that file. For example, if you
+followed either the <a href="../network/local-no-docker.html">Local - No Docker</a> or 
+<a href="../network/hosted.html">Host Ziti Anywhere</a> quickstart, you should have a file that can be sourced. Here is an example of 
+my personal &quot;Local - No Docker&quot; result when sourcing that file:</p>
+<pre><code class="lang-text">$ source ~/.ziti/quickstart/$(hostname)/$(hostname).env
+
+adding /home/cd/.ziti/quickstart/sg3/ziti-bin/ziti-v0.25.6 to the path
+</code></pre><p>If you are using a docker-based example you can exec into the controller where the <code>ziti</code> CLI tool will be available and this file will 
+be sourced for you as well. Here&#39;s an example when I use docker to exec into my controller locally:</p>
+<pre><code class="lang-text">$ docker exec -it docker_ziti-controller_1 bash
+
+adding /openziti/ziti-bin to the path
+</code></pre><hr>
 <h3 id="configuring-the-overlay---overview">Configuring the Overlay - Overview</h3>
 <p>With our overlay network ready and with two tunneling applications deployed and ready to be used, we can start to configure our solution.</p>
 <p>Here is an overview of the steps we will follow:</p>
@@ -193,8 +208,13 @@ name of the container running the HTTP server.</p>
 <p>Note that step 7 below requires you to have set the variable named <code>http_server_id</code>. All of the quickstarts provision an edge-router 
 with the tunneler option (<code>-t</code>) enabled. This means that edge-router is configured to serve as a tunneller. Run <code>ziti edge list 
 identities</code> to find the name of the identity associated to the router.</p>
-<pre><code class="lang-bash"># login to your controller
-ziti edge login ${ZITI_EDGE_CONTROLLER}:${ZITI_PORT}
+<pre><code class="lang-bash"># login to your controller - replace the host/port with the correct value
+ziti edge login localhost:1280
+
+# optional login: 
+# if you&#39;re using docker and have exec&#39;ed into your controller using docker you should be able to run the alias `zitiLogin` to login
+# optional login:
+# if you&#39;ve sourced the .env file from a quickstart you should be able to run the alias `zitiLogin` to login
 
 # 1. Create an identity for the HTTP client and assign an attribute &quot;http-clients&quot;. We&#39;ll use this attribute when authorizing the clients to
 #  access the HTTP service
