@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_5fwriter_956',['log_writer',['../ziti__log_8h.html#abb8eb89b150e6f07672378105cf1324d',1,'ziti_log.h']]]
+  ['json_998',['json',['../model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d',1,'model_support.h']]]
 ];

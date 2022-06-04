@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['string_959',['string',['../model__support_8h.html#a4505c08c065b48840a30eedd9845cce2',1,'model_support.h']]],
-  ['string_5farray_960',['string_array',['../model__support_8h.html#af3741b4b338febbb5badb45e710c600a',1,'model_support.h']]],
-  ['string_5fbuf_5ft_961',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]]
+  ['model_5flist_5fiter_1000',['model_list_iter',['../model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c',1,'model_collections.h']]],
+  ['model_5fmap_5fiter_1001',['model_map_iter',['../model__collections_8h.html#a7037b87ab62417854014f25eeb714086',1,'model_collections.h']]]
 ];
