@@ -191,7 +191,7 @@
 
 <p>An SDK for accessing Ziti from macOS and iOS applications using the Swift programming language.</p>
 
-<p>This SDK provides a Swift-friendly wrapper of the <a href="https://openziti.github.io/api/clang/api/index.html">Ziti C SDK</a>, an implementation of <code>URLProtocol</code> for intercepting HTTP and HTTPS traffic, and examples of using the SDK in an application.</p>
+<p>This SDK provides a Swift-friendly wrapper of the <strong>Ziti Tunnel C SDK</strong>, an implementation of <code>URLProtocol</code> for intercepting HTTP and HTTPS traffic, and examples of using the SDK in an application.</p>
 <h1 id='usage' class='heading'>Usage</h1>
 
 <p>The <code><a href="Classes/Ziti.html">Ziti</a></code> class is the main entry point for accessing Ziti networks. An instance of <code><a href="Classes/Ziti.html">Ziti</a></code> requires a <code><a href="Classes/ZitiIdentity.html">ZitiIdentity</a></code> at time of initialization.</p>
@@ -352,7 +352,7 @@ if (ziti != NULL) {
 <h2 id='via-code-cziti-framework-code' class='heading'>Via <code>CZiti.framework</code></h2>
 
 <ul>
-<li>Obtain <code>CZiti.framework</code> following the build steps below or by downloading from <a href="https://netfoundry.jfrog.io/artifactory/ziti-sdk-swift/">Artifactory</a></li>
+<li>Obtain <code>CZiti.framework</code> following the build steps below or by downloading from <a href="https://github.com/openziti/ziti-sdk-swift/releases">GitHub Releases</a></li>
 <li>Drag the appropriate <code>CZiti.framework</code> into your project, selecting &ldquo;Copy items if needed&rdquo;, &ldquo;Create groups&rdquo;, and your target checked under &ldquo;Add to targets:&rdquo;.</li>
 <li>Ensure the framework is shown under <strong>General - Frameworks, Libraries, and Embedded Content</strong>. If not present, click the &ldquo;+&rdquo; button to add it manually.  The &ldquo;Embedded&rdquo; entry should be set to &ldquo;Do Not Embed&rdquo;.</li>
 <li>Ensure the framework is shown under <strong>Build Phases - Link Binary with Libraries</strong>.  The &ldquo;Status&rdquo; entry should be set to &ldquo;Required&rdquo;</li>
@@ -401,10 +401,10 @@ ORGANIZATION_PREFIX = ...
 
 <ul>
 <li><code>xcodebuild</code> used to build <code>CZiti-*</code> schemes in <code>CZiti.xcodeproj</code>, avaialble as part of your <code>Xcode</code> installation</li>
-<li><code>cmake</code> used for building the <strong>Ziti C SDK</strong> dependency.  (Can be installed via <code>brew install cmake</code>)</li>
-<li><code>ninja</code> also used for building the <strong>Ziti C SDK</strong>. (Can be installed via <code>brew install ninja</code>)</li>
+<li><code>cmake</code> used for building the <strong>Ziti Tunnel C SDK</strong> dependency.  (Can be installed via <code>brew install cmake</code>)</li>
+<li><code>ninja</code> also used for building the <strong>Ziti Tunnel C SDK</strong>. (Can be installed via <code>brew install ninja</code>)</li>
 </ul>
-<pre class="highlight shell"><code><span class="gp">$ </span>git clone --recurse-submodules git@github.com:openziti/ziti-sdk-swift.git
+<pre class="highlight shell"><code><span class="gp">$ </span>git clone --recurse-submodules https://github.com/openziti/ziti-sdk-swift.git
 <span class="gp">$ </span><span class="nb">cd </span>ziti-sdk-swift
 <span class="gp">$ </span>/bin/sh build_all.sh
 </code></pre>
@@ -418,25 +418,31 @@ ORGANIZATION_PREFIX = ...
 <p>Tthe resultant <code>CZiti.framework</code> is available in the approprate sub-directory of <code>./dist</code>, and include <code>CZiti-Swift.h</code> (needed to use the framework from <strong>Objective-C</strong> projects).</p>
 <h2 id='build-manually' class='heading'>Build Manually</h2>
 
-<p>The project depends on the <strong>Ziti C SDK</strong>, which is built directly into the  library.  It is maintained as a submodule at <code>./deps/ziti-sdk-c</code>.  This project expects builds to be built in <code>./deps/ziti-sdk-c/build-macosx-x86_64</code> for macOS and <code>./deps/ziti-sdk-c/build-iphoneos-arm64</code> for iOS (or <code>build-iphonesimulator-x86_64</code> for the simulator).  See also the build instructions in the <a href="https://github.com/openziti/ziti-sdk-c/blob/master/building.md"><code>ziti-sdk-c</code></a> repository.</p>
-<pre class="highlight plaintext"><code>$ git clone git@github.com:openziti/ziti-sdk-swift.git
+<p>The project depends on the <strong>Ziti Tunnel C SDK</strong>, which is built directly into the  library.  It is maintained as a submodule at <code>./deps/ziti-tunnel-sdk-c</code>.  This project expects builds to be built in <code>./deps/ziti-tunnel-sdk-c/build-macosx-x86_64</code> and <code>./deps/ziti-tunnel-sdk-c/build-macosx-arm64</code> for macOS and <code>./deps/ziti-sdk-c/build-iphoneos-arm64</code> for iOS (or <code>build-iphonesimulator-x86_64</code> for the simulator). </p>
+
+<p>Note that when building for macOS the instructions below assume you are running on an x86_64 machine when building for x86_64.</p>
+<pre class="highlight plaintext"><code>$ git clone https://github.com/openziti/ziti-sdk-swift.git
 $ cd ziti-sdk-swift
 $ git submodule update --init --recursive
-$ cd deps/ziti-sdk-c
+$ cd deps/ziti-tunnel-sdk-c
 $ mkdir build-macosx-x86_64
 $ cd build-macosx-x86_64
-$ cmake .. &amp;&amp; make
+$ cmake -DMBEDTLS_FATAL_WARNINGS:BOOL=OFF -DEXCLUDE_PROGRAMS=ON .. &amp;&amp; make
+$ cd ..
+$ mkdir build-macosx-arm64
+$ cd build-macosx-arm64
+$ cmake -DMBEDTLS_FATAL_WARNINGS:BOOL=OFF -DEXCLUDE_PROGRAMS=ON -DCMAKE_TOOLCHAIN_FILE=../../toolchains/macOS-arm64.cmake .. &amp;&amp; make
 $ cd ..
 $ mkdir build-iphoneos-arm64
 $ cd build-iphoneos-arm64
-$ cmake .. -DCMAKE_TOOLCHAIN_FILE=../toolchains/iOS-arm64.cmake &amp;&amp; make
+$ cmake .. -DMBEDTLS_FATAL_WARNINGS:BOOL=OFF -DEXCLUDE_PROGRAMS=ON -DCMAKE_TOOLCHAIN_FILE=../../toolchains/iOS-arm64.cmake &amp;&amp; make
 $ cd ..
 $ mkdir build-iphonesimulator-X86_64
 $ cd build-iphonesimulator-X86_64
-$ cmake .. -DCMAKE_TOOLCHAIN_FILE=../toolchains/iOS-x86_64.cmake &amp;&amp; make
+$ cmake .. -DMBEDTLS_FATAL_WARNINGS:BOOL=OFF -DEXCLUDE_PROGRAMS=ON -DCMAKE_TOOLCHAIN_FILE=../../toolchains/iOS-x86_64.cmake &amp;&amp; make
 </code></pre>
 
-<p>Once the C SDK is built, use <code>CZiti.xcodeproj</code> to build the libraries and examples.</p>
+<p>Once the <strong>Ziti Tunnel C SDK</strong> is built, use <code>CZiti.xcodeproj</code> to build the libraries and examples.</p>
 
 <p>The <a href="make_dist.sh"><code>make_dist.sh</code></a> script will package the static library, swiftmodule, and <strong>Objective-C</strong> header file (<code>CZiti-Swift.h</code>) into static frameworks found under the <code>./dist</code> directory.</p>
 <h1 id='getting-help' class='heading'>Getting Help</h1>
@@ -450,12 +456,12 @@ for tracking bugs and feature requests.</p>
 <li>Participate in discussion on <a href="https://openziti.discourse.group/">Discourse</a></li>
 </ul>
 
-<p>Copyright&copy; 2020. NetFoundry, Inc.</p>
+<p>Copyright NetFoundry Inc.</p>
 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-05-23)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-06-04)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
