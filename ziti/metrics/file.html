@@ -1,0 +1,382 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>File Reporter | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="File Reporter | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://twitter.com/openziti">
+                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
+                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default" name="new">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+          <div style="display:flex; align-items: center; justify-content: center; flex-direction:row; position: relative; width: 100%; text-align: center;     background: rgb(0,104,247);
+            background: linear-gradient(90deg, rgba(0,104,247,1) 0%, rgba(222,14,91,1) 100%);">
+            <span style="margin-top: 5px; color: white; margin-right: 10px; height:25px">Star us on GitHub</span>
+            <span style="margin-top: 5px;"><a class="github-button" href="https://github.com/openziti/ziti" data-icon="octicon-star" data-show-count="true" aria-label="Star openziti/ziti on GitHub">Star</a></span>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="file-reporter">File Reporter</h1>
+
+<p>The Ziti Controller event system can write metrics to a file for direct viewing or post-processing into a metrics system of your choice.</p>
+<h2 id="ziti-configuration">Ziti Configuration</h2>
+<p>There are two independent configurations that need to be set up for metric event reporting to work:</p>
+<ol>
+<li><strong>Report Interval:</strong> The controller and routers need to have a metric reporting interval set.  The interval determines how often metrics will be sent to the controller and possibly written out to file</li>
+<li><strong>Event Subscription:</strong> The subscription is configured in the controller, and determines which of the reported metrics are written.</li>
+</ol>
+<h3 id="metrics-reporting">Metrics Reporting</h3>
+<p>The reporting interval is defined in the <code>metrics.reportInterval</code> property. While the controller and each router can have a different reporting interval, we suggest that you set them all the same to make lining up metrics across the cluster easier.</p>
+<p>Example:</p>
+<pre><code>metrics:
+  reportInterval: 20s
+</code></pre><p>Routers support an additional configuration parameter <code>MessageQueueSize</code> which is the number of unsent metrics messages that can sit in the router metrics queue before metrics gathering is paused.</p>
+<p>Example:</p>
+<pre><code>metrics:
+  reportInterval: 20s
+  messageQueueSize: 20  // Default 10
+</code></pre><h3 id="metrics-writing">Metrics Writing</h3>
+<p>Writing of metrics is broken into two pieces:</p>
+<ol>
+<li><strong>subscription:</strong> Which metrics will be written</li>
+<li><strong>hander:</strong> how the metrics will be written</li>
+</ol>
+<h4 id="metrics-subscription">Metrics Subscription</h4>
+<p>The metrics subscription defines which metrics will be written and how they will be written. </p>
+<p>There are two parts to a metrics event reporter
+The subscription has three components</p>
+<ol>
+<li><strong>sourceFilter:</strong> Which components to write metrics for. This is a regular expression. <ul>
+<li><strong>ctrl_client:</strong> Special marker for the controller</li>
+<li><strong>Router ID:</strong> Get metrics for one and only one router</li>
+<li><strong>.*:</strong> Get metrics from the controller and all routers</li>
+</ul>
+</li>
+<li><strong>metricFilter:</strong> Which metrics to report.  This is a regular exporession<ul>
+<li><strong>.*pool.*:</strong> Report only pool metrics</li>
+<li><strong>.*:</strong> Report all metrics</li>
+</ul>
+</li>
+</ol>
+<h5 id="example">Example:</h5>
+<pre><code>events:
+  allControllerMetrics:
+    subscriptions:
+      - type: metrics
+        sourceFilter: ctrl_client
+        metricFilter: .*
+  justEdgeRouterPoolMetrics:
+    subscriptions:
+      - type: metrics
+        sourceFilter: .*
+        metricFilter: .*pool.*
+</code></pre><h4 id="metrics-handling">Metrics Handling</h4>
+<p>The metrics handler defined how metrics are to be written.  It is comprised of:</p>
+<ol>
+<li><strong>type:</strong> The type of handler.  Supported types are:<ul>
+<li><strong>file:</strong> Metrics will be written to a file</li>
+</ul>
+</li>
+<li><strong>maxsizemb:</strong> File rolling - log files will be rolled when they reach this size.  Default size is <code>10mb</code>.</li>
+<li><strong>maxbackups</strong> File rolling - the number of files to keep. Default is <code>0 (unlimited)</code>.</li>
+<li><strong>format:</strong> The format of the metric.  Supported formats are: <code>json</code></li>
+<li><strong>path:</strong> The name of the file to write metrics to</li>
+</ol>
+<h5 id="file-rolling">File Rolling</h5>
+<p>files are rolled when they reach a size of <code>maxsizemb</code>. Files are renamed from <code>name.log</code> to <code>name-iso8601.log</code></p>
+<p>For example, <code>name-2022-06-07T18-50-44.568.log</code></p>
+<h4 id="example-1">Example</h4>
+<p>Write 100mb files, saving 2 of them.</p>
+<pre><code>    handler:
+      type: file
+      format: json
+      maxsizemb: 100
+      maxbackups: 2
+      path: /tmp/controller-metrics.log
+</code></pre><h3 id="puting-it-all-together">Puting it all together</h3>
+<p>Controller configuration file:</p>
+<pre><code>metrics:
+  reportInterval: 20s
+
+events:
+  allControllerMetrics:
+    subscriptions:
+      - type: metrics
+        sourceFilter: ctrl_client
+        metricFilter: .*
+    handler:
+      type: file
+      format: json
+      maxsizemb: 50
+      maxbackups: 2
+      path: /tmp/controller-metrics.log
+
+  justPoolMetrics:
+    subscriptions:
+      - type: metrics
+        sourceFilter: .*
+        metricFilter: .*pool.*
+    handler:
+      type: file
+      format: json
+      maxsizemb: 100
+      maxbackups: 5
+      path: /tmp/router-pool-metrics.log
+</code></pre><p>Router configuration files:</p>
+<pre><code>metrics:
+  reportInterval: 20s
+</code></pre><h1 id="types-of-metrics-reported">Types of Metrics Reported</h1>
+<p>Ziti is instrumenting more code and adding additional metrics all of the time. This section will describe the different types of metrics that ziti reports, not individual metric names.</p>
+<h2 id="intvaluefloatvalue">intValue/floatValue</h2>
+<p>A gauge of a single value.  The value is the current metric value, and can go up and down over time</p>
+<h2 id="histogram">Histogram</h2>
+<p>Standard histogram with:</p>
+<ul>
+<li>min</li>
+<li>max</li>
+<li>mean</li>
+<li>stdev</li>
+<li>variance</li>
+<li>percentiles<ul>
+<li>p50</li>
+<li>p75</li>
+<li>p95</li>
+<li>p99</li>
+<li>p999</li>
+<li>p9999</li>
+</ul>
+</li>
+</ul>
+<h2 id="timer">Timer</h2>
+<p>Timer metric with:</p>
+<ul>
+<li>count</li>
+<li>m1_rate</li>
+<li>m5_rate</li>
+<li>m15_rate</li>
+<li>min</li>
+<li>max</li>
+<li>mean</li>
+<li>std_dev</li>
+<li>variance</li>
+<li>percentiles<ul>
+<li>p50</li>
+<li>p75</li>
+<li>p95</li>
+<li>p99</li>
+<li>p999</li>
+<li>p9999</li>
+</ul>
+</li>
+</ul>
+<h2 id="metric-examples">Metric Examples</h2>
+<h3 id="intvalue">intValue</h3>
+<pre><code>{
+  &quot;metric_type&quot;: &quot;intValue&quot;,
+  &quot;namespace&quot;: &quot;metrics&quot;,
+  &quot;source_id&quot;: &quot;ctrl_client&quot;,
+  &quot;version&quot;: 2,
+  &quot;timestamp&quot;: {
+    &quot;seconds&quot;: 1654625684,
+    &quot;nanos&quot;: 479708609
+  },
+  &quot;metric&quot;: &quot;pool.listener.mgmt.worker_count&quot;,
+  &quot;metrics&quot;: {
+    &quot;value&quot;: 1
+  },
+  &quot;source_event_id&quot;: &quot;acb85925-0e17-4ca0-90cb-9a2498b33bc8&quot;
+}
+</code></pre><h3 id="histogram">Histogram</h3>
+<pre><code>{
+  &quot;metric_type&quot;: &quot;histogram&quot;,
+  &quot;namespace&quot;: &quot;metrics&quot;,
+  &quot;source_id&quot;: &quot;ctrl_client&quot;,
+  &quot;source_entity_id&quot;: &quot;xpw7BEDAk&quot;,
+  &quot;version&quot;: 2,
+  &quot;timestamp&quot;: {
+    &quot;seconds&quot;: 1654625684,
+    &quot;nanos&quot;: 479708609
+  },
+  &quot;metric&quot;: &quot;ctrl.queue_time&quot;,
+  &quot;metrics&quot;: {
+    &quot;count&quot;: 57,
+    &quot;max&quot;: 21647,
+    &quot;mean&quot;: 15266.508771929824,
+    &quot;min&quot;: 5753,
+    &quot;p50&quot;: 15670,
+    &quot;p75&quot;: 16558.5,
+    &quot;p95&quot;: 18362.699999999997,
+    &quot;p99&quot;: 21647,
+    &quot;p999&quot;: 21647,
+    &quot;p9999&quot;: 21647,
+    &quot;std_dev&quot;: 2604.8795245927113,
+    &quot;variance&quot;: 6785397.337642349
+  },
+  &quot;source_event_id&quot;: &quot;acb85925-0e17-4ca0-90cb-9a2498b33bc8&quot;
+}
+</code></pre><h3 id="timer">Timer</h3>
+<pre><code>{
+  &quot;metric_type&quot;: &quot;timer&quot;,
+  &quot;namespace&quot;: &quot;metrics&quot;,
+  &quot;source_id&quot;: &quot;ctrl_client&quot;,
+  &quot;version&quot;: 2,
+  &quot;timestamp&quot;: {
+    &quot;seconds&quot;: 1654625684,
+    &quot;nanos&quot;: 479708609
+  },
+  &quot;metric&quot;: &quot;api.session.enforcer.run&quot;,
+  &quot;metrics&quot;: {
+    &quot;count&quot;: 11,
+    &quot;m15_rate&quot;: 0.2,
+    &quot;m1_rate&quot;: 0.2,
+    &quot;m5_rate&quot;: 0.2,
+    &quot;max&quot;: 6842849,
+    &quot;mean&quot;: 1096126.3636363635,
+    &quot;mean_rate&quot;: 0.20374652060865114,
+    &quot;min&quot;: 254514,
+    &quot;p50&quot;: 335348,
+    &quot;p75&quot;: 1212318,
+    &quot;p95&quot;: 6842849,
+    &quot;p99&quot;: 6842849,
+    &quot;p999&quot;: 6842849,
+    &quot;p9999&quot;: 6842849,
+    &quot;std_dev&quot;: 1858257.4031879376,
+    &quot;variance&quot;: 3453120576502.777
+  },
+  &quot;source_event_id&quot;: &quot;acb85925-0e17-4ca0-90cb-9a2498b33bc8&quot;
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/metrics/file.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©NetFoundry Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

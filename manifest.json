@@ -2378,6 +2378,66 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/file.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/file.html",
+          "hash": "KSvpXQmzjyTD2f2e7K0Y7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/inspect.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/inspect.html",
+          "hash": "IuoHsIdwCRlC3riJoR+J5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/metric-types.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/metric-types.html",
+          "hash": "hjsoHZen66s8qtsK1cstxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/overview.html",
+          "hash": "jRxsKGrGHj+/w0qrXAfsvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/prometheus.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/prometheus.html",
+          "hash": "Bf0wXSlRbHLlLGECVfxDnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/overview.md",
       "output": {
         ".html": {
@@ -2855,7 +2915,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "sJi2piF8cZcxkZLchckMxg=="
+          "hash": "ZpLWCKBCyOWjzzn44CB8IQ=="
         }
       },
       "is_incremental": false,
@@ -2876,7 +2936,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 114,
+          "total_file_count": 119,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
