@@ -286,9 +286,9 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiTunnelCyAcA0bC8Provider_pSg_S4SSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(_:_:_:_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiTunnelCyAcA0bC8Provider_pSg_S4SSgtcfc">init(_:<wbr>_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
+                    <a name="/s:5CZiti10ZitiTunnelCyAcA0bC8Provider_pSg_S3Stcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:_:_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelCyAcA0bC8Provider_pSg_S3Stcfc">init(_:<wbr>_:<wbr>_:<wbr>_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -304,8 +304,7 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">tunnelProvider</span><span class="p">:</span><span class="kt"><a href="../Protocols/ZitiTunnelProvider.html">ZitiTunnelProvider</a></span><span class="p">?,</span>
-            <span class="n">_</span> <span class="nv">ipAddress</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">subnetMask</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span>
-            <span class="n">_</span> <span class="nv">ipDNS</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">ipUpstreamDNS</span><span class="p">:</span><span class="kt">String</span><span class="p">?)</span></code></pre>
+            <span class="n">_</span> <span class="nv">ipAddress</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">subnetMask</span><span class="p">:</span><span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">ipDNS</span><span class="p">:</span><span class="kt">String</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -361,18 +360,6 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                                 </div>
                               </td>
                             </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>upstreamDNS</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>Address for handlig DNS queries that aren&rsquo;t meant to be intercepted.  If <code>nil</code>, such requests are REFUSED</p>
-                                </div>
-                              </td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
@@ -382,9 +369,9 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti10ZitiTunnelC14setUpstreamDnsyySSF"></a>
+                    <a name="/s:5CZiti10ZitiTunnelC14setUpstreamDnsys5Int32VSSF"></a>
                     <a name="//apple_ref/swift/Method/setUpstreamDns(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti10ZitiTunnelC14setUpstreamDnsyySSF">setUpstreamDns(_:<wbr>)</a>
+                    <a class="token" href="#/s:5CZiti10ZitiTunnelC14setUpstreamDnsys5Int32VSSF">setUpstreamDns(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -399,7 +386,7 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUpstreamDns</span><span class="p">(</span><span class="n">_</span> <span class="nv">ipUpstreamDNS</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setUpstreamDns</span><span class="p">(</span><span class="n">_</span> <span class="nv">ipUpstreamDNS</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int32</span></code></pre>
 
                         </div>
                       </div>
@@ -421,6 +408,10 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
                             </tr>
                           </tbody>
                         </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Returns 0 on success</p>
                       </div>
                     </section>
                   </div>
@@ -592,7 +583,7 @@ This is done to allow the <code><a href="../Protocols/ZitiTunnelProvider.html">Z
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-06-07)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-06-10)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
