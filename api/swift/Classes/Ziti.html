@@ -1719,6 +1719,85 @@ this method initializes Ziti for connections using the configured <code><a href=
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:5CZiti4ZitiC9isEnabledSbyF"></a>
+                    <a name="//apple_ref/swift/Method/isEnabled()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC9isEnabledSbyF">isEnabled()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Check if this instance of Ziti is enabled.  This method should only be called from the same thread as the run loop (e.g., as part of a <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> operation), and
+not before <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></code> is triggered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">isEnabled</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Bool indicating if this Ziti instance is enabled, or false if called before <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></code> has been triggered</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti4ZitiC10setEnabledyySbF"></a>
+                    <a name="//apple_ref/swift/Method/setEnabled(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti4ZitiC10setEnabledyySbF">setEnabled(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enable or disable this Ziti instance. This method should only be called from the same thread as the run loop (e.g., as part of a <code><a href="../Classes/Ziti.html#/c:@M@CZiti@objc(cs)Ziti(im)perform:">perform(_:)</a></code> operation), and
+not before <code><a href="../Classes/Ziti.html#/s:5CZiti4ZitiC12InitCallbacka">InitCallback</a></code> is triggered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setEnabled</span><span class="p">(</span><span class="n">_</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>enabled</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Boolean indicating to enable or disable this Zit iinstance</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/c:@M@CZiti@objc(cs)Ziti(im)dump:"></a>
                     <a name="//apple_ref/swift/Method/dump(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/c:@M@CZiti@objc(cs)Ziti(im)dump:">dump(_:<wbr>)</a>
@@ -2381,7 +2460,7 @@ the operation on the Ziti thread</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-06-13)</p>
+          <p>&copy; 2022 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2022-06-18)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
