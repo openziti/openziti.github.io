@@ -203,9 +203,8 @@ sure you add a host entry. In the docker-compose example you will want/need host
 <h3 id="testing">Testing</h3>
 <p>Now that we have used <code>docker-compose</code> to deploy a relatively complicated network, we can start testing it out to make
 sure everything is in place and looks correct. Let&#39;s try it out.</p>
-<p>To test, we will use <code>docker</code> and exec into the running controller. Since we&#39;ve used <code>docker-compose</code>, we know the name
-that will be created (you could use <code>docker ps</code> to find it if you need). Let&#39;s exec into the controller with:</p>
-<pre><code class="lang-bash">docker exec -it docker_ziti-controller_1 /bin/bash
+<p>To test, we will <code>docker-compose exe</code> into the running controller. </p>
+<pre><code class="lang-bash">docker-compose exec ziti-controller bash
 </code></pre><p>Once exec&#39;ed into the controller, the <code>ziti</code> CLI will be added to your PATH for you. There is also the <code>zitiLogin</code>
 alias to make it easy for you to authenticate to the Ziti controller. Run <code>zitiLogin</code> now and ensure you&#39;re 
 authenticated.</p>
@@ -248,7 +247,7 @@ PING ziti-private-blue (172.28.0.6): 56 data bytes
 round-trip min/avg/max/stddev = 0.633/0.633/0.633/0.000 ms
 </code></pre><h3 id="test---network-connectivity-failure">Test - Network Connectivity Failure</h3>
 <p>Now let&#39;s exit the Ziti controller and instead attach to the private blue router by running this command:
-<code>docker exec -it docker_ziti-private-blue_1 /bin/bash</code>.  Once attached to the blue router we&#39;ll verify that we cannot
+<code>docker-compose exec ziti-private-blue bash</code>.  Once attached to the blue router we&#39;ll verify that we cannot
 connect to the private red router:</p>
 <pre><code class="lang-bash">ziti@e610d6b44166:/openziti$ ping ziti-private-red -c 1
 ping: unknown host
