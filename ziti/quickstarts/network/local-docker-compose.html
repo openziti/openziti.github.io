@@ -203,7 +203,7 @@ sure you add a host entry. In the docker-compose example you will want/need host
 <h3 id="testing">Testing</h3>
 <p>Now that we have used <code>docker-compose</code> to deploy a relatively complicated network, we can start testing it out to make
 sure everything is in place and looks correct. Let&#39;s try it out.</p>
-<p>To test, we will <code>docker-compose exe</code> into the running controller. </p>
+<p>To test, we will <code>docker-compose exec</code> into the running controller. </p>
 <pre><code class="lang-bash">docker-compose exec ziti-controller bash
 </code></pre><p>Once exec&#39;ed into the controller, the <code>ziti</code> CLI will be added to your PATH for you. There is also the <code>zitiLogin</code>
 alias to make it easy for you to authenticate to the Ziti controller. Run <code>zitiLogin</code> now and ensure you&#39;re 
