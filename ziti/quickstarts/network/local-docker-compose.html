@@ -128,20 +128,34 @@ or just make a file in this folder that looks like this:</p>
 <pre><code class="lang-bash">curl -o .env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env
 </code></pre><p>or</p>
 <pre><code class="lang-bash">cat &gt; .env &lt;&lt;DEFAULT_ENV_FILE
+# OpenZiti Variables
 ZITI_IMAGE=openziti/quickstart
 ZITI_VERSION=latest
 ZITI_CONTROLLER_RAWNAME=ziti-controller
 ZITI_EDGE_CONTROLLER_RAWNAME=ziti-edge-controller
+
+## Additional variables to override. 
+#ZITI_EDGE_CONTROLLER_RAWNAME=some.other.name.com
+#ZITI_EDGE_CTRL_ADVERTISED_HOST_PORT=some.other.name.com:1280
+#ZITI_CTRL_ADVERTISED_ADDRESS=some.other.name.com
+#ZITI_EDGE_CONTROLLER_HOSTNAME=some.other.name.com
+#ZITI_CONTROLLER_HOSTNAME=some.other.name.com
+#ZITI_EDGE_CONTROLLER_IP_OVERRIDE=20.20.20.20
 DEFAULT_ENV_FILE
-</code></pre><h2 id="running-via-docker-compose">Running via Docker Compose</h2>
+</code></pre><div class="IMPORTANT"><h5>Important</h5><p>If you are running Void linux, you need to modify the docker-compose file, otherwise the services will not start properly.  To do this, add the following two lines to each service definition.</p>
+<pre><code>   security_opt:
+      - seccomp:unconfined
+</code></pre><p>Please see <a href="https://openziti.discourse.group/t/docker-compose-quickstart-setup-edge-controller-issue/601/10">this discussion</a> for more information</p>
+</div>
+<h2 id="running-via-docker-compose">Running via Docker Compose</h2>
 <p>Once the compose file is downloaded and the <code>.env</code> file exists, you&#39;ll be able to start this network using
 docker-compose just like you can with any other compose file: <code>docker-compose up</code></p>
 <div class="NOTE"><h5>Note</h5><p>Docker compose will name your containers based on the folder you were in when you started them. For me, I&#39;ve made a folder
 named <code>docker</code> so all my containers start with <code>docker_</code>. You can influence how this works by adding
 <code>--project-name docker</code> (or whatever name you like) to your docker-compose up/down commands</p>
 <pre><code class="lang-bash">docker-compose --project-name docker up 
-</code></pre><h3 id="stopping-the-network">Stopping the Network</h3>
-</div>
+</code></pre></div>
+<h3 id="stopping-the-network">Stopping the Network</h3>
 <p>This docker-compose file will generate a volume mount as well as a <strong>two</strong> docker networks. When you issue 
 <code>docker-compose --project-name docker down</code> the volume mapping will not be removed. If you wish to remove the volume, 
 you&#39;ll need to specify the <code>-v</code> flag to the <code>docker-compose</code> command. Leave the <code>-v</code> off your command if you want to just 
@@ -214,22 +228,32 @@ Saving identity &#39;default&#39; to /openziti/ziti-cli.json
 </code></pre><h3 id="test---edge-routers-online">Test - Edge Routers Online</h3>
 <p>Once authenticated, let&#39;s see if all our routers are online by running <code>ziti edge list edge-routers</code>:</p>
 <pre><code class="lang-bash">ziti@724087d30014:/openziti$ ziti edge list edge-routers
-id: BZ.Y7vMdAI    name: ziti-edge-router    isOnline: true    role attributes: {}
-id: NELWwjMd8    name: ziti-private-blue    isOnline: true    role attributes: {}
-id: l9-W7jMf8    name: ziti-fabric-router-br    isOnline: true    role attributes: {}
-id: rqZW7vMdA    name: ziti-edge-router-wss    isOnline: true    role attributes: {}
-id: xmiYwvMf8    name: ziti-private-red    isOnline: true    role attributes: {}
+╭────────────┬───────────────────────┬────────┬───────────────┬──────┬───────────────────────╮
+│ ID         │ NAME                  │ ONLINE │ ALLOW TRANSIT │ COST │ ATTRIBUTES            │
+├────────────┼───────────────────────┼────────┼───────────────┼──────┼───────────────────────┤
+│ C6LbVE7fIc │ ziti-edge-router      │ true   │ true          │    0 │ public                │
+│ GY1pcE78Ic │ ziti-private-blue     │ true   │ true          │    0 │ ziti-private-blue     │
+│ H0UbcE78Tc │ ziti-fabric-router-br │ true   │ true          │    0 │ ziti-fabric-router-br │
+│ KHTAct78Tc │ ziti-private-red      │ true   │ true          │    0 │ ziti-private-red      │
+│ Yblbct7fTc │ ziti-edge-router-wss  │ true   │ true          │    0 │ public                │
+╰────────────┴───────────────────────┴────────┴───────────────┴──────┴───────────────────────╯
+results: 1-5 of 5
 </code></pre><p>We can see all the routers are online - excellent.</p>
 <h3 id="test---edge-router-identites">Test - Edge Router Identites</h3>
 <p>In this compose file, we have used a script that adds an identity for each of our edge routers as well. We can see those
 by running <code>ziti@724087d30014:/openziti$ ziti edge list identities</code>:</p>
 <pre><code class="lang-bash">ziti@724087d30014:/openziti$ ziti edge list identities
-id: BZ.Y7vMdAI    name: ziti-edge-router    type: Router    role attributes: {}
-id: NELWwjMd8    name: ziti-private-blue    type: Router    role attributes: {}
-id: Q4Y-OTcwo    name: Default Admin    type: User    role attributes: {}
-id: l9-W7jMf8    name: ziti-fabric-router-br    type: Router    role attributes: {}
-id: rqZW7vMdA    name: ziti-edge-router-wss    type: Router    role attributes: {}
-id: xmiYwvMf8    name: ziti-private-red    type: Router    role attributes: {}
+╭────────────┬───────────────────────┬────────┬────────────╮
+│ ID         │ NAME                  │ TYPE   │ ATTRIBUTES │
+├────────────┼───────────────────────┼────────┼────────────┤
+│ C6LbVE7fIc │ ziti-edge-router      │ Router │            │
+│ GY1pcE78Ic │ ziti-private-blue     │ Router │            │
+│ H0UbcE78Tc │ ziti-fabric-router-br │ Router │            │
+│ KHTAct78Tc │ ziti-private-red      │ Router │            │
+│ Yblbct7fTc │ ziti-edge-router-wss  │ Router │            │
+│ kkVrSLy.D  │ Default Admin         │ User   │            │
+╰────────────┴───────────────────────┴────────┴────────────╯
+results: 1-6 of 6
 </code></pre><p>Notice there is an identity for every router.</p>
 <h3 id="test---network-connectivity-success">Test - Network Connectivity Success</h3>
 <p>Recall that the controller should be able to contact both the red and blue edge routers. Let&#39;s use ping and verify:</p>
@@ -284,7 +308,7 @@ Hello World
                              `&#39;--.._\..--&#39;&#39;
 &lt;/pre&gt;
 </code></pre><h2 id="install-ziti-admin-console-zac-optional">Install Ziti Admin Console (ZAC) [Optional]</h2>
-<p>Once you have the network up and running, if you want to install the UI management console, the ZAC, <a href="../zac/installation.html">follow along with
+<p>Once you have the network up and running, if you want to install the UI management console, the ZAC, <a href="../zac/installation.html#using-docker-compose">follow along with
 the installation guide</a></p>
 <h2 id="using-the-overlay">Using the Overlay</h2>
 <p>Now you have your zero trust overlay network in place, you probably want to try it out. Head on over to

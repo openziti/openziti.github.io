@@ -194,12 +194,13 @@ behalf. While this makes it very easy to get a basic network setup, it makes reu
 this time.  It&#39;s not difficult to reuse the PKI but you&#39;ll need to do the following:</p>
 <ol>
 <li>Start the network using <code>docker-compose</code> as normal.</li>
-<li>After running, copy the <code>ziti-edge-controller</code> server certificate chain and key from the controller using these commands:
-<code>bash
-docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.key .
-docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.chain.pem .</code></li>
-<li>Once these files are copied out, shut down the running docker-compose <code>docker-compose down</code>. Do NOT remove the volume 
-with <code>-v</code>.</li>
+<li><p>After running, copy the <code>ziti-edge-controller</code> server certificate chain and key from the controller using these commands:</p>
+<pre><code class="lang-bash">docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/keys/ziti-edge-controller-server.key .
+docker cp docker_ziti-controller_1:/openziti/pki/ziti-edge-controller-intermediate/certs/ziti-edge-controller-server.chain.pem .
+</code></pre></li>
+<li><p>Once these files are copied out, shut down the running docker-compose <code>docker-compose down</code>. Do NOT remove the volume 
+with <code>-v</code>.</p>
+</li>
 <li><p>Now add the ZAC configuration lines to the compose file of your choice:</p>
 <pre><code class="lang-bash">  ziti-console:
  image: openziti/zac

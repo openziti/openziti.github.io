@@ -2693,7 +2693,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/local-docker-compose.html",
-          "hash": "mf41y7v1/o5x5Q3lECrMZA=="
+          "hash": "aU2ZCIoJ/KGDJk2fYQ/Qxw=="
         }
       },
       "is_incremental": false,
@@ -2812,7 +2812,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/zac/installation.html",
-          "hash": "MzJ2yITMKIASnvFSb4eaDA=="
+          "hash": "AamWjoYSIPFK03yLIHO1Rw=="
         }
       },
       "is_incremental": false,
