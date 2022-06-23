@@ -6,6 +6,7 @@ var ziti__model_8h =
     [ "ZITI_API_PATH_MODEL", "ziti__model_8h.html#a45fd0415f622ef5bbf180cd6018411d3", null ],
     [ "ZITI_API_VERSIONS_MODEL", "ziti__model_8h.html#ab5384d60df5ee61486b3e4d08ce37a0a", null ],
     [ "ZITI_AUTH_QUERY_MFA_MODEL", "ziti__model_8h.html#a74e498d53b1613d8762f2eb95365bc45", null ],
+    [ "ZITI_CLIENT_CFG_V1", "ziti__model_8h.html#a338dc3359797b4d5588bf25cde0af08b", null ],
     [ "ZITI_CLIENT_CFG_V1_MODEL", "ziti__model_8h.html#aa4bc7ef0bfc26e1681b5c8dba8559bc3", null ],
     [ "ZITI_CONFIG_MODEL", "ziti__model_8h.html#a5789ae69064c0177f9e736cca0f3d275", null ],
     [ "ZITI_HOST_CFG_V1_MODEL", "ziti__model_8h.html#aa8f0befd2e3a978af35257c9adebb161", null ],
