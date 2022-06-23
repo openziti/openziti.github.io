@@ -283,7 +283,7 @@ and a certificate signing request for the Ziti Controller&#39;s built-in certifi
 <li>run <code>ziti</code> :</li>
 </ul>
 <p><strong>Example Usage:</strong></p>
-<pre><code>ziti edge enroll \
+<pre><code class="lang-bash">ziti edge enroll \
     --jwt ${jwt_file} \
     --out ${identity_config_file}
 </code></pre><div class="IMPORTANT"><h5>Important</h5><p>The output from the <code>ziti</code> is a permanent identity configuration file which
@@ -292,7 +292,12 @@ the certificate issued by the Ziti Controller.  This file should not be
 transferred or shared and should not be moved from the machine unless you are
 confident you understand the risks involved in doing so.</p>
 </div>
-<h3 id="3rd-party-ca---one-time-token">3rd Party CA - One Time Token</h3>
+<p><strong>Example Usage for <code>ziti-edge-tunnel</code> CLI</strong></p>
+<pre><code class="lang-bash"># enroll from a token file
+./ziti-edge-tunnel enroll --jwt ./myTunneler.jwt --identity ./myTunneler.json
+</code></pre><pre><code class="lang-bash"># enroll from stdin
+./ziti-edge-tunnel enroll --jwt - --identity ./myTunneler.json &lt; ./myTunneler.jwt
+</code></pre><h3 id="3rd-party-ca---one-time-token">3rd Party CA - One Time Token</h3>
 <p>This process is similar to the One Time Token flow from above. This flow expects that a private key and certificate have
 already been created on or distributed to the machine that is about to enroll and that the certificate presented is
 signed by a <a href="../manage/pki.html#third-party-ca-optional">third party CA</a> already validated in the Ziti Controller.</p>
@@ -303,7 +308,7 @@ signed by a <a href="../manage/pki.html#third-party-ca-optional">third party CA<
 <li>run the <code>ziti-tunneler</code> for your given operating system. Notice you can provide the name of the identity :</li>
 </ul>
 <p><strong>Example Usage:</strong></p>
-<pre><code>ziti edge enroll \
+<pre><code class="lang-bash">ziti edge enroll \
     --cert ${user_certificate} \
     --key ${user_private_key} \
     --jwt ${one_time_jwt_file} \
@@ -323,7 +328,7 @@ imported and verified in the Ziti Controller with the
 can be downloaded from the Ziti Controller from:  <code>${controller_uri}/cas/${id}/jwt</code> where <code>${controller_uri}</code> represents
 the fully qualified address of the Ziti Controller api and <code>${id}</code> represents the identifier for the given third party CA.</p>
 <p><strong>Example Usage:</strong></p>
-<pre><code>ziti edge enroll \
+<pre><code class="lang-bash">ziti edge enroll \
     --cert ${user_certificate} \
     --key ${user_private_key} \
     --jwt ${reusable_ca_jwt_file} \
