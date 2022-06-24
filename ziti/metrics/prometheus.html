@@ -188,7 +188,27 @@
         options: {
           scrapeCert: &quot;/etc/prometheus/prom-client.crt&quot;
         }
-</code></pre><h3 id="prometheus-configuration">Prometheus Configuration</h3>
+</code></pre><h3 id="timestamps">Timestamps</h3>
+<p>OpenZiti can export timestamps in the Prometheus metrics. These timestamps can be helpful to align metrics with application logs if there is any clock skew across the OpenZiti network.</p>
+<p>Timestamps are disabled by default, and can be enabled by setting a the <code>includeTimestamps</code> option to <code>true</code> in the metrics binding:</p>
+<pre><code>web
+  -name: apis
+   bindpoints:
+   apis:
+      - binding: health-checks
+        options: { }
+      - binding: fabric
+      - binding: edge-management
+        options: { }
+      - binding: edge-client
+        options: { }
+      - binding: metrics
+        options: {
+          includeTimestamps: true
+        }
+</code></pre><div class="NOTE"><h5>Note</h5><p>Prometheus will silently discard metrics that are older than five minutes.</p>
+</div>
+<h3 id="prometheus-configuration">Prometheus Configuration</h3>
 <h4 id="tls-configuration">TLS Configuration</h4>
 <p>The <code>/metrics</code> api requires TLS configuration in Prometheus. The Prometheus scrape config must have the ziti web public key, or be configured to ignore private keys.</p>
 <pre><code>  - job_name: ziti
