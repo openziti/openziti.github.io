@@ -203,24 +203,24 @@ with <code>-v</code>.</p>
 </li>
 <li><p>Now add the ZAC configuration lines to the compose file of your choice:</p>
 <pre><code class="lang-bash">  ziti-console:
- image: openziti/zac
- ports:
-   - &quot;1408:1408&quot;
-   - &quot;8443:8443&quot;
- environment:
-   - ZITI_EDGE_CONTROLLER_HOSTNAME=ziti-edge-router
- volumes:
-   - ziti-fs:/openziti
-   - type: bind
-     source: ./ziti-edge-controller-server.key
-     target: /usr/src/app/server.key
-   - type: bind
-     source: ./ziti-edge-controller-server.chain.pem
-     target: /usr/src/app/server.chain.pem
+    image: openziti/zac
+    ports:
+      - &quot;1408:1408&quot;
+      - &quot;8443:8443&quot;
+    environment:
+      - ZITI_EDGE_CONTROLLER_HOSTNAME=ziti-edge-router
+    volumes:
+      - ziti-fs:/openziti
+      - type: bind
+        source: ./ziti-edge-controller-server.key
+        target: /usr/src/app/server.key
+      - type: bind
+        source: ./ziti-edge-controller-server.chain.pem
+        target: /usr/src/app/server.chain.pem
 
- networks:
-   - zitiblue
-   - zitired
+    networks:
+      - zitiblue
+      - zitired
 </code></pre></li>
 <li>After adding the ZAC configuration as shown, <code>docker-compose</code> will now start and expose the ZAC ports on 1408/8443.
 &gt; [!Note]
