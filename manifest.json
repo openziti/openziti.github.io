@@ -2910,12 +2910,24 @@
       "version": ""
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/software-architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/software-architecture.html",
+          "hash": "X4JsvMyM97shlscGq6e67w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Toc",
       "source_relative_path": "ziti/toc.yml",
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "ZpLWCKBCyOWjzzn44CB8IQ=="
+          "hash": "Jc9Mc4pWs7eRnt7aDR22EA=="
         }
       },
       "is_incremental": false,
@@ -2936,7 +2948,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 119,
+          "total_file_count": 120,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

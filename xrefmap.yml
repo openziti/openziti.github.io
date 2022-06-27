@@ -483,3 +483,6 @@ references:
 - uid: zitiOverview
   name: Overview
   href: ziti/overview.html
+- uid: zitiSoftwareArchitecture
+  name: Software Architecture
+  href: ziti/software-architecture.html
