@@ -166,9 +166,9 @@ Tasks: 11 (limit: 1160)
 Memory: 33.4M
 CGroup: /system.slice/ziti-console.service
 └─13458 /usr/bin/node /home/ubuntu/.ziti/quickstart/ip-172-31-22-212/ziti-console/server.js
-</code></pre><h3 id="using-docker">Using Docker</h3>
-</li>
+</code></pre></li>
 </ol>
+<h3 id="using-docker">Using Docker</h3>
 <p>Getting ZAC setup if you have followed the <a href="../network/local-with-docker.html">docker network quickstart</a> 
 should be straightforward. If you have used the default values from this quickstart you can issue the following command. 
 Notice that this command uses the default path: <code>${HOME}/docker-volume/myFirstZitiNetwork</code>. If you customized the path, 
@@ -222,14 +222,13 @@ with <code>-v</code>.</p>
       - zitiblue
       - zitired
 </code></pre></li>
-<li>After adding the ZAC configuration as shown, <code>docker-compose</code> will now start and expose the ZAC ports on 1408/8443.
-&gt; [!Note]
-&gt; Do note that if you are exposing ports as shown above, you will need to ensure that <code>ziti-edge-controller</code> is
-&gt; addressable by your machine in order to use docker in this way. This guide does not go into how to do this in depth.
-&gt; One easy, and common mechanism to do this would be to edit the &#39;hosts&#39; file of your operating system. A quick
-&gt; internet search should show you how to accomplish this.
-&gt; </li>
+<li>After adding the ZAC configuration as shown, <code>docker-compose</code> will now start and expose the ZAC ports on 1408/8443.</li>
 </ol>
+<div class="NOTE"><h5>Note</h5><p>Do note that if you are exposing ports as shown above, you will need to ensure that <code>ziti-edge-controller</code> is
+addressable by your machine in order to use docker in this way. This guide does not go into how to do this in depth.
+One easy, and common mechanism to do this would be to edit the &#39;hosts&#39; file of your operating system. A quick
+internet search should show you how to accomplish this.</p>
+</div>
 <h2 id="login-and-use-the-ziti-console">Login and use the Ziti Console</h2>
 <ol>
 <li>At this point you should be able to navigate to both: <code>https://${ZITI_EDGE_CONTROLLER_HOSTNAME}:8443</code>and see the ZAC login
