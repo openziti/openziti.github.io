@@ -22,11 +22,10 @@ var ziti__log_8h =
       [ "TRACE", "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a7fa27e82c6c4f69434225ed81e5d151e", null ]
     ] ],
     [ "uv_mbed_logger", "ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5", null ],
-    [ "ziti_enable_uv_mbed_logger", "ziti__log_8h.html#aa966ce7005c6db6ba9819906cc918f87", null ],
     [ "ziti_log_init", "ziti__log_8h.html#a3906c482dbdcf2d632e7c9db5c731f75", null ],
-    [ "ziti_log_level", "ziti__log_8h.html#acae349985349ceec5651bd864bf7f81e", null ],
+    [ "ziti_log_level", "ziti__log_8h.html#ad3af6753494dc4d2eca1234e43334dbb", null ],
     [ "ziti_log_level_label", "ziti__log_8h.html#adfde3c513e072755ca4c0993f16adeee", null ],
-    [ "ziti_log_set_level", "ziti__log_8h.html#a214bd78d665a5a8e3c32fe1f881fceb6", null ],
+    [ "ziti_log_set_level", "ziti__log_8h.html#a05dcd054be3647c0c04373c06a5bbfdf", null ],
     [ "ziti_log_set_level_by_label", "ziti__log_8h.html#ab4235eba452aa02c647c9e103fd5d5ea", null ],
     [ "ziti_log_set_logger", "ziti__log_8h.html#a8530c2526b442921973e8c0bed2adc65", null ],
     [ "ziti_logger", "ziti__log_8h.html#a3f66510d8a0314d547389b2c0ecf85b2", null ]
