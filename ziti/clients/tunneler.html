@@ -122,8 +122,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="tunnelers">Tunnelers</h1>
 
-<p>A tunneler is purpose-built software designed to connect applications which are not Ziti-aware to the Ziti Network.
-Ziti provides tunnelers for each major operating system.</p>
+<p>An OpenZiti Tunneler is purpose-built software designed to connect applications which are not Ziti-aware to the OpenZiti Network.</p>
 <ul>
 <li><a href="https://github.com/openziti/desktop-edge-win/releases/latest">Windows</a></li>
 <li><a href="https://apps.apple.com/app/id1460484572">MacOS</a></li>
@@ -135,10 +134,9 @@ Ziti provides tunnelers for each major operating system.</p>
 services and forward that traffic over the Ziti overlay instead of the underlay network.  There are two basic modes a
 tunneler operate in: seamless and proxy. A seamless tunneler will transparently intercept traffic via IPv4 address or
 DNS whereas a tunneler in proxy mode works as a proxy. Seamless mode is transparent to existing services and
-applications. Proxy mode is not as transparent at all. It requires applications to send traffic to the localhost proxy
-specifically. This means when running in proxy mode - it does not do any intercepting at all.</p>
-<p>Here you can learn about the
-ways each tunneler operates and see the similarities as well as any differences.</p>
+applications. Proxy mode is not transparent at all. It requires applications to send traffic to the localhost proxy
+specifically. This means when running in proxy mode it does not do any intercepting at all.</p>
+<p>The OpenZiti project provides tunnellers for each major operating system.</p>
 <h2 id="linux">Linux</h2>
 <h3 id="the-tunneller-cli">The Tunneller CLI</h3>
 <p><code>ziti-edge-tunnel</code> is the general purpose tunneller CLI and can also run as a systemd daemon. For the best overall experience, please use the preferred tunneller <code>ziti-edge-tunnel</code> described here.</p>
@@ -170,7 +168,12 @@ resolvectl domain  # inspect the configuration of query routing domains
 </code></pre><p>If any interfaces have a wildcard routing domain configured, <code>ziti-edge-tunnel</code> will also configure its tun with a wildcard routing domain. If no other interface has a wildcard routing domain configured, neither will the <code>ziti-edge-tunnel</code> tun.</p>
 <pre><code class="lang-bash"># Specify the tun interface address and the subnet to which Service domain names are resolved (default 100.64.0.1/10). The nameserver address is always the tun interface address +1, default is 100.64.0.2.
 --dns-ip-range &lt;ip range&gt;
-</code></pre><h4 id="system-requirements-for-mode-run">System Requirements For Mode <code>run</code></h4>
+</code></pre><h4 id="how-does-ziti-edge-tunnel-run-configure-nameservers">How does <code>ziti-edge-tunnel run</code> configure nameservers?</h4>
+<p><code>ziti-edge-tunnel run</code> provides a built-in nameserver that will answer queries that exactly match authorized OpenZiti services&#39; intercept domain names, and will respond with a hard-fail <code>NXDOMAIN</code> code if the query does not match an authorized service.</p>
+<p>You may enable DNS recursion by specifying an upstream nameserver to answer queries for other domain names that are not services&#39; intercept domain names: <code>ziti-edge-tunnel run --dns-upstream 208.67.222.222</code>.</p>
+<p><code>ziti-edge-tunnel</code> uses the <code>libsystemd</code> D-Bus RPC client and will try to configure the OS&#39;s resolvers with <code>systemd-resolved</code>. If that&#39;s not possible for any reason then <code>ziti-edge-tunnel run</code> will fall back to shell commands like <code>resolvectl</code>. If <code>resolvectl</code> fails then <code>ziti-edge-tunnel run</code> will attempt to modify <code>/etc/resolv.conf</code> directly to install the built-in nameserver as the primary resolver.</p>
+<p>If the DNS record exists it returns the answer and sets query status to <code>NO_ERROR</code>. If it does not exist then it sends the query to an upstream DNS server if configured. Otherwise, it sets the query status to <code>REFUSE</code>. This implies that the caller <em>should</em> keep trying to resolve the domain name with other nameservers.</p>
+<h4 id="system-requirements-for-mode-run">System Requirements For Mode <code>run</code></h4>
 <p><code>ziti-edge-tunnel run</code> requires elevated privileges for managing the <code>/dev/net/tun</code> device, running <code>resolvectl</code> to assign nameservers and domain routes to the tun interface, and running <code>ip route</code> to manage IP routes. This requires running as root because <code>setcaps</code> are not inherited in all of these cases, even when the inherit bit is set.</p>
 <h3 id="run-host-mode"><code>run-host</code> Mode</h3>
 <p><code>ziti-edge-tunnel run-host</code> is a mode for hosting (listening) for services which does provide service intercepts or DNS. Services configured for &#39;Bind&#39; will be hosted by the tunneller.</p>
