@@ -126,37 +126,54 @@
 <p><code>ziti-edge-tunnel</code> is the general purpose tunneller CLI and can also run as a systemd daemon. For the best overall experience, please use the preferred tunneller <code>ziti-edge-tunnel</code> described here.</p>
 <p>The purpose of the tunneller is to configure host access. This means all users and all processes on the host will share the same level of access. This is accomplished by configuring the OS to have an on-board OpenZiti DNS nameserver and IP routes for authorized OpenZiti Services.</p>
 <h3 id="installation-and-upgrade">Installation and Upgrade</h3>
-<h4 id="rpm">RPM</h4>
+<h4 id="installing-the-deb">Installing the DEB</h4>
 <ol>
-<li>Create a repo file like <code>/etc/yum.repos.d/openziti.repo</code> matching the appropriate example below for your OS.</li>
-<li>Run <code>yum update</code> to refresh your repodata cache.</li>
-<li>Run <code>yum install ziti-edge-tunnel</code> to install the RPM.</li>
+<li>Run the script below to import the signing key, add a package source to the list, update sources, and install ziti-edge-tunnel.</li>
 <li>Install an enroll token JWT file or identity config JSON file in <code>/opt/openziti/etc/identities</code>.</li>
 <li>Run <code>systemd start ziti-edge-tunnel.service</code>. The service needs to be restarted if the contents of the identities directory change.</li>
+</ol>
+<h5 id="ubuntu-jammy-2204">Ubuntu Jammy 22.04</h5>
+<pre><code class="lang-bash">curl -sSLf https://raw.githubusercontent.com/openziti/ziti-tunnel-sdk-c/main/package-repos.gpg \
+| gpg --dearmor \
+| sudo tee /usr/share/keyrings/openziti.gpg &gt; /dev/null
+echo &#39;deb [signed-by=/usr/share/keyrings/openziti.gpg] https://packages.openziti.org/zitipax-openziti-deb-stable jammy main&#39; | sudo tee --append /etc/apt/sources.list
+sudo apt update
+sudo apt install ziti-edge-tunnel
+</code></pre><h5 id="ubuntu-focal-2004-bionic-1804-xenial-1604-trusty-1404">Ubuntu Focal 20.04, Bionic 18.04, Xenial 16.04, Trusty 14.04</h5>
+<p>The script is the same as Jammy for these older Ubuntu releases, but you must substitute the correct Ubuntu release code name e.g. &quot;focal&quot; in place of &quot;jammy&quot; in the apt sources file.</p>
+<h5 id="debian-gnulinux">Debian GNU/Linux</h5>
+<p>The script is the same as Ubuntu Jammy for Debian releases, but you should substitute the youngest Ubuntu release code name e.g. &quot;focal&quot; that is older than your release of Debian in place of &quot;jammy&quot; in the apt sources file. For simplicity&#39;s sake, the Ubuntu 18.04 &quot;bionic&quot; build is broadly compatible with modern Debian releases.</p>
+<h4 id="installing-the-rpm">Installing the RPM</h4>
+<ol>
+<li>Create a repo file like <code>/etc/yum.repos.d/openziti.repo</code> matching the appropriate example below for your OS.</li>
+<li>Run <code>yum update</code> to refresh your repodata cache. Optionally, you may wish to also install all available updates.</li>
+<li>Run <code>yum install ziti-edge-tunnel</code> to install the RPM.</li>
+<li>Install an enroll token JWT file or identity config JSON file in <code>/opt/openziti/etc/identities</code>.</li>
+<li>Run <code>systemctl start ziti-edge-tunnel.service</code>. The service needs to be restarted if the contents of the identities directory change.</li>
 </ol>
 <h5 id="rhel-centos-and-rocky-linux">RHEL, CentOS, and Rocky Linux</h5>
 <pre><code class="lang-ini">[OpenZiti]
 name=OpenZiti
-baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat$releasever/$basearch
+baseurl=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat$releasever/$basearch
 enabled=1
 gpgcheck=0
-gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat$releasever/$basearch/repodata/repomd.xml.key
+gpgkey=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat$releasever/$basearch/repodata/repomd.xml.key
 repo_gpgcheck=1
 </code></pre><h5 id="fedora">Fedora</h5>
 <pre><code class="lang-ini">[OpenZiti]
 name=OpenZiti
-baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat8/$basearch
+baseurl=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat8/$basearch
 enabled=1
 gpgcheck=0
-gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat8/$basearch/repodata/repomd.xml.key
+gpgkey=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat8/$basearch/repodata/repomd.xml.key
 repo_gpgcheck=1
 </code></pre><h5 id="amazon-linux">Amazon Linux</h5>
 <pre><code class="lang-ini">[OpenZiti]
 name=OpenZiti
-baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat7/$basearch
+baseurl=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat7/$basearch
 enabled=1
 gpgcheck=0
-gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat7/$basearch/repodata/repomd.xml.key
+gpgkey=https://packages.openziti.org/zitipax-openziti-rpm-stable/redhat7/$basearch/repodata/repomd.xml.key
 repo_gpgcheck=1
 </code></pre><h4 id="binary">Binary</h4>
 <p><a href="https://github.com/openziti/ziti-tunnel-sdk-c/releases/latest/">The latest binary release</a> of <code>ziti-edge-tunnel</code> is distributed as an executable for amd64, arm, arm64 architectures. The upgrade procedure is identical to the installation procedure.</p>
