@@ -142,14 +142,47 @@ specifically. This means when running in proxy mode it does not do any intercept
 <p><code>ziti-edge-tunnel</code> is the general purpose tunneller CLI and can also run as a systemd daemon. For the best overall experience, please use the preferred tunneller <code>ziti-edge-tunnel</code> described here.</p>
 <p>The purpose of the tunneller is to configure host access. This means all users and all processes on the host will share the same level of access. This is accomplished by configuring the OS to have an on-board OpenZiti DNS nameserver and IP routes for authorized OpenZiti Services.</p>
 <h3 id="installation-and-upgrade">Installation and Upgrade</h3>
-<p><a href="https://github.com/openziti/ziti-tunnel-sdk-c/releases/latest/">The latest release</a> of <code>ziti-edge-tunnel</code> is distributed as a binary executable from GitHub. The upgrade procedure is identical to the installation procedure.</p>
+<h4 id="rpm">RPM</h4>
+<ol>
+<li>Create a repo file like <code>/etc/yum.repos.d/openziti.repo</code> matching the appropriate example below for your OS.</li>
+<li>Run <code>yum update</code> to refresh your repodata cache.</li>
+<li>Run <code>yum install ziti-edge-tunnel</code> to install the RPM.</li>
+<li>Install an enroll token JWT file or identity config JSON file in <code>/opt/openziti/etc/identities</code>.</li>
+<li>Run <code>systemd start ziti-edge-tunnel.service</code>. The service needs to be restarted if the contents of the identities directory change.</li>
+</ol>
+<h5 id="rhel-centos-and-rocky-linux">RHEL, CentOS, and Rocky Linux</h5>
+<pre><code class="lang-ini">[OpenZiti]
+name=OpenZiti
+baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat$releasever/$basearch
+enabled=1
+gpgcheck=0
+gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat$releasever/$basearch/repodata/repomd.xml.key
+repo_gpgcheck=1
+</code></pre><h5 id="fedora">Fedora</h5>
+<pre><code class="lang-ini">[OpenZiti]
+name=OpenZiti
+baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat8/$basearch
+enabled=1
+gpgcheck=0
+gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat8/$basearch/repodata/repomd.xml.key
+repo_gpgcheck=1
+</code></pre><h5 id="amazon-linux">Amazon Linux</h5>
+<pre><code class="lang-ini">[OpenZiti]
+name=OpenZiti
+baseurl=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat7/$basearch
+enabled=1
+gpgcheck=0
+gpgkey=https://netfoundry.jfrog.io/artifactory/zitipax-openziti-rpm-stable/redhat7/$basearch/repodata/repomd.xml.key
+repo_gpgcheck=1
+</code></pre><h4 id="binary">Binary</h4>
+<p><a href="https://github.com/openziti/ziti-tunnel-sdk-c/releases/latest/">The latest binary release</a> of <code>ziti-edge-tunnel</code> is distributed as an executable for amd64, arm, arm64 architectures. The upgrade procedure is identical to the installation procedure.</p>
 <pre><code class="lang-bash"># shell script illustrating the steps to install or upgrade ziti-edge-tunnel
 wget -q &quot;https://github.com/openziti/ziti-tunnel-sdk-c/releases/latest/download/ziti-edge-tunnel-Linux_$(uname -p).zip&quot; \
   &amp;&amp; unzip ./ziti-edge-tunnel-Linux_$(uname -p).zip \
   &amp;&amp; rm ./ziti-edge-tunnel-Linux_$(uname -p).zip \
   &amp;&amp; chmod -c +x ./ziti-edge-tunnel \
   &amp;&amp; ./ziti-edge-tunnel version
-</code></pre><h3 id="enroll-before-you-run">Enroll Before You Run</h3>
+</code></pre><h5 id="enroll-before-you-run">Enroll Before You Run</h5>
 <p>You will need the token file or its contents to enroll. Enrollment is the act of exchanging the token for an identity that is to be permanently installed in the filesystem.</p>
 <p><a href="../identities/enrolling.html">Here&#39;s a link to the article about enrolling</a></p>
 <h3 id="global-options">Global Options</h3>
