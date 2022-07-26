@@ -146,7 +146,7 @@ specifically. This means when running in proxy mode it does not do any intercept
 <ol>
 <li>Run the script below to import the signing key, add a package source to the list, update sources, and install ziti-edge-tunnel.</li>
 <li>Install an enroll token JWT file or identity config JSON file in <code>/opt/openziti/etc/identities</code>.</li>
-<li>Run <code>systemd start ziti-edge-tunnel.service</code>. The service needs to be restarted if the contents of the identities directory change.</li>
+<li>Run <code>systemctl start ziti-edge-tunnel.service</code>. The service needs to be restarted if the contents of the identities directory change.</li>
 </ol>
 <h5 id="ubuntu-jammy-2204">Ubuntu Jammy 22.04</h5>
 <pre><code class="lang-bash">curl -sSLf https://raw.githubusercontent.com/openziti/ziti-tunnel-sdk-c/main/package-repos.gpg \
