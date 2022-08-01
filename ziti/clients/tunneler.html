@@ -142,6 +142,8 @@ specifically. This means when running in proxy mode it does not do any intercept
 <p><code>ziti-edge-tunnel</code> is the general purpose tunneller CLI and can also run as a systemd daemon. For the best overall experience, please use the preferred tunneller <code>ziti-edge-tunnel</code> described here.</p>
 <p>The purpose of the tunneller is to configure host access. This means all users and all processes on the host will share the same level of access. This is accomplished by configuring the OS to have an on-board OpenZiti DNS nameserver and IP routes for authorized OpenZiti Services.</p>
 <h3 id="installation-and-upgrade">Installation and Upgrade</h3>
+<div class="NOTE"><h5>Note</h5><p>It is not necessary to manually enroll the identity when using the RPM or DEB package. Just install the token in the identities directory and it will be enrolled when you start the daemon.</p>
+</div>
 <h4 id="installing-the-deb">Installing the DEB</h4>
 <ol>
 <li>Run the script below to import the signing key, add a package source to the list, update sources, and install ziti-edge-tunnel.</li>
