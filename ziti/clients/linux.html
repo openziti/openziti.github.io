@@ -137,8 +137,9 @@
 <h5 id="ubuntu-jammy-2204">Ubuntu Jammy 22.04</h5>
 <pre><code class="lang-bash">curl -sSLf https://raw.githubusercontent.com/openziti/ziti-tunnel-sdk-c/main/package-repos.gpg \
 | gpg --dearmor \
-| sudo tee /usr/share/keyrings/openziti.gpg &gt; /dev/null
-echo &#39;deb [signed-by=/usr/share/keyrings/openziti.gpg] https://packages.openziti.org/zitipax-openziti-deb-stable jammy main&#39; | sudo tee --append /etc/apt/sources.list
+| sudo tee /usr/share/keyrings/openziti.gpg &gt;/dev/null
+echo &#39;deb [signed-by=/usr/share/keyrings/openziti.gpg] https://packages.openziti.org/zitipax-openziti-deb-stable jammy main&#39; \
+| sudo tee /etc/apt/sources.list.d/openziti.list &gt;/dev/null
 sudo apt update
 sudo apt install ziti-edge-tunnel
 </code></pre><h5 id="ubuntu-focal-2004-bionic-1804-xenial-1604-trusty-1404">Ubuntu Focal 20.04, Bionic 18.04, Xenial 16.04, Trusty 14.04</h5>
