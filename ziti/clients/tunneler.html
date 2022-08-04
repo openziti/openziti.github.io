@@ -371,10 +371,13 @@ tcp        0      0 0.0.0.0:22169           0.0.0.0:*               LISTEN
 tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
 </code></pre><h3 id="troubleshooting">Troubleshooting</h3>
 <ul>
-<li><p>The simplest step you can take toward a diagnosis is to reduce the minimum message log level. This usually means lower-level DEBUG messages and above are emitted in addition to the default level of INFO level and above e.g. WARN, ERROR, etc. </p>
+<li><p>The simplest step you can take toward a diagnosis is to reduce the minimum message log level. This usually means lower-level DEBUG messages and above are emitted in addition to the default level of INFO level and above e.g. WARN, ERROR, etc.</p>
 <p>For <code>ziti-edge-tunnel</code>: DEBUG log level is <code>ziti-edge-tunnel --verbose=4</code></p>
 <p>For the alternative tunnellers: DEBUG log level is like <code>ziti-tunnel --verbose</code></p>
 </li>
+<li><p>If you change your package repo subscription or install the same DEB or RPM package from another source, excluding normal upgrades and downgrades, then it may be necessary to reload the systemd service unit definitions:</p>
+<pre><code class="lang-bash">sudo systemctl daemon-reload
+</code></pre></li>
 <li><p>You may inspect the loaded identities&#39; info for a running <code>ziti-edge-tunnel</code> by dumping it to stdout or the systemd journal with an IPC command, or you may signal to dump the identities&#39; info to a file.</p>
 <pre><code class="lang-bash"># dump indentities info to std our journal if systemd unit with IPC command
 ./ziti-edge-tunnel dump
