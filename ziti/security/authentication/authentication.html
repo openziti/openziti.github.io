@@ -1,0 +1,444 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Authentication | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Authentication | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="jfzf3259Xh6i82RehhnKg4aAsHd02v1MB-jP43wEqHI">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-THVRRJ3GLE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-THVRRJ3GLE');
+    </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://twitter.com/openziti">
+                            <img src="../../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
+                            <img src="../../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default" name="new">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+          <div style="display:flex; align-items: center; justify-content: center; flex-direction:row; position: relative; width: 100%; text-align: center;     background: rgb(0,104,247);
+            background: linear-gradient(90deg, rgba(0,104,247,1) 0%, rgba(222,14,91,1) 100%);">
+            <span style="margin-top: 5px; color: white; margin-right: 10px; height:25px">Star us on GitHub</span>
+            <span style="margin-top: 5px;"><a class="github-button" href="https://github.com/openziti/ziti" data-icon="octicon-star" data-show-count="true" aria-label="Star openziti/ziti on GitHub">Star</a></span>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="authentication">Authentication</h1>
+
+<p>Authentication in Ziti Edge occurs when a client wishes to interact with the Ziti Edge Controller. Authentication
+has begun when the client receives and API Session and is  complete when the API Session is fully authenticated.
+API Sessions are a high level security context that represents an authenticated session with either the Ziti <a href="../../apis/edge-apis.html#edge-client-api">Edge Client API</a>
+or the Ziti <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a>.</p>
+<ul>
+<li>Clients that are powered by a Ziti SDK that access services will authenticate with the <a href="../../apis/edge-apis.html#edge-client-api">Edge Client API</a></li>
+<li>Clients that are managing a Ziti Network will authenticate with the <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a></li>
+</ul>
+<h1 id="authentication-flow">Authentication Flow</h1>
+<p>Below is diagram showing initial authentication for some client. The same model is used between the <a href="../../apis/edge-apis.html#edge-client-api">Edge Client API</a>
+and <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a>.</p>
+<p><a href="https://mermaid-js.github.io/mermaid-live-editor/edit#pako:eNp1kUtPwzAQhP_KyudW3HMApU1fFxQaHoK4B1Mv1CJZR34IRUn-O46bCiGVm9f6ZmY97thRS2QJ-zSiOcFjxiktn0h4d0Jy6igcygPM57d94d9r5SA3qhamhaVBORKisj0sumdRKXk3cFqMMCzLex1lkF6usvIV7YFTFqdVmQszqqsW0j9hnFaRWHeplMopTaKKCDx4NArtmLKOyGayPE_bMZPTNg79Hp03BGm-gwKtDTbwfaMvHj28lWt_LXzzr_xF_e7Qw66cCtmjbTTZuMjuvDmbsRpNLZQMxXacADgLKTVyloSjFOaLM05D4HwjQ_AqPFQblnyENnHGQvu6aOnIEmc8XqBMifBJ9UQNP7yGlbE"><img src="https://mermaid.ink/img/pako:eNp1kUtPwzAQhP_KyudW3HMApU1fFxQaHoK4B1Mv1CJZR34IRUn-O46bCiGVm9f6ZmY97thRS2QJ-zSiOcFjxiktn0h4d0Jy6igcygPM57d94d9r5SA3qhamhaVBORKisj0sumdRKXk3cFqMMCzLex1lkF6usvIV7YFTFqdVmQszqqsW0j9hnFaRWHeplMopTaKKCDx4NArtmLKOyGayPE_bMZPTNg79Hp03BGm-gwKtDTbwfaMvHj28lWt_LXzzr_xF_e7Qw66cCtmjbTTZuMjuvDmbsRpNLZQMxXacADgLKTVyloSjFOaLM05D4HwjQ_AqPFQblnyENnHGQvu6aOnIEmc8XqBMifBJ9UQNP7yGlbE" alt=""></a></p>
+<p>In the above a client has provided primary authentication credentials (certificate, JWT, username password) and then
+subsequently provided any secondary credentials necessary (JWT, TOTP, etc). The secondary credentials are requested 
+via Authentication Queries and enable multifactor authentication to occur.</p>
+<p>The goal of authentication is to obtain an API Session. API Sessions are used to interact with the Ziti Controller 
+and Ziti Edge Routers. API Sessions for clients are represented by opaque tokens that are provided as headers in HTTP 
+requests and by values in protobuf messages for the Edge protocol between routers and SDKs. API Sessions represent a 
+security context that is used to determine authorization in the rest of the Ziti network.</p>
+<h2 id="api-sessions">API Sessions</h2>
+<p>API Sessions are represented by opaque strings and are provided in the HTTP header <code>zt-session</code> and in Edge Router
+connection requests initiated by Ziti SDKs. API Sessions remain valid as long they have not timed out.</p>
+<p>An API Sessions:</p>
+<ul>
+<li>can and are represented by a JSON data structure returned from the Client and Management APIs<ul>
+<li>returned from:<ul>
+<li><code>POST /edge/management/v1/authenticate</code></li>
+<li><code>GET /edge/management/v1/current-api-session</code></li>
+<li><code>POST /edge/client/v1/authenticate</code></li>
+<li><code>GET /edge/client/v1/current-api-session</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>can be referenced by an internal <code>id</code> and a security token that is in the format of a UUID<ul>
+<li>the <code>id</code> can be used on the following endpoints:<ul>
+<li><code>GET /edge/management/v1/api-sessions/&lt;id&gt;</code></li>
+<li><code>DELETE /edge/management/v1/api-sessions/&lt;id&gt;</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>API Sessions are defined in the Client and Management Open API 2.0 specifications under <code>currentApiSessionDetail</code>.</p>
+<p>Example <code>POST /edge/management/v1/authenticate</code> response:</p>
+<pre><code class="lang-json">{
+  &quot;data&quot;: {
+    &quot;_links&quot;: {
+      &quot;self&quot;: {
+        &quot;href&quot;: &quot;./api-sessions/cl4zptpgqcrinn0hhgm7ek5ve&quot;
+      },
+      &quot;sessions&quot;: {
+        &quot;href&quot;: &quot;./api-sessions/cl4zptpgqcrinn0hhgm7ek5ve/sessions&quot;
+      }
+    },
+    &quot;createdAt&quot;: &quot;2022-06-29T14:51:07.946Z&quot;,
+    &quot;id&quot;: &quot;cl4zptpgqcrinn0hhgm7ek5ve&quot;,
+    &quot;tags&quot;: {},
+    &quot;updatedAt&quot;: &quot;2022-06-29T14:51:07.946Z&quot;,
+    &quot;authQueries&quot;: [
+      {
+        &quot;format&quot;: &quot;alphaNumeric&quot;,
+        &quot;httpMethod&quot;: &quot;POST&quot;,
+        &quot;httpUrl&quot;: &quot;./authenticate/mfa&quot;,
+        &quot;maxLength&quot;: 6,
+        &quot;minLength&quot;: 4,
+        &quot;provider&quot;: &quot;ziti&quot;,
+        &quot;typeId&quot;: &quot;MFA&quot;
+      }
+    ],
+    &quot;authenticatorId&quot;: &quot;vxtlfvUj6&quot;,
+    &quot;cachedLastActivityAt&quot;: &quot;2022-06-29T14:51:07.945Z&quot;,
+    &quot;configTypes&quot;: [],
+    &quot;identity&quot;: {
+      &quot;_links&quot;: {
+        &quot;auth-policies&quot;: {
+          &quot;href&quot;: &quot;./auth-policies/default&quot;
+        },
+        &quot;authenticators&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/authenticators&quot;
+        },
+        &quot;edge-router-policies&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/edge-routers&quot;
+        },
+        &quot;enrollments&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/enrollments&quot;
+        },
+        &quot;failed-service-requests&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/failed-service-requests&quot;
+        },
+        &quot;posture-data&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/posture-data&quot;
+        },
+        &quot;self&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6&quot;
+        },
+        &quot;service-policies&quot;: {
+          &quot;href&quot;: &quot;./identities/vxtlfvUj6/service-policies&quot;
+        }
+      },
+      &quot;entity&quot;: &quot;identities&quot;,
+      &quot;id&quot;: &quot;vxtlfvUj6&quot;,
+      &quot;name&quot;: &quot;Default Admin&quot;
+    },
+    &quot;identityId&quot;: &quot;vxtlfvUj6&quot;,
+    &quot;ipAddress&quot;: &quot;127.0.0.1&quot;,
+    &quot;isMfaComplete&quot;: false,
+    &quot;isMfaRequired&quot;: true,
+    &quot;lastActivityAt&quot;: &quot;2022-06-29T14:51:07.945Z&quot;,
+    &quot;token&quot;: &quot;44a20395-1a0e-469d-ad9b-80df8dbbf8c4&quot;,
+    &quot;expirationSeconds&quot;: 1800,
+    &quot;expiresAt&quot;: &quot;2022-06-29T15:21:07.945Z&quot;
+  },
+  &quot;meta&quot;: {}
+}
+</code></pre><h3 id="full-vs-partial-authentication">Full vs Partial Authentication</h3>
+<p>API Sessions may exist in two states:</p>
+<ul>
+<li>Partially Authenticated - limited API access</li>
+<li>Fully Authenticated - full API access</li>
+</ul>
+<p>Partial authentication occurs when a primary authentication method has been passed, but secondary Authentication Queries
+remain outstanding. Ziti Edge models MFA challenges as Authentication Queries. Authentication Queries include information
+that can be used to display user prompts or direct users to integrating websites for SSO. If no outstanding 
+Authentication Queries are present for an API Session it is considered fully authenticated.</p>
+<p>While partially authenticated, the API Session can only be used for a reduced set of operations:</p>
+<ul>
+<li>answering Authentication Queries </li>
+<li>enrolling in MFA TOTP</li>
+</ul>
+<h4 id="authentication-queries">Authentication Queries</h4>
+<p>Authentication Queries are represented on an API Session the property <code>authQuries</code> which is an array. An example 
+MFA challenge represented as an Authentication Query is provided below.</p>
+<pre><code class="lang-json">{
+  &quot;authQueries&quot;: [
+    {
+      &quot;format&quot;: &quot;alphaNumeric&quot;,
+      &quot;httpMethod&quot;: &quot;POST&quot;,
+      &quot;httpUrl&quot;: &quot;./authenticate/mfa&quot;,
+      &quot;maxLength&quot;: 6,
+      &quot;minLength&quot;: 4,
+      &quot;provider&quot;: &quot;ziti&quot;,
+      &quot;typeId&quot;: &quot;MFA&quot;
+    }
+  ]
+}
+</code></pre><p>The existence of any Authentication Query on an API Session represents a partial authentication state. API Sessions
+in this state will have reduced access to their target API. The data structure for Authentication Queries is defined
+in the Client and Management Open API 2.0 specifications under the label <code>authQueryDetail</code>.</p>
+<h3 id="associated-data--removal">Associated Data &amp; Removal</h3>
+<p>API Sessions, may be used to create ephemeral certificates called <a href="api-session-certificates.html">API Session Certificates</a> 
+and sessions for service access. Additionally, API Sessions are used to scope <a href="../authorization/posture-checks.html#posture-data">Posture Data</a>. 
+When an API Session is removed for any reason, all associated data is also removed. As an example, when removing an 
+API Session used to create a Session the Session will also be removed. Removing a Session will also terminate any 
+existing connections that used the security token associated with that Session and prevent it from being used to 
+establish new connections.</p>
+<p>Removal of an API Session occurs in the following scenarios:</p>
+<ul>
+<li>timeout</li>
+<li>administrative removal</li>
+<li>client removal (logout)</li>
+</ul>
+<h3 id="timeout">Timeout</h3>
+<p>The controller maintains a last accessed at timestamp for every API Session. This timestamp is used to determine whether
+the session timeout has been reached, signaling an API Session removal. Activity that move the last accessed at timestamp
+includes:</p>
+<ul>
+<li>Any maintained Edge Router connection</li>
+<li>Any valid Client or Management API interaction</li>
+</ul>
+<p>The API Session timeout defaults to 30 minutes and can be configured in <code>edge.api.sessionTimeout</code> in the controller
+configuration file.</p>
+<pre><code class="lang-yaml">edge:
+  api:
+  ...
+    # sessionTimeout - optional, default 30m
+    # The number of minutes before an Edge API session will time out. Timeouts are reset by
+    # API requests and connections that are maintained to Edge Routers
+    sessionTimeout: 30m
+    ...
+</code></pre><h3 id="administrative-removal">Administrative Removal</h3>
+<p>Through the <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a> any API Session may be forcefully removed
+by calling <code>DELETE /edge/management/v1/api-sessions&lt;id&gt;</code> with an empty body. </p>
+<h3 id="client-removal-logout">Client Removal (Logout)</h3>
+<p>A client may terminate its own API Session at any time by calling: <code>DELETE /edge/client/v1/current-api-session</code></p>
+<h1 id="primary-authentication">Primary Authentication</h1>
+<p>Primary authentication in Ziti establishes and API Sessions identity principal and enabled Ziti to determine which
+secondary authentication factors are necessary for an API Session to become fully authenticated. If no secondary
+authentication factors are required the API Session becomes fully authenticated immediately without any further
+interaction with the Client or Management API.</p>
+<p>Primary authentication factors include:</p>
+<ul>
+<li>x509 certificates</li>
+<li>JWTs</li>
+<li>Username/password</li>
+</ul>
+<p>Valid primary authentication methods can be restricted via <a href="authentication-policies.html">Authentication Policies</a>.
+An Identity can have one <a href="authentication-policies.html">Authentication Policies</a> associated with it. 
+This association is defined by the <code>authPolicyId</code> property on the identity. If no<a href="authentication-policies.html">Authentication Policy</a> 
+is set for an Identity, a special system defined <a href="authentication-policies.html">Authentication Policy</a> 
+with the id of <code>default</code> will be used.</p>
+<h2 id="authenticators">Authenticators</h2>
+<p>Some primary authentication mechanisms (x509, username/password) need to store per identity credentials. When necessary
+these are stored as authenticators. Manipulating authenticators is used to perform <a href="password-management.html">password management</a> 
+and <a href="certificate-management.html">certificate management</a></p>
+<p>Authenticators may be listed via the CLI:</p>
+<p><code>ziti edge list authenticators</code></p>
+<p>or via the <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a>:</p>
+<pre><code>GET /edge/management/v1/authenticators
+</code></pre><h2 id="x509-certificate-primary-authentication">x509 Certificate Primary Authentication</h2>
+<p>x509 authentication requires the client to initiate a HTTPs authentication request using a x509 client certificate that
+is associated to the target Identity on an Authenticator. The client certificate can be issued by the Ziti Edge 
+Controller&#39;s internal PKI or an external PKI. If an external PKI is being used, it must be registered as a 
+<a href="third-party-cas.html">3rd Party CA</a> via the Ziti <a href="../../apis/edge-apis.html#edge-management-api">Edge Management API</a>, verified, and
+have authentication enabled. The client certificate must pass signature and CA chain-of-trust validation. All client, 
+intermediate CA, and root CA functionality supports RSA and EC keys.</p>
+<p>Please note that intermediate CA certificates may be provided during authentication if necessary. The client certificate
+should be in index zero and intermediate CA certificates in subsequent indexes in any order.</p>
+<p>To associate a client certificate with an Identity and Authenticator see the <a href="../enrollment/enrollment.html">Enrollment</a> 
+section.</p>
+<p>Expired client certificates may be allowed via <a href="authentication-policies.html">Authentication Policies</a> if desired.</p>
+<h2 id="jwt-primary-authentication">JWT Primary Authentication</h2>
+<p>JWT authentication requires that an <a href="external-jwt-signers.html">External JWT Signer</a> be added via the Ziti Edge Management 
+API. The definition of <a href="external-jwt-signers.html">External JWT Signer</a> allows configuration of which JWT claim should be
+used as a value to map against the unique <code>externalId</code> or <code>id</code> property on Identities. This mapping of JWT claim to 
+<code>externalId</code>/<code>id</code> is used to determine which Identity is authenticating.</p>
+<p>The JWT must be provided in the HTTP request in the <code>Authentication</code> header with a value in the format of 
+<code>Bearer &lt;jwt&gt;</code>. The JWT provided must pass signature, expiration, issuer, and audience validation as configured
+on the <a href="external-jwt-signers.html">External JWT Signer</a>.</p>
+<h2 id="usernamepassword">Username/password</h2>
+<p>An internal username/password authentication system is provided for smaller deployments of Ziti. It is highly suggested
+that all username/password authenticators be replaced by x509 certificate/JWT authentication mechanisms. Passwords
+are stored individually salted and one-way cryptographically hashed using <a href="https://en.wikipedia.org/wiki/Argon2">Argon2id</a>.</p>
+<p>Password policies may be enforced via <a href="authentication-policies.html">Authentication Policies</a>. Administrative <a href="password-management.html">management
+of passwords</a> is also available.</p>
+<p>Username/password authentication, while supported, is only suggested to be used for testing and R&amp;D activities. For
+production environments JWT and X509 authentication is recommended.</p>
+<h1 id="secondary-authentication">Secondary Authentication</h1>
+<p>Secondary authentication is represented by a series of <a href="#authentication-queries">Authentication Queries</a> on an API
+Session in the <code>authQueries</code> property. At present the following secondary authentication mechanisms are supported:</p>
+<ul>
+<li>TOTP - Time-Based One-Time Password (aka Authenticator Apps)</li>
+<li>JWT - JSON Web Tokens</li>
+</ul>
+<h2 id="totp-time-based-one-time-password">TOTP: Time-Based One-Time Password</h2>
+<p>Ziti supports all authenticator application that implement <a href="https://datatracker.ietf.org/doc/html/rfc6238">RFC6238</a>
+which includes all major and popular TOTP applications such as Google Authenticator, Microsoft Authenticator, Authy, and
+many others.</p>
+<p>TOTP is configured per-identity and must be client initiated due to the symmetric key exchange that must take place.
+Administrators can enforce TOTP usage through <a href="authentication-policies.html">Authentication Policies</a> and 
+<a href="../authorization/posture-checks.html">Posture Checks</a>. <a href="authentication-policies.html">Authentication Policy</a> enforcement 
+stops the client from transitioning between <a href="#full-vs-partial-authentication">partially authenticated</a> and
+<a href="#full-vs-partial-authentication">fully authenticated</a> status. This stops a client from accessing any service information
+or connect to any service. <a href="../authorization/posture-checks.html">Posture Check</a> enforcement allows a client to
+<a href="#full-vs-partial-authentication">fully authenticate</a>, but based on <a href="../authorization/policies/overview.html">Service Policy</a> 
+restrict connection to specific services.</p>
+<h2 id="jwt">JWT</h2>
+<p>Similar to JWT primary authentication, a valid JWT must be present in the <code>Authentication</code> header in the format of
+<code>bearer &lt;jwt</code> on every request.</p>
+<h1 id="authentication-requests">Authentication Requests</h1>
+<h3 id="example-updb-authentication-request">Example UPDB Authentication Request</h3>
+<p><code>POST /edge/client/v1/authenticate?method=password</code></p>
+<pre><code class="lang-json">{
+  &quot;username&quot;: &quot;my-name&quot;,
+  &quot;password&quot;: &quot;my-password&quot;
+}
+</code></pre><h3 id="example-client-certificate-request">Example Client Certificate Request</h3>
+<p>Note: The TLS connection to the controller MUST use a valid client certificate</p>
+<p><code>POST /edge/management/v1/authenticate?method=cert</code></p>
+<pre><code class="lang-json">{}
+</code></pre><h3 id="example-jwt-authentication-request">Example JWT Authentication Request</h3>
+<p><code>POST /edge/client/v1/authenticate?method=ext-jwt</code>
+HTTP Header: <code>Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cC...</code></p>
+<pre><code class="lang-json">{}
+</code></pre><h3 id="example-totp-authentication-query-response">Example TOTP Authentication Query Response:</h3>
+<p><code>POST /edge/client/v1/authenticate/mfa</code></p>
+<pre><code class="lang-json">{
+  &quot;code&quot;: &quot;123456&quot;
+}
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/security/authentication/authentication.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©NetFoundry Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
+  </body>
+</html>

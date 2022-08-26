@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Creating an Edge Router Policy | Ziti </title>
+    <title>API Session | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Creating an Edge Router Policy | Ziti ">
+    <meta name="title" content="API Session | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -120,47 +120,16 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="creating-an-edge-router-policy">Creating an Edge Router Policy</h2>
+<h1 id="api-session">API Session</h1>
 
-<div class="tabGroup" id="tabgroup_RM2o0uUWac">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-ui" role="tab" aria-controls="tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-ui" data-tab="tabid-new-edge-router-policy-ui" tabindex="0" aria-selected="true">New Edge Router Policy via UI</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-cli" role="tab" aria-controls="tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-cli" data-tab="tabid-new-edge-router-policy-cli" tabindex="-1">New Edge Router Policy via CLI</a>
-</li>
-</ul>
-<section id="tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-ui" role="tabpanel" data-tab="tabid-new-edge-router-policy-ui">
-<ol>
-<li>On the left side nav bar, click &quot;Ziti Policies&quot;</li>
-<li>It should already be selected, but if not, on the top nav bar, click &quot;Edge Router Policies&quot;</li>
-<li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Edge Router Policy</li>
-<li>Choose a name for the Edge Router Policy, such as &quot;My Edge Router Policy&quot;</li>
-<li>Enter the edge routers you want to include in the policy<ol>
-<li>Specific edge routers can be referenced by ID or name using <code>@</code>.  For example, an edge router called <code>us-east-4</code> can be referenced using <code>@us-east-4</code>. </li>
-<li>Edge routers can be referenced by role attribute using <code>#</code>. For example, any edge router which has the <code>us-seast</code> role attribute will be included if <code>#us-east</code> is included in the edge routers roles list.</li>
-</ol>
-</li>
-<li>Enter the identities you want to include in the policy<ol>
-<li>Specific identities can be referenced by ID or name using <code>@</code>.  For example, as identity called <code>jsmith-desktop</code> can be referenced using <code>@jsmith-desktop</code>. </li>
-<li>Identities can be referenced by role attribute using <code>#</code>. For example, any identity which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the identities roles list.</li>
-</ol>
-</li>
-<li>Specify the role semantic<ol>
-<li>If you select <code>Has Any Role</code> then if you specify multiple roles then all entities which include <strong>any</strong> of the roles will be included.</li>
-<li>If you select <code>Must Have All Roles</code>, then if you specify multiple roles then only entities which include <strong>all</strong> of the given roles will be included    </li>
-</ol>
-</li>
-<li>Click save</li>
-</ol>
-</section>
-<section id="tabpanel_RM2o0uUWac_tabid-new-edge-router-policy-cli" role="tabpanel" data-tab="tabid-new-edge-router-policy-cli" aria-hidden="true" hidden="hidden">
-<p>To create an Edge Router Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
-<pre><code># Create an edge router policy named &#39;my-policy&#39; which allows all identities to use all edge-routers 
-ziti edge create edge-router-policy my-policy --identity-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
-</code></pre></section>
-</div>
+<p>API Sessions represent a client that is either partially or fully authenticated as a specific Ziti Identity. API
+Sessions are used to scope <a href="authentication/authentication.html">authentication</a> and <a href="authorization/posture-checks.html">Posture Data</a>.
+API Sessions are used to make <a href="authorization/authorization.html">authorization</a> decisions. Clients interact with
+API Sessions via a opaque security token value and is received during authentication via <code>/edge/client|management/v1/authenticate</code>.</p>
+<h1 id="session">Session</h1>
+<p>Sessions represent a client&#39;s ability to dial (connect) or bind (host) a service. Clients receive them by request
+to the <code>/edge/client/v1/sessions</code> endpoint. A sessions are service and identity specific. Clients interact with them
+as an opaque security token and is provided to Edge Routers during dial or bind requests.</p>
 </article>
           </div>
           
@@ -169,7 +138,7 @@ ziti edge create edge-router-policy my-policy --identity-roles &#39;#all&#39; --
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/policies/creating-edge-router-policies.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/security/sessions.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

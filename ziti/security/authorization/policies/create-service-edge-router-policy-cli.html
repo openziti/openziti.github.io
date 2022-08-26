@@ -10,14 +10,14 @@
     <meta name="title" content=" | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../../">
     
     <!--span>this is text</span-->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/ziti-logo-40.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -62,22 +62,22 @@
                     </div>
                     <div style="position: relative">
                         <a href="https://github.com/openziti">
-                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                            <img src="../../../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://openziti.discourse.group">
-                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                            <img src="../../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://twitter.com/openziti">
-                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                            <img src="../../../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
-                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                            <img src="../../../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
                         </a>
                     </div>
                 </div>
@@ -121,9 +121,9 @@
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
 
-<p>To create a Service Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
-<pre><code># Create a service policy named &#39;my-policy&#39; which allows all identities to dial/connect to all services 
-ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; --service-roles &#39;#all&#39;
+<p>To create a Service Edge Router Policy using the CLI issue the following commands. (ensure you are <a href="../../../cli-snippets/login.html">logged in</a>)</p>
+<pre><code># Create a service edge router policy which allows all services to use all edge routers 
+ziti edge create service-edger-router-policy &#39;my-policy&#39; --service-roles &#39;#all&#39; --edge-router-roles &#39;#all&#39;
 </code></pre></article>
           </div>
           
@@ -132,7 +132,7 @@ ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; -
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/policies/create-service-policy-cli.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/security/authorization/policies/create-service-edge-router-policy-cli.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -160,8 +160,8 @@ ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; -
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
   </body>
 </html>

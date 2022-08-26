@@ -1,0 +1,348 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Edge APIs | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Edge APIs | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="jfzf3259Xh6i82RehhnKg4aAsHd02v1MB-jP43wEqHI">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-THVRRJ3GLE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-THVRRJ3GLE');
+    </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://twitter.com/openziti">
+                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
+                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default" name="new">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+          <div style="display:flex; align-items: center; justify-content: center; flex-direction:row; position: relative; width: 100%; text-align: center;     background: rgb(0,104,247);
+            background: linear-gradient(90deg, rgba(0,104,247,1) 0%, rgba(222,14,91,1) 100%);">
+            <span style="margin-top: 5px; color: white; margin-right: 10px; height:25px">Star us on GitHub</span>
+            <span style="margin-top: 5px;"><a class="github-button" href="https://github.com/openziti/ziti" data-icon="octicon-star" data-show-count="true" aria-label="Star openziti/ziti on GitHub">Star</a></span>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="edge-apis">Edge APIs</h1>
+
+<p>The Edge in Ziti currently has two APIs that it provides for configuration:</p>
+<ul>
+<li>Edge Management API</li>
+<li>Edge Client API</li>
+</ul>
+<h2 id="specifications--documentation">Specifications &amp; Documentation</h2>
+<p>Both the Edge Management and Client APIs have Open API 2.0 specifications. The most up-to-date versions of them are
+available within the <a href="https://github.com/openziti/edge/tree/main/specs">Ziti Edge GitHub repository</a>. They are also
+available from a running controller directly at:</p>
+<ul>
+<li>https://<host>:<port>/edge/client/v1/docs</port></host></li>
+<li>https://<host>:<port>/edge/management/v1/docs</port></host></li>
+</ul>
+<p>Where <code>&lt;host&gt;:&lt;port&gt;</code> should be replaced with the values configured for the APIs in the <a href="#web-configuration-section"><code>web</code> section</a></p>
+<h2 id="edge-management-api">Edge Management API</h2>
+<p>The Edge Management API is used by clients that wish to configure a Ziti network and does not facilitate to interacting
+with service for dialing (connecting) nor binding (hosting). The Edge Management API provides the ability to create
+new identities, identities, policies, and other entities used to manage a Ziti network.</p>
+<h2 id="edge-client-api">Edge Client API</h2>
+<p>The Edge Client API is used by clients that wish to dial (connect) or bind (host) services. The services that the
+clients are allowed to interact with is defined by <a href="../security/authorization/policies/overview.html">policies</a>. In order
+for clients to use the client API they must first <a href="../security/authentication/authentication.html">authenticate</a> and
+obtain either a <a href="../security/authentication/authentication.html#full-vs-partial-authentication">partial or fully authenticated</a>
+<a href="../security/sessions.html#">API Sessioon</a>.</p>
+<h2 id="edge-client--management-shared-capabilities">Edge Client &amp; Management Shared Capabilities</h2>
+<p>The Client and Management APIs both follow the <a href="shared-api-capabilities.html">shared API capabilities</a> common on
+all Ziti APIs. Addittionally between the two the following endpoint paths are exposed on both.</p>
+<ul>
+<li><code>current-identity</code> - facilitates the <ul>
+<li>/edge/management/v1/current-identity/*</li>
+<li>/edge/client/v1/current-api-session/*</li>
+</ul>
+</li>
+<li><code>current-api-session</code><ul>
+<li>/edge/client/v1/current-api-session/*</li>
+<li>/edge/management/v1/current-api-session/*</li>
+</ul>
+</li>
+</ul>
+<h2 id="configuring">Configuring</h2>
+<p>In order for the Edge Client and Management API to be available a controller must be configured to enable them. This 
+requires two configuration sections <code>edge</code> and <code>web</code>. The <code>edge</code> section configures values that will affect  both the
+Edge Client API and the Edge Management API. The <code>web</code> section is used to configure and compose any of Ziti&#39;s
+APIs, Edge Client and Management included, to listen on any combination of network interface and ports.</p>
+<h3 id="edge-configuration-section">Edge Configuration Section</h3>
+<p>The main <a href="https://github.com/openziti/ziti">Ziti GitHub repository</a> has<a href="https://github.com/openziti/ziti/blob/release-next/etc/">example configuration</a> 
+files. The <code>ctrl.with.edge.yml</code> file has all of the <code>edge</code> values documented.</p>
+<h4 id="example-edge-configuration-section">Example Edge Configuration Section</h4>
+<pre><code class="lang-yaml">edge:
+  api:
+    #(optional, default 90s) Alters how frequently heartbeat and last activity values are persisted
+    # activityUpdateInterval: 90s
+    #(optional, default 250) The number of API Sessions updated for last activity per transaction
+    # activityUpdateBatchSize: 250
+    # sessionTimeout - optional, default 10m
+    # The number of minutes before an Edge API session will timeout. Timeouts are reset by
+    # API requests and connections that are maintained to Edge Routers
+    sessionTimeout: 30m
+    # address - required
+    # The default address (host:port) to use for enrollment for the Client API. This value must match one of the addresses
+    # defined in a bind point&#39;s address field for the `edge-client` API in the web section.
+    address: 127.0.0.1:1280
+  # enrollment - required
+  # A section containing settings pertaining to enrollment.
+  enrollment:
+    # signingCert - required
+    # A Ziti Identity configuration section that specifically makes use of the cert and key fields to define
+    # a signing certificate from the PKI that the Ziti environment is using to sign certificates. The signingCert.cert
+    # will be added to the /.well-known CA store that is used to bootstrap trust with the Ziti Controller.
+    signingCert:
+      cert: ./ziti/etc/ca/intermediate/certs/intermediate.cert.pem
+      key: ./ziti/etc/ca/intermediate/private/intermediate.key.pem
+    # edgeIdentity - optional
+    # A section for identity enrollment specific settings
+    edgeIdentity:
+      # duration - optional, default 5m
+      # The length of time that a Ziti Edge Identity enrollment should remain valid. After
+      # this duration, the enrollment will expire and not longer be usable.
+      duration: 5m
+    # edgeRouter - Optional
+    # A section for edge router enrollment specific settings.
+    edgeRouter:
+      # duration - optional, default 5m
+      # The length of time that a Ziti Edge Router enrollment should remain valid. After
+      # this duration, the enrollment will expire and not longer be usable.
+      duration: 5m
+</code></pre><h3 id="web-configuration-section">Web Configuration Section</h3>
+<p>The <code>web</code> section of the controller is based off of the <a href="https://github.com/openziti/xweb">xweb</a> library. xweb allows
+a single configuration section to be used to compose multiple APIs across any number of network interfaces. Understanding
+the xweb configuration format is essential for success with configuring the <code>web</code> section in the controller.</p>
+<p>Ziti Edge exposes the following two xweb API bindings:</p>
+<ul>
+<li><code>edge-client</code> - the Edge Client API</li>
+<li><code>edge-management</code> - the Edge Management API</li>
+</ul>
+<p>Neither have any associated options in the <code>web</code> section.</p>
+<h4 id="example-web-configuration-section">Example Web Configuration Section</h4>
+<p>The main <a href="https://github.com/openziti/ziti">Ziti GitHub repository</a> has<a href="https://github.com/openziti/ziti/blob/release-next/etc/">example configuration</a>
+files. The <code>ctrl.with.edge.yml</code> file has all of the <code>web</code> values documented.</p>
+<pre><code class="lang-yaml"># web - optional
+# Defines webListeners that will be hosted by the controller. Each webListener can host many APIs and be bound to many
+# bind points.
+web:
+# name - required
+# Provides a name for this listener, used for logging output. Not required to be unique, but is highly suggested.
+- name: all-apis-localhost
+  # bindPoints - required
+  # One or more bind points are required. A bind point specifies an interface (interface:port string) that defines
+  # where on the host machine the webListener will listen and the address (host:port) that should be used to
+  # publicly address the webListener(i.e. mydomain.com, localhost, 127.0.0.1). This public address may be used for
+  # incoming address resolution as well as used in responses in the API.
+  bindPoints:
+  #interface - required
+  # A host:port string on which network interface to listen on. 0.0.0.0 will listen on all interfaces
+    - interface: 127.0.0.1:1280
+
+      # address - required
+      # The public address that external incoming requests will be able to resolve. Used in request processing and
+      # response content that requires full host:port/path addresses.
+      address: 127.0.0.1:1280
+
+      # newAddress - optional
+      # A host:port string which will be sent out as an HTTP header &quot;ziti-new-address&quot; if specified. If the header
+      # is present, clients should update location configuration to immediately use the new address for future
+      # connections. The value of newAddress must be resolvable both via DNS and validate via certificates
+      newAddress: localhost:1280
+  # identity - optional
+  # Allows the webListener to have a specific identity instead of defaulting to the root `identity` section.
+  #    identity:
+  #      cert:                 ${ZITI_SOURCE}/ziti/etc/ca/intermediate/certs/ctrl-client.cert.pem
+  #      server_cert:          ${ZITI_SOURCE}/ziti/etc/ca/intermediate/certs/ctrl-server.cert.pem
+  #      key:                  ${ZITI_SOURCE}/ziti/etc/ca/intermediate/private/ctrl.key.pem
+  #      ca:                   ${ZITI_SOURCE}/ziti/etc/ca/intermediate/certs/ca-chain.cert.pem
+  # options - optional
+  # Allows the specification of webListener level options - mainly dealing with HTTP/TLS settings. These options are
+  # used for all http servers started by the current webListener.
+  options:
+  # idleTimeout - optional, default 5000ms
+  # The maximum amount of idle time in milliseconds allowed for pipelined HTTP requests. Setting this too high
+  # can cause resources on the host to be consumed as clients remain connected and idle. Lowering this value
+  # will cause clients to reconnect on subsequent HTTPs requests.
+  idleTimeout: 5000ms  #http timeouts, new
+
+  # readTimeout - optional, default 5000ms
+  # The maximum amount of time in milliseconds http servers will wait to read the first incoming requests. A higher
+  # value risks consuming resources on the host with clients that are acting bad faith or suffering from high latency
+  # or packet loss. A lower value can risk losing connections to high latency/packet loss clients.
+
+  readTimeout: 5000ms
+  # writeTimeout - optional, default 10000ms
+  # The total maximum time in milliseconds that the http server will wait for a single requests to be received and
+  # responded too. A higher value can allow long running requests to consume resources on the host. A lower value
+  # can risk ending requests before the server has a chance to respond.
+
+  writeTimeout: 100000ms
+  # minTLSVersion - optional, default TSL1.2
+  # The minimum version of TSL to support
+
+  minTLSVersion: TLS1.2
+  # maxTLSVersion - optional, default TSL1.3
+  # The maximum version of TSL to support
+
+  maxTLSVersion: TLS1.3
+  # apis - required
+  # Allows one or more APIs to be bound to this webListener
+  apis:
+  # binding - required
+  # Specifies an API to bind to this webListener. Built-in APIs are
+  #   - health-checks
+  #   - edge-management
+  #   - edge-client
+  #   - fabric-management
+    - binding: health-checks
+      options: { }
+    - binding: fabric
+    - binding: edge-management
+      # options - variable optional/required
+      # This section is used to define values that are specified by the API they are associated with.
+      # These settings are per API. The example below is for the `edge-api` and contains both optional values and
+      # required values.
+      options: { }
+    - binding: edge-client
+      options: { }
+</code></pre></article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/apis/edge-apis.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©NetFoundry Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

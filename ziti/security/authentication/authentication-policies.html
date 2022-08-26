@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Ziti </title>
+    <title>Authentication Policies | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Ziti ">
+    <meta name="title" content="Authentication Policies | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     
     <!--span>this is text</span-->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -62,22 +62,22 @@
                     </div>
                     <div style="position: relative">
                         <a href="https://github.com/openziti">
-                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                            <img src="../../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://openziti.discourse.group">
-                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://twitter.com/openziti">
-                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                            <img src="../../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
-                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                            <img src="../../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
                         </a>
                     </div>
                 </div>
@@ -120,29 +120,88 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="authentication-policies">Authentication Policies</h1>
 
-<ol>
-<li>On the left side nav bar, click &quot;Ziti Policies&quot;</li>
-<li>On the top nav bar, click &quot;Service Edge Router Policies&quot;</li>
-<li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Service Edge Router Policy</li>
-<li>Choose a name for the Service Edge Router Policy, such as &quot;My Service Edge Router Policy&quot;</li>
-<li>Enter the services you want to include in the policy<ol>
-<li>Specific services can be referenced by ID or name using <code>@</code>.  For example, a service called <code>ssh</code> can be referenced using <code>@ssh</code>. </li>
-<li>Services can be referenced by role attribute using <code>#</code>. For example, any service which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the service roles list.</li>
-</ol>
-</li>
-<li>Enter the services you want to include in the policy<ol>
-<li>Specific services can be referenced by ID or name using <code>@</code>.  For example, a service called <code>ssh</code> can be referenced using <code>@ssh</code>. </li>
-<li>Services can be referenced by role attribute using <code>#</code>. For example, any service which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the service roles list.</li>
-</ol>
-</li>
-<li>Specify the role semantic<ol>
-<li>If you select <code>Has Any Role</code> then if you specify multiple roles then all entities which include <strong>any</strong> of the roles will be included.</li>
-<li>If you select <code>Must Have All Roles</code>, then if you specify multiple roles then only entities which include <strong>all</strong> of the given roles will be included    </li>
-</ol>
-</li>
-<li>Click save</li>
-</ol>
+<p>Authentication Policies restrict the <a href="authentication.html#primary-authentication">primary authentication</a> methods available to 
+identities and may enforce additional <a href="authentication.html#secondary-authentication">secondary authentication</a> factors. Ziti is
+deployed with a default authentication policy that has the id <code>default</code>. This authentication policy may be updated,
+but not deleted. This default authentication policy is used when identities are created and an authentication
+policy is not specified.</p>
+<p>Example: Authentication Policy</p>
+<pre><code class="lang-json">{
+    &quot;createdAt&quot;: &quot;2022-05-20T14:02:53.359Z&quot;,
+    &quot;id&quot;: &quot;default&quot;,
+    &quot;tags&quot;: {},
+    &quot;updatedAt&quot;: &quot;2022-05-20T14:02:53.359Z&quot;,
+    &quot;name&quot;: &quot;Default&quot;,
+    &quot;primary&quot;: {
+        &quot;cert&quot;: {
+            &quot;allowExpiredCerts&quot;: true,
+            &quot;allowed&quot;: true
+        },
+        &quot;extJwt&quot;: {
+            &quot;allowed&quot;: true,
+            &quot;allowedSigners&quot;: null
+        },
+        &quot;updb&quot;: {
+            &quot;allowed&quot;: true,
+            &quot;lockoutDurationMinutes&quot;: 0,
+            &quot;maxAttempts&quot;: 0
+        }
+    },
+    &quot;secondary&quot;: {
+        &quot;requireTotp&quot;: false,
+        &quot;requireExtJwt&quot;: &quot;&quot;
+    }
+}
+</code></pre><h1 id="sections">Sections</h1>
+<p>An authentication policy is split into two separate major sections:</p>
+<ul>
+<li>primary - initial authentication to establish the authenticating principal</li>
+<li>secondary - additional MFA authentication challenges</li>
+</ul>
+<h2 id="primary">Primary</h2>
+<p>The primary section allow or disposals various authentication mechanisms used to establish the initial principal
+(identity) authenticating. A viable authentication policy must allow at least one primary authentication mechanism.</p>
+<ul>
+<li>cert - x509 certificate based authentication</li>
+<li>extJwt - externally signed JWT bearer tokens</li>
+<li>updb - &quot;username password database&quot; which power traditional username/password authentication</li>
+</ul>
+<h3 id="certificate-cert">Certificate (cert)</h3>
+<p>Fields:</p>
+<ul>
+<li>allowed - enables/disabled x509 certificate authentication</li>
+<li>allowExpiredCerts - allows expired client certificates to authenticate</li>
+</ul>
+<p>When certificate authentication is <code>allowed</code>, client certificates issued by the Ziti PKI and any verified and enabled
+<a href="third-party-cas.html">3rd Party CAs</a> become valid authentication paths. When disabled an identity will not be able
+to authenticate with any client certificate.</p>
+<p>If <code>allowExpiredCerts</code> is true, client certificate expiration will be ignored during validation. This setting is 
+useful in scenarios where client are running software that has lapsed and cannot be re-enrolled or their client
+certificates cannot be updated. Clients do have an API available to them to roll existing Ziti PKI issued client 
+certificates forward. Client certificates issued by a <a href="third-party-cas.html">3rd Party CAs</a> must have an external
+process to maintain client certificate validity if <code>allowExpiredCerts</code> is false.</p>
+<h3 id="external-jwt-signers-extjwt">External JWT Signers (extJwt)</h3>
+<p>Fields:</p>
+<ul>
+<li>allowed - whether external JWTs may be used for authentication</li>
+<li>allowedSigners - the ids of valid <a href="external-jwt-signers.html">External JWT Signers</a></li>
+</ul>
+<p>If <code>allowed</code> is true the <a href="external-jwt-signers.html">External JWT Signers</a> specified in the <code>allowedSigners</code> field
+may be used for authentication.</p>
+<h3 id="username-password-updb">Username Password (updb)</h3>
+<ul>
+<li>allowed - whether UPDB may be used for authentication</li>
+<li>maxAttempts - the maximum number of invalid logins allowed before an identity is locked for <code>lockoutDurationMinutes</code>, 0 for never</li>
+<li>lockoutDurationMinutes - the number of minutes to lock identities after <code>maxAttempts</code> is reached, 0 for forever</li>
+</ul>
+<h2 id="secondary">Secondary</h2>
+<p>The secondary section contain only two top-level configuration values:</p>
+<ul>
+<li>requireTotp - if true authenticating clients must have <a href="totp.html">MFA TOTP</a> enabled</li>
+<li>requireExtJwt - if set to an id of an <a href="external-jwt-signers.html">External JWT Signer</a> every request must have a valid JWT in the HTTP <code>Authentication</code> header</li>
+</ul>
 </article>
           </div>
           
@@ -151,7 +210,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/policies/create-service-edge-router-policy-ui.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/security/authentication/authentication-policies.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -179,8 +238,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>

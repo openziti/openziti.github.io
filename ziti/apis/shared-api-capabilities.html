@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Shared API Capabilities | Ziti </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Shared API Capabilities | Ziti ">
+    <meta name="generator" content="docfx 2.x">
+    
+    <link rel="shortcut icon" href="../../images/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+    <!--span>this is text</span-->
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+    <meta name="google-site-verification" content="jfzf3259Xh6i82RehhnKg4aAsHd02v1MB-jP43wEqHI">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-THVRRJ3GLE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+  
+      gtag('config', 'G-THVRRJ3GLE');
+    </script>
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div style="display: flex;">
+                    <div class="form-group" style="valign: center;position: relative;">
+                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                    </div>
+                    <div style="position: relative">
+                        &nbsp;
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://github.com/openziti">
+                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://openziti.discourse.group">
+                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://twitter.com/openziti">
+                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                        </a>
+                    </div>
+                    <div style="position: relative">
+                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
+                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                        </a>
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default" name="new">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+          <div style="display:flex; align-items: center; justify-content: center; flex-direction:row; position: relative; width: 100%; text-align: center;     background: rgb(0,104,247);
+            background: linear-gradient(90deg, rgba(0,104,247,1) 0%, rgba(222,14,91,1) 100%);">
+            <span style="margin-top: 5px; color: white; margin-right: 10px; height:25px">Star us on GitHub</span>
+            <span style="margin-top: 5px;"><a class="github-button" href="https://github.com/openziti/ziti" data-icon="octicon-star" data-show-count="true" aria-label="Star openziti/ziti on GitHub">Star</a></span>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="shared-api-capabilities">Shared API Capabilities</h1>
+
+<h2 id="api-response-envelopes">API Response Envelopes</h2>
+<p>All responses from APIs have the following outer envelope:</p>
+<pre><code class="lang-json">{
+  &quot;data&quot;: ...,
+  &quot;meta&quot;: {...},
+  &quot;error&quot;: {...}
+}
+</code></pre><p>The <code>data</code> and <code>error</code> fields are mutually exclusive. Responses are either a data response or an error. The <code>data</code>
+section represents the subject or output information of the client&#39;s request. The <code>meta</code> section contains additional
+information about the requested entity that may be useful to clients (e.g. pagination, sortable fields, etc.).</p>
+<p>The <code>error</code> section contains errors in the following format:</p>
+<pre><code class="lang-json">{
+  &quot;code&quot;: &quot;string constant error code&quot;,
+  &quot;message&quot;: &quot;string human readable value&quot;,
+  &quot;cause&quot;: ... //[nested error|field error]
+}
+</code></pre><p>The <code>cause</code> field can either be another nested <code>error</code> or a <code>field error</code>:</p>
+<pre><code class="lang-json">{
+  &quot;field&quot;: &quot;the name of the field&quot;,
+  &quot;reason&quot;: &quot;a message explaining the issue&quot;,
+  &quot;value&quot;: ... //the provided value
+}
+</code></pre><h2 id="filtering-sorting--pagination">Filtering, Sorting, &amp; Pagination</h2>
+<p>API support rich filtering, sorting and pagination on queries that return lists/arrays of objects in the <code>data</code> fields. 
+On list responses the <code>meta</code> section contains a list of <code>sortableFields</code> which can filtered and sorted upon. 
+All values are provided in the <code>filter</code> URL query field.</p>
+<p>Example: <code>https://my-controller/edge/v1/management/identities?filter=&lt;filterValue&gt;</code></p>
+<p>The value of <code>filter</code> (denoted by <code>&lt;filterValue&gt;</code>) is defined by the <a href="https://github.com/openziti/storage/blob/main/zitiql/ZitiQl.g4">ZitiQl grammar definition</a>.</p>
+<h3 id="pagination">Pagination</h3>
+<p>Data can be paginated through by providing a <code>filter</code> value with <code>skip</code> and/or <code>limit</code> clauses. For example to show:</p>
+<ul>
+<li>the first page of 10 items:  <code>filter=skip 0 limit 10</code></li>
+<li>the second page of 10 items:  <code>filter=skip 10 limit 10</code></li>
+</ul>
+<h3 id="sorting">Sorting</h3>
+<p>Data can be sorted on fields by providing a <code>sort by</code> clause:</p>
+<ul>
+<li>sort by name ascending: <code>filter=sort by name asc</code></li>
+<li><ul>
+<li>sort by name descending: <code>filter=sort by name dsc</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="filtering">Filtering</h3>
+<h4 id="logical-operations">Logical Operations</h4>
+<p>The following comparisons are allowed:</p>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>=</code>, <code>!=</code></td>
+<td><code>name = &quot;myName&quot;</code>, <code>&quot;isOnline&quot; = true</code></td>
+</tr>
+<tr>
+<td><code>&lt;</code>, <code>&gt;</code>, <code>&lt;=</code>, <code>&gt;=</code></td>
+<td><code>precident &gt; 0</code></td>
+</tr>
+<tr>
+<td><code>contains</code>, <code>not contains</code></td>
+<td><code>name contains &quot;hi&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="logical-conjunctions">Logical Conjunctions</h4>
+<table>
+<thead>
+<tr>
+<th>Conjunction</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>and</code></td>
+<td><code>firstName = &quot;bob&quot; and lastName = &quot;builder&quot;</code></td>
+</tr>
+<tr>
+<td><code>or</code></td>
+<td><code>firstName = &quot;bob&quot; or firstName = &quot;jim&quot;</code></td>
+</tr>
+</tbody>
+</table>
+<p>Complex conjunction grouping and nesting is supported via <code>(</code> and <code>)</code>.</p>
+<p><strong>Example:</strong> <code>firstName = &quot;bob&quot; or (firstName = &quot;jim&quot; and lastName = &quot;john&quot; or (&quot;isOnline&quot; = false))</code></p>
+<h4 id="types">Types</h4>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td><code>&quot;this is a string&quot;</code></td>
+</tr>
+<tr>
+<td><code>number</code></td>
+<td><code>1</code>, <code>1.555</code>, <code>2e5</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>true</code>, <code>false</code></td>
+</tr>
+<tr>
+<td><code>date_time</code> (RFC3339) (</td>
+<td><code>datetime(2019-10-12T07:20:50.52+07:00)</code></td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td><code>[&quot;str&quot;, &quot;str&quot;]</code>, <code>[1,2,3.5]</code>, <code>[datetime(...), datetime(...)]</code></td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/apis/shared-api-capabilities.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span class='pull-left'><span><a href='https://netfoundry.io'>©NetFoundry Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

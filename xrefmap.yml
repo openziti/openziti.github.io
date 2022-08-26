@@ -483,6 +483,12 @@ references:
 - uid: zitiOverview
   name: Overview
   href: ziti/overview.html
+- uid: zitiSecurityOverview
+  name: Overview
+  href: ziti/security/overview.html
+- uid: zitiSecurityPostureChecks
+  name: Posture Checks
+  href: ziti/security/authorization/posture-checks.html
 - uid: zitiSoftwareArchitecture
   name: Software Architecture
   href: ziti/software-architecture.html

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Creating a Service Policy | Ziti </title>
+    <title>Fabric APIs | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Creating a Service Policy | Ziti ">
+    <meta name="title" content="Fabric APIs | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
     <link rel="shortcut icon" href="../../images/favicon.ico">
@@ -120,52 +120,9 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h2 id="creating-a-service-policy">Creating a Service Policy</h2>
+<h1 id="fabric-apis">Fabric APIs</h1>
 
-<div class="tabGroup" id="tabgroup_SXxbe2tTxO">
-<ul role="tablist">
-<li role="presentation">
-<a href="#tabpanel_SXxbe2tTxO_tabid-new-service-policy-ui" role="tab" aria-controls="tabpanel_SXxbe2tTxO_tabid-new-service-policy-ui" data-tab="tabid-new-service-policy-ui" tabindex="0" aria-selected="true">New Service Policy via UI</a>
-</li>
-<li role="presentation">
-<a href="#tabpanel_SXxbe2tTxO_tabid-new-service-policy-cli" role="tab" aria-controls="tabpanel_SXxbe2tTxO_tabid-new-service-policy-cli" data-tab="tabid-new-service-policy-cli" tabindex="-1">New Service Policy via CLI</a>
-</li>
-</ul>
-<section id="tabpanel_SXxbe2tTxO_tabid-new-service-policy-ui" role="tabpanel" data-tab="tabid-new-service-policy-ui">
-<ol>
-<li>On the left side nav bar, click &quot;Ziti Policies&quot;</li>
-<li>On the top nav bar, click &quot;Service Policies&quot;</li>
-<li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Service Policy</li>
-<li>Choose a name for the Service Policy, such as &quot;My Service Policy&quot;</li>
-<li>Select &quot;Dial&quot; or &quot;Bind&quot; in the Type dropdown<ol>
-<li>Dial policies allow identities to use or connect to the service</li>
-<li>Bind policies allow identities to host or provide the service</li>
-</ol>
-</li>
-<li>Enter the services you want to include in the policy<ol>
-<li>Specific services can be referenced by ID or name using <code>@</code>.  For example, a service called <code>ssh</code> can be referenced using <code>@ssh</code>. </li>
-<li>Services can be referenced by role attribute using <code>#</code>. For example, any service which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the service roles list.</li>
-</ol>
-</li>
-<li>Enter the identities you want to include in the policy<ol>
-<li>Specific identities can be referenced by ID or name using <code>@</code>.  For example, as identity called <code>jsmith-desktop</code> can be referenced using <code>@jsmith-desktop</code>. </li>
-<li>Identities can be referenced by role attribute using <code>#</code>. For example, any identity which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the identities roles list.</li>
-</ol>
-</li>
-<li>Specify the role semantic<ol>
-<li>If you select <code>Has Any Role</code> then if you specify multiple roles then all entities which include <strong>any</strong> of the roles will be included.</li>
-<li>If you select <code>Must Have All Roles</code>, then if you specify multiple roles then only entities which include <strong>all</strong> of the given roles will be included    </li>
-</ol>
-</li>
-<li>Click save</li>
-</ol>
-</section>
-<section id="tabpanel_SXxbe2tTxO_tabid-new-service-policy-cli" role="tabpanel" data-tab="tabid-new-service-policy-cli" aria-hidden="true" hidden="hidden">
-<p>To create a Service Policy using the CLI issue the following commands. (ensure you are <a href="../cli-snippets/login.html">logged in</a>)</p>
-<pre><code># Create a service policy named &#39;my-policy&#39; which allows all identities to dial/connect to all services 
-ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; --service-roles &#39;#all&#39;
-</code></pre></section>
-</div>
+<p>This section is a stub. It needs to be completed.</p>
 </article>
           </div>
           
@@ -174,7 +131,7 @@ ziti edge create service-policy my-policy Dial --identity-roles &#39;#all&#39; -
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/policies/creating-service-policies.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/apis/fabric-apis.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

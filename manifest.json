@@ -1817,6 +1817,42 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/apis/edge-apis.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/apis/edge-apis.html",
+          "hash": "8yOiaEzEb+XPDoJ/czpVLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/apis/fabric-apis.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/apis/fabric-apis.html",
+          "hash": "Z4FCg8TutOlBmR9f0qwMBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/apis/shared-api-capabilities.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/apis/shared-api-capabilities.html",
+          "hash": "Ai+g0Gq/tglV8YL1eb6KHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/cli-snippets/login.md",
       "output": {
         ".html": {
@@ -2217,7 +2253,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/identities/overview.html",
-          "hash": "/D6migj35nlIZWxLfZiPlQ=="
+          "hash": "pAQcbcHOr2SdHGg2X/4eoA=="
         }
       },
       "is_incremental": false,
@@ -2442,127 +2478,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/overview.html",
-          "hash": "QSserCyIFqrDq24WF+xUvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-edge-router-policy-cli.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-edge-router-policy-cli.html",
-          "hash": "Y4YoUTrlgkdI03T2oWWyZQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-edge-router-policy-ui.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-edge-router-policy-ui.html",
-          "hash": "vh5DubFAyffsf+I5s6KPJg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-service-edge-router-policy-cli.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-service-edge-router-policy-cli.html",
-          "hash": "tAn1KhZ9/wDXkH52ZP97UQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-service-edge-router-policy-ui.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-service-edge-router-policy-ui.html",
-          "hash": "XxOhTTZwbqynmCCMEoskbQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-service-policy-cli.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-service-policy-cli.html",
-          "hash": "iHCY35UMHiEbhRuf98yiTw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/create-service-policy-ui.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/create-service-policy-ui.html",
-          "hash": "Mmqj/r4eK+hcDSjiLzv4aQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/creating-edge-router-policies.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/creating-edge-router-policies.html",
-          "hash": "4sn3OYOwiZQ3sWj7GAyHFw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/creating-service-edge-router-policies.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/creating-service-edge-router-policies.html",
-          "hash": "W3o95shIW8Sg9FRDzn5yIA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/creating-service-policies.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/creating-service-policies.html",
-          "hash": "NxI4E1KFjhK17ijp4ewLYQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "ziti/policies/overview.md",
-      "output": {
-        ".html": {
-          "relative_path": "ziti/policies/overview.html",
-          "hash": "U1d+duEctoqyWZ/3kcpzNw=="
+          "hash": "jh3m17Gognyk4hMrgZtJ7w=="
         }
       },
       "is_incremental": false,
@@ -2658,7 +2574,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/quickstarts/network/common-quickstart.html",
-          "hash": "n6DRY73KTgsfPkBaDa+F9A=="
+          "hash": "twXojD/Wlo6ZI6FCRc1oJg=="
         }
       },
       "is_incremental": false,
@@ -2875,6 +2791,294 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/api-session-certificates.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/api-session-certificates.html",
+          "hash": "bHQWEW6eym8Uc0Zrw6/R/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/authentication-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/authentication-policies.html",
+          "hash": "glPgotuxu9V74TDf7bYMog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/authentication.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/authentication.html",
+          "hash": "ucvl3vH7kPgvr9YBfHX/kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/certificate-management.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/certificate-management.html",
+          "hash": "Yx27tpGoVS+PkZcByov+xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/external-jwt-signers.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/external-jwt-signers.html",
+          "hash": "3cMAavGlg7HAV2/E6CVpgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/identities.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/identities.html",
+          "hash": "6oINHB9iTjl7aHDbwd6BhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/password-management.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/password-management.html",
+          "hash": "kx+aGO2I2CyYitra54qUHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/third-party-cas.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/third-party-cas.html",
+          "hash": "ufxVabUisP38KktWrAB/ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authentication/totp.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authentication/totp.html",
+          "hash": "ismT0yNDZY48DdEJo79C7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/authorization.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/authorization.html",
+          "hash": "EXi1CUU4G3EzO3uSTQEeuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-edge-router-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-edge-router-policy-cli.html",
+          "hash": "E+MBKL9dCyGa9wKS8Ho13w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-edge-router-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-edge-router-policy-ui.html",
+          "hash": "/LlbN3JZ5GSExv80u4rlLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-service-edge-router-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-service-edge-router-policy-cli.html",
+          "hash": "7fyw3+NzZzWgP/d24XJdZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-service-edge-router-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-service-edge-router-policy-ui.html",
+          "hash": "WnAeZgulcu1BQLbbCN6fRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-service-policy-cli.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-service-policy-cli.html",
+          "hash": "KedKuzcVFnDf02xnAsOQTA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/create-service-policy-ui.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/create-service-policy-ui.html",
+          "hash": "QoEgvAPdoraNJ/zDm8XS/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/creating-edge-router-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/creating-edge-router-policies.html",
+          "hash": "SFi6Rlu4qlmpGT3ubbTHtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/creating-service-edge-router-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/creating-service-edge-router-policies.html",
+          "hash": "abgvY3d8OBj1Hf4F4P0eng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/creating-service-policies.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/creating-service-policies.html",
+          "hash": "3JEacD5Aj4FhgSjdh2xD6A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/policies/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/policies/overview.html",
+          "hash": "QovdgslVdeehF/teHyBn8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/authorization/posture-checks.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/authorization/posture-checks.html",
+          "hash": "KKxmKcIAEULDsxNqU1o8lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/enrollment/enrollment.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/enrollment/enrollment.html",
+          "hash": "qiGQfG4+DY9Ezu1jS96X8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/overview.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/overview.html",
+          "hash": "c91y1X/ikDjji2zyTttlzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/security/sessions.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/security/sessions.html",
+          "hash": "zcgPKiSrcFpdUzPf/brCKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "ziti/services/create-service-cli.md",
       "output": {
         ".html": {
@@ -2903,7 +3107,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/services/overview.html",
-          "hash": "tpijTjy4/oN4NXMvEIhxuw=="
+          "hash": "xML5T7gg14QV8t+T04e7wg=="
         }
       },
       "is_incremental": false,
@@ -2927,7 +3131,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "Jc9Mc4pWs7eRnt7aDR22EA=="
+          "hash": "3OiievwC5ZJDChYKUUVdeA=="
         }
       },
       "is_incremental": false,
@@ -2948,7 +3152,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 120,
+          "total_file_count": 137,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

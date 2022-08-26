@@ -5,19 +5,19 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title> | Ziti </title>
+    <title>API Session Certificates | Ziti </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content=" | Ziti ">
+    <meta name="title" content="API Session Certificates | Ziti ">
     <meta name="generator" content="docfx 2.x">
     
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
+    <link rel="shortcut icon" href="../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../styles/main.css">
+    <meta property="docfx:navrel" content="../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
     
-    <meta property="docfx:rel" content="../../">
+    <meta property="docfx:rel" content="../../../">
     
     <!--span>this is text</span-->
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
@@ -47,8 +47,8 @@
                 <span class="icon-bar"></span>
               </button>
               
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
+              <a class="navbar-brand" href="../../../index.html">
+                <img id="logo" class="svg" src="../../../images/ziti-logo-40.png" alt="">
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -62,22 +62,22 @@
                     </div>
                     <div style="position: relative">
                         <a href="https://github.com/openziti">
-                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
+                            <img src="../../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://openziti.discourse.group">
-                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
+                            <img src="../../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://twitter.com/openziti">
-                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
+                            <img src="../../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
                         </a>
                     </div>
                     <div style="position: relative">
                         <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
-                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
+                            <img src="../../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
                         </a>
                     </div>
                 </div>
@@ -120,34 +120,51 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
+<h1 id="api-session-certificates">API Session Certificates</h1>
 
-<ol>
-<li>On the left side nav bar, click &quot;Ziti Policies&quot;</li>
-<li>On the top nav bar, click &quot;Service Policies&quot;</li>
-<li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Service Policy</li>
-<li>Choose a name for the Service Policy, such as &quot;My Service Policy&quot;</li>
-<li>Select &quot;Dial&quot; or &quot;Bind&quot; in the Type dropdown<ol>
-<li>Dial policies allow identities to use or connect to the service</li>
-<li>Bind policies allow identities to host or provide the service</li>
-</ol>
-</li>
-<li>Enter the services you want to include in the policy<ol>
-<li>Specific services can be referenced by ID or name using <code>@</code>.  For example, a service called <code>ssh</code> can be referenced using <code>@ssh</code>. </li>
-<li>Services can be referenced by role attribute using <code>#</code>. For example, any service which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the service roles list.</li>
-</ol>
-</li>
-<li>Enter the identities you want to include in the policy<ol>
-<li>Specific identities can be referenced by ID or name using <code>@</code>.  For example, as identity called <code>jsmith-desktop</code> can be referenced using <code>@jsmith-desktop</code>. </li>
-<li>Identities can be referenced by role attribute using <code>#</code>. For example, any identity which has the <code>sales</code> role attribute will be included if <code>#sales</code> is included in the identities roles list.</li>
-</ol>
-</li>
-<li>Specify the role semantic<ol>
-<li>If you select <code>Has Any Role</code> then if you specify multiple roles then all entities which include <strong>any</strong> of the roles will be included.</li>
-<li>If you select <code>Must Have All Roles</code>, then if you specify multiple roles then only entities which include <strong>all</strong> of the given roles will be included    </li>
-</ol>
-</li>
-<li>Click save</li>
-</ol>
+<p>API Session Certificates are ephemeral short-lived x509 certificates that can be created through a CSR process after
+an API Session is <a href="authentication.html#full-vs-partial-authentication">fully authenticated</a>. </p>
+<h2 id="lifecycle--scope">Lifecycle &amp; Scope</h2>
+<p>The certificates are scoped by the &quot;valid before&quot; and &quot;valid after&quot; dates in addition to the API Session. If an API Session is 
+removed (expiration, logout, etc.) the API Session Certificates created by that API Session are no longer valid.</p>
+<p>API Session Certificates may only be used by the API Session that created them. Attempting to use an API Session
+Certificate to connect to and Edge Router without the matching API Session security token will be rejected.</p>
+<h2 id="use">Use</h2>
+<p>API Session Certificates are useful for identities that do not use x509 certificates as a primary authentication mechanism.
+API Sessions that use x509 certificates during primary authentication can use that  certificate for connections to
+Edge Routers. For non-x509 primary authentication mechanisms (JWT, UPDB, etc.) API Session Certificates must be used
+as no certificates will be available for use to connect to Edge Routers.</p>
+<h2 id="creation">Creation</h2>
+<p>API Session Certificates can be created by <code>POST /edge/client/v1/current-api-session/certificates</code>. The payload
+needs to be a valid PEN encoded CSR in the <code>csr</code> field. The CSR should contain at minimum subject information.
+Sensitive fields such as key usage will be ignored. Additional Ziti specific SANs information
+may be added.</p>
+<h3 id="request-payload">Request Payload</h3>
+<pre><code class="lang-json">{
+  &quot;csr&quot;: &quot;-----BEGIN CERTIFICATE REQUEST-----\nMIICij...\n-----END CERTIFICATE REQUEST-----&quot;
+}
+</code></pre><h3 id="response-payload">Response Payload</h3>
+<pre><code class="lang-json">{
+    &quot;data&quot;: {
+        &quot;_links&quot;: {
+            &quot;self&quot;: {
+                &quot;href&quot;: &quot;./current-api-session/certificates/URjzX9U1U&quot;
+            }
+        },
+        &quot;id&quot;: &quot;URjzX9U1U&quot;,
+        &quot;cas&quot;: &quot;\n-----BEGIN CERTIFICATE-----\nMII...\n-----END CERTIFICATE-----\n&quot;,
+        &quot;certificate&quot;: &quot;-----BEGIN CERTIFICATE-----\nMII...\n-----END CERTIFICATE-----\n&quot;
+    },
+    &quot;meta&quot;: {}
+}
+</code></pre><h2 id="list--detail">List &amp; Detail</h2>
+<p>API Session certificates for the current API Session may be </p>
+<ul>
+<li>listed: <code>GET /edge/client/v1/current-api-session/certificates</code></li>
+<li>detailed: <code>GET /edge/client/v1/current-api-session/certificates/&lt;id&gt;</code></li>
+</ul>
+<h2 id="delete">Delete</h2>
+<p>API Session Certificates may be removed via <code>DELETE /edge/client/v1/current-api-session/certificates/&lt;id&gt;</code></p>
 </article>
           </div>
           
@@ -156,7 +173,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/policies/create-service-policy-ui.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/ziti/security/authentication/api-session-certificates.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
@@ -184,8 +201,8 @@
       </footer>
     </div>
     
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../styles/main.js"></script>
   </body>
 </html>
