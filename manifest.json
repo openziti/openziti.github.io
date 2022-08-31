@@ -2413,12 +2413,23 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "ziti/metrics/MetricsReference.png",
+      "output": {
+        "resource": {
+          "relative_path": "ziti/metrics/MetricsReference.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "ziti/metrics/file.md",
       "output": {
         ".html": {
           "relative_path": "ziti/metrics/file.html",
-          "hash": "WhS0dJS0Jw/JUl4P+45j7w=="
+          "hash": "CJ/hlZ0bi0kww3Db49nu0A=="
         }
       },
       "is_incremental": false,
@@ -2442,7 +2453,19 @@
       "output": {
         ".html": {
           "relative_path": "ziti/metrics/metric-types.html",
-          "hash": "tLq78CGbpFGC1HFFqBplIQ=="
+          "hash": "RZZMb0QCmxCiiQuU9h7Dgw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "ziti/metrics/metrics.md",
+      "output": {
+        ".html": {
+          "relative_path": "ziti/metrics/metrics.html",
+          "hash": "yOcxN32IkctCGtCKJEwCwQ=="
         }
       },
       "is_incremental": false,
@@ -3152,7 +3175,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 137,
+          "total_file_count": 138,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

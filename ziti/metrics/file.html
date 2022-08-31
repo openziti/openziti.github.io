@@ -234,7 +234,83 @@ events:
 <h2 id="intvaluefloatvalue">intValue/floatValue</h2>
 <p>A gauge of a single value.  The value is the current metric value, and can go up and down over time</p>
 <h2 id="histogram">Histogram</h2>
-<p>Standard histogram with:</p>
+<p>  Histogram metrics utilize the Go metrics module, and are set to a 128 sample exponentially decaying bucket with a alpha value of .015.  This is important to understand, especially in reference to minimum and maximum values.  The bucket is sample bound, not time bound.  In practice this means one will often see a maximum or minimum value that carries on for several time samples; this is expected behavior.  The histogram implementation allows for extremely fast and memory efficient data collection.  As some of the metrics are multiplied by multiple levels of cardinality, it is critical to maintaining the operations of the software.</p>
+<p>  An exponentially decaying histogram means that as the samples age across the 128 sample window, they are weighted less than the newer samples.  This makes functions, such as the mean, which is often used, able to respond more quickly to changes than a straight sliding window.  An alpha value of .015 means that the sample weights range from 1 (the newest sample) to approximately .93.  This means that when calculating the mean, the oldest sample in the window is weighted to 93%, reducing its contribution to the function.</p>
+<p>  A simple weighting exercise:
+    Given 3 samples, 10, 5, and 5, how does the weighting and order affect the mean function?</p>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Weight</th>
+<th>Weighted Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10</td>
+<td>1.0</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>.95</td>
+<td>4.75</td>
+</tr>
+<tr>
+<td>5</td>
+<td>.90</td>
+<td>4.5</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>2.85</td>
+<td>19.25</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>19.25/2.85</td>
+<td>6.75</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Sample</th>
+<th>Weight</th>
+<th>Weighted Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5</td>
+<td>1.0</td>
+<td>5.0</td>
+</tr>
+<tr>
+<td>5</td>
+<td>.95</td>
+<td>4.75</td>
+</tr>
+<tr>
+<td>10</td>
+<td>.90</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>Sum</td>
+<td>2.85</td>
+<td>18.75</td>
+</tr>
+<tr>
+<td>Mean</td>
+<td>18.75/2.85</td>
+<td>6.58</td>
+</tr>
+</tbody>
+</table>
+<p>Standard histograms provide:</p>
 <ul>
 <li>min</li>
 <li>max</li>
@@ -251,8 +327,10 @@ events:
 </ul>
 </li>
 </ul>
-<h2 id="timer">Timer</h2>
-<p>Timer metric with:</p>
+<p>It is important to note the sample size (128) means the more specific percentiles will use the same actual values, and may be repetetive.</p>
+<h2 id="meter">Meter</h2>
+<p>Meters are used for rate measurements, how much of something happened per unit time.  The samples are exponentially decayed, similar to the histogram, however the values are bound to specific time intervals, such as 1, 5, and 15 minutes.  They can also provide similar statistical values to histograms</p>
+<p>Meter metric with:</p>
 <ul>
 <li>count</li>
 <li>m1_rate</li>
@@ -273,6 +351,26 @@ events:
 </ul>
 </li>
 </ul>
+<h2 id="timer">Timer</h2>
+<p>Timers provide statistical samples of timed events. </p>
+<ul>
+<li>min</li>
+<li>max</li>
+<li>mean</li>
+<li>std_dev</li>
+<li>variance</li>
+<li>percentiles<ul>
+<li>p50</li>
+<li>p75</li>
+<li>p95</li>
+<li>p99</li>
+<li>p999</li>
+<li>p9999</li>
+</ul>
+</li>
+</ul>
+<h2 id="gauge">Gauge</h2>
+<p>Gauges present a point in time measurement of a metric.  For example, the number of open database transactions at a given moment.</p>
 <h2 id="metric-examples">Metric Examples</h2>
 <h3 id="intvalue">intValue</h3>
 <pre><code>{
