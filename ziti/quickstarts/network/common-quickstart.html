@@ -136,16 +136,16 @@ remember to use a strong password which is not easy to guess.</p>
 <div class="TIP"><h5>Tip</h5><p>Once the password is changed - update the credentials.json file with the current password if you want the system to
 automatically update the certificates in the event of the image losing its IP address or DNS entry.</p>
 </div>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E_change-pwd-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E_change-pwd-ui" data-tab="change-pwd-ui" tabindex="0" aria-selected="true">Change via UI</a>
+<a href="#tabpanel_5p+RP4MJhE_change-pwd-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE_change-pwd-ui" data-tab="change-pwd-ui" tabindex="0" aria-selected="true">Change via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E_change-pwd-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E_change-pwd-cli" data-tab="change-pwd-cli" tabindex="-1">Change via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE_change-pwd-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE_change-pwd-cli" data-tab="change-pwd-cli" tabindex="-1">Change via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E_change-pwd-ui" role="tabpanel" data-tab="change-pwd-ui">
+<section id="tabpanel_5p+RP4MJhE_change-pwd-ui" role="tabpanel" data-tab="change-pwd-ui">
 <p>These AMIs will be provided with a self-signed certificate generated during securely during the bootup process. See
 <a href="../../manage/pki.html">changing pki</a> for more information.</p>
 <ol>
@@ -158,7 +158,7 @@ automatically update the certificates in the event of the image losing its IP ad
 </li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E_change-pwd-cli" role="tabpanel" data-tab="change-pwd-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE_change-pwd-cli" role="tabpanel" data-tab="change-pwd-cli" aria-hidden="true" hidden="hidden">
 <p>To change the administrator password using the CLI simply issue these commands:</p>
 <div class="NOTE"><h5>Note</h5><p>If you are not already, you will need to be logged in to use the ziti cli</p>
 </div>
@@ -176,16 +176,16 @@ ziti edge update authenticator updb -s
 <h2 id="create-an-identity">Create an Identity</h2>
 <p>All connections to Ziti are mutually authenticated TLS connections. Identites map a given certificate to an identity
 within the Ziti Controller. Read more about Identities <a href="../../identities/overview.html">here</a> Creating an identity via the UI or CLI is easy:</p>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-1">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-1_create-identity-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-1_create-identity-ui" data-tab="create-identity-ui" tabindex="0" aria-selected="true">New Identity via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-1_create-identity-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE-1_create-identity-ui" data-tab="create-identity-ui" tabindex="0" aria-selected="true">New Identity via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-1_create-identity-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-1_create-identity-cli" data-tab="create-identity-cli" tabindex="-1">New Identity via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE-1_create-identity-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-1_create-identity-cli" data-tab="create-identity-cli" tabindex="-1">New Identity via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-1_create-identity-ui" role="tabpanel" data-tab="create-identity-ui">
+<section id="tabpanel_5p+RP4MJhE-1_create-identity-ui" role="tabpanel" data-tab="create-identity-ui">
 <ol>
 <li>On the left side click &quot;Edge Identities&quot;</li>
 <li>In the top right corner of the screen click the &quot;plus&quot; image to add a new identity</li>
@@ -195,7 +195,7 @@ within the Ziti Controller. Read more about Identities <a href="../../identities
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-1_create-identity-cli" role="tabpanel" data-tab="create-identity-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-1_create-identity-cli" role="tabpanel" data-tab="create-identity-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new identity using the CLI simply issue these commands:</p>
 <pre><code>#creates a new user named &quot;NewUser&quot;
 ziti edge create identity user &quot;NewUser&quot; -o NewUser.jwt
@@ -226,16 +226,16 @@ contains the identity of the given user.</p>
 <p>With an identity created it&#39;s now time to create a service. Read more about Services <a href="../../services/overview.html">here</a>.  For this
 example we are going to choose a simple website that is <a href="http://eth0.me">available on the open internet</a>. This site will
 return the IP address you are coming from. Click this link now and discover what the your external IP is.</p>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-2">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-2">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-2_create-service-config-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-2_create-service-config-ui" data-tab="create-service-config-ui" tabindex="0" aria-selected="true">New Service Config via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-2_create-service-config-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE-2_create-service-config-ui" data-tab="create-service-config-ui" tabindex="0" aria-selected="true">New Service Config via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-2_create-service-config-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-2_create-service-config-cli" data-tab="create-service-config-cli" tabindex="-1">New Service Config via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE-2_create-service-config-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-2_create-service-config-cli" data-tab="create-service-config-cli" tabindex="-1">New Service Config via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-2_create-service-config-ui" role="tabpanel" data-tab="create-service-config-ui">
+<section id="tabpanel_5p+RP4MJhE-2_create-service-config-ui" role="tabpanel" data-tab="create-service-config-ui">
 <ol>
 <li>On the left side nav bar, click &quot;Ziti Config&quot;</li>
 <li>In the top right corner of the screen click the &quot;plus&quot; image to add a new config</li>
@@ -247,7 +247,7 @@ return the IP address you are coming from. Click this link now and discover what
 <img src="../../../images/eth0.ui.png" alt="image"></li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-2_create-service-config-cli" role="tabpanel" data-tab="create-service-config-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-2_create-service-config-cli" role="tabpanel" data-tab="create-service-config-cli" aria-hidden="true" hidden="hidden">
 <div class="NOTE"><h5>Note</h5><p>If you are not already, you will need to be logged in to use the ziti cli</p>
 </div>
 <pre><code># load the current user/password into an environment variables
@@ -261,16 +261,16 @@ ziti edge login https://${ziticontroller}:1280 -u $ctrl_user -p $ctrl_passwd -c 
 ziti edge create config eth0.ziti.config.cli ziti-tunneler-client.v1 &#39;{ &quot;hostname&quot; : &quot;eth0.ziti.cli&quot;, &quot;port&quot; : 80 }&#39;
 </code></pre></section>
 </div>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-3">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-3">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-3_create-service-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-3_create-service-ui" data-tab="create-service-ui" tabindex="0" aria-selected="true">New Service via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-3_create-service-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE-3_create-service-ui" data-tab="create-service-ui" tabindex="0" aria-selected="true">New Service via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-3_create-service-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-3_create-service-cli" data-tab="create-service-cli" tabindex="-1">New Service via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE-3_create-service-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-3_create-service-cli" data-tab="create-service-cli" tabindex="-1">New Service via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-3_create-service-ui" role="tabpanel" data-tab="create-service-ui">
+<section id="tabpanel_5p+RP4MJhE-3_create-service-ui" role="tabpanel" data-tab="create-service-ui">
 <ol>
 <li>On the left side nav bar, click &quot;Edge Services&quot;</li>
 <li>In the top right corner of the screen click the &quot;plus&quot; image to add a new service</li>
@@ -279,22 +279,22 @@ ziti edge create config eth0.ziti.config.cli ziti-tunneler-client.v1 &#39;{ &quo
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-3_create-service-cli" role="tabpanel" data-tab="create-service-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-3_create-service-cli" role="tabpanel" data-tab="create-service-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new service using the CLI simply issue these two commands:</p>
 <pre><code># create the service and refernce the cli config added earlier
 ziti edge create service ziti.eth0.svc.cli --configs ziti.eth0.config.cli
 </code></pre></section>
 </div>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-4">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-4">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-4_create-terminator-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-4_create-terminator-ui" data-tab="create-terminator-ui" tabindex="0" aria-selected="true">New Terminator via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-4_create-terminator-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE-4_create-terminator-ui" data-tab="create-terminator-ui" tabindex="0" aria-selected="true">New Terminator via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-4_create-terminator-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-4_create-terminator-cli" data-tab="create-terminator-cli" tabindex="-1">New Terminator via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE-4_create-terminator-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-4_create-terminator-cli" data-tab="create-terminator-cli" tabindex="-1">New Terminator via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-4_create-terminator-ui" role="tabpanel" data-tab="create-terminator-ui">
+<section id="tabpanel_5p+RP4MJhE-4_create-terminator-ui" role="tabpanel" data-tab="create-terminator-ui">
 <ol>
 <li>On the left side nav bar, click &quot;Edge Services&quot;</li>
 <li>On the top nav bar, click &quot;Terminators&quot;</li>
@@ -306,7 +306,7 @@ choose it anyway as shown: <br> <img src="../../../images/ui-terminator-bug.png"
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-4_create-terminator-cli" role="tabpanel" data-tab="create-terminator-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-4_create-terminator-cli" role="tabpanel" data-tab="create-terminator-cli" aria-hidden="true" hidden="hidden">
 <p>To create a new service using the CLI simply issue these two commands:</p>
 <pre><code># create the service and refernce the cli config added earlier
 ziti edge create terminator eth0.ziti.svc.cli &quot;ziti-er01&quot; tcp:eth0.me:80
@@ -325,16 +325,16 @@ about policies and experiment with different combinations to understand how best
 actual network</p>
 </div>
 <p><a href="../../security/authorization/policies/overview.html">Read more about Policies here</a></p>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-5">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-5">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-5_create-policies-ui" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-5_create-policies-ui" data-tab="create-policies-ui" tabindex="0" aria-selected="true">New Policies via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-5_create-policies-ui" role="tab" aria-controls="tabpanel_5p+RP4MJhE-5_create-policies-ui" data-tab="create-policies-ui" tabindex="0" aria-selected="true">New Policies via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-5_create-policies-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-5_create-policies-cli" data-tab="create-policies-cli" tabindex="-1">New Policies via CLI</a>
+<a href="#tabpanel_5p+RP4MJhE-5_create-policies-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-5_create-policies-cli" data-tab="create-policies-cli" tabindex="-1">New Policies via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-5_create-policies-ui" role="tabpanel" data-tab="create-policies-ui">
+<section id="tabpanel_5p+RP4MJhE-5_create-policies-ui" role="tabpanel" data-tab="create-policies-ui">
 <h3 id="new-edge-router-policy">New Edge Router Policy</h3>
 <ol>
 <li>On the left side nav bar, click &quot;Ziti Policies&quot;</li>
@@ -376,7 +376,7 @@ look like this: <br> <img src="../../../images/all-services.png" alt="image"></l
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-5_create-policies-cli" role="tabpanel" data-tab="create-policies-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-5_create-policies-cli" role="tabpanel" data-tab="create-policies-cli" aria-hidden="true" hidden="hidden">
 <p>To create some policies using the CLI issue the following commands:</p>
 <div class="NOTE"><h5>Note</h5><p>If you are not already, you will need to be logged in to use the ziti cli.</p>
 </div>
@@ -415,19 +415,19 @@ network and configuration are all working properly:</p>
 <ul>
 <li>Ensure ziti-tunnel and NewUser.json are in the same directory and cd to this directory</li>
 <li><p>Run the ziti-tunnel in proxy mode. Choose the command based on how you created the service.</p>
-<div class="tabGroup" id="tabgroup_Jgj2pEEE-E-6">
+<div class="tabGroup" id="tabgroup_5p+RP4MJhE-6">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-6_Test-UI" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-6_Test-UI" data-tab="Test-UI" tabindex="0" aria-selected="true">Created Service via UI</a>
+<a href="#tabpanel_5p+RP4MJhE-6_Test-UI" role="tab" aria-controls="tabpanel_5p+RP4MJhE-6_Test-UI" data-tab="Test-UI" tabindex="0" aria-selected="true">Created Service via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_Jgj2pEEE-E-6_Test-cli" role="tab" aria-controls="tabpanel_Jgj2pEEE-E-6_Test-cli" data-tab="Test-cli" tabindex="-1">Created Service via CLi</a>
+<a href="#tabpanel_5p+RP4MJhE-6_Test-cli" role="tab" aria-controls="tabpanel_5p+RP4MJhE-6_Test-cli" data-tab="Test-cli" tabindex="-1">Created Service via CLi</a>
 </li>
 </ul>
-<section id="tabpanel_Jgj2pEEE-E-6_Test-UI" role="tabpanel" data-tab="Test-UI">
+<section id="tabpanel_5p+RP4MJhE-6_Test-UI" role="tabpanel" data-tab="Test-UI">
 <p>  <code>ziti-tunnel proxy -i NewUser.json ethzero-ui:1111</code> </p>
 </section>
-<section id="tabpanel_Jgj2pEEE-E-6_Test-cli" role="tabpanel" data-tab="Test-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_5p+RP4MJhE-6_Test-cli" role="tabpanel" data-tab="Test-cli" aria-hidden="true" hidden="hidden">
 <p>  <code>ziti-tunnel proxy -i NewUser.json ethzero-cli:1111</code></p>
 </section>
 </div>

@@ -163,16 +163,16 @@ certainly because you have an environment variable setup incorrectly. Double che
 </ul>
 <h3 id="establish-environment-variables">Establish Environment Variables</h3>
 <p>Open a command line and establish the following environment varibles. </p>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws">
+<div class="tabGroup" id="tabgroup_32kThwQrkV">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws_env-var-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws_env-var-linux" data-tab="env-var-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV_env-var-linux" role="tab" aria-controls="tabpanel_32kThwQrkV_env-var-linux" data-tab="env-var-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws_env-var-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws_env-var-windows" data-tab="env-var-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV_env-var-windows" role="tab" aria-controls="tabpanel_32kThwQrkV_env-var-windows" data-tab="env-var-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws_env-var-linux" role="tabpanel" data-tab="env-var-linux">
+<section id="tabpanel_32kThwQrkV_env-var-linux" role="tabpanel" data-tab="env-var-linux">
 <pre><code># the name of the ziti controller you&#39;re logging into
 export ZITI_CTRL=local-edge-controller
 # the location of the certificate(s) to use to validate the controller
@@ -209,7 +209,7 @@ export HSM_TOKENS_DIR=&quot;${HSM_DEST}/tokens/&quot;
 # make an alias for ease
 alias p=&#39;pkcs11-tool --module $PKCS11_MODULE&#39;
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws_env-var-windows" role="tabpanel" data-tab="env-var-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV_env-var-windows" role="tabpanel" data-tab="env-var-windows" aria-hidden="true" hidden="hidden">
 <p>Ensure you use the correct dll. If you use an x86 dll with x64 binaries you&#39;ll get an error.</p>
 <pre><code>REM the name of the ziti controller you&#39;re logging into
 SET ZITI_CTRL=local-edge-controller
@@ -249,16 +249,16 @@ doskey p=&quot;c:\Program Files\OpenSC Project\OpenSC\tools\pkcs11-tool.exe&quot
 </code></pre></section>
 </div>
 <h3 id="make-directories-and-generate-config-files">Make Directories and Generate Config Files</h3>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-1">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-1_dirs-and-config-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-1_dirs-and-config-linux" data-tab="dirs-and-config-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-1_dirs-and-config-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-1_dirs-and-config-linux" data-tab="dirs-and-config-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-1_dirs-and-config-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-1_dirs-and-config-windows" data-tab="dirs-and-config-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-1_dirs-and-config-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-1_dirs-and-config-windows" data-tab="dirs-and-config-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-1_dirs-and-config-linux" role="tabpanel" data-tab="dirs-and-config-linux">
+<section id="tabpanel_32kThwQrkV-1_dirs-and-config-linux" role="tabpanel" data-tab="dirs-and-config-linux">
 <pre><code>cd ${HSM_ROOT}
 
 rm -rf ${HSM_NAME}
@@ -283,7 +283,7 @@ slots.removable = false
 slots.mechanisms = ALL
 HERE
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-1_dirs-and-config-windows" role="tabpanel" data-tab="dirs-and-config-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-1_dirs-and-config-windows" role="tabpanel" data-tab="dirs-and-config-windows" aria-hidden="true" hidden="hidden">
 <pre><code>cd /d %HSM_ROOT%
 
 rmdir /s /q %HSM_NAME%
@@ -313,16 +313,16 @@ slots.mechanisms = ALL &gt; %SOFTHSM2_CONF%
 </code></pre></section>
 </div>
 <h3 id="use-the-ziti-cli">Use the Ziti CLI</h3>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-2">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-2">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-2_ziti-cli-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-2_ziti-cli-linux" data-tab="ziti-cli-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-2_ziti-cli-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-2_ziti-cli-linux" data-tab="ziti-cli-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-2_ziti-cli-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-2_ziti-cli-windows" data-tab="ziti-cli-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-2_ziti-cli-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-2_ziti-cli-windows" data-tab="ziti-cli-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-2_ziti-cli-linux" role="tabpanel" data-tab="ziti-cli-linux">
+<section id="tabpanel_32kThwQrkV-2_ziti-cli-linux" role="tabpanel" data-tab="ziti-cli-linux">
 <pre><code>ziti edge login $ZITI_CTRL:1280 -u $ZITI_USER -p $ZITI_PWD -c $ZITI_CTRL_CERT
 
 # create a new identity and output the jwt to a known location
@@ -331,7 +331,7 @@ ziti edge create identity device &quot;${RSA_ID}&quot; -o &quot;${HSM_DEST}/${RS
 # create a second new identity and output the jwt to a known location
 ziti edge create identity device &quot;${EC_ID}&quot; -o &quot;${HSM_DEST}/${EC_ID}.jwt&quot;
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-2_ziti-cli-windows" role="tabpanel" data-tab="ziti-cli-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-2_ziti-cli-windows" role="tabpanel" data-tab="ziti-cli-windows" aria-hidden="true" hidden="hidden">
 <pre><code>ziti edge login %ZITI_CTRL%:1280 -u %ZITI_USER% -p %ZITI_PWD% -c %ZITI_CTRL_CERT%
 
 REM create a new identity and output the jwt to a known location
@@ -342,23 +342,23 @@ ziti edge create identity device &quot;%EC_ID%&quot; -o &quot;%HSM_DEST%\%EC_ID%
 </code></pre></section>
 </div>
 <h3 id="use-pkcs11-tool-to-setup-softhsmv2">Use pkcs11-tool to Setup SoftHSMv2</h3>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-3">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-3">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-3_pkcs11-tool-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-3_pkcs11-tool-linux" data-tab="pkcs11-tool-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-3_pkcs11-tool-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-3_pkcs11-tool-linux" data-tab="pkcs11-tool-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-3_pkcs11-tool-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-3_pkcs11-tool-windows" data-tab="pkcs11-tool-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-3_pkcs11-tool-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-3_pkcs11-tool-windows" data-tab="pkcs11-tool-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-3_pkcs11-tool-linux" role="tabpanel" data-tab="pkcs11-tool-linux">
+<section id="tabpanel_32kThwQrkV-3_pkcs11-tool-linux" role="tabpanel" data-tab="pkcs11-tool-linux">
 <pre><code>p --init-token --label &quot;ziti-test-token&quot; --so-pin $HSM_SOPIN
 
 # create a couple of keys - one rsa and one ec
 p -p $HSM_PIN -k --key-type rsa:2048 --id &quot;${HSM_ID1}&quot; --label ziti-rsa-key --usage-sign --usage-decrypt
 p -p $HSM_PIN -k --key-type EC:prime256v1 --id ${HSM_ID2} --label ziti-ecdsa-key --usage-sign --usage-decrypt
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-3_pkcs11-tool-windows" role="tabpanel" data-tab="pkcs11-tool-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-3_pkcs11-tool-windows" role="tabpanel" data-tab="pkcs11-tool-windows" aria-hidden="true" hidden="hidden">
 <pre><code>p --init-token --label &quot;ziti-test-token&quot; --so-pin %HSM_SOPIN%
 p --init-pin --pin &quot;%HSM_PIN%&quot; --so-pin %HSM_SOPIN%
 
@@ -368,35 +368,35 @@ p -p &quot;%HSM_PIN%&quot; -k --key-type EC:prime256v1 --id &quot;%HSM_ID2%&quot
 </code></pre></section>
 </div>
 <h3 id="use-ziti-tunnel-to-enroll-the-identities">Use ziti-tunnel to Enroll the Identities</h3>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-4">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-4">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-4_enroll-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-4_enroll-linux" data-tab="enroll-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-4_enroll-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-4_enroll-linux" data-tab="enroll-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-4_enroll-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-4_enroll-windows" data-tab="enroll-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-4_enroll-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-4_enroll-windows" data-tab="enroll-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-4_enroll-linux" role="tabpanel" data-tab="enroll-linux">
+<section id="tabpanel_32kThwQrkV-4_enroll-linux" role="tabpanel" data-tab="enroll-linux">
 <pre><code>ziti-tunnel enroll -j &quot;${HSM_DEST}/${RSA_ID}.jwt&quot; -k &quot;pkcs11://${PKCS11_MODULE}?id=${HSM_ID1}&amp;pin=${HSM_PIN}&quot; -v
 ziti-tunnel enroll -j &quot;${HSM_DEST}/${EC_ID}.jwt&quot; -k &quot;pkcs11://${PKCS11_MODULE}?id=${HSM_ID2}&amp;pin=${HSM_PIN}&quot; -v
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-4_enroll-windows" role="tabpanel" data-tab="enroll-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-4_enroll-windows" role="tabpanel" data-tab="enroll-windows" aria-hidden="true" hidden="hidden">
 <pre><code>ziti-tunnel enroll -j &quot;%HSM_DEST%\%RSA_ID%.jwt&quot; -k &quot;pkcs11://%PKCS11_MODULE%?id=%HSM_ID1%&amp;pin=%HSM_PIN%&quot; -v
 ziti-tunnel enroll -j &quot;%HSM_DEST%\%EC_ID%.jwt&quot; -k &quot;pkcs11://%PKCS11_MODULE%?id=%HSM_ID2%&amp;pin=%HSM_PIN%&quot; -v
 </code></pre></section>
 </div>
 <h3 id="use-ziti-tunnel-to-verify-things-work">Use ziti-tunnel to Verify Things Work</h3>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-5">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-5">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-5_start-tunnel-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-5_start-tunnel-linux" data-tab="start-tunnel-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-5_start-tunnel-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-5_start-tunnel-linux" data-tab="start-tunnel-linux" tabindex="0" aria-selected="true">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-5_start-tunnel-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-5_start-tunnel-windows" data-tab="start-tunnel-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-5_start-tunnel-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-5_start-tunnel-windows" data-tab="start-tunnel-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-5_start-tunnel-linux" role="tabpanel" data-tab="start-tunnel-linux">
+<section id="tabpanel_32kThwQrkV-5_start-tunnel-linux" role="tabpanel" data-tab="start-tunnel-linux">
 <pre><code># if you only have a single edge router this command will work without the need for copy/paste
 EDGE_ROUTER_ID=$(ziti edge list edge-routers | cut -d &quot; &quot; -f2)
 
@@ -423,7 +423,7 @@ ziti-tunnel proxy -i &quot;${HSM_DEST}/${EC_ID}.json&quot; wttr.ziti:9000 -v &am
 curl -H &quot;Host: wttr.in&quot; http://localhost:8000
 curl -H &quot;Host: wttr.in&quot; http://localhost:9000
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-5_start-tunnel-windows" role="tabpanel" data-tab="start-tunnel-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-5_start-tunnel-windows" role="tabpanel" data-tab="start-tunnel-windows" aria-hidden="true" hidden="hidden">
 <pre><code>REM these two commands can&#39;t be copied and pasted - you need to get the result of the first command and use it in the next
 REM run this command and get the id from the first edge-router.
 ziti edge list edge-routers
@@ -461,24 +461,24 @@ we&#39;ll see all the commands put together along with all the output from the c
 warned! Also note that this content is subject to change. If the output you see is not identical it&#39;s because the
 software has changed since this information was captured. File an <a href="https://github.com/openziti/ziti-doc/issues">issue</a>
 if you&#39;d like to see it updated.</p>
-<div class="tabGroup" id="tabgroup_FOdv6PEgws-6">
+<div class="tabGroup" id="tabgroup_32kThwQrkV-6">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-6_hidden-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-6_hidden-linux" data-tab="hidden-linux" tabindex="0" aria-selected="true">Sample Output</a>
+<a href="#tabpanel_32kThwQrkV-6_hidden-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-6_hidden-linux" data-tab="hidden-linux" tabindex="0" aria-selected="true">Sample Output</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-6_verify-linux" role="tab" aria-controls="tabpanel_FOdv6PEgws-6_verify-linux" data-tab="verify-linux" tabindex="-1">Linux/MacOS</a>
+<a href="#tabpanel_32kThwQrkV-6_verify-linux" role="tab" aria-controls="tabpanel_32kThwQrkV-6_verify-linux" data-tab="verify-linux" tabindex="-1">Linux/MacOS</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_FOdv6PEgws-6_verify-windows" role="tab" aria-controls="tabpanel_FOdv6PEgws-6_verify-windows" data-tab="verify-windows" tabindex="-1">Windows</a>
+<a href="#tabpanel_32kThwQrkV-6_verify-windows" role="tab" aria-controls="tabpanel_32kThwQrkV-6_verify-windows" data-tab="verify-windows" tabindex="-1">Windows</a>
 </li>
 </ul>
-<section id="tabpanel_FOdv6PEgws-6_hidden-linux" role="tabpanel" data-tab="hidden-linux">
+<section id="tabpanel_32kThwQrkV-6_hidden-linux" role="tabpanel" data-tab="hidden-linux">
 <p>The tabs to the right contain example output from running all the commands in sequence. If you want to see what the
 output would likely look like click one of the tabs to the right. Reminder - it&#39;s a lot of commands and a lot of output!
 :)</p>
 </section>
-<section id="tabpanel_FOdv6PEgws-6_verify-linux" role="tabpanel" data-tab="verify-linux" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-6_verify-linux" role="tabpanel" data-tab="verify-linux" aria-hidden="true" hidden="hidden">
 <pre><code>cd@sg1 ~/.softhsm/softhsm_demo
 $ # the name of the ziti controller you&#39;re logging into
 
@@ -1019,7 +1019,7 @@ $ jobs
 
 cd@sg1 ~/.softhsm/softhsm_demo
 </code></pre></section>
-<section id="tabpanel_FOdv6PEgws-6_verify-windows" role="tabpanel" data-tab="verify-windows" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_32kThwQrkV-6_verify-windows" role="tabpanel" data-tab="verify-windows" aria-hidden="true" hidden="hidden">
 <pre><code>c:\path\to\softhsm\softhsm_demo&gt;REM the name of the ziti controller you&#39;re logging into
 
 c:\path\to\softhsm\softhsm_demo&gt;SET ZITI_CTRL=local-edge-controller

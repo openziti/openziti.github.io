@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['building_20the_20project_1165',['Building the Project',['../md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html',1,'']]]
+  ['building_20the_20project_0',['Building the Project',['../md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html',1,'']]]
 ];

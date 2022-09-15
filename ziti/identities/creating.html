@@ -162,16 +162,16 @@ present a certificate during the connection process that is valid per the provid
 <h4 id="adding-a-3rd-party-ca-to-the-ziti-controller">Adding a 3rd Party CA to the Ziti Controller</h4>
 <p>Adding a certifate to the Ziti Controller is easy using the Ziti Console provided in the <a href="https://aws.amazon.com/marketplace/pp/B07YZLKMLV">Ziti Edge -
 Developer Edition</a>.</p>
-<div class="tabGroup" id="tabgroup_WKKGAgjyEN">
+<div class="tabGroup" id="tabgroup_mIl-+0iINH">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN_tabid-new-ca-ui" role="tab" aria-controls="tabpanel_WKKGAgjyEN_tabid-new-ca-ui" data-tab="tabid-new-ca-ui" tabindex="0" aria-selected="true">New CA via UI</a>
+<a href="#tabpanel_mIl-+0iINH_tabid-new-ca-ui" role="tab" aria-controls="tabpanel_mIl-+0iINH_tabid-new-ca-ui" data-tab="tabid-new-ca-ui" tabindex="0" aria-selected="true">New CA via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN_tabid-new-ca-cli" role="tab" aria-controls="tabpanel_WKKGAgjyEN_tabid-new-ca-cli" data-tab="tabid-new-ca-cli" tabindex="-1">New CA via REST</a>
+<a href="#tabpanel_mIl-+0iINH_tabid-new-ca-cli" role="tab" aria-controls="tabpanel_mIl-+0iINH_tabid-new-ca-cli" data-tab="tabid-new-ca-cli" tabindex="-1">New CA via REST</a>
 </li>
 </ul>
-<section id="tabpanel_WKKGAgjyEN_tabid-new-ca-ui" role="tabpanel" data-tab="tabid-new-ca-ui">
+<section id="tabpanel_mIl-+0iINH_tabid-new-ca-ui" role="tabpanel" data-tab="tabid-new-ca-ui">
 <ol>
 <li>On the left side click &quot;Certificate Authorities&quot;</li>
 <li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Certificate Authority</li>
@@ -180,7 +180,7 @@ Developer Edition</a>.</p>
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_WKKGAgjyEN_tabid-new-ca-cli" role="tabpanel" data-tab="tabid-new-ca-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_mIl-+0iINH_tabid-new-ca-cli" role="tabpanel" data-tab="tabid-new-ca-cli" aria-hidden="true" hidden="hidden">
 <pre><code>Verb: POST
 
 name:
@@ -223,16 +223,16 @@ authorization will need to be done after the device identities have been created
 multiple identities. An enrollment request is comprised of a special enrollment URL used to perform an HTTP POST request
 using the signed client certificate as the TLS client certificate and an optional JSON payload that allows the client to
 specify the devices display name and internal username. See <a href="enrolling.html">enrollment</a> for more details on enrolling.</p>
-<div class="tabGroup" id="tabgroup_WKKGAgjyEN-1">
+<div class="tabGroup" id="tabgroup_mIl-+0iINH-1">
 <ul role="tablist">
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" data-tab="tabid-new-identity-ui" tabindex="0" aria-selected="true">New 3rd Party CA Identity via UI</a>
+<a href="#tabpanel_mIl-+0iINH-1_tabid-new-identity-ui" role="tab" aria-controls="tabpanel_mIl-+0iINH-1_tabid-new-identity-ui" data-tab="tabid-new-identity-ui" tabindex="0" aria-selected="true">New 3rd Party CA Identity via UI</a>
 </li>
 <li role="presentation">
-<a href="#tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" role="tab" aria-controls="tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" data-tab="tabid-new-identity-cli" tabindex="-1">New 3rd Party Identity via CLI</a>
+<a href="#tabpanel_mIl-+0iINH-1_tabid-new-identity-cli" role="tab" aria-controls="tabpanel_mIl-+0iINH-1_tabid-new-identity-cli" data-tab="tabid-new-identity-cli" tabindex="-1">New 3rd Party Identity via CLI</a>
 </li>
 </ul>
-<section id="tabpanel_WKKGAgjyEN-1_tabid-new-identity-ui" role="tabpanel" data-tab="tabid-new-identity-ui">
+<section id="tabpanel_mIl-+0iINH-1_tabid-new-identity-ui" role="tabpanel" data-tab="tabid-new-identity-ui">
 <ol>
 <li>On the left side click &quot;Certificate Authorities&quot;</li>
 <li>In the top right corner of the screen click the &quot;plus&quot; image to add a new Certificate Authority</li>
@@ -241,7 +241,7 @@ specify the devices display name and internal username. See <a href="enrolling.h
 <li>Click save</li>
 </ol>
 </section>
-<section id="tabpanel_WKKGAgjyEN-1_tabid-new-identity-cli" role="tabpanel" data-tab="tabid-new-identity-cli" aria-hidden="true" hidden="hidden">
+<section id="tabpanel_mIl-+0iINH-1_tabid-new-identity-cli" role="tabpanel" data-tab="tabid-new-identity-cli" aria-hidden="true" hidden="hidden">
 <pre><code>#creates a new user named &quot;NewUser&quot;
 ziti edge create identity user &quot;NewUser&quot; -o NewUser.jwt
 </code></pre></section>

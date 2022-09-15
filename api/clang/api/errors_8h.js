@@ -1,7 +1,7 @@
 var errors_8h =
 [
     [ "ERR_ID", "errors_8h.html#a947429505002f0c889a011a663ea5a72", null ],
-    [ "ziti_errorstr", "errors_8h.html#a2182f9078122799ec98a7c1f17094191", null ],
+    [ "ziti_errorstr", "errors_8h.html#af6408f67819f57374d203d557b6df400", null ],
     [ "ZITI_CONFIG_NOT_FOUND", "errors_8h.html#ab7f80523d7ec8104c50735bdb5f2818a", null ],
     [ "ZITI_CONN_CLOSED", "errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7", null ],
     [ "ZITI_CONNABORT", "errors_8h.html#a9ac02280a9b31276676bc723ba7f4aba", null ],

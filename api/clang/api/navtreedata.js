@@ -25,13 +25,13 @@
 var NAVTREE =
 [
   [ "Ziti C SDK", "index.html", [
-    [ "Building the Project", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html", [
-      [ "Prerequisites", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md3", null ],
-      [ "Building Requirements", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md4", null ],
-      [ "Project Initialization", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md5", null ],
-      [ "Building", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md6", [
-        [ "Linux/MacOS", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md7", null ],
-        [ "Windows", "md____w_ziti-doc_ziti-doc_docfx_project_ziti-sdk-c_building.html#autotoc_md8", null ]
+    [ "Building the Project", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html", [
+      [ "Prerequisites", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md3", null ],
+      [ "Building Requirements", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md4", null ],
+      [ "Project Initialization", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md5", null ],
+      [ "Building", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md6", [
+        [ "Linux/MacOS", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md7", null ],
+        [ "Windows", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md8", null ]
       ] ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
@@ -61,8 +61,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30",
-"ziti__model_8h.html#a3160d36431a229b4e4ec284bd670d50a"
+"structziti__api__event.html#aca89351799e172964c6bd95d30433ab6",
+"ziti__buffer_8h.html#a5265a1591edce35a96d6b061ca5ed89b",
+"ziti__model_8h.html#aa038a91719ba4a9ba5b1c8b8f43caece"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
