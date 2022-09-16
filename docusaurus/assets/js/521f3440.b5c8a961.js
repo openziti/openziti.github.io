@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[6073],{9379:e=>{e.exports=JSON.parse('{"permalink":"/docusaurus/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
