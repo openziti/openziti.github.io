@@ -1795,6 +1795,28 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "ziti-sdk-csharp/docs/fonts/glyphicons-halflings-regular.svg",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-sdk-csharp/docs/fonts/glyphicons-halflings-regular.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "ziti-sdk-csharp/docs/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "ziti-sdk-csharp/docs/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "ziti-sdk-swift/cziti.sample-ios/doc/httpbin.png",
       "output": {
         "resource": {
