@@ -101,6 +101,8 @@ $(document).ready(function(){initNavTree('ziti__model_8h.html',''); initResizabl
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__address.html">ziti_address</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__protocol__s.html">ziti_protocol_s</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__session__type__s.html">ziti_session_type_s</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structapi__path.html">api_path</a></td></tr>
@@ -144,6 +146,8 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
+<tr class="memitem:a2a6e14927d005b9ba90770aa0a405190"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a2a6e14927d005b9ba90770aa0a405190">ZITI_PROTOCOL_ENUM</a>(XX, ...)</td></tr>
+<tr class="separator:a2a6e14927d005b9ba90770aa0a405190"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a056bef21937d3cba1ab93c4ecf3795c4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a056bef21937d3cba1ab93c4ecf3795c4">ZITI_SESSION_TYPE_ENUM</a>(XX, ...)</td></tr>
 <tr class="separator:a056bef21937d3cba1ab93c4ecf3795c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74e498d53b1613d8762f2eb95365bc45"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a74e498d53b1613d8762f2eb95365bc45">ZITI_AUTH_QUERY_MFA_MODEL</a>(XX, ...)</td></tr>
@@ -195,6 +199,10 @@ Macros</h2></td></tr>
 Typedefs</h2></td></tr>
 <tr class="memitem:a60edfcb15504ff9611eeb7e1ae6998d4"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structziti__address.html">ziti_address</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a60edfcb15504ff9611eeb7e1ae6998d4">ziti_address_array</a></td></tr>
 <tr class="separator:a60edfcb15504ff9611eeb7e1ae6998d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3b1e77683ac7dde290fb668b13b1135"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aa3b1e77683ac7dde290fb668b13b1135">ziti_protocol</a></td></tr>
+<tr class="separator:aa3b1e77683ac7dde290fb668b13b1135"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdff5ed19c6532e303829a2e45ba3ccb"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#abdff5ed19c6532e303829a2e45ba3ccb">ziti_protocol_array</a></td></tr>
+<tr class="separator:abdff5ed19c6532e303829a2e45ba3ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09b1b887e9d3b6aa50fad74572606d9b"><td class="memItemLeft" align="right" valign="top">typedef enum <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a09b1b887e9d3b6aa50fad74572606d9b">ziti_session_type</a></td></tr>
 <tr class="separator:a09b1b887e9d3b6aa50fad74572606d9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a112c47c1ec3e7484933cbd3d39608ff3"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a112c47c1ec3e7484933cbd3d39608ff3">ziti_session_type_array</a></td></tr>
@@ -237,6 +245,8 @@ Typedefs</h2></td></tr>
 <tr class="separator:a7bb9647c4b8f81e952afd428a1919910"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7b81548a6412949e040cb74d295649ce"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="structziti__mfa__enrollment.html">ziti_mfa_enrollment</a> **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a7b81548a6412949e040cb74d295649ce">ziti_mfa_enrollment_array</a></td></tr>
 <tr class="separator:a7b81548a6412949e040cb74d295649ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48340d738e3483f038ec3064e11fc4b"><td class="memItemLeft" align="right" valign="top">typedef int(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b">parse_service_cfg_f</a>) (void *, const char *, size_t)</td></tr>
+<tr class="separator:ae48340d738e3483f038ec3064e11fc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
@@ -244,6 +254,11 @@ Enumerations</h2></td></tr>
 , <a class="el" href="ziti__model_8h.html#acd0d51f4fe1c9310bb9ee3990cbafe41a690eef45a95c4f002d8359ebc284de4f">ziti_address_cidr</a>
  }</td></tr>
 <tr class="separator:acd0d51f4fe1c9310bb9ee3990cbafe41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6bf190aa0e20c2f3b135b5441689505"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> { <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505aadd7bd21e7a4fc988d0d4d5d450be0ef">ziti_protocol_Unknown</a> = 0
+, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505a2fa0afa8f99bc6a0912170dc81242dd7">ziti_protocol_tcp</a>
+, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505a9385b1461b1e90750f62ec00b542ff4f">ziti_protocol_udp</a>
+ }</td></tr>
+<tr class="separator:ae6bf190aa0e20c2f3b135b5441689505"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16d0312daa1421133c53164eec94b532"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a> { <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ac9ade772985cd1522b713d047a00819a">ziti_session_type_Unknown</a> = 0
 , <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad8ac3e8bf27d417d8d76148c2567488d">ziti_session_type_Bind</a>
 , <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad1a180cee3d3c0f987830792f48bf9df">ziti_session_type_Dial</a>
@@ -252,14 +267,20 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a36c08622cfa0daadfa7e436123570996"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a36c08622cfa0daadfa7e436123570996">parse_ziti_address_str</a> (<a class="el" href="structziti__address.html">ziti_address</a> *addr, const char *addr_str)</td></tr>
+<tr class="separator:a36c08622cfa0daadfa7e436123570996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f2e0f70ff82fffff277269b2f3079f3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a3f2e0f70ff82fffff277269b2f3079f3">ziti_address_print</a> (char *buf, size_t max, const <a class="el" href="structziti__address.html">ziti_address</a> *address)</td></tr>
 <tr class="separator:a3f2e0f70ff82fffff277269b2f3079f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a03165d7db88dfc208ee42d6342c77d22"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a03165d7db88dfc208ee42d6342c77d22">ziti_address_match</a> (<a class="el" href="structziti__address.html">ziti_address</a> *addr, <a class="el" href="structziti__address.html">ziti_address</a> *range)</td></tr>
-<tr class="separator:a03165d7db88dfc208ee42d6342c77d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53ba316345f62b0898b16cdf301ed550"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a53ba316345f62b0898b16cdf301ed550">ziti_address_match_s</a> (const char *addr, <a class="el" href="structziti__address.html">ziti_address</a> *range)</td></tr>
-<tr class="separator:a53ba316345f62b0898b16cdf301ed550"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a73ba3d5ce98c915950f0cc62f79726af"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a73ba3d5ce98c915950f0cc62f79726af">ziti_address_match_array</a> (const char *addr, <a class="el" href="structziti__address.html">ziti_address</a> **range)</td></tr>
-<tr class="separator:a73ba3d5ce98c915950f0cc62f79726af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa697b81d27396da9ba5820e9cf00d97d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aa697b81d27396da9ba5820e9cf00d97d">ziti_address_match</a> (const <a class="el" href="structziti__address.html">ziti_address</a> *addr, const <a class="el" href="structziti__address.html">ziti_address</a> *range)</td></tr>
+<tr class="separator:aa697b81d27396da9ba5820e9cf00d97d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5644a8dfac0844328b8ba97de2ad7349"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a5644a8dfac0844328b8ba97de2ad7349">ziti_address_match_s</a> (const char *addr, <a class="el" href="structziti__address.html">ziti_address</a> *range)</td></tr>
+<tr class="separator:a5644a8dfac0844328b8ba97de2ad7349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae36c1ea8ab2d08905e3618344ac4d106"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ae36c1ea8ab2d08905e3618344ac4d106">ziti_addrstr_match_list</a> (const char *addr, const <a class="el" href="structmodel__list.html">model_list</a> *range)</td></tr>
+<tr class="separator:ae36c1ea8ab2d08905e3618344ac4d106"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5078db31bf0e462e6b00851dabe653af"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a5078db31bf0e462e6b00851dabe653af">ziti_address_match_list</a> (const <a class="el" href="structziti__address.html">ziti_address</a> *addr, const <a class="el" href="structmodel__list.html">model_list</a> *range)</td></tr>
+<tr class="separator:a5078db31bf0e462e6b00851dabe653af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af578f6040feef81a285efdc42f6ed91b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#af578f6040feef81a285efdc42f6ed91b">ziti_address_match_array</a> (const char *addr, <a class="el" href="structziti__address.html">ziti_address</a> **range)</td></tr>
+<tr class="separator:af578f6040feef81a285efdc42f6ed91b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab19725251e3a6b92a654b26719651cbc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab19725251e3a6b92a654b26719651cbc">get_ziti_address_meta</a> ()</td></tr>
 <tr class="separator:ab19725251e3a6b92a654b26719651cbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba24f20d8911014bae927ca52e01aaf7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aba24f20d8911014bae927ca52e01aaf7">alloc_ziti_address</a> ()</td></tr>
@@ -285,6 +306,12 @@ Functions</h2></td></tr>
 <tr class="separator:adc1ba42181fbf46486f39e3836288659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb2303d756b43d02b0e3d4097b8f523c"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#abb2303d756b43d02b0e3d4097b8f523c">ziti_address_to_json</a> (const <a class="el" href="structziti__address.html">ziti_address</a> *v, int flags, size_t *len)</td></tr>
 <tr class="separator:abb2303d756b43d02b0e3d4097b8f523c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717d599d090850cab3a3cfe8dff9a02f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a717d599d090850cab3a3cfe8dff9a02f">get_ziti_protocol_meta</a> ()</td></tr>
+<tr class="separator:a717d599d090850cab3a3cfe8dff9a02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa25cb1fdbf3f288bdb6ae8c4659cf058"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#aa25cb1fdbf3f288bdb6ae8c4659cf058">ziti_protocol_match</a> (<a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> proto, const <a class="el" href="structmodel__list.html">model_list</a> *proto_list)</td></tr>
+<tr class="separator:aa25cb1fdbf3f288bdb6ae8c4659cf058"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32f00552b02abc079fa84c46119c7402"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a32f00552b02abc079fa84c46119c7402">ziti_port_match</a> (int port, const <a class="el" href="structmodel__list.html">model_list</a> *port_range_list)</td></tr>
+<tr class="separator:a32f00552b02abc079fa84c46119c7402"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a331f002aaae358e19b7d95d00ed9b6fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a331f002aaae358e19b7d95d00ed9b6fa">get_ziti_session_type_meta</a> ()</td></tr>
 <tr class="separator:a331f002aaae358e19b7d95d00ed9b6fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8cce20b472e341b23f83241f3154a430"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structtype__meta.html">type_meta</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a8cce20b472e341b23f83241f3154a430">get_api_path_meta</a> ()</td></tr>
@@ -764,13 +791,19 @@ Functions</h2></td></tr>
 <tr class="separator:a629979e9fc538589c4e637c668bc1dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915dab67b7aa68c3e50602e8554f0690"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a915dab67b7aa68c3e50602e8554f0690">ziti_service_get_raw_config</a> (<a class="el" href="structziti__service.html">ziti_service</a> *service, const char *cfg_type)</td></tr>
 <tr class="separator:a915dab67b7aa68c3e50602e8554f0690"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a240edbbca23833a89aaad89a51e9d42b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a240edbbca23833a89aaad89a51e9d42b">ziti_service_get_config</a> (<a class="el" href="structziti__service.html">ziti_service</a> *service, const char *cfg_type, void *cfg, int(*parse_func)(void *, const char *, size_t))</td></tr>
-<tr class="separator:a240edbbca23833a89aaad89a51e9d42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a865489f9567dad8a539561bd04dfb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a9a865489f9567dad8a539561bd04dfb0">ziti_service_get_config</a> (<a class="el" href="structziti__service.html">ziti_service</a> *service, const char *cfg_type, void *cfg, <a class="el" href="ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b">parse_service_cfg_f</a> parse_func)</td></tr>
+<tr class="separator:a9a865489f9567dad8a539561bd04dfb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2c31500bcd5639a818600e3e9b36881"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881">ziti_intercept_from_client_cfg</a> (<a class="el" href="structziti__intercept__cfg__v1.html">ziti_intercept_cfg_v1</a> *intercept, const <a class="el" href="structziti__client__cfg__v1.html">ziti_client_cfg_v1</a> *client_cfg)</td></tr>
 <tr class="separator:ab2c31500bcd5639a818600e3e9b36881"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adda1f5a9d38489551c8a5b50b1077cfc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#adda1f5a9d38489551c8a5b50b1077cfc">ziti_intercept_match</a> (const <a class="el" href="structziti__intercept__cfg__v1.html">ziti_intercept_cfg_v1</a> *intercept, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> proto, const char *addr, int port)</td></tr>
+<tr class="separator:adda1f5a9d38489551c8a5b50b1077cfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7644dd7c1e0eee3b7faa9d257d933ecc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a7644dd7c1e0eee3b7faa9d257d933ecc">ziti_intercept_match2</a> (const <a class="el" href="structziti__intercept__cfg__v1.html">ziti_intercept_cfg_v1</a> *intercept, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> proto, const <a class="el" href="structziti__address.html">ziti_address</a> *addr, int port)</td></tr>
+<tr class="separator:a7644dd7c1e0eee3b7faa9d257d933ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
+<tr class="memitem:a5f270ca02a1486144a0015542d6f9bf1"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structziti__protocol__s.html">ziti_protocol_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a5f270ca02a1486144a0015542d6f9bf1">ziti_protocols</a></td></tr>
+<tr class="separator:a5f270ca02a1486144a0015542d6f9bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3de0600dd2518901d34ab7e57856a42d"><td class="memItemLeft" align="right" valign="top">const struct <a class="el" href="structziti__session__type__s.html">ziti_session_type_s</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a3de0600dd2518901d34ab7e57856a42d">ziti_session_types</a></td></tr>
 <tr class="separator:a3de0600dd2518901d34ab7e57856a42d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -922,7 +955,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">XX(hostname, <a class="code hl_struct" href="structziti__address.html">ziti_address</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, hostname, __VA_ARGS__) \</div>
 <div class="line">XX(port, <span class="keywordtype">int</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, port, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__address_html"><div class="ttname"><a href="structziti__address.html">ziti_address</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:161</div></div>
+<div class="ttc" id="astructziti__address_html"><div class="ttname"><a href="structziti__address.html">ziti_address</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:165</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -953,7 +986,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">XX(controller_url, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, ztAPI, __VA_ARGS__) \</div>
 <div class="line">XX(<span class="keywordtype">id</span>, <a class="code hl_struct" href="structziti__id__cfg.html">ziti_id_cfg</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, <span class="keywordtype">id</span>, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__id__cfg_html"><div class="ttname"><a href="structziti__id__cfg.html">ziti_id_cfg</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__id__cfg_html"><div class="ttname"><a href="structziti__id__cfg.html">ziti_id_cfg</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -995,8 +1028,8 @@ Variables</h2></td></tr>
 <div class="line">XX(listen_options, <a class="code hl_struct" href="structziti__listen__options.html">ziti_listen_options</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, listenOptions, __VA_ARGS__)</div>
 <div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:69</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:68</div></div>
-<div class="ttc" id="astructziti__listen__options_html"><div class="ttname"><a href="structziti__listen__options.html">ziti_listen_options</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
-<div class="ttc" id="astructziti__port__range_html"><div class="ttname"><a href="structziti__port__range.html">ziti_port_range</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__listen__options_html"><div class="ttname"><a href="structziti__listen__options.html">ziti_listen_options</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
+<div class="ttc" id="astructziti__port__range_html"><div class="ttname"><a href="structziti__port__range.html">ziti_port_range</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1131,12 +1164,14 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line">XX(protocols, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, protocols, __VA_ARGS__) \</div>
-<div class="line">XX(addresses, <a class="code hl_struct" href="structziti__address.html">ziti_address</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, addresses, __VA_ARGS__) \</div>
-<div class="line">XX(port_ranges, <a class="code hl_struct" href="structziti__port__range.html">ziti_port_range</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, portRanges, __VA_ARGS__) \</div>
+<b>Value:</b><div class="fragment"><div class="line">XX(protocols, <a class="code hl_enumeration" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, protocols, __VA_ARGS__) \</div>
+<div class="line">XX(addresses, <a class="code hl_struct" href="structziti__address.html">ziti_address</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, addresses, __VA_ARGS__) \</div>
+<div class="line">XX(port_ranges, <a class="code hl_struct" href="structziti__port__range.html">ziti_port_range</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, portRanges, __VA_ARGS__) \</div>
 <div class="line">XX(dial_options, <a class="code hl_struct" href="structtag.html">tag</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, dialOptions, __VA_ARGS__) \</div>
 <div class="line">XX(source_ip, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, sourceIp, __VA_ARGS__)</div>
+<div class="ttc" id="amodel__support_8h_html_a298161e3cb85fe291cbbab1f25f0b8f3"><div class="ttname"><a href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a></div><div class="ttdeci">#define list(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:71</div></div>
 <div class="ttc" id="astructtag_html"><div class="ttname"><a href="structtag.html">tag</a></div><div class="ttdef"><b>Definition:</b> model_support.h:226</div></div>
+<div class="ttc" id="aziti__model_8h_html_ae6bf190aa0e20c2f3b135b5441689505"><div class="ttname"><a href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a></div><div class="ttdeci">ziti_protocol</div><div class="ttdef"><b>Definition:</b> ziti_model.h:201</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1270,7 +1305,7 @@ Variables</h2></td></tr>
 <div class="line">XX(timeout, <span class="keywordtype">int</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, timeout, __VA_ARGS__) \</div>
 <div class="line">XX(timeoutRemaining, <span class="keywordtype">int</span>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, timeoutRemaining, __VA_ARGS__) \</div>
 <div class="line">XX(updated_at,<span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, updatedAt, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__process_html"><div class="ttname"><a href="structziti__process.html">ziti_process</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__process_html"><div class="ttname"><a href="structziti__process.html">ziti_process</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1303,7 +1338,7 @@ Variables</h2></td></tr>
 <div class="line">XX(is_passing, <span class="keywordtype">bool</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, isPassing, __VA_ARGS__) \</div>
 <div class="line">XX(policy_type, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, policyType, __VA_ARGS__) \</div>
 <div class="line">XX(posture_queries, <a class="code hl_struct" href="structziti__posture__query.html">ziti_posture_query</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__posture__query_html"><div class="ttname"><a href="structziti__posture__query.html">ziti_posture_query</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__posture__query_html"><div class="ttname"><a href="structziti__posture__query.html">ziti_posture_query</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1333,6 +1368,36 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+</div>
+</div>
+<a id="a2a6e14927d005b9ba90770aa0a405190" name="a2a6e14927d005b9ba90770aa0a405190"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a6e14927d005b9ba90770aa0a405190">&#9670;&nbsp;</a></span>ZITI_PROTOCOL_ENUM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_PROTOCOL_ENUM</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">XX, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line">XX(tcp, __VA_ARGS__)                \</div>
+<div class="line">XX(udp, __VA_ARGS__)</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a9e929cacdfd12286cb36f919cbb652f3" name="a9e929cacdfd12286cb36f919cbb652f3"></a>
@@ -1400,8 +1465,8 @@ Variables</h2></td></tr>
 <div class="line">XX(posture_query_set, <a class="code hl_struct" href="structziti__posture__query__set.html">ziti_posture_query_set</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__) \</div>
 <div class="line">XX(posture_query_map, <a class="code hl_struct" href="structziti__posture__query__set.html">ziti_posture_query_set</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, posturePolicies, __VA_ARGS__) \</div>
 <div class="line">XX(updated_at,<span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, updatedAt, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__posture__query__set_html"><div class="ttname"><a href="structziti__posture__query__set.html">ziti_posture_query_set</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
-<div class="ttc" id="aziti__model_8h_html_a16d0312daa1421133c53164eec94b532"><div class="ttname"><a href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a></div><div class="ttdeci">ziti_session_type</div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__posture__query__set_html"><div class="ttname"><a href="structziti__posture__query__set.html">ziti_posture_query_set</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
+<div class="ttc" id="aziti__model_8h_html_a16d0312daa1421133c53164eec94b532"><div class="ttname"><a href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a></div><div class="ttdeci">ziti_session_type</div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1464,7 +1529,7 @@ Variables</h2></td></tr>
 <div class="line">XX(revision, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, revision, __VA_ARGS__) \</div>
 <div class="line">XX(build_date, <span class="keywordtype">string</span>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, buildDate, __VA_ARGS__) \</div>
 <div class="line">XX(api_versions, <a class="code hl_struct" href="structziti__api__versions.html">ziti_api_versions</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, apiVersions, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__api__versions_html"><div class="ttname"><a href="structziti__api__versions.html">ziti_api_versions</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:192</div></div>
+<div class="ttc" id="astructziti__api__versions_html"><div class="ttname"><a href="structziti__api__versions.html">ziti_api_versions</a></div><div class="ttdef"><b>Definition:</b> ziti_model.h:204</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1477,6 +1542,20 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">typedef <a class="el" href="structapi__path.html">api_path</a>** <a class="el" href="ziti__model_8h.html#afa3a72f690f8a4155d170fce76d43264">api_path_array</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae48340d738e3483f038ec3064e11fc4b" name="ae48340d738e3483f038ec3064e11fc4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48340d738e3483f038ec3064e11fc4b">&#9670;&nbsp;</a></span>parse_service_cfg_f</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef int(* parse_service_cfg_f) (void *, const char *, size_t)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1707,6 +1786,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa3b1e77683ac7dde290fb668b13b1135" name="aa3b1e77683ac7dde290fb668b13b1135"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3b1e77683ac7dde290fb668b13b1135">&#9670;&nbsp;</a></span>ziti_protocol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef enum <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abdff5ed19c6532e303829a2e45ba3ccb" name="abdff5ed19c6532e303829a2e45ba3ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdff5ed19c6532e303829a2e45ba3ccb">&#9670;&nbsp;</a></span>ziti_protocol_array</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>** <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol_array</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aad01a79047e857ef3224102573051538" name="aad01a79047e857ef3224102573051538"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aad01a79047e857ef3224102573051538">&#9670;&nbsp;</a></span>ziti_server_cfg_v1_array</h2>
 
@@ -1792,6 +1899,25 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="acd0d51f4fe1c9310bb9ee3990cbafe41a4273c0f043aa26d1d6f8b196f68aa4e6" name="acd0d51f4fe1c9310bb9ee3990cbafe41a4273c0f043aa26d1d6f8b196f68aa4e6"></a>ziti_address_hostname&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="acd0d51f4fe1c9310bb9ee3990cbafe41a690eef45a95c4f002d8359ebc284de4f" name="acd0d51f4fe1c9310bb9ee3990cbafe41a690eef45a95c4f002d8359ebc284de4f"></a>ziti_address_cidr&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<a id="ae6bf190aa0e20c2f3b135b5441689505" name="ae6bf190aa0e20c2f3b135b5441689505"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6bf190aa0e20c2f3b135b5441689505">&#9670;&nbsp;</a></span>ziti_protocol</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ae6bf190aa0e20c2f3b135b5441689505aadd7bd21e7a4fc988d0d4d5d450be0ef" name="ae6bf190aa0e20c2f3b135b5441689505aadd7bd21e7a4fc988d0d4d5d450be0ef"></a>ziti_protocol_Unknown&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bf190aa0e20c2f3b135b5441689505a2fa0afa8f99bc6a0912170dc81242dd7" name="ae6bf190aa0e20c2f3b135b5441689505a2fa0afa8f99bc6a0912170dc81242dd7"></a>ziti_protocol_tcp&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ae6bf190aa0e20c2f3b135b5441689505a9385b1461b1e90750f62ec00b542ff4f" name="ae6bf190aa0e20c2f3b135b5441689505a9385b1461b1e90750f62ec00b542ff4f"></a>ziti_protocol_udp&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -4161,6 +4287,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a717d599d090850cab3a3cfe8dff9a02f" name="a717d599d090850cab3a3cfe8dff9a02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a717d599d090850cab3a3cfe8dff9a02f">&#9670;&nbsp;</a></span>get_ziti_protocol_meta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structtype__meta.html">type_meta</a> * get_ziti_protocol_meta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a788658b4b6ce66e04d103eac8f1efe8a" name="a788658b4b6ce66e04d103eac8f1efe8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a788658b4b6ce66e04d103eac8f1efe8a">&#9670;&nbsp;</a></span>get_ziti_server_cfg_v1_meta()</h2>
 
@@ -4490,6 +4633,34 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">size_t&#160;</td>
           <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a36c08622cfa0daadfa7e436123570996" name="a36c08622cfa0daadfa7e436123570996"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c08622cfa0daadfa7e436123570996">&#9670;&nbsp;</a></span>parse_ziti_address_str()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int parse_ziti_address_str </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>addr_str</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -6949,22 +7120,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a03165d7db88dfc208ee42d6342c77d22" name="a03165d7db88dfc208ee42d6342c77d22"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03165d7db88dfc208ee42d6342c77d22">&#9670;&nbsp;</a></span>ziti_address_match()</h2>
+<a id="aa697b81d27396da9ba5820e9cf00d97d" name="aa697b81d27396da9ba5820e9cf00d97d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa697b81d27396da9ba5820e9cf00d97d">&#9670;&nbsp;</a></span>ziti_address_match()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ziti_address_match </td>
+          <td class="memname">int ziti_address_match </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
+          <td class="paramtype">const <a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
           <td class="paramname"><em>range</em>&#160;</td>
         </tr>
         <tr>
@@ -6977,14 +7148,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a73ba3d5ce98c915950f0cc62f79726af" name="a73ba3d5ce98c915950f0cc62f79726af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a73ba3d5ce98c915950f0cc62f79726af">&#9670;&nbsp;</a></span>ziti_address_match_array()</h2>
+<a id="af578f6040feef81a285efdc42f6ed91b" name="af578f6040feef81a285efdc42f6ed91b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af578f6040feef81a285efdc42f6ed91b">&#9670;&nbsp;</a></span>ziti_address_match_array()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ziti_address_match_array </td>
+          <td class="memname">int ziti_address_match_array </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
@@ -7005,14 +7176,42 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a53ba316345f62b0898b16cdf301ed550" name="a53ba316345f62b0898b16cdf301ed550"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a53ba316345f62b0898b16cdf301ed550">&#9670;&nbsp;</a></span>ziti_address_match_s()</h2>
+<a id="a5078db31bf0e462e6b00851dabe653af" name="a5078db31bf0e462e6b00851dabe653af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5078db31bf0e462e6b00851dabe653af">&#9670;&nbsp;</a></span>ziti_address_match_list()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool ziti_address_match_s </td>
+          <td class="memname">int ziti_address_match_list </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmodel__list.html">model_list</a> *&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5644a8dfac0844328b8ba97de2ad7349" name="a5644a8dfac0844328b8ba97de2ad7349"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5644a8dfac0844328b8ba97de2ad7349">&#9670;&nbsp;</a></span>ziti_address_match_s()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_address_match_s </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>addr</em>, </td>
@@ -7140,6 +7339,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>write to fixed buffer </p>
+
+</div>
+</div>
+<a id="ae36c1ea8ab2d08905e3618344ac4d106" name="ae36c1ea8ab2d08905e3618344ac4d106"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae36c1ea8ab2d08905e3618344ac4d106">&#9670;&nbsp;</a></span>ziti_addrstr_match_list()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_addrstr_match_list </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmodel__list.html">model_list</a> *&#160;</td>
+          <td class="paramname"><em>range</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -7855,6 +8082,86 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="adda1f5a9d38489551c8a5b50b1077cfc" name="adda1f5a9d38489551c8a5b50b1077cfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adda1f5a9d38489551c8a5b50b1077cfc">&#9670;&nbsp;</a></span>ziti_intercept_match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_intercept_match </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structziti__intercept__cfg__v1.html">ziti_intercept_cfg_v1</a> *&#160;</td>
+          <td class="paramname"><em>intercept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>&#160;</td>
+          <td class="paramname"><em>proto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7644dd7c1e0eee3b7faa9d257d933ecc" name="a7644dd7c1e0eee3b7faa9d257d933ecc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7644dd7c1e0eee3b7faa9d257d933ecc">&#9670;&nbsp;</a></span>ziti_intercept_match2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_intercept_match2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structziti__intercept__cfg__v1.html">ziti_intercept_cfg_v1</a> *&#160;</td>
+          <td class="paramname"><em>intercept</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>&#160;</td>
+          <td class="paramname"><em>proto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structziti__address.html">ziti_address</a> *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8a909c64c04501644bbf44a8e541a5f4" name="a8a909c64c04501644bbf44a8e541a5f4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8a909c64c04501644bbf44a8e541a5f4">&#9670;&nbsp;</a></span>ziti_listen_options_to_json()</h2>
 
@@ -8004,6 +8311,34 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>write to fixed buffer </p>
+
+</div>
+</div>
+<a id="a32f00552b02abc079fa84c46119c7402" name="a32f00552b02abc079fa84c46119c7402"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32f00552b02abc079fa84c46119c7402">&#9670;&nbsp;</a></span>ziti_port_match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_port_match </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>port</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmodel__list.html">model_list</a> *&#160;</td>
+          <td class="paramname"><em>port_range_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -8311,6 +8646,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="aa25cb1fdbf3f288bdb6ae8c4659cf058" name="aa25cb1fdbf3f288bdb6ae8c4659cf058"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa25cb1fdbf3f288bdb6ae8c4659cf058">&#9670;&nbsp;</a></span>ziti_protocol_match()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ziti_protocol_match </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a>&#160;</td>
+          <td class="paramname"><em>proto</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structmodel__list.html">model_list</a> *&#160;</td>
+          <td class="paramname"><em>proto_list</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a86969519ab7cbbdf455d3162d23715a7" name="a86969519ab7cbbdf455d3162d23715a7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a86969519ab7cbbdf455d3162d23715a7">&#9670;&nbsp;</a></span>ziti_server_cfg_v1_to_json()</h2>
 
@@ -8387,8 +8750,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a240edbbca23833a89aaad89a51e9d42b" name="a240edbbca23833a89aaad89a51e9d42b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a240edbbca23833a89aaad89a51e9d42b">&#9670;&nbsp;</a></span>ziti_service_get_config()</h2>
+<a id="a9a865489f9567dad8a539561bd04dfb0" name="a9a865489f9567dad8a539561bd04dfb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a865489f9567dad8a539561bd04dfb0">&#9670;&nbsp;</a></span>ziti_service_get_config()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8414,7 +8777,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int(*)(void *, const char *, size_t)&#160;</td>
+          <td class="paramtype"><a class="el" href="ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b">parse_service_cfg_f</a>&#160;</td>
           <td class="paramname"><em>parse_func</em>&#160;</td>
         </tr>
         <tr>
@@ -8608,6 +8971,28 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a5f270ca02a1486144a0015542d6f9bf1" name="a5f270ca02a1486144a0015542d6f9bf1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f270ca02a1486144a0015542d6f9bf1">&#9670;&nbsp;</a></span>ziti_protocols</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const struct <a class="el" href="structziti__protocol__s.html">ziti_protocol_s</a> ziti_protocols</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a3de0600dd2518901d34ab7e57856a42d" name="a3de0600dd2518901d34ab7e57856a42d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3de0600dd2518901d34ab7e57856a42d">&#9670;&nbsp;</a></span>ziti_session_types</h2>
 

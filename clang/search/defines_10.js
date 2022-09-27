@@ -28,8 +28,9 @@ var searchData=
   ['ziti_5fposture_5fquery_5fset_5fmodel_25',['ZITI_POSTURE_QUERY_SET_MODEL',['../ziti__model_8h.html#a781f72dab476a032310176a81cd6f3b3',1,'ziti_model.h']]],
   ['ziti_5fprintf_5fargs_26',['ziti_printf_args',['../ziti__log_8h.html#aab6f54c951a5da259053e1be7ccb8a71',1,'ziti_log.h']]],
   ['ziti_5fprocess_5fmodel_27',['ZITI_PROCESS_MODEL',['../ziti__model_8h.html#a51f73b23ea060908a58cb3a7468f671b',1,'ziti_model.h']]],
-  ['ziti_5fserver_5fcfg_5fv1_5fmodel_28',['ZITI_SERVER_CFG_V1_MODEL',['../ziti__model_8h.html#a9e929cacdfd12286cb36f919cbb652f3',1,'ziti_model.h']]],
-  ['ziti_5fservice_5fmodel_29',['ZITI_SERVICE_MODEL',['../ziti__model_8h.html#a78cf441bb373466b3d373580b28df7dc',1,'ziti_model.h']]],
-  ['ziti_5fsession_5ftype_5fenum_30',['ZITI_SESSION_TYPE_ENUM',['../ziti__model_8h.html#a056bef21937d3cba1ab93c4ecf3795c4',1,'ziti_model.h']]],
-  ['ziti_5fversion_5fmodel_31',['ZITI_VERSION_MODEL',['../ziti__model_8h.html#a7ba15568eba891661a06453434986669',1,'ziti_model.h']]]
+  ['ziti_5fprotocol_5fenum_28',['ZITI_PROTOCOL_ENUM',['../ziti__model_8h.html#a2a6e14927d005b9ba90770aa0a405190',1,'ziti_model.h']]],
+  ['ziti_5fserver_5fcfg_5fv1_5fmodel_29',['ZITI_SERVER_CFG_V1_MODEL',['../ziti__model_8h.html#a9e929cacdfd12286cb36f919cbb652f3',1,'ziti_model.h']]],
+  ['ziti_5fservice_5fmodel_30',['ZITI_SERVICE_MODEL',['../ziti__model_8h.html#a78cf441bb373466b3d373580b28df7dc',1,'ziti_model.h']]],
+  ['ziti_5fsession_5ftype_5fenum_31',['ZITI_SESSION_TYPE_ENUM',['../ziti__model_8h.html#a056bef21937d3cba1ab93c4ecf3795c4',1,'ziti_model.h']]],
+  ['ziti_5fversion_5fmodel_32',['ZITI_VERSION_MODEL',['../ziti__model_8h.html#a7ba15568eba891661a06453434986669',1,'ziti_model.h']]]
 ];

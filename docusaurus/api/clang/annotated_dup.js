@@ -31,6 +31,7 @@ var annotated_dup =
     [ "ziti_posture_query", "structziti__posture__query.html", "structziti__posture__query" ],
     [ "ziti_posture_query_set", "structziti__posture__query__set.html", "structziti__posture__query__set" ],
     [ "ziti_process", "structziti__process.html", "structziti__process" ],
+    [ "ziti_protocol_s", "structziti__protocol__s.html", "structziti__protocol__s" ],
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
     [ "ziti_server_cfg_v1", "structziti__server__cfg__v1.html", "structziti__server__cfg__v1" ],
     [ "ziti_service", "structziti__service.html", "structziti__service" ],

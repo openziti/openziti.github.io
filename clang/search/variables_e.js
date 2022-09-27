@@ -7,7 +7,7 @@ var searchData=
   ['policy_5fid_4',['policy_id',['../structziti__posture__query__set.html#a3d6c41c77e4d940ac21d2b0e713d4247',1,'ziti_posture_query_set']]],
   ['policy_5ftype_5',['policy_type',['../structziti__posture__query__set.html#a9ddfe8592886a7026c15c7d4f2031e90',1,'ziti_posture_query_set']]],
   ['port_6',['port',['../structziti__client__cfg__v1.html#a17481235e900fa597116f8e1e0aea5e0',1,'ziti_client_cfg_v1::port()'],['../structziti__server__cfg__v1.html#a479c98878b014ea7ad3a2316ecd5cb1e',1,'ziti_server_cfg_v1::port()'],['../structziti__host__cfg__v1.html#ad558f2879167e3de639d20e70a8e8626',1,'ziti_host_cfg_v1::port()']]],
-  ['port_5franges_7',['port_ranges',['../structziti__intercept__cfg__v1.html#a2c22679bd8e35aa40743235bd60483d6',1,'ziti_intercept_cfg_v1']]],
+  ['port_5franges_7',['port_ranges',['../structziti__intercept__cfg__v1.html#aee2f27365ec23fc20fbac3cf1cc4ebce',1,'ziti_intercept_cfg_v1']]],
   ['posture_5fqueries_8',['posture_queries',['../structziti__posture__query__set.html#a2b30b4bb6b063687030ad6f86d12ac86',1,'ziti_posture_query_set']]],
   ['posture_5fquery_5fmap_9',['posture_query_map',['../structziti__service.html#a5f4577621335ce7736732a45225070fe',1,'ziti_service']]],
   ['posture_5fquery_5fset_10',['posture_query_set',['../structziti__service.html#addb4c22fd7eac46f5ab9c774b936192d',1,'ziti_service']]],
@@ -19,7 +19,7 @@ var searchData=
   ['process_16',['process',['../structziti__posture__query.html#ac1267e76f775ee76c2a3b3bfa45f3349',1,'ziti_posture_query']]],
   ['processes_17',['processes',['../structziti__posture__query.html#abfb088bc5452aea108f827303978f8af',1,'ziti_posture_query']]],
   ['protocol_18',['protocol',['../structziti__server__cfg__v1.html#a337fe686dffacb99c829a60a11b31a8a',1,'ziti_server_cfg_v1::protocol()'],['../structziti__host__cfg__v1.html#a8866cb88585d30cc286f3eabb0ce2b45',1,'ziti_host_cfg_v1::protocol()']]],
-  ['protocols_19',['protocols',['../structziti__intercept__cfg__v1.html#ac63d3b7d6470e2cc201009eb8271687b',1,'ziti_intercept_cfg_v1']]],
+  ['protocols_19',['protocols',['../structziti__intercept__cfg__v1.html#ab907a516756d1bad74df099340fa009b',1,'ziti_intercept_cfg_v1']]],
   ['provider_20',['provider',['../structziti__auth__query__mfa.html#a4ce43156cdac586425a2de346f516bbe',1,'ziti_auth_query_mfa']]],
   ['provisioning_5furl_21',['provisioning_url',['../structziti__mfa__enrollment.html#afe9c905e29671042f70b3de570c08b01',1,'ziti_mfa_enrollment']]]
 ];

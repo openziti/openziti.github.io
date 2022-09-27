@@ -3,7 +3,7 @@ var searchData=
   ['added_0',['added',['../structziti__service__event.html#a3492a9c69ddf8bf08ee83224cd46bb62',1,'ziti_service_event']]],
   ['addr_1',['addr',['../structziti__address.html#a9279bf117f64f7df05164948ad6e16da',1,'ziti_address']]],
   ['address_2',['address',['../structziti__router__event.html#a307653022b243b7f96a81b5694466cee',1,'ziti_router_event::address()'],['../structziti__host__cfg__v1.html#a873d719aef0a9c196d7c7d924e99c453',1,'ziti_host_cfg_v1::address()']]],
-  ['addresses_3',['addresses',['../structziti__intercept__cfg__v1.html#a815acda81c4e71287023f8823beb1637',1,'ziti_intercept_cfg_v1']]],
+  ['addresses_3',['addresses',['../structziti__intercept__cfg__v1.html#a460c15e3d1e3e098671c7e3343a674fe',1,'ziti_intercept_cfg_v1']]],
   ['af_4',['af',['../structziti__address.html#a013677a3b725ca1e55d0fb59f30e36c9',1,'ziti_address']]],
   ['allowed_5faddresses_5',['allowed_addresses',['../structziti__host__cfg__v1.html#a3df75c4fdeb56497d46c8d35e30937bb',1,'ziti_host_cfg_v1']]],
   ['allowed_5fport_5franges_6',['allowed_port_ranges',['../structziti__host__cfg__v1.html#a0a24930b99d4db4e38e1c19568306911',1,'ziti_host_cfg_v1']]],

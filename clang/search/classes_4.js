@@ -25,10 +25,11 @@ var searchData=
   ['ziti_5fposture_5fquery_22',['ziti_posture_query',['../structziti__posture__query.html',1,'']]],
   ['ziti_5fposture_5fquery_5fset_23',['ziti_posture_query_set',['../structziti__posture__query__set.html',1,'']]],
   ['ziti_5fprocess_24',['ziti_process',['../structziti__process.html',1,'']]],
-  ['ziti_5frouter_5fevent_25',['ziti_router_event',['../structziti__router__event.html',1,'']]],
-  ['ziti_5fserver_5fcfg_5fv1_26',['ziti_server_cfg_v1',['../structziti__server__cfg__v1.html',1,'']]],
-  ['ziti_5fservice_27',['ziti_service',['../structziti__service.html',1,'']]],
-  ['ziti_5fservice_5fevent_28',['ziti_service_event',['../structziti__service__event.html',1,'']]],
-  ['ziti_5fsession_5ftype_5fs_29',['ziti_session_type_s',['../structziti__session__type__s.html',1,'']]],
-  ['ziti_5fversion_30',['ziti_version',['../structziti__version.html',1,'']]]
+  ['ziti_5fprotocol_5fs_25',['ziti_protocol_s',['../structziti__protocol__s.html',1,'']]],
+  ['ziti_5frouter_5fevent_26',['ziti_router_event',['../structziti__router__event.html',1,'']]],
+  ['ziti_5fserver_5fcfg_5fv1_27',['ziti_server_cfg_v1',['../structziti__server__cfg__v1.html',1,'']]],
+  ['ziti_5fservice_28',['ziti_service',['../structziti__service.html',1,'']]],
+  ['ziti_5fservice_5fevent_29',['ziti_service_event',['../structziti__service__event.html',1,'']]],
+  ['ziti_5fsession_5ftype_5fs_30',['ziti_session_type_s',['../structziti__session__type__s.html',1,'']]],
+  ['ziti_5fversion_31',['ziti_version',['../structziti__version.html',1,'']]]
 ];
