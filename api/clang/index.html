@@ -1,171 +1,114 @@
-﻿<!DOCTYPE html>
-<!--[if IE]><![endif]-->
-<html>
-  
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>C SDK | Ziti </title>
-    <meta name="viewport" content="width=device-width">
-    <meta name="title" content="C SDK | Ziti ">
-    <meta name="generator" content="docfx 2.x">
-    
-    <link rel="shortcut icon" href="../../images/favicon.ico">
-    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
-    <link rel="stylesheet" href="../../styles/docfx.css">
-    <link rel="stylesheet" href="../../styles/main.css">
-    <meta property="docfx:navrel" content="../../toc.html">
-    <meta property="docfx:tocrel" content="../toc.html">
-    
-    <meta property="docfx:rel" content="../../">
-    
-    <!--span>this is text</span-->
-    <link href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
-    <meta name="google-site-verification" content="jfzf3259Xh6i82RehhnKg4aAsHd02v1MB-jP43wEqHI">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-THVRRJ3GLE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-  
-      gtag('config', 'G-THVRRJ3GLE');
-    </script>
-  </head>
-  <body data-spy="scroll" data-target="#affix" data-offset="120">
-    <div id="wrapper">
-      <header>
-        
-        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              
-              <a class="navbar-brand" href="../../index.html">
-                <img id="logo" class="svg" src="../../images/ziti-logo-40.png" alt="">
-              </a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar">
-              <form class="navbar-form navbar-right" role="search" id="search">
-                <div style="display: flex;">
-                    <div class="form-group" style="valign: center;position: relative;">
-                      <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
-                    </div>
-                    <div style="position: relative">
-                        &nbsp;
-                    </div>
-                    <div style="position: relative">
-                        <a href="https://github.com/openziti">
-                            <img src="../../images/github-white.svg" alt="Star us on GitHub" title="Star us on GitHub" height="34px">
-                        </a>
-                    </div>
-                    <div style="position: relative">
-                        <a href="https://openziti.discourse.group">
-                            <img src="../../images/discourse_icon_halo.svg" alt="Start a conversation on Discourse" title="Start a conversation on Discourse" height="34px">
-                        </a>
-                    </div>
-                    <div style="position: relative">
-                        <a href="https://twitter.com/openziti">
-                            <img src="../../images/twit.svg" alt="Follow us on Twitter" title="Follow us on Twitter" height="34px">
-                        </a>
-                    </div>
-                    <div style="position: relative">
-                        <a href="https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ">
-                            <img src="../../images/yt.svg" alt="Watch videos about OpenZiti" title="Watch videos about OpenZiti" height="34px">
-                        </a>
-                    </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </nav>
-        
-        <div class="subnav navbar navbar-default" name="new">
-          <div class="container hide-when-search" id="breadcrumb">
-            <ul class="breadcrumb">
-              <li></li>
-            </ul>
-          </div>
-          <div style="display:flex; align-items: center; justify-content: center; flex-direction:row; position: relative; width: 100%; text-align: center;     background: rgb(0,104,247);
-            background: linear-gradient(90deg, rgba(0,104,247,1) 0%, rgba(222,14,91,1) 100%);">
-            <span style="margin-top: 5px; color: white; margin-right: 10px; height:25px">Star us on GitHub</span>
-            <span style="margin-top: 5px;"><a class="github-button" href="https://github.com/openziti/ziti" data-icon="octicon-star" data-show-count="true" aria-label="Star openziti/ziti on GitHub">Star</a></span>
-          </div>
-        </div>
-      </header>
-      <div class="container body-content">
-        
-        <div id="search-results">
-          <div class="search-list"></div>
-          <div class="sr-items">
-            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
-          </div>
-          <ul id="pagination"></ul>
-        </div>
-      </div>
-      <div role="main" class="container body-content hide-when-search">
-        
-        <div class="sidenav hide-when-search">
-          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
-          <div class="sidetoggle collapse" id="sidetoggle">
-            <div id="sidetoc"></div>
-          </div>
-        </div>
-        <div class="article row grid-right">
-          <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="c-sdk">C SDK</h1>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta http-equiv="refresh" content="0; URL=api/index.html">
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.4"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Ziti C SDK: Ziti C SDK</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
-
-<p>This is the c sdk landing page - you should be redirected to the API doc immediately. If not <a href="index.html">click
-here</a></p>
-</article>
-          </div>
-          
-          <div class="hidden-sm col-md-2" role="complementary">
-            <div class="sideaffix">
-              <div class="contribution">
-                <ul class="nav">
-                  <li>
-                    <a href="https://github.com/openziti/ziti-doc/blob/master/docfx_project/api/clang/index.md/#L1" class="contribution-link">Improve this Doc</a>
-                  </li>
-                </ul>
-              </div>
-              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
-              </nav>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <footer>
-        <div class="grad-bottom"></div>
-        <div class="footer">
-          <div class="container">
-            <span class="pull-right">
-              <a href="#top">Back to top</a>
-            </span>
-            <span class='pull-left'><span><a href='https://netfoundry.io'>©NetFoundry Inc.</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/privacy-policy'>Privacy Policy</a></span>&nbsp;&nbsp;<span><a href='https://www.netfoundry.io/legal-items'>Legal</a></span>&nbsp;&nbsp;<span><a href='https://netfoundry.zendesk.com/hc/en-us'>Support</a></span>&nbsp;&nbsp;</span><span class='pull-right'><span><a href='https://www.facebook.com/NetFoundry/' target='_blank'><img height='25' src='/images/fb.svg'></a></span>&nbsp;<span><a href='https://twitter.com/openziti' target='_blank'><img height='25' src='/images/twit.svg'></a></span>&nbsp;<span><a href='https://www.linkedin.com/company/netfoundry/' target='_blank'><img height='25' src='/images/li.svg'></a></span>&nbsp;<span><a href='https://www.youtube.com/channel/UCAsrfQasdZmp2Gq07Ej_5cQ' target='_blank'><img height='25' src='/images/yt.svg'></a></span>&nbsp;&nbsp;&nbsp;</span><br>
-<!-- Place this tag in your head or just before your close body tag. -->
-<script async="" defer="" src="https://buttons.github.io/buttons.js"></script>
-            
-          </div>
-        </div>
-      </footer>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Ziti C SDK
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.9.4 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search",'Search','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Search');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
     </div>
-    
-    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
-    <script type="text/javascript" src="../../styles/docfx.js"></script>
-    <script type="text/javascript" src="../../styles/main.js"></script>
-  </body>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Ziti C SDK </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p ><a class="anchor" id="md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_README"></a> The Ziti C SDK delivers a set of functionality allowing developers to create applications utilizing a Ziti Network quickly and easily.</p>
+<h2>What Is Ziti</h2>
+<p >Ziti is the name of NetFoundry's open source network overlay. The goal of Ziti is to reinvent networking by providing secure, scalable connectivity as a network overlay over existing underlay networks.</p>
+<h2>Status</h2>
+<p ><a href="https://travis-ci.com/openziti/ziti-sdk-c"><img src="https://travis-ci.com/openziti/ziti-sdk-c.svg?branch=master" alt="Build Status" style="pointer-events: none;" class="inline"/></a></p>
+<h2>Building</h2>
+<p >See the <a class="el" href="md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html">building.md</a> for information on how to build the project.</p>
+<h2>Getting Help</h2>
+<hr  />
+<p> Please use these community resources for getting help. We use GitHub <a href="https://github.com/NetFoundry/ziti-sdk-c/issues">issues</a> for tracking bugs and feature requests and have limited bandwidth to address them.</p>
+<ul>
+<li>Read the <a href="https://openziti.github.io/ziti/overview.html">docs</a></li>
+<li>Join our <a href="https://openziti.org">Developer Community</a></li>
+<li>Participate in discussion on <a href="https://openziti.discourse.group/">Discourse</a></li>
+</ul>
+<p >Copyright&copy; 2018-2020. NetFoundry, Inc. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.4 </li>
+  </ul>
+</div>
+</body>
 </html>
