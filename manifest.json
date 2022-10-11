@@ -2306,6 +2306,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "ziti/manage/edge-router.md",
       "output": {
@@ -2372,39 +2375,6 @@
         ".html": {
           "relative_path": "ziti/manage/router-overview.html",
           "hash": "INJgdzqr32vPmrYqlZAsod8JHk3ycjD1DKnwAbjUMpU="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti/manage/sample-controller-config.yaml",
-      "output": {
-        "resource": {
-          "relative_path": "ziti/manage/sample-controller-config.yaml"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti/manage/sample-edge-router-config.yaml",
-      "output": {
-        "resource": {
-          "relative_path": "ziti/manage/sample-edge-router-config.yaml"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "ziti/manage/sample-fabric-router-config.yaml",
-      "output": {
-        "resource": {
-          "relative_path": "ziti/manage/sample-fabric-router-config.yaml"
         }
       },
       "is_incremental": false,
@@ -3176,7 +3146,7 @@
       "output": {
         ".html": {
           "relative_path": "ziti/toc.html",
-          "hash": "bTKbT1/VHtIyp4ryADUyUaNCbcNJrz7zk4e9DsxowuU="
+          "hash": "QfZz7wNqXIF0gPTJp5+V5FfX2h7SPDaXfPzHRdijeqU="
         }
       },
       "is_incremental": false,
