@@ -122,30 +122,45 @@
             <article class="content wrap" id="_content" data-uid="">
 <h2 id="windows">Windows</h2>
 
-<p>The Windows tunneler currently supports proxy mode and cannot yet seamlessly intercept IPv4 traffic/DNS requests. </p>
-<p>The proxy intercept mode creates a network listener for each Ziti service that is
-intercepted. The services to intercept, and the ports that they are intercepted on,
-are specified on the command line (as opposed to using the service definitions that
-are retrieved from the Ziti Edge Controller):</p>
-<pre><code>$ ziti-tunnel --identity ziti.json proxy wttr.in:8443 ssh-local:2222 netcat:22169
-[   0.004]    INFO ziti/tunnel/intercept/proxy.(*proxyInterceptor).Start: starting proxy interceptor
-[   0.120]    INFO ziti/tunnel/intercept.updateServices: starting tunnel for newly available service ssh-local
-[   0.183]    INFO ziti/tunnel/intercept.updateServices: service ssh-local not hostable
-[   0.183]    INFO ziti/tunnel/intercept.updateServices: starting tunnel for newly available service netcat
-[   0.183]    INFO ziti/tunnel/intercept/proxy.proxyInterceptor.runServiceListener: {addr=[0.0.0.0:2222] service=[ssh-local]} service is listening
-[   0.203]    INFO ziti/tunnel/intercept.updateServices: service netcat not hostable
-[   0.203]    INFO ziti/tunnel/intercept/proxy.proxyInterceptor.runServiceListener: {addr=[0.0.0.0:22169] service=[netcat]} service is listening
-[   0.203]    INFO ziti/tunnel/intercept.updateServices: starting tunnel for newly available service wttr.in
-[   0.226]    INFO ziti/tunnel/intercept.updateServices: service wttr.in not hostable
-[   0.226]    INFO ziti/tunnel/intercept/proxy.proxyInterceptor.runServiceListener: {addr=[0.0.0.0:8443] service=[wttr.in]} service is listening
-</code></pre><p>All network listeners bind to local network interfaces (0.0.0.0):</p>
-<pre><code>$ netstat -tnl | fgrep 0.0.0.0
-Active Internet connections (only servers)
-Proto Recv-Q Send-Q Local Address           Foreign Address         State      
-tcp        0      0 0.0.0.0:2222            0.0.0.0:*               LISTEN     
-tcp        0      0 0.0.0.0:22169           0.0.0.0:*               LISTEN     
-tcp        0      0 0.0.0.0:8443            0.0.0.0:*               LISTEN     
-</code></pre></article>
+<p>The Ziti Desktop Edge for Windows (ZDEW from hereon) is a fully-featured OpenZiti tunneler for Windows. </p>
+<h3 id="installation">Installation</h3>
+<p>The ZDEW has an installer which is available for download from GitHub. 
+<a href="https://github.com/openziti/desktop-edge-win/releases/latest">Download the latest release here</a>. 
+The installer will require administrator privileges to install successfully.</p>
+<h3 id="architecture">Architecture</h3>
+<p>The ZDEW is composed of three main components: the data service, the monitor service, the UI. Communication among
+these processes is handled through IPC and requires the process to have been started by an interactive login.</p>
+<h4 id="the-data-service">The Data Service</h4>
+<p>The data service is the main workhorse of the ZDEW. It is built around the <code>ziti-tunneler-sdk-c</code> (and subsequently the
+<code>ziti-sdk-c</code>). It is responsible for creating the &quot;TUN&quot; (virtual network interface) as well as for configuring any
+routes necessary for IP-based intercepts.</p>
+<h5 id="dns">DNS</h5>
+<p>The data service also has a DNS server listening at $TUN_IP + 1. For example, if the data service is configured to use
+the default IP 100.64.0.1, there will be a DNS server listening on 100.64.0.2. </p>
+<h4 id="the-monitor-service">The Monitor Service</h4>
+<p>This component is delivered as a Windows service and is set to automatic, delayed startup. It has two main functions:
+automatic upgrades and diagnostic information.</p>
+<h5 id="automatic-upgrades">Automatic Upgrades</h5>
+<p>This service will monitor the GitHub releases for new updates. It does this every ten minutes by default but could be
+configured if the user wants to change this to be longer. Shorter is not recommended. </p>
+<h5 id="diagnostic-information">Diagnostic Information</h5>
+<p>When the ZDEW runs into problems. The UI has a &#39;feedback&#39; option in the main menu to generate diagnostic information,
+collect logs etc. This service performs that work resulting in a zip file saved into the <code>logs</code> folder.</p>
+<h4 id="the-ui">The UI</h4>
+<p>The UI is currently a .NET UWP application. It is not necessary for this program to run for the ZDEW to function. It
+is exclusively for users to interact with the data and monitor services.</p>
+<h3 id="logging">Logging</h3>
+<p>Logs for ZDEW are saved relative to the location of the installation. Normally this path will end up being:
+<code>C:\Program Files (x86)\NetFoundry, Inc\Ziti Desktop Edge</code>. In that directory should be a logs directory.</p>
+<p>The logs directory has three subdirectories for each of the main components:</p>
+<ul>
+<li>service - the logs for the data service</li>
+<li>ZitiMonitorService - the logs for the monitor service</li>
+<li>UI - the logs from the UI</li>
+</ul>
+<h3 id="source">Source</h3>
+<p>The source for ZDEW is found on GitHub at <a href="https://github.com/openziti/desktop-edge-win">https://github.com/openziti/desktop-edge-win</a></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
