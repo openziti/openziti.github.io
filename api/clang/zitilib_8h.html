@@ -118,6 +118,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a1e0b67b9411bc037acf42affcda78185"><td class="memItemLeft" align="right" valign="top"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a> (int type)</td></tr>
 <tr class="memdesc:a1e0b67b9411bc037acf42affcda78185"><td class="mdescLeft">&#160;</td><td class="mdescRight">creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service  <a href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">More...</a><br /></td></tr>
 <tr class="separator:a1e0b67b9411bc037acf42affcda78185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae69268e1c9e9c2d83b276bf9e71da083"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#ae69268e1c9e9c2d83b276bf9e71da083">Ziti_close</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket)</td></tr>
+<tr class="memdesc:ae69268e1c9e9c2d83b276bf9e71da083"><td class="mdescLeft">&#160;</td><td class="mdescRight">close the given socket handle/file descriptor.  <a href="zitilib_8h.html#ae69268e1c9e9c2d83b276bf9e71da083">More...</a><br /></td></tr>
+<tr class="separator:ae69268e1c9e9c2d83b276bf9e71da083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11e24e8781b739eff9b0964f3cf4af74"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">Ziti_connect</a> (<a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> socket, <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service, const char *terminator)</td></tr>
 <tr class="memdesc:a11e24e8781b739eff9b0964f3cf4af74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Connect socket to a Ziti service.  <a href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">More...</a><br /></td></tr>
 <tr class="separator:a11e24e8781b739eff9b0964f3cf4af74"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -266,6 +269,32 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, negative error code on failure </dd></dl>
+
+</div>
+</div>
+<a id="ae69268e1c9e9c2d83b276bf9e71da083" name="ae69268e1c9e9c2d83b276bf9e71da083"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae69268e1c9e9c2d83b276bf9e71da083">&#9670;&nbsp;</a></span>Ziti_close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ziti_close </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a>&#160;</td>
+          <td class="paramname"><em>socket</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>close the given socket handle/file descriptor. </p>
+<p >This method facilitates faster cleanup of Ziti socket. Calling standard close()/closesocket() methods still works but may lead to race conditions. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">socket</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
