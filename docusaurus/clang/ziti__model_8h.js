@@ -337,6 +337,7 @@ var ziti__model_8h =
     [ "ziti_server_cfg_v1_to_json_r", "ziti__model_8h.html#a815756af0fa0354b0f53f84662ca3b85", null ],
     [ "ziti_service_get_config", "ziti__model_8h.html#a9a865489f9567dad8a539561bd04dfb0", null ],
     [ "ziti_service_get_raw_config", "ziti__model_8h.html#a915dab67b7aa68c3e50602e8554f0690", null ],
+    [ "ziti_service_has_permission", "ziti__model_8h.html#a644364d6a9f79e3b9f70a0ce6504ecd4", null ],
     [ "ziti_service_to_json", "ziti__model_8h.html#a1d76fcf409a0fd6d1d6a7e3555cfd45a", null ],
     [ "ziti_service_to_json_r", "ziti__model_8h.html#a5f3062a702bb847b9cde1ad9ded44e28", null ],
     [ "ziti_version_to_json", "ziti__model_8h.html#a89bd8fbce339cd682221a5a129b56c46", null ],

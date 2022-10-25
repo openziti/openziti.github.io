@@ -789,6 +789,8 @@ Functions</h2></td></tr>
 <tr class="separator:a36516d5a5866cf593c8a26222e371a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a629979e9fc538589c4e637c668bc1dea"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a629979e9fc538589c4e637c668bc1dea">ziti_mfa_enrollment_to_json</a> (const <a class="el" href="structziti__mfa__enrollment.html">ziti_mfa_enrollment</a> *v, int flags, size_t *len)</td></tr>
 <tr class="separator:a629979e9fc538589c4e637c668bc1dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a644364d6a9f79e3b9f70a0ce6504ecd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a644364d6a9f79e3b9f70a0ce6504ecd4">ziti_service_has_permission</a> (const <a class="el" href="structziti__service.html">ziti_service</a> *service, <a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a> sessionType)</td></tr>
+<tr class="separator:a644364d6a9f79e3b9f70a0ce6504ecd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915dab67b7aa68c3e50602e8554f0690"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a915dab67b7aa68c3e50602e8554f0690">ziti_service_get_raw_config</a> (<a class="el" href="structziti__service.html">ziti_service</a> *service, const char *cfg_type)</td></tr>
 <tr class="separator:a915dab67b7aa68c3e50602e8554f0690"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9a865489f9567dad8a539561bd04dfb0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a9a865489f9567dad8a539561bd04dfb0">ziti_service_get_config</a> (<a class="el" href="structziti__service.html">ziti_service</a> *service, const char *cfg_type, void *cfg, <a class="el" href="ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b">parse_service_cfg_f</a> parse_func)</td></tr>
@@ -8807,6 +8809,34 @@ Variables</h2></td></tr>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>cfg_type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a644364d6a9f79e3b9f70a0ce6504ecd4" name="a644364d6a9f79e3b9f70a0ce6504ecd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a644364d6a9f79e3b9f70a0ce6504ecd4">&#9670;&nbsp;</a></span>ziti_service_has_permission()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ziti_service_has_permission </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structziti__service.html">ziti_service</a> *&#160;</td>
+          <td class="paramname"><em>service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a>&#160;</td>
+          <td class="paramname"><em>sessionType</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
