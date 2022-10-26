@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[2953],{9379:e=>{e.exports=JSON.parse('{"permalink":"/docusaurus/blog","page":1,"postsPerPage":10,"totalPages":1,"totalCount":4,"blogDescription":"OpenZiti Blog Desc","blogTitle":"OpenZiti Technical Blog"}')}}]);
