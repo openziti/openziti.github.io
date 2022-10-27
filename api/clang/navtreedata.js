@@ -25,13 +25,13 @@
 var NAVTREE =
 [
   [ "Ziti C SDK", "index.html", [
-    [ "Building the Project", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html", [
-      [ "Prerequisites", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md3", null ],
-      [ "Building Requirements", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md4", null ],
-      [ "Project Initialization", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md5", null ],
-      [ "Building", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md6", [
-        [ "Linux/MacOS", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md7", null ],
-        [ "Windows", "md____w_ziti_doc_ziti_doc_docfx_project_ziti_sdk_c_building.html#autotoc_md8", null ]
+    [ "Building the Project", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html", [
+      [ "Prerequisites", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md3", null ],
+      [ "Building Requirements", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md4", null ],
+      [ "Project Initialization", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md5", null ],
+      [ "Building", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md6", [
+        [ "Linux/MacOS", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md7", null ],
+        [ "Windows", "md____w_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md8", null ]
       ] ]
     ] ],
     [ "Deprecated List", "deprecated.html", null ],
