@@ -1,23 +1,13 @@
 var searchData=
 [
-  ['cmp_5fapi_5fpath_0',['cmp_api_path',['../ziti__model_8h.html#ae8c8cde5be28ec5a364edb0ad5566eee',1,'ziti_model.h']]],
-  ['cmp_5fziti_5faddress_1',['cmp_ziti_address',['../ziti__model_8h.html#abbe69ebf6637861b0d2ad6afe903f8b9',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fapi_5fversions_2',['cmp_ziti_api_versions',['../ziti__model_8h.html#a89fcd8358cbfc636be5b69e3e3a799cd',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fauth_5fquery_5fmfa_3',['cmp_ziti_auth_query_mfa',['../ziti__model_8h.html#a7769d8e99be319ff71bd99a9ceae480e',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fclient_5fcfg_5fv1_4',['cmp_ziti_client_cfg_v1',['../ziti__model_8h.html#a285737fef853d36e08dce60184e593c1',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fconfig_5',['cmp_ziti_config',['../ziti__model_8h.html#adba85ad5fc622c66bc3de05191407866',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fhost_5fcfg_5fv1_6',['cmp_ziti_host_cfg_v1',['../ziti__model_8h.html#abab1198d7c004892c5f523d9b4c305db',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fhost_5fcfg_5fv2_7',['cmp_ziti_host_cfg_v2',['../ziti__model_8h.html#a53dacd3f65d4f59263299935f0ccc604',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fid_5fcfg_8',['cmp_ziti_id_cfg',['../ziti__model_8h.html#a911d329a2789d14f2dc6bbb3cf39ae4a',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fidentity_9',['cmp_ziti_identity',['../ziti__model_8h.html#a84390c0e47ca06bb20e0d42191536cd0',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fintercept_5fcfg_5fv1_10',['cmp_ziti_intercept_cfg_v1',['../ziti__model_8h.html#ad5ff5fe11d48b862df95a58e98f455af',1,'ziti_model.h']]],
-  ['cmp_5fziti_5flisten_5foptions_11',['cmp_ziti_listen_options',['../ziti__model_8h.html#a82d1dc772b37ec6c7645f93bf6912b9f',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fmfa_5fenrollment_12',['cmp_ziti_mfa_enrollment',['../ziti__model_8h.html#a8039d03a84f1b19adddb8f191a5dced2',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fport_5frange_13',['cmp_ziti_port_range',['../ziti__model_8h.html#ad0f68ad7538be6433751ff6b5f8ba922',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fposture_5fquery_14',['cmp_ziti_posture_query',['../ziti__model_8h.html#a7fadfd20bc8853d6b997d7bbb584d22e',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fposture_5fquery_5fset_15',['cmp_ziti_posture_query_set',['../ziti__model_8h.html#a8553e2781f5a2d3f0c5403e5e194a68e',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fprocess_16',['cmp_ziti_process',['../ziti__model_8h.html#aa9ee2a66019fa7b7a9a41e56d02b6dff',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fserver_5fcfg_5fv1_17',['cmp_ziti_server_cfg_v1',['../ziti__model_8h.html#a470c4132f16879d35c7975720b7c4b4a',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fservice_18',['cmp_ziti_service',['../ziti__model_8h.html#a4a446bfa20596a34022d852679ce2dbf',1,'ziti_model.h']]],
-  ['cmp_5fziti_5fversion_19',['cmp_ziti_version',['../ziti__model_8h.html#ad253ed19cef9462131fb62e4fd70b162',1,'ziti_model.h']]]
+  ['cmp_5fziti_5faddress_646',['cmp_ziti_address',['../ziti__model_8h.html#a62d44475fd5ea87df0bf9e019a715a2c',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fapi_5fversions_647',['cmp_ziti_api_versions',['../ziti__model_8h.html#a637fbed8ec7e34944fff11e3303ebe2e',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fauth_5fquery_5fmfa_648',['cmp_ziti_auth_query_mfa',['../ziti__model_8h.html#a780b51c60210552ae93f0d8ae3c8e9f7',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fhost_5fcfg_5fv1_649',['cmp_ziti_host_cfg_v1',['../ziti__model_8h.html#a1ed18e4d8005f7adf100b43f40bf3039',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fid_5fcfg_650',['cmp_ziti_id_cfg',['../ziti__model_8h.html#aa32886c6e51424291512b087f8b1c573',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fidentity_651',['cmp_ziti_identity',['../ziti__model_8h.html#af1666fb3c1fff476dd4be751832d11e3',1,'ziti_model.h']]],
+  ['cmp_5fziti_5flisten_5foptions_652',['cmp_ziti_listen_options',['../ziti__model_8h.html#a75ccc309be3fe4706802efdcd8018377',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fport_5frange_653',['cmp_ziti_port_range',['../ziti__model_8h.html#a04f0e50538d7eae37b3a8f00b6639f1c',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fposture_5fquery_654',['cmp_ziti_posture_query',['../ziti__model_8h.html#adc3613c0cf4cf1572a7955ca9168e3ba',1,'ziti_model.h']]],
+  ['cmp_5fziti_5fservice_655',['cmp_ziti_service',['../ziti__model_8h.html#a8b5ac241e4b0797b8f8bd098ad05424f',1,'ziti_model.h']]]
 ];

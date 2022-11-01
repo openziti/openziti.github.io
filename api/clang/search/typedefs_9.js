@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['string_0',['string',['../model__support_8h.html#a4505c08c065b48840a30eedd9845cce2',1,'model_support.h']]],
-  ['string_5farray_1',['string_array',['../model__support_8h.html#af3741b4b338febbb5badb45e710c600a',1,'model_support.h']]],
-  ['string_5fbuf_5ft_2',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]]
+  ['timestamp_1032',['timestamp',['../model__support_8h.html#ab2a65074a62982920edadbc6f5e01433',1,'model_support.h']]]
 ];

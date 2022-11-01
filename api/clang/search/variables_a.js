@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['listen_5foptions_0',['listen_options',['../structziti__host__cfg__v1.html#a0a47f68d61c8406919a1e9c1dcc225a4',1,'ziti_host_cfg_v1']]],
-  ['low_1',['low',['../structziti__port__range.html#a68c54b0da38ba1aafe9d205cc7cc003b',1,'ziti_port_range']]]
+  ['name_943',['name',['../structfield__meta.html#af909ae94ef3d3d3ad498ae8570318b5e',1,'field_meta::name()'],['../structtype__meta.html#ac9c7cd2ca7597d9c1bce2c110a930f8b',1,'type_meta::name()'],['../structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398',1,'ziti_router_event::name()'],['../structziti__protocol__s.html#a85713001d91760162eff6a3b667d12cb',1,'ziti_protocol_s::name()'],['../structziti__session__type__s.html#a14f74f9f89bd0402a277a990f8951d8c',1,'ziti_session_type_s::name()']]],
+  ['new_5fctrl_5faddress_944',['new_ctrl_address',['../structziti__api__event.html#aca89351799e172964c6bd95d30433ab6',1,'ziti_api_event']]],
+  ['num_5fvalue_945',['num_value',['../structtag.html#ad4eb6ac94c243654651229c948d2961e',1,'tag']]]
 ];
