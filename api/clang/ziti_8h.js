@@ -1,10 +1,10 @@
 var ziti_8h =
 [
-    [ "ziti_options_s", "structziti__options__s.html", "structziti__options__s" ],
-    [ "ziti_enroll_opts_s", "structziti__enroll__opts__s.html", "structziti__enroll__opts__s" ],
-    [ "ziti_dial_opts_s", "structziti__dial__opts__s.html", "structziti__dial__opts__s" ],
-    [ "ziti_client_ctx_s", "structziti__client__ctx__s.html", "structziti__client__ctx__s" ],
-    [ "ziti_listen_opts_s", "structziti__listen__opts__s.html", "structziti__listen__opts__s" ],
+    [ "ziti_options", "structziti__options.html", "structziti__options" ],
+    [ "ziti_enroll_opts", "structziti__enroll__opts.html", "structziti__enroll__opts" ],
+    [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],
+    [ "ziti_client_ctx", "structziti__client__ctx.html", "structziti__client__ctx" ],
+    [ "ziti_listen_opts", "structziti__listen__opts.html", "structziti__listen__opts" ],
     [ "ZITI_CAN_BIND", "ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76", null ],
     [ "ZITI_CAN_DIAL", "ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3", null ],
     [ "ZITI_DEFAULT_TIMEOUT", "ziti_8h.html#a09b75586a74376352a25de37b835a74d", null ],
@@ -32,10 +32,10 @@ var ziti_8h =
     [ "ziti_service_cb", "ziti_8h.html#a35245ab4953e815155542e5b46f5bdff", null ],
     [ "ziti_verify_extend_cert_authenticator_cb", "ziti_8h.html#abc15f1012d9536c9651cd1f511943070", null ],
     [ "ziti_write_cb", "ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d", null ],
-    [ "ziti_terminator_precedence_e", "ziti_8h.html#aa404efa4e0b1ceedf0eeab27db9c8478", [
-      [ "PRECEDENCE_DEFAULT", "ziti_8h.html#aa404efa4e0b1ceedf0eeab27db9c8478a968ba3b285011442b8fe1167a6ee991e", null ],
-      [ "PRECEDENCE_REQUIRED", "ziti_8h.html#aa404efa4e0b1ceedf0eeab27db9c8478a1e205adb5263d3c2e18435d2b8562988", null ],
-      [ "PRECEDENCE_FAILED", "ziti_8h.html#aa404efa4e0b1ceedf0eeab27db9c8478a170dd873dd8f2eccbbf96d14a0002395", null ]
+    [ "ziti_terminator_precedence", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178", [
+      [ "PRECEDENCE_DEFAULT", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e", null ],
+      [ "PRECEDENCE_REQUIRED", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988", null ],
+      [ "PRECEDENCE_FAILED", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395", null ]
     ] ],
     [ "ziti_accept", "ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b", null ],
     [ "ziti_app_ctx", "ziti_8h.html#a35fa2d859ebc0167ec27aa8e50e0fa50", null ],

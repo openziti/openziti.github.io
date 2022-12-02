@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hostname_158',['hostname',['../structziti__address__s.html#ac1e50aa5cdba8428db83e90cba72857c',1,'ziti_address_s']]],
-  ['hour_159',['HOUR',['../types_8h.html#a4698ae12cf6a8acb5886fffd0ec897e6',1,'types.h']]]
+  ['hostname_163',['hostname',['../structziti__address.html#abaa2fa39a92d31f12d663d99d99569ed',1,'ziti_address']]],
+  ['hour_164',['HOUR',['../types_8h.html#a4698ae12cf6a8acb5886fffd0ec897e6',1,'types.h']]]
 ];

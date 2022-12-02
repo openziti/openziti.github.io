@@ -5,7 +5,7 @@ var ziti__events_8h =
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
     [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
     [ "ziti_mfa_auth_event", "structziti__mfa__auth__event.html", "structziti__mfa__auth__event" ],
-    [ "ziti_event_s", "structziti__event__s.html", "structziti__event__s" ],
+    [ "ziti_event_t", "structziti__event__t.html", "structziti__event__t" ],
     [ "ziti_event_type", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93", [
       [ "ZitiContextEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4", null ],
       [ "ZitiRouterEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab", null ],

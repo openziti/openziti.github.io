@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hostname_932',['hostname',['../structziti__address__s.html#ac1e50aa5cdba8428db83e90cba72857c',1,'ziti_address_s']]]
+  ['hostname_949',['hostname',['../structziti__address.html#abaa2fa39a92d31f12d663d99d99569ed',1,'ziti_address']]]
 ];

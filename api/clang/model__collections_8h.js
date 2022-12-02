@@ -1,7 +1,7 @@
 var model__collections_8h =
 [
     [ "model_map", "structmodel__map.html", "structmodel__map" ],
-    [ "model_list_s", "structmodel__list__s.html", "structmodel__list__s" ],
+    [ "model_list", "structmodel__list.html", "structmodel__list" ],
     [ "MODEL_LIST_FOR", "model__collections_8h.html#adca432bf002e29515b7aefa1b4301f4d", null ],
     [ "MODEL_LIST_FOREACH", "model__collections_8h.html#a640a46e208b9b32218a8ba2cbc311303", null ],
     [ "MODEL_MAP_FOR", "model__collections_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c", null ],
