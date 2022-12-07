@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[9383],{9063:s=>{s.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"docs-glossary"}')}}]);
