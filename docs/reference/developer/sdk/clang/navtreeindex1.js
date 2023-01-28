@@ -1,6 +1,5 @@
 var NAVTREEINDEX1 =
 {
-"structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30":[2,0,7,1],
 "structziti__client__ctx.html#a58a65c3dbfbe2921ad3702ec4b70fa81":[2,0,7,0],
 "structziti__client__ctx.html#abfbeae24ba2da2caecc725981b217d55":[2,0,7,2],
 "structziti__context__event.html":[2,0,8],
@@ -196,7 +195,7 @@ var NAVTREEINDEX1 =
 "ziti__log_8h.html#a3f66510d8a0314d547389b2c0ecf85b2":[3,0,0,10,20],
 "ziti__log_8h.html#a5211ed97a920e8e9142e552149a4f621":[3,0,0,10,3],
 "ziti__log_8h.html#a5fccb4fc71e44089a1b1a77fc76c0b68":[3,0,0,10,0],
-"ziti__log_8h.html#a675a950687ff596ea58f544a94122dc5":[3,0,0,10,13],
+"ziti__log_8h.html#a676fe1bb0d2f3a734abaf6c827a7bee2":[3,0,0,10,13],
 "ziti__log_8h.html#a8530c2526b442921973e8c0bed2adc65":[3,0,0,10,19],
 "ziti__log_8h.html#aab6f54c951a5da259053e1be7ccb8a71":[3,0,0,10,10],
 "ziti__log_8h.html#ab4235eba452aa02c647c9e103fd5d5ea":[3,0,0,10,18],
@@ -249,5 +248,6 @@ var NAVTREEINDEX1 =
 "ziti__model_8h.html#a1e8dcdd3136e1e1bd23442bf5b0ac735":[3,0,0,11,19],
 "ziti__model_8h.html#a1fa12d282df773687ff7e6f9cb4caf77":[3,0,0,11,152],
 "ziti__model_8h.html#a21d7c1ef7905627bed6fdcdcbc5496fd":[3,0,0,11,136],
-"ziti__model_8h.html#a21ddcede7f5fab1c1412d987fb5bfc40":[3,0,0,11,189]
+"ziti__model_8h.html#a21ddcede7f5fab1c1412d987fb5bfc40":[3,0,0,11,189],
+"ziti__model_8h.html#a248434a294d31c6171324978ff880717":[3,0,0,11,67]
 };

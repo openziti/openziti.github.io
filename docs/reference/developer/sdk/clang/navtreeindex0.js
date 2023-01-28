@@ -84,7 +84,7 @@ var NAVTREEINDEX0 =
 "globals_func_n.html":[3,1,1,7],
 "globals_func_p.html":[3,1,1,8],
 "globals_func_s.html":[3,1,1,9],
-"globals_func_u.html":[3,1,1,10],
+"globals_func_t.html":[3,1,1,10],
 "globals_func_z.html":[3,1,1,11],
 "globals_g.html":[3,1,0,7],
 "globals_h.html":[3,1,0,8],
@@ -98,11 +98,10 @@ var NAVTREEINDEX0 =
 "globals_s.html":[3,1,0,16],
 "globals_t.html":[3,1,0,17],
 "globals_type.html":[3,1,3],
-"globals_u.html":[3,1,0,18],
-"globals_v.html":[3,1,0,19],
+"globals_v.html":[3,1,0,18],
 "globals_vars.html":[3,1,2],
-"globals_w.html":[3,1,0,20],
-"globals_z.html":[3,1,0,21],
+"globals_w.html":[3,1,0,19],
+"globals_z.html":[3,1,0,20],
 "index.html":[],
 "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html":[0],
 "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md3":[0,0],
@@ -249,5 +248,6 @@ var NAVTREEINDEX0 =
 "structziti__address.html#ad62174863d0c08909a416752bf06835e":[2,0,5,5],
 "structziti__api__event.html":[2,0,6],
 "structziti__api__event.html#aca89351799e172964c6bd95d30433ab6":[2,0,6,0],
-"structziti__client__ctx.html":[2,0,7]
+"structziti__client__ctx.html":[2,0,7],
+"structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30":[2,0,7,1]
 };

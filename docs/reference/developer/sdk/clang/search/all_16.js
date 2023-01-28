@@ -243,7 +243,7 @@ var searchData=
   ['ziti_5fsocket_592',['Ziti_socket',['../zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185',1,'zitilib.h']]],
   ['ziti_5fsocket_5ft_593',['ziti_socket_t',['../zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4',1,'zitilib.h']]],
   ['ziti_5fsrc_2eh_594',['ziti_src.h',['../ziti__src_8h.html',1,'']]],
-  ['ziti_5fsrc_5finit_595',['ziti_src_init',['../ziti__src_8h.html#a71aa4f178c732ca63d316aa3cb00cd04',1,'ziti_src.h']]],
+  ['ziti_5fsrc_5finit_595',['ziti_src_init',['../ziti__src_8h.html#aa18a3ba4de69dd5d700fcb400ee75a57',1,'ziti_src.h']]],
   ['ziti_5fterminator_5fprecedence_596',['ziti_terminator_precedence',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178',1,'ziti.h']]],
   ['ziti_5ftimeout_597',['ZITI_TIMEOUT',['../errors_8h.html#a3b6e0c786cfe90c05611a9ec5d2b1d2b',1,'errors.h']]],
   ['ziti_5fverify_5fextend_5fcert_5fauthenticator_598',['ziti_verify_extend_cert_authenticator',['../ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2',1,'ziti.h']]],
