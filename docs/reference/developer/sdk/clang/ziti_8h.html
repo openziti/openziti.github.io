@@ -312,9 +312,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ad11df442fe8d4331dcbbe5afd06ccb69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69">ziti_write</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uint8_t *data, size_t length, <a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a> write_cb, void *write_ctx)</td></tr>
 <tr class="memdesc:ad11df442fe8d4331dcbbe5afd06ccb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to the connection peer.  <a href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69">More...</a><br /></td></tr>
 <tr class="separator:ad11df442fe8d4331dcbbe5afd06ccb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9141035103c444a6fe94796b333a299"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab9141035103c444a6fe94796b333a299">ziti_conn_bridge</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uv_stream_t *stream, uv_close_cb on_close)</td></tr>
-<tr class="memdesc:ab9141035103c444a6fe94796b333a299"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge [ziti_connection] to a given IO stream.  <a href="ziti_8h.html#ab9141035103c444a6fe94796b333a299">More...</a><br /></td></tr>
-<tr class="separator:ab9141035103c444a6fe94796b333a299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af4dc49b59dcb1d61e6d82a6a1a937adf">ziti_conn_bridge</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uv_handle_t *handle, uv_close_cb on_close)</td></tr>
+<tr class="memdesc:af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge [ziti_connection] to a given IO stream.  <a href="ziti_8h.html#af4dc49b59dcb1d61e6d82a6a1a937adf">More...</a><br /></td></tr>
+<tr class="separator:af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad913757a22172973bb0a1f74aebb3e7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad913757a22172973bb0a1f74aebb3e7a">ziti_conn_bridge_idle_timeout</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, unsigned long millis)</td></tr>
+<tr class="memdesc:ad913757a22172973bb0a1f74aebb3e7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">set idle timeout on bridged connection.  <a href="ziti_8h.html#ad913757a22172973bb0a1f74aebb3e7a">More...</a><br /></td></tr>
+<tr class="separator:ad913757a22172973bb0a1f74aebb3e7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b496d7c7680bebe15c085a854c8cfbf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a2b496d7c7680bebe15c085a854c8cfbf">ziti_conn_bridge_fds</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uv_os_fd_t input, uv_os_fd_t output, void(*close_cb)(void *ctx), void *ctx)</td></tr>
 <tr class="memdesc:a2b496d7c7680bebe15c085a854c8cfbf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge [ziti_connection] to given IO file descriptors.  <a href="ziti_8h.html#a2b496d7c7680bebe15c085a854c8cfbf">More...</a><br /></td></tr>
 <tr class="separator:a2b496d7c7680bebe15c085a854c8cfbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1131,8 +1134,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab9141035103c444a6fe94796b333a299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9141035103c444a6fe94796b333a299">&#9670;&nbsp;</a></span>ziti_conn_bridge()</h2>
+<a id="af4dc49b59dcb1d61e6d82a6a1a937adf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4dc49b59dcb1d61e6d82a6a1a937adf">&#9670;&nbsp;</a></span>ziti_conn_bridge()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1146,8 +1149,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uv_stream_t *&#160;</td>
-          <td class="paramname"><em>stream</em>, </td>
+          <td class="paramtype">uv_handle_t *&#160;</td>
+          <td class="paramname"><em>handle</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1169,12 +1172,12 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td></td></tr>
-    <tr><td class="paramname">stream</td><td></td></tr>
+    <tr><td class="paramname">handle</td><td>IO handle, must be a stream (UV_TCP, UV_PIPE, UV_TTY) or a UV_UDP handle </td></tr>
     <tr><td class="paramname">on_close</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, error code on failure </dd></dl>
 
 </div>
 </div>
@@ -1235,6 +1238,44 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="ad913757a22172973bb0a1f74aebb3e7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad913757a22172973bb0a1f74aebb3e7a">&#9670;&nbsp;</a></span>ziti_conn_bridge_idle_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_conn_bridge_idle_timeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a>&#160;</td>
+          <td class="paramname"><em>conn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned long&#160;</td>
+          <td class="paramname"><em>millis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set idle timeout on bridged connection. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">conn</td><td>ziti_connection previously bridged wtih [ziti_conn_bridge] or [ziti_conn_bridge_fds] </td></tr>
+    <tr><td class="paramname">millis</td><td>timeout after which bridge will be closed absent any traffic </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, error code on failure </dd></dl>
 
 </div>
 </div>
