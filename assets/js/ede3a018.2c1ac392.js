@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[5127],{82507:(e,t,l)=>{l.r(t),l.d(t,{default:()=>u});var n=l(67294),a=l(28084),c=l(42566),r=l(24493);function u(){const e=(0,a.ZP)();return n.createElement(c.Z,null,n.createElement("h2",null,"Global data"),n.createElement(r.Z,{src:e,collapseDepth:3}))}}}]);
