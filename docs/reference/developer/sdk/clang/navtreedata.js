@@ -25,15 +25,6 @@
 var NAVTREE =
 [
   [ "Ziti C SDK", "index.html", [
-    [ "Building the Project", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html", [
-      [ "Prerequisites", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md3", null ],
-      [ "Building Requirements", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md4", null ],
-      [ "Project Initialization", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md5", null ],
-      [ "Building", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md6", [
-        [ "Linux/MacOS", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md7", null ],
-        [ "Windows", "md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_building.html#autotoc_md8", null ]
-      ] ]
-    ] ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -61,8 +52,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structziti__client__ctx.html#a58a65c3dbfbe2921ad3702ec4b70fa81",
-"ziti__model_8h.html#a248434a294d31c6171324978ff880717"
+"structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6",
+"ziti__model_8h.html#a2f09c1e70c7c063777720231d53a4c1c"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
