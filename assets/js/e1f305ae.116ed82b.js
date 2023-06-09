@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[3628],{17336:e=>{e.exports=JSON.parse('{"title":"Digital Ocean","slug":"/category/digital-ocean","permalink":"/docs/category/digital-ocean","navigation":{"previous":{"title":"Overview","permalink":"/docs/guides/"},"next":{"title":"Intro","permalink":"/docs/guides/Digital_Ocean/"}}}')}}]);
