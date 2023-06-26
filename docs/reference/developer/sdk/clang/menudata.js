@@ -105,9 +105,7 @@ var menudata={children:[
 {text:"s",url:"globals_func_s.html#index_s"},
 {text:"t",url:"globals_func_t.html#index_t"},
 {text:"z",url:"globals_func_z.html#index_z"}]},
-{text:"Variables",url:"globals_vars.html",children:[
-{text:"s",url:"globals_vars.html#index_s"},
-{text:"z",url:"globals_vars.html#index_z"}]},
+{text:"Variables",url:"globals_vars.html"},
 {text:"Typedefs",url:"globals_type.html",children:[
 {text:"_",url:"globals_type.html#index__5F"},
 {text:"b",url:"globals_type.html#index_b"},

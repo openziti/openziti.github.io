@@ -83,8 +83,7 @@ $(document).ready(function(){initNavTree('errors_8h.html',''); initResizable(); 
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Functions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">errors.h File Reference</div>  </div>
 </div><!--header-->
@@ -93,160 +92,708 @@ $(document).ready(function(){initNavTree('errors_8h.html',''); initResizable(); 
 <p>Defines the macros, functions, typedefs and constants pertaining to errors observed when using a Ziti Network.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="externs_8h_source.html">externs.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="error__defs_8h_source.html">error_defs.h</a>&quot;</code><br />
 </div>
 <p><a href="errors_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a947429505002f0c889a011a663ea5a72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a947429505002f0c889a011a663ea5a72">ERR_ID</a>(e,  _)&#160;&#160;&#160;<a class="el" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> extern const int ZITI_##e;</td></tr>
-<tr class="memdesc:a947429505002f0c889a011a663ea5a72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A helper macro to make declaring expected error conditions easier which is undef'ed immidately.  <a href="errors_8h.html#a947429505002f0c889a011a663ea5a72">More...</a><br /></td></tr>
-<tr class="separator:a947429505002f0c889a011a663ea5a72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ccd2aaa13be89c787a445994f0525ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">ZITI_OK</a>&#160;&#160;&#160;(0)</td></tr>
+<tr class="memdesc:a2ccd2aaa13be89c787a445994f0525ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expected outcome of a successful operation.  <a href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">More...</a><br /></td></tr>
+<tr class="separator:a2ccd2aaa13be89c787a445994f0525ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a185d1e51300e4ae8d7cb85d7c478d543"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a185d1e51300e4ae8d7cb85d7c478d543">ZITI_CONFIG_NOT_FOUND</a>&#160;&#160;&#160;(-1)</td></tr>
+<tr class="memdesc:a185d1e51300e4ae8d7cb85d7c478d543"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided configuration was not found.  <a href="errors_8h.html#a185d1e51300e4ae8d7cb85d7c478d543">More...</a><br /></td></tr>
+<tr class="separator:a185d1e51300e4ae8d7cb85d7c478d543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba2559ee651be97dae4a448f6eb4cd4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aaba2559ee651be97dae4a448f6eb4cd4">ZITI_JWT_NOT_FOUND</a>&#160;&#160;&#160;(-2)</td></tr>
+<tr class="memdesc:aaba2559ee651be97dae4a448f6eb4cd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT was not found.  <a href="errors_8h.html#aaba2559ee651be97dae4a448f6eb4cd4">More...</a><br /></td></tr>
+<tr class="separator:aaba2559ee651be97dae4a448f6eb4cd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8649eeb2004465ae1932baad50bb9fc7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a8649eeb2004465ae1932baad50bb9fc7">ZITI_JWT_INVALID</a>&#160;&#160;&#160;(-3)</td></tr>
+<tr class="memdesc:a8649eeb2004465ae1932baad50bb9fc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT is not accepted by controller.  <a href="errors_8h.html#a8649eeb2004465ae1932baad50bb9fc7">More...</a><br /></td></tr>
+<tr class="separator:a8649eeb2004465ae1932baad50bb9fc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2658dfa88d000ef1fa7f218af62a5433"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a2658dfa88d000ef1fa7f218af62a5433">ZITI_JWT_INVALID_FORMAT</a>&#160;&#160;&#160;(-4)</td></tr>
+<tr class="memdesc:a2658dfa88d000ef1fa7f218af62a5433"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT has invalid format.  <a href="errors_8h.html#a2658dfa88d000ef1fa7f218af62a5433">More...</a><br /></td></tr>
+<tr class="separator:a2658dfa88d000ef1fa7f218af62a5433"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ce9a44cc2d6b186eb300d50dd069988"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a7ce9a44cc2d6b186eb300d50dd069988">ZITI_PKCS7_ASN1_PARSING_FAILED</a>&#160;&#160;&#160;(-5)</td></tr>
+<tr class="memdesc:a7ce9a44cc2d6b186eb300d50dd069988"><td class="mdescLeft">&#160;</td><td class="mdescRight">PKCS7/ASN.1 parsing failed.  <a href="errors_8h.html#a7ce9a44cc2d6b186eb300d50dd069988">More...</a><br /></td></tr>
+<tr class="separator:a7ce9a44cc2d6b186eb300d50dd069988"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38195a0b996a20afa95b4ece6c190644"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a38195a0b996a20afa95b4ece6c190644">ZITI_JWT_SIGNING_ALG_UNSUPPORTED</a>&#160;&#160;&#160;(-6)</td></tr>
+<tr class="memdesc:a38195a0b996a20afa95b4ece6c190644"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported JWT signing algorithm  <a href="errors_8h.html#a38195a0b996a20afa95b4ece6c190644">More...</a><br /></td></tr>
+<tr class="separator:a38195a0b996a20afa95b4ece6c190644"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:affdd888671f013acdff739aa3137ea2b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#affdd888671f013acdff739aa3137ea2b">ZITI_JWT_VERIFICATION_FAILED</a>&#160;&#160;&#160;(-7)</td></tr>
+<tr class="memdesc:affdd888671f013acdff739aa3137ea2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWT verification failed.  <a href="errors_8h.html#affdd888671f013acdff739aa3137ea2b">More...</a><br /></td></tr>
+<tr class="separator:affdd888671f013acdff739aa3137ea2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae860ab267ffdf4ee6591432d8caf2dd2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ae860ab267ffdf4ee6591432d8caf2dd2">ZITI_ENROLLMENT_METHOD_UNSUPPORTED</a>&#160;&#160;&#160;(-8)</td></tr>
+<tr class="memdesc:ae860ab267ffdf4ee6591432d8caf2dd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported enrollment method  <a href="errors_8h.html#ae860ab267ffdf4ee6591432d8caf2dd2">More...</a><br /></td></tr>
+<tr class="separator:ae860ab267ffdf4ee6591432d8caf2dd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4af7dff9cd0e48123e6d781535a28ccb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a4af7dff9cd0e48123e6d781535a28ccb">ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</a>&#160;&#160;&#160;(-9)</td></tr>
+<tr class="memdesc:a4af7dff9cd0e48123e6d781535a28ccb"><td class="mdescLeft">&#160;</td><td class="mdescRight">enrollment method requires client certificate  <a href="errors_8h.html#a4af7dff9cd0e48123e6d781535a28ccb">More...</a><br /></td></tr>
+<tr class="separator:a4af7dff9cd0e48123e6d781535a28ccb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f5e44d35e36cc9fa4c6532f89082ed8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a9f5e44d35e36cc9fa4c6532f89082ed8">ZITI_KEY_GENERATION_FAILED</a>&#160;&#160;&#160;(-10)</td></tr>
+<tr class="memdesc:a9f5e44d35e36cc9fa4c6532f89082ed8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate an private key failed.  <a href="errors_8h.html#a9f5e44d35e36cc9fa4c6532f89082ed8">More...</a><br /></td></tr>
+<tr class="separator:a9f5e44d35e36cc9fa4c6532f89082ed8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e1585354efffb35ed6b6e865cd066b7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a4e1585354efffb35ed6b6e865cd066b7">ZITI_KEY_LOAD_FAILED</a>&#160;&#160;&#160;(-11)</td></tr>
+<tr class="memdesc:a4e1585354efffb35ed6b6e865cd066b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to load TLS key failed.  <a href="errors_8h.html#a4e1585354efffb35ed6b6e865cd066b7">More...</a><br /></td></tr>
+<tr class="separator:a4e1585354efffb35ed6b6e865cd066b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba1f52708c9106519430ea01c97ca57"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a2ba1f52708c9106519430ea01c97ca57">ZITI_CSR_GENERATION_FAILED</a>&#160;&#160;&#160;(-12)</td></tr>
+<tr class="memdesc:a2ba1f52708c9106519430ea01c97ca57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate a CSR failed.  <a href="errors_8h.html#a2ba1f52708c9106519430ea01c97ca57">More...</a><br /></td></tr>
+<tr class="separator:a2ba1f52708c9106519430ea01c97ca57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3290238167042030132e2a5716b5d750"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a3290238167042030132e2a5716b5d750">ZITI_INVALID_CONFIG</a>&#160;&#160;&#160;(-13)</td></tr>
+<tr class="memdesc:a3290238167042030132e2a5716b5d750"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some or all of the provided configuration is incorrect.  <a href="errors_8h.html#a3290238167042030132e2a5716b5d750">More...</a><br /></td></tr>
+<tr class="separator:a3290238167042030132e2a5716b5d750"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17268e0cd0da850d2c72ebec6d753794"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a17268e0cd0da850d2c72ebec6d753794">ZITI_AUTHENTICATION_FAILED</a>&#160;&#160;&#160;(-14)</td></tr>
+<tr class="memdesc:a17268e0cd0da850d2c72ebec6d753794"><td class="mdescLeft">&#160;</td><td class="mdescRight">the certificates presented are incorrect, out of date, or invalid  <a href="errors_8h.html#a17268e0cd0da850d2c72ebec6d753794">More...</a><br /></td></tr>
+<tr class="separator:a17268e0cd0da850d2c72ebec6d753794"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fb8ab9c5c3a44cad56786c8cfc57bfd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a1fb8ab9c5c3a44cad56786c8cfc57bfd">ZITI_NOT_AUTHORIZED</a>&#160;&#160;&#160;(-15)</td></tr>
+<tr class="memdesc:a1fb8ab9c5c3a44cad56786c8cfc57bfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned when the identity does not have the correct level of access needed.  <a href="errors_8h.html#a1fb8ab9c5c3a44cad56786c8cfc57bfd">More...</a><br /></td></tr>
+<tr class="separator:a1fb8ab9c5c3a44cad56786c8cfc57bfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa560a8176e482ddb080c997e33ee70c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aaa560a8176e482ddb080c997e33ee70c">ZITI_CONTROLLER_UNAVAILABLE</a>&#160;&#160;&#160;(-16)</td></tr>
+<tr class="memdesc:aaa560a8176e482ddb080c997e33ee70c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK has attempted to communicate to the Ziti Controller but the controller is offline or did not respond to the request.  <a href="errors_8h.html#aaa560a8176e482ddb080c997e33ee70c">More...</a><br /></td></tr>
+<tr class="separator:aaa560a8176e482ddb080c997e33ee70c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec10c14a1b69bf3286b8ab717718cdf0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aec10c14a1b69bf3286b8ab717718cdf0">ZITI_GATEWAY_UNAVAILABLE</a>&#160;&#160;&#160;(-17)</td></tr>
+<tr class="memdesc:aec10c14a1b69bf3286b8ab717718cdf0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK cannot send data to the Ziti Network because an Edge Router was not available.  <a href="errors_8h.html#aec10c14a1b69bf3286b8ab717718cdf0">More...</a><br /></td></tr>
+<tr class="separator:aec10c14a1b69bf3286b8ab717718cdf0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a146ec43d9f6661e4da04e4c89f51d9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a3a146ec43d9f6661e4da04e4c89f51d9">ZITI_SERVICE_UNAVAILABLE</a>&#160;&#160;&#160;(-18)</td></tr>
+<tr class="memdesc:a3a146ec43d9f6661e4da04e4c89f51d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK cannot send data to the Ziti Network because the requested service was not available.  <a href="errors_8h.html#a3a146ec43d9f6661e4da04e4c89f51d9">More...</a><br /></td></tr>
+<tr class="separator:a3a146ec43d9f6661e4da04e4c89f51d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af97a8a9096c8f6059991db627817ec4c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#af97a8a9096c8f6059991db627817ec4c">ZITI_EOF</a>&#160;&#160;&#160;(-19)</td></tr>
+<tr class="memdesc:af97a8a9096c8f6059991db627817ec4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The connection has been closed gracefully.  <a href="errors_8h.html#af97a8a9096c8f6059991db627817ec4c">More...</a><br /></td></tr>
+<tr class="separator:af97a8a9096c8f6059991db627817ec4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78a3e199a22f8c2bd558fa7a622000fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a78a3e199a22f8c2bd558fa7a622000fd">ZITI_TIMEOUT</a>&#160;&#160;&#160;(-20)</td></tr>
+<tr class="memdesc:a78a3e199a22f8c2bd558fa7a622000fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A connect or write operation did not complete in the alloted timeout.  <a href="errors_8h.html#a78a3e199a22f8c2bd558fa7a622000fd">More...</a><br /></td></tr>
+<tr class="separator:a78a3e199a22f8c2bd558fa7a622000fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ae78eeb9520342dc1f8bd599acada0c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a9ae78eeb9520342dc1f8bd599acada0c">ZITI_CONNABORT</a>&#160;&#160;&#160;(-21)</td></tr>
+<tr class="memdesc:a9ae78eeb9520342dc1f8bd599acada0c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The connection has been closed abnormally.  <a href="errors_8h.html#a9ae78eeb9520342dc1f8bd599acada0c">More...</a><br /></td></tr>
+<tr class="separator:a9ae78eeb9520342dc1f8bd599acada0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a190d6b919c8c60eac8692befdfd803f1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a190d6b919c8c60eac8692befdfd803f1">ZITI_INVALID_STATE</a>&#160;&#160;&#160;(-22)</td></tr>
+<tr class="memdesc:a190d6b919c8c60eac8692befdfd803f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK detected invalid state, most likely caaused by improper use.  <a href="errors_8h.html#a190d6b919c8c60eac8692befdfd803f1">More...</a><br /></td></tr>
+<tr class="separator:a190d6b919c8c60eac8692befdfd803f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af12fc9f9d8269d67b074bf933cf7ab09"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#af12fc9f9d8269d67b074bf933cf7ab09">ZITI_CRYPTO_FAIL</a>&#160;&#160;&#160;(-23)</td></tr>
+<tr class="memdesc:af12fc9f9d8269d67b074bf933cf7ab09"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK detected invalid cryptographic state of Ziti connection.  <a href="errors_8h.html#af12fc9f9d8269d67b074bf933cf7ab09">More...</a><br /></td></tr>
+<tr class="separator:af12fc9f9d8269d67b074bf933cf7ab09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab36f14782fa20b8b6f35fa59c123e65e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ab36f14782fa20b8b6f35fa59c123e65e">ZITI_CONN_CLOSED</a>&#160;&#160;&#160;(-24)</td></tr>
+<tr class="memdesc:ab36f14782fa20b8b6f35fa59c123e65e"><td class="mdescLeft">&#160;</td><td class="mdescRight">connection was closed  <a href="errors_8h.html#ab36f14782fa20b8b6f35fa59c123e65e">More...</a><br /></td></tr>
+<tr class="separator:ab36f14782fa20b8b6f35fa59c123e65e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a041c3f43dba0994e85e27e121c11d711"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a041c3f43dba0994e85e27e121c11d711">ZITI_INVALID_POSTURE</a>&#160;&#160;&#160;(-25)</td></tr>
+<tr class="memdesc:a041c3f43dba0994e85e27e121c11d711"><td class="mdescLeft">&#160;</td><td class="mdescRight">failed posture check  <a href="errors_8h.html#a041c3f43dba0994e85e27e121c11d711">More...</a><br /></td></tr>
+<tr class="separator:a041c3f43dba0994e85e27e121c11d711"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91dc95cf4fa15d1c30be9dfc20b4240d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a91dc95cf4fa15d1c30be9dfc20b4240d">ZITI_MFA_EXISTS</a>&#160;&#160;&#160;(-26)</td></tr>
+<tr class="memdesc:a91dc95cf4fa15d1c30be9dfc20b4240d"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to start MFA enrollment when it already has been started or completed  <a href="errors_8h.html#a91dc95cf4fa15d1c30be9dfc20b4240d">More...</a><br /></td></tr>
+<tr class="separator:a91dc95cf4fa15d1c30be9dfc20b4240d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a579194197b56e798d0c5ee90c1d78d46"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a579194197b56e798d0c5ee90c1d78d46">ZITI_MFA_INVALID_TOKEN</a>&#160;&#160;&#160;(-27)</td></tr>
+<tr class="memdesc:a579194197b56e798d0c5ee90c1d78d46"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to use an MFA token that is invalid  <a href="errors_8h.html#a579194197b56e798d0c5ee90c1d78d46">More...</a><br /></td></tr>
+<tr class="separator:a579194197b56e798d0c5ee90c1d78d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e4cb669614ae5250c577ecf8443c7f7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a9e4cb669614ae5250c577ecf8443c7f7">ZITI_MFA_NOT_ENROLLED</a>&#160;&#160;&#160;(-28)</td></tr>
+<tr class="memdesc:a9e4cb669614ae5250c577ecf8443c7f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to verify or retrieve details of an MFA enrollment that has not been completed  <a href="errors_8h.html#a9e4cb669614ae5250c577ecf8443c7f7">More...</a><br /></td></tr>
+<tr class="separator:a9e4cb669614ae5250c577ecf8443c7f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af51cb251006f45cbba59572165a859f3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#af51cb251006f45cbba59572165a859f3">ZITI_NOT_FOUND</a>&#160;&#160;&#160;(-29)</td></tr>
+<tr class="memdesc:af51cb251006f45cbba59572165a859f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">not found, usually indicates stale reference or permission  <a href="errors_8h.html#af51cb251006f45cbba59572165a859f3">More...</a><br /></td></tr>
+<tr class="separator:af51cb251006f45cbba59572165a859f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92f924ae16f3fb80e9090164489bdf72"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a92f924ae16f3fb80e9090164489bdf72">ZITI_DISABLED</a>&#160;&#160;&#160;(-30)</td></tr>
+<tr class="memdesc:a92f924ae16f3fb80e9090164489bdf72"><td class="mdescLeft">&#160;</td><td class="mdescRight">operation attempted while ziti_context is not enabled  <a href="errors_8h.html#a92f924ae16f3fb80e9090164489bdf72">More...</a><br /></td></tr>
+<tr class="separator:a92f924ae16f3fb80e9090164489bdf72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accae4e745b6478808c245c4802e30937"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#accae4e745b6478808c245c4802e30937">ZITI_PARTIALLY_AUTHENTICATED</a>&#160;&#160;&#160;(-31)</td></tr>
+<tr class="memdesc:accae4e745b6478808c245c4802e30937"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when authentication is attempted but there is an existing api session waiting for auth queries to pass  <a href="errors_8h.html#accae4e745b6478808c245c4802e30937">More...</a><br /></td></tr>
+<tr class="separator:accae4e745b6478808c245c4802e30937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adb25dfb3ea2bd92c268b0fb3049ac576"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adb25dfb3ea2bd92c268b0fb3049ac576">ZITI_INVALID_AUTHENTICATOR_TYPE</a>&#160;&#160;&#160;(-32)</td></tr>
+<tr class="memdesc:adb25dfb3ea2bd92c268b0fb3049ac576"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e.  <a href="errors_8h.html#adb25dfb3ea2bd92c268b0fb3049ac576">More...</a><br /></td></tr>
+<tr class="separator:adb25dfb3ea2bd92c268b0fb3049ac576"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afed704be5f67391998504305161dc4fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#afed704be5f67391998504305161dc4fb">ZITI_INVALID_AUTHENTICATOR_CERT</a>&#160;&#160;&#160;(-33)</td></tr>
+<tr class="memdesc:afed704be5f67391998504305161dc4fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authentication extension when the current client cert does not match the authenticator  <a href="errors_8h.html#afed704be5f67391998504305161dc4fb">More...</a><br /></td></tr>
+<tr class="separator:afed704be5f67391998504305161dc4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e6e7deb1c4b62aea1a30f73f6e39e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a4e6e7deb1c4b62aea1a30f73f6e39e53">ZITI_INVALID_CERT_KEY_PAIR</a>&#160;&#160;&#160;(-34)</td></tr>
+<tr class="memdesc:a4e6e7deb1c4b62aea1a30f73f6e39e53"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied  <a href="errors_8h.html#a4e6e7deb1c4b62aea1a30f73f6e39e53">More...</a><br /></td></tr>
+<tr class="separator:a4e6e7deb1c4b62aea1a30f73f6e39e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d0dccf58f52d32bbe696bc2fb625fff"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a6d0dccf58f52d32bbe696bc2fb625fff">ZITI_WTF</a>&#160;&#160;&#160;(-111)</td></tr>
+<tr class="memdesc:a6d0dccf58f52d32bbe696bc2fb625fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspired by the Android SDK: What a Terrible Failure.  <a href="errors_8h.html#a6d0dccf58f52d32bbe696bc2fb625fff">More...</a><br /></td></tr>
+<tr class="separator:a6d0dccf58f52d32bbe696bc2fb625fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a2182f9078122799ec98a7c1f17094191"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">ziti_errorstr</a> (int err)</td></tr>
 <tr class="memdesc:a2182f9078122799ec98a7c1f17094191"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a human-readable description for the provided code.  <a href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">More...</a><br /></td></tr>
 <tr class="separator:a2182f9078122799ec98a7c1f17094191"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:a58cd556eb411c881903d30ae272984f4"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4">ZITI_OK</a></td></tr>
-<tr class="memdesc:a58cd556eb411c881903d30ae272984f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The expected outcome of a successful operation.  <a href="errors_8h.html#a58cd556eb411c881903d30ae272984f4">More...</a><br /></td></tr>
-<tr class="separator:a58cd556eb411c881903d30ae272984f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7f80523d7ec8104c50735bdb5f2818a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ab7f80523d7ec8104c50735bdb5f2818a">ZITI_CONFIG_NOT_FOUND</a></td></tr>
-<tr class="memdesc:ab7f80523d7ec8104c50735bdb5f2818a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided configuration was not found.  <a href="errors_8h.html#ab7f80523d7ec8104c50735bdb5f2818a">More...</a><br /></td></tr>
-<tr class="separator:ab7f80523d7ec8104c50735bdb5f2818a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa8dcada63c42baf349e0fa31dff1f8d3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aa8dcada63c42baf349e0fa31dff1f8d3">ZITI_JWT_NOT_FOUND</a></td></tr>
-<tr class="memdesc:aa8dcada63c42baf349e0fa31dff1f8d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT was not found.  <a href="errors_8h.html#aa8dcada63c42baf349e0fa31dff1f8d3">More...</a><br /></td></tr>
-<tr class="separator:aa8dcada63c42baf349e0fa31dff1f8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad878e26816d3dea330ffbed7d990b4d9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ad878e26816d3dea330ffbed7d990b4d9">ZITI_JWT_INVALID</a></td></tr>
-<tr class="memdesc:ad878e26816d3dea330ffbed7d990b4d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT is not accepted by controller.  <a href="errors_8h.html#ad878e26816d3dea330ffbed7d990b4d9">More...</a><br /></td></tr>
-<tr class="separator:ad878e26816d3dea330ffbed7d990b4d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac588041d13d6e8a0f0b9c33637c30223"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ac588041d13d6e8a0f0b9c33637c30223">ZITI_JWT_INVALID_FORMAT</a></td></tr>
-<tr class="memdesc:ac588041d13d6e8a0f0b9c33637c30223"><td class="mdescLeft">&#160;</td><td class="mdescRight">The provided JWT has invalid format.  <a href="errors_8h.html#ac588041d13d6e8a0f0b9c33637c30223">More...</a><br /></td></tr>
-<tr class="separator:ac588041d13d6e8a0f0b9c33637c30223"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc940e564c9768cd6a7464b0ee4ab8f6"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#afc940e564c9768cd6a7464b0ee4ab8f6">ZITI_PKCS7_ASN1_PARSING_FAILED</a></td></tr>
-<tr class="memdesc:afc940e564c9768cd6a7464b0ee4ab8f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">PKCS7/ASN.1 parsing failed.  <a href="errors_8h.html#afc940e564c9768cd6a7464b0ee4ab8f6">More...</a><br /></td></tr>
-<tr class="separator:afc940e564c9768cd6a7464b0ee4ab8f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5923691dab778def759032f64a6e5a2e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a5923691dab778def759032f64a6e5a2e">ZITI_JWT_SIGNING_ALG_UNSUPPORTED</a></td></tr>
-<tr class="memdesc:a5923691dab778def759032f64a6e5a2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported JWT signing algorithm  <a href="errors_8h.html#a5923691dab778def759032f64a6e5a2e">More...</a><br /></td></tr>
-<tr class="separator:a5923691dab778def759032f64a6e5a2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab3befdd2126db7973dca4133dfbf9515"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ab3befdd2126db7973dca4133dfbf9515">ZITI_JWT_VERIFICATION_FAILED</a></td></tr>
-<tr class="memdesc:ab3befdd2126db7973dca4133dfbf9515"><td class="mdescLeft">&#160;</td><td class="mdescRight">JWT verification failed.  <a href="errors_8h.html#ab3befdd2126db7973dca4133dfbf9515">More...</a><br /></td></tr>
-<tr class="separator:ab3befdd2126db7973dca4133dfbf9515"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a48a04e96e1f581d717471aa368fd6f4d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a48a04e96e1f581d717471aa368fd6f4d">ZITI_ENROLLMENT_METHOD_UNSUPPORTED</a></td></tr>
-<tr class="memdesc:a48a04e96e1f581d717471aa368fd6f4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">unsupported enrollment method  <a href="errors_8h.html#a48a04e96e1f581d717471aa368fd6f4d">More...</a><br /></td></tr>
-<tr class="separator:a48a04e96e1f581d717471aa368fd6f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa26ed11c0881b53d1a11520b3844cca8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aa26ed11c0881b53d1a11520b3844cca8">ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</a></td></tr>
-<tr class="memdesc:aa26ed11c0881b53d1a11520b3844cca8"><td class="mdescLeft">&#160;</td><td class="mdescRight">enrollment method requires client certificate  <a href="errors_8h.html#aa26ed11c0881b53d1a11520b3844cca8">More...</a><br /></td></tr>
-<tr class="separator:aa26ed11c0881b53d1a11520b3844cca8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a719e4fe83ef2a6068d117824a975ce38"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a719e4fe83ef2a6068d117824a975ce38">ZITI_KEY_GENERATION_FAILED</a></td></tr>
-<tr class="memdesc:a719e4fe83ef2a6068d117824a975ce38"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate an private key failed.  <a href="errors_8h.html#a719e4fe83ef2a6068d117824a975ce38">More...</a><br /></td></tr>
-<tr class="separator:a719e4fe83ef2a6068d117824a975ce38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f62177837cd9e9d0d67d5084bff729a"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a0f62177837cd9e9d0d67d5084bff729a">ZITI_KEY_LOAD_FAILED</a></td></tr>
-<tr class="memdesc:a0f62177837cd9e9d0d67d5084bff729a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to load TLS key failed.  <a href="errors_8h.html#a0f62177837cd9e9d0d67d5084bff729a">More...</a><br /></td></tr>
-<tr class="separator:a0f62177837cd9e9d0d67d5084bff729a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adb3f0cf3ea267dedbac950b9f25c1276"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adb3f0cf3ea267dedbac950b9f25c1276">ZITI_CSR_GENERATION_FAILED</a></td></tr>
-<tr class="memdesc:adb3f0cf3ea267dedbac950b9f25c1276"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to generate a CSR failed.  <a href="errors_8h.html#adb3f0cf3ea267dedbac950b9f25c1276">More...</a><br /></td></tr>
-<tr class="separator:adb3f0cf3ea267dedbac950b9f25c1276"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8918390961a4837766c0abbd5751c717"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a8918390961a4837766c0abbd5751c717">ZITI_INVALID_CONFIG</a></td></tr>
-<tr class="memdesc:a8918390961a4837766c0abbd5751c717"><td class="mdescLeft">&#160;</td><td class="mdescRight">Some or all of the provided configuration is incorrect.  <a href="errors_8h.html#a8918390961a4837766c0abbd5751c717">More...</a><br /></td></tr>
-<tr class="separator:a8918390961a4837766c0abbd5751c717"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a21163f06d22691e28273c92621547e"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a7a21163f06d22691e28273c92621547e">ZITI_NOT_AUTHORIZED</a></td></tr>
-<tr class="memdesc:a7a21163f06d22691e28273c92621547e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returned when the identity does not have the correct level of access needed.  <a href="errors_8h.html#a7a21163f06d22691e28273c92621547e">More...</a><br /></td></tr>
-<tr class="separator:a7a21163f06d22691e28273c92621547e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b6a3568c6a435261e751ea64c31c5b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aa2b6a3568c6a435261e751ea64c31c5b">ZITI_CONTROLLER_UNAVAILABLE</a></td></tr>
-<tr class="memdesc:aa2b6a3568c6a435261e751ea64c31c5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK has attempted to communicate to the Ziti Controller but the controller is offline or did not respond to the request.  <a href="errors_8h.html#aa2b6a3568c6a435261e751ea64c31c5b">More...</a><br /></td></tr>
-<tr class="separator:aa2b6a3568c6a435261e751ea64c31c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7c15b1bb4736d407e8bee75007eb5c0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ae7c15b1bb4736d407e8bee75007eb5c0">ZITI_GATEWAY_UNAVAILABLE</a></td></tr>
-<tr class="memdesc:ae7c15b1bb4736d407e8bee75007eb5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK cannot send data to the Ziti Network because an Edge Router was not available.  <a href="errors_8h.html#ae7c15b1bb4736d407e8bee75007eb5c0">More...</a><br /></td></tr>
-<tr class="separator:ae7c15b1bb4736d407e8bee75007eb5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adce4a78f4190299277ad587530ca5036"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adce4a78f4190299277ad587530ca5036">ZITI_SERVICE_UNAVAILABLE</a></td></tr>
-<tr class="memdesc:adce4a78f4190299277ad587530ca5036"><td class="mdescLeft">&#160;</td><td class="mdescRight">The SDK cannot send data to the Ziti Network because the requested service was not available.  <a href="errors_8h.html#adce4a78f4190299277ad587530ca5036">More...</a><br /></td></tr>
-<tr class="separator:adce4a78f4190299277ad587530ca5036"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf68027c57495898fd8bf51ed0bad701"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adf68027c57495898fd8bf51ed0bad701">ZITI_EOF</a></td></tr>
-<tr class="memdesc:adf68027c57495898fd8bf51ed0bad701"><td class="mdescLeft">&#160;</td><td class="mdescRight">The connection has been closed gracefully.  <a href="errors_8h.html#adf68027c57495898fd8bf51ed0bad701">More...</a><br /></td></tr>
-<tr class="separator:adf68027c57495898fd8bf51ed0bad701"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3b6e0c786cfe90c05611a9ec5d2b1d2b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a3b6e0c786cfe90c05611a9ec5d2b1d2b">ZITI_TIMEOUT</a></td></tr>
-<tr class="memdesc:a3b6e0c786cfe90c05611a9ec5d2b1d2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">A connect or write operation did not complete in the alloted timeout.  <a href="errors_8h.html#a3b6e0c786cfe90c05611a9ec5d2b1d2b">More...</a><br /></td></tr>
-<tr class="separator:a3b6e0c786cfe90c05611a9ec5d2b1d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ac02280a9b31276676bc723ba7f4aba"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a9ac02280a9b31276676bc723ba7f4aba">ZITI_CONNABORT</a></td></tr>
-<tr class="memdesc:a9ac02280a9b31276676bc723ba7f4aba"><td class="mdescLeft">&#160;</td><td class="mdescRight">The connection has been closed abnormally.  <a href="errors_8h.html#a9ac02280a9b31276676bc723ba7f4aba">More...</a><br /></td></tr>
-<tr class="separator:a9ac02280a9b31276676bc723ba7f4aba"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1d1729b79d5abcb9fbf24b01363e5826"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a1d1729b79d5abcb9fbf24b01363e5826">ZITI_INVALID_STATE</a></td></tr>
-<tr class="memdesc:a1d1729b79d5abcb9fbf24b01363e5826"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK detected invalid state, most likely caaused by improper use.  <a href="errors_8h.html#a1d1729b79d5abcb9fbf24b01363e5826">More...</a><br /></td></tr>
-<tr class="separator:a1d1729b79d5abcb9fbf24b01363e5826"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0ab53762cc235f23228927eab1fe4f0"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#af0ab53762cc235f23228927eab1fe4f0">ZITI_CRYPTO_FAIL</a></td></tr>
-<tr class="memdesc:af0ab53762cc235f23228927eab1fe4f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">SDK detected invalid cryptographic state of Ziti connection.  <a href="errors_8h.html#af0ab53762cc235f23228927eab1fe4f0">More...</a><br /></td></tr>
-<tr class="separator:af0ab53762cc235f23228927eab1fe4f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7">ZITI_CONN_CLOSED</a></td></tr>
-<tr class="memdesc:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="mdescLeft">&#160;</td><td class="mdescRight">connection was closed  <a href="errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7">More...</a><br /></td></tr>
-<tr class="separator:ab8c891426cbf4f224c252fc9a16c7fb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac4b8b9772401bd1307d859f68bc676ca"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ac4b8b9772401bd1307d859f68bc676ca">ZITI_INVALID_POSTURE</a></td></tr>
-<tr class="memdesc:ac4b8b9772401bd1307d859f68bc676ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">failed posture check  <a href="errors_8h.html#ac4b8b9772401bd1307d859f68bc676ca">More...</a><br /></td></tr>
-<tr class="separator:ac4b8b9772401bd1307d859f68bc676ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#ae78fa19505f7d3462c82d374a3ed1b0d">ZITI_MFA_EXISTS</a></td></tr>
-<tr class="memdesc:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to start MFA enrollment when it already has been started or completed  <a href="errors_8h.html#ae78fa19505f7d3462c82d374a3ed1b0d">More...</a><br /></td></tr>
-<tr class="separator:ae78fa19505f7d3462c82d374a3ed1b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaa1c211c8ab4d77948927d7acd95120d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#aaa1c211c8ab4d77948927d7acd95120d">ZITI_MFA_INVALID_TOKEN</a></td></tr>
-<tr class="memdesc:aaa1c211c8ab4d77948927d7acd95120d"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to use an MFA token that is invalid  <a href="errors_8h.html#aaa1c211c8ab4d77948927d7acd95120d">More...</a><br /></td></tr>
-<tr class="separator:aaa1c211c8ab4d77948927d7acd95120d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a99328ac1faf0bcd788c13d3bb14bb0a9">ZITI_MFA_NOT_ENROLLED</a></td></tr>
-<tr class="memdesc:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">attempted to verify or retrieve details of an MFA enrollment that has not been completed  <a href="errors_8h.html#a99328ac1faf0bcd788c13d3bb14bb0a9">More...</a><br /></td></tr>
-<tr class="separator:a99328ac1faf0bcd788c13d3bb14bb0a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a767a716e543289719a9864e276e067b9"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a767a716e543289719a9864e276e067b9">ZITI_NOT_FOUND</a></td></tr>
-<tr class="memdesc:a767a716e543289719a9864e276e067b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">not found, usually indicates stale reference or permission  <a href="errors_8h.html#a767a716e543289719a9864e276e067b9">More...</a><br /></td></tr>
-<tr class="separator:a767a716e543289719a9864e276e067b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a897e29570d4998a60a84df2ade53b06b"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a897e29570d4998a60a84df2ade53b06b">ZITI_DISABLED</a></td></tr>
-<tr class="memdesc:a897e29570d4998a60a84df2ade53b06b"><td class="mdescLeft">&#160;</td><td class="mdescRight">operation attempted while ziti_context is not enabled  <a href="errors_8h.html#a897e29570d4998a60a84df2ade53b06b">More...</a><br /></td></tr>
-<tr class="separator:a897e29570d4998a60a84df2ade53b06b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#adfbe1fea9a00f5dd90c0e42221248fcb">ZITI_PARTIALLY_AUTHENTICATED</a></td></tr>
-<tr class="memdesc:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when authentication is attempted but there is an existing api session waiting for auth queries to pass  <a href="errors_8h.html#adfbe1fea9a00f5dd90c0e42221248fcb">More...</a><br /></td></tr>
-<tr class="separator:adfbe1fea9a00f5dd90c0e42221248fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a02c9e37a39d38b36a4b1a908df4ad6dc">ZITI_INVALID_AUTHENTICATOR_TYPE</a></td></tr>
-<tr class="memdesc:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e.  <a href="errors_8h.html#a02c9e37a39d38b36a4b1a908df4ad6dc">More...</a><br /></td></tr>
-<tr class="separator:a02c9e37a39d38b36a4b1a908df4ad6dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f91f69688b91617695310df77d1b8d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a82f91f69688b91617695310df77d1b8d">ZITI_INVALID_AUTHENTICATOR_CERT</a></td></tr>
-<tr class="memdesc:a82f91f69688b91617695310df77d1b8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned during certificate authentication extension when the current client cert does not match the authenticator  <a href="errors_8h.html#a82f91f69688b91617695310df77d1b8d">More...</a><br /></td></tr>
-<tr class="separator:a82f91f69688b91617695310df77d1b8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a0e7dd3eb62a02ad740dac6dd832012a3">ZITI_INVALID_CERT_KEY_PAIR</a></td></tr>
-<tr class="memdesc:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied  <a href="errors_8h.html#a0e7dd3eb62a02ad740dac6dd832012a3">More...</a><br /></td></tr>
-<tr class="separator:a0e7dd3eb62a02ad740dac6dd832012a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">ZITI_WTF</a></td></tr>
-<tr class="memdesc:a6cb98ad4d5a5243239c51c92a761fd97"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inspired by the Android SDK: What a Terrible Failure.  <a href="errors_8h.html#a6cb98ad4d5a5243239c51c92a761fd97">More...</a><br /></td></tr>
-<tr class="separator:a6cb98ad4d5a5243239c51c92a761fd97"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines the macros, functions, typedefs and constants pertaining to errors observed when using a Ziti Network. </p>
 </div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a947429505002f0c889a011a663ea5a72"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a947429505002f0c889a011a663ea5a72">&#9670;&nbsp;</a></span>ERR_ID</h2>
+<a id="a17268e0cd0da850d2c72ebec6d753794"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17268e0cd0da850d2c72ebec6d753794">&#9670;&nbsp;</a></span>ZITI_AUTHENTICATION_FAILED</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define ERR_ID</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">e, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">_&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> extern const int ZITI_##e;</td>
+          <td class="memname">#define ZITI_AUTHENTICATION_FAILED&#160;&#160;&#160;(-14)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>A helper macro to make declaring expected error conditions easier which is undef'ed immidately. </p>
+<p>the certificates presented are incorrect, out of date, or invalid </p>
+
+</div>
+</div>
+<a id="a185d1e51300e4ae8d7cb85d7c478d543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a185d1e51300e4ae8d7cb85d7c478d543">&#9670;&nbsp;</a></span>ZITI_CONFIG_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CONFIG_NOT_FOUND&#160;&#160;&#160;(-1)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The provided configuration was not found. </p>
+
+</div>
+</div>
+<a id="ab36f14782fa20b8b6f35fa59c123e65e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab36f14782fa20b8b6f35fa59c123e65e">&#9670;&nbsp;</a></span>ZITI_CONN_CLOSED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CONN_CLOSED&#160;&#160;&#160;(-24)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>connection was closed </p>
+
+</div>
+</div>
+<a id="a9ae78eeb9520342dc1f8bd599acada0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ae78eeb9520342dc1f8bd599acada0c">&#9670;&nbsp;</a></span>ZITI_CONNABORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CONNABORT&#160;&#160;&#160;(-21)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The connection has been closed abnormally. </p>
+
+</div>
+</div>
+<a id="aaa560a8176e482ddb080c997e33ee70c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa560a8176e482ddb080c997e33ee70c">&#9670;&nbsp;</a></span>ZITI_CONTROLLER_UNAVAILABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CONTROLLER_UNAVAILABLE&#160;&#160;&#160;(-16)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The SDK has attempted to communicate to the Ziti Controller but the controller is offline or did not respond to the request. </p>
+
+</div>
+</div>
+<a id="af12fc9f9d8269d67b074bf933cf7ab09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af12fc9f9d8269d67b074bf933cf7ab09">&#9670;&nbsp;</a></span>ZITI_CRYPTO_FAIL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CRYPTO_FAIL&#160;&#160;&#160;(-23)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SDK detected invalid cryptographic state of Ziti connection. </p>
+
+</div>
+</div>
+<a id="a2ba1f52708c9106519430ea01c97ca57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba1f52708c9106519430ea01c97ca57">&#9670;&nbsp;</a></span>ZITI_CSR_GENERATION_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_CSR_GENERATION_FAILED&#160;&#160;&#160;(-12)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to generate a CSR failed. </p>
+
+</div>
+</div>
+<a id="a92f924ae16f3fb80e9090164489bdf72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92f924ae16f3fb80e9090164489bdf72">&#9670;&nbsp;</a></span>ZITI_DISABLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_DISABLED&#160;&#160;&#160;(-30)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>operation attempted while ziti_context is not enabled </p>
+
+</div>
+</div>
+<a id="a4af7dff9cd0e48123e6d781535a28ccb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4af7dff9cd0e48123e6d781535a28ccb">&#9670;&nbsp;</a></span>ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_ENROLLMENT_CERTIFICATE_REQUIRED&#160;&#160;&#160;(-9)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>enrollment method requires client certificate </p>
+
+</div>
+</div>
+<a id="ae860ab267ffdf4ee6591432d8caf2dd2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae860ab267ffdf4ee6591432d8caf2dd2">&#9670;&nbsp;</a></span>ZITI_ENROLLMENT_METHOD_UNSUPPORTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_ENROLLMENT_METHOD_UNSUPPORTED&#160;&#160;&#160;(-8)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>unsupported enrollment method </p>
+
+</div>
+</div>
+<a id="af97a8a9096c8f6059991db627817ec4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af97a8a9096c8f6059991db627817ec4c">&#9670;&nbsp;</a></span>ZITI_EOF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_EOF&#160;&#160;&#160;(-19)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The connection has been closed gracefully. </p>
+
+</div>
+</div>
+<a id="aec10c14a1b69bf3286b8ab717718cdf0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec10c14a1b69bf3286b8ab717718cdf0">&#9670;&nbsp;</a></span>ZITI_GATEWAY_UNAVAILABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_GATEWAY_UNAVAILABLE&#160;&#160;&#160;(-17)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The SDK cannot send data to the Ziti Network because an Edge Router was not available. </p>
+<p>Common causes are: the identity connecting is not associated with any Edge Routers the Edge Router in use is no longer responding </p>
+
+</div>
+</div>
+<a id="afed704be5f67391998504305161dc4fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afed704be5f67391998504305161dc4fb">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_CERT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_AUTHENTICATOR_CERT&#160;&#160;&#160;(-33)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returned during certificate authentication extension when the current client cert does not match the authenticator </p>
+
+</div>
+</div>
+<a id="adb25dfb3ea2bd92c268b0fb3049ac576"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adb25dfb3ea2bd92c268b0fb3049ac576">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_TYPE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_AUTHENTICATOR_TYPE&#160;&#160;&#160;(-32)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e. </p>
+<p>UPDB or 3rd party) </p>
+
+</div>
+</div>
+<a id="a4e6e7deb1c4b62aea1a30f73f6e39e53"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e6e7deb1c4b62aea1a30f73f6e39e53">&#9670;&nbsp;</a></span>ZITI_INVALID_CERT_KEY_PAIR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_CERT_KEY_PAIR&#160;&#160;&#160;(-34)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied </p>
+
+</div>
+</div>
+<a id="a3290238167042030132e2a5716b5d750"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3290238167042030132e2a5716b5d750">&#9670;&nbsp;</a></span>ZITI_INVALID_CONFIG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_CONFIG&#160;&#160;&#160;(-13)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Some or all of the provided configuration is incorrect. </p>
+
+</div>
+</div>
+<a id="a041c3f43dba0994e85e27e121c11d711"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a041c3f43dba0994e85e27e121c11d711">&#9670;&nbsp;</a></span>ZITI_INVALID_POSTURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_POSTURE&#160;&#160;&#160;(-25)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>failed posture check </p>
+
+</div>
+</div>
+<a id="a190d6b919c8c60eac8692befdfd803f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a190d6b919c8c60eac8692befdfd803f1">&#9670;&nbsp;</a></span>ZITI_INVALID_STATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_INVALID_STATE&#160;&#160;&#160;(-22)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>SDK detected invalid state, most likely caaused by improper use. </p>
+
+</div>
+</div>
+<a id="a8649eeb2004465ae1932baad50bb9fc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8649eeb2004465ae1932baad50bb9fc7">&#9670;&nbsp;</a></span>ZITI_JWT_INVALID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_JWT_INVALID&#160;&#160;&#160;(-3)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The provided JWT is not accepted by controller. </p>
+
+</div>
+</div>
+<a id="a2658dfa88d000ef1fa7f218af62a5433"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2658dfa88d000ef1fa7f218af62a5433">&#9670;&nbsp;</a></span>ZITI_JWT_INVALID_FORMAT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_JWT_INVALID_FORMAT&#160;&#160;&#160;(-4)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The provided JWT has invalid format. </p>
+
+</div>
+</div>
+<a id="aaba2559ee651be97dae4a448f6eb4cd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba2559ee651be97dae4a448f6eb4cd4">&#9670;&nbsp;</a></span>ZITI_JWT_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_JWT_NOT_FOUND&#160;&#160;&#160;(-2)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The provided JWT was not found. </p>
+
+</div>
+</div>
+<a id="a38195a0b996a20afa95b4ece6c190644"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38195a0b996a20afa95b4ece6c190644">&#9670;&nbsp;</a></span>ZITI_JWT_SIGNING_ALG_UNSUPPORTED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_JWT_SIGNING_ALG_UNSUPPORTED&#160;&#160;&#160;(-6)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>unsupported JWT signing algorithm </p>
+
+</div>
+</div>
+<a id="affdd888671f013acdff739aa3137ea2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affdd888671f013acdff739aa3137ea2b">&#9670;&nbsp;</a></span>ZITI_JWT_VERIFICATION_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_JWT_VERIFICATION_FAILED&#160;&#160;&#160;(-7)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>JWT verification failed. </p>
+
+</div>
+</div>
+<a id="a9f5e44d35e36cc9fa4c6532f89082ed8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5e44d35e36cc9fa4c6532f89082ed8">&#9670;&nbsp;</a></span>ZITI_KEY_GENERATION_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_KEY_GENERATION_FAILED&#160;&#160;&#160;(-10)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to generate an private key failed. </p>
+
+</div>
+</div>
+<a id="a4e1585354efffb35ed6b6e865cd066b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e1585354efffb35ed6b6e865cd066b7">&#9670;&nbsp;</a></span>ZITI_KEY_LOAD_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_KEY_LOAD_FAILED&#160;&#160;&#160;(-11)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Attempt to load TLS key failed. </p>
+
+</div>
+</div>
+<a id="a91dc95cf4fa15d1c30be9dfc20b4240d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91dc95cf4fa15d1c30be9dfc20b4240d">&#9670;&nbsp;</a></span>ZITI_MFA_EXISTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_MFA_EXISTS&#160;&#160;&#160;(-26)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>attempted to start MFA enrollment when it already has been started or completed </p>
+
+</div>
+</div>
+<a id="a579194197b56e798d0c5ee90c1d78d46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a579194197b56e798d0c5ee90c1d78d46">&#9670;&nbsp;</a></span>ZITI_MFA_INVALID_TOKEN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_MFA_INVALID_TOKEN&#160;&#160;&#160;(-27)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>attempted to use an MFA token that is invalid </p>
+
+</div>
+</div>
+<a id="a9e4cb669614ae5250c577ecf8443c7f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4cb669614ae5250c577ecf8443c7f7">&#9670;&nbsp;</a></span>ZITI_MFA_NOT_ENROLLED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_MFA_NOT_ENROLLED&#160;&#160;&#160;(-28)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>attempted to verify or retrieve details of an MFA enrollment that has not been completed </p>
+
+</div>
+</div>
+<a id="a1fb8ab9c5c3a44cad56786c8cfc57bfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fb8ab9c5c3a44cad56786c8cfc57bfd">&#9670;&nbsp;</a></span>ZITI_NOT_AUTHORIZED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_NOT_AUTHORIZED&#160;&#160;&#160;(-15)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returned when the identity does not have the correct level of access needed. </p>
+<p>no policy exists granting the identity access for requestion operation </p>
+
+</div>
+</div>
+<a id="af51cb251006f45cbba59572165a859f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af51cb251006f45cbba59572165a859f3">&#9670;&nbsp;</a></span>ZITI_NOT_FOUND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_NOT_FOUND&#160;&#160;&#160;(-29)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>not found, usually indicates stale reference or permission </p>
+
+</div>
+</div>
+<a id="a2ccd2aaa13be89c787a445994f0525ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ccd2aaa13be89c787a445994f0525ec">&#9670;&nbsp;</a></span>ZITI_OK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_OK&#160;&#160;&#160;(0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The expected outcome of a successful operation. </p>
+
+</div>
+</div>
+<a id="accae4e745b6478808c245c4802e30937"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#accae4e745b6478808c245c4802e30937">&#9670;&nbsp;</a></span>ZITI_PARTIALLY_AUTHENTICATED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_PARTIALLY_AUTHENTICATED&#160;&#160;&#160;(-31)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returned when authentication is attempted but there is an existing api session waiting for auth queries to pass </p>
+
+</div>
+</div>
+<a id="a7ce9a44cc2d6b186eb300d50dd069988"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ce9a44cc2d6b186eb300d50dd069988">&#9670;&nbsp;</a></span>ZITI_PKCS7_ASN1_PARSING_FAILED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_PKCS7_ASN1_PARSING_FAILED&#160;&#160;&#160;(-5)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>PKCS7/ASN.1 parsing failed. </p>
+
+</div>
+</div>
+<a id="a3a146ec43d9f6661e4da04e4c89f51d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a146ec43d9f6661e4da04e4c89f51d9">&#9670;&nbsp;</a></span>ZITI_SERVICE_UNAVAILABLE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_SERVICE_UNAVAILABLE&#160;&#160;&#160;(-18)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The SDK cannot send data to the Ziti Network because the requested service was not available. </p>
+<p>Common causes are: the service does not exist the identity connecting is not associated with the given service </p>
+
+</div>
+</div>
+<a id="a78a3e199a22f8c2bd558fa7a622000fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78a3e199a22f8c2bd558fa7a622000fd">&#9670;&nbsp;</a></span>ZITI_TIMEOUT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_TIMEOUT&#160;&#160;&#160;(-20)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>A connect or write operation did not complete in the alloted timeout. </p>
+<p>#DEFAULT_TIMEOUT </p>
+
+</div>
+</div>
+<a id="a6d0dccf58f52d32bbe696bc2fb625fff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d0dccf58f52d32bbe696bc2fb625fff">&#9670;&nbsp;</a></span>ZITI_WTF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ZITI_WTF&#160;&#160;&#160;(-111)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inspired by the Android SDK: What a Terrible Failure. </p>
+<p>A condition that should never happen. </p>
 
 </div>
 </div>
@@ -268,855 +815,6 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns a human-readable description for the provided code. </p>
-
-</div>
-</div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="ab7f80523d7ec8104c50735bdb5f2818a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab7f80523d7ec8104c50735bdb5f2818a">&#9670;&nbsp;</a></span>ZITI_CONFIG_NOT_FOUND</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CONFIG_NOT_FOUND</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The provided configuration was not found. </p>
-
-</div>
-</div>
-<a id="ab8c891426cbf4f224c252fc9a16c7fb7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab8c891426cbf4f224c252fc9a16c7fb7">&#9670;&nbsp;</a></span>ZITI_CONN_CLOSED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CONN_CLOSED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>connection was closed </p>
-
-</div>
-</div>
-<a id="a9ac02280a9b31276676bc723ba7f4aba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9ac02280a9b31276676bc723ba7f4aba">&#9670;&nbsp;</a></span>ZITI_CONNABORT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CONNABORT</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The connection has been closed abnormally. </p>
-
-</div>
-</div>
-<a id="aa2b6a3568c6a435261e751ea64c31c5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2b6a3568c6a435261e751ea64c31c5b">&#9670;&nbsp;</a></span>ZITI_CONTROLLER_UNAVAILABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CONTROLLER_UNAVAILABLE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The SDK has attempted to communicate to the Ziti Controller but the controller is offline or did not respond to the request. </p>
-
-</div>
-</div>
-<a id="af0ab53762cc235f23228927eab1fe4f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0ab53762cc235f23228927eab1fe4f0">&#9670;&nbsp;</a></span>ZITI_CRYPTO_FAIL</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CRYPTO_FAIL</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>SDK detected invalid cryptographic state of Ziti connection. </p>
-
-</div>
-</div>
-<a id="adb3f0cf3ea267dedbac950b9f25c1276"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb3f0cf3ea267dedbac950b9f25c1276">&#9670;&nbsp;</a></span>ZITI_CSR_GENERATION_FAILED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_CSR_GENERATION_FAILED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempt to generate a CSR failed. </p>
-
-</div>
-</div>
-<a id="a897e29570d4998a60a84df2ade53b06b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a897e29570d4998a60a84df2ade53b06b">&#9670;&nbsp;</a></span>ZITI_DISABLED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_DISABLED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>operation attempted while ziti_context is not enabled </p>
-
-</div>
-</div>
-<a id="aa26ed11c0881b53d1a11520b3844cca8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa26ed11c0881b53d1a11520b3844cca8">&#9670;&nbsp;</a></span>ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_ENROLLMENT_CERTIFICATE_REQUIRED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>enrollment method requires client certificate </p>
-
-</div>
-</div>
-<a id="a48a04e96e1f581d717471aa368fd6f4d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a48a04e96e1f581d717471aa368fd6f4d">&#9670;&nbsp;</a></span>ZITI_ENROLLMENT_METHOD_UNSUPPORTED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_ENROLLMENT_METHOD_UNSUPPORTED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>unsupported enrollment method </p>
-
-</div>
-</div>
-<a id="adf68027c57495898fd8bf51ed0bad701"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf68027c57495898fd8bf51ed0bad701">&#9670;&nbsp;</a></span>ZITI_EOF</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_EOF</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The connection has been closed gracefully. </p>
-
-</div>
-</div>
-<a id="ae7c15b1bb4736d407e8bee75007eb5c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7c15b1bb4736d407e8bee75007eb5c0">&#9670;&nbsp;</a></span>ZITI_GATEWAY_UNAVAILABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_GATEWAY_UNAVAILABLE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The SDK cannot send data to the Ziti Network because an Edge Router was not available. </p>
-<p>Common causes are: * the identity connecting is not associated with any Edge Routers * the Edge Router in use is no longer responding </p>
-
-</div>
-</div>
-<a id="a82f91f69688b91617695310df77d1b8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a82f91f69688b91617695310df77d1b8d">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_CERT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_AUTHENTICATOR_CERT</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returned during certificate authentication extension when the current client cert does not match the authenticator </p>
-
-</div>
-</div>
-<a id="a02c9e37a39d38b36a4b1a908df4ad6dc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a02c9e37a39d38b36a4b1a908df4ad6dc">&#9670;&nbsp;</a></span>ZITI_INVALID_AUTHENTICATOR_TYPE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_AUTHENTICATOR_TYPE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returned during certificate authenticator extension if the authenticator cannot be extended because it is the wrong type (i.e. </p>
-<p>UPDB or 3rd party) </p>
-
-</div>
-</div>
-<a id="a0e7dd3eb62a02ad740dac6dd832012a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0e7dd3eb62a02ad740dac6dd832012a3">&#9670;&nbsp;</a></span>ZITI_INVALID_CERT_KEY_PAIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_CERT_KEY_PAIR</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returned when attempting to set the current certificate and key being used by a ztx when it could not be parsed/applied </p>
-
-</div>
-</div>
-<a id="a8918390961a4837766c0abbd5751c717"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8918390961a4837766c0abbd5751c717">&#9670;&nbsp;</a></span>ZITI_INVALID_CONFIG</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_CONFIG</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Some or all of the provided configuration is incorrect. </p>
-
-</div>
-</div>
-<a id="ac4b8b9772401bd1307d859f68bc676ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac4b8b9772401bd1307d859f68bc676ca">&#9670;&nbsp;</a></span>ZITI_INVALID_POSTURE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_POSTURE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>failed posture check </p>
-
-</div>
-</div>
-<a id="a1d1729b79d5abcb9fbf24b01363e5826"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1d1729b79d5abcb9fbf24b01363e5826">&#9670;&nbsp;</a></span>ZITI_INVALID_STATE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_INVALID_STATE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>SDK detected invalid state, most likely caaused by improper use. </p>
-
-</div>
-</div>
-<a id="ad878e26816d3dea330ffbed7d990b4d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad878e26816d3dea330ffbed7d990b4d9">&#9670;&nbsp;</a></span>ZITI_JWT_INVALID</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_JWT_INVALID</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The provided JWT is not accepted by controller. </p>
-
-</div>
-</div>
-<a id="ac588041d13d6e8a0f0b9c33637c30223"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac588041d13d6e8a0f0b9c33637c30223">&#9670;&nbsp;</a></span>ZITI_JWT_INVALID_FORMAT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_JWT_INVALID_FORMAT</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The provided JWT has invalid format. </p>
-
-</div>
-</div>
-<a id="aa8dcada63c42baf349e0fa31dff1f8d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa8dcada63c42baf349e0fa31dff1f8d3">&#9670;&nbsp;</a></span>ZITI_JWT_NOT_FOUND</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_JWT_NOT_FOUND</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The provided JWT was not found. </p>
-
-</div>
-</div>
-<a id="a5923691dab778def759032f64a6e5a2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5923691dab778def759032f64a6e5a2e">&#9670;&nbsp;</a></span>ZITI_JWT_SIGNING_ALG_UNSUPPORTED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_JWT_SIGNING_ALG_UNSUPPORTED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>unsupported JWT signing algorithm </p>
-
-</div>
-</div>
-<a id="ab3befdd2126db7973dca4133dfbf9515"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab3befdd2126db7973dca4133dfbf9515">&#9670;&nbsp;</a></span>ZITI_JWT_VERIFICATION_FAILED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_JWT_VERIFICATION_FAILED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>JWT verification failed. </p>
-
-</div>
-</div>
-<a id="a719e4fe83ef2a6068d117824a975ce38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a719e4fe83ef2a6068d117824a975ce38">&#9670;&nbsp;</a></span>ZITI_KEY_GENERATION_FAILED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_KEY_GENERATION_FAILED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempt to generate an private key failed. </p>
-
-</div>
-</div>
-<a id="a0f62177837cd9e9d0d67d5084bff729a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f62177837cd9e9d0d67d5084bff729a">&#9670;&nbsp;</a></span>ZITI_KEY_LOAD_FAILED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_KEY_LOAD_FAILED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Attempt to load TLS key failed. </p>
-
-</div>
-</div>
-<a id="ae78fa19505f7d3462c82d374a3ed1b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae78fa19505f7d3462c82d374a3ed1b0d">&#9670;&nbsp;</a></span>ZITI_MFA_EXISTS</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_MFA_EXISTS</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>attempted to start MFA enrollment when it already has been started or completed </p>
-
-</div>
-</div>
-<a id="aaa1c211c8ab4d77948927d7acd95120d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa1c211c8ab4d77948927d7acd95120d">&#9670;&nbsp;</a></span>ZITI_MFA_INVALID_TOKEN</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_MFA_INVALID_TOKEN</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>attempted to use an MFA token that is invalid </p>
-
-</div>
-</div>
-<a id="a99328ac1faf0bcd788c13d3bb14bb0a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99328ac1faf0bcd788c13d3bb14bb0a9">&#9670;&nbsp;</a></span>ZITI_MFA_NOT_ENROLLED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_MFA_NOT_ENROLLED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>attempted to verify or retrieve details of an MFA enrollment that has not been completed </p>
-
-</div>
-</div>
-<a id="a7a21163f06d22691e28273c92621547e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a21163f06d22691e28273c92621547e">&#9670;&nbsp;</a></span>ZITI_NOT_AUTHORIZED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_NOT_AUTHORIZED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returned when the identity does not have the correct level of access needed. </p>
-<p>Common causes are: * no policy exists granting the identity access * the certificates presented are incorrect, out of date, or invalid <br  />
- </p>
-
-</div>
-</div>
-<a id="a767a716e543289719a9864e276e067b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a767a716e543289719a9864e276e067b9">&#9670;&nbsp;</a></span>ZITI_NOT_FOUND</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_NOT_FOUND</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>not found, usually indicates stale reference or permission </p>
-
-</div>
-</div>
-<a id="a58cd556eb411c881903d30ae272984f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a58cd556eb411c881903d30ae272984f4">&#9670;&nbsp;</a></span>ZITI_OK</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_OK</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The expected outcome of a successful operation. </p>
-
-</div>
-</div>
-<a id="adfbe1fea9a00f5dd90c0e42221248fcb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adfbe1fea9a00f5dd90c0e42221248fcb">&#9670;&nbsp;</a></span>ZITI_PARTIALLY_AUTHENTICATED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_PARTIALLY_AUTHENTICATED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>returned when authentication is attempted but there is an existing api session waiting for auth queries to pass </p>
-
-</div>
-</div>
-<a id="afc940e564c9768cd6a7464b0ee4ab8f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afc940e564c9768cd6a7464b0ee4ab8f6">&#9670;&nbsp;</a></span>ZITI_PKCS7_ASN1_PARSING_FAILED</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_PKCS7_ASN1_PARSING_FAILED</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>PKCS7/ASN.1 parsing failed. </p>
-
-</div>
-</div>
-<a id="adce4a78f4190299277ad587530ca5036"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adce4a78f4190299277ad587530ca5036">&#9670;&nbsp;</a></span>ZITI_SERVICE_UNAVAILABLE</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_SERVICE_UNAVAILABLE</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>The SDK cannot send data to the Ziti Network because the requested service was not available. </p>
-<p>Common causes are: * the service does not exist * the identity connecting is not associated with the given service <br  />
- </p>
-
-</div>
-</div>
-<a id="a3b6e0c786cfe90c05611a9ec5d2b1d2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3b6e0c786cfe90c05611a9ec5d2b1d2b">&#9670;&nbsp;</a></span>ZITI_TIMEOUT</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_TIMEOUT</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>A connect or write operation did not complete in the alloted timeout. </p>
-<p>#DEFAULT_TIMEOUT </p>
-
-</div>
-</div>
-<a id="a6cb98ad4d5a5243239c51c92a761fd97"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6cb98ad4d5a5243239c51c92a761fd97">&#9670;&nbsp;</a></span>ZITI_WTF</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const int ZITI_WTF</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Inspired by the Android SDK: What a Terrible Failure. </p>
-<p>A condition that should never happen. </p>
 
 </div>
 </div>

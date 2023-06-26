@@ -417,20 +417,20 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Callback called when client connects to a service hosted by given context. </p>
-<p>This callback is invoked after <a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a> is completed. The result of the function may be an error condition so it is important to verify the status code in this callback. If successful the status will be set to <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> otherwise the value will be a value defined in <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></p>
+<p>This callback is invoked after <a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a> is completed. The result of the function may be an error condition so it is important to verify the status code in this callback. If successful the status will be set to <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> otherwise the value will be a value defined in #ZITI_ERRORS</p>
 <p>Generally this callback is used for any preparations necessary before accepting incoming data from the Ziti network.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">serv</td><td>hosting connection, initialized with <a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a> </td></tr>
     <tr><td class="paramname">client</td><td>client connection - generally passed to <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a> in this function </td></tr>
-    <tr><td class="paramname">status</td><td><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or error </td></tr>
+    <tr><td class="paramname">status</td><td><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or error </td></tr>
     <tr><td class="paramname">ctx</td><td>object containing application data passed by dialing identity, </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="structziti__dial__opts.html">ziti_dial_opts</a>. the reference to this object is only valid for the <a class="el" href="types_8h.html#a9f5182feeb50e38af0ffa025cee831c3" title="Nanosecond precision time duration, like Golang&#39;s time.Duration.">duration</a> of the callback.</dd>
 <dd>
-<a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -470,15 +470,15 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Connection callback. </p>
-<p>This callback is invoked after <a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a> or <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a> is completed. The result of the function may be an error condition so it is important to verify the status code in this callback. If successful the status will be set to <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a>.</p>
+<p>This callback is invoked after <a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a> or <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a> is completed. The result of the function may be an error condition so it is important to verify the status code in this callback. If successful the status will be set to <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a>.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>the Ziti connection struct </td></tr>
-    <tr><td class="paramname">status</td><td>the result of the function. <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> if successful otherwise see <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></td></tr>
+    <tr><td class="paramname">status</td><td>the result of the function. <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> if successful otherwise see #ZITI_ERRORS</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -537,12 +537,12 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">conn</td><td>The Ziti connection which received the data </td></tr>
     <tr><td class="paramname">data</td><td>incoming data buffer </td></tr>
-    <tr><td class="paramname">length</td><td>size of data or error code as defined in <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> (will receive <a class="el" href="errors_8h.html#adf68027c57495898fd8bf51ed0bad701" title="The connection has been closed gracefully.">ZITI_EOF</a> when connection is closed)</td></tr>
+    <tr><td class="paramname">length</td><td>size of data or error code as defined in #ZITI_ERRORS (will receive <a class="el" href="errors_8h.html#af97a8a9096c8f6059991db627817ec4c" title="The connection has been closed gracefully.">ZITI_EOF</a> when connection is closed)</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>indicate how much data was consumed </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -570,7 +570,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a86a73cb294bab0c38a0b00497f547845" title="Performs a Ziti enrollment.">ziti_enroll()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a86a73cb294bab0c38a0b00497f547845" title="Performs a Ziti enrollment.">ziti_enroll()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -611,8 +611,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Extend Certificate Authenticator Callback. </p>
-<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the certificate authenticator extension request cannot be completed an error will be returned otherwise <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the certificate authenticator extension request cannot be completed an error will be returned otherwise <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -650,7 +650,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
-    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
+    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
     <tr><td class="paramname">ctx</td><td>additional context to be passed into the original mfa call </td></tr>
   </table>
   </dd>
@@ -675,7 +675,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
-    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
+    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
     <tr><td class="paramname">mfa_enrollment</td><td>contents of the mfa enrollment or NULL if status is an error </td></tr>
     <tr><td class="paramname">ctx</td><td>additional context to be passed into <a class="el" href="ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7" title="Callback called after ziti_mfa_enroll()">ziti_mfa_enroll_cb</a> callback </td></tr>
   </table>
@@ -701,7 +701,7 @@ Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
-    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
+    <tr><td class="paramname">status</td><td>an error code or <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> </td></tr>
     <tr><td class="paramname">recovery_codes</td><td>null terminated array of recovery codes </td></tr>
     <tr><td class="paramname">ctx</td><td>additional context to be passed into to the original call </td></tr>
   </table>
@@ -924,8 +924,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Service status callback. </p>
-<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f" title="Checks availability of the service for the given edge context.">ziti_service_available()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the service does not exist or the identity has not been given the access to the service the <a class="el" href="errors_8h.html#adce4a78f4190299277ad587530ca5036" title="The SDK cannot send data to the Ziti Network because the requested service was not available.">ZITI_SERVICE_UNAVAILABLE</a> error code will be returned otherwise <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f" title="Checks availability of the service for the given edge context.">ziti_service_available()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f" title="Checks availability of the service for the given edge context.">ziti_service_available()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the service does not exist or the identity has not been given the access to the service the <a class="el" href="errors_8h.html#a3a146ec43d9f6661e4da04e4c89f51d9" title="The SDK cannot send data to the Ziti Network because the requested service was not available.">ZITI_SERVICE_UNAVAILABLE</a> error code will be returned otherwise <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f" title="Checks availability of the service for the given edge context.">ziti_service_available()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -942,8 +942,8 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Verify Extend Certificate Authenticator Callback. </p>
-<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2" title="Called in response to a ziti_extend_cert_authenticator_cb to verify a new client certificate.">ziti_verify_extend_cert_authenticator()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the certificate authenticator extension verification request cannot be completed an error will be returned otherwise <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected. At the end of this callback's invocation, the new client certificate PEM should be stored and set for use via <code>ziti_set_client_cert</code> on new connections and reconnections.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<p>This callback is invoked on the conclusion of <a class="el" href="ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2" title="Called in response to a ziti_extend_cert_authenticator_cb to verify a new client certificate.">ziti_verify_extend_cert_authenticator()</a>. The result of the function may be an error condition so it is important to verify the status code in this callback. In the event the certificate authenticator extension verification request cannot be completed an error will be returned otherwise <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected. At the end of this callback's invocation, the new client certificate PEM should be stored and set for use via <code>ziti_set_client_cert</code> on new connections and reconnections.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a04a25125e41b9717e5148dc8504889e8" title="Attempts extend the lifetime of a 1st party client certificate (issued by the Ziti Controller)">ziti_extend_cert_authenticator()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -962,7 +962,7 @@ Functions</h2></td></tr>
 <p>Callback called after <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> is complete. </p>
 <p>This callback is triggered on the completion of <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>. The result of the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> function may be an error condition so it is important to verify the provided status code in this callback.</p>
 <p>This callback is often used to free or reinitialize the buffer associated with the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> invocation. It is important to not free this memory until after data has been written to the wire else the results of the write operation may be unexpected.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1031,7 +1031,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a> </dd></dl>
 
 </div>
@@ -1099,7 +1099,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> <a class="el" href="errors_8h.html#ab8c891426cbf4f224c252fc9a16c7fb7" title="connection was closed">ZITI_CONN_CLOSED</a> if connection was already <a class="el" href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277" title="Closes the given connection.">ziti_close()</a> was already called on the given connection other <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> <a class="el" href="errors_8h.html#ab36f14782fa20b8b6f35fa59c123e65e" title="connection was closed">ZITI_CONN_CLOSED</a> if connection was already <a class="el" href="ziti_8h.html#a643dd465f795ca234dbe4d22bb915277" title="Closes the given connection.">ziti_close()</a> was already called on the given connection other #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1130,7 +1130,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1376,8 +1376,8 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a>, <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c" title="Start accepting ziti client connections.">ziti_listen()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1519,7 +1519,7 @@ Functions</h2></td></tr>
 
 <p>Establishes connection to a Ziti service. </p>
 <p>Before any bytes can be sent over the Ziti Network a <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a> must be dialed to a service. This function will attempt to dial the service with the given name. The result of the service dial will be called back using the provided <a class="el" href="ziti_8h.html#a62bed54a2d7cf0c17958468ac98b57a4" title="Connection callback.">ziti_conn_cb</a>.</p>
-<p>If the dial succeeds the provided <a class="el" href="ziti_8h.html#a9aff26bd4513034132acab86448c3e1b" title="Data callback.">ziti_data_cb</a> is used to handle bytes returned from the service. If the dial fails only the <a class="el" href="ziti_8h.html#a62bed54a2d7cf0c17958468ac98b57a4" title="Connection callback.">ziti_conn_cb</a> will be invoked with the corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> code.</p>
+<p>If the dial succeeds the provided <a class="el" href="ziti_8h.html#a9aff26bd4513034132acab86448c3e1b" title="Data callback.">ziti_data_cb</a> is used to handle bytes returned from the service. If the dial fails only the <a class="el" href="ziti_8h.html#a62bed54a2d7cf0c17958468ac98b57a4" title="Connection callback.">ziti_conn_cb</a> will be invoked with the corresponding #ZITI_ERRORS code.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">conn</td><td>the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a> to use in the dial operation </td></tr>
@@ -1529,7 +1529,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> </dd></dl>
 
 </div>
@@ -1722,7 +1722,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1776,7 +1776,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>returns <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> on success, otherwise error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> on success, otherwise error </dd></dl>
 
 </div>
 </div>
@@ -2051,7 +2051,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#af5f48d22d870627c09e10068eeb6d5f7" title="Initialize Ziti Edge identity context with the provided options.">ziti_init_opts()</a> </dd></dl>
 <dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000001">Deprecated:</a></b></dt><dd></dd></dl>
 
@@ -2093,7 +2093,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ac18dd13453ce6c1884ba662de479b6c8" title="Initializes a Ziti Edge identity.">ziti_init()</a> </dd></dl>
 
 </div>
@@ -2176,7 +2176,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a> </dd></dl>
 
 </div>
@@ -2267,7 +2267,7 @@ Functions</h2></td></tr>
 
 <p>Attempt to submit an MFA code for evaluation. </p>
 <p>Attempts submit an MFA code for evaluation. This should be done in response to the <code>ZitiMfaAuthEvent</code> event or when posture check timeouts would occur for a service.</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success via the <code>ziti_mfa_cb</code> provided.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success via the <code>ziti_mfa_cb</code> provided.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2314,7 +2314,7 @@ Functions</h2></td></tr>
 
 <p>Attempts to initialize MFA enrollment. </p>
 <p>Attempts to initialize enrollment. On success or failure the supplied enroll_cb will be called with relevant status information. The supplied ztx must be have passed a primary authentication mechanism (cert, updb, etc).</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2366,7 +2366,7 @@ Functions</h2></td></tr>
 
 <p>Attempts to retrieve the current recovery codes for the identity. </p>
 <p>Attempts to retrieve the recovery codes for the current identity. On success or failure the supplied get_cb will be called with relevant status information. The supplied ztx must be fully authenticated.</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2419,7 +2419,7 @@ Functions</h2></td></tr>
 
 <p>Attempts to generate new recovery codes and retrieve the new recovery codes for MFA. </p>
 <p>Attempts to generate new recovery codes. All previous codes will become invalid and replaced with the new recovery codes. On success or failure the supplied get_cb will be called with relevant status information. The supplied ztx must be fully authenticated.</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2472,7 +2472,7 @@ Functions</h2></td></tr>
 
 <p>Attempts to remove MFA. </p>
 <p>Attempts to remove MFA. On success or failure the supplied remove_cb will be called with relevant status information. The supplied ztx must be fully authenticated.</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2525,7 +2525,7 @@ Functions</h2></td></tr>
 
 <p>Attempts to verify MFA enrollment. </p>
 <p>Attempts to verify MFA enrollment. On success or failure the supplied verify_cb will be called with relevant status information. The supplied ztx must be authenticated. After verification, MFA enrollment is complete.</p>
-<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
+<p>An error status will be returned if the request fails, <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> is expected on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
@@ -2535,7 +2535,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -2583,12 +2583,12 @@ Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">ztx</td><td>the Ziti Edge identity context to use to check for the service's availability on </td></tr>
     <tr><td class="paramname">service</td><td>the name of the service to check </td></tr>
-    <tr><td class="paramname">cb</td><td>callback called with <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or #ZITI_SERVICE_NOT_AVAILABLE </td></tr>
+    <tr><td class="paramname">cb</td><td>callback called with <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or #ZITI_SERVICE_NOT_AVAILABLE </td></tr>
     <tr><td class="paramname">ctx</td><td>additional context to be passed to the <a class="el" href="ziti_8h.html#a35245ab4953e815155542e5b46f5bdff" title="Service status callback.">ziti_service_cb</a></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -2835,7 +2835,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -2862,7 +2862,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -2905,7 +2905,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Called in response to a ziti_extend_cert_authenticator_cb to verify a new client certificate. </p>
-<p>After calling <code>ziti_extend_cert_authenticator</code> a <code>ziti_extend_cert_authenticator_cb</code> callback will be invoked. In order to have the new client cert provided in the event become active, the controller requires that the client verify that it has received the new certificate. Calling this function will verify the certificate and cause the new client certificate to become active, inactivating the old certificate. At the end of execution the provided callback will be invoked with <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or an error.</p>
+<p>After calling <code>ziti_extend_cert_authenticator</code> a <code>ziti_extend_cert_authenticator_cb</code> callback will be invoked. In order to have the new client cert provided in the event become active, the controller requires that the client verify that it has received the new certificate. Calling this function will verify the certificate and cause the new client certificate to become active, inactivating the old certificate. At the end of execution the provided callback will be invoked with <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or an error.</p>
 <p><code>ziti_set_client_cert</code> should be called shortly after on success.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2915,7 +2915,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>returns <a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> on success, otherwise error </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>returns <a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> on success, otherwise error </dd></dl>
 
 </div>
 </div>
@@ -2975,7 +2975,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a58cd556eb411c881903d30ae272984f4" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding <a class="el" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a> </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>

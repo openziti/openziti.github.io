@@ -85,51 +85,81 @@ $(document).ready(function(){initNavTree('errors_8h_source.html',''); initResiza
 <div class="title">errors.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="errors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">Copyright 2019-2020 NetFoundry, Inc.</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">https://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">limitations under the License.</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">*/</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef ZT_SDK_ERRORS_H</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// @cond</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define ZT_SDK_ERRORS_H</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">// @endcond</span></div>
+<a href="errors_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2023.  NetFoundry Inc.</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">// Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">// you may not use this file except in compliance with the License.</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">// You may obtain a copy of the License at</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">// https://www.apache.org/licenses/LICENSE-2.0</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">// Unless required by applicable law or agreed to in writing, software</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">// See the License for the specific language governing permissions and</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// limitations under the License.</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef ZT_SDK_ERRORS_H</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment">// @cond</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define ZT_SDK_ERRORS_H</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// @endcond</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="externs_8h.html">externs.h</a>&quot;</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="externs_8h.html">externs.h</a>&quot;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="error__defs_8h.html">error_defs.h</a>&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="errors_8h.html#a947429505002f0c889a011a663ea5a72">   38</a></span>&#160;<span class="preprocessor">#define ERR_ID(e, _) ZITI_FUNC extern const int ZITI_##e;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<a class="code" href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a>(<a class="code" href="errors_8h.html#a947429505002f0c889a011a663ea5a72">ERR_ID</a>)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#undef ERR_ID</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">   45</a></span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">ziti_errorstr</a>(<span class="keywordtype">int</span> err);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZT_SDK_ERRORS_H</span></div>
-<div class="ttc" id="aerror__defs_8h_html"><div class="ttname"><a href="error__defs_8h.html">error_defs.h</a></div></div>
-<div class="ttc" id="aerror__defs_8h_html_ac40dbb62a3442640d8ea56b9169ac092"><div class="ttname"><a href="error__defs_8h.html#ac40dbb62a3442640d8ea56b9169ac092">ZITI_ERRORS</a></div><div class="ttdeci">#define ZITI_ERRORS(XX)</div><div class="ttdef"><b>Definition:</b> error_defs.h:22</div></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">   33</a></span>&#160;<span class="preprocessor">#define ZITI_OK                                                 (0)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="errors_8h.html#a185d1e51300e4ae8d7cb85d7c478d543">   35</a></span>&#160;<span class="preprocessor">#define ZITI_CONFIG_NOT_FOUND                                   (-1)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="errors_8h.html#aaba2559ee651be97dae4a448f6eb4cd4">   37</a></span>&#160;<span class="preprocessor">#define ZITI_JWT_NOT_FOUND                                      (-2)</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="errors_8h.html#a8649eeb2004465ae1932baad50bb9fc7">   39</a></span>&#160;<span class="preprocessor">#define ZITI_JWT_INVALID                                        (-3)</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="errors_8h.html#a2658dfa88d000ef1fa7f218af62a5433">   41</a></span>&#160;<span class="preprocessor">#define ZITI_JWT_INVALID_FORMAT                                 (-4)</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="errors_8h.html#a7ce9a44cc2d6b186eb300d50dd069988">   43</a></span>&#160;<span class="preprocessor">#define ZITI_PKCS7_ASN1_PARSING_FAILED                          (-5)</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="errors_8h.html#a38195a0b996a20afa95b4ece6c190644">   45</a></span>&#160;<span class="preprocessor">#define ZITI_JWT_SIGNING_ALG_UNSUPPORTED                        (-6)</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="errors_8h.html#affdd888671f013acdff739aa3137ea2b">   47</a></span>&#160;<span class="preprocessor">#define ZITI_JWT_VERIFICATION_FAILED                            (-7)</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="errors_8h.html#ae860ab267ffdf4ee6591432d8caf2dd2">   49</a></span>&#160;<span class="preprocessor">#define ZITI_ENROLLMENT_METHOD_UNSUPPORTED                      (-8)</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="errors_8h.html#a4af7dff9cd0e48123e6d781535a28ccb">   51</a></span>&#160;<span class="preprocessor">#define ZITI_ENROLLMENT_CERTIFICATE_REQUIRED                    (-9)</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="errors_8h.html#a9f5e44d35e36cc9fa4c6532f89082ed8">   53</a></span>&#160;<span class="preprocessor">#define ZITI_KEY_GENERATION_FAILED                              (-10)</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="errors_8h.html#a4e1585354efffb35ed6b6e865cd066b7">   55</a></span>&#160;<span class="preprocessor">#define ZITI_KEY_LOAD_FAILED                                    (-11)</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="errors_8h.html#a2ba1f52708c9106519430ea01c97ca57">   57</a></span>&#160;<span class="preprocessor">#define ZITI_CSR_GENERATION_FAILED                              (-12)</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="errors_8h.html#a3290238167042030132e2a5716b5d750">   59</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_CONFIG                                     (-13)</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="errors_8h.html#a17268e0cd0da850d2c72ebec6d753794">   61</a></span>&#160;<span class="preprocessor">#define ZITI_AUTHENTICATION_FAILED                              (-14)</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="errors_8h.html#a1fb8ab9c5c3a44cad56786c8cfc57bfd">   64</a></span>&#160;<span class="preprocessor">#define ZITI_NOT_AUTHORIZED                                     (-15)</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="errors_8h.html#aaa560a8176e482ddb080c997e33ee70c">   67</a></span>&#160;<span class="preprocessor">#define ZITI_CONTROLLER_UNAVAILABLE                             (-16)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="errors_8h.html#aec10c14a1b69bf3286b8ab717718cdf0">   71</a></span>&#160;<span class="preprocessor">#define ZITI_GATEWAY_UNAVAILABLE                                (-17)</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="errors_8h.html#a3a146ec43d9f6661e4da04e4c89f51d9">   75</a></span>&#160;<span class="preprocessor">#define ZITI_SERVICE_UNAVAILABLE                                (-18)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="errors_8h.html#af97a8a9096c8f6059991db627817ec4c">   77</a></span>&#160;<span class="preprocessor">#define ZITI_EOF                                                (-19)</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="errors_8h.html#a78a3e199a22f8c2bd558fa7a622000fd">   79</a></span>&#160;<span class="preprocessor">#define ZITI_TIMEOUT                                            (-20)</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="errors_8h.html#a9ae78eeb9520342dc1f8bd599acada0c">   81</a></span>&#160;<span class="preprocessor">#define ZITI_CONNABORT                                          (-21)</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="errors_8h.html#a190d6b919c8c60eac8692befdfd803f1">   83</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_STATE                                      (-22)</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="errors_8h.html#af12fc9f9d8269d67b074bf933cf7ab09">   85</a></span>&#160;<span class="preprocessor">#define ZITI_CRYPTO_FAIL                                        (-23)</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="errors_8h.html#ab36f14782fa20b8b6f35fa59c123e65e">   87</a></span>&#160;<span class="preprocessor">#define ZITI_CONN_CLOSED                                        (-24)</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="errors_8h.html#a041c3f43dba0994e85e27e121c11d711">   89</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_POSTURE                                    (-25)</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="errors_8h.html#a91dc95cf4fa15d1c30be9dfc20b4240d">   91</a></span>&#160;<span class="preprocessor">#define ZITI_MFA_EXISTS                                         (-26)</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno"><a class="line" href="errors_8h.html#a579194197b56e798d0c5ee90c1d78d46">   93</a></span>&#160;<span class="preprocessor">#define ZITI_MFA_INVALID_TOKEN                                  (-27)</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="errors_8h.html#a9e4cb669614ae5250c577ecf8443c7f7">   95</a></span>&#160;<span class="preprocessor">#define ZITI_MFA_NOT_ENROLLED                                   (-28)</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="errors_8h.html#af51cb251006f45cbba59572165a859f3">   97</a></span>&#160;<span class="preprocessor">#define ZITI_NOT_FOUND                                          (-29)</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="errors_8h.html#a92f924ae16f3fb80e9090164489bdf72">   99</a></span>&#160;<span class="preprocessor">#define ZITI_DISABLED                                           (-30)</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="errors_8h.html#accae4e745b6478808c245c4802e30937">  101</a></span>&#160;<span class="preprocessor">#define ZITI_PARTIALLY_AUTHENTICATED                            (-31)</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="errors_8h.html#adb25dfb3ea2bd92c268b0fb3049ac576">  103</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_AUTHENTICATOR_TYPE                         (-32)</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="errors_8h.html#afed704be5f67391998504305161dc4fb">  105</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_AUTHENTICATOR_CERT                         (-33)</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="errors_8h.html#a4e6e7deb1c4b62aea1a30f73f6e39e53">  107</a></span>&#160;<span class="preprocessor">#define ZITI_INVALID_CERT_KEY_PAIR                              (-34)</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">// Put new error codes here and add error string in error.c</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="errors_8h.html#a6d0dccf58f52d32bbe696bc2fb625fff">  112</a></span>&#160;<span class="preprocessor">#define ZITI_WTF (-111)</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">  118</a></span>&#160;<span class="keyword">extern</span> <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">ziti_errorstr</a>(<span class="keywordtype">int</span> err);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZT_SDK_ERRORS_H</span></div>
 <div class="ttc" id="aerrors_8h_html_a2182f9078122799ec98a7c1f17094191"><div class="ttname"><a href="errors_8h.html#a2182f9078122799ec98a7c1f17094191">ziti_errorstr</a></div><div class="ttdeci">const char * ziti_errorstr(int err)</div><div class="ttdoc">Returns a human-readable description for the provided code.</div></div>
-<div class="ttc" id="aerrors_8h_html_a947429505002f0c889a011a663ea5a72"><div class="ttname"><a href="errors_8h.html#a947429505002f0c889a011a663ea5a72">ERR_ID</a></div><div class="ttdeci">#define ERR_ID(e, _)</div><div class="ttdoc">A helper macro to make declaring expected error conditions easier which is undef'ed immidately.</div><div class="ttdef"><b>Definition:</b> errors.h:38</div></div>
 <div class="ttc" id="aexterns_8h_html"><div class="ttname"><a href="externs_8h.html">externs.h</a></div></div>
 <div class="ttc" id="aexterns_8h_html_a71e7a08e9b0fa6e62cba0738fd1d46d3"><div class="ttname"><a href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div><div class="ttdeci">#define ZITI_FUNC</div><div class="ttdef"><b>Definition:</b> externs.h:38</div></div>
 </div><!-- fragment --></div><!-- contents -->
