@@ -25,6 +25,13 @@
 var NAVTREE =
 [
   [ "Ziti C SDK", "index.html", [
+    [ "OpenZiti C SDK", "index.html", [
+      [ "Configuring Your Application to use OpenZiti C SDK", "index.html#autotoc_md1", null ],
+      [ "Using OpenZiti in Your Application", "index.html#autotoc_md2", [
+        [ "High-Level (<tt>Zitilib</tt>) API", "index.html#autotoc_md3", null ]
+      ] ],
+      [ "Getting Help", "index.html#autotoc_md4", null ]
+    ] ],
     [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
@@ -52,8 +59,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structziti__enroll__opts.html",
-"ziti__model_8h.html#a3160d36431a229b4e4ec284bd670d50a"
+"structziti__dial__opts.html",
+"ziti__model_8h.html#a29bd40b4caeb604dee89279c1ea6f651"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

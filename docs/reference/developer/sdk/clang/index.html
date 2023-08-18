@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Ziti C SDK: Ziti C SDK</title>
+<title>Ziti C SDK: OpenZiti C SDK</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,17 +82,140 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Ziti C SDK </div>  </div>
+<div class="title">OpenZiti C SDK </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_README"></a> The Ziti C SDK delivers a set of functionality allowing developers to create applications utilizing a Ziti Network quickly and easily.</p>
-<h2>What Is Ziti</h2>
-<p>Ziti is the name of NetFoundry's open source network overlay. The goal of Ziti is to reinvent networking by providing secure, scalable connectivity as a network overlay over existing underlay networks.</p>
-<h2>Status</h2>
-<p><img src="https://github.com/openziti/ziti-sdk-c/actions/workflows/cmake.yml/badge.svg?branch=main" alt="Build Status" style="pointer-events: none;" class="inline"/></p>
-<h2>Building</h2>
-<p>See the building.md for information on how to build the project.</p>
-<h2>Getting Help</h2>
+<div class="textblock"><p><a class="anchor" id="md__home_runner_work_ziti_doc_ziti_doc_docusaurus__remotes_ziti_sdk_c_README"></a><img src="https://github.com/openziti/ziti-sdk-c/actions/workflows/cmake.yml/badge.svg?branch=main" alt="Build Status" style="pointer-events: none;" class="inline"/></p>
+<p>The OpenZiti C SDK allows developers to create their own custom OpenZiti network endpoint applications.</p>
+<p>OpenZiti is a modern, programmable network overlay with associated edge components, for application-embedded, zero trust network connectivity, written by developers for developers. The SDK harnesses that power via APIs that allow developers to imagine and develop solutions beyond what OpenZiti handles by default.</p>
+<p>This SDK does the following:</p>
+<ul>
+<li>enable network endpoint clients allow a device to <a href="#dialing-a-service">dial (access)</a> or <a href="#binding-to-a-service">bind (host)</a> OpenZiti Services</li>
+<li>provides <a href="https://openziti.io/docs/learn/core-concepts/security/authentication/auth">authentication</a> interfaces for <a href="#example-code-configuration">x509 certificates</a> flows</li>
+<li>collects and submits security posture collection/submission for <a href="https://openziti.io/docs/learn/core-concepts/security/authorization/posture-checks">Posture Checks</a></li>
+<li>allows applications to bind or dial services via standard <a href="#high-level-zitilib-api"><code>socket</code></a> interfaces</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Configuring Your Application to use OpenZiti C SDK</h1>
+<p>The easiest way to embed Ziti SDK in your app is to pull the project into your CMake build</p>
+<div class="fragment"><div class="line">FetchContent_Declare(ziti-sdk-c</div>
+<div class="line">        GIT_REPOSITORY https://github.com/openziti/ziti-sdk-c.git</div>
+<div class="line">        GIT_TAG ${LATEST_ZITI_RELEASE}</div>
+<div class="line">        )</div>
+<div class="line">FetchContent_MakeAvailable(ziti-sdk-c)</div>
+<div class="line"> </div>
+<div class="line"># ...</div>
+<div class="line"># ...</div>
+<div class="line"> </div>
+<div class="line">add_executable(most-secure-app-ever ${my_sources})</div>
+<div class="line">target_link_libraries(most-secure-app-ever PRIVATE ziti)</div>
+</div><!-- fragment --><p>You will also need other libraries that OpenZiti SDK uses (they are specified in <a href="vcpkg.json">vcpkg.json</a>):</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">library   </th><th class="markdownTableHeadNone">usage    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>libuv</code>   </td><td class="markdownTableBodyNone">event loop    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>openssl</code>   </td><td class="markdownTableBodyNone">TLS    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>zlib</code>   </td><td class="markdownTableBodyNone">HTTPS compression    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>llhttp</code>   </td><td class="markdownTableBodyNone">HTTP parsing    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>libsodium</code>   </td><td class="markdownTableBodyNone">OpenZiti end-to-end encryption   </td></tr>
+</table>
+<p>There are multiple ways to get those 3rd party dependencies into your build: system level, CMake <code>FetchContent</code>, vcpkg, etc. We recommend using <a href="https://vcpkg.io/"><code>vcpkg</code></a>.</p>
+<p>If you want to contribute/build/hack this SDK in standalone mode see the BUILD.md for information on how to do it.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Using OpenZiti in Your Application</h1>
+<h2><a class="anchor" id="autotoc_md3"></a>
+High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h2>
+<p>The high-level API was developed to simplify embedding OpenZiti in an application. The main feature of this API is presenting Ziti connections as regular socket file descriptors (or handles on Windows). These sockets can be used both blocking and non-blocking modes.</p>
+<h3>SDK Initialization and Teardown</h3>
+<p>There are just three functions that cover SDK initialization and teardown.</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">function   </th><th class="markdownTableHeadNone">purpose    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4" title="Initialize Ziti library.">Ziti_lib_init()</a></code>   </td><td class="markdownTableBodyNone">initializes Ziti SDK background event loop that runs all internal SDK tasks    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed" title="Load Ziti identity.">Ziti_load_context()</a></code>   </td><td class="markdownTableBodyNone">loads an enrolled <a href="https://openziti.io/docs/learn/core-concepts/identities/overview">ziti identity</a> from the provided file    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572" title="Shutdown Ziti library.">Ziti_lib_shutdown()</a></code>   </td><td class="markdownTableBodyNone">gracefully shuts down all loaded identities and terminates the event loop   </td></tr>
+</table>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="zitilib_8h.html">ziti/zitilib.h</a>&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line">    </div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *identity_file = process_args(argc, argv);</div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a>();</div>
+<div class="line">    <a class="code" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx = <a class="code" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a>(identity_file);</div>
+<div class="line">    </div>
+<div class="line">    ...</div>
+<div class="line">    </div>
+<div class="line">    </div>
+<div class="line">    <a class="code" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a>();</div>
+<div class="line">}</div>
+<div class="ttc" id="aziti_8h_html_a39669b224e62d165a45f8415a342a6b4"><div class="ttname"><a href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></div><div class="ttdeci">struct ziti_ctx * ziti_context</div><div class="ttdoc">Represents the Ziti Edge identity context.</div><div class="ttdef"><b>Definition:</b> ziti.h:66</div></div>
+<div class="ttc" id="azitilib_8h_html"><div class="ttname"><a href="zitilib_8h.html">zitilib.h</a></div></div>
+<div class="ttc" id="azitilib_8h_html_a9c50cd895babc6f5f0a8ea14e2df48b4"><div class="ttname"><a href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a></div><div class="ttdeci">void Ziti_lib_init(void)</div><div class="ttdoc">Initialize Ziti library.</div></div>
+<div class="ttc" id="azitilib_8h_html_ab18537f49af147f645d08d2cc0965572"><div class="ttname"><a href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a></div><div class="ttdeci">void Ziti_lib_shutdown(void)</div><div class="ttdoc">Shutdown Ziti library.</div></div>
+<div class="ttc" id="azitilib_8h_html_afd37bf5b0b0a6b7bbb510977b00d33ed"><div class="ttname"><a href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a></div><div class="ttdeci">ziti_context Ziti_load_context(const char *identity)</div><div class="ttdoc">Load Ziti identity.</div></div>
+</div><!-- fragment --><p>Once <code>ziti_context</code> is loaded it can be used to dial a service or bind to a service (provided the identity has proper access to it).</p>
+<h3>Dialing a service</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">function   </th><th class="markdownTableHeadNone">usage    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Ziti_connect(sock, ztx, service, terminator)</code>   </td><td class="markdownTableBodyNone">connects given socket to the service/terminator within the context    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>Ziti_connect_addr(sock, hostname, port)</code>   </td><td class="markdownTableBodyNone">connects given socket to the specified intercept address   </td></tr>
+</table>
+<div class="fragment"><div class="line"><a class="code" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> sock = <a class="code" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a>(SOCK_STREAM);</div>
+<div class="line"><span class="keywordtype">int</span> error = <a class="code" href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">Ziti_connect</a>(sock, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
+<div class="line"> </div>
+<div class="line"><span class="comment">// use sock as normal socket</span></div>
+<div class="line"><span class="keywordflow">do</span> {</div>
+<div class="line">    write(sock, ...);</div>
+<div class="line">    read(sock, ...);</div>
+<div class="line"> </div>
+<div class="line">} <span class="keywordflow">while</span> (!done);</div>
+<div class="line"> </div>
+<div class="line">close(sock);</div>
+<div class="ttc" id="azitilib_8h_html_a11e24e8781b739eff9b0964f3cf4af74"><div class="ttname"><a href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">Ziti_connect</a></div><div class="ttdeci">int Ziti_connect(ziti_socket_t socket, ziti_context ztx, const char *service, const char *terminator)</div><div class="ttdoc">Connect socket to a Ziti service.</div></div>
+<div class="ttc" id="azitilib_8h_html_a1e0b67b9411bc037acf42affcda78185"><div class="ttname"><a href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a></div><div class="ttdeci">ziti_socket_t Ziti_socket(int type)</div><div class="ttdoc">creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service</div></div>
+<div class="ttc" id="azitilib_8h_html_a86fe0c7b322993be4bb71a8243e975a4"><div class="ttname"><a href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></div><div class="ttdeci">int ziti_socket_t</div><div class="ttdef"><b>Definition:</b> zitilib.h:35</div></div>
+</div><!-- fragment --><h3>Binding to a service</h3>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">function   </th><th class="markdownTableHeadNone">usage    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Ziti_bind(srv, ztx, service, terminator)</code>   </td><td class="markdownTableBodyNone">binds given socket to the service/terminator within the context    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>Ziti_listen(sock, backlog)</code>   </td><td class="markdownTableBodyNone">sets maximum number of pending inbound connections (similar to TCP backlog)    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>Ziti_accept(srv, caller, caller_len)</code>   </td><td class="markdownTableBodyNone">accepts incoming connection and returns peer socket/handle   </td></tr>
+</table>
+<div class="fragment"><div class="line"><a class="code" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> srv = <a class="code" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a>(SOCK_STREAM);</div>
+<div class="line"><span class="keywordtype">int</span> error = <a class="code" href="zitilib_8h.html#a4366225741ec51eb92fab87e230cc431">Ziti_bind</a>(srv, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
+<div class="line"><a class="code" href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">Ziti_listen</a>(srv, 10); <span class="comment">// sets accept backlog</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keywordflow">do</span> {</div>
+<div class="line">    <span class="keywordtype">char</span> caller[128];</div>
+<div class="line">    <a class="code" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> clt = <a class="code" href="zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39">Ziti_accept</a>(srv, caller, (<span class="keywordtype">int</span>)<span class="keyword">sizeof</span>(caller));</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// use client as normal socket</span></div>
+<div class="line">    process_client(clt);</div>
+<div class="line"> </div>
+<div class="line">} <span class="keywordflow">while</span> (!done);</div>
+<div class="line"> </div>
+<div class="line">close(srv);</div>
+<div class="ttc" id="azitilib_8h_html_a4366225741ec51eb92fab87e230cc431"><div class="ttname"><a href="zitilib_8h.html#a4366225741ec51eb92fab87e230cc431">Ziti_bind</a></div><div class="ttdeci">int Ziti_bind(ziti_socket_t socket, ziti_context ztx, const char *service, const char *terminator)</div><div class="ttdoc">Bind socket to a Ziti service.</div></div>
+<div class="ttc" id="azitilib_8h_html_a5d8678cd4f35432c3bfc99319c9a1c39"><div class="ttname"><a href="zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39">Ziti_accept</a></div><div class="ttdeci">ziti_socket_t Ziti_accept(ziti_socket_t socket, char *caller, int caller_len)</div><div class="ttdoc">accept a client Ziti connection as a socket</div></div>
+<div class="ttc" id="azitilib_8h_html_ad844181a784a9cc2289f49b8b2461f31"><div class="ttname"><a href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">Ziti_listen</a></div><div class="ttdeci">int Ziti_listen(ziti_socket_t socket, int backlog)</div><div class="ttdoc">marks the [socket] as a socket able to accept incoming connections</div></div>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md4"></a>
+Getting Help</h1>
 <hr  />
 <p> Please use these community resources for getting help. We use GitHub <a href="https://github.com/NetFoundry/ziti-sdk-c/issues">issues</a> for tracking bugs and feature requests and have limited bandwidth to address them.</p>
 <ul>
