@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"structziti__context__event.html#a9d5e686bb0910cd1a7be0fa1a2bc855f":[2,0,8,1],
 "structziti__dial__opts.html":[2,0,9],
 "structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0":[2,0,9,0],
 "structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6":[2,0,9,1],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "ziti__model_8h.html#a21ddcede7f5fab1c1412d987fb5bfc40":[3,0,0,10,189],
 "ziti__model_8h.html#a248434a294d31c6171324978ff880717":[3,0,0,10,67],
 "ziti__model_8h.html#a24fe969432d5758467d1c6fa0313d3f7":[3,0,0,10,73],
-"ziti__model_8h.html#a2654cd72f6e697e90fa1a2c66be04958":[3,0,0,10,92],
-"ziti__model_8h.html#a290b3a79fe5a1f511571c77f7ecff3c3":[3,0,0,10,53]
+"ziti__model_8h.html#a2654cd72f6e697e90fa1a2c66be04958":[3,0,0,10,92]
 };
