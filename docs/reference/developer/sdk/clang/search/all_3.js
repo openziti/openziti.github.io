@@ -19,7 +19,6 @@ var searchData=
   ['config_51',['config',['../structziti__options.html#ae1caa81b77887af51189c6edadbfefab',1,'ziti_options']]],
   ['config_5ftypes_52',['config_types',['../structziti__options.html#a66a00043c7c2fcdda4a2b430bf5d8205',1,'ziti_options']]],
   ['connect_5ftimeout_5fseconds_53',['connect_timeout_seconds',['../structziti__listen__opts.html#a9d679865ade6b8629b03b7a15eb5ac72',1,'ziti_listen_opts::connect_timeout_seconds()'],['../structziti__dial__opts.html#aca21d0be5b5eefc7cd95f4112aa6a2b3',1,'ziti_dial_opts::connect_timeout_seconds()']]],
-  ['controller_54',['controller',['../structziti__options.html#a337ceb539db3ee60c64ae5e3918fba69',1,'ziti_options']]],
-  ['ctrl_5fstatus_55',['ctrl_status',['../structziti__context__event.html#a16ea44c5389e2c56c3035bc09924bc8a',1,'ziti_context_event']]],
-  ['ctx_56',['ctx',['../structziti__event__t.html#ace35c9d343f56c4200c448a9ba748df6',1,'ziti_event_t']]]
+  ['ctrl_5fstatus_54',['ctrl_status',['../structziti__context__event.html#a16ea44c5389e2c56c3035bc09924bc8a',1,'ziti_context_event']]],
+  ['ctx_55',['ctx',['../structziti__event__t.html#ace35c9d343f56c4200c448a9ba748df6',1,'ziti_event_t']]]
 ];

@@ -54,7 +54,8 @@ var NAVTREEINDEX0 =
 "errors_8h.html#affdd888671f013acdff739aa3137ea2b":[3,0,0,1,22],
 "errors_8h_source.html":[3,0,0,1],
 "externs_8h.html":[3,0,0,2],
-"externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3":[3,0,0,2,0],
+"externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3":[3,0,0,2,1],
+"externs_8h.html#ac7edcbaa8c0f06985041ecb25fc81b15":[3,0,0,2,0],
 "externs_8h_source.html":[3,0,0,2],
 "files.html":[3,0],
 "functions.html":[2,2,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX0 =
 "structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30":[2,0,7,1],
 "structziti__client__ctx.html#a58a65c3dbfbe2921ad3702ec4b70fa81":[2,0,7,0],
 "structziti__client__ctx.html#abfbeae24ba2da2caecc725981b217d55":[2,0,7,2],
-"structziti__context__event.html":[2,0,8],
-"structziti__context__event.html#a16ea44c5389e2c56c3035bc09924bc8a":[2,0,8,0]
+"structziti__context__event.html":[2,0,8]
 };
