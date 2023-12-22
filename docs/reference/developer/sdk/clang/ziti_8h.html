@@ -222,8 +222,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a57104d0a19d143386d14ce0d92b5ae0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a">ziti_set_app_info</a> (const char *app_id, const char *app_version)</td></tr>
 <tr class="memdesc:a57104d0a19d143386d14ce0d92b5ae0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide app information to Ziti SDK.  <a href="ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a">More...</a><br /></td></tr>
 <tr class="separator:a57104d0a19d143386d14ce0d92b5ae0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add5bd1e38cc159e909df1d5e1fefff13"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#add5bd1e38cc159e909df1d5e1fefff13">ziti_load_config</a> (ziti_config *config, const char *path)</td></tr>
-<tr class="separator:add5bd1e38cc159e909df1d5e1fefff13"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3535865c037ebe4f8e3dc64f8dcd7773"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a3535865c037ebe4f8e3dc64f8dcd7773">ziti_load_config</a> (ziti_config *config, const char *conf_str)</td></tr>
+<tr class="memdesc:a3535865c037ebe4f8e3dc64f8dcd7773"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load ziti identity config from memory or file.  <a href="ziti_8h.html#a3535865c037ebe4f8e3dc64f8dcd7773">More...</a><br /></td></tr>
+<tr class="separator:a3535865c037ebe4f8e3dc64f8dcd7773"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd9bd691721b0af71afb498b18e8d5be"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acd9bd691721b0af71afb498b18e8d5be">ziti_context_init</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> *ztx, const ziti_config *config)</td></tr>
 <tr class="separator:acd9bd691721b0af71afb498b18e8d5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac43016f2854bd760b5277dbe279ac02"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aac43016f2854bd760b5277dbe279ac02">ziti_context_set_options</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const <a class="el" href="structziti__options.html">ziti_options</a> *options)</td></tr>
@@ -2319,8 +2320,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="add5bd1e38cc159e909df1d5e1fefff13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add5bd1e38cc159e909df1d5e1fefff13">&#9670;&nbsp;</a></span>ziti_load_config()</h2>
+<a id="a3535865c037ebe4f8e3dc64f8dcd7773"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3535865c037ebe4f8e3dc64f8dcd7773">&#9670;&nbsp;</a></span>ziti_load_config()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2335,7 +2336,7 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>path</em>&#160;</td>
+          <td class="paramname"><em>conf_str</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2344,6 +2345,16 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Load ziti identity config from memory or file. </p>
+<p>First it tries to parse [conf_str] as identity Json. if that fails it tries to load it from file using [conf_str] as the path. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">config</td><td>target ziti_config object </td></tr>
+    <tr><td class="paramname">conf_str</td><td>identity config JSON or path to a file. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ZITI_OK on success or error code </dd></dl>
 
 </div>
 </div>

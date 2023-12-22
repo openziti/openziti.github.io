@@ -149,15 +149,15 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;<a class="code" href="zitilib_8h.html">ziti/zitilib.h</a>&gt;</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *identity_file = process_args(argc, argv);</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <a class="code" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a>();</div>
 <div class="line">    <a class="code" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx = <a class="code" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a>(identity_file);</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    ...</div>
-<div class="line">    </div>
-<div class="line">    </div>
+<div class="line"> </div>
+<div class="line"> </div>
 <div class="line">    <a class="code" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a>();</div>
 <div class="line">}</div>
 <div class="ttc" id="aziti_8h_html_a39669b224e62d165a45f8415a342a6b4"><div class="ttname"><a href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></div><div class="ttdeci">struct ziti_ctx * ziti_context</div><div class="ttdoc">Represents the Ziti Edge identity context.</div><div class="ttdef"><b>Definition:</b> ziti.h:66</div></div>
@@ -207,7 +207,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line"><span class="keywordflow">do</span> {</div>
 <div class="line">    <span class="keywordtype">char</span> caller[128];</div>
 <div class="line">    <a class="code" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> clt = <a class="code" href="zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39">Ziti_accept</a>(srv, caller, (<span class="keywordtype">int</span>)<span class="keyword">sizeof</span>(caller));</div>
-<div class="line">    </div>
+<div class="line"> </div>
 <div class="line">    <span class="comment">// use client as normal socket</span></div>
 <div class="line">    process_client(clt);</div>
 <div class="line"> </div>
@@ -220,7 +220,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Getting Help</h2>
 <hr  />
-<p> Please use these community resources for getting help. We use GitHub <a href="https://github.com/NetFoundry/ziti-sdk-c/issues">issues</a> for tracking bugs and feature requests and have limited bandwidth to address them.</p>
+<p> Please use these community resources for getting help. We use GitHub <a href="https://github.com/openziti/ziti-sdk-c/issues">issues</a> for tracking bugs and feature requests and have limited bandwidth to address them.</p>
 <ul>
 <li>Read <a href="https://docs.openziti.io/">the docs</a></li>
 <li>Ask a question on <a href="https://openziti.discourse.group/">Discourse</a></li>

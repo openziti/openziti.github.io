@@ -150,7 +150,7 @@ var searchData=
   ['ziti_5flisten_5fopts_495',['ziti_listen_opts',['../structziti__listen__opts.html',1,'']]],
   ['ziti_5flisten_5fopts_5fmodel_496',['ZITI_LISTEN_OPTS_MODEL',['../ziti__model_8h.html#a14f65d84542d9b9efdb841b9bcfd31e7',1,'ziti_model.h']]],
   ['ziti_5flisten_5fwith_5foptions_497',['ziti_listen_with_options',['../ziti_8h.html#a8c447db49310357727e92d635d6efd4e',1,'ziti.h']]],
-  ['ziti_5fload_5fconfig_498',['ziti_load_config',['../ziti_8h.html#add5bd1e38cc159e909df1d5e1fefff13',1,'ziti.h']]],
+  ['ziti_5fload_5fconfig_498',['ziti_load_config',['../ziti_8h.html#a3535865c037ebe4f8e3dc64f8dcd7773',1,'ziti.h']]],
   ['ziti_5fload_5fcontext_499',['Ziti_load_context',['../zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed',1,'zitilib.h']]],
   ['ziti_5flog_500',['ZITI_LOG',['../ziti__log_8h.html#ad238add2fd417b5fa99e3e26ca2e3368',1,'ziti_log.h']]],
   ['ziti_5flog_2eh_501',['ziti_log.h',['../ziti__log_8h.html',1,'']]],

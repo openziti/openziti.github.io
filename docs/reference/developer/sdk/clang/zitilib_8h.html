@@ -602,13 +602,14 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Load Ziti identity. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>First it tries to parse [identity] as identity Json. if that fails it tries to load it from file using [identity] as the path.</p>
+<p>returns NULL in case of failure. [<a class="el" href="zitilib_8h.html#a52be219ac8f75cb0f7b79ec2ec673097" title="return Ziti error code for last failed operation.">Ziti_last_error()</a>] will give specific error code. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">identity</td><td>location of identity configuration </td></tr>
+    <tr><td class="paramname">identity</td><td>identity config JSON or path to a file. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Ziti Context handle </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Ziti Context handle or NULL if it fails </dd></dl>
 
 </div>
 </div>
