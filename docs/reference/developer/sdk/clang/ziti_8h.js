@@ -84,7 +84,6 @@ var ziti_8h =
     [ "ziti_set_app_info", "ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a", null ],
     [ "ziti_set_client_cert", "ziti_8h.html#ae8b335fe3de0a1e15e8cb63e7c7f34d9", null ],
     [ "ziti_set_enabled", "ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b", null ],
-    [ "ziti_set_timeout", "ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80", null ],
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
     [ "ziti_verify_extend_cert_authenticator", "ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2", null ],
     [ "ziti_write", "ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69", null ]

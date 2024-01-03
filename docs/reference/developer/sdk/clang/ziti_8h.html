@@ -261,9 +261,6 @@ Functions</h2></td></tr>
 <tr class="memitem:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f">ziti_get_transfer_rates</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, double *up, double *down)</td></tr>
 <tr class="memdesc:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve current transfer rates.  <a href="ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f">More...</a><br /></td></tr>
 <tr class="separator:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaee3e452ae5ae850d150be9d75d1b80"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80">ziti_set_timeout</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int timeout)</td></tr>
-<tr class="memdesc:afaee3e452ae5ae850d150be9d75d1b80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets connect and write timeouts(in millis).  <a href="ziti_8h.html#afaee3e452ae5ae850d150be9d75d1b80">More...</a><br /></td></tr>
-<tr class="separator:afaee3e452ae5ae850d150be9d75d1b80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab306cc32d1f350206b97417f93f60abf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab306cc32d1f350206b97417f93f60abf">ziti_shutdown</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:ab306cc32d1f350206b97417f93f60abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>.  <a href="ziti_8h.html#ab306cc32d1f350206b97417f93f60abf">More...</a><br /></td></tr>
 <tr class="separator:ab306cc32d1f350206b97417f93f60abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2927,46 +2924,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="afaee3e452ae5ae850d150be9d75d1b80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaee3e452ae5ae850d150be9d75d1b80">&#9670;&nbsp;</a></span>ziti_set_timeout()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ziti_set_timeout </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
-          <td class="paramname"><em>ztx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>timeout</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets connect and write timeouts(in millis). </p>
-<p>The <a class="el" href="ziti_8h.html#a09b75586a74376352a25de37b835a74d" title="The default timeout in milliseconds for connections and write operations to succeed.">ZITI_DEFAULT_TIMEOUT</a> is used if this function is not invoked prior to initializing connections. This value is only referenced when initializing new connections via <a class="el" href="ziti_8h.html#ace1cf18567f46611faa449553041e6d5" title="Initializes a connection.">ziti_conn_init()</a>. Any connection initialized before this function will have the whatever timeout was set at the time of initialization.</p>
-<p>Note: There is no check to verify the timeout specified is not "too small". Setting this value to a very small value may lead to a large number of timeouts.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ztx</td><td>the Ziti Edge identity context to set a timeout on </td></tr>
-    <tr><td class="paramname">timeout</td><td>the value in milliseconds of the timeout (must be &gt; 0)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
