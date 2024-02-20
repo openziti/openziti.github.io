@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jsonifier_954',['jsonifier',['../structtype__meta.html#a58d4424fcd97516d944b17f6fe31f996',1,'type_meta']]],
-  ['jwt_955',['jwt',['../structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a',1,'ziti_enroll_opts']]],
-  ['jwt_5fcontent_956',['jwt_content',['../structziti__enroll__opts.html#ad955a4c626beee62768cbc8cb06a587a',1,'ziti_enroll_opts']]]
+  ['jsonifier_979',['jsonifier',['../structtype__meta.html#a58d4424fcd97516d944b17f6fe31f996',1,'type_meta']]],
+  ['jwt_980',['jwt',['../structziti__enroll__opts.html#a69ed75579e37e24a47ea4df0de70f23a',1,'ziti_enroll_opts']]],
+  ['jwt_5fcontent_981',['jwt_content',['../structziti__enroll__opts.html#ad955a4c626beee62768cbc8cb06a587a',1,'ziti_enroll_opts']]]
 ];
