@@ -10,5 +10,5 @@ var searchData=
   ['app_5fctx_948',['app_ctx',['../structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c',1,'ziti_options']]],
   ['app_5fdata_949',['app_data',['../structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0',1,'ziti_dial_opts::app_data()'],['../structziti__client__ctx.html#a58a65c3dbfbe2921ad3702ec4b70fa81',1,'ziti_client_ctx::app_data()']]],
   ['app_5fdata_5fsz_950',['app_data_sz',['../structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6',1,'ziti_dial_opts::app_data_sz()'],['../structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30',1,'ziti_client_ctx::app_data_sz()']]],
-  ['auth_5fquery_5fmfa_951',['auth_query_mfa',['../structziti__mfa__auth__event.html#ab3038a91f00e654a3a91efa043c6258e',1,'ziti_mfa_auth_event']]]
+  ['auth_5fquery_5fmfa_951',['auth_query_mfa',['../structziti__mfa__auth__event.html#aeb88b133dd0633e65764eeb5e4f41ebc',1,'ziti_mfa_auth_event']]]
 ];

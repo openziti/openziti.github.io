@@ -26,5 +26,5 @@ var searchData=
   ['app_5fdata_5fsz_31',['app_data_sz',['../structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30',1,'ziti_client_ctx::app_data_sz()'],['../structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6',1,'ziti_dial_opts::app_data_sz()']]],
   ['array_32',['array',['../model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c',1,'model_support.h']]],
   ['array_5fmod_33',['array_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa576f2092ed4c0726c3eb8516a3fa3832',1,'model_support.h']]],
-  ['auth_5fquery_5fmfa_34',['auth_query_mfa',['../structziti__mfa__auth__event.html#ab3038a91f00e654a3a91efa043c6258e',1,'ziti_mfa_auth_event']]]
+  ['auth_5fquery_5fmfa_34',['auth_query_mfa',['../structziti__mfa__auth__event.html#aeb88b133dd0633e65764eeb5e4f41ebc',1,'ziti_mfa_auth_event']]]
 ];
