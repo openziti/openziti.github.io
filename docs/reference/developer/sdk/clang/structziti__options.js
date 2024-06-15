@@ -12,6 +12,5 @@ var structziti__options =
     [ "pq_mac_cb", "structziti__options.html#a2609a65c9d392851c8daa0afbd5af27b", null ],
     [ "pq_os_cb", "structziti__options.html#a9358aaa33328fc02ac0bbb6798beb548", null ],
     [ "pq_process_cb", "structziti__options.html#ac5bdd9a653ef37aa21da2e592fbd1d48", null ],
-    [ "refresh_interval", "structziti__options.html#a19c21cc791a4b65d83bd66e9dc842679", null ],
-    [ "router_keepalive", "structziti__options.html#a2758927e14f5dcb22826f4fa6217fe2f", null ]
+    [ "refresh_interval", "structziti__options.html#a19c21cc791a4b65d83bd66e9dc842679", null ]
 ];

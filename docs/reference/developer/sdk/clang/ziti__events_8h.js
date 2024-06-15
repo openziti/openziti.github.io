@@ -1,6 +1,7 @@
 var ziti__events_8h =
 [
     [ "ziti_context_event", "structziti__context__event.html", "structziti__context__event" ],
+    [ "ctrl_detail_s", "structctrl__detail__s.html", "structctrl__detail__s" ],
     [ "ziti_api_event", "structziti__api__event.html", "structziti__api__event" ],
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
     [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],

@@ -97,7 +97,7 @@ $(document).ready(function(){initNavTree('structziti__event__t.html',''); initRe
 Data Fields</h2></td></tr>
 <tr class="memitem:a142aff254b19096ad684974574ad9d2f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93">ziti_event_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__event__t.html#a142aff254b19096ad684974574ad9d2f">type</a></td></tr>
 <tr class="separator:a142aff254b19096ad684974574ad9d2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37354c7bd4ebcf8f0523ca81973aea1"><td class="memItemLeft" >union {</td></tr>
+<tr class="memitem:a9399b020bba8303bb64c94cacd5fdca0"><td class="memItemLeft" >union {</td></tr>
 <tr class="memitem:a4e98d2b781d73d8d54e812805ec94e10"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structziti__context__event.html">ziti_context_event</a>&#160;&#160;&#160;<a class="el" href="structziti__event__t.html#ace35c9d343f56c4200c448a9ba748df6">ctx</a></td></tr>
 <tr class="separator:a4e98d2b781d73d8d54e812805ec94e10"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae87070890aa769fa63072c3a21857dee"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structziti__router__event.html">ziti_router_event</a>&#160;&#160;&#160;<a class="el" href="structziti__event__t.html#af85bf15e7ea42c21aa42c57deb281d2a">router</a></td></tr>
@@ -108,13 +108,27 @@ Data Fields</h2></td></tr>
 <tr class="separator:a4cd99222afc845eea49f481ff3964dc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89833dfe3ef1f419de3f80df4aadf068"><td class="memItemLeft" >&#160;&#160;&#160;struct <a class="el" href="structziti__api__event.html">ziti_api_event</a>&#160;&#160;&#160;<a class="el" href="structziti__event__t.html#a0c9890fd942635af2d2491766960f028">api</a></td></tr>
 <tr class="separator:a89833dfe3ef1f419de3f80df4aadf068"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37354c7bd4ebcf8f0523ca81973aea1"><td class="memItemLeft" valign="top">}&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__event__t.html#af37354c7bd4ebcf8f0523ca81973aea1">event</a></td></tr>
-<tr class="separator:af37354c7bd4ebcf8f0523ca81973aea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9399b020bba8303bb64c94cacd5fdca0"><td class="memItemLeft" valign="top">};&#160;</td><td class="memItemRight" valign="bottom"></td></tr>
+<tr class="separator:a9399b020bba8303bb64c94cacd5fdca0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Object passed to <code><a class="el" href="structziti__options.html#a894d032cee845c5caf83fcb263e8d84f" title="callback invoked is response to subscribed events.">ziti_options.event_cb</a></code>. </p>
 <dl class="section note"><dt>Note</dt><dd>event data becomes invalid as soon as callback returns. App must copy data if it's needed for further processing. </dd></dl>
 </div><h2 class="groupheader">Field Documentation</h2>
+<a id="a9399b020bba8303bb64c94cacd5fdca0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9399b020bba8303bb64c94cacd5fdca0">&#9670;&nbsp;</a></span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">union { ... } </td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0c9890fd942635af2d2491766960f028"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c9890fd942635af2d2491766960f028">&#9670;&nbsp;</a></span>api</h2>
 
@@ -137,20 +151,6 @@ Data Fields</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">struct <a class="el" href="structziti__context__event.html">ziti_context_event</a> ziti_event_t::ctx</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af37354c7bd4ebcf8f0523ca81973aea1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af37354c7bd4ebcf8f0523ca81973aea1">&#9670;&nbsp;</a></span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">union { ... }  ziti_event_t::event</td>
         </tr>
       </table>
 </div><div class="memdoc">

@@ -1,25 +1,4 @@
 var searchData=
 [
-  ['get_5fapi_5fpath_5fmeta_742',['get_api_path_meta',['../ziti__model_8h.html#a514cb53cec65721c4f5dc1e892318a94',1,'ziti_model.h']]],
-  ['get_5fbool_5fmeta_743',['get_bool_meta',['../model__support_8h.html#a952ac32907adf1466fd3f94788862bd8',1,'model_support.h']]],
-  ['get_5fduration_5fmeta_744',['get_duration_meta',['../model__support_8h.html#a93b4fd5e77eb6b794c7df9896d7cfe6f',1,'model_support.h']]],
-  ['get_5fint_5fmeta_745',['get_int_meta',['../model__support_8h.html#ae71c2e0f1e27df5d4b4010861c59363b',1,'model_support.h']]],
-  ['get_5fjson_5fmeta_746',['get_json_meta',['../model__support_8h.html#aa93a7751c8ca3183d7deb8a16ca377c6',1,'model_support.h']]],
-  ['get_5fmodel_5fmap_5fmeta_747',['get_model_map_meta',['../model__support_8h.html#a2f67d6a9a85a57d95585ee772538a971',1,'model_support.h']]],
-  ['get_5fstring_5fmeta_748',['get_string_meta',['../model__support_8h.html#ac850a87d339da93ad23bd30b0fbeec99',1,'model_support.h']]],
-  ['get_5ftag_5fmeta_749',['get_tag_meta',['../model__support_8h.html#ae954165a568762d346aae3c1601ed5e9',1,'model_support.h']]],
-  ['get_5ftimestamp_5fmeta_750',['get_timestamp_meta',['../model__support_8h.html#a5d646b27c0d94a9f0b9d78a4165f26de',1,'model_support.h']]],
-  ['get_5fziti_5faddress_5fmeta_751',['get_ziti_address_meta',['../ziti__model_8h.html#a4200ad38d3f2caedb596e7949f12928b',1,'ziti_model.h']]],
-  ['get_5fziti_5fclient_5fcfg_5fv1_5fmeta_752',['get_ziti_client_cfg_v1_meta',['../ziti__model_8h.html#a1a3dedf83c37773b9011944edbd0d75e',1,'ziti_model.h']]],
-  ['get_5fziti_5fconfig_5fmeta_753',['get_ziti_config_meta',['../ziti__model_8h.html#a84f2deac87648175fa716164aa299ee1',1,'ziti_model.h']]],
-  ['get_5fziti_5fhost_5fcfg_5fv2_5fmeta_754',['get_ziti_host_cfg_v2_meta',['../ziti__model_8h.html#afbfe969dfea5f2cf7fc17539d69e44a6',1,'ziti_model.h']]],
-  ['get_5fziti_5fintercept_5fcfg_5fv1_5fmeta_755',['get_ziti_intercept_cfg_v1_meta',['../ziti__model_8h.html#acec5561914705ebc868e2d917f061afa',1,'ziti_model.h']]],
-  ['get_5fziti_5fmfa_5fenrollment_5fmeta_756',['get_ziti_mfa_enrollment_meta',['../ziti__model_8h.html#ab6d48af6dc3b315bde6b2254fdf93c4f',1,'ziti_model.h']]],
-  ['get_5fziti_5fposture_5fquery_5fset_5fmeta_757',['get_ziti_posture_query_set_meta',['../ziti__model_8h.html#ae23574cea737a9e32162dd1b5659d12e',1,'ziti_model.h']]],
-  ['get_5fziti_5fprocess_5fmeta_758',['get_ziti_process_meta',['../ziti__model_8h.html#a6e6664472b9a9441a0a4b8a2c293e448',1,'ziti_model.h']]],
-  ['get_5fziti_5fprotocol_5fmeta_759',['get_ziti_protocol_meta',['../ziti__model_8h.html#aa7e9264f476b0527dc183d7df46a67b5',1,'ziti_model.h']]],
-  ['get_5fziti_5fproxy_5fserver_5fmeta_760',['get_ziti_proxy_server_meta',['../ziti__model_8h.html#a35af72c4dba54907c8f5527bd0dd6adf',1,'ziti_model.h']]],
-  ['get_5fziti_5fserver_5fcfg_5fv1_5fmeta_761',['get_ziti_server_cfg_v1_meta',['../ziti__model_8h.html#a4a68161ce823cf6e7e2175e85cf5f185',1,'ziti_model.h']]],
-  ['get_5fziti_5fsession_5ftype_5fmeta_762',['get_ziti_session_type_meta',['../ziti__model_8h.html#add7112ffb7d48ca58b39af592c5f7fda',1,'ziti_model.h']]],
-  ['get_5fziti_5fversion_5fmeta_763',['get_ziti_version_meta',['../ziti__model_8h.html#a722df70b2c0c1ebbb00c4e93a93191bf',1,'ziti_model.h']]]
+  ['json_5fenum_655',['json_enum',['../model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b',1,'model_support.h']]]
 ];

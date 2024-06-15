@@ -32,7 +32,6 @@ var NAVTREE =
       ] ],
       [ "Getting Help", "index.html#autotoc_md4", null ]
     ] ],
-    [ "Deprecated List", "deprecated.html", null ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -59,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structziti__context__event.html",
-"ziti__model_8h.html#a311286583ad49dff43585be7bc6fdd59"
+"structziti__address.html#a9be5e10aef4bc260aa1d5aa74602c813",
+"ziti__model_8h.html#a2c9840776f0e06bfe4404d8efb1bc94b"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
