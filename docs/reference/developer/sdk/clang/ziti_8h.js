@@ -8,7 +8,7 @@ var ziti_8h =
     [ "ZITI_CAN_BIND", "ziti_8h.html#a7ad10991d93ba9fbdd3724a7eb64fb76", null ],
     [ "ZITI_CAN_DIAL", "ziti_8h.html#a01d00c5d71bfb04e1ded0c3f182f5cc3", null ],
     [ "ZITI_DEFAULT_TIMEOUT", "ziti_8h.html#a09b75586a74376352a25de37b835a74d", null ],
-    [ "ziti_client_cb", "ziti_8h.html#a65a3568f4153563f9418626a59adefdb", null ],
+    [ "ziti_client_cb", "ziti_8h.html#a72507abe81d1e96791039a6ad8328fc8", null ],
     [ "ziti_close_cb", "ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8", null ],
     [ "ziti_conn_cb", "ziti_8h.html#a62bed54a2d7cf0c17958468ac98b57a4", null ],
     [ "ziti_connection", "ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef", null ],

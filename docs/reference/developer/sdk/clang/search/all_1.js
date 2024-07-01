@@ -10,7 +10,7 @@ var searchData=
   ['api_5fpath_15',['api_path',['../ziti__model_8h.html#a8fa5d4b5805d6fe1f6fa0bdf3da4449d',1,'ziti_model.h']]],
   ['api_5fpath_5farray_16',['api_path_array',['../ziti__model_8h.html#afa3a72f690f8a4155d170fce76d43264',1,'ziti_model.h']]],
   ['app_5fctx_17',['app_ctx',['../structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c',1,'ziti_options']]],
-  ['app_5fdata_18',['app_data',['../structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0',1,'ziti_dial_opts::app_data()'],['../structziti__client__ctx.html#a58a65c3dbfbe2921ad3702ec4b70fa81',1,'ziti_client_ctx::app_data()']]],
+  ['app_5fdata_18',['app_data',['../structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0',1,'ziti_dial_opts::app_data()'],['../structziti__client__ctx.html#a9121c39a1bd25a2684f2af1c60d91356',1,'ziti_client_ctx::app_data()']]],
   ['app_5fdata_5fsz_19',['app_data_sz',['../structziti__client__ctx.html#a14f1966d7c65e23b4eabca577a3f0b30',1,'ziti_client_ctx::app_data_sz()'],['../structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6',1,'ziti_dial_opts::app_data_sz()']]],
   ['array_20',['array',['../model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c',1,'model_support.h']]],
   ['array_5fmod_21',['array_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa576f2092ed4c0726c3eb8516a3fa3832',1,'model_support.h']]],
