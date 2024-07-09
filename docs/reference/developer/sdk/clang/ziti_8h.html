@@ -197,7 +197,7 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a7fba467dc1ea3a240881d0cf68d808b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic callback called after various MFA functions.  <a href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">More...</a><br /></td></tr>
 <tr class="separator:a7fba467dc1ea3a240881d0cf68d808b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb69600054289e2e32ec2b8ad081488e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, char **recovery_codes, void *ctx)</td></tr>
-<tr class="memdesc:adb69600054289e2e32ec2b8ad081488e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#a75117b939336a685888972f30b7fac0e" title="Attempts to retrieve the current recovery codes for the identity.">ziti_mfa_get_recovery_codes()</a> and <a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19" title="Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.">ziti_mfa_new_recovery_codes()</a>  <a href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">More...</a><br /></td></tr>
+<tr class="memdesc:adb69600054289e2e32ec2b8ad081488e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#aeed7c6ef6673a8e2f482f2f80c6f5cb6" title="Attempts to retrieve the current recovery codes for the identity.">ziti_mfa_get_recovery_codes()</a> and <a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19" title="Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.">ziti_mfa_new_recovery_codes()</a>  <a href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">More...</a><br /></td></tr>
 <tr class="separator:adb69600054289e2e32ec2b8ad081488e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13307e5da4fdcfee042871537b0bbf2e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a13307e5da4fdcfee042871537b0bbf2e">ziti_extend_cert_authenticator_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *cert_pem, int status, void *ctx)</td></tr>
 <tr class="memdesc:a13307e5da4fdcfee042871537b0bbf2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extend Certificate Authenticator Callback.  <a href="ziti_8h.html#a13307e5da4fdcfee042871537b0bbf2e">More...</a><br /></td></tr>
@@ -324,15 +324,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a25c187cbb0d3aaf9ae6e9df50c55ef3c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a25c187cbb0d3aaf9ae6e9df50c55ef3c">ziti_mfa_enroll</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti_8h.html#a7d61fdf16e3be123a6939c274b3780f7">ziti_mfa_enroll_cb</a> enroll_cb, void *ctx)</td></tr>
 <tr class="memdesc:a25c187cbb0d3aaf9ae6e9df50c55ef3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to initialize MFA enrollment.  <a href="ziti_8h.html#a25c187cbb0d3aaf9ae6e9df50c55ef3c">More...</a><br /></td></tr>
 <tr class="separator:a25c187cbb0d3aaf9ae6e9df50c55ef3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a3e13b34538c09cd9ea3d0d282eec7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a4a3e13b34538c09cd9ea3d0d282eec7e">ziti_mfa_remove</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a> remove_cb, void *ctx)</td></tr>
-<tr class="memdesc:a4a3e13b34538c09cd9ea3d0d282eec7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to remove MFA.  <a href="ziti_8h.html#a4a3e13b34538c09cd9ea3d0d282eec7e">More...</a><br /></td></tr>
-<tr class="separator:a4a3e13b34538c09cd9ea3d0d282eec7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b751b2d7ba7877242fb5e97da9a482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad1b751b2d7ba7877242fb5e97da9a482">ziti_mfa_remove</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *code, <a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a> remove_cb, void *ctx)</td></tr>
+<tr class="memdesc:ad1b751b2d7ba7877242fb5e97da9a482"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to remove MFA.  <a href="ziti_8h.html#ad1b751b2d7ba7877242fb5e97da9a482">More...</a><br /></td></tr>
+<tr class="separator:ad1b751b2d7ba7877242fb5e97da9a482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac25ffa02e49130a18a669099f3403395"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ac25ffa02e49130a18a669099f3403395">ziti_mfa_verify</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a> verify_cb, void *ctx)</td></tr>
 <tr class="memdesc:ac25ffa02e49130a18a669099f3403395"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to verify MFA enrollment.  <a href="ziti_8h.html#ac25ffa02e49130a18a669099f3403395">More...</a><br /></td></tr>
 <tr class="separator:ac25ffa02e49130a18a669099f3403395"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a75117b939336a685888972f30b7fac0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a75117b939336a685888972f30b7fac0e">ziti_mfa_get_recovery_codes</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a> get_cb, void *ctx)</td></tr>
-<tr class="memdesc:a75117b939336a685888972f30b7fac0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retrieve the current recovery codes for the identity.  <a href="ziti_8h.html#a75117b939336a685888972f30b7fac0e">More...</a><br /></td></tr>
-<tr class="separator:a75117b939336a685888972f30b7fac0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeed7c6ef6673a8e2f482f2f80c6f5cb6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aeed7c6ef6673a8e2f482f2f80c6f5cb6">ziti_mfa_get_recovery_codes</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *code, <a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a> get_cb, void *ctx)</td></tr>
+<tr class="memdesc:aeed7c6ef6673a8e2f482f2f80c6f5cb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to retrieve the current recovery codes for the identity.  <a href="ziti_8h.html#aeed7c6ef6673a8e2f482f2f80c6f5cb6">More...</a><br /></td></tr>
+<tr class="separator:aeed7c6ef6673a8e2f482f2f80c6f5cb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5964f15cd479345e9732c8a9adf1a19"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">ziti_mfa_new_recovery_codes</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, char *code, <a class="el" href="ziti_8h.html#adb69600054289e2e32ec2b8ad081488e">ziti_mfa_recovery_codes_cb</a> new_cb, void *ctx)</td></tr>
 <tr class="memdesc:af5964f15cd479345e9732c8a9adf1a19"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.  <a href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19">More...</a><br /></td></tr>
 <tr class="separator:af5964f15cd479345e9732c8a9adf1a19"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -696,7 +696,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback called after <a class="el" href="ziti_8h.html#a75117b939336a685888972f30b7fac0e" title="Attempts to retrieve the current recovery codes for the identity.">ziti_mfa_get_recovery_codes()</a> and <a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19" title="Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.">ziti_mfa_new_recovery_codes()</a> </p>
+<p>Callback called after <a class="el" href="ziti_8h.html#aeed7c6ef6673a8e2f482f2f80c6f5cb6" title="Attempts to retrieve the current recovery codes for the identity.">ziti_mfa_get_recovery_codes()</a> and <a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19" title="Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.">ziti_mfa_new_recovery_codes()</a> </p>
 <p>This function is invoked after a call to get or regenerate mfa recovery codes.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -2344,8 +2344,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a75117b939336a685888972f30b7fac0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a75117b939336a685888972f30b7fac0e">&#9670;&nbsp;</a></span>ziti_mfa_get_recovery_codes()</h2>
+<a id="aeed7c6ef6673a8e2f482f2f80c6f5cb6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeed7c6ef6673a8e2f482f2f80c6f5cb6">&#9670;&nbsp;</a></span>ziti_mfa_get_recovery_codes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2359,7 +2359,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>code</em>, </td>
         </tr>
         <tr>
@@ -2450,8 +2450,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4a3e13b34538c09cd9ea3d0d282eec7e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4a3e13b34538c09cd9ea3d0d282eec7e">&#9670;&nbsp;</a></span>ziti_mfa_remove()</h2>
+<a id="ad1b751b2d7ba7877242fb5e97da9a482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b751b2d7ba7877242fb5e97da9a482">&#9670;&nbsp;</a></span>ziti_mfa_remove()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2465,7 +2465,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *&#160;</td>
+          <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>code</em>, </td>
         </tr>
         <tr>
