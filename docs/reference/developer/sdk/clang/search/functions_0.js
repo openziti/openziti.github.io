@@ -1,10 +1,15 @@
 var searchData=
 [
-  ['ddddddddddddeclare_5fmodel_613',['DDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#af25d70c8d5d0cb11f976e47ae3d868e8',1,'DDDDDDDDDDDDECLARE_MODEL(ziti_id_cfg, ZITI_ID_CFG_MODEL) typedef struct ziti_config_s:&#160;ziti_model.h'],['../ziti__model_8h.html#a9c75820b30f868625b89efc4cde93c85',1,'DDDDDDDDDDDDECLARE_MODEL(ziti_listen_options, ZITI_LISTEN_OPTS_MODEL) typedef struct ziti_server_cfg_v1_s:&#160;ziti_model.h']]],
-  ['ddddddddddeclare_5fmodel_614',['DDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a4b989ac36b4f05e2734d80b05a8e9c0b',1,'DDDDDDDDDDECLARE_MODEL(ziti_identity, ZITI_IDENTITY_MODEL) typedef struct ziti_process_s:&#160;ziti_model.h'],['../ziti__model_8h.html#acbe0ede459c7b821f7238c4aa20ea01a',1,'DDDDDDDDDDECLARE_MODEL(ziti_service, ZITI_SERVICE_MODEL) typedef struct ziti_client_cfg_v1_s:&#160;ziti_model.h']]],
-  ['ddddddddeclare_5fenum_615',['DDDDDDDDECLARE_ENUM',['../ziti__model_8h.html#a7ca5bd0b0cee85dbaa474286f4d10018',1,'ziti_model.h']]],
-  ['dddddddeclare_5fenum_616',['DDDDDDDECLARE_ENUM',['../ziti__model_8h.html#acd9fb1095c2b989c57823071d05f0b7c',1,'ziti_model.h']]],
-  ['ddddddeclare_5fmodel_617',['DDDDDDECLARE_MODEL',['../ziti__model_8h.html#a3b7e450e8a7517e2b9e8dd0d9ea13acf',1,'DDDDDDECLARE_MODEL(ziti_port_range, ZITI_PORT_RANGE_MODEL) typedef struct ziti_intercept_cfg_v1_s:&#160;ziti_model.h'],['../ziti__model_8h.html#a6c63a9b5448495335fc9afdf283ae453',1,'DDDDDDECLARE_MODEL(ziti_host_cfg_v1, ZITI_HOST_CFG_V1_MODEL) typedef struct ziti_host_cfg_v2_s:&#160;ziti_model.h']]],
-  ['ddddeclare_5fmodel_618',['DDDDECLARE_MODEL',['../ziti__model_8h.html#a3b01c8a5f62519bd16d246da6356b25b',1,'DDDDECLARE_MODEL(ziti_api_versions, ZITI_API_VERSIONS_MODEL) typedef struct ziti_version_s:&#160;ziti_model.h'],['../ziti__model_8h.html#a006be39b0da72a9c991bff7714366591',1,'DDDDECLARE_MODEL(ziti_posture_query, ZITI_POSTURE_QUERY_MODEL) typedef struct ziti_posture_query_set_s:&#160;ziti_model.h'],['../ziti__model_8h.html#abe04cca9349934d7626d74acb3bb0e26',1,'DDDDECLARE_MODEL(ziti_auth_query_mfa, ZITI_AUTH_QUERY_MFA_MODEL) typedef struct ziti_mfa_enrollment_s:&#160;ziti_model.h']]],
-  ['delete_5fstring_5fbuf_619',['delete_string_buf',['../ziti__buffer_8h.html#a7ab0eaad1513ee61d37f4f736919a6af',1,'ziti_buffer.h']]]
+  ['ddddddddddddddddddddddddddeclare_5fmodel_627',['DDDDDDDDDDDDDDDDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a74a45f370e3ddb36dc6c8e4da2bc2b57',1,'ziti_model.h']]],
+  ['ddddddddddddddddddddeclare_5fmodel_628',['DDDDDDDDDDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a59bfe96ba7244b11431f64e13d1e6605',1,'ziti_model.h']]],
+  ['ddddddddddddddddddeclare_5fmodel_629',['DDDDDDDDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a248434a294d31c6171324978ff880717',1,'ziti_model.h']]],
+  ['ddddddddddddddddeclare_5fmodel_630',['DDDDDDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a43787777994dfd8c35395bf57f8adb24',1,'DDDDDDDDDDDDDDDDECLARE_MODEL(ziti_server_cfg_v1, ZITI_SERVER_CFG_V1_MODEL) enum ziti_proxy_server_type:&#160;ziti_model.h'],['../ziti__model_8h.html#a1954ad48fc86257fd9cd171d77fd86cc',1,'DDDDDDDDDDDDDDDDECLARE_MODEL(ziti_mfa_enrollment, ZITI_MFA_ENROLLMENT_MODEL) bool ziti_service_has_permission(const ziti_service *service:&#160;ziti_model.h']]],
+  ['ddddddddddddeclare_5fmodel_631',['DDDDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a51bf98e7dbb2310b5726570631bcff75',1,'ziti_model.h']]],
+  ['ddddddddddeclare_5fmodel_632',['DDDDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#ab169206a8ca83bb42ed28a052d26f582',1,'ziti_model.h']]],
+  ['ddddddddeclare_5fmodel_633',['DDDDDDDDECLARE_MODEL',['../ziti__model_8h.html#a606b0dee23f9b6951b4e8a5026bb6c2f',1,'ziti_model.h']]],
+  ['dddddddeclare_5fenum_634',['DDDDDDDECLARE_ENUM',['../ziti__model_8h.html#acd9fb1095c2b989c57823071d05f0b7c',1,'ziti_model.h']]],
+  ['ddddddeclare_5fmodel_635',['DDDDDDECLARE_MODEL',['../ziti__model_8h.html#a24fe969432d5758467d1c6fa0313d3f7',1,'ziti_model.h']]],
+  ['dddddeclare_5fmodel_636',['DDDDDECLARE_MODEL',['../ziti__model_8h.html#a53c2943df39fde6707cb6fc2393bb4cd',1,'ziti_model.h']]],
+  ['ddddeclare_5fmodel_637',['DDDDECLARE_MODEL',['../ziti__model_8h.html#a3b01c8a5f62519bd16d246da6356b25b',1,'ziti_model.h']]],
+  ['delete_5fstring_5fbuf_638',['delete_string_buf',['../ziti__buffer_8h.html#a7ab0eaad1513ee61d37f4f736919a6af',1,'ziti_buffer.h']]]
 ];

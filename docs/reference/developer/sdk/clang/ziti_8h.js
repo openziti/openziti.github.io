@@ -58,6 +58,8 @@ var ziti_8h =
     [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
     [ "ziti_endpoint_state_change", "ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84", null ],
     [ "ziti_enroll", "ziti_8h.html#a86a73cb294bab0c38a0b00497f547845", null ],
+    [ "ziti_ext_auth", "ziti_8h.html#a8c6e5f1a8f3a27f83e5afcadf80f6ebe", null ],
+    [ "ziti_ext_auth_token", "ziti_8h.html#a0c11f43c052355e78243498b930eafd5", null ],
     [ "ziti_extend_cert_authenticator", "ziti_8h.html#a04a25125e41b9717e5148dc8504889e8", null ],
     [ "ziti_get_appdata", "ziti_8h.html#abd895b2375239f5418cdd08b58e1d329", null ],
     [ "ziti_get_appdata_raw", "ziti_8h.html#a7c7985fefa0641d1597645f2aefeae60", null ],

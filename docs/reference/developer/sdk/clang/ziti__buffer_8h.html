@@ -115,6 +115,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aaa3cb7c7a4bc31aeb779c845defe24d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__buffer_8h.html#aaa3cb7c7a4bc31aeb779c845defe24d6">string_buf_append</a> (<a class="el" href="ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61">string_buf_t</a> *wb, const char *str)</td></tr>
 <tr class="memdesc:aaa3cb7c7a4bc31aeb779c845defe24d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append <code>\0</code> terminated string to the buffer.  <a href="ziti__buffer_8h.html#aaa3cb7c7a4bc31aeb779c845defe24d6">More...</a><br /></td></tr>
 <tr class="separator:aaa3cb7c7a4bc31aeb779c845defe24d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ad4b8ddef10731da5647f6e60f3a198"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__buffer_8h.html#a6ad4b8ddef10731da5647f6e60f3a198">string_buf_append_urlsafe</a> (<a class="el" href="ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61">string_buf_t</a> *wb, const char *str)</td></tr>
+<tr class="memdesc:a6ad4b8ddef10731da5647f6e60f3a198"><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends [str] to [wb] converting to urlsafe encoding.  <a href="ziti__buffer_8h.html#a6ad4b8ddef10731da5647f6e60f3a198">More...</a><br /></td></tr>
+<tr class="separator:a6ad4b8ddef10731da5647f6e60f3a198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36fe074d40f452f5648421346ba831dc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__buffer_8h.html#a36fe074d40f452f5648421346ba831dc">string_buf_appendn</a> (<a class="el" href="ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61">string_buf_t</a> *wb, const char *str, size_t len)</td></tr>
 <tr class="memdesc:a36fe074d40f452f5648421346ba831dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append <code>len</code> bytes from <code>str</code> to the string buffer.  <a href="ziti__buffer_8h.html#a36fe074d40f452f5648421346ba831dc">More...</a><br /></td></tr>
 <tr class="separator:a36fe074d40f452f5648421346ba831dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -307,6 +310,36 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>0 on success, -1 if <code>wb</code> is a fixed buffer and appending would go over its limit. </dd></dl>
+
+</div>
+</div>
+<a id="a6ad4b8ddef10731da5647f6e60f3a198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ad4b8ddef10731da5647f6e60f3a198">&#9670;&nbsp;</a></span>string_buf_append_urlsafe()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int string_buf_append_urlsafe </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61">string_buf_t</a> *&#160;</td>
+          <td class="paramname"><em>wb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>str</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Appends [str] to [wb] converting to urlsafe encoding. </p>
 
 </div>
 </div>
