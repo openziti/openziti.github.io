@@ -75,7 +75,7 @@ var searchData=
   ['ziti_5fdisabled_410',['ZITI_DISABLED',['../errors_8h.html#a92f924ae16f3fb80e9090164489bdf72',1,'errors.h']]],
   ['ziti_5fdump_411',['ziti_dump',['../ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49',1,'ziti.h']]],
   ['ziti_5fendpoint_5fstate_5fchange_412',['ziti_endpoint_state_change',['../ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84',1,'ziti.h']]],
-  ['ziti_5fenroll_413',['ziti_enroll',['../ziti_8h.html#a86a73cb294bab0c38a0b00497f547845',1,'ziti.h']]],
+  ['ziti_5fenroll_413',['ziti_enroll',['../ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005',1,'ziti.h']]],
   ['ziti_5fenroll_5fcb_414',['ziti_enroll_cb',['../ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26',1,'ziti.h']]],
   ['ziti_5fenroll_5fidentity_415',['Ziti_enroll_identity',['../zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd',1,'zitilib.h']]],
   ['ziti_5fenroll_5fopts_416',['ziti_enroll_opts',['../structziti__enroll__opts.html',1,'']]],

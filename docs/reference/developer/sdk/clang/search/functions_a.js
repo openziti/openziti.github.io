@@ -32,7 +32,7 @@ var searchData=
   ['ziti_5fdial_5fwith_5foptions_799',['ziti_dial_with_options',['../ziti_8h.html#a58feeb934eed99516161d9a61261defa',1,'ziti.h']]],
   ['ziti_5fdump_800',['ziti_dump',['../ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49',1,'ziti.h']]],
   ['ziti_5fendpoint_5fstate_5fchange_801',['ziti_endpoint_state_change',['../ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84',1,'ziti.h']]],
-  ['ziti_5fenroll_802',['ziti_enroll',['../ziti_8h.html#a86a73cb294bab0c38a0b00497f547845',1,'ziti.h']]],
+  ['ziti_5fenroll_802',['ziti_enroll',['../ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005',1,'ziti.h']]],
   ['ziti_5fenroll_5fidentity_803',['Ziti_enroll_identity',['../zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd',1,'zitilib.h']]],
   ['ziti_5ferrorstr_804',['ziti_errorstr',['../errors_8h.html#a2182f9078122799ec98a7c1f17094191',1,'errors.h']]],
   ['ziti_5fext_5fauth_805',['ziti_ext_auth',['../ziti_8h.html#a8c6e5f1a8f3a27f83e5afcadf80f6ebe',1,'ziti.h']]],
