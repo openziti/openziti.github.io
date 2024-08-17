@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['model_5flist_5fiter_963',['model_list_iter',['../model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c',1,'model_collections.h']]],
-  ['model_5fmap_5fiter_964',['model_map_iter',['../model__collections_8h.html#a7037b87ab62417854014f25eeb714086',1,'model_collections.h']]]
+  ['string_5fbuf_5ft_972',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]]
 ];

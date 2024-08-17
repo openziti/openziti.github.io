@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['log_5fwriter_962',['log_writer',['../ziti__log_8h.html#abb8eb89b150e6f07672378105cf1324d',1,'ziti_log.h']]]
+  ['parse_5fservice_5fcfg_5ff_971',['parse_service_cfg_f',['../ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b',1,'ziti_model.h']]]
 ];
