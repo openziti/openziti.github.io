@@ -149,7 +149,7 @@ var ziti__model_8h =
     [ "ziti_address_match", "ziti__model_8h.html#aa697b81d27396da9ba5820e9cf00d97d", null ],
     [ "ziti_address_match_array", "ziti__model_8h.html#af578f6040feef81a285efdc42f6ed91b", null ],
     [ "ziti_address_match_list", "ziti__model_8h.html#a5078db31bf0e462e6b00851dabe653af", null ],
-    [ "ziti_address_match_s", "ziti__model_8h.html#a5644a8dfac0844328b8ba97de2ad7349", null ],
+    [ "ziti_address_match_s", "ziti__model_8h.html#a40bf388d9e2305292e4914a144bafeb6", null ],
     [ "ziti_address_print", "ziti__model_8h.html#a3f2e0f70ff82fffff277269b2f3079f3", null ],
     [ "ziti_addrstr_match_list", "ziti__model_8h.html#ae36c1ea8ab2d08905e3618344ac4d106", null ],
     [ "ziti_intercept_from_client_cfg", "ziti__model_8h.html#ab2c31500bcd5639a818600e3e9b36881", null ],

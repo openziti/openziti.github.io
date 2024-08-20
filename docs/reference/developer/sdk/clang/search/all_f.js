@@ -54,7 +54,7 @@ var searchData=
   ['precedence_5fdefault_288',['PRECEDENCE_DEFAULT',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e',1,'ziti.h']]],
   ['precedence_5ffailed_289',['PRECEDENCE_FAILED',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395',1,'ziti.h']]],
   ['precedence_5frequired_290',['PRECEDENCE_REQUIRED',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988',1,'ziti.h']]],
-  ['providers_291',['providers',['../structziti__auth__event.html#af87d5f9fa58ce1c7064d12e65338a51c',1,'ziti_auth_event']]],
+  ['providers_291',['providers',['../structziti__auth__event.html#aa30c488788e3aed576d82b57f5210cb8',1,'ziti_auth_event']]],
   ['ptr_292',['ptr',['../model__support_8h.html#a71854bec883f6da99f2f20ae3516d540',1,'model_support.h']]],
   ['ptr_5fmod_293',['ptr_mod',['../model__support_8h.html#a52b55f93ba3927e6d3111c6057b070aaa8bbbe230f88eca0f864aa639d50f2400',1,'model_support.h']]]
 ];

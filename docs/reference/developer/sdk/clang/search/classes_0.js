@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ctrl_5fdetail_5fs_594',['ctrl_detail_s',['../structctrl__detail__s.html',1,'']]]
+  ['ctrl_5fdetail_5fs_595',['ctrl_detail_s',['../structctrl__detail__s.html',1,'']]]
 ];
