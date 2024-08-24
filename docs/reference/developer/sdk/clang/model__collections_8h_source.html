@@ -153,15 +153,15 @@ $(document).ready(function(){initNavTree('model__collections_8h_source.html','')
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a0efd9594246788348beeb6d3cd5e8a2e">   67</a></span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <a class="code" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> <a class="code" href="model__collections_8h.html#a0efd9594246788348beeb6d3cd5e8a2e">model_map_it_remove</a>(<a class="code" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a9152d0581d1360bfac0757eebb444f7c">   69</a></span>&#160;<span class="preprocessor">#define var(x, y) x##y</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a16964b64c051836f7e2c3fbb8583fecd">   71</a></span>&#160;<span class="preprocessor">#define MODEL_MAP_FOREACH_l(k, v, map, line) \</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="preprocessor">model_map_iter var(e, line);\</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">for (var(e,line) = model_map_iterator(map), k = model_map_it_key(var(e,line)), v = model_map_it_value(var(e,line)); \</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">     var(e,line) != NULL; \</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">     var(e,line) = model_map_it_next(var(e,line)), k = model_map_it_key(var(e,line)), v = model_map_it_value(var(e,line)))</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0">   77</a></span>&#160;<span class="preprocessor">#define MODEL_MAP_FOREACH(k, v, map) MODEL_MAP_FOREACH_l(k, v, map, __LINE__)</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">   69</a></span>&#160;<span class="preprocessor">#define line_var(v) var(v,__LINE__)</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a9152d0581d1360bfac0757eebb444f7c">   70</a></span>&#160;<span class="preprocessor">#define var(x, y) _var(x,y)</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a13949168a4f299288d35dddc9c9fa4b2">   71</a></span>&#160;<span class="preprocessor">#define _var(x,y) x ## y</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0">   73</a></span>&#160;<span class="preprocessor">#define MODEL_MAP_FOREACH(k, v, map) \</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">model_map_iter line_var(e);\</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">for (line_var(e) = model_map_iterator(map), (k) = model_map_it_key(line_var(e)), (v) = model_map_it_value(line_var(e)); \</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">     line_var(e) != NULL; \</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">     line_var(e) = model_map_it_next(line_var(e)), (k) = model_map_it_key(line_var(e)), (v) = model_map_it_value(line_var(e)))</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="model__collections_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c">   79</a></span>&#160;<span class="preprocessor">#define MODEL_MAP_FOR(it, m) for(model_map_iter it = model_map_iterator(&amp;(m)); (it) != NULL; (it) = model_map_it_next(it))</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
@@ -197,20 +197,17 @@ $(document).ready(function(){initNavTree('model__collections_8h_source.html','')
 <div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="model__collections_8h.html#adca432bf002e29515b7aefa1b4301f4d">  110</a></span>&#160;<span class="preprocessor">#define MODEL_LIST_FOR(it, m) for(model_list_iter it = model_list_iterator(&amp;(m)); (it) != NULL; (it) = model_list_it_next(it))</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="model__collections_8h.html#af3176a710285640b1254ab533f900706">  113</a></span>&#160;<span class="preprocessor">#define MODEL_LIST_FOREACH_l(el, list, line) \</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">model_list_iter var(it,line);    \</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">for(var(it,line) = model_list_iterator((model_list*)&amp;(list)); \</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">var(it,line) != NULL &amp;&amp; ((el) = model_list_it_element(var(it,line)), true);                                 \</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">var(it,line) = model_list_it_next(var(it,line)))</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a640a46e208b9b32218a8ba2cbc311303">  113</a></span>&#160;<span class="preprocessor">#define MODEL_LIST_FOREACH(el, list) \</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">model_list_iter line_var(it);    \</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">for(line_var(it) = model_list_iterator((model_list*)&amp;(list)); \</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="preprocessor">line_var(it) != NULL &amp;&amp; ((el) = model_list_it_element(line_var(it)), true);                                 \</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">line_var(it) = model_list_it_next(line_var(it)))</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="model__collections_8h.html#a640a46e208b9b32218a8ba2cbc311303">  119</a></span>&#160;<span class="preprocessor">#define MODEL_LIST_FOREACH(el, list) MODEL_LIST_FOREACH_l(el, list, __LINE__)</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;}</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZITI_SDK_MODEL_COLLECTIONS_H</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#ifdef __cplusplus</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;}</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZITI_SDK_MODEL_COLLECTIONS_H</span></div>
 <div class="ttc" id="aexterns_8h_html"><div class="ttname"><a href="externs_8h.html">externs.h</a></div></div>
 <div class="ttc" id="aexterns_8h_html_a71e7a08e9b0fa6e62cba0738fd1d46d3"><div class="ttname"><a href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div><div class="ttdeci">#define ZITI_FUNC</div><div class="ttdef"><b>Definition:</b> externs.h:38</div></div>
 <div class="ttc" id="amodel__collections_8h_html_a0a845f813a5015d19de89e5b2b14678e"><div class="ttname"><a href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a></div><div class="ttdeci">void * model_map_it_value(model_map_iter it)</div></div>

@@ -59,7 +59,6 @@ var model__support_8h =
     [ "get_duration_meta", "model__support_8h.html#a6ad284d7f16f1c64933201838117e708", null ],
     [ "get_json_meta", "model__support_8h.html#a1b7aece9023c4a6fb4f3a44826b20da7", null ],
     [ "get_model_bool_meta", "model__support_8h.html#afe13de291afccd16d70acafa58cc7b70", null ],
-    [ "get_model_map_meta", "model__support_8h.html#a2f927a1a950f5d958df6483c14395985", null ],
     [ "get_model_number_meta", "model__support_8h.html#a142e67f99cc642ac8e51befd12141286", null ],
     [ "get_model_string_meta", "model__support_8h.html#a3cbb2baa9bd40ccbbdaa8ebffeebc3de", null ],
     [ "get_tag_meta", "model__support_8h.html#ad7d488d8fcf018639d8b0e0c7eeb4643", null ],
