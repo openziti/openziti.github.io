@@ -35,8 +35,8 @@ var model__collections_8h =
     [ "model_map_remove", "model__collections_8h.html#ac25e8d75453a92279cd57e42be958d82", null ],
     [ "model_map_remove_key", "model__collections_8h.html#a4e64774fa58df4ed93058d79c8d23862", null ],
     [ "model_map_removel", "model__collections_8h.html#a511c0d5dd70071cac03d9313b8265aa5", null ],
-    [ "model_map_set", "model__collections_8h.html#a77dc1d386f629b4faba94e36d4dc1b5d", null ],
-    [ "model_map_set_key", "model__collections_8h.html#a233ca9699c097939a4f12f462060daa8", null ],
-    [ "model_map_setl", "model__collections_8h.html#aa5af94bb91916ca81b2b918e1f21fb47", null ],
+    [ "model_map_set", "model__collections_8h.html#ad817b1036a9ebdf9be466120b56f8a08", null ],
+    [ "model_map_set_key", "model__collections_8h.html#aed82ee00fab534d570e209d43089fc6a", null ],
+    [ "model_map_setl", "model__collections_8h.html#a7afbf10e2f2dc24cc38afe3bde0fc804", null ],
     [ "model_map_size", "model__collections_8h.html#a3eeac54916234a260cfddc0aa23804be", null ]
 ];

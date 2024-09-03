@@ -2,7 +2,6 @@ var structziti__options =
 [
     [ "api_page_size", "structziti__options.html#a171eca3877dbb78d19114c6819c33411", null ],
     [ "app_ctx", "structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c", null ],
-    [ "config", "structziti__options.html#ae1caa81b77887af51189c6edadbfefab", null ],
     [ "config_types", "structziti__options.html#a66a00043c7c2fcdda4a2b430bf5d8205", null ],
     [ "disabled", "structziti__options.html#a5da22b3a1fb640d61217b998c6f14904", null ],
     [ "event_cb", "structziti__options.html#a894d032cee845c5caf83fcb263e8d84f", null ],

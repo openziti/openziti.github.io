@@ -10,6 +10,7 @@ var ziti__events_8h =
     [ "ziti_auth_action", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7", [
       [ "ziti_auth_prompt_totp", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7ab5d9b69fb3f55902d29715e43b500a0e", null ],
       [ "ziti_auth_prompt_pin", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a1b01380d4084a3bbb2712540a7dce841", null ],
+      [ "ziti_auth_select_external", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a70780dee7ac8e39665fb6b3e2abc0b6c", null ],
       [ "ziti_auth_login_external", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7acdfc02d8fc9934a4e0fc21d27c6dfd0d", null ]
     ] ],
     [ "ziti_event_type", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93", [
