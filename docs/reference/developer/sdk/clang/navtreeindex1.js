@@ -24,6 +24,7 @@ var NAVTREEINDEX1 =
 "structziti__dial__opts.html":[1,0,11],
 "structziti__dial__opts.html#a3375d68ce29e4fe4efb2be8553aeead0":[1,0,11,0],
 "structziti__dial__opts.html#a4880a06f362f339aeb668ca23fdffbe6":[1,0,11,1],
+"structziti__dial__opts.html#ab7ef8b383118b5c66997c83db2abedf9":[1,0,11,4],
 "structziti__dial__opts.html#abc09fa55de6ed596087e229df94ecdc7":[1,0,11,3],
 "structziti__dial__opts.html#aca21d0be5b5eefc7cd95f4112aa6a2b3":[1,0,11,2],
 "structziti__enroll__opts.html":[1,0,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "ziti__model_8h.html#a010df9b0c146b0209631bcba6576176a":[2,0,0,10,116],
 "ziti__model_8h.html#a04218d15647610c9e772e49baa403083":[2,0,0,10,113],
 "ziti__model_8h.html#a056bef21937d3cba1ab93c4ecf3795c4":[2,0,0,10,30],
-"ziti__model_8h.html#a06b290210e4b5070ee9c9bdbe27b7bab":[2,0,0,10,67],
-"ziti__model_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4":[2,0,0,10,4]
+"ziti__model_8h.html#a06b290210e4b5070ee9c9bdbe27b7bab":[2,0,0,10,67]
 };
