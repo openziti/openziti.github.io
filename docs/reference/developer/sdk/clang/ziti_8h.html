@@ -288,9 +288,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a62ca5b4f622786fe0fd6f867544e6bef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef">ziti_conn_set_data</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, void *data)</td></tr>
 <tr class="memdesc:a62ca5b4f622786fe0fd6f867544e6bef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set or clear custom data associated with the given <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a>.  <a href="ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef">More...</a><br /></td></tr>
 <tr class="separator:a62ca5b4f622786fe0fd6f867544e6bef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd4a676f9afffc9d9dd4b3d52fdf868a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acd4a676f9afffc9d9dd4b3d52fdf868a">ziti_conn_set_data_cb</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, <a class="el" href="ziti_8h.html#a9aff26bd4513034132acab86448c3e1b">ziti_data_cb</a> cb)</td></tr>
-<tr class="memdesc:acd4a676f9afffc9d9dd4b3d52fdf868a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new data callback on ziti connection.  <a href="ziti_8h.html#acd4a676f9afffc9d9dd4b3d52fdf868a">More...</a><br /></td></tr>
-<tr class="separator:acd4a676f9afffc9d9dd4b3d52fdf868a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c4dfc9ef816382d53320ff78b482b4b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7c4dfc9ef816382d53320ff78b482b4b">ziti_conn_set_data_cb</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, <a class="el" href="ziti_8h.html#a9aff26bd4513034132acab86448c3e1b">ziti_data_cb</a> cb)</td></tr>
+<tr class="memdesc:a7c4dfc9ef816382d53320ff78b482b4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set new data callback on ziti connection.  <a href="ziti_8h.html#a7c4dfc9ef816382d53320ff78b482b4b">More...</a><br /></td></tr>
+<tr class="separator:a7c4dfc9ef816382d53320ff78b482b4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac622ac86432d4431976aee7a2d606add"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ac622ac86432d4431976aee7a2d606add">ziti_conn_source_identity</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:ac622ac86432d4431976aee7a2d606add"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the identity of the client that initiated the <a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef" title="Represents a Ziti connection.">ziti_connection</a>.  <a href="ziti_8h.html#ac622ac86432d4431976aee7a2d606add">More...</a><br /></td></tr>
 <tr class="separator:ac622ac86432d4431976aee7a2d606add"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1449,14 +1449,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="acd4a676f9afffc9d9dd4b3d52fdf868a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd4a676f9afffc9d9dd4b3d52fdf868a">&#9670;&nbsp;</a></span>ziti_conn_set_data_cb()</h2>
+<a id="a7c4dfc9ef816382d53320ff78b482b4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c4dfc9ef816382d53320ff78b482b4b">&#9670;&nbsp;</a></span>ziti_conn_set_data_cb()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ziti_conn_set_data_cb </td>
+          <td class="memname">int ziti_conn_set_data_cb </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a>&#160;</td>
           <td class="paramname"><em>conn</em>, </td>
@@ -1484,6 +1484,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>ZITI_OK or error code </dd></dl>
 
 </div>
 </div>

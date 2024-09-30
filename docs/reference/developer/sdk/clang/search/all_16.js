@@ -52,7 +52,7 @@ var searchData=
   ['ziti_5fconn_5fdata_388',['ziti_conn_data',['../ziti_8h.html#a17ec27c78a3dda9097fff4c374c1b29f',1,'ziti.h']]],
   ['ziti_5fconn_5finit_389',['ziti_conn_init',['../ziti_8h.html#ace1cf18567f46611faa449553041e6d5',1,'ziti.h']]],
   ['ziti_5fconn_5fset_5fdata_390',['ziti_conn_set_data',['../ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef',1,'ziti.h']]],
-  ['ziti_5fconn_5fset_5fdata_5fcb_391',['ziti_conn_set_data_cb',['../ziti_8h.html#acd4a676f9afffc9d9dd4b3d52fdf868a',1,'ziti.h']]],
+  ['ziti_5fconn_5fset_5fdata_5fcb_391',['ziti_conn_set_data_cb',['../ziti_8h.html#a7c4dfc9ef816382d53320ff78b482b4b',1,'ziti.h']]],
   ['ziti_5fconn_5fsource_5fidentity_392',['ziti_conn_source_identity',['../ziti_8h.html#ac622ac86432d4431976aee7a2d606add',1,'ziti.h']]],
   ['ziti_5fconnabort_393',['ZITI_CONNABORT',['../errors_8h.html#a9ae78eeb9520342dc1f8bd599acada0c',1,'errors.h']]],
   ['ziti_5fconnect_394',['Ziti_connect',['../zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74',1,'zitilib.h']]],

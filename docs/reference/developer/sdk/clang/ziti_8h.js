@@ -49,7 +49,7 @@ var ziti_8h =
     [ "ziti_conn_data", "ziti_8h.html#a17ec27c78a3dda9097fff4c374c1b29f", null ],
     [ "ziti_conn_init", "ziti_8h.html#ace1cf18567f46611faa449553041e6d5", null ],
     [ "ziti_conn_set_data", "ziti_8h.html#a62ca5b4f622786fe0fd6f867544e6bef", null ],
-    [ "ziti_conn_set_data_cb", "ziti_8h.html#acd4a676f9afffc9d9dd4b3d52fdf868a", null ],
+    [ "ziti_conn_set_data_cb", "ziti_8h.html#a7c4dfc9ef816382d53320ff78b482b4b", null ],
     [ "ziti_conn_source_identity", "ziti_8h.html#ac622ac86432d4431976aee7a2d606add", null ],
     [ "ziti_context_init", "ziti_8h.html#acd9bd691721b0af71afb498b18e8d5be", null ],
     [ "ziti_context_run", "ziti_8h.html#ab8de98bc0c3656b032c462231079d305", null ],
