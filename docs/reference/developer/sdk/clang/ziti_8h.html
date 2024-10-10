@@ -263,9 +263,9 @@ Functions</h2></td></tr>
 <tr class="memitem:adacf84c4760676c37ea0ec3122a956bd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd">ziti_use_ext_jwt_signer</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *name)</td></tr>
 <tr class="memdesc:adacf84c4760676c37ea0ec3122a956bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">select external JWT signer to initiate OIDC authentication flow  <a href="ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd">More...</a><br /></td></tr>
 <tr class="separator:adacf84c4760676c37ea0ec3122a956bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f">ziti_get_transfer_rates</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, double *up, double *down)</td></tr>
-<tr class="memdesc:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve current transfer rates.  <a href="ziti_8h.html#adf60d9b4b95acc7cd7ae4f5a44baf89f">More...</a><br /></td></tr>
-<tr class="separator:adf60d9b4b95acc7cd7ae4f5a44baf89f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1c58f8ee330a32d0a157252acd69dad"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ac1c58f8ee330a32d0a157252acd69dad">ziti_get_transfer_rates</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, double *up, double *down)</td></tr>
+<tr class="memdesc:ac1c58f8ee330a32d0a157252acd69dad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve current transfer rates.  <a href="ziti_8h.html#ac1c58f8ee330a32d0a157252acd69dad">More...</a><br /></td></tr>
+<tr class="separator:ac1c58f8ee330a32d0a157252acd69dad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab306cc32d1f350206b97417f93f60abf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ab306cc32d1f350206b97417f93f60abf">ziti_shutdown</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx)</td></tr>
 <tr class="memdesc:ab306cc32d1f350206b97417f93f60abf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shutdown Ziti Edge identity context and reclaim the memory from the provided <a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4" title="Represents the Ziti Edge identity context.">ziti_context</a>.  <a href="ziti_8h.html#ab306cc32d1f350206b97417f93f60abf">More...</a><br /></td></tr>
 <tr class="separator:ab306cc32d1f350206b97417f93f60abf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2151,14 +2151,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adf60d9b4b95acc7cd7ae4f5a44baf89f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adf60d9b4b95acc7cd7ae4f5a44baf89f">&#9670;&nbsp;</a></span>ziti_get_transfer_rates()</h2>
+<a id="ac1c58f8ee330a32d0a157252acd69dad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1c58f8ee330a32d0a157252acd69dad">&#9670;&nbsp;</a></span>ziti_get_transfer_rates()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ziti_get_transfer_rates </td>
+          <td class="memname">int ziti_get_transfer_rates </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
           <td class="paramname"><em>ztx</em>, </td>
@@ -2193,6 +2193,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>ZITI_OK or error code </dd></dl>
 
 </div>
 </div>
