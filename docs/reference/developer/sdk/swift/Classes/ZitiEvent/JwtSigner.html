@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>MfaAuthEvent Class Reference</title>
+    <title>JwtSigner Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Class/MfaAuthEvent" class="dashAnchor"></a>
-    <a title="MfaAuthEvent Class Reference"></a>
+    <a name="//apple_ref/swift/Class/JwtSigner" class="dashAnchor"></a>
+    <a title="JwtSigner Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../../index.html">CZiti Docs</a></p>
@@ -33,7 +33,7 @@
         <img id="carat" src="../../img/carat.png" alt=""/>
         <a href="../../Classes/ZitiEvent.html">ZitiEvent</a>
         <img id="carat" src="../../img/carat.png" alt=""/>
-        MfaAuthEvent Class Reference
+        JwtSigner Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -82,7 +82,13 @@
                 <a href="../../Classes/ZitiEvent/ServiceEvent.html">– ServiceEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="../../Classes/ZitiEvent/MfaAuthEvent.html">– MfaAuthEvent</a>
+                <a href="../../Classes/ZitiEvent/AuthAction.html">– AuthAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZitiEvent/JwtSigner.html">– JwtSigner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Classes/ZitiEvent/AuthEvent.html">– AuthEvent</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Classes/ZitiEvent/ApiEvent.html">– ApiEvent</a>
@@ -189,16 +195,16 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>MfaAuthEvent</h1>
+            <h1>JwtSigner</h1>
               <div class="declaration">
                 <div class="language">
                   
                   <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="kd">class</span> <span class="kt">MfaAuthEvent</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">JwtSigner</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>Encapsulation of Ziti SDK C&rsquo;s MFA Auth Event</p>
+            <p>Encapsualtion of Ziti SDK C&rsquo;s JWTSigner</p>
 
           </section>
           <section class="section task-group-section">
@@ -207,9 +213,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:5CZiti9ZitiEventC07MfaAuthC0C03mfaE5QueryAA0bdeG0CSgvp"></a>
-                    <a name="//apple_ref/swift/Property/mfaAuthQuery" class="dashAnchor"></a>
-                    <a class="token" href="#/s:5CZiti9ZitiEventC07MfaAuthC0C03mfaE5QueryAA0bdeG0CSgvp">mfaAuthQuery</a>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC2idSSvp"></a>
+                    <a name="//apple_ref/swift/Property/id" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC2idSSvp">id</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -217,7 +223,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The authentication query</p>
+                        <p>ID</p>
 
                       </div>
                       <div class="declaration">
@@ -225,7 +231,175 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc</span>
-<span class="kd">public</span> <span class="k">var</span> <span class="nv">mfaAuthQuery</span><span class="p">:</span> <span class="kt"><a href="../../Classes/ZitiMfaAuthQuery.html">ZitiMfaAuthQuery</a></span><span class="p">?</span></code></pre>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC4nameSSvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC4nameSSvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Name</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC7enabledSbvp"></a>
+                    <a name="//apple_ref/swift/Property/enabled" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC7enabledSbvp">enabled</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enabled</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">enabled</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC11providerUrlSSvp"></a>
+                    <a name="//apple_ref/swift/Property/providerUrl" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC11providerUrlSSvp">providerUrl</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provider URL</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">providerUrl</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC8clientIdSSvp"></a>
+                    <a name="//apple_ref/swift/Property/clientId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC8clientIdSSvp">clientId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Client ID</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">clientId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC8audienceSSvp"></a>
+                    <a name="//apple_ref/swift/Property/audience" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC8audienceSSvp">audience</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Audience</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">audience</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:5CZiti9ZitiEventC9JwtSignerC6scopesSaySSGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/scopes" class="dashAnchor"></a>
+                    <a class="token" href="#/s:5CZiti9ZitiEventC9JwtSignerC6scopesSaySSGSgvp">scopes</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Claim</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">scopes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -237,7 +411,7 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-09-23)</p>
+          <p>&copy; 2024 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2024-10-12)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.15.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
         </section>
       </article>
