@@ -146,22 +146,42 @@ Macros</h2></td></tr>
 <tr class="separator:abea111fc3de182cce3258add5d15e42a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a947427aff256ed103d6271cda9ad08fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a947427aff256ed103d6271cda9ad08fe">MODEL_PARSE_PARTIAL</a>&#160;&#160;&#160;(-3)</td></tr>
 <tr class="separator:a947427aff256ed103d6271cda9ad08fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c31d6cc86a12ba4b0b7d99cba13e4b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a>(v,  t)&#160;&#160;&#160;t##_##v,</td></tr>
-<tr class="separator:a1c31d6cc86a12ba4b0b7d99cba13e4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1f9ba7620075401467ab25c975fa0b27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a>(v,  t)&#160;&#160;&#160;const t v;</td></tr>
-<tr class="separator:a1f9ba7620075401467ab25c975fa0b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ae5f39d6ba025141cf2fd4999dbe71a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a4ae5f39d6ba025141cf2fd4999dbe71a">mk_enum2</a>(v,  t)&#160;&#160;&#160;t##_##v</td></tr>
+<tr class="separator:a4ae5f39d6ba025141cf2fd4999dbe71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c40b62818538e55935670b126fa30c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a53c40b62818538e55935670b126fa30c">mk_enum3</a>(v,  n,  t)&#160;&#160;&#160;t##_##n</td></tr>
+<tr class="separator:a53c40b62818538e55935670b126fa30c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a21c0ab0a1eeef23424925873a6770e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a4a21c0ab0a1eeef23424925873a6770e">enum_f2</a>(v,  t)&#160;&#160;&#160;const t v</td></tr>
+<tr class="separator:a4a21c0ab0a1eeef23424925873a6770e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab45055c5fc85150289421b45ad0ebdb7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ab45055c5fc85150289421b45ad0ebdb7">enum_f3</a>(v,  n,  t)&#160;&#160;&#160;const t n</td></tr>
+<tr class="separator:ab45055c5fc85150289421b45ad0ebdb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0e17ac596009f347fca7f32d60e7fab"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(_1,  _2,  _3,  NAME, ...)&#160;&#160;&#160;NAME</td></tr>
+<tr class="separator:ae0e17ac596009f347fca7f32d60e7fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38fb2c77c617f59f37b59ed75769ba83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a38fb2c77c617f59f37b59ed75769ba83">mk_enum</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a53c40b62818538e55935670b126fa30c">mk_enum3</a>, <a class="el" href="model__support_8h.html#a4ae5f39d6ba025141cf2fd4999dbe71a">mk_enum2</a>)(__VA_ARGS__),</td></tr>
+<tr class="separator:a38fb2c77c617f59f37b59ed75769ba83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52dcb138366e9d22a9282459cbb4605d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">enum_field</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#ab45055c5fc85150289421b45ad0ebdb7">enum_f3</a>, <a class="el" href="model__support_8h.html#a4a21c0ab0a1eeef23424925873a6770e">enum_f2</a>)(__VA_ARGS__);</td></tr>
+<tr class="separator:a52dcb138366e9d22a9282459cbb4605d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2b261383be230e50154c3da584f245a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ac2b261383be230e50154c3da584f245a">DECLARE_ENUM</a>(Enum,  Values)</td></tr>
 <tr class="separator:ac2b261383be230e50154c3da584f245a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8ef5deaefe03bb2af691efa1b508dab1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a8ef5deaefe03bb2af691efa1b508dab1">call_f</a>(f,  args)&#160;&#160;&#160;f args</td></tr>
-<tr class="separator:a8ef5deaefe03bb2af691efa1b508dab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07d9021e3299d9716fc560307e1b094b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a07d9021e3299d9716fc560307e1b094b">enum_value_of1</a>(v,  t,  s,  n)&#160;&#160;&#160;if(strncmp(s,#v,n) == 0){return (t)t##s.v;}</td></tr>
-<tr class="separator:a07d9021e3299d9716fc560307e1b094b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae7bc097edaef29e61174b848f58bb186"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ae7bc097edaef29e61174b848f58bb186">enum_value_of</a>(v, ...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#a8ef5deaefe03bb2af691efa1b508dab1">call_f</a>(<a class="el" href="model__support_8h.html#a07d9021e3299d9716fc560307e1b094b">enum_value_of1</a>, (v, __VA_ARGS__))</td></tr>
-<tr class="separator:ae7bc097edaef29e61174b848f58bb186"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa858be3f3ff1899528f08dd1520b4df6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#aa858be3f3ff1899528f08dd1520b4df6">enum_case</a>(v,  t)&#160;&#160;&#160;case t##_##v: return #v;</td></tr>
-<tr class="separator:aa858be3f3ff1899528f08dd1520b4df6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5a53b3ac700c7f2c233583c974965c5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ac5a53b3ac700c7f2c233583c974965c5">enum_field_val</a>(v,  t)&#160;&#160;&#160;.v = t##_##v,</td></tr>
-<tr class="separator:ac5a53b3ac700c7f2c233583c974965c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d93758ad46f01f4cb3e14453ee62270"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a5d93758ad46f01f4cb3e14453ee62270">get_value_of_ovrd</a>(_1,  _2,  _3,  _4,  _5,  NAME, ...)&#160;&#160;&#160;NAME</td></tr>
+<tr class="separator:a5d93758ad46f01f4cb3e14453ee62270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a67b24696d2ffa94dab4a8924503819"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a4a67b24696d2ffa94dab4a8924503819">enum_value_of4</a>(v,  t,  str,  len)&#160;&#160;&#160;if(strncmp(str,#v,len) == 0){return (t)t##s.v;}</td></tr>
+<tr class="separator:a4a67b24696d2ffa94dab4a8924503819"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec194278bb46fcf27b23e8301395af28"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#aec194278bb46fcf27b23e8301395af28">enum_value_of5</a>(v,  n,  t,  str,  len)&#160;&#160;&#160;if(strncmp(str,#v,len) == 0){return (t)t##s.n;}</td></tr>
+<tr class="separator:aec194278bb46fcf27b23e8301395af28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98ae5f33068037dd0548e944e35542c2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a98ae5f33068037dd0548e944e35542c2">enum_value_of</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#a5d93758ad46f01f4cb3e14453ee62270">get_value_of_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#aec194278bb46fcf27b23e8301395af28">enum_value_of5</a>, <a class="el" href="model__support_8h.html#a4a67b24696d2ffa94dab4a8924503819">enum_value_of4</a>)(__VA_ARGS__)</td></tr>
+<tr class="separator:a98ae5f33068037dd0548e944e35542c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4d51942110543fde405329b448ecbbc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ad4d51942110543fde405329b448ecbbc">enum_c2</a>(v,  t)&#160;&#160;&#160;case t##_##v: return #v</td></tr>
+<tr class="separator:ad4d51942110543fde405329b448ecbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a333b89b30f6a8afb9bd2c9d6d53eb128"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a333b89b30f6a8afb9bd2c9d6d53eb128">enum_c3</a>(v,  n,  t)&#160;&#160;&#160;case t##_##n: return #v</td></tr>
+<tr class="separator:a333b89b30f6a8afb9bd2c9d6d53eb128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a668269ffbfabf54ad70a159ce3c7d063"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a668269ffbfabf54ad70a159ce3c7d063">enum_case</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a333b89b30f6a8afb9bd2c9d6d53eb128">enum_c3</a>, <a class="el" href="model__support_8h.html#ad4d51942110543fde405329b448ecbbc">enum_c2</a>)(__VA_ARGS__);</td></tr>
+<tr class="separator:a668269ffbfabf54ad70a159ce3c7d063"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ac033dff969ed3c727b72d5e6e65983"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a6ac033dff969ed3c727b72d5e6e65983">enum_field_v2</a>(v,  t)&#160;&#160;&#160;.v = t##_##v</td></tr>
+<tr class="separator:a6ac033dff969ed3c727b72d5e6e65983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1feb018dc1b3ba78ee658389565ddf2e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a1feb018dc1b3ba78ee658389565ddf2e">enum_field_v3</a>(v,  n,  t)&#160;&#160;&#160;.n = t##_##n</td></tr>
+<tr class="separator:a1feb018dc1b3ba78ee658389565ddf2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9bd31d1855389c4e4d27f8c8c19c64a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#ac9bd31d1855389c4e4d27f8c8c19c64a">enum_field_val</a>(...)&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a1feb018dc1b3ba78ee658389565ddf2e">enum_field_v3</a>, <a class="el" href="model__support_8h.html#a6ac033dff969ed3c727b72d5e6e65983">enum_field_v2</a>)(__VA_ARGS__),</td></tr>
+<tr class="separator:ac9bd31d1855389c4e4d27f8c8c19c64a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbb21f355e3b5c477a44211a0e11bfdf"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#adbb21f355e3b5c477a44211a0e11bfdf">IMPL_ENUM</a>(Enum,  Values)</td></tr>
 <tr class="separator:adbb21f355e3b5c477a44211a0e11bfdf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -281,34 +301,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8ef5deaefe03bb2af691efa1b508dab1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8ef5deaefe03bb2af691efa1b508dab1">&#9670;&nbsp;</a></span>call_f</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define call_f</td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">f, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">args&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;f args</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ac2b261383be230e50154c3da584f245a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac2b261383be230e50154c3da584f245a">&#9670;&nbsp;</a></span>DECLARE_ENUM</h2>
 
@@ -336,7 +328,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">enum</span> Enum {                        \</div>
 <div class="line">Enum##_Unknown = 0,                \</div>
-<div class="line">Values(<a class="code" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a>, Enum)              \</div>
+<div class="line">Values(<a class="code" href="model__support_8h.html#a38fb2c77c617f59f37b59ed75769ba83">mk_enum</a>, Enum)              \</div>
 <div class="line">};                                 \</div>
 <div class="line">typedef <span class="keyword">enum</span> Enum Enum;            \</div>
 <div class="line">typedef Enum **Enum##_array;       \</div>
@@ -344,12 +336,12 @@ Functions</h2></td></tr>
 <div class="line">const <span class="keywordtype">char</span>* (*name)(<span class="keywordtype">int</span> v);                       \</div>
 <div class="line">Enum (*value_of)(<span class="keyword">const</span> <span class="keywordtype">char</span>* n);                  \</div>
 <div class="line">Enum (*value_ofn)(<span class="keyword">const</span> <span class="keywordtype">char</span>* s, <span class="keywordtype">size_t</span> n);       \</div>
-<div class="line">Values(<a class="code" href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a>, Enum)                          \</div>
+<div class="line">Values(<a class="code" href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">enum_field</a>, Enum)                          \</div>
 <div class="line">};                                 \</div>
 <div class="line">MODEL_API <span class="keyword">const</span> <a class="code" href="structtype__meta.html">type_meta</a>* get_##Enum##_meta();\</div>
 <div class="line">extern <span class="keyword">const</span> <span class="keyword">struct </span>Enum##_s Enum##s;</div>
-<div class="ttc" id="amodel__support_8h_html_a1c31d6cc86a12ba4b0b7d99cba13e4b2"><div class="ttname"><a href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">mk_enum</a></div><div class="ttdeci">#define mk_enum(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:254</div></div>
-<div class="ttc" id="amodel__support_8h_html_a1f9ba7620075401467ab25c975fa0b27"><div class="ttname"><a href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">enum_field</a></div><div class="ttdeci">#define enum_field(v, t)</div><div class="ttdef"><b>Definition:</b> model_support.h:255</div></div>
+<div class="ttc" id="amodel__support_8h_html_a38fb2c77c617f59f37b59ed75769ba83"><div class="ttname"><a href="model__support_8h.html#a38fb2c77c617f59f37b59ed75769ba83">mk_enum</a></div><div class="ttdeci">#define mk_enum(...)</div><div class="ttdef"><b>Definition:</b> model_support.h:262</div></div>
+<div class="ttc" id="amodel__support_8h_html_a52dcb138366e9d22a9282459cbb4605d"><div class="ttname"><a href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">enum_field</a></div><div class="ttdeci">#define enum_field(...)</div><div class="ttdef"><b>Definition:</b> model_support.h:263</div></div>
 <div class="ttc" id="astructtype__meta_html"><div class="ttname"><a href="structtype__meta.html">type_meta</a></div><div class="ttdef"><b>Definition:</b> model_support.h:181</div></div>
 </div><!-- fragment -->
 </div>
@@ -439,8 +431,70 @@ Functions</h2></td></tr>
 </div><!-- fragment -->
 </div>
 </div>
-<a id="aa858be3f3ff1899528f08dd1520b4df6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa858be3f3ff1899528f08dd1520b4df6">&#9670;&nbsp;</a></span>enum_case</h2>
+<a id="ad4d51942110543fde405329b448ecbbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4d51942110543fde405329b448ecbbc">&#9670;&nbsp;</a></span>enum_c2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_c2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;case t##_##v: return #v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a333b89b30f6a8afb9bd2c9d6d53eb128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a333b89b30f6a8afb9bd2c9d6d53eb128">&#9670;&nbsp;</a></span>enum_c3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_c3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;case t##_##n: return #v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a668269ffbfabf54ad70a159ce3c7d063"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a668269ffbfabf54ad70a159ce3c7d063">&#9670;&nbsp;</a></span>enum_case</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -449,6 +503,24 @@ Functions</h2></td></tr>
           <td class="memname">#define enum_case</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a333b89b30f6a8afb9bd2c9d6d53eb128">enum_c3</a>, <a class="el" href="model__support_8h.html#ad4d51942110543fde405329b448ecbbc">enum_c2</a>)(__VA_ARGS__);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4a21c0ab0a1eeef23424925873a6770e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a21c0ab0a1eeef23424925873a6770e">&#9670;&nbsp;</a></span>enum_f2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_f2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">v, </td>
         </tr>
         <tr>
@@ -460,15 +532,49 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;case t##_##v: return #v;</td>
+          <td></td><td>&#160;&#160;&#160;const t v</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a1f9ba7620075401467ab25c975fa0b27"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1f9ba7620075401467ab25c975fa0b27">&#9670;&nbsp;</a></span>enum_field</h2>
+<a id="ab45055c5fc85150289421b45ad0ebdb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab45055c5fc85150289421b45ad0ebdb7">&#9670;&nbsp;</a></span>enum_f3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_f3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;const t n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a52dcb138366e9d22a9282459cbb4605d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52dcb138366e9d22a9282459cbb4605d">&#9670;&nbsp;</a></span>enum_field</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -477,6 +583,24 @@ Functions</h2></td></tr>
           <td class="memname">#define enum_field</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#ab45055c5fc85150289421b45ad0ebdb7">enum_f3</a>, <a class="el" href="model__support_8h.html#a4a21c0ab0a1eeef23424925873a6770e">enum_f2</a>)(__VA_ARGS__);</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6ac033dff969ed3c727b72d5e6e65983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ac033dff969ed3c727b72d5e6e65983">&#9670;&nbsp;</a></span>enum_field_v2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_field_v2</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
           <td class="paramname">v, </td>
         </tr>
         <tr>
@@ -488,15 +612,49 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;const t v;</td>
+          <td></td><td>&#160;&#160;&#160;.v = t##_##v</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac5a53b3ac700c7f2c233583c974965c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5a53b3ac700c7f2c233583c974965c5">&#9670;&nbsp;</a></span>enum_field_val</h2>
+<a id="a1feb018dc1b3ba78ee658389565ddf2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1feb018dc1b3ba78ee658389565ddf2e">&#9670;&nbsp;</a></span>enum_field_v3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_field_v3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;.n = t##_##n</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac9bd31d1855389c4e4d27f8c8c19c64a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9bd31d1855389c4e4d27f8c8c19c64a">&#9670;&nbsp;</a></span>enum_field_val</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -505,26 +663,16 @@ Functions</h2></td></tr>
           <td class="memname">#define enum_field_val</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">v, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname">t&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;.v = t##_##v,</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a1feb018dc1b3ba78ee658389565ddf2e">enum_field_v3</a>, <a class="el" href="model__support_8h.html#a6ac033dff969ed3c727b72d5e6e65983">enum_field_v2</a>)(__VA_ARGS__),</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae7bc097edaef29e61174b848f58bb186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae7bc097edaef29e61174b848f58bb186">&#9670;&nbsp;</a></span>enum_value_of</h2>
+<a id="a98ae5f33068037dd0548e944e35542c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98ae5f33068037dd0548e944e35542c2">&#9670;&nbsp;</a></span>enum_value_of</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -533,32 +681,22 @@ Functions</h2></td></tr>
           <td class="memname">#define enum_value_of</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">v, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>...</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#a8ef5deaefe03bb2af691efa1b508dab1">call_f</a>(<a class="el" href="model__support_8h.html#a07d9021e3299d9716fc560307e1b094b">enum_value_of1</a>, (v, __VA_ARGS__))</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#a5d93758ad46f01f4cb3e14453ee62270">get_value_of_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#aec194278bb46fcf27b23e8301395af28">enum_value_of5</a>, <a class="el" href="model__support_8h.html#a4a67b24696d2ffa94dab4a8924503819">enum_value_of4</a>)(__VA_ARGS__)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a07d9021e3299d9716fc560307e1b094b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07d9021e3299d9716fc560307e1b094b">&#9670;&nbsp;</a></span>enum_value_of1</h2>
+<a id="a4a67b24696d2ffa94dab4a8924503819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a67b24696d2ffa94dab4a8924503819">&#9670;&nbsp;</a></span>enum_value_of4</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define enum_value_of1</td>
+          <td class="memname">#define enum_value_of4</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v, </td>
@@ -573,18 +711,64 @@ Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">s, </td>
+          <td class="paramname">str, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname">n&#160;</td>
+          <td class="paramname">len&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;if(strncmp(s,#v,n) == 0){return (t)t##s.v;}</td>
+          <td></td><td>&#160;&#160;&#160;if(strncmp(str,#v,len) == 0){return (t)t##s.v;}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aec194278bb46fcf27b23e8301395af28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec194278bb46fcf27b23e8301395af28">&#9670;&nbsp;</a></span>enum_value_of5</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define enum_value_of5</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">str, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">len&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;if(strncmp(str,#v,len) == 0){return (t)t##s.n;}</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -688,6 +872,110 @@ Functions</h2></td></tr>
 <div class="line">.meta = get_##memtype##_meta, \</div>
 <div class="line">},</div>
 </div><!-- fragment -->
+</div>
+</div>
+<a id="ae0e17ac596009f347fca7f32d60e7fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0e17ac596009f347fca7f32d60e7fab">&#9670;&nbsp;</a></span>get_ovrd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_ovrd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;NAME</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a5d93758ad46f01f4cb3e14453ee62270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d93758ad46f01f4cb3e14453ee62270">&#9670;&nbsp;</a></span>get_value_of_ovrd</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define get_value_of_ovrd</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_1, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_2, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_3, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_4, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">_5, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">NAME, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;NAME</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
 </div>
 </div>
 <a id="adbb21f355e3b5c477a44211a0e11bfdf"></a>
@@ -828,14 +1116,32 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a1c31d6cc86a12ba4b0b7d99cba13e4b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1c31d6cc86a12ba4b0b7d99cba13e4b2">&#9670;&nbsp;</a></span>mk_enum</h2>
+<a id="a38fb2c77c617f59f37b59ed75769ba83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38fb2c77c617f59f37b59ed75769ba83">&#9670;&nbsp;</a></span>mk_enum</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">#define mk_enum</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em></td><td>)</td>
+          <td>&#160;&#160;&#160;<a class="el" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">get_ovrd</a>(__VA_ARGS__, <a class="el" href="model__support_8h.html#a53c40b62818538e55935670b126fa30c">mk_enum3</a>, <a class="el" href="model__support_8h.html#a4ae5f39d6ba025141cf2fd4999dbe71a">mk_enum2</a>)(__VA_ARGS__),</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ae5f39d6ba025141cf2fd4999dbe71a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ae5f39d6ba025141cf2fd4999dbe71a">&#9670;&nbsp;</a></span>mk_enum2</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mk_enum2</td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
           <td class="paramname">v, </td>
@@ -849,7 +1155,41 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;t##_##v,</td>
+          <td></td><td>&#160;&#160;&#160;t##_##v</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a53c40b62818538e55935670b126fa30c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c40b62818538e55935670b126fa30c">&#9670;&nbsp;</a></span>mk_enum3</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define mk_enum3</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">n, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">t&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td>&#160;&#160;&#160;t##_##n</td>
         </tr>
       </table>
 </div><div class="memdoc">

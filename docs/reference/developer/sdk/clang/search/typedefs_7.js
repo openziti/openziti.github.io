@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['parse_5fservice_5fcfg_5ff_977',['parse_service_cfg_f',['../ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b',1,'ziti_model.h']]]
+  ['string_5fbuf_5ft_999',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]]
 ];

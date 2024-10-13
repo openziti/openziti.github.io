@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['duration_965',['duration',['../types_8h.html#a9f5182feeb50e38af0ffa025cee831c3',1,'types.h']]]
+  ['from_5fjson_5ffunc_987',['from_json_func',['../model__support_8h.html#a2183664b79fc64dea63293a249cfb443',1,'model_support.h']]]
 ];

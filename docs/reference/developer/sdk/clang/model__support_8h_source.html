@@ -316,82 +316,97 @@ $(document).ready(function(){initNavTree('model__support_8h_source.html',''); in
 <div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b">  251</a></span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keywordtype">int</span> <a class="code" href="model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b">json_enum</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *<a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, <span class="keywordtype">void</span> *buf, <span class="keywordtype">int</span> indent, <span class="keywordtype">int</span> flags, <span class="keyword">const</span> <span class="keywordtype">void</span> *enum_type);</div>
 <div class="line"><a name="l00252"></a><span class="lineno"><a class="line" href="model__support_8h.html#aa02d99c24245639613d6a3310842b135">  252</a></span>&#160;<a class="code" href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a> <span class="keyword">struct </span>json_object* <a class="code" href="model__support_8h.html#aa02d99c24245639613d6a3310842b135">enum_to_json</a>(<span class="keyword">const</span> <span class="keywordtype">void</span>* <a class="code" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, <span class="keyword">const</span> <span class="keywordtype">void</span> *enum_type);</div>
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="model__support_8h.html#a1c31d6cc86a12ba4b0b7d99cba13e4b2">  254</a></span>&#160;<span class="preprocessor">#define mk_enum(v,t) t##_##v,</span></div>
-<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="model__support_8h.html#a1f9ba7620075401467ab25c975fa0b27">  255</a></span>&#160;<span class="preprocessor">#define enum_field(v,t) const t v;</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="model__support_8h.html#ac2b261383be230e50154c3da584f245a">  257</a></span>&#160;<span class="preprocessor">#define DECLARE_ENUM(Enum, Values) \</span></div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;<span class="preprocessor">enum Enum {                        \</span></div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="preprocessor">Enum##_Unknown = 0,                \</span></div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;<span class="preprocessor">Values(mk_enum, Enum)              \</span></div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="preprocessor">};                                 \</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">typedef enum Enum Enum;            \</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">typedef Enum **Enum##_array;       \</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;<span class="preprocessor">struct Enum##_s {                  \</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;<span class="preprocessor">const char* (*name)(int v);                       \</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">Enum (*value_of)(const char* n);                  \</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">Enum (*value_ofn)(const char* s, size_t n);       \</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">Values(enum_field, Enum)                          \</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno"><a class="line" href="model__support_8h.html#a4ae5f39d6ba025141cf2fd4999dbe71a">  255</a></span>&#160;<span class="preprocessor">#define mk_enum2(v,t) t##_##v</span></div>
+<div class="line"><a name="l00256"></a><span class="lineno"><a class="line" href="model__support_8h.html#a53c40b62818538e55935670b126fa30c">  256</a></span>&#160;<span class="preprocessor">#define mk_enum3(v,n,t) t##_##n</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno"><a class="line" href="model__support_8h.html#a4a21c0ab0a1eeef23424925873a6770e">  257</a></span>&#160;<span class="preprocessor">#define enum_f2(v, t) const t v</span></div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="model__support_8h.html#ab45055c5fc85150289421b45ad0ebdb7">  258</a></span>&#160;<span class="preprocessor">#define enum_f3(v, n, t) const t n</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="model__support_8h.html#ae0e17ac596009f347fca7f32d60e7fab">  260</a></span>&#160;<span class="preprocessor">#define get_ovrd(_1, _2, _3, NAME, ...) NAME</span></div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno"><a class="line" href="model__support_8h.html#a38fb2c77c617f59f37b59ed75769ba83">  262</a></span>&#160;<span class="preprocessor">#define mk_enum(...) get_ovrd(__VA_ARGS__, mk_enum3, mk_enum2)(__VA_ARGS__),</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">  263</a></span>&#160;<span class="preprocessor">#define enum_field(...) get_ovrd(__VA_ARGS__, enum_f3, enum_f2)(__VA_ARGS__);</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="model__support_8h.html#ac2b261383be230e50154c3da584f245a">  265</a></span>&#160;<span class="preprocessor">#define DECLARE_ENUM(Enum, Values) \</span></div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="preprocessor">enum Enum {                        \</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;<span class="preprocessor">Enum##_Unknown = 0,                \</span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;<span class="preprocessor">Values(mk_enum, Enum)              \</span></div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">};                                 \</span></div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">MODEL_API const type_meta* get_##Enum##_meta();\</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">extern const struct Enum##_s Enum##s;</span></div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="model__support_8h.html#a8ef5deaefe03bb2af691efa1b508dab1">  273</a></span>&#160;<span class="preprocessor">#define call_f(f,args) f args</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="model__support_8h.html#a07d9021e3299d9716fc560307e1b094b">  274</a></span>&#160;<span class="preprocessor">#define enum_value_of1(v, t, s, n) if(strncmp(s,#v,n) == 0){return (t)t##s.v;}</span></div>
-<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="model__support_8h.html#ae7bc097edaef29e61174b848f58bb186">  275</a></span>&#160;<span class="preprocessor">#define enum_value_of(v,...) call_f(enum_value_of1, (v, __VA_ARGS__))</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
-<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="model__support_8h.html#aa858be3f3ff1899528f08dd1520b4df6">  277</a></span>&#160;<span class="preprocessor">#define enum_case(v,t)  case t##_##v: return #v;</span></div>
-<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="model__support_8h.html#ac5a53b3ac700c7f2c233583c974965c5">  278</a></span>&#160;<span class="preprocessor">#define enum_field_val(v,t) .v = t##_##v,</span></div>
-<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="model__support_8h.html#adbb21f355e3b5c477a44211a0e11bfdf">  279</a></span>&#160;<span class="preprocessor">#define IMPL_ENUM(Enum, Values) \</span></div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;<span class="preprocessor">static const char* Enum##_name(int v) { \</span></div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;<span class="preprocessor">switch (v) { \</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;<span class="preprocessor">Values(enum_case,Enum)\</span></div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;<span class="preprocessor">default: return &quot;unknown &quot;</span> #Enum; \</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;}                                \</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;}\</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;Enum Enum##_value_ofn(const char* s, size_t n) {\</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;Values(enum_value_of, Enum, s, n)  \</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;return Enum##_Unknown;          \</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;}                               \</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;Enum Enum##_value_of(const char* s) {\</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;return Enum##_value_ofn(s, strlen(s));     \</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;}                               \</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                                \</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;const struct Enum##_s Enum##s = {  \</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;.name = Enum##_name,            \</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;.value_of = Enum##_value_of,    \</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;.value_ofn = Enum##_value_ofn,    \</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;Values(enum_field_val,Enum)\</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;};                              \</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;static int cmp_##Enum(const ptr(Enum) lh, const ptr(Enum) rh) { \</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;return ((lh) ? (*lh) : Enum##_Unknown) - ((rh) ? (*rh) : Enum##_Unknown); \</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;};\</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;static int Enum##_json(const ptr(Enum) e, void *buf, int indent, int flags) {     \</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;return json_enum(e, buf, indent, flags, &amp;Enum##s);                              \</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;}                               \</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;static int Enum##_from_json(ptr(Enum) e, struct json_object *j, type_meta *m) {    \</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                                return enum_from_json(e, j, &amp;Enum##s); \</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;}                               \</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;static struct json_object* Enum##_to_json(const ptr(Enum) e) {         \</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                                return enum_to_json(e, &amp;Enum##s); \</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;}\</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;static type_meta Enum##_meta = {\</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        .name = #Enum,        \</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        .size = sizeof(Enum), \</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        .field_count = 0,     \</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        .fields = NULL,       \</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        .comparer = (_cmp_f) cmp_##Enum, \</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        .jsonifier = (_to_json_f) Enum##_json,  \</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        .destroyer = NULL, \</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;        .from_json = (from_json_func) Enum##_from_json,         \</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        .to_json = (to_json_func) Enum##_to_json, \</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        };           \</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;const type_meta* get_##Enum##_meta() { return &amp;Enum##_meta; }\</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;<span class="preprocessor">#if __cplusplus</span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZITI_SDK_MODEL_SUPPORT_H</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="preprocessor">typedef enum Enum Enum;            \</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="preprocessor">typedef Enum **Enum##_array;       \</span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">struct Enum##_s {                  \</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;<span class="preprocessor">const char* (*name)(int v);                       \</span></div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;<span class="preprocessor">Enum (*value_of)(const char* n);                  \</span></div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">Enum (*value_ofn)(const char* s, size_t n);       \</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">Values(enum_field, Enum)                          \</span></div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;<span class="preprocessor">};                                 \</span></div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;<span class="preprocessor">MODEL_API const type_meta* get_##Enum##_meta();\</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;<span class="preprocessor">extern const struct Enum##_s Enum##s;</span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="model__support_8h.html#a5d93758ad46f01f4cb3e14453ee62270">  281</a></span>&#160;<span class="preprocessor">#define get_value_of_ovrd(_1, _2, _3, _4, _5, NAME, ...) NAME</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="model__support_8h.html#a4a67b24696d2ffa94dab4a8924503819">  282</a></span>&#160;<span class="preprocessor">#define enum_value_of4(v, t, str, len) if(strncmp(str,#v,len) == 0){return (t)t##s.v;}</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="model__support_8h.html#aec194278bb46fcf27b23e8301395af28">  283</a></span>&#160;<span class="preprocessor">#define enum_value_of5(v, n, t, str, len) if(strncmp(str,#v,len) == 0){return (t)t##s.n;}</span></div>
+<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="model__support_8h.html#a98ae5f33068037dd0548e944e35542c2">  284</a></span>&#160;<span class="preprocessor">#define enum_value_of(...) get_value_of_ovrd(__VA_ARGS__, enum_value_of5, enum_value_of4)(__VA_ARGS__)</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno"><a class="line" href="model__support_8h.html#ad4d51942110543fde405329b448ecbbc">  286</a></span>&#160;<span class="preprocessor">#define enum_c2(v,t)  case t##_##v: return #v</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="model__support_8h.html#a333b89b30f6a8afb9bd2c9d6d53eb128">  287</a></span>&#160;<span class="preprocessor">#define enum_c3(v,n,t) case t##_##n: return #v</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno"><a class="line" href="model__support_8h.html#a668269ffbfabf54ad70a159ce3c7d063">  288</a></span>&#160;<span class="preprocessor">#define enum_case(...)  get_ovrd(__VA_ARGS__, enum_c3, enum_c2)(__VA_ARGS__);</span></div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="model__support_8h.html#a6ac033dff969ed3c727b72d5e6e65983">  290</a></span>&#160;<span class="preprocessor">#define enum_field_v2(v,t) .v = t##_##v</span></div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="model__support_8h.html#a1feb018dc1b3ba78ee658389565ddf2e">  291</a></span>&#160;<span class="preprocessor">#define enum_field_v3(v,n,t) .n = t##_##n</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno"><a class="line" href="model__support_8h.html#ac9bd31d1855389c4e4d27f8c8c19c64a">  293</a></span>&#160;<span class="preprocessor">#define enum_field_val(...) get_ovrd(__VA_ARGS__, enum_field_v3, enum_field_v2)(__VA_ARGS__),</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno"><a class="line" href="model__support_8h.html#adbb21f355e3b5c477a44211a0e11bfdf">  294</a></span>&#160;<span class="preprocessor">#define IMPL_ENUM(Enum, Values) \</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">static const char* Enum##_name(int v) { \</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="preprocessor">switch (v) { \</span></div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="preprocessor">Values(enum_case,Enum)\</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">default: return &quot;unknown &quot;</span> #Enum; \</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;}                                \</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;}\</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;Enum Enum##_value_ofn(const char* s, size_t n) {\</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;Values(enum_value_of, Enum, s, n)  \</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;return Enum##_Unknown;          \</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;}                               \</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;Enum Enum##_value_of(const char* s) {\</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;return Enum##_value_ofn(s, strlen(s));     \</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;}                               \</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                                \</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;const struct Enum##_s Enum##s = {  \</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;.name = Enum##_name,            \</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;.value_of = Enum##_value_of,    \</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;.value_ofn = Enum##_value_ofn,    \</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;Values(enum_field_val,Enum)\</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;};                              \</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;static int cmp_##Enum(const ptr(Enum) lh, const ptr(Enum) rh) { \</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;return ((lh) ? (*lh) : Enum##_Unknown) - ((rh) ? (*rh) : Enum##_Unknown); \</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;};\</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;static int Enum##_json(const ptr(Enum) e, void *buf, int indent, int flags) {     \</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;return json_enum(e, buf, indent, flags, &amp;Enum##s);                              \</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;}                               \</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;static int Enum##_from_json(ptr(Enum) e, struct json_object *j, type_meta *m) {    \</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                                return enum_from_json(e, j, &amp;Enum##s); \</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;}                               \</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;static struct json_object* Enum##_to_json(const ptr(Enum) e) {         \</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                                return enum_to_json(e, &amp;Enum##s); \</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;}\</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;static type_meta Enum##_meta = {\</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        .name = #Enum,        \</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        .size = sizeof(Enum), \</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        .field_count = 0,     \</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        .fields = NULL,       \</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        .comparer = (_cmp_f) cmp_##Enum, \</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        .jsonifier = (_to_json_f) Enum##_json,  \</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;        .destroyer = NULL, \</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        .from_json = (from_json_func) Enum##_from_json,         \</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        .to_json = (to_json_func) Enum##_to_json, \</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        };           \</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;const type_meta* get_##Enum##_meta() { return &amp;Enum##_meta; }\</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;<span class="preprocessor">#if __cplusplus</span></div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;}</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="preprocessor">#endif </span><span class="comment">//ZITI_SDK_MODEL_SUPPORT_H</span></div>
 <div class="ttc" id="aexterns_8h_html"><div class="ttname"><a href="externs_8h.html">externs.h</a></div></div>
 <div class="ttc" id="aexterns_8h_html_a71e7a08e9b0fa6e62cba0738fd1d46d3"><div class="ttname"><a href="externs_8h.html#a71e7a08e9b0fa6e62cba0738fd1d46d3">ZITI_FUNC</a></div><div class="ttdeci">#define ZITI_FUNC</div><div class="ttdef"><b>Definition:</b> externs.h:38</div></div>
 <div class="ttc" id="amodel__collections_8h_html"><div class="ttname"><a href="model__collections_8h.html">model_collections.h</a></div></div>
