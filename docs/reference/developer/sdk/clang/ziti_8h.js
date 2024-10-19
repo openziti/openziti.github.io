@@ -30,7 +30,7 @@ var ziti_8h =
     [ "ziti_pr_mac_cb", "ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5", null ],
     [ "ziti_pr_os_cb", "ziti_8h.html#a6d7d83d2a87cf345783b3048408fffb1", null ],
     [ "ziti_pr_process_cb", "ziti_8h.html#a1744758409bf52d54e3fff89d5409583", null ],
-    [ "ziti_service_cb", "ziti_8h.html#a35245ab4953e815155542e5b46f5bdff", null ],
+    [ "ziti_service_cb", "ziti_8h.html#a9654c9ebbfbae9c19d465d03dabd5581", null ],
     [ "ziti_verify_extend_cert_authenticator_cb", "ziti_8h.html#abc15f1012d9536c9651cd1f511943070", null ],
     [ "ziti_write_cb", "ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d", null ],
     [ "ziti_terminator_precedence", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178", [
