@@ -102,6 +102,7 @@ $(document).ready(function(){initNavTree('ziti_8h.html',''); initResizable(); })
 <code>#include &quot;<a class="el" href="ziti__model_8h_source.html">ziti_model.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="enums_8h_source.html">enums.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="ziti__events_8h_source.html">ziti_events.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="enroll_8h_source.html">enroll.h</a>&quot;</code><br />
 </div>
 <p><a href="ziti_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -109,8 +110,6 @@ $(document).ready(function(){initNavTree('ziti_8h.html',''); initResizable(); })
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__options.html">ziti_options</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">ziti_context runtime options  <a href="structziti__options.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__enroll__opts.html">ziti_enroll_opts</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__dial__opts.html">ziti_dial_opts</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -184,9 +183,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:aea8ec31c759892288c0ad89ac17a161d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, ssize_t status, void *write_ctx)</td></tr>
 <tr class="memdesc:aea8ec31c759892288c0ad89ac17a161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> is complete.  <a href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">More...</a><br /></td></tr>
 <tr class="separator:aea8ec31c759892288c0ad89ac17a161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a230526c3cad3096c304fe8e2a5e00e26"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26">ziti_enroll_cb</a>) (const <a class="el" href="ziti__model_8h.html#abc08ed263c9db88f673a85eccf9bd535">ziti_config</a> *cfg, int status, const char *err_message, void *enroll_ctx)</td></tr>
-<tr class="memdesc:a230526c3cad3096c304fe8e2a5e00e26"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005" title="Performs a Ziti enrollment.">ziti_enroll()</a> is complete.  <a href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26">More...</a><br /></td></tr>
-<tr class="separator:a230526c3cad3096c304fe8e2a5e00e26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:a0ededa980f2de9e4b58378e88fcd49a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after connection was closed.  <a href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">More...</a><br /></td></tr>
 <tr class="separator:a0ededa980f2de9e4b58378e88fcd49a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -218,9 +214,6 @@ Enumerations</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ae0d28a131dcc2333de375a01ac8fc005"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005">ziti_enroll</a> (const <a class="el" href="structziti__enroll__opts.html">ziti_enroll_opts</a> *opts, uv_loop_t *loop, <a class="el" href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26">ziti_enroll_cb</a> enroll_cb, void *enroll_ctx)</td></tr>
-<tr class="memdesc:ae0d28a131dcc2333de375a01ac8fc005"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs a Ziti enrollment.  <a href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005">More...</a><br /></td></tr>
-<tr class="separator:ae0d28a131dcc2333de375a01ac8fc005"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a57104d0a19d143386d14ce0d92b5ae0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a">ziti_set_app_info</a> (const char *app_id, const char *app_version)</td></tr>
 <tr class="memdesc:a57104d0a19d143386d14ce0d92b5ae0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provide app information to Ziti SDK.  <a href="ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a">More...</a><br /></td></tr>
 <tr class="separator:a57104d0a19d143386d14ce0d92b5ae0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -558,34 +551,6 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>indicate how much data was consumed </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b" title="Completes client connection.">ziti_accept()</a>, ZITI_ERRORS </dd></dl>
-
-</div>
-</div>
-<a id="a230526c3cad3096c304fe8e2a5e00e26"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a230526c3cad3096c304fe8e2a5e00e26">&#9670;&nbsp;</a></span>ziti_enroll_cb</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">typedef void(* ziti_enroll_cb) (const <a class="el" href="ziti__model_8h.html#abc08ed263c9db88f673a85eccf9bd535">ziti_config</a> *cfg, int status, const char *err_message, void *enroll_ctx)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Callback called after <a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005" title="Performs a Ziti enrollment.">ziti_enroll()</a> is complete. </p>
-<p>This callback is invoked on the conclusion of the <a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005" title="Performs a Ziti enrollment.">ziti_enroll()</a> function. The result of the <a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005" title="Performs a Ziti enrollment.">ziti_enroll()</a> function may be an error condition so it is important to verify the provided status code in this callback.</p>
-<p>This callback also receives a Ziti identity json salvo if the enrollment was successful. This identity should be persisted into a file, and used in subsequent calls to <a class="el" href="ziti_8h.html#a3535865c037ebe4f8e3dc64f8dcd7773" title="Load ziti identity config from memory or file.">ziti_load_config()</a>.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">cfg</td><td>identity config object, NULL if enrollment fails for any reason </td></tr>
-    <tr><td class="paramname">status</td><td>enrollment success or error code </td></tr>
-    <tr><td class="paramname">err_message</td><td>description of error, or NULL if enrollment succeeded </td></tr>
-    <tr><td class="paramname">enroll_ctx</td><td>additional context to be passed into <a class="el" href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26" title="Callback called after ziti_enroll() is complete.">ziti_enroll_cb</a> callback</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005" title="Performs a Ziti enrollment.">ziti_enroll()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1784,59 +1749,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="ae0d28a131dcc2333de375a01ac8fc005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae0d28a131dcc2333de375a01ac8fc005">&#9670;&nbsp;</a></span>ziti_enroll()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int ziti_enroll </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structziti__enroll__opts.html">ziti_enroll_opts</a> *&#160;</td>
-          <td class="paramname"><em>opts</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uv_loop_t *&#160;</td>
-          <td class="paramname"><em>loop</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26">ziti_enroll_cb</a>&#160;</td>
-          <td class="paramname"><em>enroll_cb</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>enroll_ctx</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Performs a Ziti enrollment. </p>
-<p>This function is used to enroll a Ziti Edge identity. The Ziti C SDK is based around the <a href="http://libuv.org/">libuv</a> library and maintains similar semantics. This function is used to setup the chain of callbacks needed once the loop begins to execute.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">opt</td><td>enrollment options </td></tr>
-    <tr><td class="paramname">loop</td><td>libuv event loop </td></tr>
-    <tr><td class="paramname">enroll_cb</td><td>callback to be called when enrollment is complete </td></tr>
-    <tr><td class="paramname">enroll_ctx</td><td>additional context to be passed into <a class="el" href="ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26" title="Callback called after ziti_enroll() is complete.">ziti_enroll_cb</a> callback</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS </dd></dl>
 
 </div>
 </div>

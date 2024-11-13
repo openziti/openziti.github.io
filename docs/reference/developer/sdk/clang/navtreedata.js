@@ -58,8 +58,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structtype__meta.html#a4ea8190a08e1774b9e0b8cdb6662fde2",
-"ziti__log_8h.html#ab71944c05db6620f86e2c20d059d8183"
+"structtype__meta.html",
+"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

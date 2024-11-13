@@ -1,7 +1,6 @@
 var ziti_8h =
 [
     [ "ziti_options", "structziti__options.html", "structziti__options" ],
-    [ "ziti_enroll_opts", "structziti__enroll__opts.html", "structziti__enroll__opts" ],
     [ "ziti_dial_opts", "structziti__dial__opts.html", "structziti__dial__opts" ],
     [ "ziti_client_ctx", "structziti__client__ctx.html", "structziti__client__ctx" ],
     [ "ziti_listen_opts", "structziti__listen__opts.html", "structziti__listen__opts" ],
@@ -14,7 +13,6 @@ var ziti_8h =
     [ "ziti_connection", "ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef", null ],
     [ "ziti_context", "ziti_8h.html#a39669b224e62d165a45f8415a342a6b4", null ],
     [ "ziti_data_cb", "ziti_8h.html#a9aff26bd4513034132acab86448c3e1b", null ],
-    [ "ziti_enroll_cb", "ziti_8h.html#a230526c3cad3096c304fe8e2a5e00e26", null ],
     [ "ziti_event_cb", "ziti_8h.html#af10680297946038b65fe9af5057edc13", null ],
     [ "ziti_ext_signers_cb", "ziti_8h.html#a042ffb1b6fc90c6d2b32e834195650ce", null ],
     [ "ziti_extend_cert_authenticator_cb", "ziti_8h.html#a13307e5da4fdcfee042871537b0bbf2e", null ],
@@ -58,7 +56,6 @@ var ziti_8h =
     [ "ziti_dial_with_options", "ziti_8h.html#a58feeb934eed99516161d9a61261defa", null ],
     [ "ziti_dump", "ziti_8h.html#ae75440f99f9c0a7439ebf5fa18729b49", null ],
     [ "ziti_endpoint_state_change", "ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84", null ],
-    [ "ziti_enroll", "ziti_8h.html#ae0d28a131dcc2333de375a01ac8fc005", null ],
     [ "ziti_ext_auth", "ziti_8h.html#a8c6e5f1a8f3a27f83e5afcadf80f6ebe", null ],
     [ "ziti_ext_auth_token", "ziti_8h.html#a0c11f43c052355e78243498b930eafd5", null ],
     [ "ziti_extend_cert_authenticator", "ziti_8h.html#a04a25125e41b9717e5148dc8504889e8", null ],

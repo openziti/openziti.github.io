@@ -1,9 +1,6 @@
 var searchData=
 [
-  ['path_943',['path',['../structfield__meta.html#aa47ca68f2e7c44a4054efa3e5f8c2c16',1,'field_meta']]],
-  ['pq_5fdomain_5fcb_944',['pq_domain_cb',['../structziti__options.html#a083bb9be0c5f6940d83b4fa4547b43a8',1,'ziti_options']]],
-  ['pq_5fmac_5fcb_945',['pq_mac_cb',['../structziti__options.html#a2609a65c9d392851c8daa0afbd5af27b',1,'ziti_options']]],
-  ['pq_5fos_5fcb_946',['pq_os_cb',['../structziti__options.html#a9358aaa33328fc02ac0bbb6798beb548',1,'ziti_options']]],
-  ['pq_5fprocess_5fcb_947',['pq_process_cb',['../structziti__options.html#ac5bdd9a653ef37aa21da2e592fbd1d48',1,'ziti_options']]],
-  ['providers_948',['providers',['../structziti__auth__event.html#aa30c488788e3aed576d82b57f5210cb8',1,'ziti_auth_event']]]
+  ['offset_937',['offset',['../structfield__meta.html#ae6c67323b5de753e78ccf6d76e7fa086',1,'field_meta']]],
+  ['oidc_5fauth_938',['OIDC_AUTH',['../structziti__ctrl__cap__s.html#a4de9790ac2d110ff13d954a8e97abfcf',1,'ziti_ctrl_cap_s']]],
+  ['online_939',['online',['../structctrl__detail__s.html#a1677ff5540ec8c16ff04c90d7da1b578',1,'ctrl_detail_s']]]
 ];
