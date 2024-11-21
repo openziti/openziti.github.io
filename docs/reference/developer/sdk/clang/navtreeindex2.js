@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ac157bdf0b85a40d2619cbc8bc1ae5fe2":[2,0,0,10,12,0],
 "ziti__log_8h.html#ab658e6d84759440dbf3c890446075395ace3e26676763569084c86b8c3b67d601":[2,0,0,10,12,5],
 "ziti__log_8h.html#ab71162cca740c9e11c2da1ee6b3db5d5":[2,0,0,10,5],
 "ziti__log_8h.html#ab71944c05db6620f86e2c20d059d8183":[2,0,0,10,7],

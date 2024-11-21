@@ -9,6 +9,7 @@ var model__collections_8h =
     [ "MODEL_MAP_FOR", "model__collections_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c", null ],
     [ "MODEL_MAP_FOREACH", "model__collections_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0", null ],
     [ "var", "model__collections_8h.html#a9152d0581d1360bfac0757eebb444f7c", null ],
+    [ "z_typeof", "model__collections_8h.html#a9e26b673d62316222da3a4fedc082140", null ],
     [ "model_list_iter", "model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c", null ],
     [ "model_map_iter", "model__collections_8h.html#a7037b87ab62417854014f25eeb714086", null ],
     [ "model_list_append", "model__collections_8h.html#ae457db7394b450e87b0ed4fb4671f0d8", null ],

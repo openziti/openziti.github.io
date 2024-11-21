@@ -110,11 +110,13 @@ Macros</h2></td></tr>
 <tr class="separator:a9152d0581d1360bfac0757eebb444f7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13949168a4f299288d35dddc9c9fa4b2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#a13949168a4f299288d35dddc9c9fa4b2">_var</a>(x,  y)&#160;&#160;&#160;x ## y</td></tr>
 <tr class="separator:a13949168a4f299288d35dddc9c9fa4b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e26b673d62316222da3a4fedc082140"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a>(v)&#160;&#160;&#160;__typeof__(v)</td></tr>
+<tr class="separator:a9e26b673d62316222da3a4fedc082140"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7dc514b62f35aeb5f3b6ed873e19b3b0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#a7dc514b62f35aeb5f3b6ed873e19b3b0">MODEL_MAP_FOREACH</a>(k,  v,  <a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>)</td></tr>
 <tr class="separator:a7dc514b62f35aeb5f3b6ed873e19b3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae23e6cf285fb0aeb866dcc4d6b22443c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c">MODEL_MAP_FOR</a>(it,  m)&#160;&#160;&#160;for(<a class="el" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it = <a class="el" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(it))</td></tr>
+<tr class="memitem:ae23e6cf285fb0aeb866dcc4d6b22443c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#ae23e6cf285fb0aeb866dcc4d6b22443c">MODEL_MAP_FOR</a>(it,  m)</td></tr>
 <tr class="separator:ae23e6cf285fb0aeb866dcc4d6b22443c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adca432bf002e29515b7aefa1b4301f4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#adca432bf002e29515b7aefa1b4301f4d">MODEL_LIST_FOR</a>(it,  m)&#160;&#160;&#160;for(<a class="el" href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a> it = <a class="el" href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a>(it))</td></tr>
+<tr class="memitem:adca432bf002e29515b7aefa1b4301f4d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#adca432bf002e29515b7aefa1b4301f4d">MODEL_LIST_FOR</a>(it,  m)</td></tr>
 <tr class="separator:adca432bf002e29515b7aefa1b4301f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a640a46e208b9b32218a8ba2cbc311303"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__collections_8h.html#a640a46e208b9b32218a8ba2cbc311303">MODEL_LIST_FOREACH</a>(el,  <a class="el" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>)</td></tr>
 <tr class="separator:a640a46e208b9b32218a8ba2cbc311303"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,11 +255,18 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;for(<a class="el" href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a> it = <a class="el" href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a>(it))</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a> <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn) = <a class="code" href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a>(<a class="code" href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a>(&amp;(m))); \</div>
+<div class="line">for(<a class="code" href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a> it = <a class="code" href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a>(&amp;(m)); (it) != NULL;              \</div>
+<div class="line">(it) = <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn), <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn) = <a class="code" href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn)))</div>
+<div class="ttc" id="amodel__collections_8h_html_a13a393f89ab99abd53a1b6f504755c01"><div class="ttname"><a href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a></div><div class="ttdeci">model_list_iter model_list_it_next(model_list_iter it)</div></div>
+<div class="ttc" id="amodel__collections_8h_html_a225d1e8d3a39d4b9f8cd4a3f3d7d5efe"><div class="ttname"><a href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a></div><div class="ttdeci">model_list_iter model_list_iterator(model_list *l)</div></div>
+<div class="ttc" id="amodel__collections_8h_html_a2ee4f2aad629ec617402b902520cf01c"><div class="ttname"><a href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a></div><div class="ttdeci">void * model_list_iter</div><div class="ttdef"><b>Definition:</b> model_collections.h:101</div></div>
+<div class="ttc" id="amodel__collections_8h_html_ab67d0e11c50b9344f8aa67c1ed8a62bc"><div class="ttname"><a href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a></div><div class="ttdeci">#define line_var(v)</div><div class="ttdef"><b>Definition:</b> model_collections.h:69</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a640a46e208b9b32218a8ba2cbc311303"></a>
@@ -289,13 +298,9 @@ Functions</h2></td></tr>
 <div class="line">for(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(it) = <a class="code" href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a>((<a class="code" href="structmodel__list.html">model_list</a>*)&amp;(<a class="code" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>)); \</div>
 <div class="line">line_var(it) != NULL &amp;&amp; ((el) = <a class="code" href="model__collections_8h.html#ab23f23130b42f6b650645c5002d3154d">model_list_it_element</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(it)), <span class="keyword">true</span>);                                 \</div>
 <div class="line">line_var(it) = <a class="code" href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(it)))</div>
-<div class="ttc" id="amodel__collections_8h_html_a13a393f89ab99abd53a1b6f504755c01"><div class="ttname"><a href="model__collections_8h.html#a13a393f89ab99abd53a1b6f504755c01">model_list_it_next</a></div><div class="ttdeci">model_list_iter model_list_it_next(model_list_iter it)</div></div>
-<div class="ttc" id="amodel__collections_8h_html_a225d1e8d3a39d4b9f8cd4a3f3d7d5efe"><div class="ttname"><a href="model__collections_8h.html#a225d1e8d3a39d4b9f8cd4a3f3d7d5efe">model_list_iterator</a></div><div class="ttdeci">model_list_iter model_list_iterator(model_list *l)</div></div>
-<div class="ttc" id="amodel__collections_8h_html_a2ee4f2aad629ec617402b902520cf01c"><div class="ttname"><a href="model__collections_8h.html#a2ee4f2aad629ec617402b902520cf01c">model_list_iter</a></div><div class="ttdeci">void * model_list_iter</div><div class="ttdef"><b>Definition:</b> model_collections.h:85</div></div>
 <div class="ttc" id="amodel__collections_8h_html_ab23f23130b42f6b650645c5002d3154d"><div class="ttname"><a href="model__collections_8h.html#ab23f23130b42f6b650645c5002d3154d">model_list_it_element</a></div><div class="ttdeci">const void * model_list_it_element(model_list_iter it)</div></div>
-<div class="ttc" id="amodel__collections_8h_html_ab67d0e11c50b9344f8aa67c1ed8a62bc"><div class="ttname"><a href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a></div><div class="ttdeci">#define line_var(v)</div><div class="ttdef"><b>Definition:</b> model_collections.h:69</div></div>
 <div class="ttc" id="amodel__support_8h_html_a298161e3cb85fe291cbbab1f25f0b8f3"><div class="ttname"><a href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a></div><div class="ttdeci">#define list(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:76</div></div>
-<div class="ttc" id="astructmodel__list_html"><div class="ttname"><a href="structmodel__list.html">model_list</a></div><div class="ttdef"><b>Definition:</b> model_collections.h:81</div></div>
+<div class="ttc" id="astructmodel__list_html"><div class="ttname"><a href="structmodel__list.html">model_list</a></div><div class="ttdef"><b>Definition:</b> model_collections.h:97</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -320,11 +325,18 @@ Functions</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;for(<a class="el" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it = <a class="el" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m)); (it) != NULL; (it) = <a class="el" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(it))</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn) = <a class="code" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(<a class="code" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m)));\</div>
+<div class="line">for(<a class="code" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> it = <a class="code" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(&amp;(m));                          \</div>
+<div class="line">    (it) != NULL;           \</div>
+<div class="line">    (it) = <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn), <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn) = <a class="code" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(itn)))</div>
+<div class="ttc" id="amodel__collections_8h_html_a4481a344f7888c81e79297dc3cca3713"><div class="ttname"><a href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a></div><div class="ttdeci">model_map_iter model_map_it_next(model_map_iter it)</div></div>
+<div class="ttc" id="amodel__collections_8h_html_a7037b87ab62417854014f25eeb714086"><div class="ttname"><a href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a></div><div class="ttdeci">void * model_map_iter</div><div class="ttdef"><b>Definition:</b> model_collections.h:27</div></div>
+<div class="ttc" id="amodel__collections_8h_html_a7344bf17347338e1ae192fc34597203e"><div class="ttname"><a href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a></div><div class="ttdeci">model_map_iter model_map_iterator(const model_map *map)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a7dc514b62f35aeb5f3b6ed873e19b3b0"></a>
@@ -359,14 +371,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><a class="code" href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a> <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e);\</div>
-<div class="line">for (<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e) = <a class="code" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(<a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>), (k) = <a class="code" href="model__collections_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)), (v) = <a class="code" href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)); \</div>
-<div class="line">     line_var(e) != NULL; \</div>
-<div class="line">     line_var(e) = <a class="code" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)), (k) = <a class="code" href="model__collections_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)), (v) = <a class="code" href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)))</div>
+<div class="line">for (<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e) = <a class="code" href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a>(<a class="code" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>), \</div>
+<div class="line">     (k) = (<a class="code" href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a>(k))(uintptr_t)<a class="code" href="model__collections_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)), \</div>
+<div class="line">     (v) = (<a class="code" href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a>(v))<a class="code" href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)),          \</div>
+<div class="line">     <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e) = <a class="code" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)); \</div>
+<div class="line">     (k) != NULL; \</div>
+<div class="line">     (k) = (<a class="code" href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a>(k))(uintptr_t)<a class="code" href="model__collections_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)), \</div>
+<div class="line">     (v) = (<a class="code" href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a>(v))<a class="code" href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e)),          \</div>
+<div class="line">     <a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e) = <a class="code" href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a>(<a class="code" href="model__collections_8h.html#ab67d0e11c50b9344f8aa67c1ed8a62bc">line_var</a>(e))\</div>
+<div class="line">     )</div>
 <div class="ttc" id="amodel__collections_8h_html_a0a845f813a5015d19de89e5b2b14678e"><div class="ttname"><a href="model__collections_8h.html#a0a845f813a5015d19de89e5b2b14678e">model_map_it_value</a></div><div class="ttdeci">void * model_map_it_value(model_map_iter it)</div></div>
 <div class="ttc" id="amodel__collections_8h_html_a1219563bd05538ba38b8c1dafb9e1d06"><div class="ttname"><a href="model__collections_8h.html#a1219563bd05538ba38b8c1dafb9e1d06">model_map_it_key</a></div><div class="ttdeci">const char * model_map_it_key(model_map_iter it)</div></div>
-<div class="ttc" id="amodel__collections_8h_html_a4481a344f7888c81e79297dc3cca3713"><div class="ttname"><a href="model__collections_8h.html#a4481a344f7888c81e79297dc3cca3713">model_map_it_next</a></div><div class="ttdeci">model_map_iter model_map_it_next(model_map_iter it)</div></div>
-<div class="ttc" id="amodel__collections_8h_html_a7037b87ab62417854014f25eeb714086"><div class="ttname"><a href="model__collections_8h.html#a7037b87ab62417854014f25eeb714086">model_map_iter</a></div><div class="ttdeci">void * model_map_iter</div><div class="ttdef"><b>Definition:</b> model_collections.h:27</div></div>
-<div class="ttc" id="amodel__collections_8h_html_a7344bf17347338e1ae192fc34597203e"><div class="ttname"><a href="model__collections_8h.html#a7344bf17347338e1ae192fc34597203e">model_map_iterator</a></div><div class="ttdeci">model_map_iter model_map_iterator(const model_map *map)</div></div>
+<div class="ttc" id="amodel__collections_8h_html_a9e26b673d62316222da3a4fedc082140"><div class="ttname"><a href="model__collections_8h.html#a9e26b673d62316222da3a4fedc082140">z_typeof</a></div><div class="ttdeci">#define z_typeof(v)</div><div class="ttdef"><b>Definition:</b> model_collections.h:76</div></div>
 <div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition:</b> model_support.h:75</div></div>
 </div><!-- fragment -->
 </div>
@@ -393,6 +409,24 @@ Functions</h2></td></tr>
           <td></td>
           <td>)</td>
           <td></td><td>&#160;&#160;&#160;<a class="el" href="model__collections_8h.html#a13949168a4f299288d35dddc9c9fa4b2">_var</a>(x,y)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9e26b673d62316222da3a4fedc082140"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e26b673d62316222da3a4fedc082140">&#9670;&nbsp;</a></span>z_typeof</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define z_typeof</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">v</td><td>)</td>
+          <td>&#160;&#160;&#160;__typeof__(v)</td>
         </tr>
       </table>
 </div><div class="memdoc">
