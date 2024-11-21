@@ -1,6 +1,8 @@
 var errors_8h =
 [
     [ "ZITI_AUTHENTICATION_FAILED", "errors_8h.html#a17268e0cd0da850d2c72ebec6d753794", null ],
+    [ "ZITI_CERT_FAILED_VALIDATION", "errors_8h.html#ab928db6b6156772438e16fac8edfd8f4", null ],
+    [ "ZITI_CERT_IN_USE", "errors_8h.html#a6241ba565867c4c355883e022e40c948", null ],
     [ "ZITI_CONFIG_NOT_FOUND", "errors_8h.html#a185d1e51300e4ae8d7cb85d7c478d543", null ],
     [ "ZITI_CONN_CLOSED", "errors_8h.html#ab36f14782fa20b8b6f35fa59c123e65e", null ],
     [ "ZITI_CONNABORT", "errors_8h.html#a9ae78eeb9520342dc1f8bd599acada0c", null ],
