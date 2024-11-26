@@ -30,6 +30,7 @@ var errors_8h =
     [ "ZITI_MFA_EXISTS", "errors_8h.html#a91dc95cf4fa15d1c30be9dfc20b4240d", null ],
     [ "ZITI_MFA_INVALID_TOKEN", "errors_8h.html#a579194197b56e798d0c5ee90c1d78d46", null ],
     [ "ZITI_MFA_NOT_ENROLLED", "errors_8h.html#a9e4cb669614ae5250c577ecf8443c7f7", null ],
+    [ "ZITI_MISSING_CERT_CLAIM", "errors_8h.html#ad0ae466037c6f6462e92b6eeb6454beb", null ],
     [ "ZITI_NOT_AUTHORIZED", "errors_8h.html#a1fb8ab9c5c3a44cad56786c8cfc57bfd", null ],
     [ "ZITI_NOT_FOUND", "errors_8h.html#af51cb251006f45cbba59572165a859f3", null ],
     [ "ZITI_OK", "errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec", null ],
