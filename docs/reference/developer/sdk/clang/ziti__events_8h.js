@@ -2,7 +2,7 @@ var ziti__events_8h =
 [
     [ "ziti_context_event", "structziti__context__event.html", "structziti__context__event" ],
     [ "ctrl_detail_s", "structctrl__detail__s.html", "structctrl__detail__s" ],
-    [ "ziti_api_event", "structziti__api__event.html", "structziti__api__event" ],
+    [ "ziti_config_event", "structziti__config__event.html", "structziti__config__event" ],
     [ "ziti_router_event", "structziti__router__event.html", "structziti__router__event" ],
     [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
     [ "ziti_auth_event", "structziti__auth__event.html", "structziti__auth__event" ],
@@ -18,7 +18,7 @@ var ziti__events_8h =
       [ "ZitiRouterEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab", null ],
       [ "ZitiServiceEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0", null ],
       [ "ZitiAuthEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a4abcd5199b9c3afb8a61dfb034fc4fea", null ],
-      [ "ZitiAPIEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a86fcb5b7eb6921e8526bfe2001e2c659", null ]
+      [ "ZitiConfigEvent", "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93ae18eeed7d395501eaab10031c9e45e37", null ]
     ] ],
     [ "ziti_router_status", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02", [
       [ "EdgeRouterAdded", "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a5d5d6523bfa9d78d1f9491de7424fc53", null ],

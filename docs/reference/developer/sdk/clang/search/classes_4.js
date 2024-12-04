@@ -1,9 +1,9 @@
 var searchData=
 [
   ['ziti_5faddress_624',['ziti_address',['../structziti__address.html',1,'']]],
-  ['ziti_5fapi_5fevent_625',['ziti_api_event',['../structziti__api__event.html',1,'']]],
-  ['ziti_5fauth_5fevent_626',['ziti_auth_event',['../structziti__auth__event.html',1,'']]],
-  ['ziti_5fclient_5fctx_627',['ziti_client_ctx',['../structziti__client__ctx.html',1,'']]],
+  ['ziti_5fauth_5fevent_625',['ziti_auth_event',['../structziti__auth__event.html',1,'']]],
+  ['ziti_5fclient_5fctx_626',['ziti_client_ctx',['../structziti__client__ctx.html',1,'']]],
+  ['ziti_5fconfig_5fevent_627',['ziti_config_event',['../structziti__config__event.html',1,'']]],
   ['ziti_5fcontext_5fevent_628',['ziti_context_event',['../structziti__context__event.html',1,'']]],
   ['ziti_5fctrl_5fcap_5fs_629',['ziti_ctrl_cap_s',['../structziti__ctrl__cap__s.html',1,'']]],
   ['ziti_5fdial_5fopts_630',['ziti_dial_opts',['../structziti__dial__opts.html',1,'']]],
