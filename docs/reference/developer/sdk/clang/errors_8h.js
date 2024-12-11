@@ -1,5 +1,6 @@
 var errors_8h =
 [
+    [ "ZITI_ALLOC_FAILED", "errors_8h.html#a8b6c33fd862cb86f87caa47469be07e9", null ],
     [ "ZITI_AUTHENTICATION_FAILED", "errors_8h.html#a17268e0cd0da850d2c72ebec6d753794", null ],
     [ "ZITI_CERT_FAILED_VALIDATION", "errors_8h.html#ab928db6b6156772438e16fac8edfd8f4", null ],
     [ "ZITI_CERT_IN_USE", "errors_8h.html#a6241ba565867c4c355883e022e40c948", null ],
