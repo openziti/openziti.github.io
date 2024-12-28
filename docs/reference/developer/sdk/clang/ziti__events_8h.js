@@ -8,6 +8,7 @@ var ziti__events_8h =
     [ "ziti_auth_event", "structziti__auth__event.html", "structziti__auth__event" ],
     [ "ziti_event_t", "structziti__event__t.html", "structziti__event__t" ],
     [ "ziti_auth_action", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7", [
+      [ "ziti_auth_cannot_continue", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a416e4968b6609f343c9a95d869268372", null ],
       [ "ziti_auth_prompt_totp", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7ab5d9b69fb3f55902d29715e43b500a0e", null ],
       [ "ziti_auth_prompt_pin", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a1b01380d4084a3bbb2712540a7dce841", null ],
       [ "ziti_auth_select_external", "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a70780dee7ac8e39665fb6b3e2abc0b6c", null ],

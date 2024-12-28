@@ -222,10 +222,11 @@ var NAVTREEINDEX1 =
 "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a5d5d6523bfa9d78d1f9491de7424fc53":[2,0,0,9,9,0],
 "ziti__events_8h.html#a2a811265086f321314174d9d60f36c02a614cb695e7f6f9b713ab5f10d9a60272":[2,0,0,9,9,3],
 "ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7":[2,0,0,9,7],
-"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a1b01380d4084a3bbb2712540a7dce841":[2,0,0,9,7,1],
-"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a70780dee7ac8e39665fb6b3e2abc0b6c":[2,0,0,9,7,2],
-"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7ab5d9b69fb3f55902d29715e43b500a0e":[2,0,0,9,7,0],
-"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7acdfc02d8fc9934a4e0fc21d27c6dfd0d":[2,0,0,9,7,3],
+"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a1b01380d4084a3bbb2712540a7dce841":[2,0,0,9,7,2],
+"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a416e4968b6609f343c9a95d869268372":[2,0,0,9,7,0],
+"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7a70780dee7ac8e39665fb6b3e2abc0b6c":[2,0,0,9,7,3],
+"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7ab5d9b69fb3f55902d29715e43b500a0e":[2,0,0,9,7,1],
+"ziti__events_8h.html#ac15e9ddd3d3963a11012fb26aa3943c7acdfc02d8fc9934a4e0fc21d27c6dfd0d":[2,0,0,9,7,4],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93":[2,0,0,9,8],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab":[2,0,0,9,8,1],
 "ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a4abcd5199b9c3afb8a61dfb034fc4fea":[2,0,0,9,8,3],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "ziti__log_8h.html#a8530c2526b442921973e8c0bed2adc65":[2,0,0,10,19],
 "ziti__log_8h.html#aab6f54c951a5da259053e1be7ccb8a71":[2,0,0,10,10],
 "ziti__log_8h.html#ab4235eba452aa02c647c9e103fd5d5ea":[2,0,0,10,18],
-"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395":[2,0,0,10,12],
-"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a0593585da9181e972974c1274d8f2b4f":[2,0,0,10,12,4]
+"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395":[2,0,0,10,12]
 };
