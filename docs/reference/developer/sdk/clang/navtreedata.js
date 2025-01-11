@@ -36,8 +36,8 @@ var NAVTREE =
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
       [ "Data Fields", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
+        [ "All", "functions.html", "functions_dup" ],
+        [ "Variables", "functions_vars.html", "functions_vars" ]
       ] ]
     ] ],
     [ "Files", "files.html", [
@@ -58,8 +58,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"structtag.html",
-"ziti__log_8h.html#ab658e6d84759440dbf3c890446075395a0593585da9181e972974c1274d8f2b4f"
+"model__support_8h.html#abc95a41c4f2d36ea51658a15acc92333",
+"structziti__service.html#a4c934889fc6fa4088f2bfe4fc5e31062",
+"ziti__model_8h.html#a4d647b1047099a41c3e7b6e101e22ac3"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

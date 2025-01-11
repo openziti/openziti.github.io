@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['timestamp_1004',['timestamp',['../model__support_8h.html#ab2a65074a62982920edadbc6f5e01433',1,'model_support.h']]],
-  ['to_5fjson_5ffunc_1005',['to_json_func',['../model__support_8h.html#a57b87131112c71d788a78669bc9a5eb8',1,'model_support.h']]]
+  ['string_5fbuf_5ft_0',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]]
 ];

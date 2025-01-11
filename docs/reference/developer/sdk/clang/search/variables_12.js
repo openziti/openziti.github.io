@@ -1,6 +1,14 @@
 var searchData=
 [
-  ['value_5fof_969',['value_of',['../structziti__protocol__s.html#a595696a2bc8bfb00f94abc35dff196b3',1,'ziti_protocol_s::value_of()'],['../structziti__session__type__s.html#a7380fce346182789c45da63fe4369c40',1,'ziti_session_type_s::value_of()'],['../structziti__ctrl__cap__s.html#accb71984235d7e6cae9ecc83e300c487',1,'ziti_ctrl_cap_s::value_of()']]],
-  ['value_5fofn_970',['value_ofn',['../structziti__protocol__s.html#ae989b7cd8d64d1fad1a77186758b4ca3',1,'ziti_protocol_s::value_ofn()'],['../structziti__session__type__s.html#a8f01d7ade758c2da18d61d2e7e20cb5c',1,'ziti_session_type_s::value_ofn()'],['../structziti__ctrl__cap__s.html#a19d4e5b410d65f1d36560fa7478719bb',1,'ziti_ctrl_cap_s::value_ofn()']]],
-  ['version_971',['version',['../structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f',1,'ziti_router_event']]]
+  ['tcp_0',['tcp',['../structziti__protocol__s.html#a32784e75059182cae7f33832799a6c81',1,'ziti_protocol_s']]],
+  ['terminator_5fcost_1',['terminator_cost',['../structziti__listen__opts.html#a3b447cb2c2832f0e691cb7054bef4d7f',1,'ziti_listen_opts']]],
+  ['terminator_5fprecedence_2',['terminator_precedence',['../structziti__listen__opts.html#aacae40e85c508aaa47df26fe7b1597a8',1,'ziti_listen_opts']]],
+  ['terminators_3',['terminators',['../structziti__host__cfg__v2.html#a2ae11d825473ede11ee39263315d2073',1,'ziti_host_cfg_v2']]],
+  ['timeout_4',['timeout',['../structziti__posture__query.html#a49837cadc0e49c72cd4a0a87567b020c',1,'ziti_posture_query']]],
+  ['timeoutremaining_5',['timeoutRemaining',['../structziti__posture__query.html#adb95273c080dd8dc0be92fab9b1542b6',1,'ziti_posture_query']]],
+  ['to_5fjson_6',['to_json',['../structtype__meta.html#aa2bf8d10edf6e244cf756e0734dc81a5',1,'type_meta']]],
+  ['token_7',['token',['../structziti__enroll__opts.html#ac98c66376eafd37991dce78e290cb876',1,'ziti_enroll_opts']]],
+  ['totp_8',['TOTP',['../structziti__auth__query__type__s.html#a22d11bf08c9d5f0b062970ca1b25507b',1,'ziti_auth_query_type_s']]],
+  ['type_9',['type',['../structtag.html#a7241bd60cffd644fefa293780169f6fd',1,'tag::type'],['../structziti__auth__event.html#a4796233fbe79deb84c577de7d9683e27',1,'ziti_auth_event::type'],['../structziti__event__t.html#a142aff254b19096ad684974574ad9d2f',1,'ziti_event_t::type'],['../structziti__address.html#ad5a3488d88a6abfdcd2e24f3c7323dd5',1,'ziti_address::type'],['../structziti__proxy__server.html#a1bf82c82c880c80aab58258bf55aaa64',1,'ziti_proxy_server::type']]],
+  ['type_5fid_10',['type_id',['../structziti__auth__query__mfa.html#af788bd9c63c916d1cf0000f432ce8821',1,'ziti_auth_query_mfa']]]
 ];

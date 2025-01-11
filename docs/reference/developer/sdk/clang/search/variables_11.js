@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['udp_966',['udp',['../structziti__protocol__s.html#a5ff5d9f70e263b0fc17ebf46a507cafb',1,'ziti_protocol_s']]],
-  ['url_967',['url',['../structziti__enroll__opts.html#a3afcec94d620b5b9e61e9a119822a3dd',1,'ziti_enroll_opts::url()'],['../structctrl__detail__s.html#a8a527271598afe0a5dbf4b0e12b5bb66',1,'ctrl_detail_s::url()']]],
-  ['use_5fkeychain_968',['use_keychain',['../structziti__enroll__opts.html#a3571d9810554c821949f3ce494ba3cc5',1,'ziti_enroll_opts']]]
+  ['scopes_0',['scopes',['../structziti__jwt__signer.html#a73b51788bc3e9b4de9c09dface131bf3',1,'ziti_jwt_signer']]],
+  ['service_1',['service',['../structziti__event__t.html#aa1276c75cb82a8f50030f3a93005bc39',1,'ziti_event_t']]],
+  ['size_2',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
+  ['source_5fip_3',['source_ip',['../structziti__intercept__cfg__v1.html#ad1b9f56dd7731accc29be6d2f8648250',1,'ziti_intercept_cfg_v1']]],
+  ['status_4',['status',['../structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738',1,'ziti_router_event']]],
+  ['stream_5',['stream',['../structziti__dial__opts.html#ab7ef8b383118b5c66997c83db2abedf9',1,'ziti_dial_opts']]],
+  ['string_5fvalue_6',['string_value',['../structtag.html#aa8fc9c092d4a7cbeb2e8322b31a58115',1,'tag']]]
 ];

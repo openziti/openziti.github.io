@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['new_5ffixed_5fstring_5fbuf_742',['new_fixed_string_buf',['../ziti__buffer_8h.html#aa71669ae2d003e92fa5df34f5927e3e2',1,'ziti_buffer.h']]],
-  ['new_5fstring_5fbuf_743',['new_string_buf',['../ziti__buffer_8h.html#a2d76c312d2473941ad7f5470e43e01da',1,'ziti_buffer.h']]]
+  ['new_5ffixed_5fstring_5fbuf_0',['new_fixed_string_buf',['../ziti__buffer_8h.html#a5265a1591edce35a96d6b061ca5ed89b',1,'ziti_buffer.h']]],
+  ['new_5fstring_5fbuf_1',['new_string_buf',['../ziti__buffer_8h.html#a5d74f50f2067094df03cce034917aea5',1,'ziti_buffer.h']]]
 ];

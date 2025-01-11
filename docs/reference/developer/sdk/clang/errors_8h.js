@@ -40,5 +40,5 @@ var errors_8h =
     [ "ZITI_SERVICE_UNAVAILABLE", "errors_8h.html#a3a146ec43d9f6661e4da04e4c89f51d9", null ],
     [ "ZITI_TIMEOUT", "errors_8h.html#a78a3e199a22f8c2bd558fa7a622000fd", null ],
     [ "ZITI_WTF", "errors_8h.html#a6d0dccf58f52d32bbe696bc2fb625fff", null ],
-    [ "ziti_errorstr", "errors_8h.html#a2182f9078122799ec98a7c1f17094191", null ]
+    [ "ziti_errorstr", "errors_8h.html#af6408f67819f57374d203d557b6df400", null ]
 ];

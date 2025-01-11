@@ -1,17 +1,10 @@
 var searchData=
 [
-  ['second_307',['SECOND',['../types_8h.html#a94212be2394d2d37d9dfd33d07d82dba',1,'types.h']]],
-  ['service_308',['service',['../structziti__event__t.html#aa1276c75cb82a8f50030f3a93005bc39',1,'ziti_event_t']]],
-  ['size_309',['size',['../structtype__meta.html#a7aaa57b534858fd4ed18a0ec9f8c6692',1,'type_meta']]],
-  ['status_310',['status',['../structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738',1,'ziti_router_event']]],
-  ['stream_311',['stream',['../structziti__dial__opts.html#ab7ef8b383118b5c66997c83db2abedf9',1,'ziti_dial_opts']]],
-  ['string_5fbuf_5fappend_312',['string_buf_append',['../ziti__buffer_8h.html#aaa3cb7c7a4bc31aeb779c845defe24d6',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5fappend_5fbyte_313',['string_buf_append_byte',['../ziti__buffer_8h.html#a5e6251c958c86eab7e16a3fd21d766d3',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5fappend_5furlsafe_314',['string_buf_append_urlsafe',['../ziti__buffer_8h.html#a6ad4b8ddef10731da5647f6e60f3a198',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5fappendn_315',['string_buf_appendn',['../ziti__buffer_8h.html#a36fe074d40f452f5648421346ba831dc',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5ffmt_316',['string_buf_fmt',['../ziti__buffer_8h.html#a2c147f90c0a0988cc4525d9e227dad69',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5fsize_317',['string_buf_size',['../ziti__buffer_8h.html#a911c7e1f05fe19396e9c0b6ad2c4ec5f',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5ft_318',['string_buf_t',['../ziti__buffer_8h.html#aa26e579538d8f1c8e2a131b92c683d61',1,'ziti_buffer.h']]],
-  ['string_5fbuf_5fto_5fstring_319',['string_buf_to_string',['../ziti__buffer_8h.html#aa87e8cae8b17a64c70d827273138f1b9',1,'ziti_buffer.h']]],
-  ['string_5fvalue_320',['string_value',['../structtag.html#aa8fc9c092d4a7cbeb2e8322b31a58115',1,'tag']]]
+  ['rate_5ftype_0',['rate_type',['../enums_8h.html#a3a2d440e7729afe454180909de5cee32',1,'enums.h']]],
+  ['readme_2emd_1',['README.md',['../README_8md.html',1,'']]],
+  ['recovery_5fcodes_2',['recovery_codes',['../structziti__mfa__enrollment.html#a17c4e591188c7063f3380f48c38c15c1',1,'ziti_mfa_enrollment']]],
+  ['refresh_5finterval_3',['refresh_interval',['../structziti__options.html#a19c21cc791a4b65d83bd66e9dc842679',1,'ziti_options']]],
+  ['removed_4',['removed',['../structziti__service__event.html#a7bc968da316653eae833971b3b38bced',1,'ziti_service_event']]],
+  ['revision_5',['revision',['../structziti__version.html#ad0cd1cbeb0ffae5b34bd86cabadf4093',1,'ziti_version']]],
+  ['router_6',['router',['../structziti__event__t.html#af85bf15e7ea42c21aa42c57deb281d2a',1,'ziti_event_t']]]
 ];
