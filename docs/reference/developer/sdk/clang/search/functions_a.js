@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ziti_5faccept_0',['ziti_accept',['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h'],['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h']]],
+  ['ziti_5faccept_0',['ziti_accept',['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h'],['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h']]],
   ['ziti_5faddress_5fmatch_1',['ziti_address_match',['../ziti__model_8h.html#aa697b81d27396da9ba5820e9cf00d97d',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5farray_2',['ziti_address_match_array',['../ziti__model_8h.html#af578f6040feef81a285efdc42f6ed91b',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5flist_3',['ziti_address_match_list',['../ziti__model_8h.html#a5078db31bf0e462e6b00851dabe653af',1,'ziti_model.h']]],

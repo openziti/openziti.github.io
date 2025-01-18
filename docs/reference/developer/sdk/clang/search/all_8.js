@@ -6,7 +6,5 @@ var searchData=
   ['high_20level_20tt_20zitilib_20tt_20api_3',['High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API',['../index.html#autotoc_md3',1,'']]],
   ['hostname_4',['hostname',['../structziti__address.html#abaa2fa39a92d31f12d663d99d99569ed',1,'ziti_address::hostname'],['../structziti__client__cfg__v1.html#a7487d93922310802b088d1d1644a5598',1,'ziti_client_cfg_v1::hostname'],['../structziti__server__cfg__v1.html#aedb1636a6d0b22a308c6b9406f1421ee',1,'ziti_server_cfg_v1::hostname']]],
   ['hour_5',['HOUR',['../types_8h.html#a4698ae12cf6a8acb5886fffd0ec897e6',1,'types.h']]],
-  ['http_6',['http',['../structziti__proxy__server__type__s.html#a1be1dd841b9f8226252a670a5d5badf7',1,'ziti_proxy_server_type_s']]],
-  ['http_5fmethod_7',['http_method',['../structziti__auth__query__mfa.html#ae753ce3b1da3bf27df28fcd90257833d',1,'ziti_auth_query_mfa']]],
-  ['http_5furl_8',['http_url',['../structziti__auth__query__mfa.html#aaa42daa9a56951c30361b132a7c4db2f',1,'ziti_auth_query_mfa']]]
+  ['http_6',['http',['../structziti__proxy__server__type__s.html#a1be1dd841b9f8226252a670a5d5badf7',1,'ziti_proxy_server_type_s']]]
 ];
