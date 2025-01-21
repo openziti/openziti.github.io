@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkopen_ziti=self.webpackChunkopen_ziti||[]).push([[1217],{30713:e=>{e.exports=JSON.parse('{"name":"docusaurus-plugin-content-docs","id":"docs-policies"}')}}]);
