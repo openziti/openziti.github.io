@@ -74,6 +74,7 @@ var model__support_8h =
     [ "get_tag_meta", "model__support_8h.html#a9d04dc45d120328cf2581db79a52afce", null ],
     [ "get_timestamp_meta", "model__support_8h.html#ac6357e69b238cad06460f17c511d6701", null ],
     [ "json_enum", "model__support_8h.html#afb8565158be3b48abece0f8ee6f7319b", null ],
+    [ "model_alloc", "model__support_8h.html#a8197cf776b6d65ba4bf8f6c2090de118", null ],
     [ "model_array_from_json", "model__support_8h.html#ae4c6cfb11585afc750a4069ce8590a67", null ],
     [ "model_cmp", "model__support_8h.html#a9b4c0e9c466fcfb4671ac5f74737826e", null ],
     [ "model_free", "model__support_8h.html#afe4698ae448d847d9d8de93da8553e63", null ],
