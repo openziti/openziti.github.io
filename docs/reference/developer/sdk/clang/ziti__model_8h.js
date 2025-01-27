@@ -6,6 +6,7 @@ var ziti__model_8h =
     [ "ziti_auth_query_type_s", "structziti__auth__query__type__s.html", "structziti__auth__query__type__s" ],
     [ "ziti_posture_query_type_s", "structziti__posture__query__type__s.html", "structziti__posture__query__type__s" ],
     [ "ziti_ctrl_cap_s", "structziti__ctrl__cap__s.html", "structziti__ctrl__cap__s" ],
+    [ "ziti_target_token_s", "structziti__target__token__s.html", "structziti__target__token__s" ],
     [ "api_path", "structapi__path.html", "structapi__path" ],
     [ "ziti_api_versions", "structziti__api__versions.html", "structziti__api__versions" ],
     [ "ziti_version", "structziti__version.html", "structziti__version" ],
@@ -55,6 +56,7 @@ var ziti__model_8h =
     [ "ZITI_SERVER_CFG_V1_MODEL", "ziti__model_8h.html#a9e929cacdfd12286cb36f919cbb652f3", null ],
     [ "ZITI_SERVICE_MODEL", "ziti__model_8h.html#a78cf441bb373466b3d373580b28df7dc", null ],
     [ "ZITI_SESSION_TYPE_ENUM", "ziti__model_8h.html#a056bef21937d3cba1ab93c4ecf3795c4", null ],
+    [ "ZITI_SIGNER_TARGET_TOKEN", "ziti__model_8h.html#a214628bb64d66531740c4da93a8a993f", null ],
     [ "ZITI_VERSION_MODEL", "ziti__model_8h.html#a7ba15568eba891661a06453434986669", null ],
     [ "api_path_array", "ziti__model_8h.html#afa3a72f690f8a4155d170fce76d43264", null ],
     [ "parse_service_cfg_f", "ziti__model_8h.html#ae48340d738e3483f038ec3064e11fc4b", null ],
@@ -89,6 +91,8 @@ var ziti__model_8h =
     [ "ziti_service_array", "ziti__model_8h.html#a1069ed6115b5caebf5a4ee458b6a467c", null ],
     [ "ziti_session_type", "ziti__model_8h.html#a09b1b887e9d3b6aa50fad74572606d9b", null ],
     [ "ziti_session_type_array", "ziti__model_8h.html#a112c47c1ec3e7484933cbd3d39608ff3", null ],
+    [ "ziti_target_token", "ziti__model_8h.html#a5fc5aa3b9ff8fdf1303afa61d924ddeb", null ],
+    [ "ziti_target_token_array", "ziti__model_8h.html#a3447fc553fa79e55e90f8406274fcd82", null ],
     [ "ziti_version_array", "ziti__model_8h.html#a261669f665d5ccd4ec5f68d3d6333247", null ],
     [ "ziti_address_type", "ziti__model_8h.html#acd0d51f4fe1c9310bb9ee3990cbafe41", [
       [ "ziti_address_hostname", "ziti__model_8h.html#acd0d51f4fe1c9310bb9ee3990cbafe41a4273c0f043aa26d1d6f8b196f68aa4e6", null ],
@@ -128,6 +132,11 @@ var ziti__model_8h =
       [ "ziti_session_type_Unknown", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ac9ade772985cd1522b713d047a00819a", null ],
       [ "ziti_session_type_Bind", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad8ac3e8bf27d417d8d76148c2567488d", null ],
       [ "ziti_session_type_Dial", "ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad1a180cee3d3c0f987830792f48bf9df", null ]
+    ] ],
+    [ "ziti_target_token", "ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b", [
+      [ "ziti_target_token_Unknown", "ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73bae8fc4dc6ebce5a3f1636117de35e8453", null ],
+      [ "ziti_target_token_access_token", "ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73ba209e1262adcbc92fff162225be60a08a", null ],
+      [ "ziti_target_token_id_token", "ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73ba1d093ac26a49e6774447aacabc522818", null ]
     ] ],
     [ "free_api_path_array", "ziti__model_8h.html#aac9527eea8ed06cc00dbf0ec4a96d5a9", null ],
     [ "free_ziti_address_array", "ziti__model_8h.html#a09cada313063839e62ef7bdceaae4a3a", null ],
@@ -176,6 +185,7 @@ var ziti__model_8h =
     [ "get_ziti_server_cfg_v1_meta", "ziti__model_8h.html#a9943fe71fe35d84cffe1fb5eba4810c5", null ],
     [ "get_ziti_service_meta", "ziti__model_8h.html#a991356ca4903bfcca15a47ee45778637", null ],
     [ "get_ziti_session_type_meta", "ziti__model_8h.html#ab9ba9373a1469fb938a0b089d1363b02", null ],
+    [ "get_ziti_target_token_meta", "ziti__model_8h.html#adfdc21007b8bf4840e3d45ae91e09fd3", null ],
     [ "get_ziti_version_meta", "ziti__model_8h.html#a4435ceaacdfa320617c9ecf0fbb558f2", null ],
     [ "parse_api_path", "ziti__model_8h.html#a769b3858af91d938b29926474f690412", null ],
     [ "parse_api_path_array", "ziti__model_8h.html#a8331ffadf42df2253e4397deb175fb90", null ],
@@ -281,5 +291,6 @@ var ziti__model_8h =
     [ "ziti_posture_query_types", "ziti__model_8h.html#ab243bfa5ff0ace3bebec5685717cddd1", null ],
     [ "ziti_protocols", "ziti__model_8h.html#a5f270ca02a1486144a0015542d6f9bf1", null ],
     [ "ziti_proxy_server_types", "ziti__model_8h.html#a96bd72bf9f9caf665840f5893eac18b9", null ],
-    [ "ziti_session_types", "ziti__model_8h.html#a3de0600dd2518901d34ab7e57856a42d", null ]
+    [ "ziti_session_types", "ziti__model_8h.html#a3de0600dd2518901d34ab7e57856a42d", null ],
+    [ "ziti_target_tokens", "ziti__model_8h.html#ab3c66d0c29f23aee15e222628799b4bf", null ]
 ];

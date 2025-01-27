@@ -30,9 +30,12 @@ var searchData=
   ['ziti_5fsession_5ftype_5fbind_27',['ziti_session_type_Bind',['../ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad8ac3e8bf27d417d8d76148c2567488d',1,'ziti_model.h']]],
   ['ziti_5fsession_5ftype_5fdial_28',['ziti_session_type_Dial',['../ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ad1a180cee3d3c0f987830792f48bf9df',1,'ziti_model.h']]],
   ['ziti_5fsession_5ftype_5funknown_29',['ziti_session_type_Unknown',['../ziti__model_8h.html#a16d0312daa1421133c53164eec94b532ac9ade772985cd1522b713d047a00819a',1,'ziti_model.h']]],
-  ['zitiauthevent_30',['ZitiAuthEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a4abcd5199b9c3afb8a61dfb034fc4fea',1,'ziti_events.h']]],
-  ['ziticonfigevent_31',['ZitiConfigEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93ae18eeed7d395501eaab10031c9e45e37',1,'ziti_events.h']]],
-  ['ziticontextevent_32',['ZitiContextEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4',1,'ziti_events.h']]],
-  ['zitirouterevent_33',['ZitiRouterEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab',1,'ziti_events.h']]],
-  ['zitiserviceevent_34',['ZitiServiceEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0',1,'ziti_events.h']]]
+  ['ziti_5ftarget_5ftoken_5faccess_5ftoken_30',['ziti_target_token_access_token',['../ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73ba209e1262adcbc92fff162225be60a08a',1,'ziti_model.h']]],
+  ['ziti_5ftarget_5ftoken_5fid_5ftoken_31',['ziti_target_token_id_token',['../ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73ba1d093ac26a49e6774447aacabc522818',1,'ziti_model.h']]],
+  ['ziti_5ftarget_5ftoken_5funknown_32',['ziti_target_token_Unknown',['../ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73bae8fc4dc6ebce5a3f1636117de35e8453',1,'ziti_model.h']]],
+  ['zitiauthevent_33',['ZitiAuthEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a4abcd5199b9c3afb8a61dfb034fc4fea',1,'ziti_events.h']]],
+  ['ziticonfigevent_34',['ZitiConfigEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93ae18eeed7d395501eaab10031c9e45e37',1,'ziti_events.h']]],
+  ['ziticontextevent_35',['ZitiContextEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a5b10c1db6f606c49c345ce4d8bcc5db4',1,'ziti_events.h']]],
+  ['zitirouterevent_36',['ZitiRouterEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a19b2fff9bcf878a15bb44ccbb7d0caab',1,'ziti_events.h']]],
+  ['zitiserviceevent_37',['ZitiServiceEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a75341fde6fea6d11ac7b8e8b0eca29f0',1,'ziti_events.h']]]
 ];

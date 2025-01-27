@@ -55,7 +55,9 @@ var searchData=
   ['ziti_5fsession_5ftype_52',['ziti_session_type',['../ziti__model_8h.html#a09b1b887e9d3b6aa50fad74572606d9b',1,'ziti_model.h']]],
   ['ziti_5fsession_5ftype_5farray_53',['ziti_session_type_array',['../ziti__model_8h.html#a112c47c1ec3e7484933cbd3d39608ff3',1,'ziti_model.h']]],
   ['ziti_5fsocket_5ft_54',['ziti_socket_t',['../zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4',1,'zitilib.h']]],
-  ['ziti_5fverify_5fextend_5fcert_5fauthenticator_5fcb_55',['ziti_verify_extend_cert_authenticator_cb',['../ziti_8h.html#abc15f1012d9536c9651cd1f511943070',1,'ziti.h']]],
-  ['ziti_5fversion_5farray_56',['ziti_version_array',['../ziti__model_8h.html#a261669f665d5ccd4ec5f68d3d6333247',1,'ziti_model.h']]],
-  ['ziti_5fwrite_5fcb_57',['ziti_write_cb',['../ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d',1,'ziti.h']]]
+  ['ziti_5ftarget_5ftoken_55',['ziti_target_token',['../ziti__model_8h.html#a5fc5aa3b9ff8fdf1303afa61d924ddeb',1,'ziti_model.h']]],
+  ['ziti_5ftarget_5ftoken_5farray_56',['ziti_target_token_array',['../ziti__model_8h.html#a3447fc553fa79e55e90f8406274fcd82',1,'ziti_model.h']]],
+  ['ziti_5fverify_5fextend_5fcert_5fauthenticator_5fcb_57',['ziti_verify_extend_cert_authenticator_cb',['../ziti_8h.html#abc15f1012d9536c9651cd1f511943070',1,'ziti.h']]],
+  ['ziti_5fversion_5farray_58',['ziti_version_array',['../ziti__model_8h.html#a261669f665d5ccd4ec5f68d3d6333247',1,'ziti_model.h']]],
+  ['ziti_5fwrite_5fcb_59',['ziti_write_cb',['../ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d',1,'ziti.h']]]
 ];

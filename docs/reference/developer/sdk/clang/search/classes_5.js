@@ -36,5 +36,6 @@ var searchData=
   ['ziti_5fservice_33',['ziti_service',['../structziti__service.html',1,'']]],
   ['ziti_5fservice_5fevent_34',['ziti_service_event',['../structziti__service__event.html',1,'']]],
   ['ziti_5fsession_5ftype_5fs_35',['ziti_session_type_s',['../structziti__session__type__s.html',1,'']]],
-  ['ziti_5fversion_36',['ziti_version',['../structziti__version.html',1,'']]]
+  ['ziti_5ftarget_5ftoken_5fs_36',['ziti_target_token_s',['../structziti__target__token__s.html',1,'']]],
+  ['ziti_5fversion_37',['ziti_version',['../structziti__version.html',1,'']]]
 ];

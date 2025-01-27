@@ -6,5 +6,6 @@ var structziti__jwt__signer =
     [ "id", "structziti__jwt__signer.html#abbb9131fa56923467601df47c4d3d0ec", null ],
     [ "name", "structziti__jwt__signer.html#aca0ea2a27d2568a37a063a47238ff638", null ],
     [ "provider_url", "structziti__jwt__signer.html#a2c27722e3ebd16b6b06a3029017f1b27", null ],
-    [ "scopes", "structziti__jwt__signer.html#a73b51788bc3e9b4de9c09dface131bf3", null ]
+    [ "scopes", "structziti__jwt__signer.html#a73b51788bc3e9b4de9c09dface131bf3", null ],
+    [ "target_token", "structziti__jwt__signer.html#a22c7a37ec73e3b947e3ddd6d6b547082", null ]
 ];
