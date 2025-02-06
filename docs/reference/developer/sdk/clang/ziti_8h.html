@@ -93,7 +93,6 @@ $(document).ready(function(){initNavTree('ziti_8h.html',''); initResizable(); })
 <a href="#nested-classes">Data Structures</a> &#124;
 <a href="#define-members">Macros</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#enum-members">Enumerations</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">ziti.h File Reference</div></div>
 </div><!--header-->
@@ -210,14 +209,6 @@ Typedefs</h2></td></tr>
 <tr class="memitem:abc15f1012d9536c9651cd1f511943070" id="r_abc15f1012d9536c9651cd1f511943070"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#abc15f1012d9536c9651cd1f511943070">ziti_verify_extend_cert_authenticator_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, void *ctx)</td></tr>
 <tr class="memdesc:abc15f1012d9536c9651cd1f511943070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verify Extend Certificate Authenticator Callback.  <br /></td></tr>
 <tr class="separator:abc15f1012d9536c9651cd1f511943070"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
-Enumerations</h2></td></tr>
-<tr class="memitem:a9090dc164c22c92f73037b414d0b4178" id="r_a9090dc164c22c92f73037b414d0b4178"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a9090dc164c22c92f73037b414d0b4178">ziti_terminator_precedence</a> { <a class="el" href="ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e">PRECEDENCE_DEFAULT</a> = 0
-, <a class="el" href="ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988">PRECEDENCE_REQUIRED</a>
-, <a class="el" href="ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395">PRECEDENCE_FAILED</a>
- }</td></tr>
-<tr class="separator:a9090dc164c22c92f73037b414d0b4178"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -964,26 +955,6 @@ Functions</h2></td></tr>
 <p>This callback is triggered on the completion of <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>. The result of the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> function may be an error condition so it is important to verify the provided status code in this callback.</p>
 <p>This callback is often used to free or reinitialize the buffer associated with the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> invocation. It is important to not free this memory until after data has been written to the wire else the results of the write operation may be unexpected.</p>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>, ZITI_ERRORS </dd></dl>
-
-</div>
-</div>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="a9090dc164c22c92f73037b414d0b4178" name="a9090dc164c22c92f73037b414d0b4178"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9090dc164c22c92f73037b414d0b4178">&#9670;&#160;</a></span>ziti_terminator_precedence</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="ziti_8h.html#a9090dc164c22c92f73037b414d0b4178">ziti_terminator_precedence</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e" name="a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e"></a>PRECEDENCE_DEFAULT&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988" name="a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988"></a>PRECEDENCE_REQUIRED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395" name="a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395"></a>PRECEDENCE_FAILED&#160;</td><td class="fielddoc"></td></tr>
-</table>
 
 </div>
 </div>

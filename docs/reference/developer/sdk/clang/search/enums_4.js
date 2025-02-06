@@ -10,6 +10,5 @@ var searchData=
   ['ziti_5fproxy_5fserver_5ftype_7',['ziti_proxy_server_type',['../ziti__model_8h.html#aceefa5455c811b97ccd850fccc7cbb00',1,'ziti_model.h']]],
   ['ziti_5frouter_5fstatus_8',['ziti_router_status',['../ziti__events_8h.html#a2a811265086f321314174d9d60f36c02',1,'ziti_events.h']]],
   ['ziti_5fsession_5ftype_9',['ziti_session_type',['../ziti__model_8h.html#a16d0312daa1421133c53164eec94b532',1,'ziti_model.h']]],
-  ['ziti_5ftarget_5ftoken_10',['ziti_target_token',['../ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b',1,'ziti_model.h']]],
-  ['ziti_5fterminator_5fprecedence_11',['ziti_terminator_precedence',['../ziti_8h.html#a9090dc164c22c92f73037b414d0b4178',1,'ziti.h']]]
+  ['ziti_5ftarget_5ftoken_10',['ziti_target_token',['../ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b',1,'ziti_model.h']]]
 ];

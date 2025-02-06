@@ -31,11 +31,6 @@ var ziti_8h =
     [ "ziti_service_cb", "ziti_8h.html#a9654c9ebbfbae9c19d465d03dabd5581", null ],
     [ "ziti_verify_extend_cert_authenticator_cb", "ziti_8h.html#abc15f1012d9536c9651cd1f511943070", null ],
     [ "ziti_write_cb", "ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d", null ],
-    [ "ziti_terminator_precedence", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178", [
-      [ "PRECEDENCE_DEFAULT", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a968ba3b285011442b8fe1167a6ee991e", null ],
-      [ "PRECEDENCE_REQUIRED", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a1e205adb5263d3c2e18435d2b8562988", null ],
-      [ "PRECEDENCE_FAILED", "ziti_8h.html#a9090dc164c22c92f73037b414d0b4178a170dd873dd8f2eccbbf96d14a0002395", null ]
-    ] ],
     [ "ziti_accept", "ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b", null ],
     [ "ziti_app_ctx", "ziti_8h.html#a50fd1aeb05a41e4382c9a11ee8cd13ab", null ],
     [ "ziti_close", "ziti_8h.html#a643dd465f795ca234dbe4d22bb915277", null ],
