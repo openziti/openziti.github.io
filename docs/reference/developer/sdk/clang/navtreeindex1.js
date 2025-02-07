@@ -1,5 +1,6 @@
 var NAVTREEINDEX1 =
 {
+"model__support_8h.html#abb8731270188b154b48473a22506ddb4":[2,0,0,5,45],
 "model__support_8h.html#abc95a41c4f2d36ea51658a15acc92333":[2,0,0,5,53],
 "model__support_8h.html#abd4891b59dd77a4b4b2502f3ae545630":[2,0,0,5,38],
 "model__support_8h.html#abe248020bc39188f12f3a5a798309667":[2,0,0,5,55],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[1,0,38,3],
 "structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[1,0,38,1],
 "structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738":[1,0,38,2],
-"structziti__server__cfg__v1.html":[1,0,39],
-"structziti__server__cfg__v1.html#a8419a4d8d3aa0a92f6f74134a63c4116":[1,0,39,1]
+"structziti__server__cfg__v1.html":[1,0,39]
 };

@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"structziti__server__cfg__v1.html#a8419a4d8d3aa0a92f6f74134a63c4116":[1,0,39,1],
 "structziti__server__cfg__v1.html#aedb1636a6d0b22a308c6b9406f1421ee":[1,0,39,0],
 "structziti__server__cfg__v1.html#afef8e1f5454661a9406ea4106f47f5ab":[1,0,39,2],
 "structziti__service.html":[1,0,40],
@@ -28,12 +29,16 @@ var NAVTREEINDEX2 =
 "structziti__target__token__s.html#ad16168541cf960d1143b251b6e061b52":[1,0,43,2],
 "structziti__target__token__s.html#ae84539461ceb32ae503cb3fe709b9a03":[1,0,43,3],
 "structziti__target__token__s.html#aee8053376e334c75aa879d369d401300":[1,0,43,1],
-"structziti__version.html":[1,0,44],
-"structziti__version.html#a4acc27d2fc41b3b7c46682edb315652d":[1,0,44,0],
-"structziti__version.html#a7c4cd2cf9ba0ddd58b7ee474aa10dcb8":[1,0,44,2],
-"structziti__version.html#ad0cd1cbeb0ffae5b34bd86cabadf4093":[1,0,44,3],
-"structziti__version.html#ad3e98be3769fe4aa18a80d4bfa599403":[1,0,44,1],
-"structziti__version.html#ae475f0bfaa94f4315604ac60d7e651cc":[1,0,44,4],
+"structziti__terminator__precedence__s.html":[1,0,44],
+"structziti__terminator__precedence__s.html#a740ac5fc1d44270c9b185cb2be9928e5":[1,0,44,0],
+"structziti__terminator__precedence__s.html#ab11e48d2f0e40575de8196be5d27291e":[1,0,44,1],
+"structziti__terminator__precedence__s.html#abd4cb9fc63d1ab69ebe70c5a8128de30":[1,0,44,2],
+"structziti__version.html":[1,0,45],
+"structziti__version.html#a4acc27d2fc41b3b7c46682edb315652d":[1,0,45,0],
+"structziti__version.html#a7c4cd2cf9ba0ddd58b7ee474aa10dcb8":[1,0,45,2],
+"structziti__version.html#ad0cd1cbeb0ffae5b34bd86cabadf4093":[1,0,45,3],
+"structziti__version.html#ad3e98be3769fe4aa18a80d4bfa599403":[1,0,45,1],
+"structziti__version.html#ae475f0bfaa94f4315604ac60d7e651cc":[1,0,45,4],
 "types_8h.html":[2,0,0,6],
 "types_8h.html#a3a7306a88d8a7487b683e741c8e7f879":[2,0,0,6,2],
 "types_8h.html#a4698ae12cf6a8acb5886fffd0ec897e6":[2,0,0,6,1],
@@ -244,10 +249,5 @@ var NAVTREEINDEX2 =
 "ziti__model_8h.html#a3d625f542636b01049c321ce82c35f76":[2,0,0,11,213],
 "ziti__model_8h.html#a3de0600dd2518901d34ab7e57856a42d":[2,0,0,11,255],
 "ziti__model_8h.html#a3e62ae09f401f090df4944f2e254d918":[2,0,0,11,62],
-"ziti__model_8h.html#a3f2e0f70ff82fffff277269b2f3079f3":[2,0,0,11,240],
-"ziti__model_8h.html#a3f4ba216a6e0b8984a78cefb06e904ea":[2,0,0,11,209],
-"ziti__model_8h.html#a40bf388d9e2305292e4914a144bafeb6":[2,0,0,11,239],
-"ziti__model_8h.html#a422275f28d2db183f3423626b21ed6a1":[2,0,0,11,95],
-"ziti__model_8h.html#a422275f28d2db183f3423626b21ed6a1a25a2bfc78163558326a2e68a725b125f":[2,0,0,11,95,1],
-"ziti__model_8h.html#a422275f28d2db183f3423626b21ed6a1a3319f7dc6baba632ac843eeea2686841":[2,0,0,11,95,3]
+"ziti__model_8h.html#a3f2e0f70ff82fffff277269b2f3079f3":[2,0,0,11,240]
 };
