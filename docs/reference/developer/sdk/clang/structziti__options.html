@@ -128,6 +128,9 @@ Data Fields</h2></td></tr>
 <tr class="memitem:a894d032cee845c5caf83fcb263e8d84f" id="r_a894d032cee845c5caf83fcb263e8d84f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ziti_8h.html#af10680297946038b65fe9af5057edc13">ziti_event_cb</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__options.html#a894d032cee845c5caf83fcb263e8d84f">event_cb</a></td></tr>
 <tr class="memdesc:a894d032cee845c5caf83fcb263e8d84f"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback invoked is response to subscribed events.  <br /></td></tr>
 <tr class="separator:a894d032cee845c5caf83fcb263e8d84f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66bca3e4080d788b5188bfeaf30e3774" id="r_a66bca3e4080d788b5188bfeaf30e3774"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structziti__options.html#a66bca3e4080d788b5188bfeaf30e3774">cert_extension_window</a></td></tr>
+<tr class="memdesc:a66bca3e4080d788b5188bfeaf30e3774"><td class="mdescLeft">&#160;</td><td class="mdescRight">this setting allows SDK to auto-extend identity certificate.  <br /></td></tr>
+<tr class="separator:a66bca3e4080d788b5188bfeaf30e3774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>ziti_context runtime options </p>
@@ -158,6 +161,23 @@ Data Fields</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a66bca3e4080d788b5188bfeaf30e3774" name="a66bca3e4080d788b5188bfeaf30e3774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a66bca3e4080d788b5188bfeaf30e3774">&#9670;&#160;</a></span>cert_extension_window</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ziti_options::cert_extension_window</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>this setting allows SDK to auto-extend identity certificate. </p>
+<p>This only applies if certificate was issued by the OpenZiti network. The application must handle [ZitiConfigEvent] to capture and save the newly issued certificate. SDK will extend certificate when expiration date falls in the next [cert_extension_window] days. To enable certificate extension the value must be greater than 0 </p>
 
 </div>
 </div>
