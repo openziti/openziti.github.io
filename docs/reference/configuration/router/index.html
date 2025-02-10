@@ -12,7 +12,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="OpenZiti" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.e78540e4.css">
-<script src="/assets/js/runtime~main.604f2fcf.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.e78e4e59.js" defer="defer"></script>
 <script src="/assets/js/main.49d9b914.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -113,7 +113,8 @@ is an array of objects that configures individual dialers specified by the prope
 <p>The <code>edge</code> section contains configuration that pertain to edge functionality. This section must be
 present to enable edge functionality (e.g. listening for edge SDK connections, tunnel binding modes).</p>
 <ul>
-<li><code>db</code> - (optional, <code>&lt;path-to-config-file&gt;.proto.gzip</code>) - Configures where the router data model will be snapshotted to</li>
+<li><code>db</code> - (optional, <code>&lt;path-to-config-file&gt;.proto.gzip</code>) - path to file name where the router data model
+will be written as a gzipped snapshot</li>
 <li><code>dbSaveIntervalSeconds</code> - (optional, 30s) - Configures how the router data model will be snapshotted</li>
 </ul>
 <p>Example:</p>
