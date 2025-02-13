@@ -12,7 +12,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="OpenZiti" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.e78540e4.css">
-<script src="/assets/js/runtime~main.85c8365e.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.23d3aeb0.js" defer="defer"></script>
 <script src="/assets/js/main.49d9b914.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -85,7 +85,7 @@ section.</p>
 API. The definition of <a href="/docs/learn/core-concepts/security/authentication/external-jwt-signers">External JWT Signer</a> allows configuration of which JWT claim should be
 used as a value to map against the unique <code>externalId</code> or <code>id</code> property on Identities. This mapping of JWT claim to
 <code>externalId</code>/<code>id</code> is used to determine which Identity is authenticating.</p>
-<p>The JWT must be provided in the HTTP request in the <code>Authentication</code> header with a value in the format of
+<p>The JWT must be provided in the HTTP request in the <code>Authorization</code> header with a value in the format of
 <code>Bearer &lt;jwt&gt;</code>. The JWT provided must pass signature, expiration, issuer, and audience validation as configured
 on the <a href="/docs/learn/core-concepts/security/authentication/external-jwt-signers">External JWT Signer</a>.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="usernamepassword">Username/password<a href="#usernamepassword" class="hash-link" aria-label="Direct link to Username/password" title="Direct link to Username/password">​</a></h3>
@@ -116,7 +116,7 @@ or connect to any service. <a href="/docs/learn/core-concepts/security/authoriza
 <a href="/docs/learn/core-concepts/security/sessions#full-vs-partial-authentication">fully authenticate</a>, but based on <a href="/docs/learn/core-concepts/security/authorization/policies/overview">Service Policy</a>
 restrict connection to specific services.</p>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="jwt">JWT<a href="#jwt" class="hash-link" aria-label="Direct link to JWT" title="Direct link to JWT">​</a></h4>
-<p>Similar to JWT primary authentication, a valid JWT must be present in the <code>Authentication</code> header in the format of
+<p>Similar to JWT primary authentication, a valid JWT must be present in the <code>Authorization</code> header in the format of
 <code>bearer &lt;JWT&gt;</code> on every request.</p>
 <h3 class="anchor anchorWithStickyNavbar_LWe7" id="authentication-requests">Authentication Requests<a href="#authentication-requests" class="hash-link" aria-label="Direct link to Authentication Requests" title="Direct link to Authentication Requests">​</a></h3>
 <h4 class="anchor anchorWithStickyNavbar_LWe7" id="example-updb-authentication-request">Example UPDB Authentication Request<a href="#example-updb-authentication-request" class="hash-link" aria-label="Direct link to Example UPDB Authentication Request" title="Direct link to Example UPDB Authentication Request">​</a></h4>
