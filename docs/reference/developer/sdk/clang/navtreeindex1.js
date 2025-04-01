@@ -155,10 +155,11 @@ var NAVTREEINDEX1 =
 "structziti__identity.html#ada543eff545e8fd2b06e12f657eed3f7":[1,0,23,1],
 "structziti__intercept__cfg__v1.html":[1,0,24],
 "structziti__intercept__cfg__v1.html#a460c15e3d1e3e098671c7e3343a674fe":[1,0,24,0],
-"structziti__intercept__cfg__v1.html#ab907a516756d1bad74df099340fa009b":[1,0,24,3],
-"structziti__intercept__cfg__v1.html#ad1b9f56dd7731accc29be6d2f8648250":[1,0,24,4],
-"structziti__intercept__cfg__v1.html#addd73a3ab48baac2cd1be2fef0044956":[1,0,24,1],
-"structziti__intercept__cfg__v1.html#aee2f27365ec23fc20fbac3cf1cc4ebce":[1,0,24,2],
+"structziti__intercept__cfg__v1.html#a6557c252a538fee645515960a79ace15":[1,0,24,1],
+"structziti__intercept__cfg__v1.html#ab907a516756d1bad74df099340fa009b":[1,0,24,4],
+"structziti__intercept__cfg__v1.html#ad1b9f56dd7731accc29be6d2f8648250":[1,0,24,5],
+"structziti__intercept__cfg__v1.html#addd73a3ab48baac2cd1be2fef0044956":[1,0,24,2],
+"structziti__intercept__cfg__v1.html#aee2f27365ec23fc20fbac3cf1cc4ebce":[1,0,24,3],
 "structziti__jwt__signer.html":[1,0,25],
 "structziti__jwt__signer.html#a22c7a37ec73e3b947e3ddd6d6b547082":[1,0,25,7],
 "structziti__jwt__signer.html#a2c27722e3ebd16b6b06a3029017f1b27":[1,0,25,5],
@@ -248,6 +249,5 @@ var NAVTREEINDEX1 =
 "structziti__router__event.html":[1,0,38],
 "structziti__router__event.html#a307653022b243b7f96a81b5694466cee":[1,0,38,0],
 "structziti__router__event.html#a59a22f263cd36c4df223ec833a436e4f":[1,0,38,3],
-"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[1,0,38,1],
-"structziti__router__event.html#ab6d2972ca5f217c02e9d3b6ce24e0738":[1,0,38,2]
+"structziti__router__event.html#a777e39179d931bfce43b7a0e56e68398":[1,0,38,1]
 };

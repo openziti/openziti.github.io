@@ -11,7 +11,7 @@ var searchData=
   ['allowed_5faddresses_8',['allowed_addresses',['../structziti__host__cfg__v1.html#a3df75c4fdeb56497d46c8d35e30937bb',1,'ziti_host_cfg_v1']]],
   ['allowed_5fport_5franges_9',['allowed_port_ranges',['../structziti__host__cfg__v1.html#a0a24930b99d4db4e38e1c19568306911',1,'ziti_host_cfg_v1']]],
   ['allowed_5fprotocols_10',['allowed_protocols',['../structziti__host__cfg__v1.html#a8e0e28e0e5d985b441f45af4a3221b13',1,'ziti_host_cfg_v1']]],
-  ['allowed_5fsource_5faddresses_11',['allowed_source_addresses',['../structziti__host__cfg__v1.html#ac5215a39dd34f551495da3026d821747',1,'ziti_host_cfg_v1']]],
+  ['allowed_5fsource_5faddresses_11',['allowed_source_addresses',['../structziti__intercept__cfg__v1.html#a6557c252a538fee645515960a79ace15',1,'ziti_intercept_cfg_v1::allowed_source_addresses'],['../structziti__host__cfg__v1.html#ac5215a39dd34f551495da3026d821747',1,'ziti_host_cfg_v1::allowed_source_addresses']]],
   ['api_12',['High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API',['../index.html#autotoc_md3',1,'']]],
   ['api_5fpage_5fsize_13',['api_page_size',['../structziti__options.html#a171eca3877dbb78d19114c6819c33411',1,'ziti_options']]],
   ['api_5fpath_14',['api_path',['../structapi__path.html',1,'']]],
