@@ -23,12 +23,13 @@ var searchData=
   ['pq_5fprocess_5fcb_20',['pq_process_cb',['../structziti__options.html#ac5bdd9a653ef37aa21da2e592fbd1d48',1,'ziti_options']]],
   ['precedence_21',['PRECEDENCE',['../enums_8h.html#a462a9726081bcdadd562dc0ee44ab6f0',1,'enums.h']]],
   ['precendence_22',['precendence',['../structziti__listen__options.html#af8372d4704f26ed1976c0b7b0df3d0d1',1,'ziti_listen_options']]],
-  ['process_23',['process',['../structziti__posture__query.html#ac1267e76f775ee76c2a3b3bfa45f3349',1,'ziti_posture_query']]],
-  ['processes_24',['processes',['../structziti__posture__query.html#abfb088bc5452aea108f827303978f8af',1,'ziti_posture_query']]],
-  ['protocol_25',['protocol',['../structziti__server__cfg__v1.html#afef8e1f5454661a9406ea4106f47f5ab',1,'ziti_server_cfg_v1::protocol'],['../structziti__host__cfg__v1.html#a8dcf6f4441b9a28a0fd3bc3e21502bd4',1,'ziti_host_cfg_v1::protocol']]],
-  ['protocols_26',['protocols',['../structziti__intercept__cfg__v1.html#ab907a516756d1bad74df099340fa009b',1,'ziti_intercept_cfg_v1']]],
-  ['provider_5furl_27',['provider_url',['../structziti__jwt__signer.html#a2c27722e3ebd16b6b06a3029017f1b27',1,'ziti_jwt_signer']]],
-  ['providers_28',['providers',['../structziti__auth__event.html#aa30c488788e3aed576d82b57f5210cb8',1,'ziti_auth_event']]],
-  ['provisioning_5furl_29',['provisioning_url',['../structziti__mfa__enrollment.html#aa13d54861449d4bb0e6493450126b84b',1,'ziti_mfa_enrollment']]],
-  ['proxy_30',['proxy',['../structziti__host__cfg__v1.html#a601accf66a596fd819d74ff542d91dc7',1,'ziti_host_cfg_v1']]]
+  ['prefix_5flength_23',['prefix_length',['../structziti__address__translation.html#a42f031b37d4ba01ede97057319de67e4',1,'ziti_address_translation']]],
+  ['process_24',['process',['../structziti__posture__query.html#ac1267e76f775ee76c2a3b3bfa45f3349',1,'ziti_posture_query']]],
+  ['processes_25',['processes',['../structziti__posture__query.html#abfb088bc5452aea108f827303978f8af',1,'ziti_posture_query']]],
+  ['protocol_26',['protocol',['../structziti__server__cfg__v1.html#afef8e1f5454661a9406ea4106f47f5ab',1,'ziti_server_cfg_v1::protocol'],['../structziti__host__cfg__v1.html#a8dcf6f4441b9a28a0fd3bc3e21502bd4',1,'ziti_host_cfg_v1::protocol']]],
+  ['protocols_27',['protocols',['../structziti__intercept__cfg__v1.html#ab907a516756d1bad74df099340fa009b',1,'ziti_intercept_cfg_v1']]],
+  ['provider_5furl_28',['provider_url',['../structziti__jwt__signer.html#a2c27722e3ebd16b6b06a3029017f1b27',1,'ziti_jwt_signer']]],
+  ['providers_29',['providers',['../structziti__auth__event.html#aa30c488788e3aed576d82b57f5210cb8',1,'ziti_auth_event']]],
+  ['provisioning_5furl_30',['provisioning_url',['../structziti__mfa__enrollment.html#aa13d54861449d4bb0e6493450126b84b',1,'ziti_mfa_enrollment']]],
+  ['proxy_31',['proxy',['../structziti__host__cfg__v1.html#a601accf66a596fd819d74ff542d91dc7',1,'ziti_host_cfg_v1']]]
 ];

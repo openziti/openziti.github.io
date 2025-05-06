@@ -8,6 +8,7 @@ var annotated_dup =
     [ "tag", "structtag.html", "structtag" ],
     [ "type_meta", "structtype__meta.html", "structtype__meta" ],
     [ "ziti_address", "structziti__address.html", "structziti__address" ],
+    [ "ziti_address_translation", "structziti__address__translation.html", "structziti__address__translation" ],
     [ "ziti_api_versions", "structziti__api__versions.html", "structziti__api__versions" ],
     [ "ziti_auth_event", "structziti__auth__event.html", "structziti__auth__event" ],
     [ "ziti_auth_query_type_s", "structziti__auth__query__type__s.html", "structziti__auth__query__type__s" ],

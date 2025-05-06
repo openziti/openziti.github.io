@@ -6,6 +6,7 @@ var structziti__host__cfg__v1 =
     [ "allowed_protocols", "structziti__host__cfg__v1.html#a8e0e28e0e5d985b441f45af4a3221b13", null ],
     [ "allowed_source_addresses", "structziti__host__cfg__v1.html#ac5215a39dd34f551495da3026d821747", null ],
     [ "forward_address", "structziti__host__cfg__v1.html#afcde9ec0813ce109ac04ec29c08644ce", null ],
+    [ "forward_address_translations", "structziti__host__cfg__v1.html#a4f9c1c2a0f1da1ae6ce4a7bb41d82484", null ],
     [ "forward_port", "structziti__host__cfg__v1.html#aea029d788806f0849c4e7aa637a07751", null ],
     [ "forward_protocol", "structziti__host__cfg__v1.html#a9aeff3b8e403fa08a5e7742fc0a0122d", null ],
     [ "listen_options", "structziti__host__cfg__v1.html#a0a47f68d61c8406919a1e9c1dcc225a4", null ],
