@@ -21,5 +21,6 @@ var searchData=
   ['free_5fziti_5fproxy_5fserver_5farray_18',['free_ziti_proxy_server_array',['../ziti__model_8h.html#a569de79b2395b5d64bd844cacbdc7b97',1,'ziti_model.h']]],
   ['free_5fziti_5fserver_5fcfg_5fv1_5farray_19',['free_ziti_server_cfg_v1_array',['../ziti__model_8h.html#afa2cec24745562e1da7056acceed544a',1,'ziti_model.h']]],
   ['free_5fziti_5fservice_5farray_20',['free_ziti_service_array',['../ziti__model_8h.html#ad0139301833d3ded7cc316d4f94200f7',1,'ziti_model.h']]],
-  ['free_5fziti_5fversion_5farray_21',['free_ziti_version_array',['../ziti__model_8h.html#af5c288e929e36093503862fb765bd137',1,'ziti_model.h']]]
+  ['free_5fziti_5fterminator_5farray_21',['free_ziti_terminator_array',['../ziti__model_8h.html#aae8c9e593f3a71fab4f652c7a747348f',1,'ziti_model.h']]],
+  ['free_5fziti_5fversion_5farray_22',['free_ziti_version_array',['../ziti__model_8h.html#af5c288e929e36093503862fb765bd137',1,'ziti_model.h']]]
 ];

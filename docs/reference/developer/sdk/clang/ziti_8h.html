@@ -147,6 +147,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a9654c9ebbfbae9c19d465d03dabd5581" id="r_a9654c9ebbfbae9c19d465d03dabd5581"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a9654c9ebbfbae9c19d465d03dabd5581">ziti_service_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const <a class="el" href="structziti__service.html">ziti_service</a> *, int status, void *data)</td></tr>
 <tr class="memdesc:a9654c9ebbfbae9c19d465d03dabd5581"><td class="mdescLeft">&#160;</td><td class="mdescRight">Service status callback.  <br /></td></tr>
 <tr class="separator:a9654c9ebbfbae9c19d465d03dabd5581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b6892de47ef1f667aee69cb775a6ff5" id="r_a0b6892de47ef1f667aee69cb775a6ff5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0b6892de47ef1f667aee69cb775a6ff5">ziti_terminator_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const <a class="el" href="structziti__terminator.html">ziti_terminator</a> *const *terminators, int status, void *ctx)</td></tr>
+<tr class="memdesc:a0b6892de47ef1f667aee69cb775a6ff5"><td class="mdescLeft">&#160;</td><td class="mdescRight">callback providing the list of terminators  <br /></td></tr>
+<tr class="separator:a0b6892de47ef1f667aee69cb775a6ff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd5091529705082ce4e8ab3cfb2ddb5" id="r_acbd5091529705082ce4e8ab3cfb2ddb5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#acbd5091529705082ce4e8ab3cfb2ddb5">ziti_pr_mac_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *id, char **mac_addresses, int num_mac)</td></tr>
 <tr class="memdesc:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Posture response MAC address callback.  <br /></td></tr>
 <tr class="separator:acbd5091529705082ce4e8ab3cfb2ddb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -288,6 +291,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a27995327ecff2a0f4b99ade7416b038f" id="r_a27995327ecff2a0f4b99ade7416b038f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a27995327ecff2a0f4b99ade7416b038f">ziti_service_available</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service, <a class="el" href="ziti_8h.html#a9654c9ebbfbae9c19d465d03dabd5581">ziti_service_cb</a> cb, void *ctx)</td></tr>
 <tr class="memdesc:a27995327ecff2a0f4b99ade7416b038f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks availability of the service for the given edge context.  <br /></td></tr>
 <tr class="separator:a27995327ecff2a0f4b99ade7416b038f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbe0538fe97f96c90dd02da2f058b706" id="r_adbe0538fe97f96c90dd02da2f058b706"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#adbe0538fe97f96c90dd02da2f058b706">ziti_list_terminators</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *service, <a class="el" href="ziti_8h.html#a0b6892de47ef1f667aee69cb775a6ff5">ziti_terminator_cb</a> cb, void *ctx)</td></tr>
+<tr class="memdesc:adbe0538fe97f96c90dd02da2f058b706"><td class="mdescLeft">&#160;</td><td class="mdescRight">List all terminators for the given service.  <br /></td></tr>
+<tr class="separator:adbe0538fe97f96c90dd02da2f058b706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4fe31e4781db67faf59170350eaba3" id="r_a4c4fe31e4781db67faf59170350eaba3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structziti__service.html">ziti_service</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a4c4fe31e4781db67faf59170350eaba3">ziti_service_for_addr_str</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> proto, const char *addr, int port)</td></tr>
 <tr class="separator:a4c4fe31e4781db67faf59170350eaba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae10fe3bf6f776ab41dbc4078e6329c1b" id="r_ae10fe3bf6f776ab41dbc4078e6329c1b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="structziti__service.html">ziti_service</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ae10fe3bf6f776ab41dbc4078e6329c1b">ziti_service_for_addr</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a> proto, const <a class="el" href="structziti__address.html">ziti_address</a> *addr, int port)</td></tr>
@@ -921,6 +927,33 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a0b6892de47ef1f667aee69cb775a6ff5" name="a0b6892de47ef1f667aee69cb775a6ff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b6892de47ef1f667aee69cb775a6ff5">&#9670;&#160;</a></span>ziti_terminator_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* ziti_terminator_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const <a class="el" href="structziti__terminator.html">ziti_terminator</a> *const *terminators, int status, void *ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>callback providing the list of terminators </p>
+<p>Data is an NULL-terminated array of <a class="el" href="structziti__terminator.html">ziti_terminator</a> pointers. The application must copy desired data as the terminator array is freed after the callback</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#adbe0538fe97f96c90dd02da2f058b706" title="List all terminators for the given service.">ziti_list_terminators</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context </td></tr>
+    <tr><td class="paramname">terminators</td><td>the NULL-terminated array of [<a class="el" href="structziti__terminator.html">ziti_terminator</a>] pointers </td></tr>
+    <tr><td class="paramname">status</td><td>the status of the operation </td></tr>
+    <tr><td class="paramname">ctx</td><td>application context </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="abc15f1012d9536c9651cd1f511943070" name="abc15f1012d9536c9651cd1f511943070"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abc15f1012d9536c9651cd1f511943070">&#9670;&#160;</a></span>ziti_verify_extend_cert_authenticator_cb</h2>
 
@@ -1047,7 +1080,7 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>application context that was passed as ziti_oprions.app_ctx </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>application context that was passed as <a class="el" href="structziti__options.html#aea7232e8414e1545cd6dfa7d3fd7407c">ziti_options.app_ctx</a> </dd></dl>
 
 </div>
 </div>
@@ -2371,6 +2404,67 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+</div>
+</div>
+<a id="adbe0538fe97f96c90dd02da2f058b706" name="adbe0538fe97f96c90dd02da2f058b706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbe0538fe97f96c90dd02da2f058b706">&#9670;&#160;</a></span>ziti_list_terminators()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ziti_list_terminators </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>service</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a0b6892de47ef1f667aee69cb775a6ff5">ziti_terminator_cb</a>&#160;</td>
+          <td class="paramname"><em>cb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>ctx</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>List all terminators for the given service. </p>
+<p>Application must copy desired data passed into the callback.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>ziti identity context </td></tr>
+    <tr><td class="paramname">service</td><td>name of the service </td></tr>
+    <tr><td class="paramname">cb</td><td>callback called with the list of terminators </td></tr>
+    <tr><td class="paramname">ctx</td><td>application context </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ZITI_OK or error code </dd></dl>
 
 </div>
 </div>

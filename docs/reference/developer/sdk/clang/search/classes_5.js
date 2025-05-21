@@ -38,6 +38,7 @@ var searchData=
   ['ziti_5fservice_5fevent_35',['ziti_service_event',['../structziti__service__event.html',1,'']]],
   ['ziti_5fsession_5ftype_5fs_36',['ziti_session_type_s',['../structziti__session__type__s.html',1,'']]],
   ['ziti_5ftarget_5ftoken_5fs_37',['ziti_target_token_s',['../structziti__target__token__s.html',1,'']]],
-  ['ziti_5fterminator_5fprecedence_5fs_38',['ziti_terminator_precedence_s',['../structziti__terminator__precedence__s.html',1,'']]],
-  ['ziti_5fversion_39',['ziti_version',['../structziti__version.html',1,'']]]
+  ['ziti_5fterminator_38',['ziti_terminator',['../structziti__terminator.html',1,'']]],
+  ['ziti_5fterminator_5fprecedence_5fs_39',['ziti_terminator_precedence_s',['../structziti__terminator__precedence__s.html',1,'']]],
+  ['ziti_5fversion_40',['ziti_version',['../structziti__version.html',1,'']]]
 ];

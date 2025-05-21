@@ -31,8 +31,9 @@ var searchData=
   ['free_5fziti_5fproxy_5fserver_5farray_28',['free_ziti_proxy_server_array',['../ziti__model_8h.html#a569de79b2395b5d64bd844cacbdc7b97',1,'ziti_model.h']]],
   ['free_5fziti_5fserver_5fcfg_5fv1_5farray_29',['free_ziti_server_cfg_v1_array',['../ziti__model_8h.html#afa2cec24745562e1da7056acceed544a',1,'ziti_model.h']]],
   ['free_5fziti_5fservice_5farray_30',['free_ziti_service_array',['../ziti__model_8h.html#ad0139301833d3ded7cc316d4f94200f7',1,'ziti_model.h']]],
-  ['free_5fziti_5fversion_5farray_31',['free_ziti_version_array',['../ziti__model_8h.html#af5c288e929e36093503862fb765bd137',1,'ziti_model.h']]],
-  ['from_32',['from',['../structziti__address__translation.html#adc1369e42102ec43164b58418f4c030a',1,'ziti_address_translation']]],
-  ['from_5fjson_33',['from_json',['../structtype__meta.html#a29e8b2f5ce9fcfec240d875b2dd257f5',1,'type_meta']]],
-  ['from_5fjson_5ffunc_34',['from_json_func',['../model__support_8h.html#a2183664b79fc64dea63293a249cfb443',1,'model_support.h']]]
+  ['free_5fziti_5fterminator_5farray_31',['free_ziti_terminator_array',['../ziti__model_8h.html#aae8c9e593f3a71fab4f652c7a747348f',1,'ziti_model.h']]],
+  ['free_5fziti_5fversion_5farray_32',['free_ziti_version_array',['../ziti__model_8h.html#af5c288e929e36093503862fb765bd137',1,'ziti_model.h']]],
+  ['from_33',['from',['../structziti__address__translation.html#adc1369e42102ec43164b58418f4c030a',1,'ziti_address_translation']]],
+  ['from_5fjson_34',['from_json',['../structtype__meta.html#a29e8b2f5ce9fcfec240d875b2dd257f5',1,'type_meta']]],
+  ['from_5fjson_5ffunc_35',['from_json_func',['../model__support_8h.html#a2183664b79fc64dea63293a249cfb443',1,'model_support.h']]]
 ];

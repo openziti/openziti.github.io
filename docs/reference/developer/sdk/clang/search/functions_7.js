@@ -85,8 +85,12 @@ var searchData=
   ['parse_5fziti_5fservice_5farray_82',['parse_ziti_service_array',['../ziti__model_8h.html#ab98be85dc1bf9abe7ead27ebfec85b2c',1,'ziti_model.h']]],
   ['parse_5fziti_5fservice_5flist_83',['parse_ziti_service_list',['../ziti__model_8h.html#a43ead05dc695acc40dd93669a60bf012',1,'ziti_model.h']]],
   ['parse_5fziti_5fservice_5fptr_84',['parse_ziti_service_ptr',['../ziti__model_8h.html#ab1574d67f62d0926009bca184c1a1f5b',1,'ziti_model.h']]],
-  ['parse_5fziti_5fversion_85',['parse_ziti_version',['../ziti__model_8h.html#a8b570887fd70643f651af860fc3f2e64',1,'ziti_model.h']]],
-  ['parse_5fziti_5fversion_5farray_86',['parse_ziti_version_array',['../ziti__model_8h.html#abc42aebfd67cc82b4b29b10feddd7d34',1,'ziti_model.h']]],
-  ['parse_5fziti_5fversion_5flist_87',['parse_ziti_version_list',['../ziti__model_8h.html#a3077d7260e8c049f8f6acd7c6e7e7a46',1,'ziti_model.h']]],
-  ['parse_5fziti_5fversion_5fptr_88',['parse_ziti_version_ptr',['../ziti__model_8h.html#a0e71198f2df4a53770b03779ef064d16',1,'ziti_model.h']]]
+  ['parse_5fziti_5fterminator_85',['parse_ziti_terminator',['../ziti__model_8h.html#a070672f719bb2c7c1904d8ff406294c7',1,'ziti_model.h']]],
+  ['parse_5fziti_5fterminator_5farray_86',['parse_ziti_terminator_array',['../ziti__model_8h.html#ae59a9e3b47e1540500e05960443f0981',1,'ziti_model.h']]],
+  ['parse_5fziti_5fterminator_5flist_87',['parse_ziti_terminator_list',['../ziti__model_8h.html#ab829525f780a5ef6f36037901b835f64',1,'ziti_model.h']]],
+  ['parse_5fziti_5fterminator_5fptr_88',['parse_ziti_terminator_ptr',['../ziti__model_8h.html#a54431e10d3f71e85743f53e946458bd7',1,'ziti_model.h']]],
+  ['parse_5fziti_5fversion_89',['parse_ziti_version',['../ziti__model_8h.html#a8b570887fd70643f651af860fc3f2e64',1,'ziti_model.h']]],
+  ['parse_5fziti_5fversion_5farray_90',['parse_ziti_version_array',['../ziti__model_8h.html#abc42aebfd67cc82b4b29b10feddd7d34',1,'ziti_model.h']]],
+  ['parse_5fziti_5fversion_5flist_91',['parse_ziti_version_list',['../ziti__model_8h.html#a3077d7260e8c049f8f6acd7c6e7e7a46',1,'ziti_model.h']]],
+  ['parse_5fziti_5fversion_5fptr_92',['parse_ziti_version_ptr',['../ziti__model_8h.html#a0e71198f2df4a53770b03779ef064d16',1,'ziti_model.h']]]
 ];

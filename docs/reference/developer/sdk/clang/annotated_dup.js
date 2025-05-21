@@ -45,6 +45,7 @@ var annotated_dup =
     [ "ziti_service_event", "structziti__service__event.html", "structziti__service__event" ],
     [ "ziti_session_type_s", "structziti__session__type__s.html", "structziti__session__type__s" ],
     [ "ziti_target_token_s", "structziti__target__token__s.html", "structziti__target__token__s" ],
+    [ "ziti_terminator", "structziti__terminator.html", "structziti__terminator" ],
     [ "ziti_terminator_precedence_s", "structziti__terminator__precedence__s.html", "structziti__terminator__precedence__s" ],
     [ "ziti_version", "structziti__version.html", "structziti__version" ]
 ];
