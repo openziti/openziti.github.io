@@ -142,7 +142,7 @@ $(document).ready(function(){initNavTree('model__support_8h_source.html',''); in
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">   68</a></span><span class="preprocessor">#define MODEL_API</span></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">   68</a></span><span class="preprocessor">#define MODEL_VISIBILITY</span></div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="model__support_8h.html#a08d252be7ebc7de5de1b8652ea647993">   70</a></span><span class="preprocessor">#define MODEL_JSON_COMPACT 0x1</span></div>
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
@@ -165,16 +165,16 @@ $(document).ready(function(){initNavTree('model__support_8h_source.html',''); in
 <div class="foldopen" id="foldopen00086" data-start="" data-end="">
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno"><a class="line" href="model__support_8h.html#a92c4022252ccf904931f9c220d314eea">   86</a></span><span class="preprocessor">#define DECLARE_MODEL_FUNCS(T) \</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span><span class="preprocessor">typedef T ** T##_array; \</span></div>
-<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">MODEL_API const type_meta* get_##T##_meta();\</span></div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">MODEL_VISIBILITY const type_meta* get_##T##_meta();\</span></div>
 <div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span><span class="preprocessor">static inline ptr(T) alloc_##T(){ return (ptr(T))model_alloc(get_##T##_meta()); }\</span></div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span><span class="preprocessor">static inline void free_##T(ptr(T) v) { model_free(v, get_##T##_meta()); }     \</span></div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span><span class="preprocessor">static inline void free_##T##_ptr(ptr(T) v) { model_free(v, get_##T##_meta()); free(v); }; \</span></div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span><span class="preprocessor">static inline int cmp_##T(const ptr(T) lh, const ptr(T) rh) { return model_cmp(lh, rh, get_##T##_meta()); } \</span></div>
-<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">MODEL_API void free_##T##_array(array(T) *ap);\</span></div>
-<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">MODEL_API int parse_##T(ptr(T) v, const char* json, size_t len);\</span></div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">MODEL_API int parse_##T##_ptr(ptr(T) *p, const char* json, size_t len);\</span></div>
-<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">MODEL_API int parse_##T##_array(array(T) *a, const char* json, size_t len); \</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">MODEL_API int parse_##T##_list(list(T) *l, const char* json, size_t len); \</span></div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="preprocessor">MODEL_VISIBILITY void free_##T##_array(array(T) *ap);\</span></div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span><span class="preprocessor">MODEL_VISIBILITY int parse_##T(ptr(T) v, const char* json, size_t len);\</span></div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="preprocessor">MODEL_VISIBILITY int parse_##T##_ptr(ptr(T) *p, const char* json, size_t len);\</span></div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span><span class="preprocessor">MODEL_VISIBILITY int parse_##T##_array(array(T) *a, const char* json, size_t len); \</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span><span class="preprocessor">MODEL_VISIBILITY int parse_##T##_list(list(T) *l, const char* json, size_t len); \</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span><span class="preprocessor">static inline ssize_t T##_to_json_r(const ptr(T) v, int flags, char *outbuf, size_t max) { return model_to_json_r(v, get_##T##_meta(), flags, outbuf, max); } \</span></div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="preprocessor">static inline char* T##_to_json(const ptr(T) v, int flags, size_t *len) { return model_to_json(v, get_##T##_meta(), flags, len); }   \</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">static inline int T##_from_json(ptr(T) v, struct json_object *j) { return model_from_json(v, j, get_##T##_meta()); } \</span></div>
@@ -374,7 +374,7 @@ $(document).ready(function(){initNavTree('model__support_8h_source.html',''); in
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span><span class="preprocessor">Enum (*value_ofn)(const char* s, size_t n);       \</span></div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span><span class="preprocessor">Values(enum_field, Enum)                          \</span></div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span><span class="preprocessor">};                                 \</span></div>
-<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">MODEL_API const type_meta* get_##Enum##_meta();\</span></div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span><span class="preprocessor">MODEL_VISIBILITY const type_meta* get_##Enum##_meta();\</span></div>
 <div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="preprocessor">extern const struct Enum##_s Enum##s;</span></div>
 </div>
 <div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>

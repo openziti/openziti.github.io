@@ -122,9 +122,9 @@ Data Structures</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a07cd6f8790a80a835dd53aac54dd3fe4" id="r_a07cd6f8790a80a835dd53aac54dd3fe4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a></td></tr>
-<tr class="memdesc:a07cd6f8790a80a835dd53aac54dd3fe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">set of macros to help generate struct and function for our model;  <br /></td></tr>
-<tr class="separator:a07cd6f8790a80a835dd53aac54dd3fe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefa2c0cb4976918df4f766f45d858949" id="r_aefa2c0cb4976918df4f766f45d858949"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a></td></tr>
+<tr class="memdesc:aefa2c0cb4976918df4f766f45d858949"><td class="mdescLeft">&#160;</td><td class="mdescRight">set of macros to help generate struct and function for our model;  <br /></td></tr>
+<tr class="separator:aefa2c0cb4976918df4f766f45d858949"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a08d252be7ebc7de5de1b8652ea647993" id="r_a08d252be7ebc7de5de1b8652ea647993"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a08d252be7ebc7de5de1b8652ea647993">MODEL_JSON_COMPACT</a>&#160;&#160;&#160;0x1</td></tr>
 <tr class="separator:a08d252be7ebc7de5de1b8652ea647993"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a3518c9c928b1194dfa6123a0a80586" id="r_a6a3518c9c928b1194dfa6123a0a80586"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>(t)&#160;&#160;&#160;t</td></tr>
@@ -347,11 +347,11 @@ Functions</h2></td></tr>
 <div class="line">Enum (*value_ofn)(<span class="keyword">const</span> <span class="keywordtype">char</span>* s, <span class="keywordtype">size_t</span> n);       \</div>
 <div class="line">Values(<a class="code hl_define" href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">enum_field</a>, Enum)                          \</div>
 <div class="line">};                                 \</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keyword">const</span> <a class="code hl_struct" href="structtype__meta.html">type_meta</a>* get_##Enum##_meta();\</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keyword">const</span> <a class="code hl_struct" href="structtype__meta.html">type_meta</a>* get_##Enum##_meta();\</div>
 <div class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">struct </span>Enum##_s Enum##s;</div>
-<div class="ttc" id="amodel__support_8h_html_a07cd6f8790a80a835dd53aac54dd3fe4"><div class="ttname"><a href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a></div><div class="ttdeci">#define MODEL_API</div><div class="ttdoc">set of macros to help generate struct and function for our model;</div><div class="ttdef"><b>Definition</b> model_support.h:68</div></div>
 <div class="ttc" id="amodel__support_8h_html_a38fb2c77c617f59f37b59ed75769ba83"><div class="ttname"><a href="model__support_8h.html#a38fb2c77c617f59f37b59ed75769ba83">mk_enum</a></div><div class="ttdeci">#define mk_enum(...)</div><div class="ttdef"><b>Definition</b> model_support.h:263</div></div>
 <div class="ttc" id="amodel__support_8h_html_a52dcb138366e9d22a9282459cbb4605d"><div class="ttname"><a href="model__support_8h.html#a52dcb138366e9d22a9282459cbb4605d">enum_field</a></div><div class="ttdeci">#define enum_field(...)</div><div class="ttdef"><b>Definition</b> model_support.h:264</div></div>
+<div class="ttc" id="amodel__support_8h_html_aefa2c0cb4976918df4f766f45d858949"><div class="ttname"><a href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a></div><div class="ttdeci">#define MODEL_VISIBILITY</div><div class="ttdoc">set of macros to help generate struct and function for our model;</div><div class="ttdef"><b>Definition</b> model_support.h:68</div></div>
 <div class="ttc" id="astructtype__meta_html"><div class="ttname"><a href="structtype__meta.html">type_meta</a></div><div class="ttdef"><b>Definition</b> model_support.h:181</div></div>
 </div><!-- fragment -->
 </div>
@@ -405,16 +405,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line"><span class="keyword">typedef</span> T ** T##_array; \</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keyword">const</span> <a class="code hl_struct" href="structtype__meta.html">type_meta</a>* get_##T##_meta();\</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keyword">const</span> <a class="code hl_struct" href="structtype__meta.html">type_meta</a>* get_##T##_meta();\</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) alloc_##T(){ <span class="keywordflow">return</span> (<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T))<a class="code hl_function" href="model__support_8h.html#a8197cf776b6d65ba4bf8f6c2090de118">model_alloc</a>(get_##T##_meta()); }\</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> free_##T(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v) { <a class="code hl_function" href="model__support_8h.html#afe4698ae448d847d9d8de93da8553e63">model_free</a>(v, get_##T##_meta()); }     \</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> free_##T##_ptr(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v) { <a class="code hl_function" href="model__support_8h.html#afe4698ae448d847d9d8de93da8553e63">model_free</a>(v, get_##T##_meta()); free(v); }; \</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> cmp_##T(<span class="keyword">const</span> <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) lh, <span class="keyword">const</span> <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) rh) { <span class="keywordflow">return</span> <a class="code hl_function" href="model__support_8h.html#a9b4c0e9c466fcfb4671ac5f74737826e">model_cmp</a>(lh, rh, get_##T##_meta()); } \</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keywordtype">void</span> free_##T##_array(<a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(T) *ap);\</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keywordtype">int</span> parse_##T(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keywordtype">int</span> parse_##T##_ptr(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) *p, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keywordtype">int</span> parse_##T##_array(<a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(T) *a, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len); \</div>
-<div class="line"><a class="code hl_define" href="model__support_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4">MODEL_API</a> <span class="keywordtype">int</span> parse_##T##_list(<a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>(T) *l, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len); \</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keywordtype">void</span> free_##T##_array(<a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(T) *ap);\</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keywordtype">int</span> parse_##T(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keywordtype">int</span> parse_##T##_ptr(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) *p, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len);\</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keywordtype">int</span> parse_##T##_array(<a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>(T) *a, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len); \</div>
+<div class="line"><a class="code hl_define" href="model__support_8h.html#aefa2c0cb4976918df4f766f45d858949">MODEL_VISIBILITY</a> <span class="keywordtype">int</span> parse_##T##_list(<a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>(T) *l, <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <span class="keywordtype">size_t</span> len); \</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> ssize_t T##_to_json_r(<span class="keyword">const</span> <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">char</span> *outbuf, <span class="keywordtype">size_t</span> max) { <span class="keywordflow">return</span> <a class="code hl_function" href="model__support_8h.html#a1f948302f8786212d7f6cf14a5267d8d">model_to_json_r</a>(v, get_##T##_meta(), flags, outbuf, max); } \</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">char</span>* T##_to_json(<span class="keyword">const</span> <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v, <span class="keywordtype">int</span> flags, <span class="keywordtype">size_t</span> *len) { <span class="keywordflow">return</span> <a class="code hl_function" href="model__support_8h.html#a725ead30126825377ceea8eba9576fb6">model_to_json</a>(v, get_##T##_meta(), flags, len); }   \</div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">int</span> T##_from_json(<a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>(T) v, <span class="keyword">struct</span> json_object *j) { <span class="keywordflow">return</span> <a class="code hl_function" href="model__support_8h.html#a6a5c818b87ca0170a181befe13b8d96b">model_from_json</a>(v, j, get_##T##_meta()); } \</div>
@@ -1207,33 +1207,6 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a07cd6f8790a80a835dd53aac54dd3fe4" name="a07cd6f8790a80a835dd53aac54dd3fe4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07cd6f8790a80a835dd53aac54dd3fe4">&#9670;&#160;</a></span>MODEL_API</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define MODEL_API</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>set of macros to help generate struct and function for our model; </p>
-<ul>
-<li><p class="startli"><a class="el" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL(type, model_def)</a> : <code>type</code> name of the struct, <code>model_def</code> - marco defining fields for the model</p>
-<p class="startli">NOTE: matching IMPL_MODEL macro in model.c is used to generate function implementations</p>
-</li>
-</ul>
-<p>Fields are defined with name, type, type modifier, and path (for JSON mapping) type could be primitives (bool, int, string, timestamp - string in ISO8601 format) or other model types type modifier: none, ptr, array</p>
-<p>The following functions are generated:</p><ul>
-<li>int parse_TYPE(TYPE*, json, len) &ndash; parses json into an allocated struct, returns 0 if successful, -1 otherwise</li>
-<li>void free_TYPE(TYPE *obj) &ndash; frees struct</li>
-<li>int dump_TYPE(TYPE *obj, int indent) &ndash; prints the struct to <code>stdout</code>, <code>indent</code> is used for printing nested model objects </li>
-</ul>
-
-</div>
-</div>
 <a id="a08d252be7ebc7de5de1b8652ea647993" name="a08d252be7ebc7de5de1b8652ea647993"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a08d252be7ebc7de5de1b8652ea647993">&#9670;&#160;</a></span>MODEL_JSON_COMPACT</h2>
 
@@ -1273,6 +1246,33 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aefa2c0cb4976918df4f766f45d858949" name="aefa2c0cb4976918df4f766f45d858949"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefa2c0cb4976918df4f766f45d858949">&#9670;&#160;</a></span>MODEL_VISIBILITY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MODEL_VISIBILITY</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>set of macros to help generate struct and function for our model; </p>
+<ul>
+<li><p class="startli"><a class="el" href="model__support_8h.html#a62df6fb9c1a8501bbb29744ea72bc96f">DECLARE_MODEL(type, model_def)</a> : <code>type</code> name of the struct, <code>model_def</code> - marco defining fields for the model</p>
+<p class="startli">NOTE: matching IMPL_MODEL macro in model.c is used to generate function implementations</p>
+</li>
+</ul>
+<p>Fields are defined with name, type, type modifier, and path (for JSON mapping) type could be primitives (bool, int, string, timestamp - string in ISO8601 format) or other model types type modifier: none, ptr, array</p>
+<p>The following functions are generated:</p><ul>
+<li>int parse_TYPE(TYPE*, json, len) &ndash; parses json into an allocated struct, returns 0 if successful, -1 otherwise</li>
+<li>void free_TYPE(TYPE *obj) &ndash; frees struct</li>
+<li>int dump_TYPE(TYPE *obj, int indent) &ndash; prints the struct to <code>stdout</code>, <code>indent</code> is used for printing nested model objects </li>
+</ul>
 
 </div>
 </div>

@@ -30,7 +30,7 @@ var ziti__model_8h =
     [ "ziti_host_cfg_v1", "structziti__host__cfg__v1.html", "structziti__host__cfg__v1" ],
     [ "ziti_host_cfg_v2", "structziti__host__cfg__v2.html", "structziti__host__cfg__v2" ],
     [ "ziti_mfa_enrollment", "structziti__mfa__enrollment.html", "structziti__mfa__enrollment" ],
-    [ "MODEL_API", "ziti__model_8h.html#a07cd6f8790a80a835dd53aac54dd3fe4", null ],
+    [ "MODEL_VISIBILITY", "ziti__model_8h.html#aefa2c0cb4976918df4f766f45d858949", null ],
     [ "ZITI_ADDRESS_TRANSLATION_MODEL", "ziti__model_8h.html#acef494374a243fda1c58fac5567aa6f8", null ],
     [ "ZITI_API_PATH_MODEL", "ziti__model_8h.html#a45fd0415f622ef5bbf180cd6018411d3", null ],
     [ "ZITI_API_VERSIONS_MODEL", "ziti__model_8h.html#ab5384d60df5ee61486b3e4d08ce37a0a", null ],
