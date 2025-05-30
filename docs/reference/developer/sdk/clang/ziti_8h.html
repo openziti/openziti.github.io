@@ -203,6 +203,9 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a7fba467dc1ea3a240881d0cf68d808b4" id="r_a7fba467dc1ea3a240881d0cf68d808b4"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, void *ctx)</td></tr>
 <tr class="memdesc:a7fba467dc1ea3a240881d0cf68d808b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generic callback called after various MFA functions.  <br /></td></tr>
 <tr class="separator:a7fba467dc1ea3a240881d0cf68d808b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a351cbeabde3c623e546dae531f261365" id="r_a351cbeabde3c623e546dae531f261365"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a351cbeabde3c623e546dae531f261365">ziti_ext_auth_launch_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *url, void *ctx)</td></tr>
+<tr class="memdesc:a351cbeabde3c623e546dae531f261365"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called by ziti_ext_auth to complete external authentication.  <br /></td></tr>
+<tr class="separator:a351cbeabde3c623e546dae531f261365"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64408f798a720fb507f80bf589055e28" id="r_a64408f798a720fb507f80bf589055e28"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a64408f798a720fb507f80bf589055e28">ziti_mfa_recovery_codes_cb</a>) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, int status, const char **recovery_codes, void *ctx)</td></tr>
 <tr class="memdesc:a64408f798a720fb507f80bf589055e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#aeed7c6ef6673a8e2f482f2f80c6f5cb6" title="Attempts to retrieve the current recovery codes for the identity.">ziti_mfa_get_recovery_codes()</a> and <a class="el" href="ziti_8h.html#af5964f15cd479345e9732c8a9adf1a19" title="Attempts to generate new recovery codes and retrieve the new recovery codes for MFA.">ziti_mfa_new_recovery_codes()</a>  <br /></td></tr>
 <tr class="separator:a64408f798a720fb507f80bf589055e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -347,8 +350,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a8c39888a1c8d89abbc3e253c1df14972" id="r_a8c39888a1c8d89abbc3e253c1df14972"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a8c39888a1c8d89abbc3e253c1df14972">ziti_mfa_auth</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *code, <a class="el" href="ziti_8h.html#a7fba467dc1ea3a240881d0cf68d808b4">ziti_mfa_cb</a> auth_cb, void *ctx)</td></tr>
 <tr class="memdesc:a8c39888a1c8d89abbc3e253c1df14972"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attempt to submit an MFA code for evaluation.  <br /></td></tr>
 <tr class="separator:a8c39888a1c8d89abbc3e253c1df14972"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c6e5f1a8f3a27f83e5afcadf80f6ebe" id="r_a8c6e5f1a8f3a27f83e5afcadf80f6ebe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a8c6e5f1a8f3a27f83e5afcadf80f6ebe">ziti_ext_auth</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, void(*ziti_ext_launch)(<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>, const char *url, void *), void *ctx)</td></tr>
-<tr class="separator:a8c6e5f1a8f3a27f83e5afcadf80f6ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2c3dfaad48613fca63405f98ed4187b" id="r_ad2c3dfaad48613fca63405f98ed4187b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad2c3dfaad48613fca63405f98ed4187b">ziti_ext_auth</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, <a class="el" href="ziti_8h.html#a351cbeabde3c623e546dae531f261365">ziti_ext_auth_launch_cb</a> launch_cb, void *ctx)</td></tr>
+<tr class="memdesc:ad2c3dfaad48613fca63405f98ed4187b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Authenticate with an external JWT signer.  <br /></td></tr>
+<tr class="separator:ad2c3dfaad48613fca63405f98ed4187b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c11f43c052355e78243498b930eafd5" id="r_a0c11f43c052355e78243498b930eafd5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0c11f43c052355e78243498b930eafd5">ziti_ext_auth_token</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *token)</td></tr>
 <tr class="separator:a0c11f43c052355e78243498b930eafd5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9966132725e19a2a6feb67e36a3edc84" id="r_a9966132725e19a2a6feb67e36a3edc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a9966132725e19a2a6feb67e36a3edc84">ziti_endpoint_state_change</a> (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, bool woken, bool unlocked)</td></tr>
@@ -579,6 +583,30 @@ Functions</h2></td></tr>
 <a class="el" href="structziti__options.html#a894d032cee845c5caf83fcb263e8d84f" title="callback invoked is response to subscribed events.">ziti_options.event_cb</a> </dd>
 <dd>
 <a class="el" href="structziti__options.html#a635fef44dd0fca1e9b86ff0173254832" title="subscribed event types.">ziti_options.events</a> </dd></dl>
+
+</div>
+</div>
+<a id="a351cbeabde3c623e546dae531f261365" name="a351cbeabde3c623e546dae531f261365"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a351cbeabde3c623e546dae531f261365">&#9670;&#160;</a></span>ziti_ext_auth_launch_cb</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* ziti_ext_auth_launch_cb) (<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx, const char *url, void *ctx)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Callback called by ziti_ext_auth to complete external authentication. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
+    <tr><td class="paramname">url</td><td>the URL to open </td></tr>
+    <tr><td class="paramname">ctx</td><td>additional context to be passed into the original authentication call </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1923,8 +1951,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a8c6e5f1a8f3a27f83e5afcadf80f6ebe" name="a8c6e5f1a8f3a27f83e5afcadf80f6ebe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c6e5f1a8f3a27f83e5afcadf80f6ebe">&#9670;&#160;</a></span>ziti_ext_auth()</h2>
+<a id="ad2c3dfaad48613fca63405f98ed4187b" name="ad2c3dfaad48613fca63405f98ed4187b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2c3dfaad48613fca63405f98ed4187b">&#9670;&#160;</a></span>ziti_ext_auth()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1941,8 +1969,8 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">void(*)(<a class="el" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a>, const char *url, void *)&#160;</td>
-          <td class="paramname"><em>ziti_ext_launch</em>, </td>
+          <td class="paramtype"><a class="el" href="ziti_8h.html#a351cbeabde3c623e546dae531f261365">ziti_ext_auth_launch_cb</a>&#160;</td>
+          <td class="paramname"><em>launch_cb</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -1962,6 +1990,17 @@ Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Authenticate with an external JWT signer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>the handle to the Ziti Edge identity context needed for other Ziti C SDK functions </td></tr>
+    <tr><td class="paramname">launch_cb</td><td>callback to complete authentication with the JWT provider </td></tr>
+    <tr><td class="paramname">ctx</td><td>additional context to be passed into the callback</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd" title="select external JWT signer to initiate OIDC authentication flow">ziti_use_ext_jwt_signer()</a> </dd></dl>
 
 </div>
 </div>

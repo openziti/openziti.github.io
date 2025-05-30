@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ziti_5faccept_0',['ziti_accept',['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h'],['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h']]],
+  ['ziti_5faccept_0',['ziti_accept',['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h'],['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h']]],
   ['ziti_5faddress_5fmatch_1',['ziti_address_match',['../ziti__model_8h.html#aa697b81d27396da9ba5820e9cf00d97d',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5farray_2',['ziti_address_match_array',['../ziti__model_8h.html#af578f6040feef81a285efdc42f6ed91b',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5flist_3',['ziti_address_match_list',['../ziti__model_8h.html#a5078db31bf0e462e6b00851dabe653af',1,'ziti_model.h']]],
@@ -10,7 +10,7 @@ var searchData=
   ['ziti_5fapp_5fctx_7',['ziti_app_ctx',['../ziti_8h.html#a50fd1aeb05a41e4382c9a11ee8cd13ab',1,'ziti.h']]],
   ['ziti_5fbind_8',['Ziti_bind',['../zitilib_8h.html#a4366225741ec51eb92fab87e230cc431',1,'zitilib.h']]],
   ['ziti_5fcheck_5fsocket_9',['Ziti_check_socket',['../zitilib_8h.html#aefc2812161ae89e1436aecb3d163bd34',1,'zitilib.h']]],
-  ['ziti_5fclose_10',['ziti_close',['../zitilib_8h.html#af58e0cb38d52d14135f2793debd6a6e7',1,'Ziti_close(ziti_socket_t socket):&#160;zitilib.h'],['../ziti_8h.html#a643dd465f795ca234dbe4d22bb915277',1,'ziti_close(ziti_connection conn, ziti_close_cb close_cb):&#160;ziti.h']]],
+  ['ziti_5fclose_10',['ziti_close',['../ziti_8h.html#a643dd465f795ca234dbe4d22bb915277',1,'ziti_close(ziti_connection conn, ziti_close_cb close_cb):&#160;ziti.h'],['../zitilib_8h.html#af58e0cb38d52d14135f2793debd6a6e7',1,'Ziti_close(ziti_socket_t socket):&#160;zitilib.h']]],
   ['ziti_5fclose_5fwrite_11',['ziti_close_write',['../ziti_8h.html#aae65595ba921191330a1920927734ab6',1,'ziti.h']]],
   ['ziti_5fconn_5fbridge_12',['ziti_conn_bridge',['../ziti_8h.html#af4dc49b59dcb1d61e6d82a6a1a937adf',1,'ziti.h']]],
   ['ziti_5fconn_5fbridge_5ffds_13',['ziti_conn_bridge_fds',['../ziti_8h.html#a2b496d7c7680bebe15c085a854c8cfbf',1,'ziti.h']]],
@@ -33,7 +33,7 @@ var searchData=
   ['ziti_5fenroll_30',['ziti_enroll',['../enroll_8h.html#ae0d28a131dcc2333de375a01ac8fc005',1,'enroll.h']]],
   ['ziti_5fenroll_5fidentity_31',['Ziti_enroll_identity',['../zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd',1,'zitilib.h']]],
   ['ziti_5ferrorstr_32',['ziti_errorstr',['../errors_8h.html#af6408f67819f57374d203d557b6df400',1,'errors.h']]],
-  ['ziti_5fext_5fauth_33',['ziti_ext_auth',['../ziti_8h.html#a8c6e5f1a8f3a27f83e5afcadf80f6ebe',1,'ziti.h']]],
+  ['ziti_5fext_5fauth_33',['ziti_ext_auth',['../ziti_8h.html#ad2c3dfaad48613fca63405f98ed4187b',1,'ziti.h']]],
   ['ziti_5fext_5fauth_5ftoken_34',['ziti_ext_auth_token',['../ziti_8h.html#a0c11f43c052355e78243498b930eafd5',1,'ziti.h']]],
   ['ziti_5fextend_5fcert_5fauthenticator_35',['ziti_extend_cert_authenticator',['../ziti_8h.html#a04a25125e41b9717e5148dc8504889e8',1,'ziti.h']]],
   ['ziti_5fget_5fappdata_36',['ziti_get_appdata',['../ziti_8h.html#abd895b2375239f5418cdd08b58e1d329',1,'ziti.h']]],
