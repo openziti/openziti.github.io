@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['ziti_5faccept_0',['ziti_accept',['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h'],['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h']]],
+  ['ziti_5faccept_0',['ziti_accept',['../zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39',1,'Ziti_accept(ziti_socket_t socket, char *caller, int caller_len):&#160;zitilib.h'],['../ziti_8h.html#ad73c2173f91183a3f0f0491720b7c27b',1,'ziti_accept(ziti_connection clt, ziti_conn_cb cb, ziti_data_cb data_cb):&#160;ziti.h']]],
   ['ziti_5faddress_5fmatch_1',['ziti_address_match',['../ziti__model_8h.html#aa697b81d27396da9ba5820e9cf00d97d',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5farray_2',['ziti_address_match_array',['../ziti__model_8h.html#af578f6040feef81a285efdc42f6ed91b',1,'ziti_model.h']]],
   ['ziti_5faddress_5fmatch_5flist_3',['ziti_address_match_list',['../ziti__model_8h.html#a5078db31bf0e462e6b00851dabe653af',1,'ziti_model.h']]],
@@ -10,7 +10,7 @@ var searchData=
   ['ziti_5fapp_5fctx_7',['ziti_app_ctx',['../ziti_8h.html#a50fd1aeb05a41e4382c9a11ee8cd13ab',1,'ziti.h']]],
   ['ziti_5fbind_8',['Ziti_bind',['../zitilib_8h.html#a4366225741ec51eb92fab87e230cc431',1,'zitilib.h']]],
   ['ziti_5fcheck_5fsocket_9',['Ziti_check_socket',['../zitilib_8h.html#aefc2812161ae89e1436aecb3d163bd34',1,'zitilib.h']]],
-  ['ziti_5fclose_10',['ziti_close',['../ziti_8h.html#a643dd465f795ca234dbe4d22bb915277',1,'ziti_close(ziti_connection conn, ziti_close_cb close_cb):&#160;ziti.h'],['../zitilib_8h.html#af58e0cb38d52d14135f2793debd6a6e7',1,'Ziti_close(ziti_socket_t socket):&#160;zitilib.h']]],
+  ['ziti_5fclose_10',['ziti_close',['../zitilib_8h.html#af58e0cb38d52d14135f2793debd6a6e7',1,'Ziti_close(ziti_socket_t socket):&#160;zitilib.h'],['../ziti_8h.html#a643dd465f795ca234dbe4d22bb915277',1,'ziti_close(ziti_connection conn, ziti_close_cb close_cb):&#160;ziti.h']]],
   ['ziti_5fclose_5fwrite_11',['ziti_close_write',['../ziti_8h.html#aae65595ba921191330a1920927734ab6',1,'ziti.h']]],
   ['ziti_5fconn_5fbridge_12',['ziti_conn_bridge',['../ziti_8h.html#af4dc49b59dcb1d61e6d82a6a1a937adf',1,'ziti.h']]],
   ['ziti_5fconn_5fbridge_5ffds_13',['ziti_conn_bridge_fds',['../ziti_8h.html#a2b496d7c7680bebe15c085a854c8cfbf',1,'ziti.h']]],
@@ -52,7 +52,7 @@ var searchData=
   ['ziti_5flib_5finit_49',['Ziti_lib_init',['../zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4',1,'zitilib.h']]],
   ['ziti_5flib_5fshutdown_50',['Ziti_lib_shutdown',['../zitilib_8h.html#ab18537f49af147f645d08d2cc0965572',1,'zitilib.h']]],
   ['ziti_5flist_5fterminators_51',['ziti_list_terminators',['../ziti_8h.html#adbe0538fe97f96c90dd02da2f058b706',1,'ziti.h']]],
-  ['ziti_5flisten_52',['ziti_listen',['../ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c',1,'ziti_listen(ziti_connection serv_conn, const char *service, ziti_listen_cb lcb, ziti_client_cb cb):&#160;ziti.h'],['../zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31',1,'Ziti_listen(ziti_socket_t socket, int backlog):&#160;zitilib.h']]],
+  ['ziti_5flisten_52',['ziti_listen',['../zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31',1,'Ziti_listen(ziti_socket_t socket, int backlog):&#160;zitilib.h'],['../ziti_8h.html#a9a0452d4128c0787b909b8ac5fbf488c',1,'ziti_listen(ziti_connection serv_conn, const char *service, ziti_listen_cb lcb, ziti_client_cb cb):&#160;ziti.h']]],
   ['ziti_5flisten_5fwith_5foptions_53',['ziti_listen_with_options',['../ziti_8h.html#a8c447db49310357727e92d635d6efd4e',1,'ziti.h']]],
   ['ziti_5fload_5fconfig_54',['ziti_load_config',['../ziti_8h.html#a3535865c037ebe4f8e3dc64f8dcd7773',1,'ziti.h']]],
   ['ziti_5fload_5fcontext_55',['Ziti_load_context',['../zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed',1,'zitilib.h']]],
@@ -80,11 +80,12 @@ var searchData=
   ['ziti_5fservice_5fhas_5fpermission_77',['ziti_service_has_permission',['../ziti__model_8h.html#af739cf0a7794de570462b4af344f1e0c',1,'ziti_model.h']]],
   ['ziti_5fset_5fapp_5finfo_78',['ziti_set_app_info',['../ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a',1,'ziti.h']]],
   ['ziti_5fset_5fclient_5fcert_79',['ziti_set_client_cert',['../ziti_8h.html#ae8b335fe3de0a1e15e8cb63e7c7f34d9',1,'ziti.h']]],
-  ['ziti_5fset_5fenabled_80',['ziti_set_enabled',['../ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b',1,'ziti.h']]],
-  ['ziti_5fshutdown_81',['ziti_shutdown',['../ziti_8h.html#ab306cc32d1f350206b97417f93f60abf',1,'ziti.h']]],
-  ['ziti_5fsocket_82',['Ziti_socket',['../zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185',1,'zitilib.h']]],
-  ['ziti_5fsrc_5finit_83',['ziti_src_init',['../ziti__src_8h.html#aa18a3ba4de69dd5d700fcb400ee75a57',1,'ziti_src.h']]],
-  ['ziti_5fuse_5fext_5fjwt_5fsigner_84',['ziti_use_ext_jwt_signer',['../ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd',1,'ziti.h']]],
-  ['ziti_5fverify_5fextend_5fcert_5fauthenticator_85',['ziti_verify_extend_cert_authenticator',['../ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2',1,'ziti.h']]],
-  ['ziti_5fwrite_86',['ziti_write',['../ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69',1,'ziti.h']]]
+  ['ziti_5fset_5fdevice_5fid_80',['ziti_set_device_id',['../ziti_8h.html#a99bc325306b65a050211f5075c8e4ea4',1,'ziti.h']]],
+  ['ziti_5fset_5fenabled_81',['ziti_set_enabled',['../ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b',1,'ziti.h']]],
+  ['ziti_5fshutdown_82',['ziti_shutdown',['../ziti_8h.html#ab306cc32d1f350206b97417f93f60abf',1,'ziti.h']]],
+  ['ziti_5fsocket_83',['Ziti_socket',['../zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185',1,'zitilib.h']]],
+  ['ziti_5fsrc_5finit_84',['ziti_src_init',['../ziti__src_8h.html#aa18a3ba4de69dd5d700fcb400ee75a57',1,'ziti_src.h']]],
+  ['ziti_5fuse_5fext_5fjwt_5fsigner_85',['ziti_use_ext_jwt_signer',['../ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd',1,'ziti.h']]],
+  ['ziti_5fverify_5fextend_5fcert_5fauthenticator_86',['ziti_verify_extend_cert_authenticator',['../ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2',1,'ziti.h']]],
+  ['ziti_5fwrite_87',['ziti_write',['../ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69',1,'ziti.h']]]
 ];

@@ -81,6 +81,7 @@ var ziti_8h =
     [ "ziti_service_for_addr_str", "ziti_8h.html#a4c4fe31e4781db67faf59170350eaba3", null ],
     [ "ziti_set_app_info", "ziti_8h.html#a57104d0a19d143386d14ce0d92b5ae0a", null ],
     [ "ziti_set_client_cert", "ziti_8h.html#ae8b335fe3de0a1e15e8cb63e7c7f34d9", null ],
+    [ "ziti_set_device_id", "ziti_8h.html#a99bc325306b65a050211f5075c8e4ea4", null ],
     [ "ziti_set_enabled", "ziti_8h.html#a80e6909becb432e7d00e7deb96b2328b", null ],
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
     [ "ziti_use_ext_jwt_signer", "ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd", null ],
