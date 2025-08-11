@@ -149,7 +149,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4" title="Initialize Ziti library.">Ziti_lib_init()</a></code>   </td><td class="markdownTableBodyNone">initializes Ziti SDK background event loop that runs all internal SDK tasks    </td></tr>
 <tr class="markdownTableRowEven">
-<td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed" title="Load Ziti identity.">Ziti_load_context()</a></code>   </td><td class="markdownTableBodyNone">loads an enrolled <a href="https://openziti.io/docs/learn/core-concepts/identities/overview">ziti identity</a> from the provided file    </td></tr>
+<td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523" title="Load Ziti identity.">Ziti_load_context()</a></code>   </td><td class="markdownTableBodyNone">loads an enrolled <a href="https://openziti.io/docs/learn/core-concepts/identities/overview">ziti identity</a> from the provided file    </td></tr>
 <tr class="markdownTableRowOdd">
 <td class="markdownTableBodyNone"><code><a class="el" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572" title="Shutdown Ziti library.">Ziti_lib_shutdown()</a></code>   </td><td class="markdownTableBodyNone">gracefully shuts down all loaded identities and terminates the event loop   </td></tr>
 </table>
@@ -160,7 +160,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *identity_file = process_args(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_function" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a>();</div>
-<div class="line">    <a class="code hl_typedef" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx = <a class="code hl_function" href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a>(identity_file);</div>
+<div class="line">    <a class="code hl_typedef" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx = <a class="code hl_function" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a>(identity_file);</div>
 <div class="line"> </div>
 <div class="line">    ...</div>
 <div class="line"> </div>
@@ -169,9 +169,9 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line">}</div>
 <div class="ttc" id="aziti_8h_html_a39669b224e62d165a45f8415a342a6b4"><div class="ttname"><a href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></div><div class="ttdeci">struct ziti_ctx * ziti_context</div><div class="ttdoc">Represents the Ziti Edge identity context.</div><div class="ttdef"><b>Definition</b> ziti.h:67</div></div>
 <div class="ttc" id="azitilib_8h_html"><div class="ttname"><a href="zitilib_8h.html">zitilib.h</a></div></div>
+<div class="ttc" id="azitilib_8h_html_a79968304e78a3eb46a329b81790e0523"><div class="ttname"><a href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a></div><div class="ttdeci">int Ziti_load_context(ziti_handle_t *h, const char *identity)</div><div class="ttdoc">Load Ziti identity.</div></div>
 <div class="ttc" id="azitilib_8h_html_a9c50cd895babc6f5f0a8ea14e2df48b4"><div class="ttname"><a href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a></div><div class="ttdeci">void Ziti_lib_init(void)</div><div class="ttdoc">Initialize Ziti library.</div></div>
 <div class="ttc" id="azitilib_8h_html_ab18537f49af147f645d08d2cc0965572"><div class="ttname"><a href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a></div><div class="ttdeci">void Ziti_lib_shutdown(void)</div><div class="ttdoc">Shutdown Ziti library.</div></div>
-<div class="ttc" id="azitilib_8h_html_afd37bf5b0b0a6b7bbb510977b00d33ed"><div class="ttname"><a href="zitilib_8h.html#afd37bf5b0b0a6b7bbb510977b00d33ed">Ziti_load_context</a></div><div class="ttdeci">ziti_context Ziti_load_context(const char *identity)</div><div class="ttdoc">Load Ziti identity.</div></div>
 </div><!-- fragment --><p>Once <code>ziti_context</code> is loaded it can be used to dial a service or bind to a service (provided the identity has proper access to it).</p>
 <h4>Dialing a service</h4>
 <table class="markdownTable">
@@ -183,7 +183,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <td class="markdownTableBodyNone"><code>Ziti_connect_addr(sock, hostname, port)</code>   </td><td class="markdownTableBodyNone">connects given socket to the specified intercept address   </td></tr>
 </table>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> sock = <a class="code hl_function" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a>(SOCK_STREAM);</div>
-<div class="line"><span class="keywordtype">int</span> error = <a class="code hl_function" href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">Ziti_connect</a>(sock, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
+<div class="line"><span class="keywordtype">int</span> error = <a class="code hl_function" href="zitilib_8h.html#a158be9d5b02c19edf2e9b3c38596ee5b">Ziti_connect</a>(sock, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
 <div class="line"> </div>
 <div class="line"><span class="comment">// use sock as normal socket</span></div>
 <div class="line"><span class="keywordflow">do</span> {</div>
@@ -193,9 +193,9 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line">} <span class="keywordflow">while</span> (!done);</div>
 <div class="line"> </div>
 <div class="line">close(sock);</div>
-<div class="ttc" id="azitilib_8h_html_a11e24e8781b739eff9b0964f3cf4af74"><div class="ttname"><a href="zitilib_8h.html#a11e24e8781b739eff9b0964f3cf4af74">Ziti_connect</a></div><div class="ttdeci">int Ziti_connect(ziti_socket_t socket, ziti_context ztx, const char *service, const char *terminator)</div><div class="ttdoc">Connect socket to a Ziti service.</div></div>
+<div class="ttc" id="azitilib_8h_html_a158be9d5b02c19edf2e9b3c38596ee5b"><div class="ttname"><a href="zitilib_8h.html#a158be9d5b02c19edf2e9b3c38596ee5b">Ziti_connect</a></div><div class="ttdeci">int Ziti_connect(ziti_socket_t socket, ziti_handle_t ztx, const char *service, const char *terminator)</div><div class="ttdoc">Connect socket to a Ziti service.</div></div>
 <div class="ttc" id="azitilib_8h_html_a1e0b67b9411bc037acf42affcda78185"><div class="ttname"><a href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a></div><div class="ttdeci">ziti_socket_t Ziti_socket(int type)</div><div class="ttdoc">creates a socket handle(Windows) or file descriptor(*nix) suitable for connecting to a Ziti service</div></div>
-<div class="ttc" id="azitilib_8h_html_a86fe0c7b322993be4bb71a8243e975a4"><div class="ttname"><a href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></div><div class="ttdeci">int ziti_socket_t</div><div class="ttdef"><b>Definition</b> zitilib.h:35</div></div>
+<div class="ttc" id="azitilib_8h_html_a86fe0c7b322993be4bb71a8243e975a4"><div class="ttname"><a href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a></div><div class="ttdeci">int ziti_socket_t</div><div class="ttdef"><b>Definition</b> zitilib.h:40</div></div>
 </div><!-- fragment --><h4>Binding to a service</h4>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -208,7 +208,7 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <td class="markdownTableBodyNone"><code>Ziti_accept(srv, caller, caller_len)</code>   </td><td class="markdownTableBodyNone">accepts incoming connection and returns peer socket/handle   </td></tr>
 </table>
 <div class="fragment"><div class="line"><a class="code hl_typedef" href="zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4">ziti_socket_t</a> srv = <a class="code hl_function" href="zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185">Ziti_socket</a>(SOCK_STREAM);</div>
-<div class="line"><span class="keywordtype">int</span> error = <a class="code hl_function" href="zitilib_8h.html#a4366225741ec51eb92fab87e230cc431">Ziti_bind</a>(srv, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
+<div class="line"><span class="keywordtype">int</span> error = <a class="code hl_function" href="zitilib_8h.html#aec4a1f48d35a84aee005f2e6888547a6">Ziti_bind</a>(srv, ztx, <span class="stringliteral">&quot;my-secure-service&quot;</span>, NULL);</div>
 <div class="line"><a class="code hl_function" href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">Ziti_listen</a>(srv, 10); <span class="comment">// sets accept backlog</span></div>
 <div class="line"> </div>
 <div class="line"><span class="keywordflow">do</span> {</div>
@@ -221,9 +221,9 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line">} <span class="keywordflow">while</span> (!done);</div>
 <div class="line"> </div>
 <div class="line">close(srv);</div>
-<div class="ttc" id="azitilib_8h_html_a4366225741ec51eb92fab87e230cc431"><div class="ttname"><a href="zitilib_8h.html#a4366225741ec51eb92fab87e230cc431">Ziti_bind</a></div><div class="ttdeci">int Ziti_bind(ziti_socket_t socket, ziti_context ztx, const char *service, const char *terminator)</div><div class="ttdoc">Bind socket to a Ziti service.</div></div>
 <div class="ttc" id="azitilib_8h_html_a5d8678cd4f35432c3bfc99319c9a1c39"><div class="ttname"><a href="zitilib_8h.html#a5d8678cd4f35432c3bfc99319c9a1c39">Ziti_accept</a></div><div class="ttdeci">ziti_socket_t Ziti_accept(ziti_socket_t socket, char *caller, int caller_len)</div><div class="ttdoc">accept a client Ziti connection as a socket</div></div>
 <div class="ttc" id="azitilib_8h_html_ad844181a784a9cc2289f49b8b2461f31"><div class="ttname"><a href="zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31">Ziti_listen</a></div><div class="ttdeci">int Ziti_listen(ziti_socket_t socket, int backlog)</div><div class="ttdoc">marks the [socket] as a socket able to accept incoming connections</div></div>
+<div class="ttc" id="azitilib_8h_html_aec4a1f48d35a84aee005f2e6888547a6"><div class="ttname"><a href="zitilib_8h.html#aec4a1f48d35a84aee005f2e6888547a6">Ziti_bind</a></div><div class="ttdeci">int Ziti_bind(ziti_socket_t socket, ziti_handle_t ztx, const char *service, const char *terminator)</div><div class="ttdoc">Bind socket to a Ziti service.</div></div>
 </div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Getting Help</h2>
 <hr  />

@@ -14,6 +14,7 @@ var errors_8h =
     [ "ZITI_ENROLLMENT_CERTIFICATE_REQUIRED", "errors_8h.html#a4af7dff9cd0e48123e6d781535a28ccb", null ],
     [ "ZITI_ENROLLMENT_METHOD_UNSUPPORTED", "errors_8h.html#ae860ab267ffdf4ee6591432d8caf2dd2", null ],
     [ "ZITI_EOF", "errors_8h.html#af97a8a9096c8f6059991db627817ec4c", null ],
+    [ "ZITI_EXTERNAL_LOGIN_REQUIRED", "errors_8h.html#a088d3d5c2b6584b619a69ded391a17a0", null ],
     [ "ZITI_GATEWAY_UNAVAILABLE", "errors_8h.html#aec10c14a1b69bf3286b8ab717718cdf0", null ],
     [ "ZITI_INVALID_AUTHENTICATOR_CERT", "errors_8h.html#afed704be5f67391998504305161dc4fb", null ],
     [ "ZITI_INVALID_AUTHENTICATOR_TYPE", "errors_8h.html#adb25dfb3ea2bd92c268b0fb3049ac576", null ],
