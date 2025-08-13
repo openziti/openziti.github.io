@@ -142,7 +142,7 @@ Using OpenZiti in Your Application</h2>
 High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <p>The high-level API was developed to simplify embedding OpenZiti in an application. The main feature of this API is presenting Ziti connections as regular socket file descriptors (or handles on Windows). These sockets can be used both blocking and non-blocking modes.</p>
 <h4>SDK Initialization and Teardown</h4>
-<p>There are just three functions that cover SDK initialization and teardown.</p>
+<p>There are just three functions that cover SDK initialization and teardown. Additional steps may be required to complete authentication. See example below.</p>
 <table class="markdownTable">
 <tr class="markdownTableHead">
 <th class="markdownTableHeadNone">function   </th><th class="markdownTableHeadNone">purpose    </th></tr>
@@ -160,18 +160,59 @@ High-Level (&lt;tt&gt;Zitilib&lt;/tt&gt;) API</h3>
 <div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *identity_file = process_args(argc, argv);</div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_function" href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a>();</div>
-<div class="line">    <a class="code hl_typedef" href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a> ztx = <a class="code hl_function" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a>(identity_file);</div>
+<div class="line">    </div>
+<div class="line">    <a class="code hl_typedef" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx = NULL;</div>
+<div class="line">    <span class="keywordtype">int</span> err = <a class="code hl_function" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a>(&amp;ztx, identity_file);</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// simplest case, identity is loaded successfully with key/certificate</span></div>
+<div class="line">    <span class="keywordflow">if</span> (err == <a class="code hl_define" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">ZITI_OK</a>) <span class="keywordflow">goto</span> important_work;</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// identity does not have key/certificate or requires secondary auth with external provider</span></div>
+<div class="line">    <span class="keywordflow">if</span> (err == <a class="code hl_define" href="errors_8h.html#a088d3d5c2b6584b619a69ded391a17a0">ZITI_EXTERNAL_LOGIN_REQUIRED</a>) {</div>
+<div class="line">        <span class="comment">// optional step: query supported external login providers</span></div>
+<div class="line">        <a class="code hl_struct" href="structziti__jwt__signer.html">ziti_jwt_signer_array</a> signers = <a class="code hl_function" href="zitilib_8h.html#a38ffd9332792f813f12c48f7df262921">Ziti_get_ext_signers</a>(ztx);</div>
 <div class="line"> </div>
+<div class="line">        <span class="comment">// select</span></div>
+<div class="line">        <span class="keyword">const</span> <span class="keywordtype">char</span> *singer = ...; <span class="comment">// prompt user or use a known provider</span></div>
+<div class="line">        </div>
+<div class="line">        <span class="keywordtype">char</span> *url = <a class="code hl_function" href="zitilib_8h.html#a97fceb89bc8db5bd2499177f33bc05c8">Ziti_login_external</a>(ztx, signer);</div>
+<div class="line">        <span class="comment">// prompt user to open URL in browser</span></div>
+<div class="line"> </div>
+<div class="line">        <span class="comment">// wait for external login to complete</span></div>
+<div class="line">        err = <a class="code hl_function" href="zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133">Ziti_wait_for_auth</a>(ztx, 60000); <span class="comment">// wait for a minute</span></div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="comment">// identity requires TOTP code for secondary authentication</span></div>
+<div class="line">    <span class="keywordflow">if</span> (err == <a class="code hl_define" href="errors_8h.html#accae4e745b6478808c245c4802e30937">ZITI_PARTIALLY_AUTHENTICATED</a>) {</div>
+<div class="line">        <span class="keywordtype">char</span> *code = ...; <span class="comment">// prompt user for TOTP code</span></div>
+<div class="line">        err = <a class="code hl_function" href="zitilib_8h.html#af8d584f07a5f7959adeff92036172aeb">Ziti_login_totp</a>(ztx, code);</div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">    <span class="keywordflow">if</span> (err != <a class="code hl_define" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">ZITI_OK</a>) {</div>
+<div class="line">        fprintf(stderr, <span class="stringliteral">&quot;Failed to load identity: %s\n&quot;</span>, Ziti_strerror(rc));</div>
+<div class="line">        <span class="comment">// handle error, e.g. exit</span></div>
+<div class="line">    }</div>
+<div class="line">    </div>
+<div class="line">important_work:</div>
 <div class="line">    ...</div>
+<div class="line">    </div>
 <div class="line"> </div>
 <div class="line"> </div>
 <div class="line">    <a class="code hl_function" href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a>();</div>
 <div class="line">}</div>
-<div class="ttc" id="aziti_8h_html_a39669b224e62d165a45f8415a342a6b4"><div class="ttname"><a href="ziti_8h.html#a39669b224e62d165a45f8415a342a6b4">ziti_context</a></div><div class="ttdeci">struct ziti_ctx * ziti_context</div><div class="ttdoc">Represents the Ziti Edge identity context.</div><div class="ttdef"><b>Definition</b> ziti.h:67</div></div>
+<div class="ttc" id="aerrors_8h_html_a088d3d5c2b6584b619a69ded391a17a0"><div class="ttname"><a href="errors_8h.html#a088d3d5c2b6584b619a69ded391a17a0">ZITI_EXTERNAL_LOGIN_REQUIRED</a></div><div class="ttdeci">#define ZITI_EXTERNAL_LOGIN_REQUIRED</div><div class="ttdoc">returned when an external login is required to complete authentication</div><div class="ttdef"><b>Definition</b> errors.h:117</div></div>
+<div class="ttc" id="aerrors_8h_html_a2ccd2aaa13be89c787a445994f0525ec"><div class="ttname"><a href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec">ZITI_OK</a></div><div class="ttdeci">#define ZITI_OK</div><div class="ttdoc">The expected outcome of a successful operation.</div><div class="ttdef"><b>Definition</b> errors.h:33</div></div>
+<div class="ttc" id="aerrors_8h_html_accae4e745b6478808c245c4802e30937"><div class="ttname"><a href="errors_8h.html#accae4e745b6478808c245c4802e30937">ZITI_PARTIALLY_AUTHENTICATED</a></div><div class="ttdeci">#define ZITI_PARTIALLY_AUTHENTICATED</div><div class="ttdoc">returned when authentication is attempted but there is an existing api session waiting for auth queri...</div><div class="ttdef"><b>Definition</b> errors.h:101</div></div>
+<div class="ttc" id="astructziti__jwt__signer_html"><div class="ttname"><a href="structziti__jwt__signer.html">ziti_jwt_signer</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:268</div></div>
 <div class="ttc" id="azitilib_8h_html"><div class="ttname"><a href="zitilib_8h.html">zitilib.h</a></div></div>
+<div class="ttc" id="azitilib_8h_html_a1a9af2b3c97a1c142369533da4c425ac"><div class="ttname"><a href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a></div><div class="ttdeci">uint32_t ziti_handle_t</div><div class="ttdef"><b>Definition</b> zitilib.h:31</div></div>
+<div class="ttc" id="azitilib_8h_html_a38ffd9332792f813f12c48f7df262921"><div class="ttname"><a href="zitilib_8h.html#a38ffd9332792f813f12c48f7df262921">Ziti_get_ext_signers</a></div><div class="ttdeci">ziti_jwt_signer_array Ziti_get_ext_signers(ziti_handle_t ztx)</div><div class="ttdoc">Get external signers available for authentication.</div></div>
+<div class="ttc" id="azitilib_8h_html_a54ca6fb8d8664a3f3bb2467bf6030133"><div class="ttname"><a href="zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133">Ziti_wait_for_auth</a></div><div class="ttdeci">int Ziti_wait_for_auth(ziti_handle_t ztx, int timeout_ms)</div><div class="ttdoc">Wait for authentication to complete.</div></div>
 <div class="ttc" id="azitilib_8h_html_a79968304e78a3eb46a329b81790e0523"><div class="ttname"><a href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a></div><div class="ttdeci">int Ziti_load_context(ziti_handle_t *h, const char *identity)</div><div class="ttdoc">Load Ziti identity.</div></div>
+<div class="ttc" id="azitilib_8h_html_a97fceb89bc8db5bd2499177f33bc05c8"><div class="ttname"><a href="zitilib_8h.html#a97fceb89bc8db5bd2499177f33bc05c8">Ziti_login_external</a></div><div class="ttdeci">char * Ziti_login_external(ziti_handle_t ztx, const char *signer_name)</div><div class="ttdoc">Start external login process.</div></div>
 <div class="ttc" id="azitilib_8h_html_a9c50cd895babc6f5f0a8ea14e2df48b4"><div class="ttname"><a href="zitilib_8h.html#a9c50cd895babc6f5f0a8ea14e2df48b4">Ziti_lib_init</a></div><div class="ttdeci">void Ziti_lib_init(void)</div><div class="ttdoc">Initialize Ziti library.</div></div>
 <div class="ttc" id="azitilib_8h_html_ab18537f49af147f645d08d2cc0965572"><div class="ttname"><a href="zitilib_8h.html#ab18537f49af147f645d08d2cc0965572">Ziti_lib_shutdown</a></div><div class="ttdeci">void Ziti_lib_shutdown(void)</div><div class="ttdoc">Shutdown Ziti library.</div></div>
+<div class="ttc" id="azitilib_8h_html_af8d584f07a5f7959adeff92036172aeb"><div class="ttname"><a href="zitilib_8h.html#af8d584f07a5f7959adeff92036172aeb">Ziti_login_totp</a></div><div class="ttdeci">int Ziti_login_totp(ziti_handle_t ztx, const char *code)</div><div class="ttdoc">Login with TOTP code.</div></div>
 </div><!-- fragment --><p>Once <code>ziti_context</code> is loaded it can be used to dial a service or bind to a service (provided the identity has proper access to it).</p>
 <h4>Dialing a service</h4>
 <table class="markdownTable">

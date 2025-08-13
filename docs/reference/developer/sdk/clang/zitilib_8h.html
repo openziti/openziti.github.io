@@ -136,6 +136,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a97fceb89bc8db5bd2499177f33bc05c8" id="r_a97fceb89bc8db5bd2499177f33bc05c8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a97fceb89bc8db5bd2499177f33bc05c8">Ziti_login_external</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx, const char *signer_name)</td></tr>
 <tr class="memdesc:a97fceb89bc8db5bd2499177f33bc05c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start external login process.  <br /></td></tr>
 <tr class="separator:a97fceb89bc8db5bd2499177f33bc05c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8d584f07a5f7959adeff92036172aeb" id="r_af8d584f07a5f7959adeff92036172aeb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#af8d584f07a5f7959adeff92036172aeb">Ziti_login_totp</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx, const char *code)</td></tr>
+<tr class="memdesc:af8d584f07a5f7959adeff92036172aeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Login with TOTP code.  <br /></td></tr>
+<tr class="separator:af8d584f07a5f7959adeff92036172aeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54ca6fb8d8664a3f3bb2467bf6030133" id="r_a54ca6fb8d8664a3f3bb2467bf6030133"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133">Ziti_wait_for_auth</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx, int timeout_ms)</td></tr>
 <tr class="memdesc:a54ca6fb8d8664a3f3bb2467bf6030133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for authentication to complete.  <br /></td></tr>
 <tr class="separator:a54ca6fb8d8664a3f3bb2467bf6030133"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -712,7 +715,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Start external login process. </p>
-<p>This method is used to start the external login process for the given Ziti context. It will return a URL that the user should open in their browser to complete the authentication.</p>
+<p>This method is used to start the external login process for the given Ziti context. It will return a URL that the application should prompt user to open in their browser to complete the authentication.</p>
 <p>the returned URL must be freed with free().</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -722,6 +725,45 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>URL to be opened in a browser, or NULL on error. </dd></dl>
+
+</div>
+</div>
+<a id="af8d584f07a5f7959adeff92036172aeb" name="af8d584f07a5f7959adeff92036172aeb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8d584f07a5f7959adeff92036172aeb">&#9670;&#160;</a></span>Ziti_login_totp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_login_totp </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a>&#160;</td>
+          <td class="paramname"><em>ztx</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>code</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Login with TOTP code. </p>
+<p>This method is used to complete the authentication process by providing a TOTP code. It should be called after the user has entered their TOTP code.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ztx</td><td>Ziti context handle </td></tr>
+    <tr><td class="paramname">code</td><td>TOTP code provided by the user </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 on success, error code on failure </dd></dl>
 
 </div>
 </div>

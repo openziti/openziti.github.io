@@ -17,6 +17,7 @@ var zitilib_8h =
     [ "Ziti_listen", "zitilib_8h.html#ad844181a784a9cc2289f49b8b2461f31", null ],
     [ "Ziti_load_context", "zitilib_8h.html#a79968304e78a3eb46a329b81790e0523", null ],
     [ "Ziti_login_external", "zitilib_8h.html#a97fceb89bc8db5bd2499177f33bc05c8", null ],
+    [ "Ziti_login_totp", "zitilib_8h.html#af8d584f07a5f7959adeff92036172aeb", null ],
     [ "Ziti_socket", "zitilib_8h.html#a1e0b67b9411bc037acf42affcda78185", null ],
     [ "Ziti_wait_for_auth", "zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133", null ]
 ];
