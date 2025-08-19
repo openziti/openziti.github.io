@@ -99,7 +99,6 @@ $(document).ready(function(){initNavTree('zitilib_8h.html',''); initResizable();
 <div class="textblock"><code>#include &quot;<a class="el" href="externs_8h_source.html">externs.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="errors_8h_source.html">errors.h</a>&quot;</code><br />
 <code>#include &lt;stdint.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="ziti__model_8h_source.html">ziti_model.h</a>&quot;</code><br />
 <code>#include &lt;netinet/in.h&gt;</code><br />
 </div>
 <p><a href="zitilib_8h_source.html">Go to the source code of this file.</a></p>
@@ -130,9 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a79968304e78a3eb46a329b81790e0523" id="r_a79968304e78a3eb46a329b81790e0523"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> *h, const char *identity)</td></tr>
 <tr class="memdesc:a79968304e78a3eb46a329b81790e0523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Ziti identity.  <br /></td></tr>
 <tr class="separator:a79968304e78a3eb46a329b81790e0523"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38ffd9332792f813f12c48f7df262921" id="r_a38ffd9332792f813f12c48f7df262921"><td class="memItemLeft" align="right" valign="top"><a class="el" href="ziti__model_8h.html#a7c5c9ff7bec459263afefea2bbb0d536">ziti_jwt_signer_array</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a38ffd9332792f813f12c48f7df262921">Ziti_get_ext_signers</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx)</td></tr>
-<tr class="memdesc:a38ffd9332792f813f12c48f7df262921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get external signers available for authentication.  <br /></td></tr>
-<tr class="separator:a38ffd9332792f813f12c48f7df262921"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c947110999176e4cd2b5b6a723a6050" id="r_a3c947110999176e4cd2b5b6a723a6050"><td class="memItemLeft" align="right" valign="top">const char *const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a3c947110999176e4cd2b5b6a723a6050">Ziti_get_ext_signers</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx)</td></tr>
+<tr class="memdesc:a3c947110999176e4cd2b5b6a723a6050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the names of external signers available for authentication.  <br /></td></tr>
+<tr class="separator:a3c947110999176e4cd2b5b6a723a6050"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97fceb89bc8db5bd2499177f33bc05c8" id="r_a97fceb89bc8db5bd2499177f33bc05c8"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a97fceb89bc8db5bd2499177f33bc05c8">Ziti_login_external</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx, const char *signer_name)</td></tr>
 <tr class="memdesc:a97fceb89bc8db5bd2499177f33bc05c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start external login process.  <br /></td></tr>
 <tr class="separator:a97fceb89bc8db5bd2499177f33bc05c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -526,14 +525,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a38ffd9332792f813f12c48f7df262921" name="a38ffd9332792f813f12c48f7df262921"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38ffd9332792f813f12c48f7df262921">&#9670;&#160;</a></span>Ziti_get_ext_signers()</h2>
+<a id="a3c947110999176e4cd2b5b6a723a6050" name="a3c947110999176e4cd2b5b6a723a6050"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c947110999176e4cd2b5b6a723a6050">&#9670;&#160;</a></span>Ziti_get_ext_signers()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="ziti__model_8h.html#a7c5c9ff7bec459263afefea2bbb0d536">ziti_jwt_signer_array</a> Ziti_get_ext_signers </td>
+          <td class="memname">const char *const  * Ziti_get_ext_signers </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a>&#160;</td>
           <td class="paramname"><em>ztx</em></td><td>)</td>
@@ -542,8 +541,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get external signers available for authentication. </p>
-<p>The result must be freed with [free_ziti_jwt_signer_array]. </p><dl class="section return"><dt>Returns</dt><dd>a dynamically allocated array of <a class="el" href="structziti__jwt__signer.html">ziti_jwt_signer</a> pointers, terminated with NULL. </dd></dl>
+<p>Get the names of external signers available for authentication. </p>
+<dl class="section return"><dt>Returns</dt><dd>a dynamically allocated array of <a class="el" href="structziti__jwt__signer.html">ziti_jwt_signer</a> pointers, terminated with NULL. </dd></dl>
 
 </div>
 </div>
