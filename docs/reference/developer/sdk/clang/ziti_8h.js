@@ -87,5 +87,5 @@ var ziti_8h =
     [ "ziti_shutdown", "ziti_8h.html#ab306cc32d1f350206b97417f93f60abf", null ],
     [ "ziti_use_ext_jwt_signer", "ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd", null ],
     [ "ziti_verify_extend_cert_authenticator", "ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2", null ],
-    [ "ziti_write", "ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69", null ]
+    [ "ziti_write", "ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c", null ]
 ];

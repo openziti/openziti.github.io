@@ -190,7 +190,7 @@ Typedefs</h2></td></tr>
 <tr class="memdesc:a06b4d01871a739519c265629cd90aa4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Defines the ziti_listen_cb.  <br /></td></tr>
 <tr class="separator:a06b4d01871a739519c265629cd90aa4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea8ec31c759892288c0ad89ac17a161d" id="r_aea8ec31c759892288c0ad89ac17a161d"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, ssize_t status, void *write_ctx)</td></tr>
-<tr class="memdesc:aea8ec31c759892288c0ad89ac17a161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> is complete.  <br /></td></tr>
+<tr class="memdesc:aea8ec31c759892288c0ad89ac17a161d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a> is complete.  <br /></td></tr>
 <tr class="separator:aea8ec31c759892288c0ad89ac17a161d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ededa980f2de9e4b58378e88fcd49a8" id="r_a0ededa980f2de9e4b58378e88fcd49a8"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a0ededa980f2de9e4b58378e88fcd49a8">ziti_close_cb</a>) (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:a0ededa980f2de9e4b58378e88fcd49a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback called after connection was closed.  <br /></td></tr>
@@ -325,9 +325,9 @@ Functions</h2></td></tr>
 <tr class="memitem:aae65595ba921191330a1920927734ab6" id="r_aae65595ba921191330a1920927734ab6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#aae65595ba921191330a1920927734ab6">ziti_close_write</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn)</td></tr>
 <tr class="memdesc:aae65595ba921191330a1920927734ab6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Closes the outgoing (write) side of the given ziti connection.  <br /></td></tr>
 <tr class="separator:aae65595ba921191330a1920927734ab6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11df442fe8d4331dcbbe5afd06ccb69" id="r_ad11df442fe8d4331dcbbe5afd06ccb69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69">ziti_write</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uint8_t *data, size_t length, <a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a> write_cb, void *write_ctx)</td></tr>
-<tr class="memdesc:ad11df442fe8d4331dcbbe5afd06ccb69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to the connection peer.  <br /></td></tr>
-<tr class="separator:ad11df442fe8d4331dcbbe5afd06ccb69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a27a6f37495fc32a017c18a9c815e071c" id="r_a27a6f37495fc32a017c18a9c815e071c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c">ziti_write</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, const uint8_t *data, size_t length, <a class="el" href="ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d">ziti_write_cb</a> write_cb, void *write_ctx)</td></tr>
+<tr class="memdesc:a27a6f37495fc32a017c18a9c815e071c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send data to the connection peer.  <br /></td></tr>
+<tr class="separator:a27a6f37495fc32a017c18a9c815e071c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4dc49b59dcb1d61e6d82a6a1a937adf" id="r_af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti_8h.html#af4dc49b59dcb1d61e6d82a6a1a937adf">ziti_conn_bridge</a> (<a class="el" href="ziti_8h.html#a1fe921652d1f302f11ad29f836cf9eef">ziti_connection</a> conn, uv_handle_t *handle, uv_close_cb on_close)</td></tr>
 <tr class="memdesc:af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bridge [ziti_connection] to a given IO stream.  <br /></td></tr>
 <tr class="separator:af4dc49b59dcb1d61e6d82a6a1a937adf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1017,10 +1017,10 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Callback called after <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> is complete. </p>
-<p>This callback is triggered on the completion of <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>. The result of the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> function may be an error condition so it is important to verify the provided status code in this callback.</p>
-<p>This callback is often used to free or reinitialize the buffer associated with the <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> invocation. It is important to not free this memory until after data has been written to the wire else the results of the write operation may be unexpected.</p>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a>, ZITI_ERRORS </dd></dl>
+<p>Callback called after <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a> is complete. </p>
+<p>This callback is triggered on the completion of <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a>. The result of the <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a> function may be an error condition so it is important to verify the provided status code in this callback.</p>
+<p>This callback is often used to free or reinitialize the buffer associated with the <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a> invocation. It is important to not free this memory until after data has been written to the wire else the results of the write operation may be unexpected.</p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a>, ZITI_ERRORS </dd></dl>
 
 </div>
 </div>
@@ -1191,7 +1191,7 @@ Functions</h2></td></tr>
 
 <p>Closes the outgoing (write) side of the given ziti connection. </p>
 <p>Any pending write requests will be able to complete. The <code>conn</code> should refer to a initialized ziti connection.</p>
-<p>This notifies peer ziti connection that no more data will be sent &ndash; peer receives EOF. Any further calls to <code><a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a></code> will return an error.</p>
+<p>This notifies peer ziti connection that no more data will be sent &ndash; peer receives EOF. Any further calls to <code><a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a></code> will return an error.</p>
 <p>This leaves incoming(read) side of ziti connection open.</p>
 <dl class="section note"><dt>Note</dt><dd>this is roughly equivalent to calling <code>uv_shutdown()</code> on a duplex <code>uv_stream</code>, or <code>shutdown(sock, SHUT_WR)</code> on socket fd.</dd></dl>
 <dl class="params"><dt>Parameters</dt><dd>
@@ -1789,7 +1789,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="errors_8h.html#a2ccd2aaa13be89c787a445994f0525ec" title="The expected outcome of a successful operation.">ZITI_OK</a> or corresponding #ZITI_ERRORS</dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69" title="Send data to the connection peer.">ziti_write()</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="ziti_8h.html#a06b60dcc1c50c15120bc2e185ef36a4b" title="Establishes connection to a Ziti service.">ziti_dial()</a>, <a class="el" href="ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c" title="Send data to the connection peer.">ziti_write()</a> </dd></dl>
 
 </div>
 </div>
@@ -3589,8 +3589,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ad11df442fe8d4331dcbbe5afd06ccb69" name="ad11df442fe8d4331dcbbe5afd06ccb69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad11df442fe8d4331dcbbe5afd06ccb69">&#9670;&#160;</a></span>ziti_write()</h2>
+<a id="a27a6f37495fc32a017c18a9c815e071c" name="a27a6f37495fc32a017c18a9c815e071c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a27a6f37495fc32a017c18a9c815e071c">&#9670;&#160;</a></span>ziti_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3607,7 +3607,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
           <td class="paramname"><em>data</em>, </td>
         </tr>
         <tr>

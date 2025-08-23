@@ -92,5 +92,5 @@ var searchData=
   ['ziti_5fuse_5fext_5fjwt_5fsigner_89',['ziti_use_ext_jwt_signer',['../ziti_8h.html#adacf84c4760676c37ea0ec3122a956bd',1,'ziti.h']]],
   ['ziti_5fverify_5fextend_5fcert_5fauthenticator_90',['ziti_verify_extend_cert_authenticator',['../ziti_8h.html#a3eae314fe445902cbf49ba91f5c057e2',1,'ziti.h']]],
   ['ziti_5fwait_5ffor_5fauth_91',['Ziti_wait_for_auth',['../zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133',1,'zitilib.h']]],
-  ['ziti_5fwrite_92',['ziti_write',['../ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69',1,'ziti.h']]]
+  ['ziti_5fwrite_92',['ziti_write',['../ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c',1,'ziti.h']]]
 ];

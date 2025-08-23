@@ -329,7 +329,7 @@ var searchData=
   ['ziti_5fversion_5farray_326',['ziti_version_array',['../ziti__model_8h.html#a261669f665d5ccd4ec5f68d3d6333247',1,'ziti_model.h']]],
   ['ziti_5fversion_5fmodel_327',['ZITI_VERSION_MODEL',['../ziti__model_8h.html#a7ba15568eba891661a06453434986669',1,'ziti_model.h']]],
   ['ziti_5fwait_5ffor_5fauth_328',['Ziti_wait_for_auth',['../zitilib_8h.html#a54ca6fb8d8664a3f3bb2467bf6030133',1,'zitilib.h']]],
-  ['ziti_5fwrite_329',['ziti_write',['../ziti_8h.html#ad11df442fe8d4331dcbbe5afd06ccb69',1,'ziti.h']]],
+  ['ziti_5fwrite_329',['ziti_write',['../ziti_8h.html#a27a6f37495fc32a017c18a9c815e071c',1,'ziti.h']]],
   ['ziti_5fwrite_5fcb_330',['ziti_write_cb',['../ziti_8h.html#aea8ec31c759892288c0ad89ac17a161d',1,'ziti.h']]],
   ['ziti_5fwtf_331',['ZITI_WTF',['../errors_8h.html#a6d0dccf58f52d32bbe696bc2fb625fff',1,'errors.h']]],
   ['zitiauthevent_332',['ZitiAuthEvent',['../ziti__events_8h.html#adf8a71a9a6f774618d0079c74778fd93a4abcd5199b9c3afb8a61dfb034fc4fea',1,'ziti_events.h']]],
