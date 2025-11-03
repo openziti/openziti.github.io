@@ -1,0 +1,46 @@
+# Scenario: Two Services on Default
+# Test: Two Ziti services on same default K8s service
+# Expected: Regular ClusterIP service with two ports
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices:
+    - zitiService: httpbin-service
+      advertisedPort: 2173
+      containerPort: 2173
+    - zitiService: httpbin-service-alt
+      advertisedPort: 2174
+      containerPort: 2174
+  proxyDefaultK8sService:
+    enabled: true
+    type: ClusterIP
+
+# Expected K8s Resources:
+# - ClusterIP Service: ziti-router1-proxy-default
+#   - port: 2173 -> targetPort: 2173 (httpbin-service)
+#   - port: 2174 -> targetPort: 2174 (httpbin-service-alt)
+#
+# Expected Router Config:
+# services:
+#   - "httpbin-service:2173"
+#   - "httpbin-service-alt:2174"
+#
+# Test with: wgetter-two-default.yaml (tests both ports)
+# Targets:
+#   - ziti-router1-proxy-default.kentest.svc:2173
+#   - ziti-router1-proxy-default.kentest.svc:2174

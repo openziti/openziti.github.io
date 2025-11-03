@@ -1,0 +1,43 @@
+# Scenario: One Additional Service Only (No Default)
+# Test: Single service on additional K8s service, default disabled
+# Expected: One additional K8s service, no default service
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices:
+    - zitiService: httpbin-service
+      advertisedPort: 2175
+      containerPort: 2175
+      k8sService: custom
+  proxyDefaultK8sService:
+    enabled: false
+  proxyAdditionalK8sServices:
+    - name: custom
+      type: ClusterIP
+
+# Expected K8s Resources:
+# - ClusterIP Service: ziti-router1-proxy-custom
+#   - port: 2175 -> targetPort: 2175 (httpbin-service)
+# - NO ziti-router1-proxy-default service
+#
+# Expected Router Config:
+# services:
+#   - "httpbin-service:2175"
+#
+# Test with: wgetter-one-additional-only.yaml
+# Target: ziti-router1-proxy-custom.kentest.svc:2175

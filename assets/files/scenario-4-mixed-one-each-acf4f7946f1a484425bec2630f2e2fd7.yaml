@@ -1,0 +1,52 @@
+# Scenario: Mixed - One Default, One Additional
+# Test: One service on default, one on additional K8s service
+# Expected: Two K8s services
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices:
+    - zitiService: httpbin-service
+      advertisedPort: 2174
+      containerPort: 2174
+      # No k8sService = maps to default
+    - zitiService: httpbin-service-alt
+      advertisedPort: 2175
+      containerPort: 2175
+      k8sService: alternate
+  proxyDefaultK8sService:
+    enabled: true
+    type: ClusterIP
+  proxyAdditionalK8sServices:
+    - name: alternate
+      type: ClusterIP
+
+# Expected K8s Resources:
+# - ClusterIP Service: ziti-router1-proxy-default
+#   - port: 2174 -> targetPort: 2174 (httpbin-service)
+# - ClusterIP Service: ziti-router1-proxy-alternate
+#   - port: 2175 -> targetPort: 2175 (httpbin-service-alt)
+#
+# Expected Router Config:
+# services:
+#   - "httpbin-service:2174"
+#   - "httpbin-service-alt:2175"
+#
+# Test with: wgetter-mixed-one-each.yaml (tests both services)
+# Targets:
+#   - ziti-router1-proxy-default.kentest.svc:2174
+#   - ziti-router1-proxy-alternate.kentest.svc:2175

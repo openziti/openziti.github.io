@@ -1,0 +1,33 @@
+# Scenario: Dynamic Proxy Mode
+# Test: Dynamic port allocation - httpbin-service should bind to port 2171 automatically
+# Expected: Headless service, no static port definitions
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices: []
+  proxyDefaultK8sService:
+    enabled: true
+    type: ClusterIP
+
+# Expected K8s Resources:
+# - Headless Service: ziti-router1-proxy-default (clusterIP: None, ports: [])
+# - Service resolves to pod IP
+# - httpbin-service binds dynamically to pod IP:2171
+#
+# Test with: wgetter-dynamic.yaml
+# Target: ziti-router1-proxy-default.kentest.svc:2171

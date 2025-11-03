@@ -185,9 +185,9 @@ Macros</h2></td></tr>
 <tr class="separator:ac0ab12db245a7998efebb644f28f3fc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5789ae69064c0177f9e736cca0f3d275" id="r_a5789ae69064c0177f9e736cca0f3d275"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a5789ae69064c0177f9e736cca0f3d275">ZITI_CONFIG_MODEL</a>(XX, ...)</td></tr>
 <tr class="separator:a5789ae69064c0177f9e736cca0f3d275"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a45fd0415f622ef5bbf180cd6018411d3" id="r_a45fd0415f622ef5bbf180cd6018411d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a45fd0415f622ef5bbf180cd6018411d3">ZITI_API_PATH_MODEL</a>(XX, ...)&#160;&#160;&#160;XX(path, <a class="el" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="el" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, path, __VA_ARGS__)</td></tr>
+<tr class="memitem:a45fd0415f622ef5bbf180cd6018411d3" id="r_a45fd0415f622ef5bbf180cd6018411d3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#a45fd0415f622ef5bbf180cd6018411d3">ZITI_API_PATH_MODEL</a>(XX, ...)</td></tr>
 <tr class="separator:a45fd0415f622ef5bbf180cd6018411d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab5384d60df5ee61486b3e4d08ce37a0a" id="r_ab5384d60df5ee61486b3e4d08ce37a0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab5384d60df5ee61486b3e4d08ce37a0a">ZITI_API_VERSIONS_MODEL</a>(XX, ...)&#160;&#160;&#160;XX(edge, <a class="el" href="structapi__path.html">api_path</a>, <a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, edge, __VA_ARGS__)</td></tr>
+<tr class="memitem:ab5384d60df5ee61486b3e4d08ce37a0a" id="r_ab5384d60df5ee61486b3e4d08ce37a0a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#ab5384d60df5ee61486b3e4d08ce37a0a">ZITI_API_VERSIONS_MODEL</a>(XX, ...)</td></tr>
 <tr class="separator:ab5384d60df5ee61486b3e4d08ce37a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3c02be4a1474d89ed1dc95f0e6fbc4b" id="r_af3c02be4a1474d89ed1dc95f0e6fbc4b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="ziti__model_8h.html#af3c02be4a1474d89ed1dc95f0e6fbc4b">ZITI_CTRL_CAP_ENUM</a>(XX, ...)</td></tr>
 <tr class="separator:af3c02be4a1474d89ed1dc95f0e6fbc4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -748,7 +748,7 @@ Variables</h2></td></tr>
 <div class="line">XX(prefix_length, <a class="code hl_typedef" href="model__support_8h.html#abb8731270188b154b48473a22506ddb4">model_number</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, prefixLength, __VA_ARGS__ )</div>
 <div class="ttc" id="amodel__support_8h_html_a6a3518c9c928b1194dfa6123a0a80586"><div class="ttname"><a href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a></div><div class="ttdeci">#define none(t)</div><div class="ttdef"><b>Definition</b> model_support.h:81</div></div>
 <div class="ttc" id="amodel__support_8h_html_abb8731270188b154b48473a22506ddb4"><div class="ttname"><a href="model__support_8h.html#abb8731270188b154b48473a22506ddb4">model_number</a></div><div class="ttdeci">int64_t model_number</div><div class="ttdef"><b>Definition</b> model_support.h:159</div></div>
-<div class="ttc" id="astructziti__address_html"><div class="ttname"><a href="structziti__address.html">ziti_address</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:211</div></div>
+<div class="ttc" id="astructziti__address_html"><div class="ttname"><a href="structziti__address.html">ziti_address</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:213</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -773,11 +773,15 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;XX(path, <a class="el" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="el" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, path, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line">XX(path, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, path, __VA_ARGS__) \</div>
+<div class="line">XX(base_urls, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, apiBaseUrls, __VA_ARGS__)</div>
+<div class="ttc" id="amodel__support_8h_html_a0ebbab09b16927dfc360d01175e3fec0"><div class="ttname"><a href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a></div><div class="ttdeci">const char * model_string</div><div class="ttdef"><b>Definition</b> model_support.h:156</div></div>
+<div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition</b> model_support.h:83</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="ab5384d60df5ee61486b3e4d08ce37a0a" name="ab5384d60df5ee61486b3e4d08ce37a0a"></a>
@@ -801,11 +805,15 @@ Variables</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td>&#160;&#160;&#160;XX(edge, <a class="el" href="structapi__path.html">api_path</a>, <a class="el" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, edge, __VA_ARGS__)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Value:</b><div class="fragment"><div class="line">XX(edge, <a class="code hl_struct" href="structapi__path.html">api_path</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, edge, __VA_ARGS__) \</div>
+<div class="line">XX(oidc, <a class="code hl_struct" href="structapi__path.html">api_path</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, edge-oidc, __VA_ARGS__)</div>
+<div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition</b> model_support.h:84</div></div>
+<div class="ttc" id="astructapi__path_html"><div class="ttname"><a href="structapi__path.html">api_path</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:264</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a77e66944a9b409d9f89c8d128d804689" name="a77e66944a9b409d9f89c8d128d804689"></a>
@@ -912,9 +920,8 @@ Variables</h2></td></tr>
 <div class="line">XX(controllers, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, ztAPIs, __VA_ARGS__)   \</div>
 <div class="line">XX(<span class="keywordtype">id</span>, <a class="code hl_struct" href="structziti__id__cfg.html">ziti_id_cfg</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, <span class="keywordtype">id</span>, __VA_ARGS__)           \</div>
 <div class="line">XX(cfg_source, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, , __VA_ARGS__)</div>
-<div class="ttc" id="amodel__support_8h_html_a0ebbab09b16927dfc360d01175e3fec0"><div class="ttname"><a href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a></div><div class="ttdeci">const char * model_string</div><div class="ttdef"><b>Definition</b> model_support.h:156</div></div>
 <div class="ttc" id="amodel__support_8h_html_a298161e3cb85fe291cbbab1f25f0b8f3"><div class="ttname"><a href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a></div><div class="ttdeci">#define list(t)</div><div class="ttdef"><b>Definition</b> model_support.h:85</div></div>
-<div class="ttc" id="astructziti__id__cfg_html"><div class="ttname"><a href="structziti__id__cfg.html">ziti_id_cfg</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:270</div></div>
+<div class="ttc" id="astructziti__id__cfg_html"><div class="ttname"><a href="structziti__id__cfg.html">ziti_id_cfg</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:272</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -987,12 +994,11 @@ Variables</h2></td></tr>
 <div class="line">XX(proxy, <a class="code hl_struct" href="structziti__proxy__server.html">ziti_proxy_server</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, proxy, __VA_ARGS__) \</div>
 <div class="line">XX(listen_options, <a class="code hl_struct" href="structziti__listen__options.html">ziti_listen_options</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, listenOptions, __VA_ARGS__)</div>
 <div class="ttc" id="amodel__support_8h_html_a34a6f2ddaeb4c3cf6b3ce0e266b1931a"><div class="ttname"><a href="model__support_8h.html#a34a6f2ddaeb4c3cf6b3ce0e266b1931a">model_bool</a></div><div class="ttdeci">bool model_bool</div><div class="ttdef"><b>Definition</b> model_support.h:161</div></div>
-<div class="ttc" id="amodel__support_8h_html_a65480cf9f0f8078bda7e8cb31b379a1c"><div class="ttname"><a href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a></div><div class="ttdeci">#define array(t)</div><div class="ttdef"><b>Definition</b> model_support.h:83</div></div>
 <div class="ttc" id="amodel__support_8h_html_a71854bec883f6da99f2f20ae3516d540"><div class="ttname"><a href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a></div><div class="ttdeci">#define ptr(t)</div><div class="ttdef"><b>Definition</b> model_support.h:82</div></div>
-<div class="ttc" id="astructziti__address__translation_html"><div class="ttname"><a href="structziti__address__translation.html">ziti_address_translation</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:300</div></div>
-<div class="ttc" id="astructziti__listen__options_html"><div class="ttname"><a href="structziti__listen__options.html">ziti_listen_options</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:292</div></div>
-<div class="ttc" id="astructziti__port__range_html"><div class="ttname"><a href="structziti__port__range.html">ziti_port_range</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:288</div></div>
-<div class="ttc" id="astructziti__proxy__server_html"><div class="ttname"><a href="structziti__proxy__server.html">ziti_proxy_server</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:298</div></div>
+<div class="ttc" id="astructziti__address__translation_html"><div class="ttname"><a href="structziti__address__translation.html">ziti_address_translation</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:302</div></div>
+<div class="ttc" id="astructziti__listen__options_html"><div class="ttname"><a href="structziti__listen__options.html">ziti_listen_options</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:294</div></div>
+<div class="ttc" id="astructziti__port__range_html"><div class="ttname"><a href="structziti__port__range.html">ziti_port_range</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:290</div></div>
+<div class="ttc" id="astructziti__proxy__server_html"><div class="ttname"><a href="structziti__proxy__server.html">ziti_proxy_server</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:300</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1053,7 +1059,7 @@ Variables</h2></td></tr>
 <div class="line">XX(key, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, key, __VA_ARGS__) \</div>
 <div class="line">XX(ca, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, ca, __VA_ARGS__)     \</div>
 <div class="line">XX(oidc, <a class="code hl_struct" href="structziti__jwt__signer.html">ziti_jwt_signer</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, oidc, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__jwt__signer_html"><div class="ttname"><a href="structziti__jwt__signer.html">ziti_jwt_signer</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:268</div></div>
+<div class="ttc" id="astructziti__jwt__signer_html"><div class="ttname"><a href="structziti__jwt__signer.html">ziti_jwt_signer</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:270</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1085,7 +1091,6 @@ Variables</h2></td></tr>
 <b>Value:</b><div class="fragment"><div class="line">XX(<span class="keywordtype">id</span>, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, <span class="keywordtype">id</span>, __VA_ARGS__) \</div>
 <div class="line">XX(name, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, name, __VA_ARGS__) \</div>
 <div class="line">XX(app_data, <a class="code hl_typedef" href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, appData, __VA_ARGS__)</div>
-<div class="ttc" id="amodel__support_8h_html_a055b31ece53643333de2067163e03e6f"><div class="ttname"><a href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a></div><div class="ttdeci">#define map(t)</div><div class="ttdef"><b>Definition</b> model_support.h:84</div></div>
 <div class="ttc" id="amodel__support_8h_html_ae5a8ce0b412602b5f07fe3220ea6f77d"><div class="ttname"><a href="model__support_8h.html#ae5a8ce0b412602b5f07fe3220ea6f77d">json</a></div><div class="ttdeci">char * json</div><div class="ttdef"><b>Definition</b> model_support.h:163</div></div>
 </div><!-- fragment -->
 </div>
@@ -1136,7 +1141,7 @@ Variables</h2></td></tr>
 <div class="line">XX(source_ip, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, sourceIp, __VA_ARGS__) \</div>
 <div class="line">XX(allowed_source_addresses, <a class="code hl_struct" href="structziti__address.html">ziti_address</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, allowedSourceAddresses, __VA_ARGS__)</div>
 <div class="ttc" id="astructtag_html"><div class="ttname"><a href="structtag.html">tag</a></div><div class="ttdef"><b>Definition</b> model_support.h:249</div></div>
-<div class="ttc" id="aziti__model_8h_html_ae6bf190aa0e20c2f3b135b5441689505"><div class="ttname"><a href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a></div><div class="ttdeci">ziti_protocol</div><div class="ttdef"><b>Definition</b> ziti_model.h:247</div></div>
+<div class="ttc" id="aziti__model_8h_html_ae6bf190aa0e20c2f3b135b5441689505"><div class="ttname"><a href="ziti__model_8h.html#ae6bf190aa0e20c2f3b135b5441689505">ziti_protocol</a></div><div class="ttdeci">ziti_protocol</div><div class="ttdef"><b>Definition</b> ziti_model.h:249</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1173,7 +1178,7 @@ Variables</h2></td></tr>
 <div class="line">XX(audience, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, audience, __VA_ARGS__)           \</div>
 <div class="line">XX(scopes, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a298161e3cb85fe291cbbab1f25f0b8f3">list</a>, scopes, __VA_ARGS__) \</div>
 <div class="line">XX(target_token, <a class="code hl_enumeration" href="ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b">ziti_target_token</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, targetToken, __VA_ARGS__)</div>
-<div class="ttc" id="aziti__model_8h_html_af0641fd7e6b5eae01ff53153c7f9d73b"><div class="ttname"><a href="ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b">ziti_target_token</a></div><div class="ttdeci">ziti_target_token</div><div class="ttdef"><b>Definition</b> ziti_model.h:260</div></div>
+<div class="ttc" id="aziti__model_8h_html_af0641fd7e6b5eae01ff53153c7f9d73b"><div class="ttname"><a href="ziti__model_8h.html#af0641fd7e6b5eae01ff53153c7f9d73b">ziti_target_token</a></div><div class="ttdeci">ziti_target_token</div><div class="ttdef"><b>Definition</b> ziti_model.h:262</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1307,8 +1312,8 @@ Variables</h2></td></tr>
 <div class="line">XX(timeout, <a class="code hl_typedef" href="model__support_8h.html#abb8731270188b154b48473a22506ddb4">model_number</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, timeout, __VA_ARGS__) \</div>
 <div class="line">XX(timeoutRemaining, <a class="code hl_typedef" href="model__support_8h.html#abb8731270188b154b48473a22506ddb4">model_number</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, timeoutRemaining, __VA_ARGS__) \</div>
 <div class="line">XX(updated_at,<a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, updatedAt, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__process_html"><div class="ttname"><a href="structziti__process.html">ziti_process</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:276</div></div>
-<div class="ttc" id="aziti__model_8h_html_a7384a9132fcedb3972aa60cb0e2aae37"><div class="ttname"><a href="ziti__model_8h.html#a7384a9132fcedb3972aa60cb0e2aae37">ziti_posture_query_type</a></div><div class="ttdeci">ziti_posture_query_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:256</div></div>
+<div class="ttc" id="astructziti__process_html"><div class="ttname"><a href="structziti__process.html">ziti_process</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:278</div></div>
+<div class="ttc" id="aziti__model_8h_html_a7384a9132fcedb3972aa60cb0e2aae37"><div class="ttname"><a href="ziti__model_8h.html#a7384a9132fcedb3972aa60cb0e2aae37">ziti_posture_query_type</a></div><div class="ttdeci">ziti_posture_query_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:258</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1341,7 +1346,7 @@ Variables</h2></td></tr>
 <div class="line">XX(is_passing, <a class="code hl_typedef" href="model__support_8h.html#a34a6f2ddaeb4c3cf6b3ce0e266b1931a">model_bool</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, isPassing, __VA_ARGS__) \</div>
 <div class="line">XX(policy_type, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, policyType, __VA_ARGS__) \</div>
 <div class="line">XX(posture_queries, <a class="code hl_struct" href="structziti__posture__query.html">ziti_posture_query</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__posture__query_html"><div class="ttname"><a href="structziti__posture__query.html">ziti_posture_query</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:278</div></div>
+<div class="ttc" id="astructziti__posture__query_html"><div class="ttname"><a href="structziti__posture__query.html">ziti_posture_query</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:280</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1465,7 +1470,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">XX(address, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, address, __VA_ARGS__) \</div>
 <div class="line">XX(type, <a class="code hl_enumeration" href="ziti__model_8h.html#aceefa5455c811b97ccd850fccc7cbb00">ziti_proxy_server_type</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, type, __VA_ARGS__)</div>
-<div class="ttc" id="aziti__model_8h_html_aceefa5455c811b97ccd850fccc7cbb00"><div class="ttname"><a href="ziti__model_8h.html#aceefa5455c811b97ccd850fccc7cbb00">ziti_proxy_server_type</a></div><div class="ttdeci">ziti_proxy_server_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:296</div></div>
+<div class="ttc" id="aziti__model_8h_html_aceefa5455c811b97ccd850fccc7cbb00"><div class="ttname"><a href="ziti__model_8h.html#aceefa5455c811b97ccd850fccc7cbb00">ziti_proxy_server_type</a></div><div class="ttdeci">ziti_proxy_server_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:298</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1562,8 +1567,8 @@ Variables</h2></td></tr>
 <div class="line">XX(posture_query_set, <a class="code hl_struct" href="structziti__posture__query__set.html">ziti_posture_query_set</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, postureQueries, __VA_ARGS__) \</div>
 <div class="line">XX(posture_query_map, <a class="code hl_struct" href="structziti__posture__query__set.html">ziti_posture_query_set</a>, <a class="code hl_define" href="model__support_8h.html#a055b31ece53643333de2067163e03e6f">map</a>, posturePolicies, __VA_ARGS__) \</div>
 <div class="line">XX(updated_at,<a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, updatedAt, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__posture__query__set_html"><div class="ttname"><a href="structziti__posture__query__set.html">ziti_posture_query_set</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:280</div></div>
-<div class="ttc" id="aziti__model_8h_html_a16d0312daa1421133c53164eec94b532"><div class="ttname"><a href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a></div><div class="ttdeci">ziti_session_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:252</div></div>
+<div class="ttc" id="astructziti__posture__query__set_html"><div class="ttname"><a href="structziti__posture__query__set.html">ziti_posture_query_set</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:282</div></div>
+<div class="ttc" id="aziti__model_8h_html_a16d0312daa1421133c53164eec94b532"><div class="ttname"><a href="ziti__model_8h.html#a16d0312daa1421133c53164eec94b532">ziti_session_type</a></div><div class="ttdeci">ziti_session_type</div><div class="ttdef"><b>Definition</b> ziti_model.h:254</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1687,8 +1692,8 @@ Variables</h2></td></tr>
 <div class="line">XX(build_date, <a class="code hl_typedef" href="model__support_8h.html#a0ebbab09b16927dfc360d01175e3fec0">model_string</a>, <a class="code hl_define" href="model__support_8h.html#a6a3518c9c928b1194dfa6123a0a80586">none</a>, buildDate, __VA_ARGS__) \</div>
 <div class="line">XX(capabilities, <a class="code hl_enumeration" href="ziti__model_8h.html#a612704c5b8112cf2534e9b52732ab588">ziti_ctrl_cap</a>, <a class="code hl_define" href="model__support_8h.html#a65480cf9f0f8078bda7e8cb31b379a1c">array</a>, capabilities, __VA_ARGS__) \</div>
 <div class="line">XX(api_versions, <a class="code hl_struct" href="structziti__api__versions.html">ziti_api_versions</a>, <a class="code hl_define" href="model__support_8h.html#a71854bec883f6da99f2f20ae3516d540">ptr</a>, apiVersions, __VA_ARGS__)</div>
-<div class="ttc" id="astructziti__api__versions_html"><div class="ttname"><a href="structziti__api__versions.html">ziti_api_versions</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:264</div></div>
-<div class="ttc" id="aziti__model_8h_html_a612704c5b8112cf2534e9b52732ab588"><div class="ttname"><a href="ziti__model_8h.html#a612704c5b8112cf2534e9b52732ab588">ziti_ctrl_cap</a></div><div class="ttdeci">ziti_ctrl_cap</div><div class="ttdef"><b>Definition</b> ziti_model.h:258</div></div>
+<div class="ttc" id="astructziti__api__versions_html"><div class="ttname"><a href="structziti__api__versions.html">ziti_api_versions</a></div><div class="ttdef"><b>Definition</b> ziti_model.h:266</div></div>
+<div class="ttc" id="aziti__model_8h_html_a612704c5b8112cf2534e9b52732ab588"><div class="ttname"><a href="ziti__model_8h.html#a612704c5b8112cf2534e9b52732ab588">ziti_ctrl_cap</a></div><div class="ttdeci">ziti_ctrl_cap</div><div class="ttdef"><b>Definition</b> ziti_model.h:260</div></div>
 </div><!-- fragment -->
 </div>
 </div>

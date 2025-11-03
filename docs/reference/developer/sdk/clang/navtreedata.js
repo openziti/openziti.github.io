@@ -59,9 +59,9 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "model__support_8h.html#abb8731270188b154b48473a22506ddb4",
-"structziti__proxy__server__type__s.html#ada15b2288d8a4b908d1f494f2d9f75e2",
-"ziti__model_8h.html#a3077d7260e8c049f8f6acd7c6e7e7a46",
-"zitilib_8h.html#aa1d3e9f5e17e546cfdbf0bfdaf1d1ccd"
+"structziti__proxy__server__type__s.html#a1be1dd841b9f8226252a670a5d5badf7",
+"ziti__model_8h.html#a2f09c1e70c7c063777720231d53a4c1c",
+"zitilib_8h.html#a86fe0c7b322993be4bb71a8243e975a4"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -129,6 +129,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a79968304e78a3eb46a329b81790e0523" id="r_a79968304e78a3eb46a329b81790e0523"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a79968304e78a3eb46a329b81790e0523">Ziti_load_context</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> *h, const char *identity)</td></tr>
 <tr class="memdesc:a79968304e78a3eb46a329b81790e0523"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Ziti identity.  <br /></td></tr>
 <tr class="separator:a79968304e78a3eb46a329b81790e0523"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5050d8725e9039b28a74102679d1e18f" id="r_a5050d8725e9039b28a74102679d1e18f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a5050d8725e9039b28a74102679d1e18f">Ziti_load_context_with_timeout</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> *h, const char *identity, int timeout_ms)</td></tr>
+<tr class="memdesc:a5050d8725e9039b28a74102679d1e18f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load Ziti identity with timeout control.  <br /></td></tr>
+<tr class="separator:a5050d8725e9039b28a74102679d1e18f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c947110999176e4cd2b5b6a723a6050" id="r_a3c947110999176e4cd2b5b6a723a6050"><td class="memItemLeft" align="right" valign="top">const char *const *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="zitilib_8h.html#a3c947110999176e4cd2b5b6a723a6050">Ziti_get_ext_signers</a> (<a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> ztx)</td></tr>
 <tr class="memdesc:a3c947110999176e4cd2b5b6a723a6050"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the names of external signers available for authentication.  <br /></td></tr>
 <tr class="separator:a3c947110999176e4cd2b5b6a723a6050"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -684,6 +687,52 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>[ZITI_OK] success, returned handle can be used to access/bind ziti services [ZITI_EXTERNAL_LOGIN_REQUIRED] if the identity requires external login, application must call [Ziti_get_ext_signers] to get available external signers and then call [Ziti_login_external] with the selected signer name. [ZITI_PARTIALLY_AUTHENTICATED] if the identity is partially authenticated and requires additional authentication (TOTP) [ZITI_MFA_NOT_ENROLLED] if the identity is not enrolled in MFA but is required for authentication [ZITI_INVALID_STATE] if [h] is NULL [ZITI_INVALID_CONFIG] if [identity] is not a valid Ziti identity JSON </dd></dl>
+
+</div>
+</div>
+<a id="a5050d8725e9039b28a74102679d1e18f" name="a5050d8725e9039b28a74102679d1e18f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5050d8725e9039b28a74102679d1e18f">&#9670;&#160;</a></span>Ziti_load_context_with_timeout()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Ziti_load_context_with_timeout </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="zitilib_8h.html#a1a9af2b3c97a1c142369533da4c425ac">ziti_handle_t</a> *&#160;</td>
+          <td class="paramname"><em>h</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>identity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>timeout_ms</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Load Ziti identity with timeout control. </p>
+<p>Same as Ziti_load_context but with a timeout parameter to control how long the context loading process should wait for API calls to complete. This helps prevent indefinite retries when endpoints are not reachable.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">h</td><td>pointer to ziti_handle_t to be initialized </td></tr>
+    <tr><td class="paramname">identity</td><td>identity config JSON or path to a file. </td></tr>
+    <tr><td class="paramname">timeout_ms</td><td>timeout in milliseconds for context loading operations. If 0, uses default behavior (no timeout). If &gt; 0, context loading will fail with ZITI_TIMEOUT if not completed within this time. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>[ZITI_OK] success, returned handle can be used to access/bind ziti services [ZITI_EXTERNAL_LOGIN_REQUIRED] if the identity requires external login, application must call [Ziti_get_ext_signers] to get available external signers and then call [Ziti_login_external] with the selected signer name. [ZITI_PARTIALLY_AUTHENTICATED] if the identity is partially authenticated and requires additional authentication (TOTP) [ZITI_MFA_NOT_ENROLLED] if the identity is not enrolled in MFA but is required for authentication [ZITI_TIMEOUT] if context loading did not complete within the specified timeout [ZITI_INVALID_STATE] if [h] is NULL [ZITI_INVALID_CONFIG] if [identity] is not a valid Ziti identity JSON </dd></dl>
 
 </div>
 </div>

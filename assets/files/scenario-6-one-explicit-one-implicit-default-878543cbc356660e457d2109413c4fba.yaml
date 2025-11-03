@@ -1,0 +1,48 @@
+# Scenario: One Explicit, One Implicit Default
+# Test: Verify explicit k8sService: default behaves same as implicit
+# Expected: Single default K8s service with two ports
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices:
+    - zitiService: httpbin-service
+      advertisedPort: 2176
+      containerPort: 2176
+      k8sService: default  # Explicit default
+    - zitiService: httpbin-service-alt
+      advertisedPort: 2177
+      containerPort: 2177
+      # No k8sService = implicit default
+  proxyDefaultK8sService:
+    enabled: true
+    type: ClusterIP
+
+# Expected K8s Resources:
+# - ClusterIP Service: ziti-router1-proxy-default
+#   - port: 2176 -> targetPort: 2176 (httpbin-service)
+#   - port: 2177 -> targetPort: 2177 (httpbin-service-alt)
+#
+# Expected Router Config:
+# services:
+#   - "httpbin-service:2176"
+#   - "httpbin-service-alt:2177"
+#
+# Test with: wgetter-one-explicit-one-implicit-default.yaml
+# Targets:
+#   - ziti-router1-proxy-default.kentest.svc:2176
+#   - ziti-router1-proxy-default.kentest.svc:2177

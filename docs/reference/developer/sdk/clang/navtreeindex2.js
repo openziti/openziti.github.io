@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"structziti__proxy__server__type__s.html#a1be1dd841b9f8226252a670a5d5badf7":[1,0,38,0],
+"structziti__proxy__server__type__s.html#a857d8aeb8d0d3dabe28d40336970aec7":[1,0,38,1],
 "structziti__proxy__server__type__s.html#ada15b2288d8a4b908d1f494f2d9f75e2":[1,0,38,3],
 "structziti__proxy__server__type__s.html#ae29d78d245a8b85356f3a7a18b927f09":[1,0,38,2],
 "structziti__router__event.html":[1,0,39],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "ziti__model_8h.html#a2a6e14927d005b9ba90770aa0a405190":[2,0,0,11,53],
 "ziti__model_8h.html#a2a816239eb267ca8cba049e70e4daffa":[2,0,0,11,184],
 "ziti__model_8h.html#a2b095ca35df4dc26be9f9a6874726eb4":[2,0,0,11,181],
-"ziti__model_8h.html#a2f012e2f871f847dfa7674b6e68abc1d":[2,0,0,11,209],
-"ziti__model_8h.html#a2f09c1e70c7c063777720231d53a4c1c":[2,0,0,11,220],
-"ziti__model_8h.html#a2fff4c817dcb8c8ff414fad57aca9a12":[2,0,0,11,242]
+"ziti__model_8h.html#a2f012e2f871f847dfa7674b6e68abc1d":[2,0,0,11,209]
 };

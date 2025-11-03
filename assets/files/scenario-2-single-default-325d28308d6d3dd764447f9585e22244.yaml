@@ -1,0 +1,39 @@
+# Scenario: Single Service on Default
+# Test: Static port mapping for httpbin-service
+# Expected: Regular ClusterIP service with port 2171
+
+ctrl:
+  endpoint: ziti-controller-client.miniziti.svc:443
+
+edge:
+  advertisedHost: ""
+  advertisedPort: 443
+  service:
+    enabled: false
+
+linkListeners:
+  transport:
+    enabled: false
+    service:
+      enabled: false
+
+tunnel:
+  mode: proxy
+  proxyServices:
+    - zitiService: httpbin-service
+      advertisedPort: 2172
+      containerPort: 2172
+  proxyDefaultK8sService:
+    enabled: true
+    type: ClusterIP
+
+# Expected K8s Resources:
+# - ClusterIP Service: ziti-router1-proxy-default
+#   - port: 2172 -> targetPort: 2172
+#
+# Expected Router Config:
+# services:
+#   - "httpbin-service:2172"
+#
+# Test with: wgetter-single-default.yaml
+# Target: ziti-router1-proxy-default.kentest.svc:2172
